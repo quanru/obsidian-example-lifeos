@@ -20,9 +20,9 @@ class Project {
       return timeString1;
     }
 
-    const reg = /(\d+)hr(\d+)/;
-    const [, hr1, min1] = timeString1.match(reg) || [];
-    const [, hr2, min2] = timeString2.match(reg) || [];
+    const reg = /(\d+)hr(\d+)?/;
+    const [, hr1 = 0, min1 = 0] = timeString1.match(reg) || [];
+    const [, hr2 = 0, min2 = 0] = timeString2.match(reg) || [];
     let carry = 0;
     let hr = Number(hr1) + Number(hr2);
     let min = Number(min1) + Number(min2);
@@ -44,9 +44,9 @@ class Project {
       return '';
     }
 
-    const reg = /(\d+)hr(\d+)/;
-    const [, hr1, min1] = timeString1.match(reg) || [];
-    const [, hr2, min2] = timeString2.match(reg) || [];
+    const reg = /(\d+)hr(\d+)?/;
+    const [, hr1 = 0, min1 = 0] = timeString1.match(reg) || [];
+    const [, hr2 = 0, min2 = 0] = timeString2.match(reg) || [];
     const time1 = Number(hr1) * 60 + Number(min1);
     const time2 = Number(hr2) * 60 + Number(min2);
 
@@ -55,6 +55,7 @@ class Project {
 
   async filter(condition, scope) {
     const { from, to } = condition;
+    const timeReg = /\d+hr(\d+)?/;
     let day = from;
     let projectList = [];
     const projectTimeConsume = {};
@@ -71,7 +72,6 @@ class Project {
 
       if (file) {
         let todayTotalTime = 0;
-        debugger;
         tasks.push(async () => {
           const fileContent = await app.vault.read(file);
           const projectContent = fileContent
@@ -83,7 +83,7 @@ class Project {
               return;
             }
 
-            if (project.match(/^\d+hr\d+$/)) {
+            if (project.match(timeReg)) {
               // 特殊处理总耗时
               todayTotalTime = project;
             }
@@ -95,11 +95,9 @@ class Project {
               return;
             }
 
-            // 1hr8/6hr7=13.96%
-            let [, projectTime = '', , currentTotalTime = ''] =
-              project.match(/(\d+hr\d+)(\/(\d+hr\d+))?/) || [];
+            let [projectTime = ''] = project.match(timeReg) || [];
 
-            todayTotalTime = todayTotalTime || currentTotalTime;
+            todayTotalTime = todayTotalTime;
 
             projectTimeConsume[realProject] = this.timeAdd(
               projectTimeConsume[realProject],
