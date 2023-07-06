@@ -2,8 +2,8 @@
 
 # 任务
 ## 要事维度
-```dataviewjs
-await dv.view("Templates/PeriodicNotes/views/projectList")
+```periodic-para
+ProjectList
 ```
 
 ## 角色维度
@@ -23,12 +23,12 @@ await dv.view("Templates/PeriodicNotes/views/projectList")
 # 复盘
 ## 本周收集
 
-```dataviewjs
-await dv.view("Templates/PeriodicNotes/views/taskRecordList")
+```periodic-para
+TaskRecordList
 ```
 
 ## 本周完成
 
-```dataviewjs
-await dv.view("Templates/PeriodicNotes/views/taskDoneList")
+```periodic-para
+TaskDoneList
 ```

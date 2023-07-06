@@ -1,7 +1,7 @@
 # <% tp.file.title %>
 
 ## 项目列表
-<% customJS.Project.list() %>
+<% PeriodicPARA.File.list('1. Projects') %>
 
 ## 日常记录
 
@@ -33,13 +33,11 @@
 <%* } -%>
 
 ## 精力分配
-```dataviewjs
-await dv.view("Templates/PeriodicNotes/views/projectList")
+```periodic-para
+ProjectList
 ```
 
 ## 今日完成
-```dataviewjs
-await dv.view("Templates/PeriodicNotes/views/taskDoneList")
+```periodic-para
+TaskDoneList
 ```
-
-

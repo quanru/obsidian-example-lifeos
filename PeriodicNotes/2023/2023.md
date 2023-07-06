@@ -3,8 +3,8 @@
 # 目标
 
 ## 要事维度
-```dataviewjs
-await dv.view("Templates/PeriodicNotes/views/AreaList")
+```periodic-para
+AreaList
 ```
 
 ## 角色维度
@@ -17,15 +17,15 @@ await dv.view("Templates/PeriodicNotes/views/AreaList")
 
 # 复盘
 ## 项目列表
-```dataviewjs
-await dv.view("Templates/PeriodicNotes/views/projectList")
+```periodic-para
+ProjectList
 ```
 ## 本年收集
-```dataviewjs
-await dv.view("Templates/PeriodicNotes/views/taskRecordList")
+```periodic-para
+TaskRecordList
 ```
 
 ## 本年完成
-```dataviewjs
-await dv.view("Templates/PeriodicNotes/views/taskDoneList")
+```periodic-para
+TaskDoneList
 ```
