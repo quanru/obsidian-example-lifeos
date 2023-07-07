@@ -1,5 +1,7 @@
 ---
 aliases: 全球技术创新大会
+tags: 
+- 分享/WOT
 ---
 
 # README
@@ -23,16 +25,11 @@ aliases: 全球技术创新大会
 	- rspack/modern.js/diagnostics tool
 
 ## 任务
-```tasks
-tags includes #分享/WOT 
+```periodic-para
+TaskListByTag
 ```
 
 ## 列表
-```dataview
-TABLE WITHOUT ID rows.L.text AS "Text", rows.file.link AS "File"
-FROM #分享/WOT 
-FLATTEN file.lists AS L
-WHERE contains(L.tags, "#分享/WOT") AND !L.task
-GROUP BY file.link
-SORT rows.file.link DESC
+```periodic-para
+BulletListByTag
 ```
