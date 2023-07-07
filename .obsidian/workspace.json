@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "aefcb22fe2ec86a0",
+        "id": "62b86d6fde7cb965",
         "type": "tabs",
         "children": [
           {
-            "id": "b2a8bf73aaf7f8e2",
+            "id": "6f99276f12d51efe",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#工作/one-one",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +88,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -108,6 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2. Areas/工作/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2. Areas/工作/README.md"
+              }
             }
           },
           {
@@ -127,6 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2. Areas/工作/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,6 +151,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian42-brat:BRAT": false,
       "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -156,18 +162,36 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "b2a8bf73aaf7f8e2",
+  "active": "cc8540b919f4ee67",
   "lastOpenFiles": [
-    "PeriodicNotes/2023/Monthly/2023-06.md",
-    "PeriodicNotes/2023/Weekly/2023-W23.md",
-    "PeriodicNotes/2023/Weekly/2023-W22.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-01.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-02.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-03.md",
-    "1. Projects/分享-2023 WOT 分享会/演讲排练/逐字稿.md",
-    "PeriodicNotes/2023/2023-Q1.md",
-    "PeriodicNotes/2023/2023.md",
+    "2. Areas/工作/README.md",
     "1. Projects/分享-2023 WOT 分享会/README.md",
-    "TASK.md"
+    "2. Areas/知识管理/README.md",
+    "1. Projects/README.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-02.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-07.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-06.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-13.md",
+    "PeriodicNotes/2023/Weekly/2023-W22.md",
+    "PeriodicNotes/2023/Daily/07/2023-07-05.md",
+    "PeriodicNotes/2023/Daily/07/2023-07-07.md",
+    "PeriodicNotes/2023/Daily/07/2023-07-11.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-05.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-04.md",
+    "TASK.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-01.md",
+    "PeriodicNotes/2023/Daily/07/2023-07-01.md",
+    "PeriodicNotes/2023/Daily/07",
+    "PeriodicNotes/2023/Weekly/2023-W23.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-03.md",
+    "HOME.canvas",
+    "Templates/PeriodicNotes/Daily.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-08.md",
+    "Templates/PARA.md",
+    "PeriodicNotes/2023/2023.md",
+    "PeriodicNotes/2023/2023-Q1.md",
+    "PeriodicNotes/2023/Monthly/2023-06.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-11.md",
+    "Templates/Project"
   ]
 }

@@ -7520,7 +7520,7 @@ __export(main_exports, {
   default: () => PeriodicPARA
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian7 = require("obsidian");
+var import_obsidian9 = require("obsidian");
 var import_obsidian_dataview = __toESM(require_lib());
 
 // src/para/Project.ts
@@ -7665,7 +7665,7 @@ var Date2 = class {
 var import_obsidian3 = require("obsidian");
 var Project = class {
   constructor(app, settings) {
-    this.list = async (source, el, ctx) => {
+    this.listByTime = async (source, el, ctx) => {
       var _a;
       const project = new Project(this.app, this.settings);
       const date = new Date2(this.app, this.settings);
@@ -7685,7 +7685,7 @@ var Project = class {
           `${index + 1}. [[${project2}|${(regMatch == null ? void 0 : regMatch.length) ? regMatch[1] : ""}]] ${projectTimeConsume[project2]}`
         );
       });
-      import_obsidian3.MarkdownRenderer.renderMarkdown(
+      return import_obsidian3.MarkdownRenderer.renderMarkdown(
         list.join("\n"),
         div,
         ctx.sourcePath,
@@ -7803,7 +7803,7 @@ var Project = class {
 var import_obsidian4 = require("obsidian");
 var Area = class {
   constructor(app, settings) {
-    this.list = async (source, el, ctx) => {
+    this.listByTime = async (source, el, ctx) => {
       var _a;
       const filename = (_a = this.app.workspace.getActiveFile()) == null ? void 0 : _a.basename;
       const parsed = this.date.parse(filename);
@@ -7818,7 +7818,7 @@ var Area = class {
           `${index + 1}. [[${area}|${(regMatch == null ? void 0 : regMatch.length) ? regMatch[1] : ""}]]`
         );
       });
-      import_obsidian4.MarkdownRenderer.renderMarkdown(
+      return import_obsidian4.MarkdownRenderer.renderMarkdown(
         list.join("\n"),
         div,
         ctx.sourcePath,
@@ -7873,10 +7873,33 @@ var Area = class {
 };
 
 // src/periodic/Task.ts
+var import_obsidian6 = require("obsidian");
+
+// src/constant.ts
+var ERROR_MESSAGES = {
+  NO_FRONT_MATTER_TAG: "Please add the tags field for frontMatter!",
+  NO_DATAVIEW_INSTALL: "You need to install dataview first!",
+  FAILED_DATAVIEW_API: "Dataview API enable failed!",
+  NO_VIEW_PROVIDED: "Please provide a view name!",
+  NO_VIEW_EXISTED: "There is no this view in periodic PARA plugin"
+};
+
+// src/util.ts
 var import_obsidian5 = require("obsidian");
+function renderError(msg, containerEl, sourcePath) {
+  const component = new import_obsidian5.Component();
+  return import_obsidian5.MarkdownRenderer.renderMarkdown(
+    msg,
+    containerEl,
+    sourcePath,
+    component
+  );
+}
+
+// src/periodic/Task.ts
 var Task = class {
   constructor(app, settings, dataview) {
-    this.doneList = (source, el, ctx) => {
+    this.doneListByTime = (source, el, ctx) => {
       var _a;
       const filename = (_a = this.app.workspace.getActiveFile()) == null ? void 0 : _a.basename;
       const parsed = this.date.parse(filename);
@@ -7887,11 +7910,11 @@ var Task = class {
           ...condition
         })
       ).sort((t) => t.completion, "asc");
-      const c = new import_obsidian5.Component();
+      const c = new import_obsidian6.Component();
       c.load();
       this.dataview.taskList(tasks, false, el, c);
     };
-    this.recordList = (source, el, ctx) => {
+    this.recordListByTime = (source, el, ctx) => {
       var _a;
       const filename = (_a = this.app.workspace.getActiveFile()) == null ? void 0 : _a.basename;
       const parsed = this.date.parse(filename);
@@ -7902,17 +7925,46 @@ var Task = class {
           ...condition
         })
       );
-      const c = new import_obsidian5.Component();
-      c.load();
-      this.dataview.taskList(tasks, false, el, c);
+      const component = new import_obsidian6.Component();
+      this.dataview.taskList(tasks, false, el, component);
       const files = this.date.files(parsed);
       const pages = Object.values(files).flat();
       if (pages.length) {
         const tasks2 = this.dataview.pages(`"${pages.join('" or "')}"`).file.tasks.where((task) => task);
-        const c2 = new import_obsidian5.Component();
-        c2.load();
-        this.dataview.taskList(tasks2, false, el, c2);
+        const c = new import_obsidian6.Component();
+        this.dataview.taskList(tasks2, false, el, c);
       }
+    };
+    this.listByTag = async (source, el, ctx) => {
+      var _a;
+      const filepath = ctx.sourcePath;
+      const {
+        frontmatter: { tags }
+      } = ((_a = this.dataview.page(filepath)) == null ? void 0 : _a.file) || {};
+      const component = new import_obsidian6.Component();
+      const containerEl = el.createEl("div");
+      if (!tags) {
+        return renderError(
+          ERROR_MESSAGES.NO_FRONT_MATTER_TAG,
+          containerEl,
+          ctx.sourcePath
+        );
+      }
+      const where = tags.map((tag, index) => {
+        return `contains(tags, "#${tag}") ${index === tags.length - 1 ? "" : "OR"}`;
+      }).join(" ");
+      const markdown = await this.dataview.tryQueryMarkdown(`
+TASK
+FROM -"Templates"
+WHERE ${where} AND file.path != "${filepath}"
+SORT completed ASC
+    `);
+      return import_obsidian6.MarkdownRenderer.renderMarkdown(
+        markdown,
+        containerEl,
+        ctx.sourcePath,
+        component
+      );
     };
     this.app = app;
     this.settings = settings;
@@ -7942,18 +7994,21 @@ var Task = class {
         return false;
       dateText = ret[0];
     }
-    const targetDate = (0, import_obsidian5.moment)(dateText);
+    const targetDate = (0, import_obsidian6.moment)(dateText);
     if (!targetDate)
       return false;
-    const isFromFullfil = from ? targetDate.isSameOrAfter((0, import_obsidian5.moment)(from)) : true;
-    const isToFullfil = to ? targetDate.isSameOrBefore((0, import_obsidian5.moment)(to)) : true;
+    const isFromFullfil = from ? targetDate.isSameOrAfter((0, import_obsidian6.moment)(from)) : true;
+    const isToFullfil = to ? targetDate.isSameOrBefore((0, import_obsidian6.moment)(to)) : true;
     const isFullfil = task.children.map((subtask) => this.filter(subtask, condition)).includes(true) || task.text.length > 1 && (date === "DONE" /* DONE */ && task.completed || date === "RECORD" /* RECORD */) && isFromFullfil && isToFullfil;
     return isFullfil;
   }
 };
 
+// src/periodic/Bullet.ts
+var import_obsidian8 = require("obsidian");
+
 // src/periodic/File.ts
-var import_obsidian6 = require("obsidian");
+var import_obsidian7 = require("obsidian");
 var File = class {
   constructor(app, settings) {
     this.app = app;
@@ -7961,7 +8016,7 @@ var File = class {
   }
   list(fileFolder) {
     const file = this.app.vault.getAbstractFileByPath(fileFolder);
-    if (file instanceof import_obsidian6.TFolder) {
+    if (file instanceof import_obsidian7.TFolder) {
       const READMEList = file.children.sort().filter((area) => area.extension !== "md").map((area, index) => {
         return `${index + 1}. [[${area.path}/README|${area.name}]]`;
       });
@@ -7970,21 +8025,67 @@ var File = class {
   }
 };
 
+// src/periodic/Bullet.ts
+var Bullet = class {
+  constructor(app, settings, dataview) {
+    this.listByTag = async (source, el, ctx) => {
+      var _a;
+      const filepath = ctx.sourcePath;
+      const {
+        frontmatter: { tags }
+      } = ((_a = this.dataview.page(filepath)) == null ? void 0 : _a.file) || {};
+      const component = new import_obsidian8.Component();
+      const containerEl = el.createEl("div");
+      if (!tags) {
+        return renderError(
+          ERROR_MESSAGES.NO_FRONT_MATTER_TAG,
+          containerEl,
+          ctx.sourcePath
+        );
+      }
+      const from = tags.map((tag, index) => {
+        return `#${tag} ${index === tags.length - 1 ? "" : "OR"}`;
+      }).join(" ");
+      const where = tags.map((tag, index) => {
+        return `(contains(L.tags, "${tag}")) ${index === tags.length - 1 ? "" : "OR"}`;
+      }).join(" ");
+      const markdown = await this.dataview.tryQueryMarkdown(`
+TABLE WITHOUT ID rows.L.text AS "Text", rows.file.link AS "File"
+FROM (${from}) AND -"Templates"
+FLATTEN file.lists AS L
+WHERE ${where} AND !L.task AND file.path != "${filepath}"
+GROUP BY file.link
+SORT rows.file.link DESC
+    `);
+      return import_obsidian8.MarkdownRenderer.renderMarkdown(
+        markdown.replaceAll("\\|", "|"),
+        el.createEl("div"),
+        ctx.sourcePath,
+        component
+      );
+    };
+    this.app = app;
+    this.settings = settings;
+    this.dataview = dataview;
+    this.file = new File(this.app, this.settings);
+  }
+};
+
 // src/main.ts
 var DEFAULT_SETTINGS = {
   periodicNotesPath: "PeriodicNotes"
 };
-var PeriodicPARA = class extends import_obsidian7.Plugin {
+var PeriodicPARA = class extends import_obsidian9.Plugin {
   constructor(app, manifest) {
     super(app, manifest);
     if (!(0, import_obsidian_dataview.isPluginEnabled)(app)) {
-      new import_obsidian7.Notice("You need to install dataview first!");
-      throw Error("dataview is not available!");
+      new import_obsidian9.Notice(ERROR_MESSAGES.NO_DATAVIEW_INSTALL);
+      throw Error(ERROR_MESSAGES.NO_DATAVIEW_INSTALL);
     }
     const dataviewApi = (0, import_obsidian_dataview.getAPI)(app);
     if (!dataviewApi) {
-      new import_obsidian7.Notice("Dataview API enable failed!");
-      throw Error("dataview api enable failed!");
+      new import_obsidian9.Notice(ERROR_MESSAGES.FAILED_DATAVIEW_API);
+      throw Error(ERROR_MESSAGES.FAILED_DATAVIEW_API);
     }
     this.app = app;
     this.dataview = dataviewApi;
@@ -7994,21 +8095,35 @@ var PeriodicPARA = class extends import_obsidian7.Plugin {
     this.loadHelpers();
     this.loadGlobalHelpers();
     const views = {
-      ProjectList: this.project.list,
-      AreaList: this.area.list,
-      TaskRecordList: this.task.recordList,
-      TaskDoneList: this.task.doneList
+      // views by time -> time context -> periodic notes
+      ProjectListByTime: this.project.listByTime,
+      AreaListByTime: this.area.listByTime,
+      TaskRecordListByTime: this.task.recordListByTime,
+      TaskDoneListByTime: this.task.doneListByTime,
+      // views by tag -> topic context -> para
+      TaskListByTag: this.task.listByTag,
+      BulletListByTag: this.bullet.listByTag
     };
     this.registerMarkdownCodeBlockProcessor(
       "periodic-para",
       (source, el, ctx) => {
-        if (!source) {
-          throw new Error(`Please provide a view name!`);
+        const view = source.trim();
+        if (!view) {
+          return renderError(
+            ERROR_MESSAGES.NO_VIEW_PROVIDED,
+            el.createEl("div"),
+            ctx.sourcePath
+          );
         }
-        if (!Object.keys(views).includes(source)) {
-          throw new Error(`There is no view for ${source} in this plugin`);
+        if (!Object.keys(views).includes(view)) {
+          return renderError(
+            `${ERROR_MESSAGES.NO_VIEW_EXISTED}: ${view}`,
+            el.createEl("div"),
+            ctx.sourcePath
+          );
         }
-        return views[source](source, el, ctx);
+        const callback = views[view] || views[`${view}ByTime`];
+        return callback(view, el, ctx);
       }
     );
   }
@@ -8026,6 +8141,7 @@ var PeriodicPARA = class extends import_obsidian7.Plugin {
     this.task = new Task(this.app, this.settings, this.dataview);
     this.file = new File(this.app, this.settings);
     this.date = new Date2(this.app, this.settings);
+    this.bullet = new Bullet(this.app, this.settings, this.dataview);
   }
   loadGlobalHelpers() {
     window.PeriodicPARA = {};
@@ -8033,6 +8149,7 @@ var PeriodicPARA = class extends import_obsidian7.Plugin {
     window.PeriodicPARA.Area = this.area;
     window.PeriodicPARA.Task = this.task;
     window.PeriodicPARA.File = this.file;
+    window.PeriodicPARA.Bullet = this.bullet;
     window.PeriodicPARA.Date = this.date;
   }
 };
