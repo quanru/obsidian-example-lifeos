@@ -7940,7 +7940,7 @@ var Task = class {
       const filepath = ctx.sourcePath;
       const {
         frontmatter: { tags }
-      } = ((_a = this.dataview.page(filepath)) == null ? void 0 : _a.file) || {};
+      } = ((_a = this.dataview.page(filepath)) == null ? void 0 : _a.file) || { frontmatter: {} };
       const component = new import_obsidian6.Component();
       const containerEl = el.createEl("div");
       if (!tags) {
@@ -8033,7 +8033,7 @@ var Bullet = class {
       const filepath = ctx.sourcePath;
       const {
         frontmatter: { tags }
-      } = ((_a = this.dataview.page(filepath)) == null ? void 0 : _a.file) || {};
+      } = ((_a = this.dataview.page(filepath)) == null ? void 0 : _a.file) || { frontmatter: {} };
       const component = new import_obsidian8.Component();
       const containerEl = el.createEl("div");
       if (!tags) {
@@ -8049,16 +8049,19 @@ var Bullet = class {
       const where = tags.map((tag, index) => {
         return `(contains(L.tags, "${tag}")) ${index === tags.length - 1 ? "" : "OR"}`;
       }).join(" ");
-      const markdown = await this.dataview.tryQueryMarkdown(`
+      const markdown = await this.dataview.tryQueryMarkdown(
+        `
 TABLE WITHOUT ID rows.L.text AS "Text", rows.file.link AS "File"
 FROM (${from}) AND -"Templates"
 FLATTEN file.lists AS L
 WHERE ${where} AND !L.task AND file.path != "${filepath}"
 GROUP BY file.link
 SORT rows.file.link DESC
-    `);
+    `
+      );
+      const formatedMarkdown = markdown.replaceAll("\\\\", "\\").replaceAll("\n<", "<");
       return import_obsidian8.MarkdownRenderer.renderMarkdown(
-        markdown.replaceAll("\\|", "|"),
+        formatedMarkdown,
         el.createEl("div"),
         ctx.sourcePath,
         component
