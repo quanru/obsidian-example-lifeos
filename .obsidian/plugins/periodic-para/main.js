@@ -7685,11 +7685,13 @@ var Project = class {
           `${index + 1}. [[${project2}|${(regMatch == null ? void 0 : regMatch.length) ? regMatch[1] : ""}]] ${projectTimeConsume[project2]}`
         );
       });
+      const component = new import_obsidian3.Component();
+      component.load();
       return import_obsidian3.MarkdownRenderer.renderMarkdown(
         list.join("\n"),
         div,
         ctx.sourcePath,
-        new import_obsidian3.Component()
+        component
       );
     };
     this.app = app;
@@ -7818,11 +7820,13 @@ var Area = class {
           `${index + 1}. [[${area}|${(regMatch == null ? void 0 : regMatch.length) ? regMatch[1] : ""}]]`
         );
       });
+      const component = new import_obsidian4.Component();
+      component.load();
       return import_obsidian4.MarkdownRenderer.renderMarkdown(
         list.join("\n"),
         div,
         ctx.sourcePath,
-        new import_obsidian4.Component()
+        component
       );
     };
     this.app = app;
@@ -7888,6 +7892,7 @@ var ERROR_MESSAGES = {
 var import_obsidian5 = require("obsidian");
 function renderError(msg, containerEl, sourcePath) {
   const component = new import_obsidian5.Component();
+  component.load();
   return import_obsidian5.MarkdownRenderer.renderMarkdown(
     msg,
     containerEl,
@@ -7910,9 +7915,9 @@ var Task = class {
           ...condition
         })
       ).sort((t) => t.completion, "asc");
-      const c = new import_obsidian6.Component();
-      c.load();
-      this.dataview.taskList(tasks, false, el, c);
+      const component = new import_obsidian6.Component();
+      component.load();
+      this.dataview.taskList(tasks, false, el, component);
     };
     this.recordListByTime = (source, el, ctx) => {
       var _a;
@@ -7926,13 +7931,15 @@ var Task = class {
         })
       );
       const component = new import_obsidian6.Component();
+      component.load();
       this.dataview.taskList(tasks, false, el, component);
       const files = this.date.files(parsed);
       const pages = Object.values(files).flat();
       if (pages.length) {
         const tasks2 = this.dataview.pages(`"${pages.join('" or "')}"`).file.tasks.where((task) => task);
-        const c = new import_obsidian6.Component();
-        this.dataview.taskList(tasks2, false, el, c);
+        const component2 = new import_obsidian6.Component();
+        component2.load();
+        this.dataview.taskList(tasks2, false, el, component2);
       }
     };
     this.listByTag = async (source, el, ctx) => {
@@ -7959,6 +7966,7 @@ FROM -"Templates"
 WHERE ${where} AND file.path != "${filepath}"
 SORT completed ASC
     `);
+      component.load();
       return import_obsidian6.MarkdownRenderer.renderMarkdown(
         markdown,
         containerEl,
@@ -8059,9 +8067,10 @@ GROUP BY file.link
 SORT rows.file.link DESC
     `
       );
-      const formatedMarkdown = markdown.replaceAll("\\\\", "\\").replaceAll("\n<", "<");
+      const formattedMarkdown = markdown.replaceAll("\\\\", "\\").replaceAll("\n<", "<");
+      component.load();
       return import_obsidian8.MarkdownRenderer.renderMarkdown(
-        formatedMarkdown,
+        formattedMarkdown,
         el.createEl("div"),
         ctx.sourcePath,
         component
@@ -8111,6 +8120,7 @@ var PeriodicPARA = class extends import_obsidian9.Plugin {
       "periodic-para",
       (source, el, ctx) => {
         const view = source.trim();
+        const legacyView = `${view}ByTime`;
         if (!view) {
           return renderError(
             ERROR_MESSAGES.NO_VIEW_PROVIDED,
@@ -8118,14 +8128,14 @@ var PeriodicPARA = class extends import_obsidian9.Plugin {
             ctx.sourcePath
           );
         }
-        if (!Object.keys(views).includes(view)) {
+        if (!Object.keys(views).includes(view) && !Object.keys(views).includes(legacyView)) {
           return renderError(
             `${ERROR_MESSAGES.NO_VIEW_EXISTED}: ${view}`,
             el.createEl("div"),
             ctx.sourcePath
           );
         }
-        const callback = views[view] || views[`${view}ByTime`];
+        const callback = views[view] || views[legacyView];
         return callback(view, el, ctx);
       }
     );
