@@ -5,7 +5,7 @@ tags:
 ---
 
 # README
-
+%%设置项目截止日期，及其结果描述%%
 - [x] #分享/WOT 截止日期 📅 2023-06-17 ✅ 2023-06-17
 - #分享/WOT 结果描述
 	- 时间：[[2023-06-17]] 周六
@@ -25,11 +25,13 @@ tags:
 	- rspack/modern.js/diagnostics tool
 
 ## 任务
+%%根据当前文件的 [Metadata](https://help.obsidian.md/Editing+and+formatting/Metadata) 的 tags 字段查询任务，从所有的笔记中提取%%
 ```periodic-para
 TaskListByTag
 ```
 
 ## 列表
+%%根据当前文件的 [Metadata](https://help.obsidian.md/Editing+and+formatting/Metadata) 的 tags 字段查询子弹列表，从所有的笔记中提取%%
 ```periodic-para
 BulletListByTag
 ```

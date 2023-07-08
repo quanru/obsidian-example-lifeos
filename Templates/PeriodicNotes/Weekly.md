@@ -1,7 +1,10 @@
 > 安排周度任务
 
+%%分别从要事维度和角色维度安排任务%%
+
 # 任务
 ## 要事维度
+%%本周经历的项目列表，从本周的日记中提取，并自动统计项目耗时占比%%
 ```periodic-para
 ProjectListByTime
 ```
@@ -22,13 +25,13 @@ ProjectListByTime
 
 # 复盘
 ## 本周收集
-
+%%本周收集的任务列表，从本周的日记中提取%%
 ```periodic-para
 TaskRecordListByTime
 ```
 
 ## 本周完成
-
+%%本周完成的任务列表，从所有的笔记中提取%%
 ```periodic-para
 TaskDoneListByTime
 ```
