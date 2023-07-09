@@ -1,0 +1,52 @@
+name: Release LifeOS
+
+on:
+  push:
+    tags:
+      - '*'
+env:
+    NAME: LifeOS
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Build
+        id: build
+        run: |
+            mkdir ${{ env.NAME }}
+            cp -r .obsidian 1.\ Projects 2.\ Areas 3.\ Resources 4.\ Archives HOME.canvas PeriodicNotes README.md TASK.md Templates ${{ env.NAME }}
+            zip -r ${{ env.NAME }}.zip ${{ env.NAME }}
+            ls
+            echo "::set-output name=tag_name::$(git tag --sort version:refname | tail -n 1)"
+
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            VERSION: ${{ github.ref }}
+        with:
+            tag_name: ${{ github.ref }}
+            release_name: ${{ github.ref }}
+            draft: false
+            prerelease: false
+
+      - name: Upload zip file
+        id: upload-zip
+        uses: actions/upload-release-asset@v1
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            upload_url: ${{ steps.create_release.outputs.upload_url }}
+            asset_path: ./${{ env.NAME }}.zip
+            asset_name: ${{ env.NAME }}.zip
+            asset_content_type: application/zip
