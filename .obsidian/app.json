@@ -52,5 +52,6 @@
     "editor:toggle-strikethrough",
     "editor:toggle-bullet-list",
     "editor:toggle-numbered-list"
-  ]
+  ],
+  "newLinkFormat": "shortest"
 }

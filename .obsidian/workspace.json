@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "62b86d6fde7cb965",
+        "id": "464553055fb8578c",
         "type": "tabs",
         "children": [
           {
-            "id": "6f99276f12d51efe",
+            "id": "d30d2acf14aea492",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -88,8 +88,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -109,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2. Areas/工作/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2. Areas/工作/README.md"
-              }
+              "state": {}
             }
           },
           {
@@ -131,7 +127,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2. Areas/工作/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,47 +146,68 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian42-brat:BRAT": false,
-      "canvas:新建白板": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false,
-      "workspaces:管理工作区布局": false,
-      "random-note:开始漫游笔记": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false,
       "templater-obsidian:Templater": false,
-      "periodic-notes:Open today": false
+      "periodic-notes:Open today": false,
+      "obsidian42-brat:BRAT": false
     }
   },
-  "active": "cc8540b919f4ee67",
+  "active": "d30d2acf14aea492",
   "lastOpenFiles": [
-    "2. Areas/工作/README.md",
-    "1. Projects/分享-2023 WOT 分享会/README.md",
-    "2. Areas/知识管理/README.md",
-    "1. Projects/README.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-02.md",
+    "PeriodicNotes/2023/Weekly/2023-W22.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-08.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-11.md",
+    "1. Projects/分享-2023 WOT 分享会/WOT.README.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-22.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-21.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-20.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-19.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-18.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-13.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-14.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-15.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-16.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-17.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-12.md",
+    "PeriodicNotes/2023/Weekly/2023-W23.md",
+    "HOME.canvas",
+    "README.md",
     "PeriodicNotes/2023/Daily/06/2023-06-07.md",
     "PeriodicNotes/2023/Daily/06/2023-06-06.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-13.md",
-    "PeriodicNotes/2023/Weekly/2023-W22.md",
-    "PeriodicNotes/2023/Daily/07/2023-07-05.md",
-    "PeriodicNotes/2023/Daily/07/2023-07-07.md",
-    "PeriodicNotes/2023/Daily/07/2023-07-11.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-05.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-04.md",
-    "TASK.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-09.md",
     "PeriodicNotes/2023/Daily/06/2023-06-01.md",
-    "PeriodicNotes/2023/Daily/07/2023-07-01.md",
-    "PeriodicNotes/2023/Daily/07",
-    "PeriodicNotes/2023/Weekly/2023-W23.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-03.md",
-    "HOME.canvas",
-    "Templates/PeriodicNotes/Daily.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-08.md",
-    "Templates/PARA.md",
-    "PeriodicNotes/2023/2023.md",
-    "PeriodicNotes/2023/2023-Q1.md",
+    "2. Areas/工作/README.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-02.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-05.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-10.md",
     "PeriodicNotes/2023/Monthly/2023-06.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-11.md",
-    "Templates/Project"
+    "Templates/PeriodicNotes/2023/Daily/06",
+    "Templates/PeriodicNotes/2023/Weekly",
+    "Templates/PeriodicNotes/2023/Monthly",
+    "Templates/PeriodicNotes/2023/Daily",
+    "Templates/PeriodicNotes/2023",
+    "Templates/HOME.canvas",
+    "Templates/4. Archives/育儿-宝宝起名/林奕如.png",
+    "Templates/4. Archives/育儿-宝宝起名/五行",
+    "Templates/4. Archives/育儿-宝宝起名/program/package.json",
+    "Templates/4. Archives/育儿-宝宝起名/program/index.js",
+    "Templates/4. Archives/育儿-宝宝起名/program",
+    "Templates/4. Archives/育儿-宝宝起名/baby-name.png",
+    "Templates/2. Areas/知识管理",
+    "Templates/1. Projects/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
+    "Templates/1. Projects/分享-2023 WOT 分享会/架构图/Monorepo.svg",
+    "Templates/1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/warning.svg",
+    "Templates/1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/warning.png",
+    "Templates/1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/rollup-logo.svg",
+    "Templates/1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/repo-hero-logo-light.svg",
+    "Templates/1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.svg",
+    "Templates/1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.png",
+    "hello/HOME.canvas",
+    "hello/Templates/HOME.canvas"
   ]
 }

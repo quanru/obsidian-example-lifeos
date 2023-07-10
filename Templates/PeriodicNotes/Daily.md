@@ -2,7 +2,7 @@
 
 ## 项目列表
 %%项目的今日快照%%
-<% PeriodicPARA.File.list('1. Projects') %>
+<% ```PeriodicPARA.File.list('1. Projects') %>
 
 ## 日常记录
 - %%你的记录%%
@@ -36,12 +36,12 @@
 
 ## 精力分配
 %%今日的项目列表，根据耗时情况，自动统计项目耗时占比%%
-```periodic-para
+```PeriodicPARA
 ProjectListByTime
 ```
 
 ## 今日完成
 %%今日完成的任务列表，从所有的笔记中提取%%
-```periodic-para
+```PeriodicPARA
 TaskDoneListByTime
 ```

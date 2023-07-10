@@ -6,7 +6,7 @@
 
 ## 要事维度
 %%本年经历的领域列表，从本年的季记中提取%%
-```periodic-para
+```PeriodicPARA
 AreaListByTime
 ```
 
@@ -21,18 +21,18 @@ AreaListByTime
 # 复盘
 ## 项目列表
 %%本年经历的项目列表，从本年的日记中提取，并自动统计项目耗时占比%%
-```periodic-para
+```PeriodicPARA
 ProjectListByTime
 ```
 
 ## 本年收集
 %%本年收集的任务列表，从本年的日记中提取%%
-```periodic-para
+```PeriodicPARA
 TaskRecordListByTime
 ```
 
 ## 本年完成
 %%本年完成的任务列表，从所有的笔记中提取%%
-```periodic-para
+```PeriodicPARA
 TaskDoneListByTime
 ```

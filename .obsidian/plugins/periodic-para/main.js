@@ -8111,29 +8111,28 @@ var PeriodicPARA = class extends import_obsidian9.Plugin {
       TaskListByTag: this.task.listByTag,
       BulletListByTag: this.bullet.listByTag
     };
-    this.registerMarkdownCodeBlockProcessor(
-      "periodic-para",
-      (source, el, ctx) => {
-        const view = source.trim();
-        const legacyView = `${view}ByTime`;
-        if (!view) {
-          return renderError(
-            ERROR_MESSAGES.NO_VIEW_PROVIDED,
-            el.createEl("div"),
-            ctx.sourcePath
-          );
-        }
-        if (!Object.keys(views).includes(view) && !Object.keys(views).includes(legacyView)) {
-          return renderError(
-            `${ERROR_MESSAGES.NO_VIEW_EXISTED}: ${view}`,
-            el.createEl("div"),
-            ctx.sourcePath
-          );
-        }
-        const callback = views[view] || views[legacyView];
-        return callback(view, el, ctx);
+    const handler = (source, el, ctx) => {
+      const view = source.trim();
+      const legacyView = `${view}ByTime`;
+      if (!view) {
+        return renderError(
+          ERROR_MESSAGES.NO_VIEW_PROVIDED,
+          el.createEl("div"),
+          ctx.sourcePath
+        );
       }
-    );
+      if (!Object.keys(views).includes(view) && !Object.keys(views).includes(legacyView)) {
+        return renderError(
+          `${ERROR_MESSAGES.NO_VIEW_EXISTED}: ${view}`,
+          el.createEl("div"),
+          ctx.sourcePath
+        );
+      }
+      const callback = views[view] || views[legacyView];
+      return callback(view, el, ctx);
+    };
+    this.registerMarkdownCodeBlockProcessor("PeriodicPARA", handler);
+    this.registerMarkdownCodeBlockProcessor("periodic-para", handler);
   }
   onunload() {
   }
