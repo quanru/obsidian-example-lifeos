@@ -3,7 +3,7 @@ tags:
 - 替换为当前项目标签
 ---
 
-%%本模版用于新建 Project/Area/Resource/Archive，将文件夹复制到对应目录，并重命名 PARA 为你的 Project/Area/Resource/Archive%%
+%%本模版用于新建 Project/Area/Resource/Archive，将文件夹复制到对应目录，并重命名为你的 Project/Area/Resource/Archive%%
 
 # README
 %%设置项目截止日期，及其结果描述%%
