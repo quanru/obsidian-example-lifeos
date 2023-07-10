@@ -7924,23 +7924,23 @@ var Task = class {
       const filename = (_a = this.app.workspace.getActiveFile()) == null ? void 0 : _a.basename;
       const parsed = this.date.parse(filename);
       const condition = this.date.days(parsed);
-      const tasks = this.dataview.pages("").file.tasks.where(
+      let tasks = [];
+      const dailyTasks = this.dataview.pages("").file.tasks.where(
         (t) => this.filter(t, {
           date: "RECORD" /* RECORD */,
           ...condition
         })
       );
-      const component = new import_obsidian6.Component();
-      component.load();
-      this.dataview.taskList(tasks, false, el, component);
+      tasks = [...dailyTasks];
       const files = this.date.files(parsed);
       const pages = Object.values(files).flat();
       if (pages.length) {
-        const tasks2 = this.dataview.pages(`"${pages.join('" or "')}"`).file.tasks.where((task) => task);
-        const component2 = new import_obsidian6.Component();
-        component2.load();
-        this.dataview.taskList(tasks2, false, el, component2);
+        const nonDailyTasks = this.dataview.pages(`"${pages.join('" or "')}"`).file.tasks.where((task) => task);
+        tasks = [...dailyTasks, ...nonDailyTasks];
       }
+      const component = new import_obsidian6.Component();
+      component.load();
+      this.dataview.taskList(tasks, false, el, component);
     };
     this.listByTag = async (source, el, ctx) => {
       var _a;
@@ -7960,19 +7960,14 @@ var Task = class {
       const where = tags.map((tag, index) => {
         return `contains(tags, "#${tag}") ${index === tags.length - 1 ? "" : "OR"}`;
       }).join(" ");
-      const markdown = await this.dataview.tryQueryMarkdown(`
+      const { values: tasks } = await this.dataview.tryQuery(`
 TASK
 FROM -"Templates"
 WHERE ${where} AND file.path != "${filepath}"
 SORT completed ASC
     `);
       component.load();
-      return import_obsidian6.MarkdownRenderer.renderMarkdown(
-        markdown,
-        containerEl,
-        ctx.sourcePath,
-        component
-      );
+      return this.dataview.taskList(tasks, false, el, component);
     };
     this.app = app;
     this.settings = settings;
@@ -8057,9 +8052,9 @@ var Bullet = class {
       const where = tags.map((tag, index) => {
         return `(contains(L.tags, "${tag}")) ${index === tags.length - 1 ? "" : "OR"}`;
       }).join(" ");
-      const markdown = await this.dataview.tryQueryMarkdown(
+      const result = await this.dataview.tryQuery(
         `
-TABLE WITHOUT ID rows.L.text AS "Text", rows.file.link AS "File"
+TABLE WITHOUT ID rows.L.text AS "Bullet", rows.file.link AS "File"
 FROM (${from}) AND -"Templates"
 FLATTEN file.lists AS L
 WHERE ${where} AND !L.task AND file.path != "${filepath}"
@@ -8067,13 +8062,13 @@ GROUP BY file.link
 SORT rows.file.link DESC
     `
       );
-      const formattedMarkdown = markdown.replaceAll("\\\\", "\\").replaceAll("\n<", "<");
       component.load();
-      return import_obsidian8.MarkdownRenderer.renderMarkdown(
-        formattedMarkdown,
+      return this.dataview.table(
+        result.headers,
+        result.values,
         el.createEl("div"),
-        ctx.sourcePath,
-        component
+        component,
+        ctx.sourcePath
       );
     };
     this.app = app;
