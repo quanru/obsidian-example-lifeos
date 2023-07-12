@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "0b027b0971fb6759",
+        "id": "8ea045fcc4cbd1f7",
         "type": "tabs",
         "children": [
           {
-            "id": "7accf020d9529df9",
+            "id": "e32e6fbea7defc8a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3. Resources/摄影摄像/README.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -113,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3. Resources/摄影摄像/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "3. Resources/摄影摄像/README.md"
-              }
+              "state": {}
             }
           },
           {
@@ -135,7 +127,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3. Resources/摄影摄像/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,21 +146,21 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "command-palette:Open command palette": false,
-      "random-note:Open random note": false,
-      "workspaces:Manage workspace layouts": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "command-palette:打开命令面板": false,
+      "random-note:开始漫游笔记": false,
+      "workspaces:管理工作区布局": false,
       "templater-obsidian:Templater": false,
       "obsidian42-brat:BRAT": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "7accf020d9529df9",
+  "active": "e32e6fbea7defc8a",
   "lastOpenFiles": [
-    "4. Archives/育儿-宝宝起名/README.md",
     "HOME.canvas",
+    "README.md",
     "PeriodicNotes/2023/Weekly/2023-W23.md",
     "PeriodicNotes/2023/Daily/06/2023-06-11.md",
     "PeriodicNotes/2023/Daily/06/2023-06-10.md",
@@ -180,22 +171,23 @@
     "PeriodicNotes/2023/Daily/06/2023-06-05.md",
     "4. Archives/育儿-宝宝起名/规则.md",
     "4. Archives/育儿-宝宝起名/程序起名.md",
-    "4. Archives/育儿-宝宝起名/林奕如.png",
-    "4. Archives/育儿-宝宝起名/program/package.json",
-    "4. Archives/育儿-宝宝起名/program/nameCandidateList.md",
-    "4. Archives/育儿-宝宝起名/program/index.js",
-    "4. Archives/育儿-宝宝起名/program/README.md",
     "4. Archives/育儿-宝宝起名/五行/金.md",
     "4. Archives/育儿-宝宝起名/五行/火.md",
     "4. Archives/育儿-宝宝起名/五行/水.md",
     "4. Archives/育儿-宝宝起名/五行/木.md",
     "4. Archives/育儿-宝宝起名/五行/土.md",
+    "4. Archives/育儿-宝宝起名/program/package.json",
+    "4. Archives/育儿-宝宝起名/program/nameCandidateList.md",
+    "4. Archives/育儿-宝宝起名/program/index.js",
+    "4. Archives/育儿-宝宝起名/program/README.md",
+    "4. Archives/育儿-宝宝起名/林奕如.png",
     "4. Archives/育儿-宝宝起名/单字.md",
     "4. Archives/育儿-宝宝起名/候选列表.md",
     "4. Archives/育儿-宝宝起名/五行和字义查询.md",
-    "4. Archives/育儿-宝宝起名/program",
     "4. Archives/育儿-宝宝起名/五行",
+    "4. Archives/育儿-宝宝起名/program",
     "4. Archives/育儿-宝宝起名/baby-name.png",
+    "4. Archives/育儿-宝宝起名/README.md",
     "4. Archives/育儿-宝宝起名",
     "3. Resources/摄影摄像/README.md",
     "3. Resources/摄影摄像",
@@ -203,8 +195,6 @@
     "2. Areas/知识管理",
     "2. Areas/工作/README.md",
     "2. Areas/工作",
-    "1. Projects/分享-2023 WOT 分享会/演讲排练/逐字稿.md",
-    "1. Projects/分享-2023 WOT 分享会/演讲排练/观众可能的问题.md",
     "1. Projects/分享-2023 WOT 分享会/演讲排练",
     "1. Projects/分享-2023 WOT 分享会/演讲嘉宾资料包/出品人详情 _ WOT 2023 – 全球技术创新大会.html",
     "1. Projects/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
@@ -213,8 +203,8 @@
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/warning.png",
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/rollup-logo.svg",
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/repo-hero-logo-light.svg",
-    "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/money-collect.png",
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.svg",
+    "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.png",
     "Templates/HOME.canvas",
     "hello/HOME.canvas",
     "hello/Templates/HOME.canvas"

@@ -7862,7 +7862,7 @@ var Area = class {
   constructor(app, settings) {
     this.listByFolder = async (source, el, ctx) => {
       const div = el.createEl("div");
-      const markdown = this.file.list("1. Projects");
+      const markdown = this.file.list("2. Areas");
       const component = new import_obsidian5.Component();
       component.load();
       return import_obsidian5.MarkdownRenderer.renderMarkdown(
