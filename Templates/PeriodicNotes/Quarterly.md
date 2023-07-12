@@ -6,7 +6,7 @@
 
 ## 要事维度
 %%领域的本季快照%%
-<% ```PeriodicPARA.File.list('2. Areas') %>
+<% PeriodicPARA.File.list('2. Areas') %>
 
 ## 角色维度
 ### 职员

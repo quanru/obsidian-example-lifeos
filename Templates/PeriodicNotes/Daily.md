@@ -2,7 +2,7 @@
 
 ## 项目列表
 %%项目的今日快照%%
-<% ```PeriodicPARA.File.list('1. Projects') %>
+<% PeriodicPARA.File.list('1. Projects') %>
 
 ## 日常记录
 - %%你的记录%%

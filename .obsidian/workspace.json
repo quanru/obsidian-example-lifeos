@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "48005dcad2e95d3c",
+        "id": "75d75ac0e65a21cf",
         "type": "tabs",
         "children": [
           {
-            "id": "34b47681b9f2d71c",
+            "id": "819d49090346bcbd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "PeriodicNotes/2023/Weekly/2023-W22.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -108,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "PeriodicNotes/2023/Weekly/2023-W22.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "PeriodicNotes/2023/Weekly/2023-W22.md"
+              }
             }
           },
           {
@@ -127,6 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "PeriodicNotes/2023/Weekly/2023-W22.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,21 +162,18 @@
       "random-note:开始漫游笔记": false,
       "workspaces:管理工作区布局": false,
       "templater-obsidian:Templater": false,
-      "obsidian42-brat:BRAT": false
+      "obsidian42-brat:BRAT": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "34b47681b9f2d71c",
+  "active": "819d49090346bcbd",
   "lastOpenFiles": [
-    "PeriodicNotes/2023/Daily/06/2023-06-02.md",
     "PeriodicNotes/2023/Weekly/2023-W22.md",
     "PeriodicNotes/2023/Weekly/2023-W24.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-01.md",
-    "PeriodicNotes/Daily/2023-06-02.md",
-    "PeriodicNotes/Daily/2023-07-01.md",
-    "PeriodicNotes/Daily",
-    "TASK.md",
-    "HOME.canvas",
-    "1. Projects/分享-2023 WOT 分享会/README.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-12.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-03.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-02.md",
+    "2023-07-08.md",
     "PeriodicNotes/2023/Weekly/2023-W23.md",
     "PeriodicNotes/2023/Daily/06/2023-06-11.md",
     "PeriodicNotes/2023/Daily/06/2023-06-10.md",
@@ -189,6 +195,8 @@
     "4. Archives/育儿-宝宝起名/program/index.js",
     "4. Archives/育儿-宝宝起名/program/README.md",
     "4. Archives/育儿-宝宝起名/单字.md",
+    "4. Archives/育儿-宝宝起名/候选列表.md",
+    "4. Archives/育儿-宝宝起名/五行和字义查询.md",
     "4. Archives/育儿-宝宝起名/五行",
     "4. Archives/育儿-宝宝起名/program",
     "4. Archives/育儿-宝宝起名/baby-name.png",
@@ -197,14 +205,16 @@
     "2. Areas/知识管理",
     "2. Areas/工作",
     "1. Projects/分享-2023 WOT 分享会/演讲排练",
+    "1. Projects/分享-2023 WOT 分享会/演讲嘉宾资料包/出品人详情 _ WOT 2023 – 全球技术创新大会.html",
     "1. Projects/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
     "1. Projects/分享-2023 WOT 分享会/架构图/Monorepo.svg",
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/warning.svg",
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/warning.png",
-    "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/rollup-logo.svg",
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/repo-hero-logo-light.svg",
+    "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/rollup-logo.svg",
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.svg",
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.png",
+    "HOME.canvas",
     "Templates/HOME.canvas",
     "hello/HOME.canvas",
     "hello/Templates/HOME.canvas"
