@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8ea045fcc4cbd1f7",
+        "id": "823182965ea70f97",
         "type": "tabs",
         "children": [
           {
-            "id": "e32e6fbea7defc8a",
+            "id": "cca40c9aa9ae1e49",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -154,11 +154,12 @@
       "workspaces:管理工作区布局": false,
       "templater-obsidian:Templater": false,
       "obsidian42-brat:BRAT": false,
-      "periodic-notes:Open today": false
+      "daily-notes:打开/创建今天的日记": false
     }
   },
-  "active": "e32e6fbea7defc8a",
+  "active": "cca40c9aa9ae1e49",
   "lastOpenFiles": [
+    "PeriodicNotes/2023/Weekly/2023-W26.md",
     "HOME.canvas",
     "README.md",
     "PeriodicNotes/2023/Weekly/2023-W23.md",
