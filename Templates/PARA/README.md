@@ -7,8 +7,8 @@ tags:
 
 # README
 %%设置项目截止日期，及其结果描述%%
-- #替换为当前项目标签 截止日期 📅 2023-xx-xx
-- #替换为当前项目标签 结果描述
+- [ ] 截止日期 📅 2023-xx-xx
+- 结果描述
 
 ## 任务
 %%根据当前文件的 [Metadata](https://help.obsidian.md/Editing+and+formatting/Metadata) 的 tags 字段查询任务，从所有的笔记中提取%%
