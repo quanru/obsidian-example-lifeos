@@ -1,9 +1,9 @@
 [
   "dataview",
-  "templater-obsidian",
-  "obsidian-tasks-plugin",
   "calendar",
+  "obsidian-tasks-plugin",
   "periodic-para",
   "obsidian42-brat",
+  "templater-obsidian",
   "hot-reload"
 ]

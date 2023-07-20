@@ -1,5 +1,9 @@
 {
-  "periodicNotesPath": "PeriodicNotes",
+  "periodicNotesPath": "0. 周期笔记",
+  "projectsPath": "1. 项目",
+  "areasPath": "2. 领域",
+  "resourcesPath": "3. 资源",
+  "archivesPath": "4. 存档",
   "projectListHeader": "项目列表",
   "areaListHeader": "要事维度",
   "habitHeader": "习惯打卡"

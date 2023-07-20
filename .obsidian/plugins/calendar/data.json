@@ -3,8 +3,8 @@
   "weekStart": "locale",
   "wordsPerDot": 250,
   "showWeeklyNote": true,
-  "weeklyNoteFormat": "gggg/[Weekly]/gggg-[W]ww",
-  "weeklyNoteTemplate": "Templates/PeriodicNotes/Weekly",
-  "weeklyNoteFolder": "PeriodicNotes",
+  "weeklyNoteFormat": "gggg/[周记]/gggg-[W]ww",
+  "weeklyNoteTemplate": "模版/周期笔记/周记",
+  "weeklyNoteFolder": "0. 周期笔记",
   "localeOverride": "system-default"
 }

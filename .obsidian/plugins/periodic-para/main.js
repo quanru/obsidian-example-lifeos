@@ -7520,17 +7520,76 @@ __export(main_exports, {
   default: () => PeriodicPARA
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian11 = require("obsidian");
+var import_obsidian10 = require("obsidian");
 var import_obsidian_dataview = __toESM(require_lib());
 
 // src/para/Project.ts
-var import_obsidian3 = require("obsidian");
+var import_obsidian4 = require("obsidian");
 
 // src/periodic/Date.ts
+var import_obsidian2 = require("obsidian");
+
+// src/periodic/File.ts
 var import_obsidian = require("obsidian");
+
+// src/constant.ts
+var ERROR_MESSAGES = {
+  NO_FRONT_MATTER_TAG: "Please add the tags field for frontMatter!",
+  NO_DATAVIEW_INSTALL: "You need to install dataview first!",
+  FAILED_DATAVIEW_API: "Dataview API enable failed!",
+  NO_VIEW_PROVIDED: "Please provide a view name!",
+  NO_VIEW_EXISTED: "There is no this view in periodic PARA plugin",
+  NO_README_EXIST: "There is no README.md or xxx.README.md in "
+};
+
+// src/periodic/File.ts
+var File = class {
+  constructor(app, settings) {
+    this.app = app;
+    this.settings = settings;
+  }
+  list(fileFolder) {
+    const folder = this.app.vault.getAbstractFileByPath(fileFolder);
+    if (folder instanceof import_obsidian.TFolder) {
+      const subFolderList = folder.children.sort().filter((file) => file instanceof import_obsidian.TFolder);
+      const READMEList = subFolderList.map((subFolder, index) => {
+        if (subFolder instanceof import_obsidian.TFolder) {
+          const files = subFolder.children;
+          const README = files.find(
+            (file) => file.path.match(/(.*\.)?README\.md/)
+          );
+          if (!README) {
+            new import_obsidian.Notice(ERROR_MESSAGES.NO_README_EXIST + subFolder.path);
+          }
+          if (README instanceof import_obsidian.TFile) {
+            const link = this.app.metadataCache.fileToLinktext(
+              README,
+              README == null ? void 0 : README.path
+            );
+            return `${index + 1}. [[${link}|${subFolder.name}]]`;
+          }
+        }
+      });
+      return READMEList.join("\n");
+    }
+    return `No files in ${fileFolder}`;
+  }
+  get(link, sourcePath = "", fileFolder) {
+    const file = this.app.metadataCache.getFirstLinkpathDest(link, sourcePath);
+    if (!fileFolder) {
+      return file;
+    }
+    if (file == null ? void 0 : file.path.includes(fileFolder)) {
+      return file;
+    }
+  }
+};
+
+// src/periodic/Date.ts
 var Date2 = class {
   constructor(app, settings) {
     this.app = app;
+    this.file = new File(app, settings);
     this.settings = settings;
   }
   parse(fileName = "") {
@@ -7563,10 +7622,10 @@ var Date2 = class {
   }) {
     const { year, quarter, month, week } = parsed;
     return {
-      year: year ? (0, import_obsidian.moment)().year(year).endOf("year").format("YYYY-MM-DD") : "",
-      quarter: quarter && year ? (0, import_obsidian.moment)().year(year).quarter(quarter).endOf("quarter").format("YYYY-MM-DD") : "",
-      month: month && year ? (0, import_obsidian.moment)().year(year).month(month - 1).endOf("month").format("YYYY-MM-DD") : "",
-      week: week && year ? (0, import_obsidian.moment)().year(year).week(week).endOf("week").format("YYYY-MM-DD") : ""
+      year: year ? (0, import_obsidian2.moment)().year(year).endOf("year").format("YYYY-MM-DD") : "",
+      quarter: quarter && year ? (0, import_obsidian2.moment)().year(year).quarter(quarter).endOf("quarter").format("YYYY-MM-DD") : "",
+      month: month && year ? (0, import_obsidian2.moment)().year(year).month(month - 1).endOf("month").format("YYYY-MM-DD") : "",
+      week: week && year ? (0, import_obsidian2.moment)().year(year).week(week).endOf("week").format("YYYY-MM-DD") : ""
     };
   }
   days(parsed = {
@@ -7587,32 +7646,32 @@ var Date2 = class {
       };
     }
     if (week) {
-      const from = year ? (0, import_obsidian.moment)().year(year).week(week).startOf("week").format("YYYY-MM-DD") : null;
-      const to = year ? (0, import_obsidian.moment)().year(year).week(week).endOf("week").format("YYYY-MM-DD") : null;
+      const from = year ? (0, import_obsidian2.moment)().year(year).week(week).startOf("week").format("YYYY-MM-DD") : null;
+      const to = year ? (0, import_obsidian2.moment)().year(year).week(week).endOf("week").format("YYYY-MM-DD") : null;
       return {
         from,
         to
       };
     }
     if (month) {
-      const from = year ? (0, import_obsidian.moment)().year(year).month(month - 1).startOf("month").format("YYYY-MM-DD") : null;
-      const to = year ? (0, import_obsidian.moment)().year(year).month(month - 1).endOf("month").format("YYYY-MM-DD") : null;
+      const from = year ? (0, import_obsidian2.moment)().year(year).month(month - 1).startOf("month").format("YYYY-MM-DD") : null;
+      const to = year ? (0, import_obsidian2.moment)().year(year).month(month - 1).endOf("month").format("YYYY-MM-DD") : null;
       return {
         from,
         to
       };
     }
     if (quarter) {
-      const from = year ? (0, import_obsidian.moment)().year(year).quarter(quarter).startOf("quarter").format("YYYY-MM-DD") : null;
-      const to = year ? (0, import_obsidian.moment)().year(year).quarter(quarter).endOf("quarter").format("YYYY-MM-DD") : null;
+      const from = year ? (0, import_obsidian2.moment)().year(year).quarter(quarter).startOf("quarter").format("YYYY-MM-DD") : null;
+      const to = year ? (0, import_obsidian2.moment)().year(year).quarter(quarter).endOf("quarter").format("YYYY-MM-DD") : null;
       return {
         from,
         to
       };
     }
     if (year) {
-      const from = (0, import_obsidian.moment)().year(year).startOf("year").format("YYYY-MM-DD");
-      const to = (0, import_obsidian.moment)().year(year).endOf("year").format("YYYY-MM-DD");
+      const from = (0, import_obsidian2.moment)().year(year).startOf("year").format("YYYY-MM-DD");
+      const to = (0, import_obsidian2.moment)().year(year).endOf("year").format("YYYY-MM-DD");
       return {
         from,
         to
@@ -7634,23 +7693,35 @@ var Date2 = class {
     const weeks = /* @__PURE__ */ new Set();
     const months = /* @__PURE__ */ new Set();
     const quarters = /* @__PURE__ */ new Set();
-    const currentDate = (0, import_obsidian.moment)(from).clone();
-    while (currentDate.isBefore((0, import_obsidian.moment)(to))) {
-      weeks.add(
-        `${this.settings.periodicNotesPath}/${currentDate.weekYear()}/Weekly/${currentDate.weekYear()}-W${String(
-          currentDate.isoWeek()
-        ).padStart(2, "0")}.md`
+    const currentDate = (0, import_obsidian2.moment)(from).clone();
+    while (currentDate.isBefore((0, import_obsidian2.moment)(to))) {
+      const weekLink = `${currentDate.weekYear()}-W${String(
+        currentDate.isoWeek()
+      ).padStart(2, "0")}.md`;
+      const weekFile = this.file.get(
+        weekLink,
+        "",
+        this.settings.periodicNotesPath
       );
-      months.add(
-        `${this.settings.periodicNotesPath}/${currentDate.year()}/Monthly/${currentDate.year()}-${String(
-          currentDate.month() + 1
-        ).padStart(2, "0")}.md`
+      weeks.add(weekFile == null ? void 0 : weekFile.path);
+      const monthLink = `${currentDate.year()}-${String(
+        currentDate.month() + 1
+      ).padStart(2, "0")}.md`;
+      const monthFile = this.file.get(
+        monthLink,
+        "",
+        this.settings.periodicNotesPath
       );
-      quarters.add(
-        `${this.settings.periodicNotesPath}/${currentDate.year()}/Quarterly/${currentDate.year()}-Q${Math.ceil(
-          (currentDate.month() + 1) / 3
-        )}.md`
+      months.add(monthFile == null ? void 0 : monthFile.path);
+      const quarterLink = `${currentDate.year()}-Q${Math.ceil(
+        (currentDate.month() + 1) / 3
+      )}.md`;
+      const quarterFile = this.file.get(
+        quarterLink,
+        "",
+        this.settings.periodicNotesPath
       );
+      quarters.add(quarterFile);
       currentDate.add(1, "day");
     }
     return {
@@ -7662,55 +7733,24 @@ var Date2 = class {
 };
 
 // src/para/Project.ts
-var import_obsidian4 = require("obsidian");
-
-// src/periodic/File.ts
-var import_obsidian2 = require("obsidian");
-
-// src/constant.ts
-var ERROR_MESSAGES = {
-  NO_FRONT_MATTER_TAG: "Please add the tags field for frontMatter!",
-  NO_DATAVIEW_INSTALL: "You need to install dataview first!",
-  FAILED_DATAVIEW_API: "Dataview API enable failed!",
-  NO_VIEW_PROVIDED: "Please provide a view name!",
-  NO_VIEW_EXISTED: "There is no this view in periodic PARA plugin",
-  NO_README_EXIST: "There is no README.md or xxx.README.md in "
-};
-
-// src/periodic/File.ts
-var File = class {
-  constructor(app, settings) {
-    this.app = app;
-    this.settings = settings;
-  }
-  list(fileFolder) {
-    const folder = this.app.vault.getAbstractFileByPath(fileFolder);
-    if (folder instanceof import_obsidian2.TFolder) {
-      const subFolderList = folder.children.sort().filter((file) => file instanceof import_obsidian2.TFolder);
-      const READMEList = subFolderList.map((subFolder, index) => {
-        if (subFolder instanceof import_obsidian2.TFolder) {
-          const files = subFolder.children;
-          const README = files.find(
-            (file) => file.path.match(/(.*\.)?README\.md/)
-          );
-          if (!README) {
-            new import_obsidian2.Notice(ERROR_MESSAGES.NO_README_EXIST + subFolder.path);
-          }
-          if (README instanceof import_obsidian2.TFile) {
-            const link = this.app.metadataCache.fileToLinktext(README, README == null ? void 0 : README.path);
-            return `${index + 1}. [[${link}|${subFolder.name}]]`;
-          }
-        }
-      });
-      return READMEList.join("\n");
-    }
-    return `No files in ${fileFolder}`;
-  }
-};
+var import_obsidian5 = require("obsidian");
 
 // src/para/Base.ts
+var import_obsidian3 = require("obsidian");
 var Base = class {
   constructor(dir, app, settings) {
+    this.listByFolder = async (source, el, ctx) => {
+      const div = el.createEl("div");
+      const markdown = this.file.list(this.dir);
+      const component = new import_obsidian3.Component();
+      component.load();
+      return import_obsidian3.MarkdownRenderer.renderMarkdown(
+        markdown,
+        div,
+        ctx.sourcePath,
+        component
+      );
+    };
     this.dir = dir;
     this.app = app;
     this.settings = settings;
@@ -7726,18 +7766,6 @@ var Base = class {
 var Project = class extends Base {
   constructor() {
     super(...arguments);
-    this.listByFolder = async (source, el, ctx) => {
-      const div = el.createEl("div");
-      const markdown = this.file.list(this.dir);
-      const component = new import_obsidian4.Component();
-      component.load();
-      return import_obsidian4.MarkdownRenderer.renderMarkdown(
-        markdown,
-        div,
-        ctx.sourcePath,
-        component
-      );
-    };
     this.listByTime = async (source, el, ctx) => {
       const date = new Date2(this.app, this.settings);
       const { basename: filename, path } = this.app.workspace.getActiveFile() || {
@@ -7759,9 +7787,9 @@ var Project = class extends Base {
           `${index + 1}. [[${project}|${(regMatch == null ? void 0 : regMatch.length) ? regMatch[1] : ""}]] ${projectTimeConsume[project]}`
         );
       });
-      const component = new import_obsidian4.Component();
+      const component = new import_obsidian5.Component();
       component.load();
-      return import_obsidian4.MarkdownRenderer.renderMarkdown(
+      return import_obsidian5.MarkdownRenderer.renderMarkdown(
         list.join("\n"),
         div,
         ctx.sourcePath,
@@ -7814,13 +7842,10 @@ var Project = class extends Base {
     let totalTime = "";
     const tasks = [];
     while (true) {
-      const momentDay = (0, import_obsidian3.moment)(day);
-      const file = this.app.vault.getAbstractFileByPath(
-        `${this.settings.periodicNotesPath}/${momentDay.year()}/Daily/${String(
-          momentDay.month() + 1
-        ).padStart(2, "0")}/${momentDay.format("YYYY-MM-DD")}.md`
-      );
-      if (file instanceof import_obsidian3.TFile) {
+      const momentDay = (0, import_obsidian4.moment)(day);
+      const link = `${momentDay.format("YYYY-MM-DD")}.md`;
+      const file = this.file.get(link, "", this.settings.periodicNotesPath);
+      if (file instanceof import_obsidian4.TFile) {
         const reg = new RegExp(`# ${header}([\\s\\S]+?)
 #`);
         let todayTotalTime = "0hr0";
@@ -7841,7 +7866,7 @@ var Project = class extends Base {
             if (!realProject) {
               return;
             }
-            const projectFile = ((_b = this.app.metadataCache.getFirstLinkpathDest(realProject, filePath)) == null ? void 0 : _b.path) || "";
+            const projectFile = ((_b = this.file.get(realProject, filePath, this.settings.projectsPath)) == null ? void 0 : _b.path) || "";
             const [projectTime = ""] = project.match(timeReg) || [];
             projectTimeConsume[projectFile] = this.timeAdd(
               projectTimeConsume[projectFile],
@@ -7875,22 +7900,10 @@ var Project = class extends Base {
 };
 
 // src/para/Area.ts
-var import_obsidian5 = require("obsidian");
+var import_obsidian6 = require("obsidian");
 var Area = class extends Base {
   constructor() {
     super(...arguments);
-    this.listByFolder = async (source, el, ctx) => {
-      const div = el.createEl("div");
-      const markdown = this.file.list(this.dir);
-      const component = new import_obsidian5.Component();
-      component.load();
-      return import_obsidian5.MarkdownRenderer.renderMarkdown(
-        markdown,
-        div,
-        ctx.sourcePath,
-        component
-      );
-    };
     this.listByTime = async (source, el, ctx) => {
       const { basename: filename, path } = this.app.workspace.getActiveFile() || {
         filename: "",
@@ -7902,15 +7915,15 @@ var Area = class extends Base {
       const div = el.createEl("div");
       const list = [];
       areaList.map((area, index) => {
-        const file = this.app.metadataCache.getFirstLinkpathDest(area, path);
+        const file = this.file.get(area, path, this.settings.areasPath);
         const regMatch = file == null ? void 0 : file.path.match(/\/(.*)\//);
         list.push(
           `${index + 1}. [[${area}|${(regMatch == null ? void 0 : regMatch.length) ? regMatch[1] : ""}]]`
         );
       });
-      const component = new import_obsidian5.Component();
+      const component = new import_obsidian6.Component();
       component.load();
-      return import_obsidian5.MarkdownRenderer.renderMarkdown(
+      return import_obsidian6.MarkdownRenderer.renderMarkdown(
         list.join("\n"),
         div,
         ctx.sourcePath,
@@ -7931,11 +7944,9 @@ var Area = class extends Base {
     const tasks = [];
     for (let index = 0; index < quarterList.length; index++) {
       const quarter = quarterList[index];
-      const file = this.app.vault.getAbstractFileByPath(
-        // YYYY/YYYY-[Q]Q
-        `${this.settings.periodicNotesPath}/${year}/${year}-${quarter}.md`
-      );
-      if (file instanceof import_obsidian5.TFile) {
+      const link = `${year}-${quarter}.md`;
+      const file = this.file.get(link, "", this.settings.periodicNotesPath);
+      if (file instanceof import_obsidian6.TFile) {
         const reg = new RegExp(`# ${header}([\\s\\S]+?)
 #`);
         if (file) {
@@ -7964,54 +7975,22 @@ var Area = class extends Base {
 };
 
 // src/para/Resource.ts
-var import_obsidian6 = require("obsidian");
 var Resource = class extends Base {
-  constructor() {
-    super(...arguments);
-    this.listByFolder = async (source, el, ctx) => {
-      const div = el.createEl("div");
-      const markdown = this.file.list(this.dir);
-      const component = new import_obsidian6.Component();
-      component.load();
-      return import_obsidian6.MarkdownRenderer.renderMarkdown(
-        markdown,
-        div,
-        ctx.sourcePath,
-        component
-      );
-    };
-  }
 };
 
 // src/para/Archive.ts
-var import_obsidian7 = require("obsidian");
 var Archive = class extends Base {
-  constructor() {
-    super(...arguments);
-    this.listByFolder = async (source, el, ctx) => {
-      const div = el.createEl("div");
-      const markdown = this.file.list(this.dir);
-      const component = new import_obsidian7.Component();
-      component.load();
-      return import_obsidian7.MarkdownRenderer.renderMarkdown(
-        markdown,
-        div,
-        ctx.sourcePath,
-        component
-      );
-    };
-  }
 };
 
 // src/periodic/Task.ts
-var import_obsidian9 = require("obsidian");
+var import_obsidian8 = require("obsidian");
 
 // src/util.ts
-var import_obsidian8 = require("obsidian");
+var import_obsidian7 = require("obsidian");
 function renderError(msg, containerEl, sourcePath) {
-  const component = new import_obsidian8.Component();
+  const component = new import_obsidian7.Component();
   component.load();
-  return import_obsidian8.MarkdownRenderer.renderMarkdown(
+  return import_obsidian7.MarkdownRenderer.renderMarkdown(
     msg,
     containerEl,
     sourcePath,
@@ -8033,7 +8012,7 @@ var Task = class {
           ...condition
         })
       ).sort((t) => t.completion, "asc");
-      const component = new import_obsidian9.Component();
+      const component = new import_obsidian8.Component();
       component.load();
       this.dataview.taskList(tasks, false, el, component);
     };
@@ -8056,7 +8035,7 @@ var Task = class {
         const nonDailyTasks = this.dataview.pages(`"${pages.join('" or "')}"`).file.tasks.where((task) => task);
         tasks = [...dailyTasks, ...nonDailyTasks];
       }
-      const component = new import_obsidian9.Component();
+      const component = new import_obsidian8.Component();
       component.load();
       this.dataview.taskList(tasks, false, el, component);
     };
@@ -8066,7 +8045,7 @@ var Task = class {
       let {
         frontmatter: { tags }
       } = ((_a = this.dataview.page(filepath)) == null ? void 0 : _a.file) || { frontmatter: {} };
-      const component = new import_obsidian9.Component();
+      const component = new import_obsidian8.Component();
       const containerEl = el.createEl("div");
       if (!tags) {
         return renderError(
@@ -8118,18 +8097,18 @@ SORT completed ASC
         return false;
       dateText = ret[0];
     }
-    const targetDate = (0, import_obsidian9.moment)(dateText);
+    const targetDate = (0, import_obsidian8.moment)(dateText);
     if (!targetDate)
       return false;
-    const isFromFullfil = from ? targetDate.isSameOrAfter((0, import_obsidian9.moment)(from)) : true;
-    const isToFullfil = to ? targetDate.isSameOrBefore((0, import_obsidian9.moment)(to)) : true;
+    const isFromFullfil = from ? targetDate.isSameOrAfter((0, import_obsidian8.moment)(from)) : true;
+    const isToFullfil = to ? targetDate.isSameOrBefore((0, import_obsidian8.moment)(to)) : true;
     const isFullfil = task.children.map((subtask) => this.filter(subtask, condition)).includes(true) || task.text.length > 1 && (date === "DONE" /* DONE */ && task.completed || date === "RECORD" /* RECORD */) && isFromFullfil && isToFullfil;
     return isFullfil;
   }
 };
 
 // src/periodic/Bullet.ts
-var import_obsidian10 = require("obsidian");
+var import_obsidian9 = require("obsidian");
 var Bullet = class {
   constructor(app, settings, dataview) {
     this.listByTag = async (source, el, ctx) => {
@@ -8138,7 +8117,7 @@ var Bullet = class {
       let {
         frontmatter: { tags }
       } = ((_a = this.dataview.page(filepath)) == null ? void 0 : _a.file) || { frontmatter: {} };
-      const component = new import_obsidian10.Component();
+      const component = new import_obsidian9.Component();
       const containerEl = el.createEl("div");
       if (!tags) {
         return renderError(
@@ -8193,16 +8172,16 @@ var DEFAULT_SETTINGS = {
   areaListHeader: "First Things Dimension",
   habitHeader: "Habit"
 };
-var PeriodicPARA = class extends import_obsidian11.Plugin {
+var PeriodicPARA = class extends import_obsidian10.Plugin {
   constructor(app, manifest) {
     super(app, manifest);
     if (!(0, import_obsidian_dataview.isPluginEnabled)(app)) {
-      new import_obsidian11.Notice(ERROR_MESSAGES.NO_DATAVIEW_INSTALL);
+      new import_obsidian10.Notice(ERROR_MESSAGES.NO_DATAVIEW_INSTALL);
       throw Error(ERROR_MESSAGES.NO_DATAVIEW_INSTALL);
     }
     const dataviewApi = (0, import_obsidian_dataview.getAPI)(app);
     if (!dataviewApi) {
-      new import_obsidian11.Notice(ERROR_MESSAGES.FAILED_DATAVIEW_API);
+      new import_obsidian10.Notice(ERROR_MESSAGES.FAILED_DATAVIEW_API);
       throw Error(ERROR_MESSAGES.FAILED_DATAVIEW_API);
     }
     this.app = app;
@@ -8212,8 +8191,33 @@ var PeriodicPARA = class extends import_obsidian11.Plugin {
     await this.loadSettings();
     this.loadHelpers();
     this.loadGlobalHelpers();
+    this.loadViews();
     this.addSettingTab(new SettingTab(this.app, this));
-    const views = {
+    const handler = (source, el, ctx) => {
+      const view = source.trim();
+      const legacyView = `${view}ByTime`;
+      if (!view) {
+        return renderError(
+          ERROR_MESSAGES.NO_VIEW_PROVIDED,
+          el.createEl("div"),
+          ctx.sourcePath
+        );
+      }
+      if (!Object.keys(this.views).includes(view) && !Object.keys(this.views).includes(legacyView)) {
+        return renderError(
+          `${ERROR_MESSAGES.NO_VIEW_EXISTED}: ${view}`,
+          el.createEl("div"),
+          ctx.sourcePath
+        );
+      }
+      const callback = this.views[view] || this.views[legacyView];
+      return callback(view, el, ctx);
+    };
+    this.registerMarkdownCodeBlockProcessor("PeriodicPARA", handler);
+    this.registerMarkdownCodeBlockProcessor("periodic-para", handler);
+  }
+  loadViews() {
+    this.views = {
       // views by time -> time context -> periodic notes
       ProjectListByTime: this.project.listByTime,
       AreaListByTime: this.area.listByTime,
@@ -8228,28 +8232,6 @@ var PeriodicPARA = class extends import_obsidian11.Plugin {
       ResourceListByFolder: this.resource.listByFolder,
       ArchiveListByFolder: this.archive.listByFolder
     };
-    const handler = (source, el, ctx) => {
-      const view = source.trim();
-      const legacyView = `${view}ByTime`;
-      if (!view) {
-        return renderError(
-          ERROR_MESSAGES.NO_VIEW_PROVIDED,
-          el.createEl("div"),
-          ctx.sourcePath
-        );
-      }
-      if (!Object.keys(views).includes(view) && !Object.keys(views).includes(legacyView)) {
-        return renderError(
-          `${ERROR_MESSAGES.NO_VIEW_EXISTED}: ${view}`,
-          el.createEl("div"),
-          ctx.sourcePath
-        );
-      }
-      const callback = views[view] || views[legacyView];
-      return callback(view, el, ctx);
-    };
-    this.registerMarkdownCodeBlockProcessor("PeriodicPARA", handler);
-    this.registerMarkdownCodeBlockProcessor("periodic-para", handler);
   }
   onunload() {
   }
@@ -8258,12 +8240,27 @@ var PeriodicPARA = class extends import_obsidian11.Plugin {
   }
   async saveSettings() {
     await this.saveData(this.settings);
+    this.loadHelpers();
+    this.loadGlobalHelpers();
+    this.loadViews();
   }
   loadHelpers() {
-    this.project = new Project(this.settings.projectsPath, this.app, this.settings);
+    this.project = new Project(
+      this.settings.projectsPath,
+      this.app,
+      this.settings
+    );
     this.area = new Area(this.settings.areasPath, this.app, this.settings);
-    this.resource = new Resource(this.settings.resourcesPath, this.app, this.settings);
-    this.archive = new Archive(this.settings.archivesPath, this.app, this.settings);
+    this.resource = new Resource(
+      this.settings.resourcesPath,
+      this.app,
+      this.settings
+    );
+    this.archive = new Archive(
+      this.settings.archivesPath,
+      this.app,
+      this.settings
+    );
     this.task = new Task(this.app, this.settings, this.dataview);
     this.file = new File(this.app, this.settings);
     this.date = new Date2(this.app, this.settings);
@@ -8279,7 +8276,7 @@ var PeriodicPARA = class extends import_obsidian11.Plugin {
     window.PeriodicPARA.Date = this.date;
   }
 };
-var SettingTab = class extends import_obsidian11.PluginSettingTab {
+var SettingTab = class extends import_obsidian10.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.plugin = plugin;
@@ -8288,52 +8285,58 @@ var SettingTab = class extends import_obsidian11.PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
     containerEl.createEl("h2", { text: "Advanced." });
-    new import_obsidian11.Setting(containerEl).setName("Periodic Notes Folder:").addText(
+    new import_obsidian10.Setting(containerEl).setName("Periodic Notes Folder:").addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.periodicNotesPath).setValue(this.plugin.settings.periodicNotesPath).onChange(async (value) => {
         this.plugin.settings.periodicNotesPath = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian11.Setting(containerEl).setName("Projects Folder:").addText(
+    new import_obsidian10.Setting(containerEl).setName("Projects Folder:").addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.projectsPath).setValue(this.plugin.settings.projectsPath).onChange(async (value) => {
         this.plugin.settings.projectsPath = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian11.Setting(containerEl).setName("Areas Folder:").addText(
+    new import_obsidian10.Setting(containerEl).setName("Areas Folder:").addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.areasPath).setValue(this.plugin.settings.areasPath).onChange(async (value) => {
         this.plugin.settings.areasPath = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian11.Setting(containerEl).setName("Resources Folder:").addText(
+    new import_obsidian10.Setting(containerEl).setName("Resources Folder:").addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.resourcesPath).setValue(this.plugin.settings.resourcesPath).onChange(async (value) => {
         this.plugin.settings.resourcesPath = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian11.Setting(containerEl).setName("Archives Folder:").addText(
+    new import_obsidian10.Setting(containerEl).setName("Archives Folder:").addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.archivesPath).setValue(this.plugin.settings.archivesPath).onChange(async (value) => {
         this.plugin.settings.archivesPath = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian11.Setting(containerEl).setName("Project List Header:").setDesc("Where the Project List is in a daily note").addText(
+    new import_obsidian10.Setting(containerEl).setName("Project List Header:").setDesc("Where the Project List is in a daily note").addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.projectListHeader).setValue(this.plugin.settings.projectListHeader).onChange(async (value) => {
         this.plugin.settings.projectListHeader = value;
         await this.plugin.saveSettings();
+        this.plugin.loadHelpers();
+        this.plugin.loadGlobalHelpers();
       })
     );
-    new import_obsidian11.Setting(containerEl).setName("Area List Header:").setDesc("Where the Area List is in a quarterly note").addText(
+    new import_obsidian10.Setting(containerEl).setName("Area List Header:").setDesc("Where the Area List is in a quarterly note").addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.areaListHeader).setValue(this.plugin.settings.areaListHeader).onChange(async (value) => {
         this.plugin.settings.areaListHeader = value;
         await this.plugin.saveSettings();
+        this.plugin.loadHelpers();
+        this.plugin.loadGlobalHelpers();
       })
     );
-    new import_obsidian11.Setting(containerEl).setName("Habit Header:").setDesc("Where the Habit module is in a daily note").addText(
+    new import_obsidian10.Setting(containerEl).setName("Habit Header:").setDesc("Where the Habit module is in a daily note").addText(
       (text) => text.setPlaceholder(DEFAULT_SETTINGS.habitHeader).setValue(this.plugin.settings.habitHeader).onChange(async (value) => {
         this.plugin.settings.habitHeader = value;
         await this.plugin.saveSettings();
+        this.plugin.loadHelpers();
+        this.plugin.loadGlobalHelpers();
       })
     );
   }

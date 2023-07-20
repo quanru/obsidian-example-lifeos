@@ -1,6 +1,6 @@
 {
-  "folder": "PeriodicNotes",
-  "template": "Templates/PeriodicNotes/Daily",
+  "folder": "0. 周期笔记",
+  "template": "模版/周期笔记/日记",
   "autorun": false,
-  "format": "YYYY/[Daily]/MM/YYYY-MM-DD"
+  "format": "YYYY/[日记]/MM/YYYY-MM-DD"
 }
