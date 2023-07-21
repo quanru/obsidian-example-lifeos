@@ -7866,7 +7866,7 @@ var Project = class extends Base {
             if (!realProject) {
               return;
             }
-            const projectFile = ((_b = this.file.get(realProject, filePath, this.settings.projectsPath)) == null ? void 0 : _b.path) || "";
+            const projectFile = ((_b = this.file.get(realProject)) == null ? void 0 : _b.path) || "";
             const [projectTime = ""] = project.match(timeReg) || [];
             projectTimeConsume[projectFile] = this.timeAdd(
               projectTimeConsume[projectFile],
@@ -7915,7 +7915,7 @@ var Area = class extends Base {
       const div = el.createEl("div");
       const list = [];
       areaList.map((area, index) => {
-        const file = this.file.get(area, path, this.settings.areasPath);
+        const file = this.file.get(area);
         const regMatch = file == null ? void 0 : file.path.match(/\/(.*)\//);
         list.push(
           `${index + 1}. [[${area}|${(regMatch == null ? void 0 : regMatch.length) ? regMatch[1] : ""}]]`
