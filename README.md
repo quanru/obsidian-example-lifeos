@@ -6,4 +6,8 @@
 
 ## 模版下载
 
-- [点我下载](https://github.com/quanru/obsidian-example-LifeOS/releases/latest/download/LifeOS.zip) 
+- [点我下载](https://github.com/quanru/obsidian-example-LifeOS/releases/latest/download/LifeOS.zip)
+
+## Periodic Para 插件
+
+- [README.md](https://github.com/quanru/obsidian-periodic-para)
