@@ -11,3 +11,7 @@
 ## Periodic Para 插件
 
 - [README.md](https://github.com/quanru/obsidian-periodic-para)
+
+## 寻求支持
+
+- [Discord](https://discord.gg/HZGanKEkuZ)
