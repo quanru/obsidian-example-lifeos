@@ -1,6 +1,6 @@
 {
   "folder": "0. 周期笔记",
-  "template": "模版/周期笔记/日记",
+  "template": "0. 周期笔记/Templates/Daily",
   "autorun": false,
   "format": "YYYY/[日记]/MM/YYYY-MM-DD"
 }

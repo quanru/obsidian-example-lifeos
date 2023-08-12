@@ -2,7 +2,7 @@
   "dataview",
   "calendar",
   "obsidian-tasks-plugin",
-  "periodic-para",
   "templater-obsidian",
-  "hot-reload"
+  "hot-reload",
+  "periodic-para"
 ]

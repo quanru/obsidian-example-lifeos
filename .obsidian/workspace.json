@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "8cd382f7eb1dd2fd",
+        "id": "dc4f66cd00e6e9c3",
         "type": "tabs",
         "children": [
           {
-            "id": "329524f5b1c036f8",
+            "id": "d7617813d99db84a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0. 周期笔记/2023/Weekly/2023-W23.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "periodic-para",
+              "state": {}
             }
           }
         ]
@@ -113,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0. 周期笔记/2023/Weekly/2023-W23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "0. 周期笔记/2023/Weekly/2023-W23.md"
-              }
+              "state": {}
             }
           },
           {
@@ -135,7 +127,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0. 周期笔记/2023/Weekly/2023-W23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,22 +146,25 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "command-palette:打开命令面板": false,
-      "random-note:开始漫游笔记": false,
-      "workspaces:管理工作区布局": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false,
+      "periodic-para:Periodic PARA": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "329524f5b1c036f8",
+  "active": "d7617813d99db84a",
   "lastOpenFiles": [
-    "0. 周期笔记/2023/日记/08/2023-08-10.md",
+    "0. 周期笔记/2023/日记/08/2023-08-07.md",
     "0. 周期笔记/2023/日记/08",
     "0. 周期笔记/2023/日记",
-    "README.md",
+    "0. 周期笔记/2023/Weekly/2023-W32.md",
+    "0. 周期笔记/2023/Daily/08/2023-08-15.md",
+    "0. 周期笔记/2023/Daily/08",
     "模版/周期笔记/月记.md",
     "模版/周期笔记/日记.md",
     "模版/周期笔记/年记.md",
@@ -180,32 +174,30 @@
     "模版/周期笔记",
     "模版/PARA",
     "模版",
+    "0. 周期笔记/2023/Daily/06/2023-06-01.md",
     "任务.md",
+    "1. 项目/分享-2023 WOT 分享会/WOT.README.md",
     "主页.canvas",
-    "4. 存档/育儿-宝宝起名/规则.md",
-    "4. 存档/育儿-宝宝起名/程序起名.md",
-    "4. 存档/育儿-宝宝起名/五行/火.md",
-    "4. 存档/育儿-宝宝起名/五行/木.md",
-    "4. 存档/育儿-宝宝起名/五行/金.md",
-    "4. 存档/育儿-宝宝起名/五行/水.md",
-    "4. 存档/育儿-宝宝起名/program/index.js",
-    "4. 存档/育儿-宝宝起名/五行/土.md",
-    "4. 存档/育儿-宝宝起名/program/README.md",
-    "4. 存档/育儿-宝宝起名/program/package.json",
-    "4. 存档/育儿-宝宝起名/program/nameCandidateList.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-06.md",
+    "0. 周期笔记/2023/Monthly/2023-06.md",
+    "0. 周期笔记/2023/Weekly/2023-W22.md",
+    "0. 周期笔记/2023/Quarterly/2023-Q1.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-02.md",
+    "1. 项目/README.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-03.md",
+    "1. 项目/给答复/README.md",
+    "1. 项目/给答复",
+    "0. 周期笔记/2023/Daily/08/2023-08-11.md",
+    "1. 项目/Template.md",
+    "0. 周期笔记/2023/Quarterly/2023-Q2.md",
+    "0. 周期笔记/2023/Weekly/2023-W23.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-11.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-10.md",
+    "0. 周期笔记/2023/Daily/06",
+    "0. 周期笔记/2023/Weekly",
+    "0. 周期笔记/2021",
     "4. 存档/育儿-宝宝起名/林奕如.png",
-    "4. 存档/育儿-宝宝起名/单字.md",
-    "4. 存档/育儿-宝宝起名/候选列表.md",
-    "4. 存档/育儿-宝宝起名/五行和字义查询.md",
-    "4. 存档/育儿-宝宝起名/五行",
-    "4. 存档/育儿-宝宝起名/program",
     "4. 存档/育儿-宝宝起名/baby-name.png",
-    "4. 存档/育儿-宝宝起名/README.md",
-    "4. 存档/育儿-宝宝起名",
-    "4. 存档/README.md",
-    "3. 资源/摄影摄像/README.md",
-    "3. 资源/README.md",
-    "2. 领域/知识管理/README.md",
     "1. 项目/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
     "1. 项目/分享-2023 WOT 分享会/架构图/Monorepo.svg",
     "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/money-collect.svg",
