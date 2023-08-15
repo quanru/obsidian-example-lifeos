@@ -1,6 +1,2 @@
 .DS_Store
-node_modules
-dist
-.verysync
-.trash
-*conflict*
+.obsidian/plugins/hot-reload/
