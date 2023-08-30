@@ -1,4 +1,4 @@
-<p align="center">中文版本  |  <a title="English" href="https://github.com/quanru/obsidian-example-LifeOS/blob/english-version/README.md">English Version</a></p>
+<p align="center">中文版本  |  <a title="English" href="https://github.com/quanru/obsidian-example-LifeOS/blob/main/README.md">English Version</a></p>
 
 ## 说明
 
@@ -10,7 +10,7 @@
 
 ## 模版下载
 
-- [点我下载](https://github.com/quanru/obsidian-example-LifeOS/releases/latest/download/LifeOS.zip)
+- [点我下载](https://github.com/quanru/obsidian-example-LifeOS/archive/refs/heads/chinese-version.zip)
 
 ## Periodic Para 插件
 
