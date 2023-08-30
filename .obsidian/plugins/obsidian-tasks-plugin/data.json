@@ -1,5 +1,5 @@
 {
-  "globalQuery": "path does not include Template\nheading does not include 习惯打卡\nsort by done reverse\nsort by status.name reverse",
+  "globalQuery": "path does not include Templates\nheading does not include Habit\nsort by done reverse\nsort by status.name reverse",
   "globalFilter": "",
   "removeGlobalFilter": false,
   "taskFormat": "tasksPluginEmoji",

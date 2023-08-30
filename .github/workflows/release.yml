@@ -23,7 +23,7 @@ jobs:
         id: build
         run: |
             mkdir ${{ env.NAME }}
-            cp -r .obsidian 0.\ 周期笔记 1.\ 项目 2.\ 领域 3.\ 资源 4.\ 存档 主页.canvas README.md 任务.md ${{ env.NAME }}
+            cp -r .obsidian 0.\ PeriodicNotes 1.\ Projects 2.\ Areas 3.\ Resources 4.\ Archives HOME.canvas README.md TASK.md ${{ env.NAME }}
             zip -r ${{ env.NAME }}.zip ${{ env.NAME }}
             ls
             echo "::set-output name=tag_name::$(git tag --sort version:refname | tail -n 1)"

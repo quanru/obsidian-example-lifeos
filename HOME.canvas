@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"type":"text","text":"## 💫 Areas\n> An area is a sphere of activity with a standard to be maintained over time.\n```PeriodicPARA\nAreaListByFolder\n```","id":"45f7f22634f0bb7e","x":-180,"y":-360,"width":380,"height":500,"color":"5"},
+		{"type":"text","text":"## 🔥 Projects\n> A project is a series of tasks linked to a goal, with a deadline.\n```PeriodicPARA\nProjectListByFolder\n```","id":"b78fa040a3fea1ec","x":-560,"y":-360,"width":380,"height":500,"color":"2"},
+		{"type":"text","text":"## 📝 Resources\n> Resources are a topic or theme of ongoing interest.\n```PeriodicPARA\nResourceListByFolder\n```","id":"9ec2492e84f151f4","x":-560,"y":140,"width":380,"height":480},
+		{"type":"text","text":"## 📦 Archives\n> The archive is inactive items from the other three categories.\n```PeriodicPARA\nArchiveListByFolder\n```","id":"528e809ab3b9cd3c","x":-180,"y":140,"width":380,"height":480}
+	],
+	"edges":[]
+}

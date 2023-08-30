@@ -1,10 +1,10 @@
 {
-  "periodicNotesPath": "0. 周期笔记",
-  "projectsPath": "1. 项目",
-  "areasPath": "2. 领域",
-  "resourcesPath": "3. 资源",
-  "archivesPath": "4. 存档",
-  "projectListHeader": "项目列表",
-  "areaListHeader": "要事维度",
-  "habitHeader": "习惯打卡"
+  "periodicNotesPath": "0. PeriodicNotes",
+  "projectsPath": "1. Projects",
+  "areasPath": "2. Areas",
+  "resourcesPath": "3. Resources",
+  "archivesPath": "4. Archives",
+  "projectListHeader": "Project List",
+  "areaListHeader": "First Things Dimension",
+  "habitHeader": "Habit"
 }
