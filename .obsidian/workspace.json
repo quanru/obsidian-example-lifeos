@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "bc0baa254018f3ae",
+        "id": "f3599349b7e2ccef",
         "type": "tabs",
         "children": [
           {
-            "id": "b04a4356f7d7942e",
+            "id": "2e23d8e3564f734b",
             "type": "leaf",
             "state": {
-              "type": "periodic-para",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "0. PeriodicNotes/Templates/Daily.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -63,6 +68,14 @@
             }
           },
           {
+            "id": "9110575c83bff6ab",
+            "type": "leaf",
+            "state": {
+              "type": "periodic-para",
+              "state": {}
+            }
+          },
+          {
             "id": "cc8540b919f4ee67",
             "type": "leaf",
             "state": {
@@ -88,11 +101,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 397.5024719238281
   },
   "right": {
     "id": "e909704c2c67d329",
@@ -108,6 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "0. PeriodicNotes/Templates/Daily.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "0. PeriodicNotes/Templates/Daily.md"
+              }
             }
           },
           {
@@ -127,6 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "0. PeriodicNotes/Templates/Daily.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +164,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "periodic-para:Periodic PARA": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -155,11 +172,21 @@
       "random-note:Open random note": false,
       "workspaces:Manage workspace layouts": false,
       "templater-obsidian:Templater": false,
-      "obsidian42-brat:BRAT": false
+      "periodic-para:Periodic PARA": false
     }
   },
-  "active": "b04a4356f7d7942e",
+  "active": "2e23d8e3564f734b",
   "lastOpenFiles": [
+    "0. PeriodicNotes/2023/Daily/09/2023-09-03.md",
+    "0. PeriodicNotes/Templates/Daily.md",
+    "0. PeriodicNotes/2023/Daily/09/2023-09-01.md",
+    "0. PeriodicNotes/2023/Daily/09/2023-09-02.md",
+    "0. PeriodicNotes/2023/Daily/09/2023-09-16.md",
+    "0. PeriodicNotes/2023/Daily/09",
+    "HOME.canvas",
+    "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
+    "0. PeriodicNotes/2023/Daily/06/2023-06-03.md",
+    "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
     "0. PeriodicNotes/2023/Daily/08/2023-08-26.md",
     "0. PeriodicNotes/2023/Daily/08",
     "4. Archives/Template.md",
@@ -170,7 +197,6 @@
     "0. PeriodicNotes/Templates/Yearly.md",
     "0. PeriodicNotes/Templates/Monthly.md",
     "0. PeriodicNotes/Templates/Quarterly.md",
-    "0. PeriodicNotes/Templates/Daily.md",
     "0. PeriodicNotes/Templates",
     "Templates/PeriodicNotes/Yearly.md",
     "Templates/PeriodicNotes/Weekly.md",
@@ -187,15 +213,7 @@
     "3. Resources/BlockChain",
     "2. Areas/Work/Work.README.md",
     "2. Areas/Work",
-    "2. Areas/PKM/PKM.README.md",
     "2. Areas/PKM",
-    "2. Areas/Life/Life.README.md",
-    "2. Areas/Life",
-    "1. Projects/PKM-LifeOS/PeriodicPARA.md",
-    "1. Projects/PKM-LifeOS/LifeOS.README.md",
-    "0. PeriodicNotes/2023/Daily/06/2023-06-04.md",
-    "0. PeriodicNotes/2023/Daily/06/2023-06-03.md",
-    "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
     "4. Archives/育儿-宝宝起名/林奕如.png",
     "4. Archives/育儿-宝宝起名/baby-name.png",
     "1. Projects/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
@@ -206,7 +224,6 @@
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/repo-hero-logo-light.svg",
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.svg",
     "1. Projects/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.png",
-    "HOME.canvas",
     "主页.canvas",
     "Templates/HOME.canvas",
     "hello/HOME.canvas",
