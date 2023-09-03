@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "dc4f66cd00e6e9c3",
+        "id": "0b0919a77b35f498",
         "type": "tabs",
         "children": [
           {
-            "id": "d7617813d99db84a",
+            "id": "8d84369e25845557",
             "type": "leaf",
             "state": {
-              "type": "periodic-para",
+              "type": "empty",
               "state": {}
             }
           }
@@ -63,6 +63,14 @@
             }
           },
           {
+            "id": "d7617813d99db84a",
+            "type": "leaf",
+            "state": {
+              "type": "periodic-para",
+              "state": {}
+            }
+          },
+          {
             "id": "cc8540b919f4ee67",
             "type": "leaf",
             "state": {
@@ -88,11 +96,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 420.5024719238281
   },
   "right": {
     "id": "e909704c2c67d329",
@@ -146,22 +155,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "command-palette:Open command palette": false,
-      "random-note:Open random note": false,
-      "workspaces:Manage workspace layouts": false,
-      "periodic-para:Periodic PARA": false,
-      "templater-obsidian:Templater": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "random-note:开始漫游笔记": false,
+      "workspaces:管理工作区布局": false,
+      "templater-obsidian:Templater": false,
+      "periodic-para:Periodic PARA": false
     }
   },
   "active": "d7617813d99db84a",
   "lastOpenFiles": [
+    "0. 周期笔记/2023/周记/2023-W36.md",
+    "0. 周期笔记/2023/周记",
+    "0. 周期笔记/2023/日记/09/2023-09-07.md",
+    "0. 周期笔记/2023/日记/09",
+    "0. 周期笔记/2023/日记",
     "0. 周期笔记/2023/日记/08/2023-08-07.md",
     "0. 周期笔记/2023/日记/08",
-    "0. 周期笔记/2023/日记",
     "0. 周期笔记/2023/Weekly/2023-W32.md",
     "0. 周期笔记/2023/Daily/08/2023-08-15.md",
     "0. 周期笔记/2023/Daily/08",
@@ -191,11 +204,7 @@
     "1. 项目/Template.md",
     "0. 周期笔记/2023/Quarterly/2023-Q2.md",
     "0. 周期笔记/2023/Weekly/2023-W23.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-11.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-10.md",
     "0. 周期笔记/2023/Daily/06",
-    "0. 周期笔记/2023/Weekly",
-    "0. 周期笔记/2021",
     "4. 存档/育儿-宝宝起名/林奕如.png",
     "4. 存档/育儿-宝宝起名/baby-name.png",
     "1. 项目/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
