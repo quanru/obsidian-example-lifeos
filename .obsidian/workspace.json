@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "9ec235363e71f93b",
+        "id": "ee496f977cffed1e",
         "type": "tabs",
         "children": [
           {
-            "id": "c9642a22233870ac",
+            "id": "1d8ce8f2e5051529",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "5. Expres/README.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -116,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "5. Expres/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "5. Expres/README.md"
+              }
             }
           },
           {
@@ -135,6 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "5. Expres/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,6 +151,16 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "14a387d228e8b0a8",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
@@ -154,19 +173,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "command-palette:打开命令面板": false,
-      "random-note:开始漫游笔记": false,
-      "workspaces:管理工作区布局": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false,
       "templater-obsidian:Templater": false,
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "c9642a22233870ac",
+  "active": "1d8ce8f2e5051529",
   "lastOpenFiles": [
+    "-1. Capture/README.md",
+    "0. PeriodicNotes/2023/Daily/06/2023-06-03.md",
+    "0. PeriodicNotes/2023/Daily/06/2023-06-04.md",
+    "5. Expres/README.md",
+    "1. Projects/PKM-LifeOS/LifeOS.README.md",
+    "5. Expres",
+    "-1. Capture",
     "0. PeriodicNotes/2023/Weekly/2023-W36.md",
     "0. PeriodicNotes/Templates/Daily.md",
     "0. PeriodicNotes/2023/Daily/09/2023-09-03.md",
@@ -176,7 +202,6 @@
     "0. PeriodicNotes/2023/Daily/09",
     "HOME.canvas",
     "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
-    "0. PeriodicNotes/2023/Daily/06/2023-06-03.md",
     "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
     "0. PeriodicNotes/2023/Daily/08/2023-08-26.md",
     "0. PeriodicNotes/2023/Daily/08",
@@ -193,17 +218,11 @@
     "Templates/PeriodicNotes/Weekly.md",
     "Templates/PeriodicNotes/Monthly.md",
     "Templates/PeriodicNotes/Quarterly.md",
-    "Templates/PeriodicNotes/Daily.md",
-    "Templates/PARA/README.md",
     "Templates/PeriodicNotes",
     "Templates/PARA",
     "Templates",
-    "3. Resources/EnglishLearning/README.md",
     "3. Resources/EnglishLearning",
-    "3. Resources/BlockChain/README.md",
     "3. Resources/BlockChain",
-    "2. Areas/Work",
-    "2. Areas/PKM",
     "4. Archives/育儿-宝宝起名/林奕如.png",
     "4. Archives/育儿-宝宝起名/baby-name.png",
     "1. Projects/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
