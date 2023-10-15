@@ -47,7 +47,7 @@ var __toBinary = /* @__PURE__ */ (() => {
 __export(exports, {
   default: () => TemplaterPlugin
 });
-var import_obsidian18 = __toModule(require("obsidian"));
+var import_obsidian17 = __toModule(require("obsidian"));
 
 // src/settings/Settings.ts
 var import_obsidian6 = __toModule(require("obsidian"));
@@ -245,7 +245,7 @@ var round = Math.round;
 // node_modules/@popperjs/core/lib/utils/userAgent.js
 function getUAString() {
   var uaData = navigator.userAgentData;
-  if (uaData != null && uaData.brands) {
+  if (uaData != null && uaData.brands && Array.isArray(uaData.brands)) {
     return uaData.brands.map(function(item) {
       return item.brand + "/" + item.version;
     }).join(" ");
@@ -476,15 +476,7 @@ function effect2(_ref2) {
       return;
     }
   }
-  if (true) {
-    if (!isHTMLElement(arrowElement)) {
-      console.error(['Popper: "arrow" element must be an HTMLElement (not an SVGElement).', "To use an SVG arrow, wrap it in an HTMLElement that will be used as", "the arrow."].join(" "));
-    }
-  }
   if (!contains(state.elements.popper, arrowElement)) {
-    if (true) {
-      console.error(['Popper: "arrow" modifier\'s `element` must be a child of the popper', "element."].join(" "));
-    }
     return;
   }
   state.elements.arrow = arrowElement;
@@ -511,9 +503,8 @@ var unsetSides = {
   bottom: "auto",
   left: "auto"
 };
-function roundOffsetsByDPR(_ref) {
+function roundOffsetsByDPR(_ref, win) {
   var x = _ref.x, y = _ref.y;
-  var win = window;
   var dpr = win.devicePixelRatio || 1;
   return {
     x: round(x * dpr) / dpr || 0,
@@ -569,7 +560,7 @@ function mapToStyles(_ref2) {
   var _ref4 = roundOffsets === true ? roundOffsetsByDPR({
     x,
     y
-  }) : {
+  }, getWindow(popper2)) : {
     x,
     y
   };
@@ -584,14 +575,6 @@ function mapToStyles(_ref2) {
 function computeStyles(_ref5) {
   var state = _ref5.state, options = _ref5.options;
   var _options$gpuAccelerat = options.gpuAcceleration, gpuAcceleration = _options$gpuAccelerat === void 0 ? true : _options$gpuAccelerat, _options$adaptive = options.adaptive, adaptive = _options$adaptive === void 0 ? true : _options$adaptive, _options$roundOffsets = options.roundOffsets, roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
-  if (true) {
-    var transitionProperty = getComputedStyle(state.elements.popper).transitionProperty || "";
-    if (adaptive && ["transform", "top", "right", "bottom", "left"].some(function(property) {
-      return transitionProperty.indexOf(property) >= 0;
-    })) {
-      console.warn(["Popper: Detected CSS transitions on at least one of the following", 'CSS properties: "transform", "top", "right", "bottom", "left".', "\n\n", 'Disable the "computeStyles" modifier\'s `adaptive` option to allow', "for smooth transitions, or remove these properties from the CSS", "transition declaration on the popper element if only transitioning", "opacity or background-color for example.", "\n\n", "We recommend using the popper element as a wrapper around an inner", "element that can have any CSS property transitioned for animations."].join(" "));
-    }
-  }
   var commonStyles = {
     placement: getBasePlacement(state.placement),
     variation: getVariation(state.placement),
@@ -948,9 +931,6 @@ function computeAutoPlacement(state, options) {
   });
   if (allowedPlacements.length === 0) {
     allowedPlacements = placements2;
-    if (true) {
-      console.error(["Popper: The `allowedAutoPlacements` option did not allow any", "placements. Ensure the `placement` option matches the variation", "of the allowed placements.", 'For example, "auto" cannot be used to allow "bottom-start".', 'Use "auto-start" instead.'].join(" "));
-    }
   }
   var overflows = allowedPlacements.reduce(function(acc, placement2) {
     acc[placement2] = detectOverflow(state, {
@@ -1394,92 +1374,6 @@ function debounce(fn2) {
   };
 }
 
-// node_modules/@popperjs/core/lib/utils/format.js
-function format(str) {
-  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-    args[_key - 1] = arguments[_key];
-  }
-  return [].concat(args).reduce(function(p, c) {
-    return p.replace(/%s/, c);
-  }, str);
-}
-
-// node_modules/@popperjs/core/lib/utils/validateModifiers.js
-var INVALID_MODIFIER_ERROR = 'Popper: modifier "%s" provided an invalid %s property, expected %s but got %s';
-var MISSING_DEPENDENCY_ERROR = 'Popper: modifier "%s" requires "%s", but "%s" modifier is not available';
-var VALID_PROPERTIES = ["name", "enabled", "phase", "fn", "effect", "requires", "options"];
-function validateModifiers(modifiers) {
-  modifiers.forEach(function(modifier) {
-    [].concat(Object.keys(modifier), VALID_PROPERTIES).filter(function(value, index, self) {
-      return self.indexOf(value) === index;
-    }).forEach(function(key) {
-      switch (key) {
-        case "name":
-          if (typeof modifier.name !== "string") {
-            console.error(format(INVALID_MODIFIER_ERROR, String(modifier.name), '"name"', '"string"', '"' + String(modifier.name) + '"'));
-          }
-          break;
-        case "enabled":
-          if (typeof modifier.enabled !== "boolean") {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"enabled"', '"boolean"', '"' + String(modifier.enabled) + '"'));
-          }
-          break;
-        case "phase":
-          if (modifierPhases.indexOf(modifier.phase) < 0) {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"phase"', "either " + modifierPhases.join(", "), '"' + String(modifier.phase) + '"'));
-          }
-          break;
-        case "fn":
-          if (typeof modifier.fn !== "function") {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"fn"', '"function"', '"' + String(modifier.fn) + '"'));
-          }
-          break;
-        case "effect":
-          if (modifier.effect != null && typeof modifier.effect !== "function") {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"effect"', '"function"', '"' + String(modifier.fn) + '"'));
-          }
-          break;
-        case "requires":
-          if (modifier.requires != null && !Array.isArray(modifier.requires)) {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"requires"', '"array"', '"' + String(modifier.requires) + '"'));
-          }
-          break;
-        case "requiresIfExists":
-          if (!Array.isArray(modifier.requiresIfExists)) {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"requiresIfExists"', '"array"', '"' + String(modifier.requiresIfExists) + '"'));
-          }
-          break;
-        case "options":
-        case "data":
-          break;
-        default:
-          console.error('PopperJS: an invalid property has been provided to the "' + modifier.name + '" modifier, valid properties are ' + VALID_PROPERTIES.map(function(s) {
-            return '"' + s + '"';
-          }).join(", ") + '; but "' + key + '" was provided.');
-      }
-      modifier.requires && modifier.requires.forEach(function(requirement) {
-        if (modifiers.find(function(mod) {
-          return mod.name === requirement;
-        }) == null) {
-          console.error(format(MISSING_DEPENDENCY_ERROR, String(modifier.name), requirement, requirement));
-        }
-      });
-    });
-  });
-}
-
-// node_modules/@popperjs/core/lib/utils/uniqueBy.js
-function uniqueBy(arr, fn2) {
-  var identifiers = new Set();
-  return arr.filter(function(item) {
-    var identifier = fn2(item);
-    if (!identifiers.has(identifier)) {
-      identifiers.add(identifier);
-      return true;
-    }
-  });
-}
-
 // node_modules/@popperjs/core/lib/utils/mergeByName.js
 function mergeByName(modifiers) {
   var merged = modifiers.reduce(function(merged2, current) {
@@ -1496,8 +1390,6 @@ function mergeByName(modifiers) {
 }
 
 // node_modules/@popperjs/core/lib/createPopper.js
-var INVALID_ELEMENT_ERROR = "Popper: Invalid reference or popper argument provided. They must be either a DOM element or virtual element.";
-var INFINITE_LOOP_ERROR = "Popper: An infinite loop in the modifiers cycle has been detected! The cycle has been interrupted to prevent a browser crash.";
 var DEFAULT_OPTIONS = {
   placement: "bottom",
   modifiers: [],
@@ -1548,28 +1440,6 @@ function popperGenerator(generatorOptions) {
         state.orderedModifiers = orderedModifiers.filter(function(m) {
           return m.enabled;
         });
-        if (true) {
-          var modifiers = uniqueBy([].concat(orderedModifiers, state.options.modifiers), function(_ref) {
-            var name = _ref.name;
-            return name;
-          });
-          validateModifiers(modifiers);
-          if (getBasePlacement(state.options.placement) === auto) {
-            var flipModifier = state.orderedModifiers.find(function(_ref2) {
-              var name = _ref2.name;
-              return name === "flip";
-            });
-            if (!flipModifier) {
-              console.error(['Popper: "auto" placements require the "flip" modifier be', "present and enabled to work."].join(" "));
-            }
-          }
-          var _getComputedStyle = getComputedStyle(popper2), marginTop = _getComputedStyle.marginTop, marginRight = _getComputedStyle.marginRight, marginBottom = _getComputedStyle.marginBottom, marginLeft = _getComputedStyle.marginLeft;
-          if ([marginTop, marginRight, marginBottom, marginLeft].some(function(margin) {
-            return parseFloat(margin);
-          })) {
-            console.warn(['Popper: CSS "margin" styles cannot be used to apply padding', "between the popper and its reference element or boundary.", "To replicate margin, use the `offset` modifier, as well as", "the `padding` option in the `preventOverflow` and `flip`", "modifiers."].join(" "));
-          }
-        }
         runModifierEffects();
         return instance.update();
       },
@@ -1579,9 +1449,6 @@ function popperGenerator(generatorOptions) {
         }
         var _state$elements = state.elements, reference3 = _state$elements.reference, popper3 = _state$elements.popper;
         if (!areValidElements(reference3, popper3)) {
-          if (true) {
-            console.error(INVALID_ELEMENT_ERROR);
-          }
           return;
         }
         state.rects = {
@@ -1593,15 +1460,7 @@ function popperGenerator(generatorOptions) {
         state.orderedModifiers.forEach(function(modifier) {
           return state.modifiersData[modifier.name] = Object.assign({}, modifier.data);
         });
-        var __debug_loops__ = 0;
         for (var index = 0; index < state.orderedModifiers.length; index++) {
-          if (true) {
-            __debug_loops__ += 1;
-            if (__debug_loops__ > 100) {
-              console.error(INFINITE_LOOP_ERROR);
-              break;
-            }
-          }
           if (state.reset === true) {
             state.reset = false;
             index = -1;
@@ -1630,9 +1489,6 @@ function popperGenerator(generatorOptions) {
       }
     };
     if (!areValidElements(reference2, popper2)) {
-      if (true) {
-        console.error(INVALID_ELEMENT_ERROR);
-      }
       return instance;
     }
     instance.setOptions(options).then(function(state2) {
@@ -1641,8 +1497,8 @@ function popperGenerator(generatorOptions) {
       }
     });
     function runModifierEffects() {
-      state.orderedModifiers.forEach(function(_ref3) {
-        var name = _ref3.name, _ref3$options = _ref3.options, options2 = _ref3$options === void 0 ? {} : _ref3$options, effect4 = _ref3.effect;
+      state.orderedModifiers.forEach(function(_ref) {
+        var name = _ref.name, _ref$options = _ref.options, options2 = _ref$options === void 0 ? {} : _ref$options, effect4 = _ref.effect;
         if (typeof effect4 === "function") {
           var cleanupFn = effect4({
             state,
@@ -1882,6 +1738,9 @@ function arraymove(arr, fromIndex, toIndex) {
   arr[fromIndex] = arr[toIndex];
   arr[toIndex] = element;
 }
+function get_active_file(app2) {
+  return app2.workspace.activeEditor?.file ?? app2.workspace.getActiveFile();
+}
 
 // src/settings/suggesters/FileSuggester.ts
 var FileSuggestMode;
@@ -1949,6 +1808,7 @@ var DEFAULT_SETTINGS = {
   enable_folder_templates: true,
   folder_templates: [{ folder: "", template: "" }],
   syntax_highlighting: true,
+  syntax_highlighting_mobile: false,
   enabled_templates_hotkeys: [""],
   startup_templates: [""],
   enable_ribbon_icon: true
@@ -1963,7 +1823,7 @@ var TemplaterSettingTab = class extends import_obsidian6.PluginSettingTab {
     this.add_general_setting_header();
     this.add_template_folder_setting();
     this.add_internal_functions_setting();
-    this.add_syntax_highlighting_setting();
+    this.add_syntax_highlighting_settings();
     this.add_auto_jump_to_cursor();
     this.add_trigger_on_new_file_creation_setting();
     this.add_ribbon_icon_setting();
@@ -1997,12 +1857,21 @@ var TemplaterSettingTab = class extends import_obsidian6.PluginSettingTab {
     }), " to get a list of all the available internal variables / functions.");
     new import_obsidian6.Setting(this.containerEl).setName("Internal Variables and Functions").setDesc(desc);
   }
-  add_syntax_highlighting_setting() {
-    const desc = document.createDocumentFragment();
-    desc.append("Adds syntax highlighting for Templater commands in edit mode.");
-    new import_obsidian6.Setting(this.containerEl).setName("Syntax Highlighting").setDesc(desc).addToggle((toggle) => {
+  add_syntax_highlighting_settings() {
+    const desktopDesc = document.createDocumentFragment();
+    desktopDesc.append("Adds syntax highlighting for Templater commands in edit mode.");
+    const mobileDesc = document.createDocumentFragment();
+    mobileDesc.append("Adds syntax highlighting for Templater commands in edit mode on mobile. Use with caution: this may break live preview on mobile platforms.");
+    new import_obsidian6.Setting(this.containerEl).setName("Syntax Highlighting on Desktop").setDesc(desktopDesc).addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.syntax_highlighting).onChange((syntax_highlighting) => {
         this.plugin.settings.syntax_highlighting = syntax_highlighting;
+        this.plugin.save_settings();
+        this.plugin.event_handler.update_syntax_highlighting();
+      });
+    });
+    new import_obsidian6.Setting(this.containerEl).setName("Syntax Highlighting on Mobile").setDesc(mobileDesc).addToggle((toggle) => {
+      toggle.setValue(this.plugin.settings.syntax_highlighting_mobile).onChange((syntax_highlighting_mobile) => {
+        this.plugin.settings.syntax_highlighting_mobile = syntax_highlighting_mobile;
         this.plugin.save_settings();
         this.plugin.event_handler.update_syntax_highlighting();
       });
@@ -2459,7 +2328,7 @@ var InternalModuleDate = class extends InternalModule {
   async create_dynamic_templates() {
   }
   generate_now() {
-    return (format2 = "YYYY-MM-DD", offset2, reference2, reference_format) => {
+    return (format = "YYYY-MM-DD", offset2, reference2, reference_format) => {
       if (reference2 && !window.moment(reference2, reference_format).isValid()) {
         throw new TemplaterError("Invalid reference date format, try specifying one with the argument 'reference_format'");
       }
@@ -2469,25 +2338,25 @@ var InternalModuleDate = class extends InternalModule {
       } else if (typeof offset2 === "number") {
         duration = window.moment.duration(offset2, "days");
       }
-      return window.moment(reference2, reference_format).add(duration).format(format2);
+      return window.moment(reference2, reference_format).add(duration).format(format);
     };
   }
   generate_tomorrow() {
-    return (format2 = "YYYY-MM-DD") => {
-      return window.moment().add(1, "days").format(format2);
+    return (format = "YYYY-MM-DD") => {
+      return window.moment().add(1, "days").format(format);
     };
   }
   generate_weekday() {
-    return (format2 = "YYYY-MM-DD", weekday, reference2, reference_format) => {
+    return (format = "YYYY-MM-DD", weekday, reference2, reference_format) => {
       if (reference2 && !window.moment(reference2, reference_format).isValid()) {
         throw new TemplaterError("Invalid reference date format, try specifying one with the argument 'reference_format'");
       }
-      return window.moment(reference2, reference_format).weekday(weekday).format(format2);
+      return window.moment(reference2, reference_format).weekday(weekday).format(format);
     };
   }
   generate_yesterday() {
-    return (format2 = "YYYY-MM-DD") => {
-      return window.moment().add(-1, "days").format(format2);
+    return (format = "YYYY-MM-DD") => {
+      return window.moment().add(-1, "days").format(format);
     };
   }
 };
@@ -2539,8 +2408,8 @@ var InternalModuleFile = class extends InternalModule {
     };
   }
   generate_creation_date() {
-    return (format2 = "YYYY-MM-DD HH:mm") => {
-      return window.moment(this.config.target_file.stat.ctime).format(format2);
+    return (format = "YYYY-MM-DD HH:mm") => {
+      return window.moment(this.config.target_file.stat.ctime).format(format);
     };
   }
   generate_cursor() {
@@ -2550,12 +2419,12 @@ var InternalModuleFile = class extends InternalModule {
   }
   generate_cursor_append() {
     return (content) => {
-      const active_view = app.workspace.getActiveViewOfType(import_obsidian8.MarkdownView);
-      if (active_view === null) {
-        log_error(new TemplaterError("No active view, can't append to cursor."));
+      const active_editor = app.workspace.activeEditor;
+      if (!active_editor || !active_editor.editor) {
+        log_error(new TemplaterError("No active editor, can't append to cursor."));
         return;
       }
-      const editor = active_view.editor;
+      const editor = active_editor.editor;
       const doc = editor.getDoc();
       doc.replaceSelection(content);
       return "";
@@ -2629,8 +2498,8 @@ var InternalModuleFile = class extends InternalModule {
     };
   }
   generate_last_modified_date() {
-    return (format2 = "YYYY-MM-DD HH:mm") => {
-      return window.moment(this.config.target_file.stat.mtime).format(format2);
+    return (format = "YYYY-MM-DD HH:mm") => {
+      return window.moment(this.config.target_file.stat.mtime).format(format);
     };
   }
   generate_move() {
@@ -2682,11 +2551,11 @@ var InternalModuleFile = class extends InternalModule {
   }
   generate_selection() {
     return () => {
-      const active_view = app.workspace.getActiveViewOfType(import_obsidian8.MarkdownView);
-      if (active_view == null) {
-        throw new TemplaterError("Active view is null, can't read selection.");
+      const active_editor = app.workspace.activeEditor;
+      if (!active_editor || !active_editor.editor) {
+        throw new TemplaterError("Active editor is null, can't read selection.");
       }
-      const editor = active_view.editor;
+      const editor = active_editor.editor;
       return editor.getSelection();
     };
   }
@@ -3076,13 +2945,17 @@ var UserScriptFunctions = class {
     };
     const file_content = await app.vault.read(file);
     const wrapping_fn = window.eval("(function anonymous(require, module, exports){" + file_content + "\n})");
-    wrapping_fn(req, mod, exp);
+    try {
+      wrapping_fn(req, mod, exp);
+    } catch (err) {
+      throw new TemplaterError(`Failed to load user script at "${file.path}".`, err.message);
+    }
     const user_function = exp["default"] || mod.exports;
     if (!user_function) {
-      throw new TemplaterError(`Failed to load user script ${file.path}. No exports detected.`);
+      throw new TemplaterError(`Failed to load user script at "${file.path}". No exports detected.`);
     }
     if (!(user_function instanceof Function)) {
-      throw new TemplaterError(`Failed to load user script ${file.path}. Default export is not a function.`);
+      throw new TemplaterError(`Failed to load user script at "${file.path}". Default export is not a function.`);
     }
     user_script_functions.set(`${file.basename}`, user_function);
   }
@@ -3616,7 +3489,7 @@ var Templater = class {
     this.plugin.registerMarkdownPostProcessor((el, ctx) => this.process_dynamic_templates(el, ctx));
   }
   create_running_config(template_file, target_file, run_mode) {
-    const active_file = app.workspace.getActiveFile();
+    const active_file = get_active_file(app);
     return {
       template_file,
       target_file,
@@ -3639,7 +3512,7 @@ var Templater = class {
       const new_file_location = app.vault.getConfig("newFileLocation");
       switch (new_file_location) {
         case "current": {
-          const active_file = app.workspace.getActiveFile();
+          const active_file = get_active_file(app);
           if (active_file) {
             folder = active_file.parent;
           }
@@ -3692,26 +3565,28 @@ var Templater = class {
   }
   async append_template_to_active_file(template_file) {
     const active_view = app.workspace.getActiveViewOfType(import_obsidian13.MarkdownView);
-    if (active_view === null) {
-      log_error(new TemplaterError("No active view, can't append templates."));
+    const active_editor = app.workspace.activeEditor;
+    if (!active_editor || !active_editor.file || !active_editor.editor) {
+      log_error(new TemplaterError("No active editor, can't append templates."));
       return;
     }
-    const running_config = this.create_running_config(template_file, active_view.file, 1);
+    const running_config = this.create_running_config(template_file, active_editor.file, 1);
     const output_content = await errorWrapper(async () => this.read_and_parse_template(running_config), "Template parsing error, aborting.");
     if (output_content == null) {
       return;
     }
-    const editor = active_view.editor;
+    const editor = active_editor.editor;
     const doc = editor.getDoc();
     const oldSelections = doc.listSelections();
     doc.replaceSelection(output_content);
     app.workspace.trigger("templater:template-appended", {
       view: active_view,
+      editor: active_editor,
       content: output_content,
       oldSelections,
       newSelections: doc.listSelections()
     });
-    await this.plugin.editor_handler.jump_to_next_cursor_location(active_view.file, true);
+    await this.plugin.editor_handler.jump_to_next_cursor_location(active_editor.file, true);
   }
   async write_template_to_file(template_file, file) {
     const running_config = this.create_running_config(template_file, file, 2);
@@ -3727,12 +3602,12 @@ var Templater = class {
     await this.plugin.editor_handler.jump_to_next_cursor_location(file, true);
   }
   overwrite_active_file_commands() {
-    const active_view = app.workspace.getActiveViewOfType(import_obsidian13.MarkdownView);
-    if (active_view === null) {
-      log_error(new TemplaterError("Active view is null, can't overwrite content"));
+    const active_editor = app.workspace.activeEditor;
+    if (!active_editor || !active_editor.file) {
+      log_error(new TemplaterError("Active editor is null, can't overwrite content"));
       return;
     }
-    this.overwrite_file_commands(active_view.file, true);
+    this.overwrite_file_commands(active_editor.file, true);
   }
   async overwrite_file_commands(file, active_file = false) {
     const running_config = this.create_running_config(file, file, active_file ? 3 : 2);
@@ -3856,7 +3731,9 @@ var EventHandler = class {
     this.update_file_menu();
   }
   update_syntax_highlighting() {
-    if (this.plugin.settings.syntax_highlighting) {
+    const desktopShouldHighlight = this.plugin.editor_handler.desktopShouldHighlight();
+    const mobileShouldHighlight = this.plugin.editor_handler.mobileShouldHighlight();
+    if (desktopShouldHighlight || mobileShouldHighlight) {
       this.syntax_highlighting_event = app.workspace.on("codemirror", (cm) => {
         cm.setOption("mode", "templater");
       });
@@ -3988,28 +3865,25 @@ var CommandHandler = class {
 };
 
 // src/editor/Editor.ts
-var import_obsidian17 = __toModule(require("obsidian"));
+var import_obsidian16 = __toModule(require("obsidian"));
 
 // src/editor/CursorJumper.ts
-var import_obsidian15 = __toModule(require("obsidian"));
 var CursorJumper = class {
   constructor() {
   }
   async jump_to_next_cursor_location() {
-    const active_view = app.workspace.getActiveViewOfType(import_obsidian15.MarkdownView);
-    if (!active_view) {
+    const active_editor = app.workspace.activeEditor;
+    if (!active_editor || !active_editor.editor) {
       return;
     }
-    const active_file = active_view.file;
-    await active_view.save();
-    const content = await app.vault.read(active_file);
+    const content = active_editor.editor.getValue();
     const { new_content, positions } = this.replace_and_get_cursor_positions(content);
     if (positions) {
-      await app.vault.modify(active_file, new_content);
+      active_editor.editor.setValue(new_content);
       this.set_cursor_location(positions);
     }
     if (app.vault.getConfig("vimMode")) {
-      const cm = active_view.editor.cm.cm;
+      const cm = active_editor.editor.cm.cm;
       window.CodeMirrorAdapter.Vim.handleKey(cm, "i", "mapping");
     }
   }
@@ -4027,7 +3901,7 @@ var CursorJumper = class {
   replace_and_get_cursor_positions(content) {
     let cursor_matches = [];
     let match;
-    const cursor_regex = new RegExp("<%\\s*tp.file.cursor\\((?<order>[0-9]{0,2})\\)\\s*%>", "g");
+    const cursor_regex = new RegExp("<%\\s*tp.file.cursor\\((?<order>[0-9]*)\\)\\s*%>", "g");
     while ((match = cursor_regex.exec(content)) != null) {
       cursor_matches.push(match);
     }
@@ -4055,11 +3929,11 @@ var CursorJumper = class {
     return { new_content: content, positions };
   }
   set_cursor_location(positions) {
-    const active_view = app.workspace.getActiveViewOfType(import_obsidian15.MarkdownView);
-    if (!active_view) {
+    const active_editor = app.workspace.activeEditor;
+    if (!active_editor || !active_editor.editor) {
       return;
     }
-    const editor = active_view.editor;
+    const editor = active_editor.editor;
     const selections = [];
     for (const pos of positions) {
       selections.push({ from: pos });
@@ -4072,10 +3946,10 @@ var CursorJumper = class {
 };
 
 // src/editor/Autocomplete.ts
-var import_obsidian16 = __toModule(require("obsidian"));
+var import_obsidian15 = __toModule(require("obsidian"));
 
 // toml:/home/runner/work/Templater/Templater/docs/documentation.toml
-var tp = { config: { name: "config", description: "This module exposes Templater's running configuration.\n\nThis is mostly useful when writing scripts requiring some context information.\n", functions: { template_file: { name: "template_file", description: "The `TFile` object representing the template file.", definition: "tp.file.template_file" }, target_file: { name: "target_file", description: "The `TFile` object representing the target file where the template will be inserted.", definition: "tp.config.target_file" }, run_mode: { name: "run_mode", description: "The `RunMode`, representing the way Templater was launched (Create new from template, Append to active file, ...)", definition: "tp.config.run_mode" }, active_file: { name: "active_file", description: "The active file (if existing) when launching Templater.", definition: "tp.config.active_file?" } } }, date: { name: "date", description: "This module contains every internal function related to dates.", functions: { now: { name: "now", description: "Retrieves the date.", definition: 'tp.date.now(format: string = "YYYY-MM-DD", offset?: number\u23AEstring, reference?: string, reference_format?: string)', args: { format: { name: "format", description: "Format for the date, refer to [format reference](https://momentjs.com/docs/#/displaying/format/)" }, offset: { name: "offset", description: "Offset for the day, e.g. set this to `-7` to get last week's date. You can also specify the offset as a string using the ISO 8601 format" }, reference: { name: "reference", description: "The date referential, e.g. set this to the note's title" }, reference_format: { name: "reference_format", description: "The date reference format." } } }, tomorrow: { name: "tomorrow", description: "Retrieves tomorrow's date.", definition: 'tp.date.tomorrow(format: string = "YYYY-MM-DD")', args: { format: { name: "format", description: "Format for the date, refer to [format reference](https://momentjs.com/docs/#/displaying/format/)" } } }, yesterday: { name: "yesterday", description: "Retrieves yesterday's date.", definition: 'tp.date.yesterday(format: string = "YYYY-MM-DD")', args: { format: { name: "format", description: "Format for the date, refer to [format reference](https://momentjs.com/docs/#/displaying/format/)" } } }, weekday: { name: "weekday", description: "", definition: 'tp.date.weekday(format: string = "YYYY-MM-DD", weekday: number, reference?: string, reference_format?: string)', args: { format: { name: "format", description: "Format for the date, refer to [format reference](https://momentjs.com/docs/#/displaying/format/)" }, weekday: { name: "weekday", description: "Week day number. If the locale assigns Monday as the first day of the week, `0` will be Monday, `-7` will be last week's day." }, reference: { name: "reference", description: "The date referential, e.g. set this to the note's title" }, reference_format: { name: "reference_format", description: "The date reference format." } } } } }, file: { name: "file", description: "This module contains every internal function related to files.", functions: { content: { name: "content", description: "Retrieves the file's content", definition: "tp.file.content" }, create_new: { name: "create_new", description: "Creates a new file using a specified template or with a specified content.", definition: "tp.file.create_new(template: TFile \u23AE string, filename?: string, open_new: boolean = false, folder?: TFolder)", args: { template: { name: "template", description: "Either the template used for the new file content, or the file content as a string. If it is the template to use, you retrieve it with `tp.file.find_tfile(TEMPLATENAME)`" }, filename: { name: "filename", description: 'The filename of the new file, defaults to "Untitled".' }, open_new: { name: "open_new", description: "Whether to open or not the newly created file. Warning: if you use this option, since commands are executed asynchronously, the file can be opened first and then other commands are appended to that new file and not the previous file." }, folder: { name: "folder", description: 'The folder to put the new file in, defaults to obsidian\'s default location. If you want the file to appear in a different folder, specify it with `app.vault.getAbstractFileByPath("FOLDERNAME")`' } } }, creation_date: { name: "creation_date", description: "Retrieves the file's creation date.", definition: 'tp.file.creation_date(format: string = "YYYY-MM-DD HH:mm")', args: { format: { name: "format", description: "Format for the date, refer to format reference" } } }, cursor: { name: "cursor", description: "Sets the cursor to this location after the template has been inserted. \n\nYou can navigate between the different tp.file.cursor using the configured hotkey in obsidian settings.\n", definition: "tp.file.cursor(order?: number)", args: { order: { name: "order", description: "The order of the different cursors jump, e.g. it will jump from 1 to 2 to 3, and so on.\nIf you specify multiple tp.file.cursor with the same order, the editor will switch to multi-cursor.\n" } } }, cursor_append: { name: "cursor_append", description: "Appends some content after the active cursor in the file.", definition: "tp.file.cursor_append(content: string)", args: { content: { name: "content", description: "The content to append after the active cursor" } } }, exists: { name: "exists", description: "The filename of the file we want to check existence. The fullpath to the file, relative to the Vault and containing the extension, must be provided. e.g. MyFolder/SubFolder/MyFile.", definition: "tp.file.exists(filename: string)", args: { filename: { name: "filename", description: "The filename of the file we want to check existence, e.g. MyFile." } } }, find_tfile: { name: "find_tfile", description: "Search for a file and returns its `TFile` instance", definition: "tp.file.find_tfile(filename: string)", args: { filename: { name: "filename", description: "The filename we want to search and resolve as a `TFile`" } } }, folder: { name: "folder", description: "Retrieves the file's folder name.", definition: "tp.file.folder(relative: boolean = false)", args: { relative: { name: "relative", description: "If set to true, appends the vault relative path to the folder name." } } }, include: { name: "include", description: "Includes the file's link content. Templates in the included content will be resolved.", definition: "tp.file.include(include_link: string \u23AE TFile)", args: { include_link: { name: "include_link", description: "The link to the file to include, e.g. [[MyFile]], or a TFile object. Also supports sections or blocks inclusions, e.g. [[MyFile#Section1]]" } } }, last_modified_date: { name: "last_modified_date", description: "Retrieves the file's last modification date.", definition: 'tp.file.last_modified_date(format: string = "YYYY-MM-DD HH:mm")', args: { format: { name: "format", description: "Format for the date, refer to format reference." } } }, move: { name: "functions.move", description: "Moves the file to the desired vault location.", definition: "tp.file.move(new_path: string, file_to_move?: TFile)", args: { new_path: { name: "new_path", description: "The new vault relative path of the file, without the file extension. Note: the new path needs to include the folder and the filename, e.g. /Notes/MyNote" } } }, path: { name: "path", description: "Retrieves the file's absolute path on the system.", definition: "tp.file.path(relative: boolean = false)", args: { relative: { name: "relative", description: "If set to true, only retrieves the vault's relative path." } } }, rename: { name: "rename", description: "Renames the file (keeps the same file extension).", definition: "tp.file.rename(new_title: string)", args: { new_title: { name: "new_title", description: "The new file title." } } }, selection: { name: "selection", description: "Retrieves the active file's text selection.", definition: "tp.file.selection()" }, tags: { name: "tags", description: "Retrieves the file's tags (array of string)", definition: "tp.file.tags" }, title: { name: "title", definition: "tp.file.title", description: "Retrieves the file's title." } } }, frontmatter: { name: "frontmatter", description: "This modules exposes all the frontmatter variables of a file as variables." }, obsidian: { name: "obsidian", description: "This module exposes all the functions and classes from the obsidian API." }, system: { name: "system", description: "This module contains system related functions.", functions: { clipboard: { name: "clipboard", description: "Retrieves the clipboard's content", definition: "tp.system.clipboard()" }, prompt: { name: "prompt", description: "Spawns a prompt modal and returns the user's input.", definition: "tp.system.prompt(prompt_text?: string, default_value?: string, throw_on_cancel: boolean = false, multiline?: boolean = false)", args: { prompt_text: { name: "prompt_text", description: "Text placed above the input field" }, default_value: { name: "default_value", description: "A default value for the input field" }, throw_on_cancel: { name: "throw_on_cancel", description: "Throws an error if the prompt is canceled, instead of returning a `null` value" }, multiline: { name: "multiline", description: "If set to true, the input field will be a multiline textarea" } } }, suggester: { name: "suggester", description: "Spawns a suggester prompt and returns the user's chosen item.", definition: 'tp.system.suggester(text_items: string[] \u23AE ((item: T) => string), items: T[], throw_on_cancel: boolean = false, placeholder: string = "", limit?: number = undefined)', args: { text_items: { name: "text_items", description: "Array of strings representing the text that will be displayed for each item in the suggester prompt. This can also be a function that maps an item to its text representation." }, items: { name: "items", description: "Array containing the values of each item in the correct order." }, throw_on_cancel: { name: "throw_on_cancel", description: "Throws an error if the prompt is canceled, instead of returning a `null` value" }, placeholder: { name: "placeholder", description: "Placeholder string of the prompt" }, limit: { name: "limit", description: "Limit the number of items rendered at once (useful to improve performance when displaying large lists)" } } } } }, web: { name: "web", description: "This modules contains every internal function related to the web (making web requests).", functions: { daily_quote: { name: "daily_quote", description: "Retrieves and parses the daily quote from the API https://api.quotable.io", definition: "tp.web.daily_quote()" }, random_picture: { name: "random_picture", description: "Gets a random image from https://unsplash.com/", definition: "tp.web.random_picture(size?: string, query?: string, include_size?: boolean)", args: { size: { name: "size", description: "Image size in the format `<width>x<height>`" }, query: { name: "query", description: "Limits selection to photos matching a search term. Multiple search terms can be passed separated by a comma `,`" }, include_dimensions: { name: "include_size", description: "Optional argument to include the specified size in the image link markdown. Defaults to false" } } } } } };
+var tp = { config: { name: "config", description: "This module exposes Templater's running configuration.\n\nThis is mostly useful when writing scripts requiring some context information.\n", functions: { template_file: { name: "template_file", description: "The `TFile` object representing the template file.", definition: "tp.config.template_file" }, target_file: { name: "target_file", description: "The `TFile` object representing the target file where the template will be inserted.", definition: "tp.config.target_file" }, run_mode: { name: "run_mode", description: "The `RunMode`, representing the way Templater was launched (Create new from template, Append to active file, ...)", definition: "tp.config.run_mode" }, active_file: { name: "active_file", description: "The active file (if existing) when launching Templater.", definition: "tp.config.active_file?" } } }, date: { name: "date", description: "This module contains every internal function related to dates.", functions: { now: { name: "now", description: "Retrieves the date.", definition: 'tp.date.now(format: string = "YYYY-MM-DD", offset?: number\u23AEstring, reference?: string, reference_format?: string)', args: [{ name: "format", description: "Format for the date, refer to [format reference](https://momentjs.com/docs/#/displaying/format/)" }, { name: "offset", description: "Offset for the day, e.g. set this to `-7` to get last week's date. You can also specify the offset as a string using the ISO 8601 format" }, { name: "reference", description: "The date referential, e.g. set this to the note's title" }, { name: "reference_format", description: "The date reference format." }] }, tomorrow: { name: "tomorrow", description: "Retrieves tomorrow's date.", definition: 'tp.date.tomorrow(format: string = "YYYY-MM-DD")', args: [{ name: "format", description: "Format for the date, refer to [format reference](https://momentjs.com/docs/#/displaying/format/)" }] }, yesterday: { name: "yesterday", description: "Retrieves yesterday's date.", definition: 'tp.date.yesterday(format: string = "YYYY-MM-DD")', args: [{ name: "format", description: "Format for the date, refer to [format reference](https://momentjs.com/docs/#/displaying/format/)" }] }, weekday: { name: "weekday", description: "", definition: 'tp.date.weekday(format: string = "YYYY-MM-DD", weekday: number, reference?: string, reference_format?: string)', args: [{ name: "format", description: "Format for the date, refer to [format reference](https://momentjs.com/docs/#/displaying/format/)" }, { name: "weekday", description: "Week day number. If the locale assigns Monday as the first day of the week, `0` will be Monday, `-7` will be last week's day." }, { name: "reference", description: "The date referential, e.g. set this to the note's title" }, { name: "reference_format", description: "The date reference format." }] } } }, file: { name: "file", description: "This module contains every internal function related to files.", functions: { content: { name: "content", description: "Retrieves the file's content", definition: "tp.file.content" }, create_new: { name: "create_new", description: "Creates a new file using a specified template or with a specified content.", definition: "tp.file.create_new(template: TFile \u23AE string, filename?: string, open_new: boolean = false, folder?: TFolder)", args: [{ name: "template", description: "Either the template used for the new file content, or the file content as a string. If it is the template to use, you retrieve it with `tp.file.find_tfile(TEMPLATENAME)`" }, { name: "filename", description: 'The filename of the new file, defaults to "Untitled".' }, { name: "open_new", description: "Whether to open or not the newly created file. Warning: if you use this option, since commands are executed asynchronously, the file can be opened first and then other commands are appended to that new file and not the previous file." }, { name: "folder", description: 'The folder to put the new file in, defaults to obsidian\'s default location. If you want the file to appear in a different folder, specify it with `app.vault.getAbstractFileByPath("FOLDERNAME")`' }] }, creation_date: { name: "creation_date", description: "Retrieves the file's creation date.", definition: 'tp.file.creation_date(format: string = "YYYY-MM-DD HH:mm")', args: [{ name: "format", description: "Format for the date, refer to format reference" }] }, cursor: { name: "cursor", description: "Sets the cursor to this location after the template has been inserted. \n\nYou can navigate between the different tp.file.cursor using the configured hotkey in obsidian settings.\n", definition: "tp.file.cursor(order?: number)", args: [{ name: "order", description: "The order of the different cursors jump, e.g. it will jump from 1 to 2 to 3, and so on.\nIf you specify multiple tp.file.cursor with the same order, the editor will switch to multi-cursor.\n" }] }, cursor_append: { name: "cursor_append", description: "Appends some content after the active cursor in the file.", definition: "tp.file.cursor_append(content: string)", args: [{ name: "content", description: "The content to append after the active cursor" }] }, exists: { name: "exists", description: "The filename of the file we want to check existence. The fullpath to the file, relative to the Vault and containing the extension, must be provided. e.g. MyFolder/SubFolder/MyFile.", definition: "tp.file.exists(filename: string)", args: [{ name: "filename", description: "The filename of the file we want to check existence, e.g. MyFile." }] }, find_tfile: { name: "find_tfile", description: "Search for a file and returns its `TFile` instance", definition: "tp.file.find_tfile(filename: string)", args: [{ name: "filename", description: "The filename we want to search and resolve as a `TFile`" }] }, folder: { name: "folder", description: "Retrieves the file's folder name.", definition: "tp.file.folder(relative: boolean = false)", args: [{ name: "relative", description: "If set to true, appends the vault relative path to the folder name." }] }, include: { name: "include", description: "Includes the file's link content. Templates in the included content will be resolved.", definition: "tp.file.include(include_link: string \u23AE TFile)", args: [{ name: "include_link", description: "The link to the file to include, e.g. [[MyFile]], or a TFile object. Also supports sections or blocks inclusions, e.g. [[MyFile#Section1]]" }] }, last_modified_date: { name: "last_modified_date", description: "Retrieves the file's last modification date.", definition: 'tp.file.last_modified_date(format: string = "YYYY-MM-DD HH:mm")', args: [{ name: "format", description: "Format for the date, refer to format reference." }] }, move: { name: "functions.move", description: "Moves the file to the desired vault location.", definition: "tp.file.move(new_path: string, file_to_move?: TFile)", example: '<% tp.file.move("/Notes/MyNote") %>', args: [{ name: "new_path", description: 'The new vault relative path of the file, without the file extension. Note: the new path needs to include the folder and the filename, e.g. `"/Notes/MyNote"`' }, { name: "file_to_move", description: "The file to move, defaults to the current file." }] }, path: { name: "path", description: "Retrieves the file's absolute path on the system.", definition: "tp.file.path(relative: boolean = false)", args: [{ name: "relative", description: "If set to true, only retrieves the vault's relative path." }] }, rename: { name: "rename", description: "Renames the file (keeps the same file extension).", definition: "tp.file.rename(new_title: string)", args: [{ name: "new_title", description: "The new file title." }] }, selection: { name: "selection", description: "Retrieves the active file's text selection.", definition: "tp.file.selection()" }, tags: { name: "tags", description: "Retrieves the file's tags (array of string)", definition: "tp.file.tags" }, title: { name: "title", definition: "tp.file.title", description: "Retrieves the file's title." } } }, frontmatter: { name: "frontmatter", description: "This modules exposes all the frontmatter variables of a file as variables." }, obsidian: { name: "obsidian", description: "This module exposes all the functions and classes from the obsidian API." }, system: { name: "system", description: "This module contains system related functions.", functions: { clipboard: { name: "clipboard", description: "Retrieves the clipboard's content", definition: "tp.system.clipboard()" }, prompt: { name: "prompt", description: "Spawns a prompt modal and returns the user's input.", definition: "tp.system.prompt(prompt_text?: string, default_value?: string, throw_on_cancel: boolean = false, multiline?: boolean = false)", args: [{ name: "prompt_text", description: "Text placed above the input field" }, { name: "default_value", description: "A default value for the input field" }, { name: "throw_on_cancel", description: "Throws an error if the prompt is canceled, instead of returning a `null` value" }, { name: "multiline", description: "If set to true, the input field will be a multiline textarea" }] }, suggester: { name: "suggester", description: "Spawns a suggester prompt and returns the user's chosen item.", definition: 'tp.system.suggester(text_items: string[] \u23AE ((item: T) => string), items: T[], throw_on_cancel: boolean = false, placeholder: string = "", limit?: number = undefined)', args: [{ name: "text_items", description: "Array of strings representing the text that will be displayed for each item in the suggester prompt. This can also be a function that maps an item to its text representation." }, { name: "items", description: "Array containing the values of each item in the correct order." }, { name: "throw_on_cancel", description: "Throws an error if the prompt is canceled, instead of returning a `null` value" }, { name: "placeholder", description: "Placeholder string of the prompt" }, { name: "limit", description: "Limit the number of items rendered at once (useful to improve performance when displaying large lists)" }] } } }, web: { name: "web", description: "This modules contains every internal function related to the web (making web requests).", functions: { daily_quote: { name: "daily_quote", description: "Retrieves and parses the daily quote from the API https://api.quotable.io", definition: "tp.web.daily_quote()" }, random_picture: { name: "random_picture", description: "Gets a random image from https://unsplash.com/", definition: "tp.web.random_picture(size?: string, query?: string, include_size?: boolean)", args: [{ name: "size", description: "Image size in the format `<width>x<height>`" }, { name: "query", description: "Limits selection to photos matching a search term. Multiple search terms can be passed separated by a comma `,`" }, { name: "include_size", description: "Optional argument to include the specified size in the image link markdown. Defaults to false" }] } } } };
 var documentation_default = { tp };
 
 // src/editor/TpDocumentation.ts
@@ -4100,13 +3974,34 @@ function is_function_documentation(x) {
   return false;
 }
 var Documentation = class {
-  constructor() {
+  constructor(settings) {
+    this.settings = settings;
     this.documentation = documentation_default;
   }
   get_all_modules_documentation() {
     return Object.values(this.documentation.tp);
   }
   get_all_functions_documentation(module_name) {
+    if (module_name === "user") {
+      if (!this.settings || !this.settings.user_scripts_folder)
+        return;
+      const files = errorWrapperSync(() => get_tfiles_from_folder(this.settings.user_scripts_folder), `User Scripts folder doesn't exist`);
+      if (!files || files.length === 0)
+        return;
+      return files.reduce((processedFiles, file) => {
+        if (file.extension !== "js")
+          return processedFiles;
+        return [
+          ...processedFiles,
+          {
+            name: file.basename,
+            definition: "",
+            description: "",
+            example: ""
+          }
+        ];
+      }, []);
+    }
     if (!this.documentation.tp[module_name].functions) {
       return;
     }
@@ -4128,11 +4023,11 @@ var Documentation = class {
 };
 
 // src/editor/Autocomplete.ts
-var Autocomplete = class extends import_obsidian16.EditorSuggest {
-  constructor() {
+var Autocomplete = class extends import_obsidian15.EditorSuggest {
+  constructor(settings) {
     super(app);
     this.tp_keyword_regex = /tp\.(?<module>[a-z]*)?(?<fn_trigger>\.(?<fn>[a-z_]*)?)?$/;
-    this.documentation = new Documentation();
+    this.documentation = new Documentation(settings);
   }
   onTrigger(cursor, editor, _file) {
     const range = editor.getRange({ line: cursor.line, ch: 0 }, { line: cursor.line, ch: cursor.ch });
@@ -4185,15 +4080,15 @@ var Autocomplete = class extends import_obsidian16.EditorSuggest {
     }
   }
   selectSuggestion(value, _evt) {
-    const active_view = app.workspace.getActiveViewOfType(import_obsidian16.MarkdownView);
-    if (!active_view) {
+    const active_editor = app.workspace.activeEditor;
+    if (!active_editor || !active_editor.editor) {
       return;
     }
-    active_view.editor.replaceRange(value.name, this.latest_trigger_info.start, this.latest_trigger_info.end);
+    active_editor.editor.replaceRange(value.name, this.latest_trigger_info.start, this.latest_trigger_info.end);
     if (this.latest_trigger_info.start.ch == this.latest_trigger_info.end.ch) {
       const cursor_pos = this.latest_trigger_info.end;
       cursor_pos.ch += value.name.length;
-      active_view.editor.setCursor(cursor_pos);
+      active_editor.editor.setCursor(cursor_pos);
     }
   }
 };
@@ -5479,10 +5374,16 @@ var Editor2 = class {
     this.plugin = plugin;
     this.cursor_jumper = new CursorJumper();
   }
+  desktopShouldHighlight() {
+    return import_obsidian16.Platform.isDesktopApp && this.plugin.settings.syntax_highlighting;
+  }
+  mobileShouldHighlight() {
+    return import_obsidian16.Platform.isMobileApp && this.plugin.settings.syntax_highlighting_mobile;
+  }
   async setup() {
     await this.registerCodeMirrorMode();
-    this.plugin.registerEditorSuggest(new Autocomplete());
-    if (import_obsidian17.Platform.isDesktopApp && this.plugin.settings.syntax_highlighting) {
+    this.plugin.registerEditorSuggest(new Autocomplete(this.plugin.settings));
+    if (this.desktopShouldHighlight() || this.mobileShouldHighlight()) {
       this.plugin.registerEditorExtension(import_language.StreamLanguage.define(window.CodeMirror.getMode({}, { name: "templater" })));
     }
   }
@@ -5490,16 +5391,13 @@ var Editor2 = class {
     if (auto_jump && !this.plugin.settings.auto_jump_to_cursor) {
       return;
     }
-    if (file && app.workspace.getActiveFile() !== file) {
+    if (file && get_active_file(app) !== file) {
       return;
     }
     await this.cursor_jumper.jump_to_next_cursor_location();
   }
   async registerCodeMirrorMode() {
-    if (!this.plugin.settings.syntax_highlighting) {
-      return;
-    }
-    if (import_obsidian17.Platform.isMobileApp) {
+    if (!this.desktopShouldHighlight() && !this.mobileShouldHighlight()) {
       return;
     }
     const js_mode = window.CodeMirror.getMode({}, "javascript");
@@ -5585,7 +5483,7 @@ var Editor2 = class {
 };
 
 // src/main.ts
-var TemplaterPlugin = class extends import_obsidian18.Plugin {
+var TemplaterPlugin = class extends import_obsidian17.Plugin {
   async onload() {
     await this.load_settings();
     this.templater = new Templater(this);
@@ -5597,7 +5495,7 @@ var TemplaterPlugin = class extends import_obsidian18.Plugin {
     this.event_handler.setup();
     this.command_handler = new CommandHandler(this);
     this.command_handler.setup();
-    (0, import_obsidian18.addIcon)("templater-icon", ICON_DATA);
+    (0, import_obsidian17.addIcon)("templater-icon", ICON_DATA);
     if (this.settings.enable_ribbon_icon) {
       this.addRibbonIcon("templater-icon", "Templater", async () => {
         this.fuzzy_suggester.insert_template();

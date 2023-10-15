@@ -1,10 +1,11 @@
 ---
-tags: 
-- 同事
-- 工作
+tags:
+  - 育儿
 ---
+%%本模版用于新建 Project/Area/Resource/Archive，将文件夹复制到对应目录，并重命名为你的 Project/Area/Resource/Archive%%
 
 # README
+
 ## 归档
 %%本领域归档的项目列表%%
 ```PeriodicPARA

@@ -67173,17 +67173,19 @@ var AddTemplate = () => {
     let folder;
     let file;
     let tag = "";
+    let README = "";
     if (type4 === PARA) {
       let path;
       let key;
       path = settings[`${paraActiveTab.toLocaleLowerCase()}sPath`];
-      key = values[`${paraActiveTab}Name`];
+      key = values[`${paraActiveTab}Folder`];
       tag = values[`${paraActiveTab}Tag`];
+      README = values[`${paraActiveTab}README`];
       if (!tag) {
         return new import_obsidian11.Notice(ERROR_MESSAGES.TAGS_MUST_INPUT);
       }
       folder = `${path}/${key}`;
-      file = `${folder}/README.md`;
+      file = `${folder}/${README}`;
       templateFile = `${path}/Template.md`;
     } else if (type4 === PERIODIC_NOTES) {
       const key = periodicActiveTab;
@@ -67191,7 +67193,7 @@ var AddTemplate = () => {
       let value;
       if (periodicActiveTab === DAILY) {
         folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}/${String(
-          (0, import_obsidian11.moment)(values.daily).month() + 1
+          values[key].month() + 1
         ).padStart(2, "0")}`;
         value = values[key].format("YYYY-MM-DD");
       } else if (periodicActiveTab === WEEKLY) {
@@ -67326,14 +67328,54 @@ var AddTemplate = () => {
             return {
               label: item,
               key: item,
-              children: /* @__PURE__ */ React206.createElement(React206.Fragment, null, /* @__PURE__ */ React206.createElement(form_default.Item, { name: `${item}Name` }, /* @__PURE__ */ React206.createElement(
-                input_default,
+              children: /* @__PURE__ */ React206.createElement(React206.Fragment, null, /* @__PURE__ */ React206.createElement(
+                form_default.Item,
                 {
-                  type: "text",
-                  allowClear: true,
-                  placeholder: `${item} Name`
-                }
-              )), /* @__PURE__ */ React206.createElement(form_default.Item, { name: `${item}Tag` }, /* @__PURE__ */ React206.createElement(input_default, { allowClear: true, placeholder: `${item} Tag` })))
+                  labelCol: { flex: "80px" },
+                  label: "Tag",
+                  name: `${item}Tag`
+                },
+                /* @__PURE__ */ React206.createElement(
+                  input_default,
+                  {
+                    onChange: () => {
+                      const itemTag = form.getFieldValue(`${item}Tag`).replace(/^#/, "");
+                      const itemFolder = itemTag.replace("/", "-");
+                      const itemREADME = itemTag.split("/").reverse()[0];
+                      form.setFieldValue(
+                        `${item}README`,
+                        (itemREADME ? itemREADME + "." : "") + "README.md"
+                      );
+                      form.setFieldValue(`${item}Folder`, itemFolder);
+                    },
+                    allowClear: true,
+                    placeholder: "PKM/LifeOS"
+                  }
+                )
+              ), /* @__PURE__ */ React206.createElement(
+                form_default.Item,
+                {
+                  labelCol: { flex: "80px" },
+                  label: "Folder",
+                  name: `${item}Folder`
+                },
+                /* @__PURE__ */ React206.createElement(
+                  input_default,
+                  {
+                    type: "text",
+                    allowClear: true,
+                    placeholder: "PKM-LifeOS"
+                  }
+                )
+              ), /* @__PURE__ */ React206.createElement(
+                form_default.Item,
+                {
+                  labelCol: { flex: "80px" },
+                  label: "README",
+                  name: `${item}README`
+                },
+                /* @__PURE__ */ React206.createElement(input_default, { allowClear: true, placeholder: "LifeOS.README.md" })
+              ))
             };
           })
         }
