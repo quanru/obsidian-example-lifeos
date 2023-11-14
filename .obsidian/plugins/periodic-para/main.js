@@ -12,9 +12,9 @@ var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
+var __export = (target, all3) => {
+  for (var name in all3)
+    __defProp(target, name, { get: all3[name], enumerable: true });
 };
 var __copyProps = (to, from2, except, desc) => {
   if (from2 && typeof from2 === "object" || typeof from2 === "function") {
@@ -382,7 +382,7 @@ var require_lib = __commonJS({
         const pos = typeToPos[type4];
         if (type4 === "era") {
           filled[pos] = value;
-        } else if (!isUndefined(pos)) {
+        } else if (!isUndefined2(pos)) {
           filled[pos] = parseInt(value, 10);
         }
       }
@@ -954,11 +954,11 @@ var require_lib = __commonJS({
       }
     };
     function normalizeZone(input, defaultZone2) {
-      if (isUndefined(input) || input === null) {
+      if (isUndefined2(input) || input === null) {
         return defaultZone2;
       } else if (input instanceof Zone) {
         return input;
-      } else if (isString2(input)) {
+      } else if (isString3(input)) {
         const lowered = input.toLowerCase();
         if (lowered === "default")
           return defaultZone2;
@@ -968,7 +968,7 @@ var require_lib = __commonJS({
           return FixedOffsetZone.utcInstance;
         else
           return FixedOffsetZone.parseSpecifier(lowered) || IANAZone.create(input);
-      } else if (isNumber(input)) {
+      } else if (isNumber2(input)) {
         return FixedOffsetZone.instance(input);
       } else if (typeof input === "object" && input.offset && typeof input.offset === "number") {
         return input;
@@ -1100,19 +1100,19 @@ var require_lib = __commonJS({
         IANAZone.resetCache();
       }
     };
-    function isUndefined(o3) {
+    function isUndefined2(o3) {
       return typeof o3 === "undefined";
     }
-    function isNumber(o3) {
+    function isNumber2(o3) {
       return typeof o3 === "number";
     }
     function isInteger(o3) {
       return typeof o3 === "number" && o3 % 1 === 0;
     }
-    function isString2(o3) {
+    function isString3(o3) {
       return typeof o3 === "string";
     }
-    function isDate(o3) {
+    function isDate2(o3) {
       return Object.prototype.toString.call(o3) === "[object Date]";
     }
     function hasRelative() {
@@ -1146,7 +1146,7 @@ var require_lib = __commonJS({
         return a;
       }, {});
     }
-    function hasOwnProperty(obj, prop) {
+    function hasOwnProperty2(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
     }
     function integerBetween(thing, bottom, top) {
@@ -1166,21 +1166,21 @@ var require_lib = __commonJS({
       return padded;
     }
     function parseInteger(string3) {
-      if (isUndefined(string3) || string3 === null || string3 === "") {
+      if (isUndefined2(string3) || string3 === null || string3 === "") {
         return void 0;
       } else {
         return parseInt(string3, 10);
       }
     }
     function parseFloating(string3) {
-      if (isUndefined(string3) || string3 === null || string3 === "") {
+      if (isUndefined2(string3) || string3 === null || string3 === "") {
         return void 0;
       } else {
         return parseFloat(string3);
       }
     }
     function parseMillis(fraction) {
-      if (isUndefined(fraction) || fraction === null || fraction === "") {
+      if (isUndefined2(fraction) || fraction === null || fraction === "") {
         return void 0;
       } else {
         const f = parseFloat("0." + fraction) * 1e3;
@@ -1264,7 +1264,7 @@ var require_lib = __commonJS({
     function normalizeObject(obj, normalizer) {
       const normalized = {};
       for (const u in obj) {
-        if (hasOwnProperty(obj, u)) {
+        if (hasOwnProperty2(obj, u)) {
           const v = obj[u];
           if (v === void 0 || v === null)
             continue;
@@ -1759,7 +1759,7 @@ var require_lib = __commonJS({
     var sqlTimeExtensionRegex = RegExp(`(?: ${sqlTimeRegex.source})?`);
     function int(match3, pos, fallback) {
       const m = match3[pos];
-      return isUndefined(m) ? fallback : parseInteger(m);
+      return isUndefined2(m) ? fallback : parseInteger(m);
     }
     function extractISOYmd(match3, cursor) {
       const item = {
@@ -2052,7 +2052,7 @@ var require_lib = __commonJS({
     }
     function normalizeValues(matrix, vals) {
       reverseUnits.reduce((previous, current) => {
-        if (!isUndefined(vals[current])) {
+        if (!isUndefined2(vals[current])) {
           if (previous) {
             convert(matrix, vals, previous, vals, current);
           }
@@ -2144,7 +2144,7 @@ var require_lib = __commonJS({
        * @return {Duration}
        */
       static fromDurationLike(durationLike) {
-        if (isNumber(durationLike)) {
+        if (isNumber2(durationLike)) {
           return Duration.fromMillis(durationLike);
         } else if (Duration.isDuration(durationLike)) {
           return durationLike;
@@ -2315,7 +2315,7 @@ var require_lib = __commonJS({
       toHuman(opts = {}) {
         const l3 = orderedUnits$1.map((unit) => {
           const val = this.values[unit];
-          if (isUndefined(val)) {
+          if (isUndefined2(val)) {
             return null;
           }
           return this.loc.numberFormatter({ style: "unit", unitDisplay: "long", ...opts, unit: unit.slice(0, -1) }).format(val);
@@ -2447,7 +2447,7 @@ var require_lib = __commonJS({
           return this;
         const dur = Duration.fromDurationLike(duration), result = {};
         for (const k of orderedUnits$1) {
-          if (hasOwnProperty(dur.values, k) || hasOwnProperty(this.values, k)) {
+          if (hasOwnProperty2(dur.values, k) || hasOwnProperty2(this.values, k)) {
             result[k] = dur.get(k) + this.get(k);
           }
         }
@@ -2571,7 +2571,7 @@ var require_lib = __commonJS({
               own += this.matrix[ak][k] * accumulated[ak];
               accumulated[ak] = 0;
             }
-            if (isNumber(vals[k])) {
+            if (isNumber2(vals[k])) {
               own += vals[k];
             }
             const i2 = Math.trunc(own);
@@ -2582,7 +2582,7 @@ var require_lib = __commonJS({
                 convert(this.matrix, vals, down, built, k);
               }
             }
-          } else if (isNumber(vals[k])) {
+          } else if (isNumber2(vals[k])) {
             accumulated[k] = vals[k];
           }
         }
@@ -3536,8 +3536,8 @@ var require_lib = __commonJS({
         return value;
       }
     }
-    function digitRegex({ numberingSystem }, append2 = "") {
-      return new RegExp(`${numberingSystems[numberingSystem || "latn"]}${append2}`);
+    function digitRegex({ numberingSystem }, append3 = "") {
+      return new RegExp(`${numberingSystems[numberingSystem || "latn"]}${append3}`);
     }
     var MISSING_FTP = "missing Intl.DateTimeFormat.formatToParts support";
     function intUnit(regex, post = (i2) => i2) {
@@ -3749,18 +3749,18 @@ var require_lib = __commonJS({
     function match2(input, regex, handlers) {
       const matches = input.match(regex);
       if (matches) {
-        const all = {};
+        const all3 = {};
         let matchIndex = 1;
         for (const i2 in handlers) {
-          if (hasOwnProperty(handlers, i2)) {
+          if (hasOwnProperty2(handlers, i2)) {
             const h = handlers[i2], groups = h.groups ? h.groups + 1 : 1;
             if (!h.literal && h.token) {
-              all[h.token.val[0]] = h.deser(matches.slice(matchIndex, matchIndex + groups));
+              all3[h.token.val[0]] = h.deser(matches.slice(matchIndex, matchIndex + groups));
             }
             matchIndex += groups;
           }
         }
-        return [matches, all];
+        return [matches, all3];
       } else {
         return [matches, {}];
       }
@@ -3801,19 +3801,19 @@ var require_lib = __commonJS({
       };
       let zone = null;
       let specificOffset;
-      if (!isUndefined(matches.z)) {
+      if (!isUndefined2(matches.z)) {
         zone = IANAZone.create(matches.z);
       }
-      if (!isUndefined(matches.Z)) {
+      if (!isUndefined2(matches.Z)) {
         if (!zone) {
           zone = new FixedOffsetZone(matches.Z);
         }
         specificOffset = matches.Z;
       }
-      if (!isUndefined(matches.q)) {
+      if (!isUndefined2(matches.q)) {
         matches.M = (matches.q - 1) * 3 + 1;
       }
-      if (!isUndefined(matches.h)) {
+      if (!isUndefined2(matches.h)) {
         if (matches.h < 12 && matches.a === 1) {
           matches.h += 12;
         } else if (matches.h === 12 && matches.a === 0) {
@@ -3823,7 +3823,7 @@ var require_lib = __commonJS({
       if (matches.G === 0 && matches.y) {
         matches.y = -matches.y;
       }
-      if (!isUndefined(matches.u)) {
+      if (!isUndefined2(matches.u)) {
         matches.S = parseMillis(matches.u);
       }
       const vals = Object.keys(matches).reduce((r, k) => {
@@ -3862,7 +3862,7 @@ var require_lib = __commonJS({
         return { input, tokens, invalidReason: disqualifyingUnit.invalidReason };
       } else {
         const [regexString, handlers] = buildRegex(units), regex = RegExp(regexString, "i"), [rawMatches, matches] = match2(input, regex, handlers), [result, zone, specificOffset] = matches ? dateTimeFromMatches(matches) : [null, null, void 0];
-        if (hasOwnProperty(matches, "a") && hasOwnProperty(matches, "H")) {
+        if (hasOwnProperty2(matches, "a") && hasOwnProperty2(matches, "H")) {
           throw new ConflictingSpecificationError(
             "Can't include meridiem when specifying 24-hour format"
           );
@@ -4208,9 +4208,9 @@ var require_lib = __commonJS({
     function quickDT(obj, opts) {
       const zone = normalizeZone(opts.zone, Settings.defaultZone), loc = Locale.fromObject(opts), tsNow = Settings.now();
       let ts, o3;
-      if (!isUndefined(obj.year)) {
+      if (!isUndefined2(obj.year)) {
         for (const u of orderedUnits) {
-          if (isUndefined(obj[u])) {
+          if (isUndefined2(obj[u])) {
             obj[u] = defaultUnitValues[u];
           }
         }
@@ -4226,7 +4226,7 @@ var require_lib = __commonJS({
       return new DateTime({ ts, zone, loc, o: o3 });
     }
     function diffRelative(start, end, opts) {
-      const round = isUndefined(opts.round) ? true : opts.round, format3 = (c, unit) => {
+      const round = isUndefined2(opts.round) ? true : opts.round, format3 = (c, unit) => {
         c = roundTo(c, round || opts.calendary ? 0 : 2, true);
         const formatter = end.loc.clone(opts).relFormatter(opts);
         return formatter.format(c, unit);
@@ -4268,7 +4268,7 @@ var require_lib = __commonJS({
       constructor(config) {
         const zone = config.zone || Settings.defaultZone;
         let invalid = config.invalid || (Number.isNaN(config.ts) ? new Invalid("invalid input") : null) || (!zone.isValid ? unsupportedZone(zone) : null);
-        this.ts = isUndefined(config.ts) ? Settings.now() : config.ts;
+        this.ts = isUndefined2(config.ts) ? Settings.now() : config.ts;
         let c = null, o3 = null;
         if (!invalid) {
           const unchanged = config.old && config.old.ts === this.ts && config.old.zone.equals(zone);
@@ -4363,7 +4363,7 @@ var require_lib = __commonJS({
        * @return {DateTime}
        */
       static fromJSDate(date4, options = {}) {
-        const ts = isDate(date4) ? date4.valueOf() : NaN;
+        const ts = isDate2(date4) ? date4.valueOf() : NaN;
         if (Number.isNaN(ts)) {
           return DateTime.invalid("invalid input");
         }
@@ -4388,7 +4388,7 @@ var require_lib = __commonJS({
        * @return {DateTime}
        */
       static fromMillis(milliseconds, options = {}) {
-        if (!isNumber(milliseconds)) {
+        if (!isNumber2(milliseconds)) {
           throw new InvalidArgumentError(
             `fromMillis requires a numerical input, but received a ${typeof milliseconds} with value ${milliseconds}`
           );
@@ -4413,7 +4413,7 @@ var require_lib = __commonJS({
        * @return {DateTime}
        */
       static fromSeconds(seconds, options = {}) {
-        if (!isNumber(seconds)) {
+        if (!isNumber2(seconds)) {
           throw new InvalidArgumentError("fromSeconds requires a numerical input");
         } else {
           return new DateTime({
@@ -4457,7 +4457,7 @@ var require_lib = __commonJS({
         if (!zoneToUse.isValid) {
           return DateTime.invalid(unsupportedZone(zoneToUse));
         }
-        const tsNow = Settings.now(), offsetProvis = !isUndefined(opts.specificOffset) ? opts.specificOffset : zoneToUse.offset(tsNow), normalized = normalizeObject(obj, normalizeUnit), containsOrdinal = !isUndefined(normalized.ordinal), containsGregorYear = !isUndefined(normalized.year), containsGregorMD = !isUndefined(normalized.month) || !isUndefined(normalized.day), containsGregor = containsGregorYear || containsGregorMD, definiteWeekDef = normalized.weekYear || normalized.weekNumber, loc = Locale.fromObject(opts);
+        const tsNow = Settings.now(), offsetProvis = !isUndefined2(opts.specificOffset) ? opts.specificOffset : zoneToUse.offset(tsNow), normalized = normalizeObject(obj, normalizeUnit), containsOrdinal = !isUndefined2(normalized.ordinal), containsGregorYear = !isUndefined2(normalized.year), containsGregorMD = !isUndefined2(normalized.month) || !isUndefined2(normalized.day), containsGregor = containsGregorYear || containsGregorMD, definiteWeekDef = normalized.weekYear || normalized.weekNumber, loc = Locale.fromObject(opts);
         if ((containsGregor || containsOrdinal) && definiteWeekDef) {
           throw new ConflictingSpecificationError(
             "Can't mix weekYear/weekNumber units with year/month/day or ordinals"
@@ -4483,7 +4483,7 @@ var require_lib = __commonJS({
         let foundFirst = false;
         for (const u of units) {
           const v = normalized[u];
-          if (!isUndefined(v)) {
+          if (!isUndefined2(v)) {
             foundFirst = true;
           } else if (foundFirst) {
             normalized[u] = defaultValues[u];
@@ -4580,7 +4580,7 @@ var require_lib = __commonJS({
        * @return {DateTime}
        */
       static fromFormat(text, fmt, opts = {}) {
-        if (isUndefined(text) || isUndefined(fmt)) {
+        if (isUndefined2(text) || isUndefined2(fmt)) {
           throw new InvalidArgumentError("fromFormat requires an input string and a format");
         }
         const { locale: locale4 = null, numberingSystem = null } = opts, localeToUse = Locale.fromOpts({
@@ -5063,7 +5063,7 @@ var require_lib = __commonJS({
       set(values) {
         if (!this.isValid)
           return this;
-        const normalized = normalizeObject(values, normalizeUnit), settingWeekStuff = !isUndefined(normalized.weekYear) || !isUndefined(normalized.weekNumber) || !isUndefined(normalized.weekday), containsOrdinal = !isUndefined(normalized.ordinal), containsGregorYear = !isUndefined(normalized.year), containsGregorMD = !isUndefined(normalized.month) || !isUndefined(normalized.day), containsGregor = containsGregorYear || containsGregorMD, definiteWeekDef = normalized.weekYear || normalized.weekNumber;
+        const normalized = normalizeObject(values, normalizeUnit), settingWeekStuff = !isUndefined2(normalized.weekYear) || !isUndefined2(normalized.weekNumber) || !isUndefined2(normalized.weekday), containsOrdinal = !isUndefined2(normalized.ordinal), containsGregorYear = !isUndefined2(normalized.year), containsGregorMD = !isUndefined2(normalized.month) || !isUndefined2(normalized.day), containsGregor = containsGregorYear || containsGregorMD, definiteWeekDef = normalized.weekYear || normalized.weekNumber;
         if ((containsGregor || containsOrdinal) && definiteWeekDef) {
           throw new ConflictingSpecificationError(
             "Can't mix weekYear/weekNumber units with year/month/day or ordinals"
@@ -5075,11 +5075,11 @@ var require_lib = __commonJS({
         let mixed;
         if (settingWeekStuff) {
           mixed = weekToGregorian({ ...gregorianToWeek(this.c), ...normalized });
-        } else if (!isUndefined(normalized.ordinal)) {
+        } else if (!isUndefined2(normalized.ordinal)) {
           mixed = ordinalToGregorian({ ...gregorianToOrdinal(this.c), ...normalized });
         } else {
           mixed = { ...this.toObject(), ...normalized };
-          if (isUndefined(normalized.day)) {
+          if (isUndefined2(normalized.day)) {
             mixed.day = Math.min(daysInMonth(mixed.year, mixed.month), mixed.day);
           }
         }
@@ -5791,7 +5791,7 @@ var require_lib = __commonJS({
     function friendlyDateTime(dateTimeish) {
       if (DateTime.isDateTime(dateTimeish)) {
         return dateTimeish;
-      } else if (dateTimeish && dateTimeish.valueOf && isNumber(dateTimeish.valueOf())) {
+      } else if (dateTimeish && dateTimeish.valueOf && isNumber2(dateTimeish.valueOf())) {
         return DateTime.fromJSDate(dateTimeish);
       } else if (dateTimeish && typeof dateTimeish === "object") {
         return DateTime.fromObject(dateTimeish);
@@ -6572,7 +6572,7 @@ var require_lib = __commonJS({
     }
     var Values;
     (function(Values2) {
-      function toString(field, setting = DEFAULT_QUERY_SETTINGS, recursive = false) {
+      function toString3(field, setting = DEFAULT_QUERY_SETTINGS, recursive = false) {
         let wrapped = wrapValue(field);
         if (!wrapped)
           return setting.renderNullAs;
@@ -6596,12 +6596,12 @@ var require_lib = __commonJS({
             let result = "";
             if (recursive)
               result += "[";
-            result += wrapped.value.map((f) => toString(f, setting, true)).join(", ");
+            result += wrapped.value.map((f) => toString3(f, setting, true)).join(", ");
             if (recursive)
               result += "]";
             return result;
           case "object":
-            return "{ " + Object.entries(wrapped.value).map((e2) => e2[0] + ": " + toString(e2[1], setting, true)).join(", ") + " }";
+            return "{ " + Object.entries(wrapped.value).map((e2) => e2[0] + ": " + toString3(e2[1], setting, true)).join(", ") + " }";
           case "date":
             if (wrapped.value.second == 0 && wrapped.value.hour == 0 && wrapped.value.minute == 0) {
               return wrapped.value.toFormat(setting.defaultDateFormat);
@@ -6611,43 +6611,43 @@ var require_lib = __commonJS({
             return renderMinimalDuration(wrapped.value);
         }
       }
-      Values2.toString = toString;
+      Values2.toString = toString3;
       function wrapValue(val) {
         if (isNull(val))
           return { type: "null", value: val };
-        else if (isNumber2(val))
+        else if (isNumber3(val))
           return { type: "number", value: val };
-        else if (isString3(val))
+        else if (isString4(val))
           return { type: "string", value: val };
-        else if (isBoolean(val))
+        else if (isBoolean2(val))
           return { type: "boolean", value: val };
         else if (isDuration(val))
           return { type: "duration", value: val };
-        else if (isDate2(val))
+        else if (isDate3(val))
           return { type: "date", value: val };
         else if (isWidget(val))
           return { type: "widget", value: val };
-        else if (isArray(val))
+        else if (isArray2(val))
           return { type: "array", value: val };
         else if (isLink(val))
           return { type: "link", value: val };
-        else if (isFunction(val))
+        else if (isFunction2(val))
           return { type: "function", value: val };
         else if (isHtml(val))
           return { type: "html", value: val };
-        else if (isObject2(val))
+        else if (isObject3(val))
           return { type: "object", value: val };
         else
           return void 0;
       }
       Values2.wrapValue = wrapValue;
       function mapLeaves(val, func) {
-        if (isObject2(val)) {
+        if (isObject3(val)) {
           let result = {};
           for (let [key, value] of Object.entries(val))
             result[key] = mapLeaves(value, func);
           return result;
-        } else if (isArray(val)) {
+        } else if (isArray2(val)) {
           let result = [];
           for (let value of val)
             result.push(mapLeaves(value, func));
@@ -6800,18 +6800,18 @@ var require_lib = __commonJS({
         }
       }
       Values2.deepCopy = deepCopy;
-      function isString3(val) {
+      function isString4(val) {
         return typeof val == "string";
       }
-      Values2.isString = isString3;
-      function isNumber2(val) {
+      Values2.isString = isString4;
+      function isNumber3(val) {
         return typeof val == "number";
       }
-      Values2.isNumber = isNumber2;
-      function isDate2(val) {
+      Values2.isNumber = isNumber3;
+      function isDate3(val) {
         return val instanceof DateTime;
       }
-      Values2.isDate = isDate2;
+      Values2.isDate = isDate3;
       function isDuration(val) {
         return val instanceof Duration;
       }
@@ -6820,14 +6820,14 @@ var require_lib = __commonJS({
         return val === null || val === void 0;
       }
       Values2.isNull = isNull;
-      function isArray(val) {
+      function isArray2(val) {
         return Array.isArray(val);
       }
-      Values2.isArray = isArray;
-      function isBoolean(val) {
+      Values2.isArray = isArray2;
+      function isBoolean2(val) {
         return typeof val === "boolean";
       }
-      Values2.isBoolean = isBoolean;
+      Values2.isBoolean = isBoolean2;
       function isLink(val) {
         return val instanceof Link;
       }
@@ -6844,14 +6844,14 @@ var require_lib = __commonJS({
         }
       }
       Values2.isHtml = isHtml;
-      function isObject2(val) {
-        return typeof val == "object" && !isHtml(val) && !isWidget(val) && !isArray(val) && !isDuration(val) && !isDate2(val) && !isLink(val) && val !== void 0 && !isNull(val);
+      function isObject3(val) {
+        return typeof val == "object" && !isHtml(val) && !isWidget(val) && !isArray2(val) && !isDuration(val) && !isDate3(val) && !isLink(val) && val !== void 0 && !isNull(val);
       }
-      Values2.isObject = isObject2;
-      function isFunction(val) {
+      Values2.isObject = isObject3;
+      function isFunction2(val) {
         return typeof val == "function";
       }
-      Values2.isFunction = isFunction;
+      Values2.isFunction = isFunction2;
     })(Values || (Values = {}));
     var Groupings;
     (function(Groupings2) {
@@ -7785,7 +7785,7 @@ var require_react_development = __commonJS({
           return refObject;
         }
         var isArrayImpl = Array.isArray;
-        function isArray(a) {
+        function isArray2(a) {
           return isArrayImpl(a);
         }
         function typeName(value) {
@@ -7886,7 +7886,7 @@ var require_react_development = __commonJS({
           }
           return null;
         }
-        var hasOwnProperty = Object.prototype.hasOwnProperty;
+        var hasOwnProperty2 = Object.prototype.hasOwnProperty;
         var RESERVED_PROPS = {
           key: true,
           ref: true,
@@ -7899,7 +7899,7 @@ var require_react_development = __commonJS({
         }
         function hasValidRef(config) {
           {
-            if (hasOwnProperty.call(config, "ref")) {
+            if (hasOwnProperty2.call(config, "ref")) {
               var getter = Object.getOwnPropertyDescriptor(config, "ref").get;
               if (getter && getter.isReactWarning) {
                 return false;
@@ -7910,7 +7910,7 @@ var require_react_development = __commonJS({
         }
         function hasValidKey(config) {
           {
-            if (hasOwnProperty.call(config, "key")) {
+            if (hasOwnProperty2.call(config, "key")) {
               var getter = Object.getOwnPropertyDescriptor(config, "key").get;
               if (getter && getter.isReactWarning) {
                 return false;
@@ -8022,7 +8022,7 @@ var require_react_development = __commonJS({
             self2 = config.__self === void 0 ? null : config.__self;
             source = config.__source === void 0 ? null : config.__source;
             for (propName in config) {
-              if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {
+              if (hasOwnProperty2.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {
                 props[propName] = config[propName];
               }
             }
@@ -8094,7 +8094,7 @@ var require_react_development = __commonJS({
               defaultProps = element.type.defaultProps;
             }
             for (propName in config) {
-              if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {
+              if (hasOwnProperty2.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {
                 if (config[propName] === void 0 && defaultProps !== void 0) {
                   props[propName] = defaultProps[propName];
                 } else {
@@ -8171,7 +8171,7 @@ var require_react_development = __commonJS({
             var _child = children;
             var mappedChild = callback(_child);
             var childKey = nameSoFar === "" ? SEPARATOR + getElementKey(_child, 0) : nameSoFar;
-            if (isArray(mappedChild)) {
+            if (isArray2(mappedChild)) {
               var escapedChildKey = "";
               if (childKey != null) {
                 escapedChildKey = escapeUserProvidedKey(childKey) + "/";
@@ -8206,7 +8206,7 @@ var require_react_development = __commonJS({
           var nextName;
           var subtreeCount = 0;
           var nextNamePrefix = nameSoFar === "" ? SEPARATOR : nameSoFar + SUBSEPARATOR;
-          if (isArray(children)) {
+          if (isArray2(children)) {
             for (var i2 = 0; i2 < children.length; i2++) {
               child = children[i2];
               nextName = nextNamePrefix + getElementKey(child, i2);
@@ -8262,7 +8262,7 @@ var require_react_development = __commonJS({
             forEachFunc.apply(this, arguments);
           }, forEachContext);
         }
-        function toArray7(children) {
+        function toArray8(children) {
           return mapChildren(children, function(child) {
             return child;
           }) || [];
@@ -8839,8 +8839,8 @@ var require_react_development = __commonJS({
           }
         }
         function shouldConstruct(Component10) {
-          var prototype = Component10.prototype;
-          return !!(prototype && prototype.isReactComponent);
+          var prototype3 = Component10.prototype;
+          return !!(prototype3 && prototype3.isReactComponent);
         }
         function describeUnknownElementTypeFrameInDEV(type4, source, ownerFn) {
           if (type4 == null) {
@@ -8894,7 +8894,7 @@ var require_react_development = __commonJS({
         }
         function checkPropTypes(typeSpecs, values, location, componentName, element) {
           {
-            var has = Function.call.bind(hasOwnProperty);
+            var has = Function.call.bind(hasOwnProperty2);
             for (var typeSpecName in typeSpecs) {
               if (has(typeSpecs, typeSpecName)) {
                 var error$1 = void 0;
@@ -8996,7 +8996,7 @@ var require_react_development = __commonJS({
           if (typeof node2 !== "object") {
             return;
           }
-          if (isArray(node2)) {
+          if (isArray2(node2)) {
             for (var i2 = 0; i2 < node2.length; i2++) {
               var child = node2[i2];
               if (isValidElement11(child)) {
@@ -9086,7 +9086,7 @@ var require_react_development = __commonJS({
             var typeString;
             if (type4 === null) {
               typeString = "null";
-            } else if (isArray(type4)) {
+            } else if (isArray2(type4)) {
               typeString = "array";
             } else if (type4 !== void 0 && type4.$$typeof === REACT_ELEMENT_TYPE) {
               typeString = "<" + (getComponentNameFromType(type4.type) || "Unknown") + " />";
@@ -9341,7 +9341,7 @@ var require_react_development = __commonJS({
           map: mapChildren,
           forEach: forEachChildren,
           count: countChildren,
-          toArray: toArray7,
+          toArray: toArray8,
           only: onlyChild
         };
         exports.Children = Children3;
@@ -9977,7 +9977,7 @@ var require_react_dom_development = __commonJS({
           }
         }
         var canUseDOM = !!(typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined");
-        var hasOwnProperty = Object.prototype.hasOwnProperty;
+        var hasOwnProperty2 = Object.prototype.hasOwnProperty;
         function typeName(value) {
           {
             var hasToStringTag = typeof Symbol === "function" && Symbol.toStringTag;
@@ -10059,10 +10059,10 @@ var require_react_dom_development = __commonJS({
         var illegalAttributeNameCache = {};
         var validatedAttributeNameCache = {};
         function isAttributeNameSafe(attributeName) {
-          if (hasOwnProperty.call(validatedAttributeNameCache, attributeName)) {
+          if (hasOwnProperty2.call(validatedAttributeNameCache, attributeName)) {
             return true;
           }
-          if (hasOwnProperty.call(illegalAttributeNameCache, attributeName)) {
+          if (hasOwnProperty2.call(illegalAttributeNameCache, attributeName)) {
             return false;
           }
           if (VALID_ATTRIBUTE_NAME_REGEX.test(attributeName)) {
@@ -10909,8 +10909,8 @@ var require_react_dom_development = __commonJS({
           }
         }
         function shouldConstruct(Component9) {
-          var prototype = Component9.prototype;
-          return !!(prototype && prototype.isReactComponent);
+          var prototype3 = Component9.prototype;
+          return !!(prototype3 && prototype3.isReactComponent);
         }
         function describeUnknownElementTypeFrameInDEV(type4, source, ownerFn) {
           if (type4 == null) {
@@ -11170,7 +11170,7 @@ var require_react_dom_development = __commonJS({
             isRendering = rendering;
           }
         }
-        function toString(value) {
+        function toString3(value) {
           return "" + value;
         }
         function getToStringValue(value) {
@@ -11375,10 +11375,10 @@ var require_react_dom_development = __commonJS({
               if (value === 0 && node2.value === "" || // We explicitly want to coerce to number here if possible.
               // eslint-disable-next-line
               node2.value != value) {
-                node2.value = toString(value);
+                node2.value = toString3(value);
               }
-            } else if (node2.value !== toString(value)) {
-              node2.value = toString(value);
+            } else if (node2.value !== toString3(value)) {
+              node2.value = toString3(value);
             }
           } else if (type4 === "submit" || type4 === "reset") {
             node2.removeAttribute("value");
@@ -11405,7 +11405,7 @@ var require_react_dom_development = __commonJS({
             if (isButton && (props.value === void 0 || props.value === null)) {
               return;
             }
-            var initialValue = toString(node2._wrapperState.initialValue);
+            var initialValue = toString3(node2._wrapperState.initialValue);
             if (!isHydrating2) {
               {
                 if (initialValue !== node2.value) {
@@ -11465,9 +11465,9 @@ var require_react_dom_development = __commonJS({
             type4 !== "number" || getActiveElement(node2.ownerDocument) !== node2
           ) {
             if (value == null) {
-              node2.defaultValue = toString(node2._wrapperState.initialValue);
-            } else if (node2.defaultValue !== toString(value)) {
-              node2.defaultValue = toString(value);
+              node2.defaultValue = toString3(node2._wrapperState.initialValue);
+            } else if (node2.defaultValue !== toString3(value)) {
+              node2.defaultValue = toString3(value);
             }
           }
         }
@@ -11505,11 +11505,11 @@ var require_react_dom_development = __commonJS({
         }
         function postMountWrapper$1(element, props) {
           if (props.value != null) {
-            element.setAttribute("value", toString(getToStringValue(props.value)));
+            element.setAttribute("value", toString3(getToStringValue(props.value)));
           }
         }
         var isArrayImpl = Array.isArray;
-        function isArray(a) {
+        function isArray2(a) {
           return isArrayImpl(a);
         }
         var didWarnValueDefaultValue$1;
@@ -11532,7 +11532,7 @@ var require_react_dom_development = __commonJS({
               if (props[propName] == null) {
                 continue;
               }
-              var propNameIsArray = isArray(props[propName]);
+              var propNameIsArray = isArray2(props[propName]);
               if (props.multiple && !propNameIsArray) {
                 error("The `%s` prop supplied to <select> must be an array if `multiple` is true.%s", propName, getDeclarationErrorAddendum());
               } else if (!props.multiple && propNameIsArray) {
@@ -11559,7 +11559,7 @@ var require_react_dom_development = __commonJS({
               }
             }
           } else {
-            var _selectedValue = toString(getToStringValue(propValue));
+            var _selectedValue = toString3(getToStringValue(propValue));
             var defaultSelected = null;
             for (var _i2 = 0; _i2 < options2.length; _i2++) {
               if (options2[_i2].value === _selectedValue) {
@@ -11639,7 +11639,7 @@ var require_react_dom_development = __commonJS({
           var hostProps = assign2({}, props, {
             value: void 0,
             defaultValue: void 0,
-            children: toString(node2._wrapperState.initialValue)
+            children: toString3(node2._wrapperState.initialValue)
           });
           return hostProps;
         }
@@ -11663,7 +11663,7 @@ var require_react_dom_development = __commonJS({
                 if (defaultValue != null) {
                   throw new Error("If you supply `defaultValue` on a <textarea>, do not pass children.");
                 }
-                if (isArray(children)) {
+                if (isArray2(children)) {
                   if (children.length > 1) {
                     throw new Error("<textarea> can only have at most one child.");
                   }
@@ -11686,7 +11686,7 @@ var require_react_dom_development = __commonJS({
           var value = getToStringValue(props.value);
           var defaultValue = getToStringValue(props.defaultValue);
           if (value != null) {
-            var newValue = toString(value);
+            var newValue = toString3(value);
             if (newValue !== node2.value) {
               node2.value = newValue;
             }
@@ -11695,7 +11695,7 @@ var require_react_dom_development = __commonJS({
             }
           }
           if (defaultValue != null) {
-            node2.defaultValue = toString(defaultValue);
+            node2.defaultValue = toString3(defaultValue);
           }
         }
         function postMountWrapper$3(element, props) {
@@ -12670,7 +12670,7 @@ var require_react_dom_development = __commonJS({
         var rARIACamel = new RegExp("^(aria)[A-Z][" + ATTRIBUTE_NAME_CHAR + "]*$");
         function validateProperty(tagName, name) {
           {
-            if (hasOwnProperty.call(warnedProperties, name) && warnedProperties[name]) {
+            if (hasOwnProperty2.call(warnedProperties, name) && warnedProperties[name]) {
               return true;
             }
             if (rARIACamel.test(name)) {
@@ -12753,7 +12753,7 @@ var require_react_dom_development = __commonJS({
           var rARIA$1 = new RegExp("^(aria)-[" + ATTRIBUTE_NAME_CHAR + "]*$");
           var rARIACamel$1 = new RegExp("^(aria)[A-Z][" + ATTRIBUTE_NAME_CHAR + "]*$");
           validateProperty$1 = function(tagName, name, value, eventRegistry) {
-            if (hasOwnProperty.call(warnedProperties$1, name) && warnedProperties$1[name]) {
+            if (hasOwnProperty2.call(warnedProperties$1, name) && warnedProperties$1[name]) {
               return true;
             }
             var lowerCasedName = name.toLowerCase();
@@ -15886,7 +15886,7 @@ var require_react_dom_development = __commonJS({
           }
           for (var i2 = 0; i2 < keysA.length; i2++) {
             var currentKey = keysA[i2];
-            if (!hasOwnProperty.call(objB, currentKey) || !objectIs(objA[currentKey], objB[currentKey])) {
+            if (!hasOwnProperty2.call(objB, currentKey) || !objectIs(objA[currentKey], objB[currentKey])) {
               return false;
             }
           }
@@ -16812,10 +16812,10 @@ var require_react_dom_development = __commonJS({
         function getOwnerDocumentFromRootContainer(rootContainerElement) {
           return rootContainerElement.nodeType === DOCUMENT_NODE ? rootContainerElement : rootContainerElement.ownerDocument;
         }
-        function noop3() {
+        function noop4() {
         }
         function trapClickOnNonInteractiveElement(node2) {
-          node2.onclick = noop3;
+          node2.onclick = noop4;
         }
         function setInitialDOMProperties(tag, domElement, rootContainerElement, nextProps, isCustomComponentTag) {
           for (var propKey in nextProps) {
@@ -16917,7 +16917,7 @@ var require_react_dom_development = __commonJS({
           }
           {
             if (namespaceURI === HTML_NAMESPACE) {
-              if (!isCustomComponentTag && Object.prototype.toString.call(domElement) === "[object HTMLUnknownElement]" && !hasOwnProperty.call(warnedUnknownTags, type4)) {
+              if (!isCustomComponentTag && Object.prototype.toString.call(domElement) === "[object HTMLUnknownElement]" && !hasOwnProperty2.call(warnedUnknownTags, type4)) {
                 warnedUnknownTags[type4] = true;
                 error("The tag <%s> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.", type4);
               }
@@ -17726,7 +17726,7 @@ var require_react_dom_development = __commonJS({
           eventsEnabled = null;
           selectionInformation = null;
         }
-        function createInstance(type4, props, rootContainerInstance, hostContext, internalInstanceHandle) {
+        function createInstance2(type4, props, rootContainerInstance, hostContext, internalInstanceHandle) {
           var parentNamespace;
           {
             var hostContextDev = hostContext;
@@ -18264,7 +18264,7 @@ var require_react_dom_development = __commonJS({
         }
         function checkPropTypes(typeSpecs, values, location, componentName, element) {
           {
-            var has2 = Function.call.bind(hasOwnProperty);
+            var has2 = Function.call.bind(hasOwnProperty2);
             for (var typeSpecName in typeSpecs) {
               if (has2(typeSpecs, typeSpecName)) {
                 var error$1 = void 0;
@@ -20157,7 +20157,7 @@ var require_react_dom_development = __commonJS({
               error("%s: getSnapshotBeforeUpdate() is defined as a static method and will be ignored. Instead, declare it as an instance method.", name);
             }
             var _state = instance.state;
-            if (_state && (typeof _state !== "object" || isArray(_state))) {
+            if (_state && (typeof _state !== "object" || isArray2(_state))) {
               error("%s.state: must be set to an object or null", name);
             }
             if (typeof instance.getChildContext === "function" && typeof ctor.childContextTypes !== "object") {
@@ -20784,7 +20784,7 @@ var require_react_dom_development = __commonJS({
                   return createChild(returnFiber, init(payload), lanes);
                 }
               }
-              if (isArray(newChild) || getIteratorFn(newChild)) {
+              if (isArray2(newChild) || getIteratorFn(newChild)) {
                 var _created3 = createFiberFromFragment(newChild, returnFiber.mode, lanes, null);
                 _created3.return = returnFiber;
                 return _created3;
@@ -20828,7 +20828,7 @@ var require_react_dom_development = __commonJS({
                   return updateSlot(returnFiber, oldFiber, init(payload), lanes);
                 }
               }
-              if (isArray(newChild) || getIteratorFn(newChild)) {
+              if (isArray2(newChild) || getIteratorFn(newChild)) {
                 if (key !== null) {
                   return null;
                 }
@@ -20863,7 +20863,7 @@ var require_react_dom_development = __commonJS({
                   var init = newChild._init;
                   return updateFromMap(existingChildren, returnFiber, newIdx, init(payload), lanes);
               }
-              if (isArray(newChild) || getIteratorFn(newChild)) {
+              if (isArray2(newChild) || getIteratorFn(newChild)) {
                 var _matchedFiber3 = existingChildren.get(newIdx) || null;
                 return updateFragment2(returnFiber, _matchedFiber3, newChild, lanes, null);
               }
@@ -21237,7 +21237,7 @@ var require_react_dom_development = __commonJS({
                   var init = newChild._init;
                   return reconcileChildFibers2(returnFiber, currentFirstChild, init(payload), lanes);
               }
-              if (isArray(newChild)) {
+              if (isArray2(newChild)) {
                 return reconcileChildrenArray(returnFiber, currentFirstChild, newChild, lanes);
               }
               if (getIteratorFn(newChild)) {
@@ -21486,7 +21486,7 @@ var require_react_dom_development = __commonJS({
         }
         function checkDepsAreArrayDev(deps) {
           {
-            if (deps !== void 0 && deps !== null && !isArray(deps)) {
+            if (deps !== void 0 && deps !== null && !isArray2(deps)) {
               error("%s received a final argument that is not an array (instead, received `%s`). When specified, the final argument must be an array.", currentHookNameInDev, typeof deps);
             }
           }
@@ -24849,7 +24849,7 @@ var require_react_dom_development = __commonJS({
         }
         function validateSuspenseListNestedChild(childSlot, index3) {
           {
-            var isAnArray = isArray(childSlot);
+            var isAnArray = isArray2(childSlot);
             var isIterable = !isAnArray && typeof getIteratorFn(childSlot) === "function";
             if (isAnArray || isIterable) {
               var type4 = isAnArray ? "array" : "iterable";
@@ -24862,7 +24862,7 @@ var require_react_dom_development = __commonJS({
         function validateSuspenseListChildren(children, revealOrder) {
           {
             if ((revealOrder === "forwards" || revealOrder === "backwards") && children !== void 0 && children !== null && children !== false) {
-              if (isArray(children)) {
+              if (isArray2(children)) {
                 for (var i2 = 0; i2 < children.length; i2++) {
                   if (!validateSuspenseListNestedChild(children[i2], i2)) {
                     return;
@@ -25670,7 +25670,7 @@ var require_react_dom_development = __commonJS({
                     markUpdate(workInProgress2);
                   }
                 } else {
-                  var instance = createInstance(type4, newProps, rootContainerInstance, currentHostContext, workInProgress2);
+                  var instance = createInstance2(type4, newProps, rootContainerInstance, currentHostContext, workInProgress2);
                   appendAllChildren(instance, workInProgress2, false, false);
                   workInProgress2.stateNode = instance;
                   if (finalizeInitialChildren(instance, type4, newProps, rootContainerInstance)) {
@@ -29616,8 +29616,8 @@ var require_react_dom_development = __commonJS({
           return new FiberNode(tag, pendingProps, key, mode);
         };
         function shouldConstruct$1(Component9) {
-          var prototype = Component9.prototype;
-          return !!(prototype && prototype.isReactComponent);
+          var prototype3 = Component9.prototype;
+          return !!(prototype3 && prototype3.isReactComponent);
         }
         function isSimpleFunctionComponent(type4) {
           return typeof type4 === "function" && !shouldConstruct$1(type4) && type4.defaultProps === void 0;
@@ -30273,9 +30273,9 @@ var require_react_dom_development = __commonJS({
         {
           var copyWithDeleteImpl = function(obj, path, index3) {
             var key = path[index3];
-            var updated = isArray(obj) ? obj.slice() : assign2({}, obj);
+            var updated = isArray2(obj) ? obj.slice() : assign2({}, obj);
             if (index3 + 1 === path.length) {
-              if (isArray(updated)) {
+              if (isArray2(updated)) {
                 updated.splice(key, 1);
               } else {
                 delete updated[key];
@@ -30290,11 +30290,11 @@ var require_react_dom_development = __commonJS({
           };
           var copyWithRenameImpl = function(obj, oldPath, newPath, index3) {
             var oldKey = oldPath[index3];
-            var updated = isArray(obj) ? obj.slice() : assign2({}, obj);
+            var updated = isArray2(obj) ? obj.slice() : assign2({}, obj);
             if (index3 + 1 === oldPath.length) {
               var newKey = newPath[index3];
               updated[newKey] = updated[oldKey];
-              if (isArray(updated)) {
+              if (isArray2(updated)) {
                 updated.splice(oldKey, 1);
               } else {
                 delete updated[oldKey];
@@ -30329,7 +30329,7 @@ var require_react_dom_development = __commonJS({
               return value;
             }
             var key = path[index3];
-            var updated = isArray(obj) ? obj.slice() : assign2({}, obj);
+            var updated = isArray2(obj) ? obj.slice() : assign2({}, obj);
             updated[key] = copyWithSetImpl(obj[key], path, index3 + 1, value);
             return updated;
           };
@@ -31544,7 +31544,7 @@ var require_lodash = __commonJS({
     }
     function createCaseFirst(methodName) {
       return function(string3) {
-        string3 = toString(string3);
+        string3 = toString3(string3);
         var strSymbols = hasUnicode(string3) ? stringToArray(string3) : void 0;
         var chr = strSymbols ? strSymbols[0] : string3.charAt(0);
         var trailing = strSymbols ? castSlice(strSymbols, 1).join("") : string3.slice(1);
@@ -31562,7 +31562,7 @@ var require_lodash = __commonJS({
     function isSymbol(value) {
       return typeof value == "symbol" || isObjectLike(value) && objectToString.call(value) == symbolTag;
     }
-    function toString(value) {
+    function toString3(value) {
       return value == null ? "" : baseToString(value);
     }
     var camelCase2 = createCompounder(function(result, word, index2) {
@@ -31570,15 +31570,15 @@ var require_lodash = __commonJS({
       return result + (index2 ? capitalize(word) : word);
     });
     function capitalize(string3) {
-      return upperFirst(toString(string3).toLowerCase());
+      return upperFirst(toString3(string3).toLowerCase());
     }
     function deburr(string3) {
-      string3 = toString(string3);
+      string3 = toString3(string3);
       return string3 && string3.replace(reLatin, deburrLetter).replace(reComboMark, "");
     }
     var upperFirst = createCaseFirst("toUpperCase");
     function words(string3, pattern4, guard) {
-      string3 = toString(string3);
+      string3 = toString3(string3);
       pattern4 = guard ? void 0 : pattern4;
       if (pattern4 === void 0) {
         return hasUnicodeWord(string3) ? unicodeWords(string3) : asciiWords(string3);
@@ -36141,7 +36141,7 @@ __export(main_exports, {
   default: () => PeriodicPARA
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian13 = require("obsidian");
+var import_obsidian14 = require("obsidian");
 var import_obsidian_dataview = __toESM(require_lib());
 
 // src/para/Project.ts
@@ -36431,12 +36431,11 @@ var Project = class extends Item {
       const link = `${momentDay.format("YYYY-MM-DD")}.md`;
       const file = this.file.get(link, "", this.settings.periodicNotesPath);
       if (file instanceof import_obsidian4.TFile) {
-        const reg = new RegExp(`# ${header}([\\s\\S]+?)
-#`);
+        const reg = new RegExp(`# ${header}([\\s\\S]*?)(?=##|$)`);
         let todayTotalTime = "0hr0";
         tasks.push(async () => {
           var _a;
-          const fileContent = await this.app.vault.read(file);
+          const fileContent = await this.app.vault.cachedRead(file);
           const regMatch = fileContent.match(reg);
           const projectContent = (regMatch == null ? void 0 : regMatch.length) ? (_a = regMatch[1]) == null ? void 0 : _a.split("\n") : [];
           projectContent.map((project) => {
@@ -36529,12 +36528,11 @@ var Area = class extends Item {
       const link = `${year}-${quarter}.md`;
       const file = this.file.get(link, "", this.settings.periodicNotesPath);
       if (file instanceof import_obsidian6.TFile) {
-        const reg = new RegExp(`# ${header}([\\s\\S]+?)
-#`);
+        const reg = new RegExp(`# ${header}([\\s\\S]*?)(?=##|$)`);
         if (file) {
           tasks.push(async () => {
             var _a;
-            const fileContent = await this.app.vault.read(file);
+            const fileContent = await this.app.vault.cachedRead(file);
             const regMatch = fileContent.match(reg);
             const areaContent = (regMatch == null ? void 0 : regMatch.length) ? (_a = regMatch[1]) == null ? void 0 : _a.split("\n") : [];
             areaContent.map((area) => {
@@ -36576,14 +36574,19 @@ var ERROR_MESSAGES = {
   NO_VIEW_EXISTED: "There is no this view in periodic PARA plugin",
   NO_README_EXIST: "There is no README.md or xxx.README.md in ",
   NO_TEMPLATE_EXIST: "There is no template file exist: ",
-  TAGS_MUST_INPUT: "Please input tags!"
+  TAGS_MUST_INPUT: "Please input tags!",
+  DAILY_RECORD_FETCH_FAILED: "Fetch daily record failed: ",
+  NO_DAILY_RECORD_HEADER: "Please set daily record header in Periodic PARA plugin",
+  NO_DAILY_RECORD_API: "Please set daily record API in Periodic PARA plugin",
+  NO_DAILY_RECORD_TOKEN: "Please set daily record access token in Periodic PARA plugin",
+  NO_DAILY_FILE_EXIST: "Daily file not exists, please create it first: "
 };
 var PARA = "PARA Notes";
 var PROJECT = "Project";
 var AREA = "Area";
 var RESOURCE = "Resource";
 var ARCHIVE = "Archive";
-var PERIODIC_NOTES = "Periodic Notes";
+var PERIODIC = "Periodic Notes";
 var DAILY = "Daily";
 var WEEKLY = "Weekly";
 var MONTHLY = "Monthly";
@@ -36838,19 +36841,2331 @@ SORT rows.file.link DESC
   }
 };
 
-// src/SettingTab.ts
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/bind.js
+function bind(fn, thisArg) {
+  return function wrap() {
+    return fn.apply(thisArg, arguments);
+  };
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/utils.js
+var { toString } = Object.prototype;
+var { getPrototypeOf } = Object;
+var kindOf = ((cache) => (thing) => {
+  const str = toString.call(thing);
+  return cache[str] || (cache[str] = str.slice(8, -1).toLowerCase());
+})(/* @__PURE__ */ Object.create(null));
+var kindOfTest = (type4) => {
+  type4 = type4.toLowerCase();
+  return (thing) => kindOf(thing) === type4;
+};
+var typeOfTest = (type4) => (thing) => typeof thing === type4;
+var { isArray } = Array;
+var isUndefined = typeOfTest("undefined");
+function isBuffer(val) {
+  return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor) && isFunction(val.constructor.isBuffer) && val.constructor.isBuffer(val);
+}
+var isArrayBuffer = kindOfTest("ArrayBuffer");
+function isArrayBufferView(val) {
+  let result;
+  if (typeof ArrayBuffer !== "undefined" && ArrayBuffer.isView) {
+    result = ArrayBuffer.isView(val);
+  } else {
+    result = val && val.buffer && isArrayBuffer(val.buffer);
+  }
+  return result;
+}
+var isString = typeOfTest("string");
+var isFunction = typeOfTest("function");
+var isNumber = typeOfTest("number");
+var isObject = (thing) => thing !== null && typeof thing === "object";
+var isBoolean = (thing) => thing === true || thing === false;
+var isPlainObject = (val) => {
+  if (kindOf(val) !== "object") {
+    return false;
+  }
+  const prototype3 = getPrototypeOf(val);
+  return (prototype3 === null || prototype3 === Object.prototype || Object.getPrototypeOf(prototype3) === null) && !(Symbol.toStringTag in val) && !(Symbol.iterator in val);
+};
+var isDate = kindOfTest("Date");
+var isFile = kindOfTest("File");
+var isBlob = kindOfTest("Blob");
+var isFileList = kindOfTest("FileList");
+var isStream = (val) => isObject(val) && isFunction(val.pipe);
+var isFormData = (thing) => {
+  let kind;
+  return thing && (typeof FormData === "function" && thing instanceof FormData || isFunction(thing.append) && ((kind = kindOf(thing)) === "formdata" || // detect form-data instance
+  kind === "object" && isFunction(thing.toString) && thing.toString() === "[object FormData]"));
+};
+var isURLSearchParams = kindOfTest("URLSearchParams");
+var trim = (str) => str.trim ? str.trim() : str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
+function forEach(obj, fn, { allOwnKeys = false } = {}) {
+  if (obj === null || typeof obj === "undefined") {
+    return;
+  }
+  let i2;
+  let l2;
+  if (typeof obj !== "object") {
+    obj = [obj];
+  }
+  if (isArray(obj)) {
+    for (i2 = 0, l2 = obj.length; i2 < l2; i2++) {
+      fn.call(null, obj[i2], i2, obj);
+    }
+  } else {
+    const keys2 = allOwnKeys ? Object.getOwnPropertyNames(obj) : Object.keys(obj);
+    const len = keys2.length;
+    let key;
+    for (i2 = 0; i2 < len; i2++) {
+      key = keys2[i2];
+      fn.call(null, obj[key], key, obj);
+    }
+  }
+}
+function findKey(obj, key) {
+  key = key.toLowerCase();
+  const keys2 = Object.keys(obj);
+  let i2 = keys2.length;
+  let _key;
+  while (i2-- > 0) {
+    _key = keys2[i2];
+    if (key === _key.toLowerCase()) {
+      return _key;
+    }
+  }
+  return null;
+}
+var _global = (() => {
+  if (typeof globalThis !== "undefined")
+    return globalThis;
+  return typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : global;
+})();
+var isContextDefined = (context) => !isUndefined(context) && context !== _global;
+function merge() {
+  const { caseless } = isContextDefined(this) && this || {};
+  const result = {};
+  const assignValue = (val, key) => {
+    const targetKey = caseless && findKey(result, key) || key;
+    if (isPlainObject(result[targetKey]) && isPlainObject(val)) {
+      result[targetKey] = merge(result[targetKey], val);
+    } else if (isPlainObject(val)) {
+      result[targetKey] = merge({}, val);
+    } else if (isArray(val)) {
+      result[targetKey] = val.slice();
+    } else {
+      result[targetKey] = val;
+    }
+  };
+  for (let i2 = 0, l2 = arguments.length; i2 < l2; i2++) {
+    arguments[i2] && forEach(arguments[i2], assignValue);
+  }
+  return result;
+}
+var extend = (a, b, thisArg, { allOwnKeys } = {}) => {
+  forEach(b, (val, key) => {
+    if (thisArg && isFunction(val)) {
+      a[key] = bind(val, thisArg);
+    } else {
+      a[key] = val;
+    }
+  }, { allOwnKeys });
+  return a;
+};
+var stripBOM = (content) => {
+  if (content.charCodeAt(0) === 65279) {
+    content = content.slice(1);
+  }
+  return content;
+};
+var inherits = (constructor, superConstructor, props, descriptors2) => {
+  constructor.prototype = Object.create(superConstructor.prototype, descriptors2);
+  constructor.prototype.constructor = constructor;
+  Object.defineProperty(constructor, "super", {
+    value: superConstructor.prototype
+  });
+  props && Object.assign(constructor.prototype, props);
+};
+var toFlatObject = (sourceObj, destObj, filter3, propFilter) => {
+  let props;
+  let i2;
+  let prop;
+  const merged = {};
+  destObj = destObj || {};
+  if (sourceObj == null)
+    return destObj;
+  do {
+    props = Object.getOwnPropertyNames(sourceObj);
+    i2 = props.length;
+    while (i2-- > 0) {
+      prop = props[i2];
+      if ((!propFilter || propFilter(prop, sourceObj, destObj)) && !merged[prop]) {
+        destObj[prop] = sourceObj[prop];
+        merged[prop] = true;
+      }
+    }
+    sourceObj = filter3 !== false && getPrototypeOf(sourceObj);
+  } while (sourceObj && (!filter3 || filter3(sourceObj, destObj)) && sourceObj !== Object.prototype);
+  return destObj;
+};
+var endsWith = (str, searchString, position2) => {
+  str = String(str);
+  if (position2 === void 0 || position2 > str.length) {
+    position2 = str.length;
+  }
+  position2 -= searchString.length;
+  const lastIndex = str.indexOf(searchString, position2);
+  return lastIndex !== -1 && lastIndex === position2;
+};
+var toArray = (thing) => {
+  if (!thing)
+    return null;
+  if (isArray(thing))
+    return thing;
+  let i2 = thing.length;
+  if (!isNumber(i2))
+    return null;
+  const arr = new Array(i2);
+  while (i2-- > 0) {
+    arr[i2] = thing[i2];
+  }
+  return arr;
+};
+var isTypedArray = ((TypedArray) => {
+  return (thing) => {
+    return TypedArray && thing instanceof TypedArray;
+  };
+})(typeof Uint8Array !== "undefined" && getPrototypeOf(Uint8Array));
+var forEachEntry = (obj, fn) => {
+  const generator = obj && obj[Symbol.iterator];
+  const iterator = generator.call(obj);
+  let result;
+  while ((result = iterator.next()) && !result.done) {
+    const pair = result.value;
+    fn.call(obj, pair[0], pair[1]);
+  }
+};
+var matchAll = (regExp, str) => {
+  let matches;
+  const arr = [];
+  while ((matches = regExp.exec(str)) !== null) {
+    arr.push(matches);
+  }
+  return arr;
+};
+var isHTMLForm = kindOfTest("HTMLFormElement");
+var toCamelCase = (str) => {
+  return str.toLowerCase().replace(
+    /[-_\s]([a-z\d])(\w*)/g,
+    function replacer(m, p1, p2) {
+      return p1.toUpperCase() + p2;
+    }
+  );
+};
+var hasOwnProperty = (({ hasOwnProperty: hasOwnProperty2 }) => (obj, prop) => hasOwnProperty2.call(obj, prop))(Object.prototype);
+var isRegExp = kindOfTest("RegExp");
+var reduceDescriptors = (obj, reducer) => {
+  const descriptors2 = Object.getOwnPropertyDescriptors(obj);
+  const reducedDescriptors = {};
+  forEach(descriptors2, (descriptor, name) => {
+    let ret;
+    if ((ret = reducer(descriptor, name, obj)) !== false) {
+      reducedDescriptors[name] = ret || descriptor;
+    }
+  });
+  Object.defineProperties(obj, reducedDescriptors);
+};
+var freezeMethods = (obj) => {
+  reduceDescriptors(obj, (descriptor, name) => {
+    if (isFunction(obj) && ["arguments", "caller", "callee"].indexOf(name) !== -1) {
+      return false;
+    }
+    const value = obj[name];
+    if (!isFunction(value))
+      return;
+    descriptor.enumerable = false;
+    if ("writable" in descriptor) {
+      descriptor.writable = false;
+      return;
+    }
+    if (!descriptor.set) {
+      descriptor.set = () => {
+        throw Error("Can not rewrite read-only method '" + name + "'");
+      };
+    }
+  });
+};
+var toObjectSet = (arrayOrString, delimiter2) => {
+  const obj = {};
+  const define2 = (arr) => {
+    arr.forEach((value) => {
+      obj[value] = true;
+    });
+  };
+  isArray(arrayOrString) ? define2(arrayOrString) : define2(String(arrayOrString).split(delimiter2));
+  return obj;
+};
+var noop = () => {
+};
+var toFiniteNumber = (value, defaultValue) => {
+  value = +value;
+  return Number.isFinite(value) ? value : defaultValue;
+};
+var ALPHA = "abcdefghijklmnopqrstuvwxyz";
+var DIGIT = "0123456789";
+var ALPHABET = {
+  DIGIT,
+  ALPHA,
+  ALPHA_DIGIT: ALPHA + ALPHA.toUpperCase() + DIGIT
+};
+var generateString = (size = 16, alphabet = ALPHABET.ALPHA_DIGIT) => {
+  let str = "";
+  const { length: length2 } = alphabet;
+  while (size--) {
+    str += alphabet[Math.random() * length2 | 0];
+  }
+  return str;
+};
+function isSpecCompliantForm(thing) {
+  return !!(thing && isFunction(thing.append) && thing[Symbol.toStringTag] === "FormData" && thing[Symbol.iterator]);
+}
+var toJSONObject = (obj) => {
+  const stack = new Array(10);
+  const visit = (source, i2) => {
+    if (isObject(source)) {
+      if (stack.indexOf(source) >= 0) {
+        return;
+      }
+      if (!("toJSON" in source)) {
+        stack[i2] = source;
+        const target = isArray(source) ? [] : {};
+        forEach(source, (value, key) => {
+          const reducedValue = visit(value, i2 + 1);
+          !isUndefined(reducedValue) && (target[key] = reducedValue);
+        });
+        stack[i2] = void 0;
+        return target;
+      }
+    }
+    return source;
+  };
+  return visit(obj, 0);
+};
+var isAsyncFn = kindOfTest("AsyncFunction");
+var isThenable = (thing) => thing && (isObject(thing) || isFunction(thing)) && isFunction(thing.then) && isFunction(thing.catch);
+var utils_default = {
+  isArray,
+  isArrayBuffer,
+  isBuffer,
+  isFormData,
+  isArrayBufferView,
+  isString,
+  isNumber,
+  isBoolean,
+  isObject,
+  isPlainObject,
+  isUndefined,
+  isDate,
+  isFile,
+  isBlob,
+  isRegExp,
+  isFunction,
+  isStream,
+  isURLSearchParams,
+  isTypedArray,
+  isFileList,
+  forEach,
+  merge,
+  extend,
+  trim,
+  stripBOM,
+  inherits,
+  toFlatObject,
+  kindOf,
+  kindOfTest,
+  endsWith,
+  toArray,
+  forEachEntry,
+  matchAll,
+  isHTMLForm,
+  hasOwnProperty,
+  hasOwnProp: hasOwnProperty,
+  // an alias to avoid ESLint no-prototype-builtins detection
+  reduceDescriptors,
+  freezeMethods,
+  toObjectSet,
+  toCamelCase,
+  noop,
+  toFiniteNumber,
+  findKey,
+  global: _global,
+  isContextDefined,
+  ALPHABET,
+  generateString,
+  isSpecCompliantForm,
+  toJSONObject,
+  isAsyncFn,
+  isThenable
+};
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/core/AxiosError.js
+function AxiosError(message, code, config, request, response) {
+  Error.call(this);
+  if (Error.captureStackTrace) {
+    Error.captureStackTrace(this, this.constructor);
+  } else {
+    this.stack = new Error().stack;
+  }
+  this.message = message;
+  this.name = "AxiosError";
+  code && (this.code = code);
+  config && (this.config = config);
+  request && (this.request = request);
+  response && (this.response = response);
+}
+utils_default.inherits(AxiosError, Error, {
+  toJSON: function toJSON() {
+    return {
+      // Standard
+      message: this.message,
+      name: this.name,
+      // Microsoft
+      description: this.description,
+      number: this.number,
+      // Mozilla
+      fileName: this.fileName,
+      lineNumber: this.lineNumber,
+      columnNumber: this.columnNumber,
+      stack: this.stack,
+      // Axios
+      config: utils_default.toJSONObject(this.config),
+      code: this.code,
+      status: this.response && this.response.status ? this.response.status : null
+    };
+  }
+});
+var prototype = AxiosError.prototype;
+var descriptors = {};
+[
+  "ERR_BAD_OPTION_VALUE",
+  "ERR_BAD_OPTION",
+  "ECONNABORTED",
+  "ETIMEDOUT",
+  "ERR_NETWORK",
+  "ERR_FR_TOO_MANY_REDIRECTS",
+  "ERR_DEPRECATED",
+  "ERR_BAD_RESPONSE",
+  "ERR_BAD_REQUEST",
+  "ERR_CANCELED",
+  "ERR_NOT_SUPPORT",
+  "ERR_INVALID_URL"
+  // eslint-disable-next-line func-names
+].forEach((code) => {
+  descriptors[code] = { value: code };
+});
+Object.defineProperties(AxiosError, descriptors);
+Object.defineProperty(prototype, "isAxiosError", { value: true });
+AxiosError.from = (error, code, config, request, response, customProps) => {
+  const axiosError = Object.create(prototype);
+  utils_default.toFlatObject(error, axiosError, function filter3(obj) {
+    return obj !== Error.prototype;
+  }, (prop) => {
+    return prop !== "isAxiosError";
+  });
+  AxiosError.call(axiosError, error.message, code, config, request, response);
+  axiosError.cause = error;
+  axiosError.name = error.name;
+  customProps && Object.assign(axiosError, customProps);
+  return axiosError;
+};
+var AxiosError_default = AxiosError;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/null.js
+var null_default = null;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/toFormData.js
+function isVisitable(thing) {
+  return utils_default.isPlainObject(thing) || utils_default.isArray(thing);
+}
+function removeBrackets(key) {
+  return utils_default.endsWith(key, "[]") ? key.slice(0, -2) : key;
+}
+function renderKey(path, key, dots) {
+  if (!path)
+    return key;
+  return path.concat(key).map(function each(token2, i2) {
+    token2 = removeBrackets(token2);
+    return !dots && i2 ? "[" + token2 + "]" : token2;
+  }).join(dots ? "." : "");
+}
+function isFlatArray(arr) {
+  return utils_default.isArray(arr) && !arr.some(isVisitable);
+}
+var predicates = utils_default.toFlatObject(utils_default, {}, null, function filter(prop) {
+  return /^is[A-Z]/.test(prop);
+});
+function toFormData(obj, formData, options) {
+  if (!utils_default.isObject(obj)) {
+    throw new TypeError("target must be an object");
+  }
+  formData = formData || new (null_default || FormData)();
+  options = utils_default.toFlatObject(options, {
+    metaTokens: true,
+    dots: false,
+    indexes: false
+  }, false, function defined(option, source) {
+    return !utils_default.isUndefined(source[option]);
+  });
+  const metaTokens = options.metaTokens;
+  const visitor = options.visitor || defaultVisitor;
+  const dots = options.dots;
+  const indexes = options.indexes;
+  const _Blob = options.Blob || typeof Blob !== "undefined" && Blob;
+  const useBlob = _Blob && utils_default.isSpecCompliantForm(formData);
+  if (!utils_default.isFunction(visitor)) {
+    throw new TypeError("visitor must be a function");
+  }
+  function convertValue(value) {
+    if (value === null)
+      return "";
+    if (utils_default.isDate(value)) {
+      return value.toISOString();
+    }
+    if (!useBlob && utils_default.isBlob(value)) {
+      throw new AxiosError_default("Blob is not supported. Use a Buffer instead.");
+    }
+    if (utils_default.isArrayBuffer(value) || utils_default.isTypedArray(value)) {
+      return useBlob && typeof Blob === "function" ? new Blob([value]) : Buffer.from(value);
+    }
+    return value;
+  }
+  function defaultVisitor(value, key, path) {
+    let arr = value;
+    if (value && !path && typeof value === "object") {
+      if (utils_default.endsWith(key, "{}")) {
+        key = metaTokens ? key : key.slice(0, -2);
+        value = JSON.stringify(value);
+      } else if (utils_default.isArray(value) && isFlatArray(value) || (utils_default.isFileList(value) || utils_default.endsWith(key, "[]")) && (arr = utils_default.toArray(value))) {
+        key = removeBrackets(key);
+        arr.forEach(function each(el, index2) {
+          !(utils_default.isUndefined(el) || el === null) && formData.append(
+            // eslint-disable-next-line no-nested-ternary
+            indexes === true ? renderKey([key], index2, dots) : indexes === null ? key : key + "[]",
+            convertValue(el)
+          );
+        });
+        return false;
+      }
+    }
+    if (isVisitable(value)) {
+      return true;
+    }
+    formData.append(renderKey(path, key, dots), convertValue(value));
+    return false;
+  }
+  const stack = [];
+  const exposedHelpers = Object.assign(predicates, {
+    defaultVisitor,
+    convertValue,
+    isVisitable
+  });
+  function build(value, path) {
+    if (utils_default.isUndefined(value))
+      return;
+    if (stack.indexOf(value) !== -1) {
+      throw Error("Circular reference detected in " + path.join("."));
+    }
+    stack.push(value);
+    utils_default.forEach(value, function each(el, key) {
+      const result = !(utils_default.isUndefined(el) || el === null) && visitor.call(
+        formData,
+        el,
+        utils_default.isString(key) ? key.trim() : key,
+        path,
+        exposedHelpers
+      );
+      if (result === true) {
+        build(el, path ? path.concat(key) : [key]);
+      }
+    });
+    stack.pop();
+  }
+  if (!utils_default.isObject(obj)) {
+    throw new TypeError("data must be an object");
+  }
+  build(obj);
+  return formData;
+}
+var toFormData_default = toFormData;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/AxiosURLSearchParams.js
+function encode(str) {
+  const charMap = {
+    "!": "%21",
+    "'": "%27",
+    "(": "%28",
+    ")": "%29",
+    "~": "%7E",
+    "%20": "+",
+    "%00": "\0"
+  };
+  return encodeURIComponent(str).replace(/[!'()~]|%20|%00/g, function replacer(match2) {
+    return charMap[match2];
+  });
+}
+function AxiosURLSearchParams(params, options) {
+  this._pairs = [];
+  params && toFormData_default(params, this, options);
+}
+var prototype2 = AxiosURLSearchParams.prototype;
+prototype2.append = function append(name, value) {
+  this._pairs.push([name, value]);
+};
+prototype2.toString = function toString2(encoder) {
+  const _encode = encoder ? function(value) {
+    return encoder.call(this, value, encode);
+  } : encode;
+  return this._pairs.map(function each(pair) {
+    return _encode(pair[0]) + "=" + _encode(pair[1]);
+  }, "").join("&");
+};
+var AxiosURLSearchParams_default = AxiosURLSearchParams;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/buildURL.js
+function encode2(val) {
+  return encodeURIComponent(val).replace(/%3A/gi, ":").replace(/%24/g, "$").replace(/%2C/gi, ",").replace(/%20/g, "+").replace(/%5B/gi, "[").replace(/%5D/gi, "]");
+}
+function buildURL(url2, params, options) {
+  if (!params) {
+    return url2;
+  }
+  const _encode = options && options.encode || encode2;
+  const serializeFn = options && options.serialize;
+  let serializedParams;
+  if (serializeFn) {
+    serializedParams = serializeFn(params, options);
+  } else {
+    serializedParams = utils_default.isURLSearchParams(params) ? params.toString() : new AxiosURLSearchParams_default(params, options).toString(_encode);
+  }
+  if (serializedParams) {
+    const hashmarkIndex = url2.indexOf("#");
+    if (hashmarkIndex !== -1) {
+      url2 = url2.slice(0, hashmarkIndex);
+    }
+    url2 += (url2.indexOf("?") === -1 ? "?" : "&") + serializedParams;
+  }
+  return url2;
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/core/InterceptorManager.js
+var InterceptorManager = class {
+  constructor() {
+    this.handlers = [];
+  }
+  /**
+   * Add a new interceptor to the stack
+   *
+   * @param {Function} fulfilled The function to handle `then` for a `Promise`
+   * @param {Function} rejected The function to handle `reject` for a `Promise`
+   *
+   * @return {Number} An ID used to remove interceptor later
+   */
+  use(fulfilled, rejected, options) {
+    this.handlers.push({
+      fulfilled,
+      rejected,
+      synchronous: options ? options.synchronous : false,
+      runWhen: options ? options.runWhen : null
+    });
+    return this.handlers.length - 1;
+  }
+  /**
+   * Remove an interceptor from the stack
+   *
+   * @param {Number} id The ID that was returned by `use`
+   *
+   * @returns {Boolean} `true` if the interceptor was removed, `false` otherwise
+   */
+  eject(id) {
+    if (this.handlers[id]) {
+      this.handlers[id] = null;
+    }
+  }
+  /**
+   * Clear all interceptors from the stack
+   *
+   * @returns {void}
+   */
+  clear() {
+    if (this.handlers) {
+      this.handlers = [];
+    }
+  }
+  /**
+   * Iterate over all the registered interceptors
+   *
+   * This method is particularly useful for skipping over any
+   * interceptors that may have become `null` calling `eject`.
+   *
+   * @param {Function} fn The function to call for each interceptor
+   *
+   * @returns {void}
+   */
+  forEach(fn) {
+    utils_default.forEach(this.handlers, function forEachHandler(h) {
+      if (h !== null) {
+        fn(h);
+      }
+    });
+  }
+};
+var InterceptorManager_default = InterceptorManager;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/defaults/transitional.js
+var transitional_default = {
+  silentJSONParsing: true,
+  forcedJSONParsing: true,
+  clarifyTimeoutError: false
+};
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/platform/browser/classes/URLSearchParams.js
+var URLSearchParams_default = typeof URLSearchParams !== "undefined" ? URLSearchParams : AxiosURLSearchParams_default;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/platform/browser/classes/FormData.js
+var FormData_default = typeof FormData !== "undefined" ? FormData : null;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/platform/browser/classes/Blob.js
+var Blob_default = typeof Blob !== "undefined" ? Blob : null;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/platform/browser/index.js
+var isStandardBrowserEnv = (() => {
+  let product;
+  if (typeof navigator !== "undefined" && ((product = navigator.product) === "ReactNative" || product === "NativeScript" || product === "NS")) {
+    return false;
+  }
+  return typeof window !== "undefined" && typeof document !== "undefined";
+})();
+var isStandardBrowserWebWorkerEnv = (() => {
+  return typeof WorkerGlobalScope !== "undefined" && // eslint-disable-next-line no-undef
+  self instanceof WorkerGlobalScope && typeof self.importScripts === "function";
+})();
+var browser_default = {
+  isBrowser: true,
+  classes: {
+    URLSearchParams: URLSearchParams_default,
+    FormData: FormData_default,
+    Blob: Blob_default
+  },
+  isStandardBrowserEnv,
+  isStandardBrowserWebWorkerEnv,
+  protocols: ["http", "https", "file", "blob", "url", "data"]
+};
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/toURLEncodedForm.js
+function toURLEncodedForm(data, options) {
+  return toFormData_default(data, new browser_default.classes.URLSearchParams(), Object.assign({
+    visitor: function(value, key, path, helpers) {
+      if (browser_default.isNode && utils_default.isBuffer(value)) {
+        this.append(key, value.toString("base64"));
+        return false;
+      }
+      return helpers.defaultVisitor.apply(this, arguments);
+    }
+  }, options));
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/formDataToJSON.js
+function parsePropPath(name) {
+  return utils_default.matchAll(/\w+|\[(\w*)]/g, name).map((match2) => {
+    return match2[0] === "[]" ? "" : match2[1] || match2[0];
+  });
+}
+function arrayToObject(arr) {
+  const obj = {};
+  const keys2 = Object.keys(arr);
+  let i2;
+  const len = keys2.length;
+  let key;
+  for (i2 = 0; i2 < len; i2++) {
+    key = keys2[i2];
+    obj[key] = arr[key];
+  }
+  return obj;
+}
+function formDataToJSON(formData) {
+  function buildPath(path, value, target, index2) {
+    let name = path[index2++];
+    const isNumericKey = Number.isFinite(+name);
+    const isLast = index2 >= path.length;
+    name = !name && utils_default.isArray(target) ? target.length : name;
+    if (isLast) {
+      if (utils_default.hasOwnProp(target, name)) {
+        target[name] = [target[name], value];
+      } else {
+        target[name] = value;
+      }
+      return !isNumericKey;
+    }
+    if (!target[name] || !utils_default.isObject(target[name])) {
+      target[name] = [];
+    }
+    const result = buildPath(path, value, target[name], index2);
+    if (result && utils_default.isArray(target[name])) {
+      target[name] = arrayToObject(target[name]);
+    }
+    return !isNumericKey;
+  }
+  if (utils_default.isFormData(formData) && utils_default.isFunction(formData.entries)) {
+    const obj = {};
+    utils_default.forEachEntry(formData, (name, value) => {
+      buildPath(parsePropPath(name), value, obj, 0);
+    });
+    return obj;
+  }
+  return null;
+}
+var formDataToJSON_default = formDataToJSON;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/defaults/index.js
+function stringifySafely(rawValue, parser, encoder) {
+  if (utils_default.isString(rawValue)) {
+    try {
+      (parser || JSON.parse)(rawValue);
+      return utils_default.trim(rawValue);
+    } catch (e2) {
+      if (e2.name !== "SyntaxError") {
+        throw e2;
+      }
+    }
+  }
+  return (encoder || JSON.stringify)(rawValue);
+}
+var defaults = {
+  transitional: transitional_default,
+  adapter: ["xhr", "http"],
+  transformRequest: [function transformRequest(data, headers) {
+    const contentType = headers.getContentType() || "";
+    const hasJSONContentType = contentType.indexOf("application/json") > -1;
+    const isObjectPayload = utils_default.isObject(data);
+    if (isObjectPayload && utils_default.isHTMLForm(data)) {
+      data = new FormData(data);
+    }
+    const isFormData2 = utils_default.isFormData(data);
+    if (isFormData2) {
+      if (!hasJSONContentType) {
+        return data;
+      }
+      return hasJSONContentType ? JSON.stringify(formDataToJSON_default(data)) : data;
+    }
+    if (utils_default.isArrayBuffer(data) || utils_default.isBuffer(data) || utils_default.isStream(data) || utils_default.isFile(data) || utils_default.isBlob(data)) {
+      return data;
+    }
+    if (utils_default.isArrayBufferView(data)) {
+      return data.buffer;
+    }
+    if (utils_default.isURLSearchParams(data)) {
+      headers.setContentType("application/x-www-form-urlencoded;charset=utf-8", false);
+      return data.toString();
+    }
+    let isFileList2;
+    if (isObjectPayload) {
+      if (contentType.indexOf("application/x-www-form-urlencoded") > -1) {
+        return toURLEncodedForm(data, this.formSerializer).toString();
+      }
+      if ((isFileList2 = utils_default.isFileList(data)) || contentType.indexOf("multipart/form-data") > -1) {
+        const _FormData = this.env && this.env.FormData;
+        return toFormData_default(
+          isFileList2 ? { "files[]": data } : data,
+          _FormData && new _FormData(),
+          this.formSerializer
+        );
+      }
+    }
+    if (isObjectPayload || hasJSONContentType) {
+      headers.setContentType("application/json", false);
+      return stringifySafely(data);
+    }
+    return data;
+  }],
+  transformResponse: [function transformResponse(data) {
+    const transitional2 = this.transitional || defaults.transitional;
+    const forcedJSONParsing = transitional2 && transitional2.forcedJSONParsing;
+    const JSONRequested = this.responseType === "json";
+    if (data && utils_default.isString(data) && (forcedJSONParsing && !this.responseType || JSONRequested)) {
+      const silentJSONParsing = transitional2 && transitional2.silentJSONParsing;
+      const strictJSONParsing = !silentJSONParsing && JSONRequested;
+      try {
+        return JSON.parse(data);
+      } catch (e2) {
+        if (strictJSONParsing) {
+          if (e2.name === "SyntaxError") {
+            throw AxiosError_default.from(e2, AxiosError_default.ERR_BAD_RESPONSE, this, null, this.response);
+          }
+          throw e2;
+        }
+      }
+    }
+    return data;
+  }],
+  /**
+   * A timeout in milliseconds to abort a request. If set to 0 (default) a
+   * timeout is not created.
+   */
+  timeout: 0,
+  xsrfCookieName: "XSRF-TOKEN",
+  xsrfHeaderName: "X-XSRF-TOKEN",
+  maxContentLength: -1,
+  maxBodyLength: -1,
+  env: {
+    FormData: browser_default.classes.FormData,
+    Blob: browser_default.classes.Blob
+  },
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  },
+  headers: {
+    common: {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": void 0
+    }
+  }
+};
+utils_default.forEach(["delete", "get", "head", "post", "put", "patch"], (method4) => {
+  defaults.headers[method4] = {};
+});
+var defaults_default = defaults;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/parseHeaders.js
+var ignoreDuplicateOf = utils_default.toObjectSet([
+  "age",
+  "authorization",
+  "content-length",
+  "content-type",
+  "etag",
+  "expires",
+  "from",
+  "host",
+  "if-modified-since",
+  "if-unmodified-since",
+  "last-modified",
+  "location",
+  "max-forwards",
+  "proxy-authorization",
+  "referer",
+  "retry-after",
+  "user-agent"
+]);
+var parseHeaders_default = (rawHeaders) => {
+  const parsed = {};
+  let key;
+  let val;
+  let i2;
+  rawHeaders && rawHeaders.split("\n").forEach(function parser(line2) {
+    i2 = line2.indexOf(":");
+    key = line2.substring(0, i2).trim().toLowerCase();
+    val = line2.substring(i2 + 1).trim();
+    if (!key || parsed[key] && ignoreDuplicateOf[key]) {
+      return;
+    }
+    if (key === "set-cookie") {
+      if (parsed[key]) {
+        parsed[key].push(val);
+      } else {
+        parsed[key] = [val];
+      }
+    } else {
+      parsed[key] = parsed[key] ? parsed[key] + ", " + val : val;
+    }
+  });
+  return parsed;
+};
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/core/AxiosHeaders.js
+var $internals = Symbol("internals");
+function normalizeHeader(header) {
+  return header && String(header).trim().toLowerCase();
+}
+function normalizeValue(value) {
+  if (value === false || value == null) {
+    return value;
+  }
+  return utils_default.isArray(value) ? value.map(normalizeValue) : String(value);
+}
+function parseTokens(str) {
+  const tokens = /* @__PURE__ */ Object.create(null);
+  const tokensRE = /([^\s,;=]+)\s*(?:=\s*([^,;]+))?/g;
+  let match2;
+  while (match2 = tokensRE.exec(str)) {
+    tokens[match2[1]] = match2[2];
+  }
+  return tokens;
+}
+var isValidHeaderName = (str) => /^[-_a-zA-Z0-9^`|~,!#$%&'*+.]+$/.test(str.trim());
+function matchHeaderValue(context, value, header, filter3, isHeaderNameFilter) {
+  if (utils_default.isFunction(filter3)) {
+    return filter3.call(this, value, header);
+  }
+  if (isHeaderNameFilter) {
+    value = header;
+  }
+  if (!utils_default.isString(value))
+    return;
+  if (utils_default.isString(filter3)) {
+    return value.indexOf(filter3) !== -1;
+  }
+  if (utils_default.isRegExp(filter3)) {
+    return filter3.test(value);
+  }
+}
+function formatHeader(header) {
+  return header.trim().toLowerCase().replace(/([a-z\d])(\w*)/g, (w, char2, str) => {
+    return char2.toUpperCase() + str;
+  });
+}
+function buildAccessors(obj, header) {
+  const accessorName = utils_default.toCamelCase(" " + header);
+  ["get", "set", "has"].forEach((methodName) => {
+    Object.defineProperty(obj, methodName + accessorName, {
+      value: function(arg1, arg2, arg3) {
+        return this[methodName].call(this, header, arg1, arg2, arg3);
+      },
+      configurable: true
+    });
+  });
+}
+var AxiosHeaders = class {
+  constructor(headers) {
+    headers && this.set(headers);
+  }
+  set(header, valueOrRewrite, rewrite) {
+    const self2 = this;
+    function setHeader(_value, _header, _rewrite) {
+      const lHeader = normalizeHeader(_header);
+      if (!lHeader) {
+        throw new Error("header name must be a non-empty string");
+      }
+      const key = utils_default.findKey(self2, lHeader);
+      if (!key || self2[key] === void 0 || _rewrite === true || _rewrite === void 0 && self2[key] !== false) {
+        self2[key || _header] = normalizeValue(_value);
+      }
+    }
+    const setHeaders = (headers, _rewrite) => utils_default.forEach(headers, (_value, _header) => setHeader(_value, _header, _rewrite));
+    if (utils_default.isPlainObject(header) || header instanceof this.constructor) {
+      setHeaders(header, valueOrRewrite);
+    } else if (utils_default.isString(header) && (header = header.trim()) && !isValidHeaderName(header)) {
+      setHeaders(parseHeaders_default(header), valueOrRewrite);
+    } else {
+      header != null && setHeader(valueOrRewrite, header, rewrite);
+    }
+    return this;
+  }
+  get(header, parser) {
+    header = normalizeHeader(header);
+    if (header) {
+      const key = utils_default.findKey(this, header);
+      if (key) {
+        const value = this[key];
+        if (!parser) {
+          return value;
+        }
+        if (parser === true) {
+          return parseTokens(value);
+        }
+        if (utils_default.isFunction(parser)) {
+          return parser.call(this, value, key);
+        }
+        if (utils_default.isRegExp(parser)) {
+          return parser.exec(value);
+        }
+        throw new TypeError("parser must be boolean|regexp|function");
+      }
+    }
+  }
+  has(header, matcher) {
+    header = normalizeHeader(header);
+    if (header) {
+      const key = utils_default.findKey(this, header);
+      return !!(key && this[key] !== void 0 && (!matcher || matchHeaderValue(this, this[key], key, matcher)));
+    }
+    return false;
+  }
+  delete(header, matcher) {
+    const self2 = this;
+    let deleted = false;
+    function deleteHeader(_header) {
+      _header = normalizeHeader(_header);
+      if (_header) {
+        const key = utils_default.findKey(self2, _header);
+        if (key && (!matcher || matchHeaderValue(self2, self2[key], key, matcher))) {
+          delete self2[key];
+          deleted = true;
+        }
+      }
+    }
+    if (utils_default.isArray(header)) {
+      header.forEach(deleteHeader);
+    } else {
+      deleteHeader(header);
+    }
+    return deleted;
+  }
+  clear(matcher) {
+    const keys2 = Object.keys(this);
+    let i2 = keys2.length;
+    let deleted = false;
+    while (i2--) {
+      const key = keys2[i2];
+      if (!matcher || matchHeaderValue(this, this[key], key, matcher, true)) {
+        delete this[key];
+        deleted = true;
+      }
+    }
+    return deleted;
+  }
+  normalize(format3) {
+    const self2 = this;
+    const headers = {};
+    utils_default.forEach(this, (value, header) => {
+      const key = utils_default.findKey(headers, header);
+      if (key) {
+        self2[key] = normalizeValue(value);
+        delete self2[header];
+        return;
+      }
+      const normalized = format3 ? formatHeader(header) : String(header).trim();
+      if (normalized !== header) {
+        delete self2[header];
+      }
+      self2[normalized] = normalizeValue(value);
+      headers[normalized] = true;
+    });
+    return this;
+  }
+  concat(...targets) {
+    return this.constructor.concat(this, ...targets);
+  }
+  toJSON(asStrings) {
+    const obj = /* @__PURE__ */ Object.create(null);
+    utils_default.forEach(this, (value, header) => {
+      value != null && value !== false && (obj[header] = asStrings && utils_default.isArray(value) ? value.join(", ") : value);
+    });
+    return obj;
+  }
+  [Symbol.iterator]() {
+    return Object.entries(this.toJSON())[Symbol.iterator]();
+  }
+  toString() {
+    return Object.entries(this.toJSON()).map(([header, value]) => header + ": " + value).join("\n");
+  }
+  get [Symbol.toStringTag]() {
+    return "AxiosHeaders";
+  }
+  static from(thing) {
+    return thing instanceof this ? thing : new this(thing);
+  }
+  static concat(first, ...targets) {
+    const computed = new this(first);
+    targets.forEach((target) => computed.set(target));
+    return computed;
+  }
+  static accessor(header) {
+    const internals = this[$internals] = this[$internals] = {
+      accessors: {}
+    };
+    const accessors = internals.accessors;
+    const prototype3 = this.prototype;
+    function defineAccessor(_header) {
+      const lHeader = normalizeHeader(_header);
+      if (!accessors[lHeader]) {
+        buildAccessors(prototype3, _header);
+        accessors[lHeader] = true;
+      }
+    }
+    utils_default.isArray(header) ? header.forEach(defineAccessor) : defineAccessor(header);
+    return this;
+  }
+};
+AxiosHeaders.accessor(["Content-Type", "Content-Length", "Accept", "Accept-Encoding", "User-Agent", "Authorization"]);
+utils_default.reduceDescriptors(AxiosHeaders.prototype, ({ value }, key) => {
+  let mapped = key[0].toUpperCase() + key.slice(1);
+  return {
+    get: () => value,
+    set(headerValue) {
+      this[mapped] = headerValue;
+    }
+  };
+});
+utils_default.freezeMethods(AxiosHeaders);
+var AxiosHeaders_default = AxiosHeaders;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/core/transformData.js
+function transformData(fns, response) {
+  const config = this || defaults_default;
+  const context = response || config;
+  const headers = AxiosHeaders_default.from(context.headers);
+  let data = context.data;
+  utils_default.forEach(fns, function transform(fn) {
+    data = fn.call(config, data, headers.normalize(), response ? response.status : void 0);
+  });
+  headers.normalize();
+  return data;
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/cancel/isCancel.js
+function isCancel(value) {
+  return !!(value && value.__CANCEL__);
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/cancel/CanceledError.js
+function CanceledError(message, config, request) {
+  AxiosError_default.call(this, message == null ? "canceled" : message, AxiosError_default.ERR_CANCELED, config, request);
+  this.name = "CanceledError";
+}
+utils_default.inherits(CanceledError, AxiosError_default, {
+  __CANCEL__: true
+});
+var CanceledError_default = CanceledError;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/core/settle.js
+function settle(resolve, reject, response) {
+  const validateStatus2 = response.config.validateStatus;
+  if (!response.status || !validateStatus2 || validateStatus2(response.status)) {
+    resolve(response);
+  } else {
+    reject(new AxiosError_default(
+      "Request failed with status code " + response.status,
+      [AxiosError_default.ERR_BAD_REQUEST, AxiosError_default.ERR_BAD_RESPONSE][Math.floor(response.status / 100) - 4],
+      response.config,
+      response.request,
+      response
+    ));
+  }
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/cookies.js
+var cookies_default = browser_default.isStandardBrowserEnv ? (
+  // Standard browser envs support document.cookie
+  function standardBrowserEnv() {
+    return {
+      write: function write(name, value, expires, path, domain, secure) {
+        const cookie = [];
+        cookie.push(name + "=" + encodeURIComponent(value));
+        if (utils_default.isNumber(expires)) {
+          cookie.push("expires=" + new Date(expires).toGMTString());
+        }
+        if (utils_default.isString(path)) {
+          cookie.push("path=" + path);
+        }
+        if (utils_default.isString(domain)) {
+          cookie.push("domain=" + domain);
+        }
+        if (secure === true) {
+          cookie.push("secure");
+        }
+        document.cookie = cookie.join("; ");
+      },
+      read: function read(name) {
+        const match2 = document.cookie.match(new RegExp("(^|;\\s*)(" + name + ")=([^;]*)"));
+        return match2 ? decodeURIComponent(match2[3]) : null;
+      },
+      remove: function remove(name) {
+        this.write(name, "", Date.now() - 864e5);
+      }
+    };
+  }()
+) : (
+  // Non standard browser env (web workers, react-native) lack needed support.
+  function nonStandardBrowserEnv() {
+    return {
+      write: function write() {
+      },
+      read: function read() {
+        return null;
+      },
+      remove: function remove() {
+      }
+    };
+  }()
+);
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/isAbsoluteURL.js
+function isAbsoluteURL(url2) {
+  return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url2);
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/combineURLs.js
+function combineURLs(baseURL, relativeURL) {
+  return relativeURL ? baseURL.replace(/\/+$/, "") + "/" + relativeURL.replace(/^\/+/, "") : baseURL;
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/core/buildFullPath.js
+function buildFullPath(baseURL, requestedURL) {
+  if (baseURL && !isAbsoluteURL(requestedURL)) {
+    return combineURLs(baseURL, requestedURL);
+  }
+  return requestedURL;
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/isURLSameOrigin.js
+var isURLSameOrigin_default = browser_default.isStandardBrowserEnv ? (
+  // Standard browser envs have full support of the APIs needed to test
+  // whether the request URL is of the same origin as current location.
+  function standardBrowserEnv2() {
+    const msie = /(msie|trident)/i.test(navigator.userAgent);
+    const urlParsingNode = document.createElement("a");
+    let originURL;
+    function resolveURL(url2) {
+      let href = url2;
+      if (msie) {
+        urlParsingNode.setAttribute("href", href);
+        href = urlParsingNode.href;
+      }
+      urlParsingNode.setAttribute("href", href);
+      return {
+        href: urlParsingNode.href,
+        protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, "") : "",
+        host: urlParsingNode.host,
+        search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, "") : "",
+        hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, "") : "",
+        hostname: urlParsingNode.hostname,
+        port: urlParsingNode.port,
+        pathname: urlParsingNode.pathname.charAt(0) === "/" ? urlParsingNode.pathname : "/" + urlParsingNode.pathname
+      };
+    }
+    originURL = resolveURL(window.location.href);
+    return function isURLSameOrigin(requestURL) {
+      const parsed = utils_default.isString(requestURL) ? resolveURL(requestURL) : requestURL;
+      return parsed.protocol === originURL.protocol && parsed.host === originURL.host;
+    };
+  }()
+) : (
+  // Non standard browser envs (web workers, react-native) lack needed support.
+  function nonStandardBrowserEnv2() {
+    return function isURLSameOrigin() {
+      return true;
+    };
+  }()
+);
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/parseProtocol.js
+function parseProtocol(url2) {
+  const match2 = /^([-+\w]{1,25})(:?\/\/|:)/.exec(url2);
+  return match2 && match2[1] || "";
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/speedometer.js
+function speedometer(samplesCount, min) {
+  samplesCount = samplesCount || 10;
+  const bytes = new Array(samplesCount);
+  const timestamps = new Array(samplesCount);
+  let head = 0;
+  let tail = 0;
+  let firstSampleTS;
+  min = min !== void 0 ? min : 1e3;
+  return function push(chunkLength) {
+    const now = Date.now();
+    const startedAt = timestamps[tail];
+    if (!firstSampleTS) {
+      firstSampleTS = now;
+    }
+    bytes[head] = chunkLength;
+    timestamps[head] = now;
+    let i2 = tail;
+    let bytesCount = 0;
+    while (i2 !== head) {
+      bytesCount += bytes[i2++];
+      i2 = i2 % samplesCount;
+    }
+    head = (head + 1) % samplesCount;
+    if (head === tail) {
+      tail = (tail + 1) % samplesCount;
+    }
+    if (now - firstSampleTS < min) {
+      return;
+    }
+    const passed = startedAt && now - startedAt;
+    return passed ? Math.round(bytesCount * 1e3 / passed) : void 0;
+  };
+}
+var speedometer_default = speedometer;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/adapters/xhr.js
+function progressEventReducer(listener, isDownloadStream) {
+  let bytesNotified = 0;
+  const _speedometer = speedometer_default(50, 250);
+  return (e2) => {
+    const loaded = e2.loaded;
+    const total = e2.lengthComputable ? e2.total : void 0;
+    const progressBytes = loaded - bytesNotified;
+    const rate = _speedometer(progressBytes);
+    const inRange = loaded <= total;
+    bytesNotified = loaded;
+    const data = {
+      loaded,
+      total,
+      progress: total ? loaded / total : void 0,
+      bytes: progressBytes,
+      rate: rate ? rate : void 0,
+      estimated: rate && total && inRange ? (total - loaded) / rate : void 0,
+      event: e2
+    };
+    data[isDownloadStream ? "download" : "upload"] = true;
+    listener(data);
+  };
+}
+var isXHRAdapterSupported = typeof XMLHttpRequest !== "undefined";
+var xhr_default = isXHRAdapterSupported && function(config) {
+  return new Promise(function dispatchXhrRequest(resolve, reject) {
+    let requestData = config.data;
+    const requestHeaders = AxiosHeaders_default.from(config.headers).normalize();
+    const responseType = config.responseType;
+    let onCanceled;
+    function done() {
+      if (config.cancelToken) {
+        config.cancelToken.unsubscribe(onCanceled);
+      }
+      if (config.signal) {
+        config.signal.removeEventListener("abort", onCanceled);
+      }
+    }
+    let contentType;
+    if (utils_default.isFormData(requestData)) {
+      if (browser_default.isStandardBrowserEnv || browser_default.isStandardBrowserWebWorkerEnv) {
+        requestHeaders.setContentType(false);
+      } else if (!requestHeaders.getContentType(/^\s*multipart\/form-data/)) {
+        requestHeaders.setContentType("multipart/form-data");
+      } else if (utils_default.isString(contentType = requestHeaders.getContentType())) {
+        requestHeaders.setContentType(contentType.replace(/^\s*(multipart\/form-data);+/, "$1"));
+      }
+    }
+    let request = new XMLHttpRequest();
+    if (config.auth) {
+      const username = config.auth.username || "";
+      const password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : "";
+      requestHeaders.set("Authorization", "Basic " + btoa(username + ":" + password));
+    }
+    const fullPath = buildFullPath(config.baseURL, config.url);
+    request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
+    request.timeout = config.timeout;
+    function onloadend() {
+      if (!request) {
+        return;
+      }
+      const responseHeaders = AxiosHeaders_default.from(
+        "getAllResponseHeaders" in request && request.getAllResponseHeaders()
+      );
+      const responseData = !responseType || responseType === "text" || responseType === "json" ? request.responseText : request.response;
+      const response = {
+        data: responseData,
+        status: request.status,
+        statusText: request.statusText,
+        headers: responseHeaders,
+        config,
+        request
+      };
+      settle(function _resolve(value) {
+        resolve(value);
+        done();
+      }, function _reject(err) {
+        reject(err);
+        done();
+      }, response);
+      request = null;
+    }
+    if ("onloadend" in request) {
+      request.onloadend = onloadend;
+    } else {
+      request.onreadystatechange = function handleLoad() {
+        if (!request || request.readyState !== 4) {
+          return;
+        }
+        if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf("file:") === 0)) {
+          return;
+        }
+        setTimeout(onloadend);
+      };
+    }
+    request.onabort = function handleAbort() {
+      if (!request) {
+        return;
+      }
+      reject(new AxiosError_default("Request aborted", AxiosError_default.ECONNABORTED, config, request));
+      request = null;
+    };
+    request.onerror = function handleError() {
+      reject(new AxiosError_default("Network Error", AxiosError_default.ERR_NETWORK, config, request));
+      request = null;
+    };
+    request.ontimeout = function handleTimeout() {
+      let timeoutErrorMessage = config.timeout ? "timeout of " + config.timeout + "ms exceeded" : "timeout exceeded";
+      const transitional2 = config.transitional || transitional_default;
+      if (config.timeoutErrorMessage) {
+        timeoutErrorMessage = config.timeoutErrorMessage;
+      }
+      reject(new AxiosError_default(
+        timeoutErrorMessage,
+        transitional2.clarifyTimeoutError ? AxiosError_default.ETIMEDOUT : AxiosError_default.ECONNABORTED,
+        config,
+        request
+      ));
+      request = null;
+    };
+    if (browser_default.isStandardBrowserEnv) {
+      const xsrfValue = (config.withCredentials || isURLSameOrigin_default(fullPath)) && config.xsrfCookieName && cookies_default.read(config.xsrfCookieName);
+      if (xsrfValue) {
+        requestHeaders.set(config.xsrfHeaderName, xsrfValue);
+      }
+    }
+    requestData === void 0 && requestHeaders.setContentType(null);
+    if ("setRequestHeader" in request) {
+      utils_default.forEach(requestHeaders.toJSON(), function setRequestHeader(val, key) {
+        request.setRequestHeader(key, val);
+      });
+    }
+    if (!utils_default.isUndefined(config.withCredentials)) {
+      request.withCredentials = !!config.withCredentials;
+    }
+    if (responseType && responseType !== "json") {
+      request.responseType = config.responseType;
+    }
+    if (typeof config.onDownloadProgress === "function") {
+      request.addEventListener("progress", progressEventReducer(config.onDownloadProgress, true));
+    }
+    if (typeof config.onUploadProgress === "function" && request.upload) {
+      request.upload.addEventListener("progress", progressEventReducer(config.onUploadProgress));
+    }
+    if (config.cancelToken || config.signal) {
+      onCanceled = (cancel) => {
+        if (!request) {
+          return;
+        }
+        reject(!cancel || cancel.type ? new CanceledError_default(null, config, request) : cancel);
+        request.abort();
+        request = null;
+      };
+      config.cancelToken && config.cancelToken.subscribe(onCanceled);
+      if (config.signal) {
+        config.signal.aborted ? onCanceled() : config.signal.addEventListener("abort", onCanceled);
+      }
+    }
+    const protocol = parseProtocol(fullPath);
+    if (protocol && browser_default.protocols.indexOf(protocol) === -1) {
+      reject(new AxiosError_default("Unsupported protocol " + protocol + ":", AxiosError_default.ERR_BAD_REQUEST, config));
+      return;
+    }
+    request.send(requestData || null);
+  });
+};
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/adapters/adapters.js
+var knownAdapters = {
+  http: null_default,
+  xhr: xhr_default
+};
+utils_default.forEach(knownAdapters, (fn, value) => {
+  if (fn) {
+    try {
+      Object.defineProperty(fn, "name", { value });
+    } catch (e2) {
+    }
+    Object.defineProperty(fn, "adapterName", { value });
+  }
+});
+var renderReason = (reason) => `- ${reason}`;
+var isResolvedHandle = (adapter) => utils_default.isFunction(adapter) || adapter === null || adapter === false;
+var adapters_default = {
+  getAdapter: (adapters) => {
+    adapters = utils_default.isArray(adapters) ? adapters : [adapters];
+    const { length: length2 } = adapters;
+    let nameOrAdapter;
+    let adapter;
+    const rejectedReasons = {};
+    for (let i2 = 0; i2 < length2; i2++) {
+      nameOrAdapter = adapters[i2];
+      let id;
+      adapter = nameOrAdapter;
+      if (!isResolvedHandle(nameOrAdapter)) {
+        adapter = knownAdapters[(id = String(nameOrAdapter)).toLowerCase()];
+        if (adapter === void 0) {
+          throw new AxiosError_default(`Unknown adapter '${id}'`);
+        }
+      }
+      if (adapter) {
+        break;
+      }
+      rejectedReasons[id || "#" + i2] = adapter;
+    }
+    if (!adapter) {
+      const reasons = Object.entries(rejectedReasons).map(
+        ([id, state]) => `adapter ${id} ` + (state === false ? "is not supported by the environment" : "is not available in the build")
+      );
+      let s = length2 ? reasons.length > 1 ? "since :\n" + reasons.map(renderReason).join("\n") : " " + renderReason(reasons[0]) : "as no adapter specified";
+      throw new AxiosError_default(
+        `There is no suitable adapter to dispatch the request ` + s,
+        "ERR_NOT_SUPPORT"
+      );
+    }
+    return adapter;
+  },
+  adapters: knownAdapters
+};
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/core/dispatchRequest.js
+function throwIfCancellationRequested(config) {
+  if (config.cancelToken) {
+    config.cancelToken.throwIfRequested();
+  }
+  if (config.signal && config.signal.aborted) {
+    throw new CanceledError_default(null, config);
+  }
+}
+function dispatchRequest(config) {
+  throwIfCancellationRequested(config);
+  config.headers = AxiosHeaders_default.from(config.headers);
+  config.data = transformData.call(
+    config,
+    config.transformRequest
+  );
+  if (["post", "put", "patch"].indexOf(config.method) !== -1) {
+    config.headers.setContentType("application/x-www-form-urlencoded", false);
+  }
+  const adapter = adapters_default.getAdapter(config.adapter || defaults_default.adapter);
+  return adapter(config).then(function onAdapterResolution(response) {
+    throwIfCancellationRequested(config);
+    response.data = transformData.call(
+      config,
+      config.transformResponse,
+      response
+    );
+    response.headers = AxiosHeaders_default.from(response.headers);
+    return response;
+  }, function onAdapterRejection(reason) {
+    if (!isCancel(reason)) {
+      throwIfCancellationRequested(config);
+      if (reason && reason.response) {
+        reason.response.data = transformData.call(
+          config,
+          config.transformResponse,
+          reason.response
+        );
+        reason.response.headers = AxiosHeaders_default.from(reason.response.headers);
+      }
+    }
+    return Promise.reject(reason);
+  });
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/core/mergeConfig.js
+var headersToObject = (thing) => thing instanceof AxiosHeaders_default ? thing.toJSON() : thing;
+function mergeConfig(config1, config2) {
+  config2 = config2 || {};
+  const config = {};
+  function getMergedValue(target, source, caseless) {
+    if (utils_default.isPlainObject(target) && utils_default.isPlainObject(source)) {
+      return utils_default.merge.call({ caseless }, target, source);
+    } else if (utils_default.isPlainObject(source)) {
+      return utils_default.merge({}, source);
+    } else if (utils_default.isArray(source)) {
+      return source.slice();
+    }
+    return source;
+  }
+  function mergeDeepProperties(a, b, caseless) {
+    if (!utils_default.isUndefined(b)) {
+      return getMergedValue(a, b, caseless);
+    } else if (!utils_default.isUndefined(a)) {
+      return getMergedValue(void 0, a, caseless);
+    }
+  }
+  function valueFromConfig2(a, b) {
+    if (!utils_default.isUndefined(b)) {
+      return getMergedValue(void 0, b);
+    }
+  }
+  function defaultToConfig2(a, b) {
+    if (!utils_default.isUndefined(b)) {
+      return getMergedValue(void 0, b);
+    } else if (!utils_default.isUndefined(a)) {
+      return getMergedValue(void 0, a);
+    }
+  }
+  function mergeDirectKeys(a, b, prop) {
+    if (prop in config2) {
+      return getMergedValue(a, b);
+    } else if (prop in config1) {
+      return getMergedValue(void 0, a);
+    }
+  }
+  const mergeMap = {
+    url: valueFromConfig2,
+    method: valueFromConfig2,
+    data: valueFromConfig2,
+    baseURL: defaultToConfig2,
+    transformRequest: defaultToConfig2,
+    transformResponse: defaultToConfig2,
+    paramsSerializer: defaultToConfig2,
+    timeout: defaultToConfig2,
+    timeoutMessage: defaultToConfig2,
+    withCredentials: defaultToConfig2,
+    adapter: defaultToConfig2,
+    responseType: defaultToConfig2,
+    xsrfCookieName: defaultToConfig2,
+    xsrfHeaderName: defaultToConfig2,
+    onUploadProgress: defaultToConfig2,
+    onDownloadProgress: defaultToConfig2,
+    decompress: defaultToConfig2,
+    maxContentLength: defaultToConfig2,
+    maxBodyLength: defaultToConfig2,
+    beforeRedirect: defaultToConfig2,
+    transport: defaultToConfig2,
+    httpAgent: defaultToConfig2,
+    httpsAgent: defaultToConfig2,
+    cancelToken: defaultToConfig2,
+    socketPath: defaultToConfig2,
+    responseEncoding: defaultToConfig2,
+    validateStatus: mergeDirectKeys,
+    headers: (a, b) => mergeDeepProperties(headersToObject(a), headersToObject(b), true)
+  };
+  utils_default.forEach(Object.keys(Object.assign({}, config1, config2)), function computeConfigValue(prop) {
+    const merge4 = mergeMap[prop] || mergeDeepProperties;
+    const configValue = merge4(config1[prop], config2[prop], prop);
+    utils_default.isUndefined(configValue) && merge4 !== mergeDirectKeys || (config[prop] = configValue);
+  });
+  return config;
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/env/data.js
+var VERSION = "1.5.1";
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/validator.js
+var validators = {};
+["object", "boolean", "number", "function", "string", "symbol"].forEach((type4, i2) => {
+  validators[type4] = function validator(thing) {
+    return typeof thing === type4 || "a" + (i2 < 1 ? "n " : " ") + type4;
+  };
+});
+var deprecatedWarnings = {};
+validators.transitional = function transitional(validator, version2, message) {
+  function formatMessage(opt, desc) {
+    return "[Axios v" + VERSION + "] Transitional option '" + opt + "'" + desc + (message ? ". " + message : "");
+  }
+  return (value, opt, opts) => {
+    if (validator === false) {
+      throw new AxiosError_default(
+        formatMessage(opt, " has been removed" + (version2 ? " in " + version2 : "")),
+        AxiosError_default.ERR_DEPRECATED
+      );
+    }
+    if (version2 && !deprecatedWarnings[opt]) {
+      deprecatedWarnings[opt] = true;
+      console.warn(
+        formatMessage(
+          opt,
+          " has been deprecated since v" + version2 + " and will be removed in the near future"
+        )
+      );
+    }
+    return validator ? validator(value, opt, opts) : true;
+  };
+};
+function assertOptions(options, schema, allowUnknown) {
+  if (typeof options !== "object") {
+    throw new AxiosError_default("options must be an object", AxiosError_default.ERR_BAD_OPTION_VALUE);
+  }
+  const keys2 = Object.keys(options);
+  let i2 = keys2.length;
+  while (i2-- > 0) {
+    const opt = keys2[i2];
+    const validator = schema[opt];
+    if (validator) {
+      const value = options[opt];
+      const result = value === void 0 || validator(value, opt, options);
+      if (result !== true) {
+        throw new AxiosError_default("option " + opt + " must be " + result, AxiosError_default.ERR_BAD_OPTION_VALUE);
+      }
+      continue;
+    }
+    if (allowUnknown !== true) {
+      throw new AxiosError_default("Unknown option " + opt, AxiosError_default.ERR_BAD_OPTION);
+    }
+  }
+}
+var validator_default = {
+  assertOptions,
+  validators
+};
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/core/Axios.js
+var validators2 = validator_default.validators;
+var Axios = class {
+  constructor(instanceConfig) {
+    this.defaults = instanceConfig;
+    this.interceptors = {
+      request: new InterceptorManager_default(),
+      response: new InterceptorManager_default()
+    };
+  }
+  /**
+   * Dispatch a request
+   *
+   * @param {String|Object} configOrUrl The config specific for this request (merged with this.defaults)
+   * @param {?Object} config
+   *
+   * @returns {Promise} The Promise to be fulfilled
+   */
+  request(configOrUrl, config) {
+    if (typeof configOrUrl === "string") {
+      config = config || {};
+      config.url = configOrUrl;
+    } else {
+      config = configOrUrl || {};
+    }
+    config = mergeConfig(this.defaults, config);
+    const { transitional: transitional2, paramsSerializer, headers } = config;
+    if (transitional2 !== void 0) {
+      validator_default.assertOptions(transitional2, {
+        silentJSONParsing: validators2.transitional(validators2.boolean),
+        forcedJSONParsing: validators2.transitional(validators2.boolean),
+        clarifyTimeoutError: validators2.transitional(validators2.boolean)
+      }, false);
+    }
+    if (paramsSerializer != null) {
+      if (utils_default.isFunction(paramsSerializer)) {
+        config.paramsSerializer = {
+          serialize: paramsSerializer
+        };
+      } else {
+        validator_default.assertOptions(paramsSerializer, {
+          encode: validators2.function,
+          serialize: validators2.function
+        }, true);
+      }
+    }
+    config.method = (config.method || this.defaults.method || "get").toLowerCase();
+    let contextHeaders = headers && utils_default.merge(
+      headers.common,
+      headers[config.method]
+    );
+    headers && utils_default.forEach(
+      ["delete", "get", "head", "post", "put", "patch", "common"],
+      (method4) => {
+        delete headers[method4];
+      }
+    );
+    config.headers = AxiosHeaders_default.concat(contextHeaders, headers);
+    const requestInterceptorChain = [];
+    let synchronousRequestInterceptors = true;
+    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+      if (typeof interceptor.runWhen === "function" && interceptor.runWhen(config) === false) {
+        return;
+      }
+      synchronousRequestInterceptors = synchronousRequestInterceptors && interceptor.synchronous;
+      requestInterceptorChain.unshift(interceptor.fulfilled, interceptor.rejected);
+    });
+    const responseInterceptorChain = [];
+    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+      responseInterceptorChain.push(interceptor.fulfilled, interceptor.rejected);
+    });
+    let promise;
+    let i2 = 0;
+    let len;
+    if (!synchronousRequestInterceptors) {
+      const chain = [dispatchRequest.bind(this), void 0];
+      chain.unshift.apply(chain, requestInterceptorChain);
+      chain.push.apply(chain, responseInterceptorChain);
+      len = chain.length;
+      promise = Promise.resolve(config);
+      while (i2 < len) {
+        promise = promise.then(chain[i2++], chain[i2++]);
+      }
+      return promise;
+    }
+    len = requestInterceptorChain.length;
+    let newConfig = config;
+    i2 = 0;
+    while (i2 < len) {
+      const onFulfilled = requestInterceptorChain[i2++];
+      const onRejected = requestInterceptorChain[i2++];
+      try {
+        newConfig = onFulfilled(newConfig);
+      } catch (error) {
+        onRejected.call(this, error);
+        break;
+      }
+    }
+    try {
+      promise = dispatchRequest.call(this, newConfig);
+    } catch (error) {
+      return Promise.reject(error);
+    }
+    i2 = 0;
+    len = responseInterceptorChain.length;
+    while (i2 < len) {
+      promise = promise.then(responseInterceptorChain[i2++], responseInterceptorChain[i2++]);
+    }
+    return promise;
+  }
+  getUri(config) {
+    config = mergeConfig(this.defaults, config);
+    const fullPath = buildFullPath(config.baseURL, config.url);
+    return buildURL(fullPath, config.params, config.paramsSerializer);
+  }
+};
+utils_default.forEach(["delete", "get", "head", "options"], function forEachMethodNoData(method4) {
+  Axios.prototype[method4] = function(url2, config) {
+    return this.request(mergeConfig(config || {}, {
+      method: method4,
+      url: url2,
+      data: (config || {}).data
+    }));
+  };
+});
+utils_default.forEach(["post", "put", "patch"], function forEachMethodWithData(method4) {
+  function generateHTTPMethod(isForm) {
+    return function httpMethod(url2, data, config) {
+      return this.request(mergeConfig(config || {}, {
+        method: method4,
+        headers: isForm ? {
+          "Content-Type": "multipart/form-data"
+        } : {},
+        url: url2,
+        data
+      }));
+    };
+  }
+  Axios.prototype[method4] = generateHTTPMethod();
+  Axios.prototype[method4 + "Form"] = generateHTTPMethod(true);
+});
+var Axios_default = Axios;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/cancel/CancelToken.js
+var CancelToken = class {
+  constructor(executor) {
+    if (typeof executor !== "function") {
+      throw new TypeError("executor must be a function.");
+    }
+    let resolvePromise;
+    this.promise = new Promise(function promiseExecutor(resolve) {
+      resolvePromise = resolve;
+    });
+    const token2 = this;
+    this.promise.then((cancel) => {
+      if (!token2._listeners)
+        return;
+      let i2 = token2._listeners.length;
+      while (i2-- > 0) {
+        token2._listeners[i2](cancel);
+      }
+      token2._listeners = null;
+    });
+    this.promise.then = (onfulfilled) => {
+      let _resolve;
+      const promise = new Promise((resolve) => {
+        token2.subscribe(resolve);
+        _resolve = resolve;
+      }).then(onfulfilled);
+      promise.cancel = function reject() {
+        token2.unsubscribe(_resolve);
+      };
+      return promise;
+    };
+    executor(function cancel(message, config, request) {
+      if (token2.reason) {
+        return;
+      }
+      token2.reason = new CanceledError_default(message, config, request);
+      resolvePromise(token2.reason);
+    });
+  }
+  /**
+   * Throws a `CanceledError` if cancellation has been requested.
+   */
+  throwIfRequested() {
+    if (this.reason) {
+      throw this.reason;
+    }
+  }
+  /**
+   * Subscribe to the cancel signal
+   */
+  subscribe(listener) {
+    if (this.reason) {
+      listener(this.reason);
+      return;
+    }
+    if (this._listeners) {
+      this._listeners.push(listener);
+    } else {
+      this._listeners = [listener];
+    }
+  }
+  /**
+   * Unsubscribe from the cancel signal
+   */
+  unsubscribe(listener) {
+    if (!this._listeners) {
+      return;
+    }
+    const index2 = this._listeners.indexOf(listener);
+    if (index2 !== -1) {
+      this._listeners.splice(index2, 1);
+    }
+  }
+  /**
+   * Returns an object that contains a new `CancelToken` and a function that, when called,
+   * cancels the `CancelToken`.
+   */
+  static source() {
+    let cancel;
+    const token2 = new CancelToken(function executor(c) {
+      cancel = c;
+    });
+    return {
+      token: token2,
+      cancel
+    };
+  }
+};
+var CancelToken_default = CancelToken;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/spread.js
+function spread(callback) {
+  return function wrap(arr) {
+    return callback.apply(null, arr);
+  };
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/isAxiosError.js
+function isAxiosError(payload) {
+  return utils_default.isObject(payload) && payload.isAxiosError === true;
+}
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/helpers/HttpStatusCode.js
+var HttpStatusCode = {
+  Continue: 100,
+  SwitchingProtocols: 101,
+  Processing: 102,
+  EarlyHints: 103,
+  Ok: 200,
+  Created: 201,
+  Accepted: 202,
+  NonAuthoritativeInformation: 203,
+  NoContent: 204,
+  ResetContent: 205,
+  PartialContent: 206,
+  MultiStatus: 207,
+  AlreadyReported: 208,
+  ImUsed: 226,
+  MultipleChoices: 300,
+  MovedPermanently: 301,
+  Found: 302,
+  SeeOther: 303,
+  NotModified: 304,
+  UseProxy: 305,
+  Unused: 306,
+  TemporaryRedirect: 307,
+  PermanentRedirect: 308,
+  BadRequest: 400,
+  Unauthorized: 401,
+  PaymentRequired: 402,
+  Forbidden: 403,
+  NotFound: 404,
+  MethodNotAllowed: 405,
+  NotAcceptable: 406,
+  ProxyAuthenticationRequired: 407,
+  RequestTimeout: 408,
+  Conflict: 409,
+  Gone: 410,
+  LengthRequired: 411,
+  PreconditionFailed: 412,
+  PayloadTooLarge: 413,
+  UriTooLong: 414,
+  UnsupportedMediaType: 415,
+  RangeNotSatisfiable: 416,
+  ExpectationFailed: 417,
+  ImATeapot: 418,
+  MisdirectedRequest: 421,
+  UnprocessableEntity: 422,
+  Locked: 423,
+  FailedDependency: 424,
+  TooEarly: 425,
+  UpgradeRequired: 426,
+  PreconditionRequired: 428,
+  TooManyRequests: 429,
+  RequestHeaderFieldsTooLarge: 431,
+  UnavailableForLegalReasons: 451,
+  InternalServerError: 500,
+  NotImplemented: 501,
+  BadGateway: 502,
+  ServiceUnavailable: 503,
+  GatewayTimeout: 504,
+  HttpVersionNotSupported: 505,
+  VariantAlsoNegotiates: 506,
+  InsufficientStorage: 507,
+  LoopDetected: 508,
+  NotExtended: 510,
+  NetworkAuthenticationRequired: 511
+};
+Object.entries(HttpStatusCode).forEach(([key, value]) => {
+  HttpStatusCode[value] = key;
+});
+var HttpStatusCode_default = HttpStatusCode;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/lib/axios.js
+function createInstance(defaultConfig2) {
+  const context = new Axios_default(defaultConfig2);
+  const instance = bind(Axios_default.prototype.request, context);
+  utils_default.extend(instance, Axios_default.prototype, context, { allOwnKeys: true });
+  utils_default.extend(instance, context, null, { allOwnKeys: true });
+  instance.create = function create(instanceConfig) {
+    return createInstance(mergeConfig(defaultConfig2, instanceConfig));
+  };
+  return instance;
+}
+var axios = createInstance(defaults_default);
+axios.Axios = Axios_default;
+axios.CanceledError = CanceledError_default;
+axios.CancelToken = CancelToken_default;
+axios.isCancel = isCancel;
+axios.VERSION = VERSION;
+axios.toFormData = toFormData_default;
+axios.AxiosError = AxiosError_default;
+axios.Cancel = axios.CanceledError;
+axios.all = function all(promises) {
+  return Promise.all(promises);
+};
+axios.spread = spread;
+axios.isAxiosError = isAxiosError;
+axios.mergeConfig = mergeConfig;
+axios.AxiosHeaders = AxiosHeaders_default;
+axios.formToJSON = (thing) => formDataToJSON_default(utils_default.isHTMLForm(thing) ? new FormData(thing) : thing);
+axios.getAdapter = adapters_default.getAdapter;
+axios.HttpStatusCode = HttpStatusCode_default;
+axios.default = axios;
+var axios_default = axios;
+
+// node_modules/.pnpm/axios@1.5.1/node_modules/axios/index.js
+var {
+  Axios: Axios2,
+  AxiosError: AxiosError2,
+  CanceledError: CanceledError2,
+  isCancel: isCancel2,
+  CancelToken: CancelToken2,
+  VERSION: VERSION2,
+  all: all2,
+  Cancel,
+  isAxiosError: isAxiosError2,
+  spread: spread2,
+  toFormData: toFormData2,
+  AxiosHeaders: AxiosHeaders2,
+  HttpStatusCode: HttpStatusCode2,
+  formToJSON,
+  getAdapter,
+  mergeConfig: mergeConfig2
+} = axios_default;
+
+// src/periodic/DailyRecord.ts
 var import_obsidian10 = require("obsidian");
+var DailyRecord = class {
+  constructor(app, settings, file) {
+    this.forceSync = async () => {
+      this.lastTime = "";
+      this.sync();
+    };
+    this.sync = async () => {
+      this.offset = 0;
+      this.insert();
+    };
+    this.insert = async () => {
+      var _a, _b, _c;
+      const title = `# ${this.settings.dailyRecordHeader}
+`;
+      const dailyRecordByDay = {};
+      const records = await this.fetch() || [];
+      const timeStamp = ((_a = records[0]) == null ? void 0 : _a.createdAt) ? (0, import_obsidian10.moment)((_b = records[0]) == null ? void 0 : _b.createdAt).unix() : (_c = records[0]) == null ? void 0 : _c.createdTs;
+      if (!records.length || timeStamp * 1e3 < Number(this.lastTime)) {
+        new import_obsidian10.Notice("End sync daily record");
+        console.log("End sync daily record");
+        window.localStorage.setItem(this.localKey, Date.now().toString());
+        return;
+      }
+      for (const record of records) {
+        const { createdTs, createdAt, content } = record;
+        const timeStamp2 = createdAt ? (0, import_obsidian10.moment)(createdAt).unix() : createdTs;
+        const [day, time] = (0, import_obsidian10.moment)(timeStamp2 * 1e3).format("YYYY-MM-DD HH:mm").split(" ");
+        if (!content) {
+          continue;
+        }
+        const [firstLine, ...otherLine] = content.split("\n");
+        const isTask = /^- \[.*?\]/.test(firstLine);
+        const targetFirstLine = (
+          // 将标签和时间戳加到第一行
+          (isTask ? `- [ ] ${time} ${firstLine.replace(/^- \[.*?\]/, "")}` : `- ${time} ${firstLine}`) + ` #daily-record ^${timeStamp2}`
+        );
+        const finalTargetContent = targetFirstLine + ((otherLine == null ? void 0 : otherLine.length) ? "\n" + otherLine.join("\n").replace(/[\n\s]*$/, "") : "");
+        if (dailyRecordByDay[day]) {
+          dailyRecordByDay[day][timeStamp2] = finalTargetContent;
+        } else {
+          dailyRecordByDay[day] = {
+            [timeStamp2]: finalTargetContent
+          };
+        }
+      }
+      await Promise.all(
+        Object.keys(dailyRecordByDay).map(async (today) => {
+          var _a2, _b2, _c2;
+          const targetFile = this.file.get(
+            today,
+            "",
+            this.settings.periodicNotesPath
+          );
+          if (!targetFile) {
+            new import_obsidian10.Notice(`${ERROR_MESSAGES.NO_DAILY_FILE_EXIST} ${today}`);
+            console.log(`${ERROR_MESSAGES.NO_DAILY_FILE_EXIST} ${today}`);
+            throw new Error(`${ERROR_MESSAGES.NO_DAILY_FILE_EXIST} ${today}`);
+          }
+          const reg = new RegExp(`${title}([\\s\\S]*?)(?=##|$)`);
+          if (targetFile instanceof import_obsidian10.TFile) {
+            const originFileContent = await this.app.vault.read(targetFile);
+            const regMatch = originFileContent.match(reg);
+            if (!(regMatch == null ? void 0 : regMatch.length) || !(regMatch == null ? void 0 : regMatch.index)) {
+              if (!this.settings.dailyRecordToken) {
+                new import_obsidian10.Notice(
+                  "Current daily file will not insert daily record due to no daily record header"
+                );
+                console.log(
+                  "Current daily file will not insert daily record due to no daily record header"
+                );
+                return;
+              }
+              return;
+            }
+            const localRecordContent = (_a2 = regMatch[1]) == null ? void 0 : _a2.trim();
+            const from2 = (regMatch == null ? void 0 : regMatch.index) + title.length;
+            const to = from2 + localRecordContent.length;
+            const prefix = originFileContent.slice(0, from2);
+            const suffix = originFileContent.slice(to);
+            const localRecordList = localRecordContent ? localRecordContent.split(/\n(?=- )/g) : [];
+            const remoteRecordListWithTime = {};
+            const localRecordListWithTime = {};
+            const localRecordWithoutTime = [];
+            for (const record of localRecordList) {
+              const regMatch2 = record.match(/.*\^(\d{10})/);
+              const createdTs = (regMatch2 == null ? void 0 : regMatch2.length) ? (_b2 = regMatch2[1]) == null ? void 0 : _b2.trim() : "";
+              if (createdTs) {
+                remoteRecordListWithTime[createdTs] = record;
+              } else if (/^- (\[.*\] )?\d\d:\d\d/.test(record)) {
+                const regMatch3 = record.match(/\d\d:\d\d/);
+                if (regMatch3) {
+                  const time = (_c2 = regMatch3[0]) == null ? void 0 : _c2.trim();
+                  const timeStamp2 = (0, import_obsidian10.moment)(
+                    `${today}-${time}`,
+                    "YYYY-MM-DD-HH:mm"
+                  ).unix();
+                  if (localRecordListWithTime[timeStamp2]) {
+                    localRecordListWithTime[timeStamp2 + 1] = record;
+                  } else {
+                    localRecordListWithTime[timeStamp2] = record;
+                  }
+                }
+              } else {
+                localRecordWithoutTime.push(record);
+              }
+            }
+            const sortedRecordList = Object.entries({
+              ...dailyRecordByDay[today],
+              ...remoteRecordListWithTime,
+              ...localRecordListWithTime
+            }).sort((a, b) => {
+              const indexA = Number(a[0]);
+              const indexB = Number(b[0]);
+              return indexA - indexB;
+            }).map((item) => item[1]);
+            const finalRecordContent = localRecordWithoutTime.concat(sortedRecordList).join("\n");
+            const fileContent = prefix.trim() + `
+${finalRecordContent}
+
+` + suffix.trim() + "\n";
+            await this.app.vault.modify(targetFile, fileContent);
+          }
+        })
+      );
+      this.offset = this.offset + this.limit;
+      this.insert();
+    };
+    this.app = app;
+    this.file = file;
+    this.settings = settings;
+    this.limit = 50;
+    this.offset = 0;
+    this.localKey = `periodic-para-daily-record-last-time-${this.settings.dailyRecordToken}`;
+    this.lastTime = window.localStorage.getItem(this.localKey) || "";
+    if (!this.settings.dailyRecordAPI) {
+      new import_obsidian10.Notice(ERROR_MESSAGES.NO_DAILY_RECORD_API);
+      console.log(ERROR_MESSAGES.NO_DAILY_RECORD_API);
+      return;
+    }
+    if (!this.settings.dailyRecordToken) {
+      new import_obsidian10.Notice(ERROR_MESSAGES.NO_DAILY_RECORD_TOKEN);
+      console.log(ERROR_MESSAGES.NO_DAILY_RECORD_TOKEN);
+      return;
+    }
+    if (!this.settings.dailyRecordHeader) {
+      new import_obsidian10.Notice(ERROR_MESSAGES.NO_DAILY_RECORD_HEADER);
+      console.log(ERROR_MESSAGES.NO_DAILY_RECORD_HEADER);
+      return;
+    }
+    new import_obsidian10.Notice("Start sync daily record");
+    console.log("Start sync daily record");
+  }
+  async fetch() {
+    try {
+      const { data } = await axios_default.get(
+        this.settings.dailyRecordAPI,
+        {
+          params: {
+            limit: this.limit,
+            offset: this.offset,
+            rowStatus: "NORMAL"
+          },
+          headers: {
+            Accept: "application/json",
+            Authorization: `Bearer ${this.settings.dailyRecordToken}`
+          }
+        }
+      );
+      if (Array.isArray(data)) {
+        return data;
+      }
+      throw new Error(
+        data.message || data.msg || data.error || JSON.stringify(data)
+      );
+    } catch (error) {
+      new import_obsidian10.Notice(`${ERROR_MESSAGES.DAILY_RECORD_FETCH_FAILED}: ${error}`);
+      console.log(`${ERROR_MESSAGES.DAILY_RECORD_FETCH_FAILED}: ${error}`);
+      throw error;
+    }
+  }
+};
+
+// src/SettingTab.ts
+var import_obsidian11 = require("obsidian");
 var DEFAULT_SETTINGS = {
-  periodicNotesPath: "0. PeriodicNotes",
+  periodicNotesPath: "PeriodicNotes",
   projectsPath: "1. Projects",
   areasPath: "2. Areas",
   resourcesPath: "3. Resources",
   archivesPath: "4. Archives",
   projectListHeader: "Project List",
   areaListHeader: "First Things Dimension",
-  habitHeader: "Habit"
+  habitHeader: "Habit",
+  dailyRecordHeader: "Daily Record",
+  dailyRecordAPI: "",
+  dailyRecordToken: "",
+  useDailyRecord: false,
+  usePeriodicNotes: true,
+  usePARANotes: true
 };
-var SettingTab = class extends import_obsidian10.PluginSettingTab {
+var SettingTab = class extends import_obsidian11.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.plugin = plugin;
@@ -36858,66 +39173,106 @@ var SettingTab = class extends import_obsidian10.PluginSettingTab {
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("h2", { text: "Advanced." });
-    new import_obsidian10.Setting(containerEl).setName("Periodic Notes Folder:").addText(
-      (text) => text.setPlaceholder(DEFAULT_SETTINGS.periodicNotesPath).setValue(this.plugin.settings.periodicNotesPath).onChange(async (value) => {
-        this.plugin.settings.periodicNotesPath = value;
+    containerEl.createEl("h1", { text: "Periodic Notes Settings." });
+    new import_obsidian11.Setting(containerEl).setName("Enable").setDesc("Whether to turn on Periodic Notes").addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.usePeriodicNotes).onChange(async (value) => {
+        this.plugin.settings.usePeriodicNotes = value;
         await this.plugin.saveSettings();
+        this.display();
       })
     );
-    new import_obsidian10.Setting(containerEl).setName("Projects Folder:").addText(
-      (text) => text.setPlaceholder(DEFAULT_SETTINGS.projectsPath).setValue(this.plugin.settings.projectsPath).onChange(async (value) => {
-        this.plugin.settings.projectsPath = value;
+    if (this.plugin.settings.usePeriodicNotes) {
+      new import_obsidian11.Setting(containerEl).setName("Periodic Notes Folder:").addText(
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.periodicNotesPath).setValue(this.plugin.settings.periodicNotesPath).onChange(async (value) => {
+          this.plugin.settings.periodicNotesPath = value;
+          await this.plugin.saveSettings();
+        })
+      );
+      new import_obsidian11.Setting(containerEl).setName("Habit Header:").setDesc("Where the Habit module is in a daily note").addText(
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.habitHeader).setValue(this.plugin.settings.habitHeader).onChange(async (value) => {
+          this.plugin.settings.habitHeader = value;
+          await this.plugin.saveSettings();
+        })
+      );
+      new import_obsidian11.Setting(containerEl).setName("Project List Header:").setDesc("Where the Project List is in a daily note").addText(
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.projectListHeader).setValue(this.plugin.settings.projectListHeader).onChange(async (value) => {
+          this.plugin.settings.projectListHeader = value;
+          await this.plugin.saveSettings();
+        })
+      );
+      new import_obsidian11.Setting(containerEl).setName("Area List Header:").setDesc("Where the Area List is in a quarterly note").addText(
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.areaListHeader).setValue(this.plugin.settings.areaListHeader).onChange(async (value) => {
+          this.plugin.settings.areaListHeader = value;
+          await this.plugin.saveSettings();
+        })
+      );
+      new import_obsidian11.Setting(containerEl).setName("Daily Record").setDesc("Sync daily record by remote API").addToggle(
+        (toggle) => toggle.setValue(this.plugin.settings.useDailyRecord).onChange(async (value) => {
+          this.plugin.settings.useDailyRecord = value;
+          await this.plugin.saveSettings();
+          this.display();
+        })
+      );
+      if (this.plugin.settings.useDailyRecord) {
+        new import_obsidian11.Setting(containerEl).setName("Header:").setDesc("Where the Daily Record module is in a daily note").addText(
+          (text) => text.setPlaceholder(DEFAULT_SETTINGS.dailyRecordHeader).setValue(this.plugin.settings.dailyRecordHeader).onChange(async (value) => {
+            this.plugin.settings.dailyRecordHeader = value;
+            await this.plugin.saveSettings();
+          })
+        );
+        new import_obsidian11.Setting(containerEl).setName("API:").setDesc("The daily record API").addText(
+          (text) => text.setPlaceholder(DEFAULT_SETTINGS.dailyRecordAPI).setValue(this.plugin.settings.dailyRecordAPI).onChange(async (value) => {
+            this.plugin.settings.dailyRecordAPI = value;
+            await this.plugin.saveSettings();
+          })
+        );
+        new import_obsidian11.Setting(containerEl).setName("Token:").setDesc("The token of your API").addText(
+          (text) => text.setPlaceholder(DEFAULT_SETTINGS.dailyRecordToken).setValue(this.plugin.settings.dailyRecordToken).onChange(async (value) => {
+            this.plugin.settings.dailyRecordToken = value;
+            await this.plugin.saveSettings();
+          })
+        );
+      }
+    }
+    containerEl.createEl("h1", { text: "P.A.R.A Notes Settings." });
+    new import_obsidian11.Setting(containerEl).setName("Enable").setDesc("Whether to turn on PARA Notes").addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.usePARANotes).onChange(async (value) => {
+        this.plugin.settings.usePARANotes = value;
         await this.plugin.saveSettings();
+        this.display();
       })
     );
-    new import_obsidian10.Setting(containerEl).setName("Areas Folder:").addText(
-      (text) => text.setPlaceholder(DEFAULT_SETTINGS.areasPath).setValue(this.plugin.settings.areasPath).onChange(async (value) => {
-        this.plugin.settings.areasPath = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian10.Setting(containerEl).setName("Resources Folder:").addText(
-      (text) => text.setPlaceholder(DEFAULT_SETTINGS.resourcesPath).setValue(this.plugin.settings.resourcesPath).onChange(async (value) => {
-        this.plugin.settings.resourcesPath = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian10.Setting(containerEl).setName("Archives Folder:").addText(
-      (text) => text.setPlaceholder(DEFAULT_SETTINGS.archivesPath).setValue(this.plugin.settings.archivesPath).onChange(async (value) => {
-        this.plugin.settings.archivesPath = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian10.Setting(containerEl).setName("Project List Header:").setDesc("Where the Project List is in a daily note").addText(
-      (text) => text.setPlaceholder(DEFAULT_SETTINGS.projectListHeader).setValue(this.plugin.settings.projectListHeader).onChange(async (value) => {
-        this.plugin.settings.projectListHeader = value;
-        await this.plugin.saveSettings();
-        this.plugin.loadHelpers();
-        this.plugin.loadGlobalHelpers();
-      })
-    );
-    new import_obsidian10.Setting(containerEl).setName("Area List Header:").setDesc("Where the Area List is in a quarterly note").addText(
-      (text) => text.setPlaceholder(DEFAULT_SETTINGS.areaListHeader).setValue(this.plugin.settings.areaListHeader).onChange(async (value) => {
-        this.plugin.settings.areaListHeader = value;
-        await this.plugin.saveSettings();
-        this.plugin.loadHelpers();
-        this.plugin.loadGlobalHelpers();
-      })
-    );
-    new import_obsidian10.Setting(containerEl).setName("Habit Header:").setDesc("Where the Habit module is in a daily note").addText(
-      (text) => text.setPlaceholder(DEFAULT_SETTINGS.habitHeader).setValue(this.plugin.settings.habitHeader).onChange(async (value) => {
-        this.plugin.settings.habitHeader = value;
-        await this.plugin.saveSettings();
-        this.plugin.loadHelpers();
-        this.plugin.loadGlobalHelpers();
-      })
-    );
+    if (this.plugin.settings.usePARANotes) {
+      new import_obsidian11.Setting(containerEl).setName("Projects Folder:").addText(
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.projectsPath).setValue(this.plugin.settings.projectsPath).onChange(async (value) => {
+          this.plugin.settings.projectsPath = value;
+          await this.plugin.saveSettings();
+        })
+      );
+      new import_obsidian11.Setting(containerEl).setName("Areas Folder:").addText(
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.areasPath).setValue(this.plugin.settings.areasPath).onChange(async (value) => {
+          this.plugin.settings.areasPath = value;
+          await this.plugin.saveSettings();
+        })
+      );
+      new import_obsidian11.Setting(containerEl).setName("Resources Folder:").addText(
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.resourcesPath).setValue(this.plugin.settings.resourcesPath).onChange(async (value) => {
+          this.plugin.settings.resourcesPath = value;
+          await this.plugin.saveSettings();
+        })
+      );
+      new import_obsidian11.Setting(containerEl).setName("Archives Folder:").addText(
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.archivesPath).setValue(this.plugin.settings.archivesPath).onChange(async (value) => {
+          this.plugin.settings.archivesPath = value;
+          await this.plugin.saveSettings();
+        })
+      );
+    }
   }
 };
 
 // src/view/PeriodicPARA.tsx
-var import_obsidian12 = require("obsidian");
+var import_obsidian13 = require("obsidian");
 var React207 = __toESM(require_react());
 var import_client = __toESM(require_client());
 
@@ -36938,7 +39293,7 @@ var useApp = () => {
 };
 
 // src/component/AddTemplate.tsx
-var import_obsidian11 = require("obsidian");
+var import_obsidian12 = require("obsidian");
 
 // node_modules/.pnpm/@babel+runtime@7.22.6/node_modules/@babel/runtime/helpers/esm/classCallCheck.js
 function _classCallCheck(instance, Constructor) {
@@ -37107,7 +39462,7 @@ var React9 = __toESM(require_react());
 // node_modules/.pnpm/rc-util@5.35.1_react-dom@18.2.0_react@18.2.0/node_modules/rc-util/es/Children/toArray.js
 var import_react = __toESM(require_react());
 var import_react_is = __toESM(require_react_is());
-function toArray(children) {
+function toArray2(children) {
   var option = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
   var ret = [];
   import_react.default.Children.forEach(children, function(child) {
@@ -37115,9 +39470,9 @@ function toArray(children) {
       return;
     }
     if (Array.isArray(child)) {
-      ret = ret.concat(toArray(child));
+      ret = ret.concat(toArray2(child));
     } else if ((0, import_react_is.isFragment)(child) && child.props) {
-      ret = ret.concat(toArray(child.props.children, option));
+      ret = ret.concat(toArray2(child.props.children, option));
     } else {
       ret.push(child);
     }
@@ -37942,7 +40297,7 @@ var SingleObserver_default = RefSingleObserver;
 var INTERNAL_PREFIX_KEY = "rc-observer-key";
 function ResizeObserver3(props, ref) {
   var children = props.children;
-  var childNodes = typeof children === "function" ? [children] : toArray(children);
+  var childNodes = typeof children === "function" ? [children] : toArray2(children);
   if (true) {
     if (childNodes.length > 1) {
       warning(false, "Find more than one child node with `children` in ResizeObserver. Please use ResizeObserver.Collection instead.");
@@ -38914,7 +41269,7 @@ var LAYER = "@layer";
 // node_modules/.pnpm/stylis@4.3.0/node_modules/stylis/src/Utility.js
 var abs = Math.abs;
 var from = String.fromCharCode;
-function trim(value) {
+function trim2(value) {
   return value.trim();
 }
 function replace(value, pattern4, replacement) {
@@ -38935,7 +41290,7 @@ function strlen(value) {
 function sizeof(value) {
   return value.length;
 }
-function append(value, array4) {
+function append2(value, array4) {
   return array4.push(value), value;
 }
 
@@ -39012,7 +41367,7 @@ function dealloc(value) {
   return characters = "", value;
 }
 function delimit(type4) {
-  return trim(slice(position - 1, delimiter(type4 === 91 ? type4 + 2 : type4 === 40 ? type4 + 1 : type4)));
+  return trim2(slice(position - 1, delimiter(type4 === 91 ? type4 + 2 : type4 === 40 ? type4 + 1 : type4)));
 }
 function whitespace(type4) {
   while (character = peek())
@@ -39108,7 +41463,7 @@ function parse(value, root, parent, rule, rules2, rulesets, pseudo, points, decl
         switch (peek()) {
           case 42:
           case 47:
-            append(comment(commenter(next(), caret()), root, parent, declarations), declarations);
+            append2(comment(commenter(next(), caret()), root, parent, declarations), declarations);
             break;
           default:
             characters2 += "/";
@@ -39127,12 +41482,12 @@ function parse(value, root, parent, rule, rules2, rulesets, pseudo, points, decl
             if (ampersand == -1)
               characters2 = replace(characters2, /\f/g, "");
             if (property > 0 && strlen(characters2) - length2)
-              append(property > 32 ? declaration(characters2 + ";", rule, parent, length2 - 1, declarations) : declaration(replace(characters2, " ", "") + ";", rule, parent, length2 - 2, declarations), declarations);
+              append2(property > 32 ? declaration(characters2 + ";", rule, parent, length2 - 1, declarations) : declaration(replace(characters2, " ", "") + ";", rule, parent, length2 - 2, declarations), declarations);
             break;
           case 59:
             characters2 += ";";
           default:
-            append(reference = ruleset(characters2, root, parent, index2, offset, rules2, points, type4, props = [], children = [], length2, rulesets), rulesets);
+            append2(reference = ruleset(characters2, root, parent, index2, offset, rules2, points, type4, props = [], children = [], length2, rulesets), rulesets);
             if (character2 === 123)
               if (offset === 0)
                 parse(characters2, root, reference, reference, props, rulesets, length2, points, children);
@@ -39142,7 +41497,7 @@ function parse(value, root, parent, rule, rules2, rulesets, pseudo, points, decl
                   case 108:
                   case 109:
                   case 115:
-                    parse(value, reference, reference, rule && append(ruleset(value, reference, reference, 0, 0, rules2, points, type4, rules2, props = [], length2, children), children), rules2, children, length2, points, rule ? props : children);
+                    parse(value, reference, reference, rule && append2(ruleset(value, reference, reference, 0, 0, rules2, points, type4, rules2, props = [], length2, children), children), rules2, children, length2, points, rule ? props : children);
                     break;
                   default:
                     parse(characters2, reference, reference, reference, [""], children, 0, points, children);
@@ -39184,7 +41539,7 @@ function ruleset(value, root, parent, index2, offset, rules2, points, type4, pro
   var size = sizeof(rule);
   for (var i2 = 0, j = 0, k = 0; i2 < index2; ++i2)
     for (var x = 0, y = substr(value, post + 1, post = abs(j = points[i2])), z = value; x < size; ++x)
-      if (z = trim(j > 0 ? rule[x] + " " + y : replace(y, /&\f/g, rule[x])))
+      if (z = trim2(j > 0 ? rule[x] + " " + y : replace(y, /&\f/g, rule[x])))
         props[k++] = z;
   return node(value, root, parent, offset === 0 ? RULESET : type4, props, children, length2, siblings);
 }
@@ -39670,14 +42025,14 @@ function set(entity, paths, value) {
   }
   return internalSet(entity, paths, value, removeIfUndefined);
 }
-function isObject(obj) {
+function isObject2(obj) {
   return _typeof(obj) === "object" && obj !== null && Object.getPrototypeOf(obj) === Object.prototype;
 }
 function createEmpty(source) {
   return Array.isArray(source) ? [] : {};
 }
 var keys = typeof Reflect === "undefined" ? Object.keys : Reflect.ownKeys;
-function merge() {
+function merge2() {
   for (var _len = arguments.length, sources = new Array(_len), _key = 0; _key < _len; _key++) {
     sources[_key] = arguments[_key];
   }
@@ -39687,7 +42042,7 @@ function merge() {
       var loopSet = new Set(parentLoopSet);
       var value = get(src, path);
       var isArr = Array.isArray(value);
-      if (isArr || isObject(value)) {
+      if (isArr || isObject2(value)) {
         if (!loopSet.has(value)) {
           loopSet.add(value);
           var originValue = get(clone, path);
@@ -39713,9 +42068,9 @@ function merge() {
 var React34 = __toESM(require_react());
 
 // node_modules/.pnpm/antd@5.8.2_react-dom@18.2.0_react@18.2.0/node_modules/antd/es/_util/warning.js
-function noop() {
+function noop2() {
 }
-var warning2 = noop;
+var warning2 = noop2;
 if (true) {
   warning2 = (valid, component, message) => {
     warning_default(valid, `[antd: ${component}] ${message}`);
@@ -42019,7 +44374,7 @@ var genFocusStyle = (token2) => ({
 // node_modules/.pnpm/antd@5.8.2_react-dom@18.2.0_react@18.2.0/node_modules/antd/es/theme/util/statistic.js
 var enableStatistic = true;
 var recording = true;
-function merge2() {
+function merge3() {
   for (var _len = arguments.length, objs = new Array(_len), _key = 0; _key < _len; _key++) {
     objs[_key] = arguments[_key];
   }
@@ -42042,12 +44397,12 @@ function merge2() {
   return ret;
 }
 var statistic = {};
-function noop2() {
+function noop3() {
 }
 function statisticToken(token2) {
   let tokenKeys2;
   let proxy = token2;
-  let flush = noop2;
+  let flush = noop3;
   if (enableStatistic) {
     tokenKeys2 = /* @__PURE__ */ new Set();
     proxy = new Proxy(token2, {
@@ -42121,10 +44476,10 @@ function genComponentStyleHook(component, styleFn, getDefaultToken, options) {
           }
         });
       }
-      const defaultComponentToken = typeof getDefaultToken === "function" ? getDefaultToken(merge2(proxyToken, customComponentToken !== null && customComponentToken !== void 0 ? customComponentToken : {})) : getDefaultToken;
+      const defaultComponentToken = typeof getDefaultToken === "function" ? getDefaultToken(merge3(proxyToken, customComponentToken !== null && customComponentToken !== void 0 ? customComponentToken : {})) : getDefaultToken;
       const mergedComponentToken = Object.assign(Object.assign({}, defaultComponentToken), customComponentToken);
       const componentCls = `.${prefixCls}`;
-      const mergedToken = merge2(proxyToken, {
+      const mergedToken = merge3(proxyToken, {
         componentCls,
         prefixCls,
         iconCls: `.${iconPrefixCls}`,
@@ -43210,7 +45565,7 @@ var ProviderChildren = (props) => {
   let childNode = shouldWrapSSR ? wrapSSR(children) : children;
   const validateMessages = React34.useMemo(() => {
     var _a, _b, _c, _d;
-    return merge(((_a = en_US_default6.Form) === null || _a === void 0 ? void 0 : _a.defaultValidateMessages) || {}, ((_c = (_b = memoedConfig.locale) === null || _b === void 0 ? void 0 : _b.Form) === null || _c === void 0 ? void 0 : _c.defaultValidateMessages) || {}, ((_d = memoedConfig.form) === null || _d === void 0 ? void 0 : _d.validateMessages) || {}, (form === null || form === void 0 ? void 0 : form.validateMessages) || {});
+    return merge2(((_a = en_US_default6.Form) === null || _a === void 0 ? void 0 : _a.defaultValidateMessages) || {}, ((_c = (_b = memoedConfig.locale) === null || _b === void 0 ? void 0 : _b.Form) === null || _c === void 0 ? void 0 : _c.defaultValidateMessages) || {}, ((_d = memoedConfig.form) === null || _d === void 0 ? void 0 : _d.validateMessages) || {}, (form === null || form === void 0 ? void 0 : form.validateMessages) || {});
   }, [memoedConfig, form === null || form === void 0 ? void 0 : form.validateMessages]);
   if (Object.keys(validateMessages).length > 0) {
     childNode = /* @__PURE__ */ React34.createElement(validateMessagesContext_default.Provider, {
@@ -44316,9 +46671,9 @@ function _regeneratorRuntime() {
   var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([])));
   NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
   var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
-  function defineIteratorMethods(prototype) {
+  function defineIteratorMethods(prototype3) {
     ["next", "throw", "return"].forEach(function(method4) {
-      define2(prototype, method4, function(arg) {
+      define2(prototype3, method4, function(arg) {
         return this._invoke(method4, arg);
       });
     });
@@ -45203,7 +47558,7 @@ var button_group_default = ButtonGroup;
 var import_react20 = __toESM(require_react());
 var rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;
 var isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar);
-function isString(str) {
+function isString2(str) {
   return typeof str === "string";
 }
 function isUnBorderedButtonType(type4) {
@@ -45214,7 +47569,7 @@ function splitCNCharsBySpace(child, needInserted) {
     return;
   }
   const SPACE = needInserted ? " " : "";
-  if (typeof child !== "string" && typeof child !== "number" && isString(child.type) && isTwoCNChar(child.props.children)) {
+  if (typeof child !== "string" && typeof child !== "number" && isString2(child.type) && isTwoCNChar(child.props.children)) {
     return cloneElement4(child, {
       children: child.props.children.split("").join(SPACE)
     });
@@ -45721,7 +48076,7 @@ var genSizeButtonStyle = function(token2) {
 };
 var genSizeBaseButtonStyle = (token2) => genSizeButtonStyle(token2);
 var genSizeSmallButtonStyle = (token2) => {
-  const smallToken = merge2(token2, {
+  const smallToken = merge3(token2, {
     controlHeight: token2.controlHeightSM,
     padding: token2.paddingXS,
     buttonPaddingHorizontal: 8,
@@ -45731,7 +48086,7 @@ var genSizeSmallButtonStyle = (token2) => {
   return genSizeButtonStyle(smallToken, `${token2.componentCls}-sm`);
 };
 var genSizeLargeButtonStyle = (token2) => {
-  const largeToken = merge2(token2, {
+  const largeToken = merge3(token2, {
     controlHeight: token2.controlHeightLG,
     fontSize: token2.fontSizeLG,
     borderRadius: token2.borderRadiusLG,
@@ -45756,7 +48111,7 @@ var style_default3 = genComponentStyleHook("Button", (token2) => {
     controlTmpOutline,
     paddingContentHorizontal
   } = token2;
-  const buttonToken = merge2(token2, {
+  const buttonToken = merge3(token2, {
     colorOutlineDefault: controlTmpOutline,
     buttonPaddingHorizontal: paddingContentHorizontal,
     buttonIconOnlyFontSize: token2.fontSizeLG,
@@ -46044,7 +48399,7 @@ function useDom(render2, debug) {
       return newQueue;
     });
   });
-  function append2() {
+  function append3() {
     if (!ele.parentElement) {
       document.body.appendChild(ele);
     }
@@ -46058,9 +48413,9 @@ function useDom(render2, debug) {
   useLayoutEffect_default(function() {
     if (render2) {
       if (queueCreate) {
-        queueCreate(append2);
+        queueCreate(append3);
       } else {
-        append2();
+        append3();
       }
     } else {
       cleanup2();
@@ -46343,7 +48698,7 @@ var ListContext = /* @__PURE__ */ React60.createContext(null);
 var ListContext_default = ListContext;
 
 // node_modules/.pnpm/rc-field-form@1.36.2_react-dom@18.2.0_react@18.2.0/node_modules/rc-field-form/es/utils/typeUtil.js
-function toArray2(value) {
+function toArray3(value) {
   if (value === void 0 || value === null) {
     return [];
   }
@@ -47077,7 +49432,7 @@ var any = function any2(rule, value, callback, source, options) {
   }
   callback(errors);
 };
-var validators = {
+var validators3 = {
   string,
   method: method2,
   number: number2,
@@ -47377,7 +49732,7 @@ var Schema = /* @__PURE__ */ function() {
     if (rule.type === void 0 && rule.pattern instanceof RegExp) {
       rule.type = "pattern";
     }
-    if (typeof rule.validator !== "function" && rule.type && !validators.hasOwnProperty(rule.type)) {
+    if (typeof rule.validator !== "function" && rule.type && !validators3.hasOwnProperty(rule.type)) {
       throw new Error(format("Unknown rule type %s", rule.type));
     }
     return rule.type || "string";
@@ -47392,9 +49747,9 @@ var Schema = /* @__PURE__ */ function() {
       keys2.splice(messageIndex, 1);
     }
     if (keys2.length === 1 && keys2[0] === "required") {
-      return validators.required;
+      return validators3.required;
     }
-    return validators[this.getType(rule)] || void 0;
+    return validators3[this.getType(rule)] || void 0;
   };
   return Schema2;
 }();
@@ -47402,11 +49757,11 @@ Schema.register = function register(type4, validator) {
   if (typeof validator !== "function") {
     throw new Error("Cannot register a validator by type, validator is not a function");
   }
-  validators[type4] = validator;
+  validators3[type4] = validator;
 };
 Schema.warning = warning4;
 Schema.messages = messages;
-Schema.validators = validators;
+Schema.validators = validators3;
 
 // node_modules/.pnpm/rc-field-form@1.36.2_react-dom@18.2.0_react@18.2.0/node_modules/rc-field-form/es/utils/validateUtil.js
 var React61 = __toESM(require_react());
@@ -47502,7 +49857,7 @@ function _validateRule() {
               delete cloneRule.defaultField;
             }
             validator = new AsyncValidator(_defineProperty({}, name, [cloneRule]));
-            messages2 = merge(defaultValidateMessages, options.validateMessages);
+            messages2 = merge2(defaultValidateMessages, options.validateMessages);
             validator.messages(messages2);
             result = [];
             _context2.prev = 10;
@@ -47725,7 +50080,7 @@ function _finishOnFirstFailed() {
 
 // node_modules/.pnpm/rc-field-form@1.36.2_react-dom@18.2.0_react@18.2.0/node_modules/rc-field-form/es/utils/valueUtil.js
 function getNamePath(path) {
-  return toArray2(path);
+  return toArray3(path);
 }
 function cloneByNamePathList(store, namePathList) {
   var newStore = {};
@@ -47969,7 +50324,7 @@ var Field = /* @__PURE__ */ function(_React$Component) {
             if (!validateTrigger) {
               return true;
             }
-            var triggerList = toArray2(validateTrigger);
+            var triggerList = toArray3(validateTrigger);
             return triggerList.includes(triggerName);
           });
         }
@@ -48061,7 +50416,7 @@ var Field = /* @__PURE__ */ function(_React$Component) {
           isFunction: true
         });
       }
-      var childList = toArray(children);
+      var childList = toArray2(children);
       if (childList.length !== 1 || !/* @__PURE__ */ React62.isValidElement(childList[0])) {
         return {
           child: childList,
@@ -48116,7 +50471,7 @@ var Field = /* @__PURE__ */ function(_React$Component) {
           originTriggerFunc.apply(void 0, args);
         }
       };
-      var validateTriggerList = toArray2(mergedValidateTrigger || []);
+      var validateTriggerList = toArray3(mergedValidateTrigger || []);
       validateTriggerList.forEach(function(triggerName) {
         var originTrigger = control[triggerName];
         control[triggerName] = function() {
@@ -48175,9 +50530,9 @@ var Field = /* @__PURE__ */ function(_React$Component) {
     value: function render2() {
       var resetCount = this.state.resetCount;
       var children = this.props.children;
-      var _this$getOnlyChild = this.getOnlyChild(children), child = _this$getOnlyChild.child, isFunction = _this$getOnlyChild.isFunction;
+      var _this$getOnlyChild = this.getOnlyChild(children), child = _this$getOnlyChild.child, isFunction2 = _this$getOnlyChild.isFunction;
       var returnChildNode;
-      if (isFunction) {
+      if (isFunction2) {
         returnChildNode = child;
       } else if (/* @__PURE__ */ React62.isValidElement(child)) {
         returnChildNode = /* @__PURE__ */ React62.cloneElement(child, this.getControlled(child.props));
@@ -48429,7 +50784,7 @@ var NameMap = /* @__PURE__ */ function() {
     }
   }, {
     key: "toJSON",
-    value: function toJSON() {
+    value: function toJSON2() {
       var json = {};
       this.map(function(_ref3) {
         var key = _ref3.key, value = _ref3.value;
@@ -48508,7 +50863,7 @@ var FormStore = /* @__PURE__ */ _createClass(function FormStore2(forceRootUpdate
     _this.initialValues = initialValues || {};
     if (init) {
       var _this$prevWithoutPres;
-      var nextStore = merge(initialValues, _this.store);
+      var nextStore = merge2(initialValues, _this.store);
       (_this$prevWithoutPres = _this.prevWithoutPreserves) === null || _this$prevWithoutPres === void 0 ? void 0 : _this$prevWithoutPres.map(function(_ref) {
         var namePath = _ref.key;
         nextStore = set(nextStore, namePath, get(initialValues, namePath));
@@ -48528,7 +50883,7 @@ var FormStore = /* @__PURE__ */ _createClass(function FormStore2(forceRootUpdate
   };
   this.getInitialValue = function(namePath) {
     var initValue = get(_this.initialValues, namePath);
-    return namePath.length ? merge(initValue) : initValue;
+    return namePath.length ? merge2(initValue) : initValue;
   };
   this.setCallbacks = function(callbacks) {
     _this.callbacks = callbacks;
@@ -48813,7 +51168,7 @@ var FormStore = /* @__PURE__ */ _createClass(function FormStore2(forceRootUpdate
     _this.warningUnhooked();
     var prevStore = _this.store;
     if (!nameList) {
-      _this.updateStore(merge(_this.initialValues));
+      _this.updateStore(merge2(_this.initialValues));
       _this.resetWithFieldInitialValue();
       _this.notifyObservers(prevStore, null, {
         type: "reset"
@@ -48983,7 +51338,7 @@ var FormStore = /* @__PURE__ */ _createClass(function FormStore2(forceRootUpdate
     _this.warningUnhooked();
     var prevStore = _this.store;
     if (store) {
-      var nextStore = merge(_this.store, store);
+      var nextStore = merge2(_this.store, store);
       _this.updateStore(nextStore);
     }
     _this.notifyObservers(prevStore, null, {
@@ -50443,13 +52798,13 @@ var context_default2 = TriggerContext;
 
 // node_modules/.pnpm/@rc-component+trigger@1.15.1_react-dom@18.2.0_react@18.2.0/node_modules/@rc-component/trigger/es/hooks/useAction.js
 var React76 = __toESM(require_react());
-function toArray3(val) {
+function toArray4(val) {
   return val ? Array.isArray(val) ? val : [val] : [];
 }
 function useAction(mobile, action, showAction, hideAction) {
   return React76.useMemo(function() {
-    var mergedShowAction = toArray3(showAction !== null && showAction !== void 0 ? showAction : action);
-    var mergedHideAction = toArray3(hideAction !== null && hideAction !== void 0 ? hideAction : action);
+    var mergedShowAction = toArray4(showAction !== null && showAction !== void 0 ? showAction : action);
+    var mergedHideAction = toArray4(hideAction !== null && hideAction !== void 0 ? hideAction : action);
     var showActionSet = new Set(mergedShowAction);
     var hideActionSet = new Set(mergedHideAction);
     if (mobile) {
@@ -52410,7 +54765,7 @@ var genTooltipStyle = (token2) => {
       })
     },
     // Arrow Style
-    getArrowStyle(merge2(token2, {
+    getArrowStyle(merge3(token2, {
       borderRadiusOuter: tooltipRadiusOuter
     }), {
       colorBg: "var(--antd-arrow-background-color)",
@@ -52438,7 +54793,7 @@ var style_default4 = (prefixCls, injectStyle) => {
       colorBgDefault,
       borderRadiusOuter
     } = token2;
-    const TooltipToken = merge2(token2, {
+    const TooltipToken = merge3(token2, {
       // default variables
       tooltipMaxWidth: 250,
       tooltipColor: colorTextLightSolid,
@@ -53624,7 +55979,7 @@ var SubMenuList_default = SubMenuList;
 // node_modules/.pnpm/rc-menu@9.10.0_react-dom@18.2.0_react@18.2.0/node_modules/rc-menu/es/utils/commonUtil.js
 var React107 = __toESM(require_react());
 function parseChildren(children, keyPath) {
-  return toArray(children).map(function(child, index2) {
+  return toArray2(children).map(function(child, index2) {
     if (/* @__PURE__ */ React107.isValidElement(child)) {
       var _eventKey, _child$props;
       var key = child.key;
@@ -55304,7 +57659,7 @@ var tuple = function tuple2() {
   }
   return args;
 };
-function toArray4(val) {
+function toArray5(val) {
   if (val === null || val === void 0) {
     return [];
   }
@@ -57227,7 +59582,7 @@ function InnerPicker(props) {
   if (true) {
     legacyPropsWarning(props);
   }
-  var formatList = toArray4(getDefaultFormat(format3, picker, showTime, use12Hours));
+  var formatList = toArray5(getDefaultFormat(format3, picker, showTime, use12Hours));
   var panelDivRef = React150.useRef(null);
   var inputDivRef = React150.useRef(null);
   var containerRef = React150.useRef(null);
@@ -57797,7 +60152,7 @@ function InnerRangePicker(props) {
   if (true) {
     legacyPropsWarning(props);
   }
-  var formatList = toArray4(getDefaultFormat(format3, picker, showTime, use12Hours));
+  var formatList = toArray5(getDefaultFormat(format3, picker, showTime, use12Hours));
   var operationRef = (0, import_react37.useRef)(null);
   var mergedDisabled = React154.useMemo(function() {
     if (Array.isArray(disabled)) {
@@ -58958,7 +61313,7 @@ var style_default5 = genComponentStyleHook("Radio", (token2) => {
   const radioFocusShadow = `0 0 0 ${controlOutlineWidth}px ${controlOutline}`;
   const radioButtonFocusShadow = radioFocusShadow;
   const radioDotDisabledSize = getDotSize(radioSize);
-  const radioToken = merge2(token2, {
+  const radioToken = merge3(token2, {
     radioDotDisabledSize,
     radioFocusShadow,
     radioButtonFocusShadow
@@ -59243,7 +61598,7 @@ var genDisabledStyle2 = (token2) => ({
   boxShadow: "none",
   cursor: "not-allowed",
   opacity: 1,
-  "&:hover": Object.assign({}, genHoverStyle(merge2(token2, {
+  "&:hover": Object.assign({}, genHoverStyle(merge3(token2, {
     inputBorderHoverColor: token2.colorBorder
   })))
 });
@@ -59282,7 +61637,7 @@ var genStatusStyle = (token2, parentCls) => {
       "&:hover": {
         borderColor: colorErrorBorderHover
       },
-      "&:focus, &-focused": Object.assign({}, genActiveStyle(merge2(token2, {
+      "&:focus, &-focused": Object.assign({}, genActiveStyle(merge3(token2, {
         inputBorderActiveColor: colorError,
         inputBorderHoverColor: colorError,
         controlOutline: colorErrorOutline
@@ -59296,7 +61651,7 @@ var genStatusStyle = (token2, parentCls) => {
       "&:hover": {
         borderColor: colorWarningBorderHover
       },
-      "&:focus, &-focused": Object.assign({}, genActiveStyle(merge2(token2, {
+      "&:focus, &-focused": Object.assign({}, genActiveStyle(merge3(token2, {
         inputBorderActiveColor: colorWarning,
         inputBorderHoverColor: colorWarning,
         controlOutline: colorWarningOutline
@@ -59913,7 +62268,7 @@ var genSearchInputStyle = (token2) => {
   };
 };
 function initInputToken(token2) {
-  return merge2(token2, {
+  return merge3(token2, {
     inputAffixPadding: token2.paddingXXS,
     inputPaddingVertical: Math.max(Math.round((token2.controlHeight - token2.fontSize * token2.lineHeight) / 2 * 10) / 10 - token2.lineWidth, 3),
     inputPaddingVerticalLG: Math.ceil((token2.controlHeightLG - token2.fontSizeLG * token2.lineHeightLG) / 2 * 10) / 10 - token2.lineWidth,
@@ -60761,7 +63116,7 @@ var genPickerStatusStyle = (token2) => {
           backgroundColor: colorBgContainer,
           borderColor: colorError
         },
-        [`&${componentCls}-focused, &:focus`]: Object.assign({}, genActiveStyle(merge2(token2, {
+        [`&${componentCls}-focused, &:focus`]: Object.assign({}, genActiveStyle(merge3(token2, {
           inputBorderActiveColor: colorError,
           inputBorderHoverColor: colorError,
           controlOutline: colorErrorOutline
@@ -60775,7 +63130,7 @@ var genPickerStatusStyle = (token2) => {
           backgroundColor: colorBgContainer,
           borderColor: colorWarning
         },
-        [`&${componentCls}-focused, &:focus`]: Object.assign({}, genActiveStyle(merge2(token2, {
+        [`&${componentCls}-focused, &:focus`]: Object.assign({}, genActiveStyle(merge3(token2, {
           inputBorderActiveColor: colorWarning,
           inputBorderHoverColor: colorWarning,
           controlOutline: colorWarningOutline
@@ -61211,7 +63566,7 @@ var initPickerPanelToken = (token2) => {
   };
 };
 var style_default7 = genComponentStyleHook("DatePicker", (token2) => {
-  const pickerToken = merge2(initInputToken(token2), initPickerPanelToken(token2));
+  const pickerToken = merge3(initInputToken(token2), initPickerPanelToken(token2));
   return [
     genPickerStyle(pickerToken),
     genPickerStatusStyle(pickerToken),
@@ -62443,7 +64798,7 @@ var __rest9 = function(s, e2) {
     }
   return t3;
 };
-function filter(items) {
+function filter2(items) {
   return items.filter((item) => item);
 }
 function useLegacyItems(items, children) {
@@ -62451,7 +64806,7 @@ function useLegacyItems(items, children) {
     return items;
   }
   true ? warning_default2(!children, "Tabs", "Tabs.TabPane is deprecated. Please use `items` directly.") : void 0;
-  const childrenItems = toArray(children).map((node2) => {
+  const childrenItems = toArray2(children).map((node2) => {
     if (/* @__PURE__ */ React172.isValidElement(node2)) {
       const {
         key,
@@ -62469,7 +64824,7 @@ function useLegacyItems(items, children) {
     }
     return null;
   });
-  return filter(childrenItems);
+  return filter2(childrenItems);
 }
 
 // node_modules/.pnpm/antd@5.8.2_react-dom@18.2.0_react@18.2.0/node_modules/antd/es/tabs/style/motion.js
@@ -63283,7 +65638,7 @@ var genTabsStyle = (token2) => {
   };
 };
 var style_default8 = genComponentStyleHook("Tabs", (token2) => {
-  const tabsToken = merge2(token2, {
+  const tabsToken = merge3(token2, {
     // `cardPadding` is empty by default, so we could calculate with dynamic `cardHeight`
     tabsCardPadding: token2.cardPadding || `${(token2.cardHeight - Math.round(token2.fontSize * token2.lineHeight)) / 2 - token2.lineWidth}px ${token2.padding}px`,
     dropdownEdgeChildVerticalPadding: token2.paddingXXS,
@@ -63546,7 +65901,7 @@ var genGridMediaStyle = (token2, screenSize, sizeCls) => ({
 });
 var useRowStyle = genComponentStyleHook("Grid", (token2) => [genGridRowStyle(token2)]);
 var useColStyle = genComponentStyleHook("Grid", (token2) => {
-  const gridToken = merge2(token2, {
+  const gridToken = merge3(token2, {
     gridColumns: 24
     // Row is divided into 24 parts in Grid
   });
@@ -65266,7 +67621,7 @@ function transPlacement2DropdownAlign(direction, placement) {
     }
   }
 }
-function toArray5(list) {
+function toArray6(list) {
   if (!list) {
     return [];
   }
@@ -65281,7 +67636,7 @@ function getTimeProps(props) {
     showSecond,
     use12Hours
   } = props;
-  const firstFormat = toArray5(format3)[0];
+  const firstFormat = toArray6(format3)[0];
   const showTimeObj = Object.assign({}, props);
   if (firstFormat && typeof firstFormat === "string") {
     if (!firstFormat.includes("s") && showSecond === void 0) {
@@ -66124,7 +68479,7 @@ var style_default9 = genComponentStyleHook("Form", (token2, _ref) => {
   let {
     rootPrefixCls
   } = _ref;
-  const formToken = merge2(token2, {
+  const formToken = merge3(token2, {
     formItemCls: `${token2.componentCls}-item`,
     rootPrefixCls
   });
@@ -66219,7 +68574,7 @@ var React196 = __toESM(require_react());
 // node_modules/.pnpm/antd@5.8.2_react-dom@18.2.0_react@18.2.0/node_modules/antd/es/form/util.js
 var formItemNameBlackList = ["parentNode"];
 var defaultItemNamePrefixCls = "form_item";
-function toArray6(candidate) {
+function toArray7(candidate) {
   if (candidate === void 0 || candidate === false)
     return [];
   return Array.isArray(candidate) ? candidate : [candidate];
@@ -66238,7 +68593,7 @@ function getFieldId(namePath, formName) {
 
 // node_modules/.pnpm/antd@5.8.2_react-dom@18.2.0_react@18.2.0/node_modules/antd/es/form/hooks/useForm.js
 function toNamePathStr(name) {
-  const namePath = toArray6(name);
+  const namePath = toArray7(name);
   return namePath.join("_");
 }
 function useForm2(form) {
@@ -66257,7 +68612,7 @@ function useForm2(form) {
     },
     scrollToField: function(name) {
       let options = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
-      const namePath = toArray6(name);
+      const namePath = toArray7(name);
       const fieldId = getFieldId(namePath, wrapForm.__INTERNAL__.name);
       const node2 = fieldId ? document.getElementById(fieldId) : null;
       if (node2) {
@@ -66725,7 +69080,7 @@ function ItemHolder(props) {
     help,
     errors,
     warnings,
-    validateStatus,
+    validateStatus: validateStatus2,
     meta,
     hasFeedback,
     hidden,
@@ -66762,8 +69117,8 @@ function ItemHolder(props) {
     let status = "";
     const _errors = isDebounce ? debounceErrors : meta.errors;
     const _warnings = isDebounce ? debounceWarnings : meta.warnings;
-    if (validateStatus !== void 0) {
-      status = validateStatus;
+    if (validateStatus2 !== void 0) {
+      status = validateStatus2;
     } else if (meta.validating) {
       status = "validating";
     } else if (_errors.length) {
@@ -66840,7 +69195,7 @@ function useChildren(children) {
   if (typeof children === "function") {
     return children;
   }
-  const childList = toArray(children);
+  const childList = toArray2(children);
   return childList.length <= 1 ? childList[0] : childList;
 }
 
@@ -66981,7 +69336,7 @@ function InternalFormItem(props) {
     validateTrigger: mergedValidateTrigger,
     onMetaChange
   }), (control, renderMeta, context) => {
-    const mergedName = toArray6(name).length && renderMeta ? renderMeta.name : [];
+    const mergedName = toArray7(name).length && renderMeta ? renderMeta.name : [];
     const fieldId = getFieldId(mergedName, formName);
     const isRequired = required4 !== void 0 ? required4 : !!(rules2 && rules2.some((rule) => {
       if (rule && typeof rule === "object" && rule.required && !rule.warningOnly) {
@@ -67029,7 +69384,7 @@ function InternalFormItem(props) {
       if (supportRef(mergedChildren)) {
         childProps.ref = getItemRef(mergedName, mergedChildren);
       }
-      const triggers = new Set([].concat(_toConsumableArray(toArray6(trigger)), _toConsumableArray(toArray6(mergedValidateTrigger))));
+      const triggers = new Set([].concat(_toConsumableArray(toArray7(trigger)), _toConsumableArray(toArray7(mergedValidateTrigger))));
       triggers.forEach((eventName) => {
         childProps[eventName] = function() {
           var _a2, _c2;
@@ -67140,7 +69495,7 @@ var AddTemplate = () => {
   const { app, settings } = useApp() || {};
   const [periodicActiveTab, setPeriodicActiveTab] = (0, import_react64.useState)(DAILY);
   const [paraActiveTab, setParaActiveTab] = (0, import_react64.useState)(PROJECT);
-  const [type4, setType] = (0, import_react64.useState)(PERIODIC_NOTES);
+  const [type4, setType] = (0, import_react64.useState)(PERIODIC);
   const [form] = form_default.useForm();
   const today = (0, import_dayjs3.default)(new Date());
   const SubmitButton = /* @__PURE__ */ React206.createElement(
@@ -67182,12 +69537,12 @@ var AddTemplate = () => {
       tag = values[`${paraActiveTab}Tag`];
       README = values[`${paraActiveTab}README`];
       if (!tag) {
-        return new import_obsidian11.Notice(ERROR_MESSAGES.TAGS_MUST_INPUT);
+        return new import_obsidian12.Notice(ERROR_MESSAGES.TAGS_MUST_INPUT);
       }
       folder = `${path}/${key}`;
       file = `${folder}/${README}`;
       templateFile = `${path}/Template.md`;
-    } else if (type4 === PERIODIC_NOTES) {
+    } else if (type4 === PERIODIC) {
       const key = periodicActiveTab;
       let year = values[key]["$y"];
       let value;
@@ -67214,15 +69569,15 @@ var AddTemplate = () => {
     }
     const templateTFile = app.vault.getAbstractFileByPath(templateFile);
     if (!templateTFile) {
-      return new import_obsidian11.Notice(ERROR_MESSAGES.NO_TEMPLATE_EXIST + templateFile);
+      return new import_obsidian12.Notice(ERROR_MESSAGES.NO_TEMPLATE_EXIST + templateFile);
     }
-    if (templateTFile instanceof import_obsidian11.TFile) {
-      const templateContent = await app.vault.read(templateTFile);
+    if (templateTFile instanceof import_obsidian12.TFile) {
+      const templateContent = await app.vault.cachedRead(templateTFile);
       if (!folder || !file) {
         return;
       }
       let tFile = app.vault.getAbstractFileByPath(file);
-      if (tFile && tFile instanceof import_obsidian11.TFile) {
+      if (tFile && tFile instanceof import_obsidian12.TFile) {
         return await app.workspace.getLeaf().openFile(tFile);
       }
       if (!app.vault.getAbstractFileByPath(folder)) {
@@ -67271,7 +69626,7 @@ var AddTemplate = () => {
         form,
         onFinish: createFile
       },
-      /* @__PURE__ */ React206.createElement(
+      (settings == null ? void 0 : settings.usePARANotes) && (settings == null ? void 0 : settings.usePeriodicNotes) && /* @__PURE__ */ React206.createElement(
         radio_default2.Group,
         {
           name: "type",
@@ -67280,13 +69635,13 @@ var AddTemplate = () => {
           onChange: (e2) => setType(e2.target.value),
           style: { marginBottom: 40 }
         },
-        /* @__PURE__ */ React206.createElement(radio_default2.Button, { value: PERIODIC_NOTES }, PERIODIC_NOTES),
+        /* @__PURE__ */ React206.createElement(radio_default2.Button, { value: PERIODIC }, PERIODIC),
         /* @__PURE__ */ React206.createElement(radio_default2.Button, { value: PARA }, PARA)
       ),
-      type4 === PERIODIC_NOTES ? /* @__PURE__ */ React206.createElement(
+      type4 === PERIODIC && (settings == null ? void 0 : settings.usePeriodicNotes) && /* @__PURE__ */ React206.createElement(
         tabs_default,
         {
-          key: PERIODIC_NOTES,
+          key: PERIODIC,
           activeKey: periodicActiveTab,
           onChange: setPeriodicActiveTab,
           items: [DAILY, WEEKLY, MONTHLY, QUARTERLY, YEARLY].map(
@@ -67318,7 +69673,8 @@ var AddTemplate = () => {
             }
           )
         }
-      ) : /* @__PURE__ */ React206.createElement(React206.Fragment, null, /* @__PURE__ */ React206.createElement(
+      ),
+      type4 === PARA && (settings == null ? void 0 : settings.usePARANotes) && /* @__PURE__ */ React206.createElement(React206.Fragment, null, /* @__PURE__ */ React206.createElement(
         tabs_default,
         {
           key: "PARA",
@@ -67340,7 +69696,7 @@ var AddTemplate = () => {
                   {
                     onChange: () => {
                       const itemTag = form.getFieldValue(`${item}Tag`).replace(/^#/, "");
-                      const itemFolder = itemTag.replace("/", "-");
+                      const itemFolder = itemTag.replace(/\//g, "-");
                       const itemREADME = itemTag.split("/").reverse()[0];
                       form.setFieldValue(
                         `${item}README`,
@@ -67386,7 +69742,7 @@ var AddTemplate = () => {
 
 // src/view/PeriodicPARA.tsx
 var VIEW_TYPE = "periodic-para";
-var PeriodicPARAView = class extends import_obsidian12.ItemView {
+var PeriodicPARAView = class extends import_obsidian13.ItemView {
   constructor(leaf, settings) {
     super(leaf);
     this.settings = settings;
@@ -67420,17 +69776,7 @@ var PeriodicPARAView = class extends import_obsidian12.ItemView {
 };
 
 // src/main.ts
-var DEFAULT_SETTINGS2 = {
-  periodicNotesPath: "PeriodicNotes",
-  projectsPath: "1. Projects",
-  areasPath: "2. Areas",
-  resourcesPath: "3. Resources",
-  archivesPath: "4. Archives",
-  projectListHeader: "Project List",
-  areaListHeader: "First Things Dimension",
-  habitHeader: "Habit"
-};
-var PeriodicPARA = class extends import_obsidian13.Plugin {
+var PeriodicPARA = class extends import_obsidian14.Plugin {
   constructor(app, manifest) {
     super(app, manifest);
     this.initView = async () => {
@@ -67444,12 +69790,12 @@ var PeriodicPARA = class extends import_obsidian13.Plugin {
       this.app.workspace.revealLeaf(leaf);
     };
     if (!(0, import_obsidian_dataview.isPluginEnabled)(app)) {
-      new import_obsidian13.Notice(ERROR_MESSAGES.NO_DATAVIEW_INSTALL);
+      new import_obsidian14.Notice(ERROR_MESSAGES.NO_DATAVIEW_INSTALL);
       throw Error(ERROR_MESSAGES.NO_DATAVIEW_INSTALL);
     }
     const dataviewApi = (0, import_obsidian_dataview.getAPI)(app);
     if (!dataviewApi) {
-      new import_obsidian13.Notice(ERROR_MESSAGES.FAILED_DATAVIEW_API);
+      new import_obsidian14.Notice(ERROR_MESSAGES.FAILED_DATAVIEW_API);
       throw Error(ERROR_MESSAGES.FAILED_DATAVIEW_API);
     }
     this.app = app;
@@ -67461,13 +69807,14 @@ var PeriodicPARA = class extends import_obsidian13.Plugin {
       return new PeriodicPARAView(leaf, this.settings);
     });
     const item = this.addRibbonIcon("zap", "Periodic PARA", this.initView);
-    (0, import_obsidian13.setIcon)(item, "zap");
+    (0, import_obsidian14.setIcon)(item, "zap");
     this.addCommand({
       id: "periodic-para",
       name: "Create Notes",
       callback: this.initView
     });
     this.loadHelpers();
+    this.loadDailyRecord();
     this.loadGlobalHelpers();
     this.loadViews();
     this.addSettingTab(new SettingTab(this.app, this));
@@ -67494,6 +69841,28 @@ var PeriodicPARA = class extends import_obsidian13.Plugin {
     this.registerMarkdownCodeBlockProcessor("PeriodicPARA", handler);
     this.registerMarkdownCodeBlockProcessor("periodic-para", handler);
   }
+  loadDailyRecord() {
+    if (this.settings.usePeriodicNotes && this.settings.useDailyRecord) {
+      this.dailyRecord = new DailyRecord(this.app, this.settings, this.file);
+      this.addCommand({
+        id: "periodic-para-sync-daily-record",
+        name: "Sync daily record",
+        callback: this.dailyRecord.sync
+      });
+      this.addCommand({
+        id: "periodic-para-force-sync-daily-record",
+        name: "Force sync daily record",
+        callback: this.dailyRecord.forceSync
+      });
+      clearTimeout(this.timeout);
+      clearInterval(this.interval);
+      this.timeout = setTimeout(() => this.dailyRecord.sync(), 15 * 1e3);
+      this.interval = setInterval(
+        () => this.dailyRecord.sync(),
+        0.5 * 60 * 60 * 1e3
+      );
+    }
+  }
   loadViews() {
     this.views = {
       // views by time -> time context -> periodic notes
@@ -67518,13 +69887,14 @@ var PeriodicPARA = class extends import_obsidian13.Plugin {
   onunload() {
   }
   async loadSettings() {
-    this.settings = Object.assign({}, DEFAULT_SETTINGS2, await this.loadData());
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
   }
   async saveSettings() {
     await this.saveData(this.settings);
     this.loadHelpers();
     this.loadGlobalHelpers();
     this.loadViews();
+    this.loadDailyRecord();
   }
   loadHelpers() {
     this.task = new Task(this.app, this.settings, this.dataview);

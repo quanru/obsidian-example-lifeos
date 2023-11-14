@@ -6,5 +6,11 @@
   "archivesPath": "4. 存档",
   "projectListHeader": "项目列表",
   "areaListHeader": "要事维度",
-  "habitHeader": "习惯打卡"
+  "habitHeader": "习惯打卡",
+  "dailyRecordHeader": "日常记录",
+  "dailyRecordAPI": "",
+  "dailyRecordToken": "",
+  "useDailyRecord": false,
+  "usePeriodicNotes": true,
+  "usePARANotes": true
 }

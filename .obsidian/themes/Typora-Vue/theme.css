@@ -1,5 +1,5 @@
 /*
-[Obsidian-Typora-Vue-Theme](https://github.com/ZekunC/Obsidian-Typora-Vue-Theme) (**v1.0.2**) is a theme for [Obsidian](https://obsidian.md/), which is inspired by [typora-vue-theme](https://github.com/blinkfox/typora-vue-theme)and [Blue Topaz](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/).
+[Obsidian-Typora-Vue-Theme](https://github.com/ZekunC/Obsidian-Typora-Vue-Theme) (**v1.0.3**) is a theme for [Obsidian](https://obsidian.md/), which is inspired by [typora-vue-theme](https://github.com/blinkfox/typora-vue-theme)and [Blue Topaz](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/).
 */
 
 /* The primary color is #42b983 or #42b883.*/
@@ -215,9 +215,12 @@ thead {
 /*Hover Font color END*/
 
 /*Navigator File BEGIN*/
-.nav-file-title.is-active{
-	border-radius:0;
+.nav-file-title.is-active::before{
 	border-left: 4px solid hsl(var(--interactive-accent-hsl));
-	padding-left: 4px;
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0;
+    height: 100%;
 }
 /*Navigator File END*/
