@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ee496f977cffed1e",
+        "id": "e66bc67306d9a8b6",
         "type": "tabs",
         "children": [
           {
-            "id": "1d8ce8f2e5051529",
+            "id": "c336d5cfe662ab18",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "5. Expres/README.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -121,7 +116,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5. Expres/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "5. Expres/README.md"
-              }
+              "state": {}
             }
           },
           {
@@ -143,7 +135,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "5. Expres/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,12 +175,14 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "1d8ce8f2e5051529",
+  "active": "c336d5cfe662ab18",
   "lastOpenFiles": [
+    "0. PeriodicNotes/2023/Daily/11/2023-11-07.md",
+    "0. PeriodicNotes/2023/Daily/11",
+    "5. Expres/README.md",
     "-1. Capture/README.md",
     "0. PeriodicNotes/2023/Daily/06/2023-06-03.md",
     "0. PeriodicNotes/2023/Daily/06/2023-06-04.md",
-    "5. Expres/README.md",
     "1. Projects/PKM-LifeOS/LifeOS.README.md",
     "5. Expres",
     "-1. Capture",
@@ -217,12 +210,10 @@
     "Templates/PeriodicNotes/Yearly.md",
     "Templates/PeriodicNotes/Weekly.md",
     "Templates/PeriodicNotes/Monthly.md",
-    "Templates/PeriodicNotes/Quarterly.md",
     "Templates/PeriodicNotes",
     "Templates/PARA",
     "Templates",
     "3. Resources/EnglishLearning",
-    "3. Resources/BlockChain",
     "4. Archives/育儿-宝宝起名/林奕如.png",
     "4. Archives/育儿-宝宝起名/baby-name.png",
     "1. Projects/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
