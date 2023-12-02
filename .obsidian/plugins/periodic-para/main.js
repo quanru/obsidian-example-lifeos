@@ -36319,7 +36319,8 @@ var Item = class {
       const div = el.createEl("div");
       const markdown = this.file.list(this.dir);
       const component = new Markdown(div);
-      import_obsidian3.MarkdownRenderer.renderMarkdown(
+      import_obsidian3.MarkdownRenderer.render(
+        this.app,
         markdown || "- Nothing",
         div,
         ctx.sourcePath,
@@ -36333,7 +36334,8 @@ var Item = class {
       const div = el.createEl("div");
       const markdown = this.file.list(this.dir, { tags });
       const component = new Markdown(div);
-      import_obsidian3.MarkdownRenderer.renderMarkdown(
+      import_obsidian3.MarkdownRenderer.render(
+        this.app,
         markdown || "- Nothing",
         div,
         ctx.sourcePath,
@@ -36373,7 +36375,8 @@ var Project = class extends Item {
         );
       });
       const component = new Markdown(div);
-      import_obsidian5.MarkdownRenderer.renderMarkdown(
+      import_obsidian5.MarkdownRenderer.render(
+        this.app,
         list.join("\n"),
         div,
         ctx.sourcePath,
@@ -36431,7 +36434,7 @@ var Project = class extends Item {
       const link = `${momentDay.format("YYYY-MM-DD")}.md`;
       const file = this.file.get(link, "", this.settings.periodicNotesPath);
       if (file instanceof import_obsidian4.TFile) {
-        const reg = new RegExp(`# ${header}([\\s\\S]*?)(?=##|$)`);
+        const reg = new RegExp(`# ${header}([\\s\\S]*?)(?=\\n##|$)`);
         let todayTotalTime = "0hr0";
         tasks.push(async () => {
           var _a;
@@ -36503,7 +36506,8 @@ var Area = class extends Item {
         );
       });
       const component = new Markdown(div);
-      import_obsidian6.MarkdownRenderer.renderMarkdown(
+      import_obsidian6.MarkdownRenderer.render(
+        this.app,
         list.join("\n"),
         div,
         ctx.sourcePath,
@@ -36528,7 +36532,7 @@ var Area = class extends Item {
       const link = `${year}-${quarter}.md`;
       const file = this.file.get(link, "", this.settings.periodicNotesPath);
       if (file instanceof import_obsidian6.TFile) {
-        const reg = new RegExp(`# ${header}([\\s\\S]*?)(?=##|$)`);
+        const reg = new RegExp(`# ${header}([\\s\\S]*?)(?=\\n##|$)`);
         if (file) {
           tasks.push(async () => {
             var _a;
@@ -36576,6 +36580,7 @@ var ERROR_MESSAGES = {
   NO_TEMPLATE_EXIST: "There is no template file exist: ",
   TAGS_MUST_INPUT: "Please input tags!",
   DAILY_RECORD_FETCH_FAILED: "Fetch daily record failed: ",
+  RESOURCE_FETCH_FAILED: "Fetch resource failed: ",
   NO_DAILY_RECORD_HEADER: "Please set daily record header in Periodic PARA plugin",
   NO_DAILY_RECORD_API: "Please set daily record API in Periodic PARA plugin",
   NO_DAILY_RECORD_TOKEN: "Please set daily record access token in Periodic PARA plugin",
@@ -36594,7 +36599,52 @@ var QUARTERLY = "Quarterly";
 var YEARLY = "Yearly";
 
 // src/periodic/File.ts
+var import_obsidian8 = require("obsidian");
+
+// src/util.ts
 var import_obsidian7 = require("obsidian");
+function renderError(app, msg, containerEl, sourcePath) {
+  const component = new import_obsidian7.Component();
+  return import_obsidian7.MarkdownRenderer.render(app, msg, containerEl, sourcePath, component);
+}
+function isDarkTheme() {
+  var _a;
+  const el = document.querySelector("body");
+  return (_a = el == null ? void 0 : el.className.includes("theme-dark")) != null ? _a : false;
+}
+function formatDailyRecord(record) {
+  const { createdTs, createdAt, content, resourceList } = record;
+  const timeStamp = createdAt ? (0, import_obsidian7.moment)(createdAt).unix() : createdTs;
+  const [date4, time] = (0, import_obsidian7.moment)(timeStamp * 1e3).format("YYYY-MM-DD HH:mm").split(" ");
+  const [firstLine, ...otherLine] = content.split("\n");
+  const isTask = /^- \[.*?\]/.test(firstLine);
+  const targetFirstLine = (
+    // 将标签和时间戳加到第一行
+    (isTask ? `- [ ] ${time} ${firstLine.replace(/^- \[.*?\]/, "")}` : `- ${time} ${firstLine.replace(/^- /, "")}`) + ` #daily-record ^${timeStamp}`
+  );
+  const targetOtherLine = (otherLine == null ? void 0 : otherLine.length) ? "\n" + otherLine.map((line2) => /^[ \t]/.test(line2) ? line2 : `	${line2}`).join("\n").replace(/[\n\s]*$/, "") : "";
+  const targetResourceLine = (resourceList == null ? void 0 : resourceList.length) ? "\n" + (resourceList == null ? void 0 : resourceList.map(
+    (resource) => `	 - ![[${generateFileName(resource)}]]`
+  ).join("\n")) : "";
+  const finalTargetContent = targetFirstLine + targetOtherLine + targetResourceLine;
+  return [date4, timeStamp, finalTargetContent].map(String);
+}
+function generateFileName(resource) {
+  return `${resource.id}-${resource.filename.replace(/[/\\?%*:|"<>]/g, "-")}`;
+}
+function logMessage(message, level = 0 /* info */) {
+  new import_obsidian7.Notice(message);
+  if (level === 0 /* info */) {
+    console.info(message);
+  } else if (level === 1 /* warn */) {
+    console.warn(message);
+  } else if (level === 2 /* error */) {
+    console.error(message);
+    throw Error(message);
+  }
+}
+
+// src/periodic/File.ts
 var File = class {
   constructor(app, settings, dataview) {
     this.app = app;
@@ -36613,10 +36663,10 @@ var File = class {
   }
   list(fileFolder, condition = { tags: [] }) {
     const folder = this.app.vault.getAbstractFileByPath(fileFolder);
-    if (folder instanceof import_obsidian7.TFolder) {
-      const subFolderList = folder.children.sort().filter((file) => file instanceof import_obsidian7.TFolder);
+    if (folder instanceof import_obsidian8.TFolder) {
+      const subFolderList = folder.children.sort().filter((file) => file instanceof import_obsidian8.TFolder);
       const READMEList = subFolderList.map((subFolder) => {
-        if (subFolder instanceof import_obsidian7.TFolder) {
+        if (subFolder instanceof import_obsidian8.TFolder) {
           const files = subFolder.children;
           const README = files.find(
             (file) => file.path.match(/(.*\.)?README\.md/)
@@ -36628,9 +36678,9 @@ var File = class {
             }
           }
           if (!README) {
-            new import_obsidian7.Notice(ERROR_MESSAGES.NO_README_EXIST + subFolder.path);
+            logMessage(ERROR_MESSAGES.NO_README_EXIST + subFolder.path);
           }
-          if (README instanceof import_obsidian7.TFile) {
+          if (README instanceof import_obsidian8.TFile) {
             const link = this.app.metadataCache.fileToLinktext(
               README,
               README == null ? void 0 : README.path
@@ -36665,23 +36715,6 @@ var File = class {
     }
     return tags;
   }
-};
-
-// src/util.ts
-var import_obsidian8 = require("obsidian");
-function renderError(msg, containerEl, sourcePath) {
-  const component = new import_obsidian8.Component();
-  return import_obsidian8.MarkdownRenderer.renderMarkdown(
-    msg,
-    containerEl,
-    sourcePath,
-    component
-  );
-}
-var isDarkTheme = () => {
-  var _a;
-  const el = document.querySelector("body");
-  return (_a = el == null ? void 0 : el.className.includes("theme-dark")) != null ? _a : false;
 };
 
 // src/periodic/Task.ts
@@ -36738,6 +36771,7 @@ var Task = class {
       const component = new Markdown(div);
       if (!tags.length) {
         return renderError(
+          this.app,
           ERROR_MESSAGES.NO_FRONT_MATTER_TAG,
           div,
           filepath
@@ -36804,6 +36838,7 @@ var Bullet = class {
       const component = new Markdown(div);
       if (!tags.length) {
         return renderError(
+          this.app,
           ERROR_MESSAGES.NO_FRONT_MATTER_TAG,
           div,
           filepath
@@ -38973,40 +39008,30 @@ var DailyRecord = class {
     };
     this.sync = async () => {
       this.offset = 0;
-      this.insert();
+      this.downloadResource();
+      this.insertDailyRecord();
     };
-    this.insert = async () => {
+    this.insertDailyRecord = async () => {
       var _a, _b, _c;
-      const title = `# ${this.settings.dailyRecordHeader}
-`;
+      const header = this.settings.dailyRecordHeader;
       const dailyRecordByDay = {};
       const records = await this.fetch() || [];
-      const timeStamp = ((_a = records[0]) == null ? void 0 : _a.createdAt) ? (0, import_obsidian10.moment)((_b = records[0]) == null ? void 0 : _b.createdAt).unix() : (_c = records[0]) == null ? void 0 : _c.createdTs;
-      if (!records.length || timeStamp * 1e3 < Number(this.lastTime)) {
-        new import_obsidian10.Notice("End sync daily record");
-        console.log("End sync daily record");
+      const mostRecentTimeStamp = ((_a = records[0]) == null ? void 0 : _a.createdAt) ? (0, import_obsidian10.moment)((_b = records[0]) == null ? void 0 : _b.createdAt).unix() : (_c = records[0]) == null ? void 0 : _c.createdTs;
+      if (!records.length || mostRecentTimeStamp * 1e3 < Number(this.lastTime)) {
+        logMessage("End sync daily record");
         window.localStorage.setItem(this.localKey, Date.now().toString());
         return;
       }
       for (const record of records) {
-        const { createdTs, createdAt, content } = record;
-        const timeStamp2 = createdAt ? (0, import_obsidian10.moment)(createdAt).unix() : createdTs;
-        const [day, time] = (0, import_obsidian10.moment)(timeStamp2 * 1e3).format("YYYY-MM-DD HH:mm").split(" ");
-        if (!content) {
+        if (!record.content) {
           continue;
         }
-        const [firstLine, ...otherLine] = content.split("\n");
-        const isTask = /^- \[.*?\]/.test(firstLine);
-        const targetFirstLine = (
-          // 将标签和时间戳加到第一行
-          (isTask ? `- [ ] ${time} ${firstLine.replace(/^- \[.*?\]/, "")}` : `- ${time} ${firstLine}`) + ` #daily-record ^${timeStamp2}`
-        );
-        const finalTargetContent = targetFirstLine + ((otherLine == null ? void 0 : otherLine.length) ? "\n" + otherLine.join("\n").replace(/[\n\s]*$/, "") : "");
-        if (dailyRecordByDay[day]) {
-          dailyRecordByDay[day][timeStamp2] = finalTargetContent;
+        const [date4, timeStamp, formattedRecord] = formatDailyRecord(record);
+        if (dailyRecordByDay[date4]) {
+          dailyRecordByDay[date4][timeStamp] = formattedRecord;
         } else {
-          dailyRecordByDay[day] = {
-            [timeStamp2]: finalTargetContent
+          dailyRecordByDay[date4] = {
+            [timeStamp]: formattedRecord
           };
         }
       }
@@ -39019,20 +39044,18 @@ var DailyRecord = class {
             this.settings.periodicNotesPath
           );
           if (!targetFile) {
-            new import_obsidian10.Notice(`${ERROR_MESSAGES.NO_DAILY_FILE_EXIST} ${today}`);
-            console.log(`${ERROR_MESSAGES.NO_DAILY_FILE_EXIST} ${today}`);
-            throw new Error(`${ERROR_MESSAGES.NO_DAILY_FILE_EXIST} ${today}`);
+            logMessage(
+              `${ERROR_MESSAGES.NO_DAILY_FILE_EXIST} ${today}`,
+              2 /* error */
+            );
           }
-          const reg = new RegExp(`${title}([\\s\\S]*?)(?=##|$)`);
+          const reg = new RegExp(`# ${header}([\\s\\S]*?)(?=\\n##|$)`);
           if (targetFile instanceof import_obsidian10.TFile) {
             const originFileContent = await this.app.vault.read(targetFile);
             const regMatch = originFileContent.match(reg);
             if (!(regMatch == null ? void 0 : regMatch.length) || !(regMatch == null ? void 0 : regMatch.index)) {
               if (!this.settings.dailyRecordToken) {
-                new import_obsidian10.Notice(
-                  "Current daily file will not insert daily record due to no daily record header"
-                );
-                console.log(
+                logMessage(
                   "Current daily file will not insert daily record due to no daily record header"
                 );
                 return;
@@ -39040,7 +39063,7 @@ var DailyRecord = class {
               return;
             }
             const localRecordContent = (_a2 = regMatch[1]) == null ? void 0 : _a2.trim();
-            const from2 = (regMatch == null ? void 0 : regMatch.index) + title.length;
+            const from2 = (regMatch == null ? void 0 : regMatch.index) + header.length + 3;
             const to = from2 + localRecordContent.length;
             const prefix = originFileContent.slice(0, from2);
             const suffix = originFileContent.slice(to);
@@ -39057,14 +39080,14 @@ var DailyRecord = class {
                 const regMatch3 = record.match(/\d\d:\d\d/);
                 if (regMatch3) {
                   const time = (_c2 = regMatch3[0]) == null ? void 0 : _c2.trim();
-                  const timeStamp2 = (0, import_obsidian10.moment)(
+                  const timeStamp = (0, import_obsidian10.moment)(
                     `${today}-${time}`,
                     "YYYY-MM-DD-HH:mm"
                   ).unix();
-                  if (localRecordListWithTime[timeStamp2]) {
-                    localRecordListWithTime[timeStamp2 + 1] = record;
+                  if (localRecordListWithTime[timeStamp]) {
+                    localRecordListWithTime[timeStamp + 1] = record;
                   } else {
-                    localRecordListWithTime[timeStamp2] = record;
+                    localRecordListWithTime[timeStamp] = record;
                   }
                 }
               } else {
@@ -39090,7 +39113,7 @@ ${finalRecordContent}
         })
       );
       this.offset = this.offset + this.limit;
-      this.insert();
+      this.insertDailyRecord();
     };
     this.app = app;
     this.file = file;
@@ -39099,37 +39122,35 @@ ${finalRecordContent}
     this.offset = 0;
     this.localKey = `periodic-para-daily-record-last-time-${this.settings.dailyRecordToken}`;
     this.lastTime = window.localStorage.getItem(this.localKey) || "";
+    this.axios = axios_default.create({
+      headers: {
+        Authorization: `Bearer ${this.settings.dailyRecordToken}`,
+        Accept: "application/json"
+      }
+    });
     if (!this.settings.dailyRecordAPI) {
-      new import_obsidian10.Notice(ERROR_MESSAGES.NO_DAILY_RECORD_API);
-      console.log(ERROR_MESSAGES.NO_DAILY_RECORD_API);
+      logMessage(ERROR_MESSAGES.NO_DAILY_RECORD_API);
       return;
     }
     if (!this.settings.dailyRecordToken) {
-      new import_obsidian10.Notice(ERROR_MESSAGES.NO_DAILY_RECORD_TOKEN);
-      console.log(ERROR_MESSAGES.NO_DAILY_RECORD_TOKEN);
+      logMessage(ERROR_MESSAGES.NO_DAILY_RECORD_TOKEN);
       return;
     }
     if (!this.settings.dailyRecordHeader) {
-      new import_obsidian10.Notice(ERROR_MESSAGES.NO_DAILY_RECORD_HEADER);
-      console.log(ERROR_MESSAGES.NO_DAILY_RECORD_HEADER);
+      logMessage(ERROR_MESSAGES.NO_DAILY_RECORD_HEADER);
       return;
     }
-    new import_obsidian10.Notice("Start sync daily record");
-    console.log("Start sync daily record");
+    logMessage("Start sync daily record");
   }
   async fetch() {
     try {
-      const { data } = await axios_default.get(
+      const { data } = await this.axios.get(
         this.settings.dailyRecordAPI,
         {
           params: {
             limit: this.limit,
             offset: this.offset,
             rowStatus: "NORMAL"
-          },
-          headers: {
-            Accept: "application/json",
-            Authorization: `Bearer ${this.settings.dailyRecordToken}`
           }
         }
       );
@@ -39140,9 +39161,62 @@ ${finalRecordContent}
         data.message || data.msg || data.error || JSON.stringify(data)
       );
     } catch (error) {
-      new import_obsidian10.Notice(`${ERROR_MESSAGES.DAILY_RECORD_FETCH_FAILED}: ${error}`);
-      console.log(`${ERROR_MESSAGES.DAILY_RECORD_FETCH_FAILED}: ${error}`);
-      throw error;
+      logMessage(
+        `${ERROR_MESSAGES.DAILY_RECORD_FETCH_FAILED}: ${error}`,
+        2 /* error */
+      );
+    }
+  }
+  async downloadResource() {
+    const { origin } = new URL(this.settings.dailyRecordAPI);
+    try {
+      const { data } = await this.axios.get(
+        origin + "/api/v1/resource"
+      );
+      if (Array.isArray(data)) {
+        await Promise.all(
+          data.map(async (resource) => {
+            const folder = `${this.settings.periodicNotesPath}/Attachments`;
+            const resourcePath = (0, import_obsidian10.normalizePath)(
+              `${folder}/${generateFileName(resource)}`
+            );
+            const isResourceExists = await this.app.vault.adapter.exists(
+              resourcePath
+            );
+            if (isResourceExists) {
+              return;
+            }
+            const { data: data2 } = await this.axios.get(
+              `${origin}/o/r/${resource.id}`,
+              {
+                responseType: "arraybuffer"
+              }
+            );
+            if (!data2) {
+              return;
+            }
+            if (!this.app.vault.getAbstractFileByPath(folder)) {
+              this.app.vault.createFolder(folder);
+            }
+            await this.app.vault.adapter.writeBinary(
+              resourcePath,
+              Buffer.from(data2)
+            );
+          })
+        );
+        return data;
+      }
+      throw new Error(
+        data.message || data.msg || data.error || JSON.stringify(data)
+      );
+    } catch (error) {
+      if (error.response.status === 404) {
+        return;
+      }
+      logMessage(
+        `${ERROR_MESSAGES.RESOURCE_FETCH_FAILED}: ${error}`,
+        2 /* error */
+      );
     }
   }
 };
@@ -39285,7 +39359,9 @@ var React2 = __toESM(require_react());
 
 // src/context.ts
 var React = __toESM(require_react());
-var AppContext = React.createContext(void 0);
+var AppContext = React.createContext(
+  void 0
+);
 
 // src/hooks/useApp.ts
 var useApp = () => {
@@ -69790,13 +69866,13 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
       this.app.workspace.revealLeaf(leaf);
     };
     if (!(0, import_obsidian_dataview.isPluginEnabled)(app)) {
-      new import_obsidian14.Notice(ERROR_MESSAGES.NO_DATAVIEW_INSTALL);
-      throw Error(ERROR_MESSAGES.NO_DATAVIEW_INSTALL);
+      logMessage(ERROR_MESSAGES.NO_DATAVIEW_INSTALL, 2 /* error */);
+      return;
     }
     const dataviewApi = (0, import_obsidian_dataview.getAPI)(app);
     if (!dataviewApi) {
-      new import_obsidian14.Notice(ERROR_MESSAGES.FAILED_DATAVIEW_API);
-      throw Error(ERROR_MESSAGES.FAILED_DATAVIEW_API);
+      logMessage(ERROR_MESSAGES.FAILED_DATAVIEW_API, 2 /* error */);
+      return;
     }
     this.app = app;
     this.dataview = dataviewApi;
@@ -69823,6 +69899,7 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
       const legacyView = `${view}ByTime`;
       if (!view) {
         return renderError(
+          this.app,
           ERROR_MESSAGES.NO_VIEW_PROVIDED,
           el.createEl("div"),
           ctx.sourcePath
@@ -69830,6 +69907,7 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
       }
       if (!Object.keys(this.views).includes(view) && !Object.keys(this.views).includes(legacyView)) {
         return renderError(
+          this.app,
           `${ERROR_MESSAGES.NO_VIEW_EXISTED}: ${view}`,
           el.createEl("div"),
           ctx.sourcePath
