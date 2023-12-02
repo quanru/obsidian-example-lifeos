@@ -11,8 +11,13 @@
             "id": "c336d5cfe662ab18",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -116,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-02.md"
+              }
             }
           },
           {
@@ -135,6 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
