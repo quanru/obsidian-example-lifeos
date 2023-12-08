@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "e66bc67306d9a8b6",
+        "id": "641a43a8f8cafbf9",
         "type": "tabs",
         "children": [
           {
-            "id": "c336d5cfe662ab18",
+            "id": "7236c6ac303bd9aa",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -121,7 +116,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-02.md"
-              }
+              "state": {}
             }
           },
           {
@@ -143,7 +135,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,8 +175,9 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "c336d5cfe662ab18",
+  "active": "7236c6ac303bd9aa",
   "lastOpenFiles": [
+    "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
     "0. PeriodicNotes/2023/Daily/11/2023-11-07.md",
     "0. PeriodicNotes/2023/Daily/11",
     "5. Expres/README.md",
@@ -204,7 +196,6 @@
     "0. PeriodicNotes/2023/Daily/09",
     "HOME.canvas",
     "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
-    "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
     "0. PeriodicNotes/2023/Daily/08/2023-08-26.md",
     "0. PeriodicNotes/2023/Daily/08",
     "4. Archives/Template.md",

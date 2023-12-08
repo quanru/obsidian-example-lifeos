@@ -36145,7 +36145,7 @@ var import_obsidian14 = require("obsidian");
 var import_obsidian_dataview = __toESM(require_lib());
 
 // src/para/Project.ts
-var import_obsidian4 = require("obsidian");
+var import_obsidian5 = require("obsidian");
 
 // src/periodic/Date.ts
 var import_obsidian = require("obsidian");
@@ -36309,7 +36309,7 @@ var Markdown = class extends import_obsidian2.MarkdownRenderChild {
 };
 
 // src/para/Project.ts
-var import_obsidian5 = require("obsidian");
+var import_obsidian6 = require("obsidian");
 
 // src/para/Item.ts
 var import_obsidian3 = require("obsidian");
@@ -36354,6 +36354,55 @@ var Item = class {
   }
 };
 
+// src/util.ts
+var import_obsidian4 = require("obsidian");
+function renderError(app, msg, containerEl, sourcePath) {
+  const component = new import_obsidian4.Component();
+  return import_obsidian4.MarkdownRenderer.render(app, msg, containerEl, sourcePath, component);
+}
+function isDarkTheme() {
+  var _a;
+  const el = document.querySelector("body");
+  return (_a = el == null ? void 0 : el.className.includes("theme-dark")) != null ? _a : false;
+}
+function formatDailyRecord(record) {
+  const { createdTs, createdAt, content, resourceList } = record;
+  const timeStamp = createdAt ? (0, import_obsidian4.moment)(createdAt).unix() : createdTs;
+  const [date4, time] = (0, import_obsidian4.moment)(timeStamp * 1e3).format("YYYY-MM-DD HH:mm").split(" ");
+  const [firstLine, ...otherLine] = content.trim().split("\n");
+  const isTask = /^- \[.*?\]/.test(firstLine);
+  const targetFirstLine = (
+    // 将标签和时间戳加到第一行
+    (isTask ? `- [ ] ${time} ${firstLine.replace(/^- \[.*?\]/, "")}` : `- ${time} ${firstLine.replace(/^- /, "")}`) + ` #daily-record ^${timeStamp}`
+  );
+  const targetOtherLine = (otherLine == null ? void 0 : otherLine.length) ? "\n" + otherLine.map((line2) => /^[ \t]/.test(line2) ? line2 : `	${line2}`).join("\n").trimEnd() : "";
+  const targetResourceLine = (resourceList == null ? void 0 : resourceList.length) ? "\n" + (resourceList == null ? void 0 : resourceList.map(
+    (resource) => `	 - ![[${generateFileName(resource)}]]`
+  ).join("\n")) : "";
+  const finalTargetContent = targetFirstLine + targetOtherLine + targetResourceLine;
+  return [date4, timeStamp, finalTargetContent].map(String);
+}
+function generateFileName(resource) {
+  return `${resource.id}-${resource.filename.replace(/[/\\?%*:|"<>]/g, "-")}`;
+}
+function logMessage(message, level = 0 /* info */) {
+  new import_obsidian4.Notice(message);
+  if (level === 0 /* info */) {
+    console.info(message);
+  } else if (level === 1 /* warn */) {
+    console.warn(message);
+  } else if (level === 2 /* error */) {
+    console.error(message);
+    throw Error(message);
+  }
+}
+function generateHeaderRegExp(header) {
+  const formattedHeader = /^#+/.test(header.trim()) ? header.trim() : `# ${header.trim()}`;
+  const reg = new RegExp(`(${formattedHeader}[^
+]*)([\\s\\S]*?)(?=\\n##|$)`);
+  return reg;
+}
+
 // src/para/Project.ts
 var Project = class extends Item {
   constructor() {
@@ -36375,7 +36424,7 @@ var Project = class extends Item {
         );
       });
       const component = new Markdown(div);
-      import_obsidian5.MarkdownRenderer.render(
+      import_obsidian6.MarkdownRenderer.render(
         this.app,
         list.join("\n"),
         div,
@@ -36430,17 +36479,17 @@ var Project = class extends Item {
     let totalTime = "";
     const tasks = [];
     while (true) {
-      const momentDay = (0, import_obsidian4.moment)(day);
+      const momentDay = (0, import_obsidian5.moment)(day);
       const link = `${momentDay.format("YYYY-MM-DD")}.md`;
       const file = this.file.get(link, "", this.settings.periodicNotesPath);
-      if (file instanceof import_obsidian4.TFile) {
-        const reg = new RegExp(`# ${header}([\\s\\S]*?)(?=\\n##|$)`);
+      if (file instanceof import_obsidian5.TFile) {
+        const reg = generateHeaderRegExp(header);
         let todayTotalTime = "0hr0";
         tasks.push(async () => {
           var _a;
           const fileContent = await this.app.vault.cachedRead(file);
           const regMatch = fileContent.match(reg);
-          const projectContent = (regMatch == null ? void 0 : regMatch.length) ? (_a = regMatch[1]) == null ? void 0 : _a.split("\n") : [];
+          const projectContent = (regMatch == null ? void 0 : regMatch.length) ? (_a = regMatch[2]) == null ? void 0 : _a.split("\n") : [];
           projectContent.map((project) => {
             var _a2, _b;
             if (!project) {
@@ -36487,7 +36536,7 @@ var Project = class extends Item {
 };
 
 // src/para/Area.ts
-var import_obsidian6 = require("obsidian");
+var import_obsidian7 = require("obsidian");
 var Area = class extends Item {
   constructor() {
     super(...arguments);
@@ -36506,7 +36555,7 @@ var Area = class extends Item {
         );
       });
       const component = new Markdown(div);
-      import_obsidian6.MarkdownRenderer.render(
+      import_obsidian7.MarkdownRenderer.render(
         this.app,
         list.join("\n"),
         div,
@@ -36531,14 +36580,14 @@ var Area = class extends Item {
       const quarter = quarterList[index2];
       const link = `${year}-${quarter}.md`;
       const file = this.file.get(link, "", this.settings.periodicNotesPath);
-      if (file instanceof import_obsidian6.TFile) {
-        const reg = new RegExp(`# ${header}([\\s\\S]*?)(?=\\n##|$)`);
+      if (file instanceof import_obsidian7.TFile) {
+        const reg = generateHeaderRegExp(header);
         if (file) {
           tasks.push(async () => {
             var _a;
             const fileContent = await this.app.vault.cachedRead(file);
             const regMatch = fileContent.match(reg);
-            const areaContent = (regMatch == null ? void 0 : regMatch.length) ? (_a = regMatch[1]) == null ? void 0 : _a.split("\n") : [];
+            const areaContent = (regMatch == null ? void 0 : regMatch.length) ? (_a = regMatch[2]) == null ? void 0 : _a.split("\n") : [];
             areaContent.map((area) => {
               var _a2;
               if (!area) {
@@ -36600,51 +36649,6 @@ var YEARLY = "Yearly";
 
 // src/periodic/File.ts
 var import_obsidian8 = require("obsidian");
-
-// src/util.ts
-var import_obsidian7 = require("obsidian");
-function renderError(app, msg, containerEl, sourcePath) {
-  const component = new import_obsidian7.Component();
-  return import_obsidian7.MarkdownRenderer.render(app, msg, containerEl, sourcePath, component);
-}
-function isDarkTheme() {
-  var _a;
-  const el = document.querySelector("body");
-  return (_a = el == null ? void 0 : el.className.includes("theme-dark")) != null ? _a : false;
-}
-function formatDailyRecord(record) {
-  const { createdTs, createdAt, content, resourceList } = record;
-  const timeStamp = createdAt ? (0, import_obsidian7.moment)(createdAt).unix() : createdTs;
-  const [date4, time] = (0, import_obsidian7.moment)(timeStamp * 1e3).format("YYYY-MM-DD HH:mm").split(" ");
-  const [firstLine, ...otherLine] = content.split("\n");
-  const isTask = /^- \[.*?\]/.test(firstLine);
-  const targetFirstLine = (
-    // 将标签和时间戳加到第一行
-    (isTask ? `- [ ] ${time} ${firstLine.replace(/^- \[.*?\]/, "")}` : `- ${time} ${firstLine.replace(/^- /, "")}`) + ` #daily-record ^${timeStamp}`
-  );
-  const targetOtherLine = (otherLine == null ? void 0 : otherLine.length) ? "\n" + otherLine.map((line2) => /^[ \t]/.test(line2) ? line2 : `	${line2}`).join("\n").replace(/[\n\s]*$/, "") : "";
-  const targetResourceLine = (resourceList == null ? void 0 : resourceList.length) ? "\n" + (resourceList == null ? void 0 : resourceList.map(
-    (resource) => `	 - ![[${generateFileName(resource)}]]`
-  ).join("\n")) : "";
-  const finalTargetContent = targetFirstLine + targetOtherLine + targetResourceLine;
-  return [date4, timeStamp, finalTargetContent].map(String);
-}
-function generateFileName(resource) {
-  return `${resource.id}-${resource.filename.replace(/[/\\?%*:|"<>]/g, "-")}`;
-}
-function logMessage(message, level = 0 /* info */) {
-  new import_obsidian7.Notice(message);
-  if (level === 0 /* info */) {
-    console.info(message);
-  } else if (level === 1 /* warn */) {
-    console.warn(message);
-  } else if (level === 2 /* error */) {
-    console.error(message);
-    throw Error(message);
-  }
-}
-
-// src/periodic/File.ts
 var File = class {
   constructor(app, settings, dataview) {
     this.app = app;
@@ -39049,7 +39053,7 @@ var DailyRecord = class {
               2 /* error */
             );
           }
-          const reg = new RegExp(`# ${header}([\\s\\S]*?)(?=\\n##|$)`);
+          const reg = generateHeaderRegExp(header);
           if (targetFile instanceof import_obsidian10.TFile) {
             const originFileContent = await this.app.vault.read(targetFile);
             const regMatch = originFileContent.match(reg);
@@ -39062,8 +39066,8 @@ var DailyRecord = class {
               }
               return;
             }
-            const localRecordContent = (_a2 = regMatch[1]) == null ? void 0 : _a2.trim();
-            const from2 = (regMatch == null ? void 0 : regMatch.index) + header.length + 3;
+            const localRecordContent = (_a2 = regMatch[2]) == null ? void 0 : _a2.trim();
+            const from2 = (regMatch == null ? void 0 : regMatch.index) + regMatch[1].length + 1;
             const to = from2 + localRecordContent.length;
             const prefix = originFileContent.slice(0, from2);
             const suffix = originFileContent.slice(to);
