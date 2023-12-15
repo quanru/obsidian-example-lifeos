@@ -11,6 +11,15 @@
 .periodic-para .ant-form-item .ant-form-item-label > label {
   height: 39.09px;
 }
+.periodic-para .ant-form-item .ant-picker {
+  visibility: hidden;
+}
+.periodic-para .ant-form-item .ant-picker-dropdown {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  inset: -20px auto auto 0px !important;
+}
 .is-phone .periodic-para button {
   width: unset;
 }

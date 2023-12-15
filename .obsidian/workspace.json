@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "641a43a8f8cafbf9",
+        "id": "0cf291c750f70911",
         "type": "tabs",
         "children": [
           {
-            "id": "7236c6ac303bd9aa",
+            "id": "1ae82b8d469273d8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "3. Resources/Template.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -27,16 +32,8 @@
       {
         "id": "d32bd3e9f2db57a0",
         "type": "tabs",
-        "dimension": 30.900473933649288,
+        "dimension": 43.0795847750865,
         "children": [
-          {
-            "id": "df59f08946ce9655",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
           {
             "id": "e2f9ecf537a853a4",
             "type": "leaf",
@@ -44,13 +41,22 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "9110575c83bff6ab",
+            "type": "leaf",
+            "state": {
+              "type": "periodic-para",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "90362f6f602f507d",
         "type": "tabs",
-        "dimension": 69.0995260663507,
+        "dimension": 56.92041522491349,
         "children": [
           {
             "id": "318abbbcd7749f6f",
@@ -60,14 +66,6 @@
               "state": {
                 "sortOrder": "alphabetical"
               }
-            }
-          },
-          {
-            "id": "9110575c83bff6ab",
-            "type": "leaf",
-            "state": {
-              "type": "periodic-para",
-              "state": {}
             }
           },
           {
@@ -116,6 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "3. Resources/Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "3. Resources/Template.md"
+              }
             }
           },
           {
@@ -135,6 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "3. Resources/Template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,17 +177,28 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "7236c6ac303bd9aa",
+  "active": "1ae82b8d469273d8",
   "lastOpenFiles": [
+    "3. Resources/EnglishLearning/README.md",
+    "2. Areas/Life/Life.README.md",
+    "1. Projects/PKM-LifeOS/LifeOS.README.md",
+    "1. Projects/PKM-LifeOS/PeriodicPARA.md",
+    "3. Resources/Template.md",
+    "5. Express/README.md",
+    "5. Express",
+    "1. Projects/Template.md",
+    "1. Projects/abc-def/def.README.md",
+    "1. Projects/abc-def",
+    "0. PeriodicNotes/2023/Daily/12/2023-12-15.md",
+    "0. PeriodicNotes/2023/Daily/12",
+    "5. Expres/README.md",
+    "5. Expres",
     "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
     "0. PeriodicNotes/2023/Daily/11/2023-11-07.md",
     "0. PeriodicNotes/2023/Daily/11",
-    "5. Expres/README.md",
     "-1. Capture/README.md",
     "0. PeriodicNotes/2023/Daily/06/2023-06-03.md",
     "0. PeriodicNotes/2023/Daily/06/2023-06-04.md",
-    "1. Projects/PKM-LifeOS/LifeOS.README.md",
-    "5. Expres",
     "-1. Capture",
     "0. PeriodicNotes/2023/Weekly/2023-W36.md",
     "0. PeriodicNotes/Templates/Daily.md",
@@ -199,21 +212,10 @@
     "0. PeriodicNotes/2023/Daily/08/2023-08-26.md",
     "0. PeriodicNotes/2023/Daily/08",
     "4. Archives/Template.md",
-    "3. Resources/Template.md",
     "2. Areas/Template.md",
-    "1. Projects/Template.md",
     "0. PeriodicNotes/Templates/Weekly.md",
-    "0. PeriodicNotes/Templates/Yearly.md",
-    "0. PeriodicNotes/Templates/Monthly.md",
-    "0. PeriodicNotes/Templates/Quarterly.md",
     "0. PeriodicNotes/Templates",
-    "Templates/PeriodicNotes/Yearly.md",
-    "Templates/PeriodicNotes/Weekly.md",
-    "Templates/PeriodicNotes/Monthly.md",
     "Templates/PeriodicNotes",
-    "Templates/PARA",
-    "Templates",
-    "3. Resources/EnglishLearning",
     "4. Archives/育儿-宝宝起名/林奕如.png",
     "4. Archives/育儿-宝宝起名/baby-name.png",
     "1. Projects/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
