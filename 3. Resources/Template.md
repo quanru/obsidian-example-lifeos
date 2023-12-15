@@ -1,10 +1,3 @@
----
-tags: 
-- YourProjectTag
----
-
-%%This template can be used for new Project/Area/Resource/Archive, copy folder to the corresponding directory, and rename the Project for your /Area/Resource/Archive%%
-
 # README
 
 ## Task

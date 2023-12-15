@@ -324,8 +324,8 @@ var require_lib = __commonJS({
         return false;
       }
       /** @override **/
-      offsetName(ts, { format: format3, locale: locale4 }) {
-        return parseZoneInfo(ts, format3, locale4);
+      offsetName(ts, { format: format3, locale: locale5 }) {
+        return parseZoneInfo(ts, format3, locale5);
       }
       /** @override **/
       formatOffset(ts, format3) {
@@ -456,8 +456,8 @@ var require_lib = __commonJS({
         return false;
       }
       /** @override **/
-      offsetName(ts, { format: format3, locale: locale4 }) {
-        return parseZoneInfo(ts, format3, locale4, this.name);
+      offsetName(ts, { format: format3, locale: locale5 }) {
+        return parseZoneInfo(ts, format3, locale5, this.name);
       }
       /** @override **/
       formatOffset(ts, format3) {
@@ -705,8 +705,8 @@ var require_lib = __commonJS({
       static fromOpts(opts) {
         return Locale.create(opts.locale, opts.numberingSystem, opts.outputCalendar, opts.defaultToEN);
       }
-      static create(locale4, numberingSystem, outputCalendar, defaultToEN = false) {
-        const specifiedLocale = locale4 || Settings.defaultLocale;
+      static create(locale5, numberingSystem, outputCalendar, defaultToEN = false) {
+        const specifiedLocale = locale5 || Settings.defaultLocale;
         const localeR = specifiedLocale || (defaultToEN ? "en-US" : systemLocale());
         const numberingSystemR = numberingSystem || Settings.defaultNumberingSystem;
         const outputCalendarR = outputCalendar || Settings.defaultOutputCalendar;
@@ -718,11 +718,11 @@ var require_lib = __commonJS({
         intlNumCache = {};
         intlRelCache = {};
       }
-      static fromObject({ locale: locale4, numberingSystem, outputCalendar } = {}) {
-        return Locale.create(locale4, numberingSystem, outputCalendar);
+      static fromObject({ locale: locale5, numberingSystem, outputCalendar } = {}) {
+        return Locale.create(locale5, numberingSystem, outputCalendar);
       }
-      constructor(locale4, numbering, outputCalendar, specifiedLocale) {
-        const [parsedLocale, parsedNumberingSystem, parsedOutputCalendar] = parseLocaleString(locale4);
+      constructor(locale5, numbering, outputCalendar, specifiedLocale) {
+        const [parsedLocale, parsedNumberingSystem, parsedOutputCalendar] = parseLocaleString(locale5);
         this.locale = parsedLocale;
         this.numberingSystem = numbering || parsedNumberingSystem || null;
         this.outputCalendar = outputCalendar || parsedOutputCalendar || null;
@@ -1028,8 +1028,8 @@ var require_lib = __commonJS({
        * Set the default locale to create DateTimes with. Does not affect existing instances.
        * @type {string}
        */
-      static set defaultLocale(locale4) {
-        defaultLocale = locale4;
+      static set defaultLocale(locale5) {
+        defaultLocale = locale5;
       }
       /**
        * Get the default numbering system to create DateTimes with. Does not affect existing instances.
@@ -1231,7 +1231,7 @@ var require_lib = __commonJS({
       } else
         return year > Settings.twoDigitCutoffYear ? 1900 + year : 2e3 + year;
     }
-    function parseZoneInfo(ts, offsetFormat, locale4, timeZone = null) {
+    function parseZoneInfo(ts, offsetFormat, locale5, timeZone = null) {
       const date4 = new Date(ts), intlOpts = {
         hourCycle: "h23",
         year: "numeric",
@@ -1244,7 +1244,7 @@ var require_lib = __commonJS({
         intlOpts.timeZone = timeZone;
       }
       const modified = { timeZoneName: offsetFormat, ...intlOpts };
-      const parsed = new Intl.DateTimeFormat(locale4, modified).formatToParts(date4).find((m) => m.type.toLowerCase() === "timezonename");
+      const parsed = new Intl.DateTimeFormat(locale5, modified).formatToParts(date4).find((m) => m.type.toLowerCase() === "timezonename");
       return parsed ? parsed.value : null;
     }
     function signedOffset(offHourStr, offMinuteStr) {
@@ -1447,8 +1447,8 @@ var require_lib = __commonJS({
       FFFF: DATETIME_HUGE_WITH_SECONDS
     };
     var Formatter = class {
-      static create(locale4, opts = {}) {
-        return new Formatter(locale4, opts);
+      static create(locale5, opts = {}) {
+        return new Formatter(locale5, opts);
       }
       static parseFormat(fmt) {
         let current = null, currentFull = "", bracketed = false;
@@ -1482,9 +1482,9 @@ var require_lib = __commonJS({
       static macroTokenToFormatOpts(token2) {
         return macroTokenToFormatOpts[token2];
       }
-      constructor(locale4, formatOpts) {
+      constructor(locale5, formatOpts) {
         this.opts = formatOpts;
-        this.loc = locale4;
+        this.loc = locale5;
         this.systemLoc = null;
       }
       formatWithSystemDefault(dt, opts) {
@@ -2509,8 +2509,8 @@ var require_lib = __commonJS({
        * @example dur.reconfigure({ locale: 'en-GB' })
        * @return {Duration}
        */
-      reconfigure({ locale: locale4, numberingSystem, conversionAccuracy, matrix } = {}) {
-        const loc = this.loc.clone({ locale: locale4, numberingSystem });
+      reconfigure({ locale: locale5, numberingSystem, conversionAccuracy, matrix } = {}) {
+        const loc = this.loc.clone({ locale: locale5, numberingSystem });
         const opts = { loc, matrix, conversionAccuracy };
         return clone$1(this, opts);
       }
@@ -3325,8 +3325,8 @@ var require_lib = __commonJS({
        * @example Info.months('long', { outputCalendar: 'islamic' })[0] //=> 'Rabiʻ I'
        * @return {Array}
        */
-      static months(length2 = "long", { locale: locale4 = null, numberingSystem = null, locObj = null, outputCalendar = "gregory" } = {}) {
-        return (locObj || Locale.create(locale4, numberingSystem, outputCalendar)).months(length2);
+      static months(length2 = "long", { locale: locale5 = null, numberingSystem = null, locObj = null, outputCalendar = "gregory" } = {}) {
+        return (locObj || Locale.create(locale5, numberingSystem, outputCalendar)).months(length2);
       }
       /**
        * Return an array of format month names.
@@ -3341,8 +3341,8 @@ var require_lib = __commonJS({
        * @param {string} [opts.outputCalendar='gregory'] - the calendar
        * @return {Array}
        */
-      static monthsFormat(length2 = "long", { locale: locale4 = null, numberingSystem = null, locObj = null, outputCalendar = "gregory" } = {}) {
-        return (locObj || Locale.create(locale4, numberingSystem, outputCalendar)).months(length2, true);
+      static monthsFormat(length2 = "long", { locale: locale5 = null, numberingSystem = null, locObj = null, outputCalendar = "gregory" } = {}) {
+        return (locObj || Locale.create(locale5, numberingSystem, outputCalendar)).months(length2, true);
       }
       /**
        * Return an array of standalone week names.
@@ -3358,8 +3358,8 @@ var require_lib = __commonJS({
        * @example Info.weekdays('short', { locale: 'ar' })[0] //=> 'الاثنين'
        * @return {Array}
        */
-      static weekdays(length2 = "long", { locale: locale4 = null, numberingSystem = null, locObj = null } = {}) {
-        return (locObj || Locale.create(locale4, numberingSystem, null)).weekdays(length2);
+      static weekdays(length2 = "long", { locale: locale5 = null, numberingSystem = null, locObj = null } = {}) {
+        return (locObj || Locale.create(locale5, numberingSystem, null)).weekdays(length2);
       }
       /**
        * Return an array of format week names.
@@ -3373,8 +3373,8 @@ var require_lib = __commonJS({
        * @param {string} [opts.locObj=null] - an existing locale object to use
        * @return {Array}
        */
-      static weekdaysFormat(length2 = "long", { locale: locale4 = null, numberingSystem = null, locObj = null } = {}) {
-        return (locObj || Locale.create(locale4, numberingSystem, null)).weekdays(length2, true);
+      static weekdaysFormat(length2 = "long", { locale: locale5 = null, numberingSystem = null, locObj = null } = {}) {
+        return (locObj || Locale.create(locale5, numberingSystem, null)).weekdays(length2, true);
       }
       /**
        * Return an array of meridiems.
@@ -3384,8 +3384,8 @@ var require_lib = __commonJS({
        * @example Info.meridiems({ locale: 'my' }) //=> [ 'နံနက်', 'ညနေ' ]
        * @return {Array}
        */
-      static meridiems({ locale: locale4 = null } = {}) {
-        return Locale.create(locale4).meridiems();
+      static meridiems({ locale: locale5 = null } = {}) {
+        return Locale.create(locale5).meridiems();
       }
       /**
        * Return an array of eras, such as ['BC', 'AD']. The locale can be specified, but the calendar system is always Gregorian.
@@ -3397,8 +3397,8 @@ var require_lib = __commonJS({
        * @example Info.eras('long', { locale: 'fr' }) //=> [ 'avant Jésus-Christ', 'après Jésus-Christ' ]
        * @return {Array}
        */
-      static eras(length2 = "short", { locale: locale4 = null } = {}) {
-        return Locale.create(locale4, null, "gregory").eras(length2);
+      static eras(length2 = "short", { locale: locale5 = null } = {}) {
+        return Locale.create(locale5, null, "gregory").eras(length2);
       }
       /**
        * Return the set of available features in this environment.
@@ -3842,22 +3842,22 @@ var require_lib = __commonJS({
       }
       return dummyDateTimeCache;
     }
-    function maybeExpandMacroToken(token2, locale4) {
+    function maybeExpandMacroToken(token2, locale5) {
       if (token2.literal) {
         return token2;
       }
       const formatOpts = Formatter.macroTokenToFormatOpts(token2.val);
-      const tokens = formatOptsToTokens(formatOpts, locale4);
+      const tokens = formatOptsToTokens(formatOpts, locale5);
       if (tokens == null || tokens.includes(void 0)) {
         return token2;
       }
       return tokens;
     }
-    function expandMacroTokens(tokens, locale4) {
-      return Array.prototype.concat(...tokens.map((t3) => maybeExpandMacroToken(t3, locale4)));
+    function expandMacroTokens(tokens, locale5) {
+      return Array.prototype.concat(...tokens.map((t3) => maybeExpandMacroToken(t3, locale5)));
     }
-    function explainFromTokens(locale4, input, format3) {
-      const tokens = expandMacroTokens(Formatter.parseFormat(format3), locale4), units = tokens.map((t3) => unitForToken(t3, locale4)), disqualifyingUnit = units.find((t3) => t3.invalidReason);
+    function explainFromTokens(locale5, input, format3) {
+      const tokens = expandMacroTokens(Formatter.parseFormat(format3), locale5), units = tokens.map((t3) => unitForToken(t3, locale5)), disqualifyingUnit = units.find((t3) => t3.invalidReason);
       if (disqualifyingUnit) {
         return { input, tokens, invalidReason: disqualifyingUnit.invalidReason };
       } else {
@@ -3870,15 +3870,15 @@ var require_lib = __commonJS({
         return { input, tokens, regex, rawMatches, matches, result, zone, specificOffset };
       }
     }
-    function parseFromTokens(locale4, input, format3) {
-      const { result, zone, specificOffset, invalidReason } = explainFromTokens(locale4, input, format3);
+    function parseFromTokens(locale5, input, format3) {
+      const { result, zone, specificOffset, invalidReason } = explainFromTokens(locale5, input, format3);
       return [result, zone, specificOffset, invalidReason];
     }
-    function formatOptsToTokens(formatOpts, locale4) {
+    function formatOptsToTokens(formatOpts, locale5) {
       if (!formatOpts) {
         return null;
       }
-      const formatter = Formatter.create(locale4, formatOpts);
+      const formatter = Formatter.create(locale5, formatOpts);
       const parts = formatter.formatDateTimeParts(getDummyDateTime());
       return parts.map((p) => tokenForPart(p, formatOpts));
     }
@@ -4583,8 +4583,8 @@ var require_lib = __commonJS({
         if (isUndefined2(text) || isUndefined2(fmt)) {
           throw new InvalidArgumentError("fromFormat requires an input string and a format");
         }
-        const { locale: locale4 = null, numberingSystem = null } = opts, localeToUse = Locale.fromOpts({
-          locale: locale4,
+        const { locale: locale5 = null, numberingSystem = null } = opts, localeToUse = Locale.fromOpts({
+          locale: locale5,
           numberingSystem,
           defaultToEN: true
         }), [vals, parsedZone, specificOffset, invalid] = parseFromTokens(localeToUse, text, fmt);
@@ -4979,11 +4979,11 @@ var require_lib = __commonJS({
        * @return {Object}
        */
       resolvedLocaleOptions(opts = {}) {
-        const { locale: locale4, numberingSystem, calendar } = Formatter.create(
+        const { locale: locale5, numberingSystem, calendar } = Formatter.create(
           this.loc.clone(opts),
           opts
         ).resolvedOptions(this);
-        return { locale: locale4, numberingSystem, outputCalendar: calendar };
+        return { locale: locale5, numberingSystem, outputCalendar: calendar };
       }
       // TRANSFORM
       /**
@@ -5037,8 +5037,8 @@ var require_lib = __commonJS({
        * @example DateTime.local(2017, 5, 25).reconfigure({ locale: 'en-GB' })
        * @return {DateTime}
        */
-      reconfigure({ locale: locale4, numberingSystem, outputCalendar } = {}) {
-        const loc = this.loc.clone({ locale: locale4, numberingSystem, outputCalendar });
+      reconfigure({ locale: locale5, numberingSystem, outputCalendar } = {}) {
+        const loc = this.loc.clone({ locale: locale5, numberingSystem, outputCalendar });
         return clone(this, { loc });
       }
       /**
@@ -5047,8 +5047,8 @@ var require_lib = __commonJS({
        * @example DateTime.local(2017, 5, 25).setLocale('en-GB')
        * @return {DateTime}
        */
-      setLocale(locale4) {
-        return this.reconfigure({ locale: locale4 });
+      setLocale(locale5) {
+        return this.reconfigure({ locale: locale5 });
       }
       /**
        * "Set" the values of specified units. Returns a newly-constructed DateTime.
@@ -5619,8 +5619,8 @@ var require_lib = __commonJS({
        * @return {Object}
        */
       static fromFormatExplain(text, fmt, options = {}) {
-        const { locale: locale4 = null, numberingSystem = null } = options, localeToUse = Locale.fromOpts({
-          locale: locale4,
+        const { locale: locale5 = null, numberingSystem = null } = options, localeToUse = Locale.fromOpts({
+          locale: locale5,
           numberingSystem,
           defaultToEN: true
         });
@@ -35559,7 +35559,7 @@ var require_en_US2 = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var locale4 = {
+    var locale5 = {
       locale: "en_US",
       today: "Today",
       now: "Now",
@@ -35588,7 +35588,7 @@ var require_en_US2 = __commonJS({
       previousCentury: "Last century",
       nextCentury: "Next century"
     };
-    var _default = locale4;
+    var _default = locale5;
     exports.default = _default;
   }
 });
@@ -35601,11 +35601,11 @@ var require_en_US3 = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var locale4 = {
+    var locale5 = {
       placeholder: "Select time",
       rangePlaceholder: ["Start time", "End time"]
     };
-    var _default = locale4;
+    var _default = locale5;
     exports.default = _default;
   }
 });
@@ -35621,7 +35621,7 @@ var require_en_US4 = __commonJS({
     exports.default = void 0;
     var _en_US = _interopRequireDefault(require_en_US2());
     var _en_US2 = _interopRequireDefault(require_en_US3());
-    var locale4 = {
+    var locale5 = {
       lang: Object.assign({
         placeholder: "Select date",
         yearPlaceholder: "Select year",
@@ -35636,7 +35636,7 @@ var require_en_US4 = __commonJS({
       }, _en_US.default),
       timePickerLocale: Object.assign({}, _en_US2.default)
     };
-    var _default = locale4;
+    var _default = locale5;
     exports.default = _default;
   }
 });
@@ -35854,7 +35854,7 @@ var require_zh_CN2 = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var locale4 = {
+    var locale5 = {
       locale: "zh_CN",
       today: "\u4ECA\u5929",
       now: "\u6B64\u523B",
@@ -35882,7 +35882,7 @@ var require_zh_CN2 = __commonJS({
       previousCentury: "\u4E0A\u4E00\u4E16\u7EAA",
       nextCentury: "\u4E0B\u4E00\u4E16\u7EAA"
     };
-    var _default = locale4;
+    var _default = locale5;
     exports.default = _default;
   }
 });
@@ -35895,11 +35895,11 @@ var require_zh_CN3 = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var locale4 = {
+    var locale5 = {
       placeholder: "\u8BF7\u9009\u62E9\u65F6\u95F4",
       rangePlaceholder: ["\u5F00\u59CB\u65F6\u95F4", "\u7ED3\u675F\u65F6\u95F4"]
     };
-    var _default = locale4;
+    var _default = locale5;
     exports.default = _default;
   }
 });
@@ -35915,7 +35915,7 @@ var require_zh_CN4 = __commonJS({
     exports.default = void 0;
     var _zh_CN = _interopRequireDefault(require_zh_CN2());
     var _zh_CN2 = _interopRequireDefault(require_zh_CN3());
-    var locale4 = {
+    var locale5 = {
       lang: Object.assign({
         placeholder: "\u8BF7\u9009\u62E9\u65E5\u671F",
         yearPlaceholder: "\u8BF7\u9009\u62E9\u5E74\u4EFD",
@@ -35930,8 +35930,8 @@ var require_zh_CN4 = __commonJS({
       }, _zh_CN.default),
       timePickerLocale: Object.assign({}, _zh_CN2.default)
     };
-    locale4.lang.ok = "\u786E\u5B9A";
-    var _default = locale4;
+    locale5.lang.ok = "\u786E\u5B9A";
+    var _default = locale5;
     exports.default = _default;
   }
 });
@@ -36127,6 +36127,27 @@ var require_zh_cn = __commonJS({
       var t3 = _(e2), d = { name: "zh-cn", weekdays: "\u661F\u671F\u65E5_\u661F\u671F\u4E00_\u661F\u671F\u4E8C_\u661F\u671F\u4E09_\u661F\u671F\u56DB_\u661F\u671F\u4E94_\u661F\u671F\u516D".split("_"), weekdaysShort: "\u5468\u65E5_\u5468\u4E00_\u5468\u4E8C_\u5468\u4E09_\u5468\u56DB_\u5468\u4E94_\u5468\u516D".split("_"), weekdaysMin: "\u65E5_\u4E00_\u4E8C_\u4E09_\u56DB_\u4E94_\u516D".split("_"), months: "\u4E00\u6708_\u4E8C\u6708_\u4E09\u6708_\u56DB\u6708_\u4E94\u6708_\u516D\u6708_\u4E03\u6708_\u516B\u6708_\u4E5D\u6708_\u5341\u6708_\u5341\u4E00\u6708_\u5341\u4E8C\u6708".split("_"), monthsShort: "1\u6708_2\u6708_3\u6708_4\u6708_5\u6708_6\u6708_7\u6708_8\u6708_9\u6708_10\u6708_11\u6708_12\u6708".split("_"), ordinal: function(e3, _2) {
         return "W" === _2 ? e3 + "\u5468" : e3 + "\u65E5";
       }, weekStart: 1, yearStart: 4, formats: { LT: "HH:mm", LTS: "HH:mm:ss", L: "YYYY/MM/DD", LL: "YYYY\u5E74M\u6708D\u65E5", LLL: "YYYY\u5E74M\u6708D\u65E5Ah\u70B9mm\u5206", LLLL: "YYYY\u5E74M\u6708D\u65E5ddddAh\u70B9mm\u5206", l: "YYYY/M/D", ll: "YYYY\u5E74M\u6708D\u65E5", lll: "YYYY\u5E74M\u6708D\u65E5 HH:mm", llll: "YYYY\u5E74M\u6708D\u65E5dddd HH:mm" }, relativeTime: { future: "%s\u5185", past: "%s\u524D", s: "\u51E0\u79D2", m: "1 \u5206\u949F", mm: "%d \u5206\u949F", h: "1 \u5C0F\u65F6", hh: "%d \u5C0F\u65F6", d: "1 \u5929", dd: "%d \u5929", M: "1 \u4E2A\u6708", MM: "%d \u4E2A\u6708", y: "1 \u5E74", yy: "%d \u5E74" }, meridiem: function(e3, _2) {
+        var t4 = 100 * e3 + _2;
+        return t4 < 600 ? "\u51CC\u6668" : t4 < 900 ? "\u65E9\u4E0A" : t4 < 1100 ? "\u4E0A\u5348" : t4 < 1300 ? "\u4E2D\u5348" : t4 < 1800 ? "\u4E0B\u5348" : "\u665A\u4E0A";
+      } };
+      return t3.default.locale(d, null, true), d;
+    });
+  }
+});
+
+// node_modules/.pnpm/dayjs@1.11.9/node_modules/dayjs/locale/zh.js
+var require_zh = __commonJS({
+  "node_modules/.pnpm/dayjs@1.11.9/node_modules/dayjs/locale/zh.js"(exports, module2) {
+    !function(e2, _) {
+      "object" == typeof exports && "undefined" != typeof module2 ? module2.exports = _(require_dayjs_min()) : "function" == typeof define && define.amd ? define(["dayjs"], _) : (e2 = "undefined" != typeof globalThis ? globalThis : e2 || self).dayjs_locale_zh = _(e2.dayjs);
+    }(exports, function(e2) {
+      "use strict";
+      function _(e3) {
+        return e3 && "object" == typeof e3 && "default" in e3 ? e3 : { default: e3 };
+      }
+      var t3 = _(e2), d = { name: "zh", weekdays: "\u661F\u671F\u65E5_\u661F\u671F\u4E00_\u661F\u671F\u4E8C_\u661F\u671F\u4E09_\u661F\u671F\u56DB_\u661F\u671F\u4E94_\u661F\u671F\u516D".split("_"), weekdaysShort: "\u5468\u65E5_\u5468\u4E00_\u5468\u4E8C_\u5468\u4E09_\u5468\u56DB_\u5468\u4E94_\u5468\u516D".split("_"), weekdaysMin: "\u65E5_\u4E00_\u4E8C_\u4E09_\u56DB_\u4E94_\u516D".split("_"), months: "\u4E00\u6708_\u4E8C\u6708_\u4E09\u6708_\u56DB\u6708_\u4E94\u6708_\u516D\u6708_\u4E03\u6708_\u516B\u6708_\u4E5D\u6708_\u5341\u6708_\u5341\u4E00\u6708_\u5341\u4E8C\u6708".split("_"), monthsShort: "1\u6708_2\u6708_3\u6708_4\u6708_5\u6708_6\u6708_7\u6708_8\u6708_9\u6708_10\u6708_11\u6708_12\u6708".split("_"), ordinal: function(e3, _2) {
+        return "W" === _2 ? e3 + "\u5468" : e3 + "\u65E5";
+      }, weekStart: 1, yearStart: 4, formats: { LT: "HH:mm", LTS: "HH:mm:ss", L: "YYYY/MM/DD", LL: "YYYY\u5E74M\u6708D\u65E5", LLL: "YYYY\u5E74M\u6708D\u65E5Ah\u70B9mm\u5206", LLLL: "YYYY\u5E74M\u6708D\u65E5ddddAh\u70B9mm\u5206", l: "YYYY/M/D", ll: "YYYY\u5E74M\u6708D\u65E5", lll: "YYYY\u5E74M\u6708D\u65E5 HH:mm", llll: "YYYY\u5E74M\u6708D\u65E5dddd HH:mm" }, relativeTime: { future: "%s\u540E", past: "%s\u524D", s: "\u51E0\u79D2", m: "1 \u5206\u949F", mm: "%d \u5206\u949F", h: "1 \u5C0F\u65F6", hh: "%d \u5C0F\u65F6", d: "1 \u5929", dd: "%d \u5929", M: "1 \u4E2A\u6708", MM: "%d \u4E2A\u6708", y: "1 \u5E74", yy: "%d \u5E74" }, meridiem: function(e3, _2) {
         var t4 = 100 * e3 + _2;
         return t4 < 600 ? "\u51CC\u6668" : t4 < 900 ? "\u65E9\u4E0A" : t4 < 1100 ? "\u4E0A\u5348" : t4 < 1300 ? "\u4E2D\u5348" : t4 < 1800 ? "\u4E0B\u5348" : "\u665A\u4E0A";
       } };
@@ -36356,9 +36377,74 @@ var Item = class {
 
 // src/util.ts
 var import_obsidian4 = require("obsidian");
+
+// src/constant.ts
+var ERROR_MESSAGES = {
+  NO_FRONT_MATTER_TAG: "Please add the tags field for frontMatter!",
+  NO_DATAVIEW_INSTALL: "You need to install dataview first!",
+  FAILED_DATAVIEW_API: "Dataview API enable failed!",
+  NO_VIEW_PROVIDED: "Please provide a view name!",
+  NO_VIEW_EXISTED: "There is no this view in periodic PARA plugin",
+  NO_README_EXIST: "There is no README.md or xxx.README.md in ",
+  NO_TEMPLATE_EXIST: "There is no template file exist: ",
+  TAGS_MUST_INPUT: "Please input tags!",
+  DAILY_RECORD_FETCH_FAILED: "Fetch daily record failed: ",
+  RESOURCE_FETCH_FAILED: "Fetch resource failed: ",
+  NO_DAILY_RECORD_HEADER: "Please set daily record header in Periodic PARA plugin",
+  NO_DAILY_RECORD_API: "Please set daily record API in Periodic PARA plugin",
+  NO_DAILY_RECORD_TOKEN: "Please set daily record access token in Periodic PARA plugin",
+  NO_DAILY_FILE_EXIST: "Daily file not exists, please create it first: "
+};
+var PARA = "PARA Notes";
+var PROJECT = "Project";
+var AREA = "Area";
+var RESOURCE = "Resource";
+var ARCHIVE = "Archive";
+var PERIODIC = "Periodic Notes";
+var DAILY = "Daily";
+var WEEKLY = "Weekly";
+var MONTHLY = "Monthly";
+var QUARTERLY = "Quarterly";
+var YEARLY = "Yearly";
+
+// src/util.ts
 function renderError(app, msg, containerEl, sourcePath) {
   const component = new import_obsidian4.Component();
   return import_obsidian4.MarkdownRenderer.render(app, msg, containerEl, sourcePath, component);
+}
+async function createFile(app, options) {
+  if (!app) {
+    return;
+  }
+  const { templateFile, folder, file, tag } = options;
+  const templateTFile = app.vault.getAbstractFileByPath(templateFile);
+  if (!templateTFile) {
+    return new import_obsidian4.Notice(ERROR_MESSAGES.NO_TEMPLATE_EXIST + templateFile);
+  }
+  if (templateTFile instanceof import_obsidian4.TFile) {
+    const templateContent = await app.vault.cachedRead(templateTFile);
+    if (!folder || !file) {
+      return;
+    }
+    let tFile = app.vault.getAbstractFileByPath(file);
+    if (tFile && tFile instanceof import_obsidian4.TFile) {
+      return await app.workspace.getLeaf().openFile(tFile);
+    }
+    if (!app.vault.getAbstractFileByPath(folder)) {
+      app.vault.createFolder(folder);
+    }
+    const fileCreated = await app.vault.create(file, templateContent);
+    await Promise.all([
+      app.fileManager.processFrontMatter(fileCreated, (frontMatter) => {
+        if (!tag) {
+          return;
+        }
+        frontMatter.tags = frontMatter.tags || [];
+        frontMatter.tags.push(tag);
+      }),
+      app.workspace.getLeaf().openFile(fileCreated)
+    ]);
+  }
 }
 function isDarkTheme() {
   var _a;
@@ -36617,35 +36703,6 @@ var Archive = class extends Item {
 
 // src/periodic/Task.ts
 var import_obsidian9 = require("obsidian");
-
-// src/constant.ts
-var ERROR_MESSAGES = {
-  NO_FRONT_MATTER_TAG: "Please add the tags field for frontMatter!",
-  NO_DATAVIEW_INSTALL: "You need to install dataview first!",
-  FAILED_DATAVIEW_API: "Dataview API enable failed!",
-  NO_VIEW_PROVIDED: "Please provide a view name!",
-  NO_VIEW_EXISTED: "There is no this view in periodic PARA plugin",
-  NO_README_EXIST: "There is no README.md or xxx.README.md in ",
-  NO_TEMPLATE_EXIST: "There is no template file exist: ",
-  TAGS_MUST_INPUT: "Please input tags!",
-  DAILY_RECORD_FETCH_FAILED: "Fetch daily record failed: ",
-  RESOURCE_FETCH_FAILED: "Fetch resource failed: ",
-  NO_DAILY_RECORD_HEADER: "Please set daily record header in Periodic PARA plugin",
-  NO_DAILY_RECORD_API: "Please set daily record API in Periodic PARA plugin",
-  NO_DAILY_RECORD_TOKEN: "Please set daily record access token in Periodic PARA plugin",
-  NO_DAILY_FILE_EXIST: "Daily file not exists, please create it first: "
-};
-var PARA = "PARA Notes";
-var PROJECT = "Project";
-var AREA = "Area";
-var RESOURCE = "Resource";
-var ARCHIVE = "Archive";
-var PERIODIC = "Periodic Notes";
-var DAILY = "Daily";
-var WEEKLY = "Weekly";
-var MONTHLY = "Monthly";
-var QUARTERLY = "Quarterly";
-var YEARLY = "Yearly";
 
 // src/periodic/File.ts
 var import_obsidian8 = require("obsidian");
@@ -42389,14 +42446,14 @@ var en_US_default6 = localeValues;
 // node_modules/.pnpm/antd@5.8.2_react-dom@18.2.0_react@18.2.0/node_modules/antd/es/modal/locale.js
 var runtimeLocale = Object.assign({}, en_US_default6.Modal);
 var localeList = [];
-var generateLocale = () => localeList.reduce((merged, locale4) => Object.assign(Object.assign({}, merged), locale4), en_US_default6.Modal);
+var generateLocale = () => localeList.reduce((merged, locale5) => Object.assign(Object.assign({}, merged), locale5), en_US_default6.Modal);
 function changeConfirmLocale(newLocale) {
   if (newLocale) {
     const cloneLocale = Object.assign({}, newLocale);
     localeList.push(cloneLocale);
     runtimeLocale = generateLocale();
     return () => {
-      localeList = localeList.filter((locale4) => locale4 !== cloneLocale);
+      localeList = localeList.filter((locale5) => locale5 !== cloneLocale);
       runtimeLocale = generateLocale();
     };
   }
@@ -42414,9 +42471,9 @@ var useLocale = (componentName, defaultLocale) => {
   const fullLocale = React16.useContext(context_default);
   const getLocale = React16.useMemo(() => {
     var _a;
-    const locale4 = defaultLocale || en_US_default6[componentName];
+    const locale5 = defaultLocale || en_US_default6[componentName];
     const localeFromContext = (_a = fullLocale === null || fullLocale === void 0 ? void 0 : fullLocale[componentName]) !== null && _a !== void 0 ? _a : {};
-    return Object.assign(Object.assign({}, typeof locale4 === "function" ? locale4() : locale4), localeFromContext || {});
+    return Object.assign(Object.assign({}, typeof locale5 === "function" ? locale5() : locale5), localeFromContext || {});
   }, [componentName, defaultLocale, fullLocale]);
   const getLocaleCode = React16.useMemo(() => {
     const localeCode = fullLocale === null || fullLocale === void 0 ? void 0 : fullLocale.locale;
@@ -42434,7 +42491,7 @@ var useLocale_default = useLocale;
 var ANT_MARK = "internalMark";
 var LocaleProvider = (props) => {
   const {
-    locale: locale4 = {},
+    locale: locale5 = {},
     children,
     _ANT_MARK__
   } = props;
@@ -42442,12 +42499,12 @@ var LocaleProvider = (props) => {
     true ? warning_default2(_ANT_MARK__ === ANT_MARK, "LocaleProvider", "`LocaleProvider` is deprecated. Please use `locale` with `ConfigProvider` instead: http://u.ant.design/locale") : void 0;
   }
   React17.useEffect(() => {
-    const clearLocale = changeConfirmLocale(locale4 && locale4.Modal);
+    const clearLocale = changeConfirmLocale(locale5 && locale5.Modal);
     return clearLocale;
-  }, [locale4]);
-  const getMemoizedContextValue = React17.useMemo(() => Object.assign(Object.assign({}, locale4), {
+  }, [locale5]);
+  const getMemoizedContextValue = React17.useMemo(() => Object.assign(Object.assign({}, locale5), {
     exist: true
-  }), [locale4]);
+  }), [locale5]);
   return /* @__PURE__ */ React17.createElement(context_default.Provider, {
     value: getMemoizedContextValue
   }, children);
@@ -45479,7 +45536,7 @@ var ProviderChildren = (props) => {
     alert,
     anchor,
     form,
-    locale: locale4,
+    locale: locale5,
     componentSize,
     direction,
     space,
@@ -45565,7 +45622,7 @@ var ProviderChildren = (props) => {
     autoInsertSpaceInButton,
     alert,
     anchor,
-    locale: locale4 || legacyLocale,
+    locale: locale5 || legacyLocale,
     direction,
     space,
     virtual,
@@ -45652,9 +45709,9 @@ var ProviderChildren = (props) => {
       value: validateMessages
     }, children);
   }
-  if (locale4) {
+  if (locale5) {
     childNode = /* @__PURE__ */ React34.createElement(locale_default, {
-      locale: locale4,
+      locale: locale5,
       _ANT_MARK__: ANT_MARK
     }, childNode);
   }
@@ -56944,9 +57001,9 @@ var localeMap = {
   zh_HK: "zh-hk",
   zh_TW: "zh-tw"
 };
-var parseLocale = function parseLocale2(locale4) {
-  var mapLocale = localeMap[locale4];
-  return mapLocale || locale4.split("_")[0];
+var parseLocale = function parseLocale2(locale5) {
+  var mapLocale = localeMap[locale5];
+  return mapLocale || locale5.split("_")[0];
 };
 var parseNoMatchNotice = function parseNoMatchNotice2() {
   noteOnce(false, "Not match any format. Please help to fire a issue about this.");
@@ -57020,26 +57077,26 @@ var generateConfig = {
     return date4.isValid();
   },
   locale: {
-    getWeekFirstDay: function getWeekFirstDay(locale4) {
-      return (0, import_dayjs.default)().locale(parseLocale(locale4)).localeData().firstDayOfWeek();
+    getWeekFirstDay: function getWeekFirstDay(locale5) {
+      return (0, import_dayjs.default)().locale(parseLocale(locale5)).localeData().firstDayOfWeek();
     },
-    getWeekFirstDate: function getWeekFirstDate(locale4, date4) {
-      return date4.locale(parseLocale(locale4)).weekday(0);
+    getWeekFirstDate: function getWeekFirstDate(locale5, date4) {
+      return date4.locale(parseLocale(locale5)).weekday(0);
     },
-    getWeek: function getWeek(locale4, date4) {
-      return date4.locale(parseLocale(locale4)).week();
+    getWeek: function getWeek(locale5, date4) {
+      return date4.locale(parseLocale(locale5)).week();
     },
-    getShortWeekDays: function getShortWeekDays(locale4) {
-      return (0, import_dayjs.default)().locale(parseLocale(locale4)).localeData().weekdaysMin();
+    getShortWeekDays: function getShortWeekDays(locale5) {
+      return (0, import_dayjs.default)().locale(parseLocale(locale5)).localeData().weekdaysMin();
     },
-    getShortMonths: function getShortMonths(locale4) {
-      return (0, import_dayjs.default)().locale(parseLocale(locale4)).localeData().monthsShort();
+    getShortMonths: function getShortMonths(locale5) {
+      return (0, import_dayjs.default)().locale(parseLocale(locale5)).localeData().monthsShort();
     },
-    format: function format2(locale4, date4, _format) {
-      return date4.locale(parseLocale(locale4)).format(_format);
+    format: function format2(locale5, date4, _format) {
+      return date4.locale(parseLocale(locale5)).format(_format);
     },
-    parse: function parse2(locale4, text, formats) {
-      var localeStr = parseLocale(locale4);
+    parse: function parse2(locale5, text, formats) {
+      var localeStr = parseLocale(locale5);
       for (var i2 = 0; i2 < formats.length; i2 += 1) {
         var format3 = formats[i2];
         var formatText = text;
@@ -57140,12 +57197,12 @@ function isSameTime(generateConfig2, time1, time2) {
   }
   return generateConfig2.getHour(time1) === generateConfig2.getHour(time2) && generateConfig2.getMinute(time1) === generateConfig2.getMinute(time2) && generateConfig2.getSecond(time1) === generateConfig2.getSecond(time2);
 }
-function isSameWeek(generateConfig2, locale4, date1, date22) {
+function isSameWeek(generateConfig2, locale5, date1, date22) {
   var equal = isNullEqual(date1, date22);
   if (typeof equal === "boolean") {
     return equal;
   }
-  return isSameYear(generateConfig2, date1, date22) && generateConfig2.locale.getWeek(locale4, date1) === generateConfig2.locale.getWeek(locale4, date22);
+  return isSameYear(generateConfig2, date1, date22) && generateConfig2.locale.getWeek(locale5, date1) === generateConfig2.locale.getWeek(locale5, date22);
 }
 function isEqual2(generateConfig2, value1, value2) {
   return isSameDate(generateConfig2, value1, value2) && isSameTime(generateConfig2, value1, value2);
@@ -57156,8 +57213,8 @@ function isInRange(generateConfig2, startDate, endDate, current) {
   }
   return !isSameDate(generateConfig2, startDate, current) && !isSameDate(generateConfig2, endDate, current) && generateConfig2.isAfter(current, startDate) && generateConfig2.isAfter(endDate, current);
 }
-function getWeekStartDate(locale4, generateConfig2, value) {
-  var weekFirstDay = generateConfig2.locale.getWeekFirstDay(locale4);
+function getWeekStartDate(locale5, generateConfig2, value) {
+  var weekFirstDay = generateConfig2.locale.getWeekFirstDay(locale5);
   var monthStartDate = generateConfig2.setDate(value, 1);
   var startDateWeekDay = generateConfig2.getWeekDay(monthStartDate);
   var alignStartDate = generateConfig2.addDate(monthStartDate, weekFirstDay - startDateWeekDay);
@@ -57179,15 +57236,15 @@ function getClosingViewDate(viewDate, picker, generateConfig2) {
   }
 }
 function formatValue(value, _ref) {
-  var generateConfig2 = _ref.generateConfig, locale4 = _ref.locale, format3 = _ref.format;
-  return typeof format3 === "function" ? format3(value) : generateConfig2.locale.format(locale4.locale, value, format3);
+  var generateConfig2 = _ref.generateConfig, locale5 = _ref.locale, format3 = _ref.format;
+  return typeof format3 === "function" ? format3(value) : generateConfig2.locale.format(locale5.locale, value, format3);
 }
 function parseValue(value, _ref2) {
-  var generateConfig2 = _ref2.generateConfig, locale4 = _ref2.locale, formatList = _ref2.formatList;
+  var generateConfig2 = _ref2.generateConfig, locale5 = _ref2.locale, formatList = _ref2.formatList;
   if (!value || typeof formatList[0] === "function") {
     return null;
   }
-  return generateConfig2.locale.parse(locale4.locale, value, formatList);
+  return generateConfig2.locale.parse(locale5.locale, value, formatList);
 }
 function getCellDateDisabled(_ref3) {
   var cellDate = _ref3.cellDate, mode = _ref3.mode, disabledDate = _ref3.disabledDate, generateConfig2 = _ref3.generateConfig;
@@ -57263,7 +57320,7 @@ function getCellDateDisabled(_ref3) {
 
 // node_modules/.pnpm/rc-picker@3.12.0_dayjs@1.11.9_react-dom@18.2.0_react@18.2.0/node_modules/rc-picker/es/hooks/useValueTexts.js
 function useValueTexts(value, _ref) {
-  var formatList = _ref.formatList, generateConfig2 = _ref.generateConfig, locale4 = _ref.locale;
+  var formatList = _ref.formatList, generateConfig2 = _ref.generateConfig, locale5 = _ref.locale;
   return useMemo(function() {
     if (!value) {
       return [[""], ""];
@@ -57274,7 +57331,7 @@ function useValueTexts(value, _ref) {
       var format3 = formatList[i2];
       var formatStr = formatValue(value, {
         generateConfig: generateConfig2,
-        locale: locale4,
+        locale: locale5,
         format: format3
       });
       fullValueTexts.push(formatStr);
@@ -57294,7 +57351,7 @@ function useValueTexts(value, _ref) {
 
 // node_modules/.pnpm/rc-picker@3.12.0_dayjs@1.11.9_react-dom@18.2.0_react@18.2.0/node_modules/rc-picker/es/hooks/useHoverValue.js
 function useHoverValue(valueText, _ref) {
-  var formatList = _ref.formatList, generateConfig2 = _ref.generateConfig, locale4 = _ref.locale;
+  var formatList = _ref.formatList, generateConfig2 = _ref.generateConfig, locale5 = _ref.locale;
   var _useState = (0, import_react32.useState)(null), _useState2 = _slicedToArray(_useState, 2), value = _useState2[0], internalSetValue = _useState2[1];
   var raf3 = (0, import_react32.useRef)(null);
   function setValue(val) {
@@ -57311,7 +57368,7 @@ function useHoverValue(valueText, _ref) {
   var _useValueTexts = useValueTexts(value, {
     formatList,
     generateConfig: generateConfig2,
-    locale: locale4
+    locale: locale5
   }), _useValueTexts2 = _slicedToArray(_useValueTexts, 2), firstText = _useValueTexts2[1];
   function onEnter(date4) {
     setValue(date4);
@@ -57901,14 +57958,14 @@ function PanelBody(_ref) {
 
 // node_modules/.pnpm/rc-picker@3.12.0_dayjs@1.11.9_react-dom@18.2.0_react@18.2.0/node_modules/rc-picker/es/panels/DatePanel/DateBody.js
 function DateBody(props) {
-  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, prefixColumn = props.prefixColumn, locale4 = props.locale, rowCount = props.rowCount, viewDate = props.viewDate, value = props.value, cellRender = props.cellRender, isSameCell = props.isSameCell;
+  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, prefixColumn = props.prefixColumn, locale5 = props.locale, rowCount = props.rowCount, viewDate = props.viewDate, value = props.value, cellRender = props.cellRender, isSameCell = props.isSameCell;
   var _React$useContext = React122.useContext(RangeContext_default), rangedValue = _React$useContext.rangedValue, hoverRangedValue = _React$useContext.hoverRangedValue;
-  var baseDate = getWeekStartDate(locale4.locale, generateConfig2, viewDate);
+  var baseDate = getWeekStartDate(locale5.locale, generateConfig2, viewDate);
   var cellPrefixCls = "".concat(prefixCls, "-cell");
-  var weekFirstDay = generateConfig2.locale.getWeekFirstDay(locale4.locale);
+  var weekFirstDay = generateConfig2.locale.getWeekFirstDay(locale5.locale);
   var today = generateConfig2.getNow();
   var headerCells = [];
-  var weekDaysLocale = locale4.shortWeekDays || (generateConfig2.locale.getShortWeekDays ? generateConfig2.locale.getShortWeekDays(locale4.locale) : []);
+  var weekDaysLocale = locale5.shortWeekDays || (generateConfig2.locale.getShortWeekDays ? generateConfig2.locale.getShortWeekDays(locale5.locale) : []);
   if (prefixColumn) {
     headerCells.push(/* @__PURE__ */ React122.createElement("th", {
       key: "empty",
@@ -57942,7 +57999,7 @@ function DateBody(props) {
       originNode: wrapperNode,
       today,
       type: "date",
-      locale: locale4
+      locale: locale5
     });
   } : void 0;
   return /* @__PURE__ */ React122.createElement(PanelBody, _extends({}, props, {
@@ -57955,7 +58012,7 @@ function DateBody(props) {
     getCellDate: generateConfig2.addDate,
     titleCell: function titleCell(date4) {
       return formatValue(date4, {
-        locale: locale4,
+        locale: locale5,
         format: "YYYY-MM-DD",
         generateConfig: generateConfig2
       });
@@ -58010,13 +58067,13 @@ var Header_default = Header;
 
 // node_modules/.pnpm/rc-picker@3.12.0_dayjs@1.11.9_react-dom@18.2.0_react@18.2.0/node_modules/rc-picker/es/panels/DatePanel/DateHeader.js
 function DateHeader(props) {
-  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, locale4 = props.locale, viewDate = props.viewDate, onNextMonth = props.onNextMonth, onPrevMonth = props.onPrevMonth, onNextYear = props.onNextYear, onPrevYear = props.onPrevYear, onYearClick = props.onYearClick, onMonthClick = props.onMonthClick;
+  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, locale5 = props.locale, viewDate = props.viewDate, onNextMonth = props.onNextMonth, onPrevMonth = props.onPrevMonth, onNextYear = props.onNextYear, onPrevYear = props.onPrevYear, onYearClick = props.onYearClick, onMonthClick = props.onMonthClick;
   var _React$useContext = React124.useContext(PanelContext_default), hideHeader = _React$useContext.hideHeader;
   if (hideHeader) {
     return null;
   }
   var headerPrefixCls = "".concat(prefixCls, "-header");
-  var monthsLocale = locale4.shortMonths || (generateConfig2.locale.getShortMonths ? generateConfig2.locale.getShortMonths(locale4.locale) : []);
+  var monthsLocale = locale5.shortMonths || (generateConfig2.locale.getShortMonths ? generateConfig2.locale.getShortMonths(locale5.locale) : []);
   var month = generateConfig2.getMonth(viewDate);
   var yearNode = /* @__PURE__ */ React124.createElement("button", {
     type: "button",
@@ -58025,8 +58082,8 @@ function DateHeader(props) {
     tabIndex: -1,
     className: "".concat(prefixCls, "-year-btn")
   }, formatValue(viewDate, {
-    locale: locale4,
-    format: locale4.yearFormat,
+    locale: locale5,
+    format: locale5.yearFormat,
     generateConfig: generateConfig2
   }));
   var monthNode = /* @__PURE__ */ React124.createElement("button", {
@@ -58035,12 +58092,12 @@ function DateHeader(props) {
     onClick: onMonthClick,
     tabIndex: -1,
     className: "".concat(prefixCls, "-month-btn")
-  }, locale4.monthFormat ? formatValue(viewDate, {
-    locale: locale4,
-    format: locale4.monthFormat,
+  }, locale5.monthFormat ? formatValue(viewDate, {
+    locale: locale5,
+    format: locale5.monthFormat,
     generateConfig: generateConfig2
   }) : monthsLocale[month]);
-  var monthYearNodes = locale4.monthBeforeYear ? [monthNode, yearNode] : [yearNode, monthNode];
+  var monthYearNodes = locale5.monthBeforeYear ? [monthNode, yearNode] : [yearNode, monthNode];
   return /* @__PURE__ */ React124.createElement(Header_default, _extends({}, props, {
     prefixCls: headerPrefixCls,
     onSuperPrev: onPrevYear,
@@ -58135,12 +58192,12 @@ function TimeHeader(props) {
   if (hideHeader) {
     return null;
   }
-  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, locale4 = props.locale, value = props.value, format3 = props.format;
+  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, locale5 = props.locale, value = props.value, format3 = props.format;
   var headerPrefixCls = "".concat(prefixCls, "-header");
   return /* @__PURE__ */ React126.createElement(Header_default, {
     prefixCls: headerPrefixCls
   }, value ? formatValue(value, {
-    locale: locale4,
+    locale: locale5,
     format: format3,
     generateConfig: generateConfig2
   }) : "\xA0");
@@ -58278,7 +58335,7 @@ function generateUnits(start, end, step, disabledUnits) {
   return units;
 }
 function TimeBody(props) {
-  var generateConfig2 = props.generateConfig, prefixCls = props.prefixCls, operationRef = props.operationRef, activeColumnIndex = props.activeColumnIndex, value = props.value, showHour = props.showHour, showMinute = props.showMinute, showSecond = props.showSecond, use12Hours = props.use12Hours, _props$hourStep = props.hourStep, hourStep = _props$hourStep === void 0 ? 1 : _props$hourStep, _props$minuteStep = props.minuteStep, minuteStep = _props$minuteStep === void 0 ? 1 : _props$minuteStep, _props$secondStep = props.secondStep, secondStep = _props$secondStep === void 0 ? 1 : _props$secondStep, disabledHours = props.disabledHours, disabledMinutes = props.disabledMinutes, disabledSeconds = props.disabledSeconds, disabledTime = props.disabledTime, hideDisabledOptions = props.hideDisabledOptions, onSelect = props.onSelect, cellRender = props.cellRender, locale4 = props.locale;
+  var generateConfig2 = props.generateConfig, prefixCls = props.prefixCls, operationRef = props.operationRef, activeColumnIndex = props.activeColumnIndex, value = props.value, showHour = props.showHour, showMinute = props.showMinute, showSecond = props.showSecond, use12Hours = props.use12Hours, _props$hourStep = props.hourStep, hourStep = _props$hourStep === void 0 ? 1 : _props$hourStep, _props$minuteStep = props.minuteStep, minuteStep = _props$minuteStep === void 0 ? 1 : _props$minuteStep, _props$secondStep = props.secondStep, secondStep = _props$secondStep === void 0 ? 1 : _props$secondStep, disabledHours = props.disabledHours, disabledMinutes = props.disabledMinutes, disabledSeconds = props.disabledSeconds, disabledTime = props.disabledTime, hideDisabledOptions = props.hideDisabledOptions, onSelect = props.onSelect, cellRender = props.cellRender, locale5 = props.locale;
   var columns = [];
   var contentPrefixCls = "".concat(prefixCls, "-content");
   var columnPrefixCls = "".concat(prefixCls, "-time-panel");
@@ -58387,7 +58444,7 @@ function TimeBody(props) {
     type: "hour",
     info: {
       today: now,
-      locale: locale4,
+      locale: locale5,
       cellRender
     }
   }), hour, hours, function(num) {
@@ -58398,7 +58455,7 @@ function TimeBody(props) {
     type: "minute",
     info: {
       today: now,
-      locale: locale4,
+      locale: locale5,
       cellRender
     }
   }), minute, minutes, function(num) {
@@ -58409,7 +58466,7 @@ function TimeBody(props) {
     type: "second",
     info: {
       today: now,
-      locale: locale4,
+      locale: locale5,
       cellRender
     }
   }), second, seconds, function(num) {
@@ -58424,7 +58481,7 @@ function TimeBody(props) {
     type: "meridiem",
     info: {
       today: now,
-      locale: locale4,
+      locale: locale5,
       cellRender
     }
   }), PMIndex, [{
@@ -58614,7 +58671,7 @@ var DECADE_COL_COUNT = 3;
 var DECADE_ROW_COUNT = 4;
 function DecadeBody(props) {
   var DECADE_UNIT_DIFF_DES = DECADE_UNIT_DIFF - 1;
-  var prefixCls = props.prefixCls, viewDate = props.viewDate, generateConfig2 = props.generateConfig, cellRender = props.cellRender, locale4 = props.locale;
+  var prefixCls = props.prefixCls, viewDate = props.viewDate, generateConfig2 = props.generateConfig, cellRender = props.cellRender, locale5 = props.locale;
   var cellPrefixCls = "".concat(prefixCls, "-cell");
   var yearNumber = generateConfig2.getYear(viewDate);
   var decadeYearNumber = Math.floor(yearNumber / DECADE_UNIT_DIFF) * DECADE_UNIT_DIFF;
@@ -58632,7 +58689,7 @@ function DecadeBody(props) {
       originNode: wrapperNode,
       today: generateConfig2.getNow(),
       type: "decade",
-      locale: locale4
+      locale: locale5
     });
   } : void 0;
   return /* @__PURE__ */ React132.createElement(PanelBody, _extends({}, props, {
@@ -58706,7 +58763,7 @@ var React136 = __toESM(require_react());
 // node_modules/.pnpm/rc-picker@3.12.0_dayjs@1.11.9_react-dom@18.2.0_react@18.2.0/node_modules/rc-picker/es/panels/MonthPanel/MonthHeader.js
 var React134 = __toESM(require_react());
 function MonthHeader(props) {
-  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, locale4 = props.locale, viewDate = props.viewDate, onNextYear = props.onNextYear, onPrevYear = props.onPrevYear, onYearClick = props.onYearClick;
+  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, locale5 = props.locale, viewDate = props.viewDate, onNextYear = props.onNextYear, onPrevYear = props.onPrevYear, onYearClick = props.onYearClick;
   var _React$useContext = React134.useContext(PanelContext_default), hideHeader = _React$useContext.hideHeader;
   if (hideHeader) {
     return null;
@@ -58721,8 +58778,8 @@ function MonthHeader(props) {
     onClick: onYearClick,
     className: "".concat(prefixCls, "-year-btn")
   }, formatValue(viewDate, {
-    locale: locale4,
-    format: locale4.yearFormat,
+    locale: locale5,
+    format: locale5.yearFormat,
     generateConfig: generateConfig2
   })));
 }
@@ -58733,7 +58790,7 @@ var React135 = __toESM(require_react());
 var MONTH_COL_COUNT = 3;
 var MONTH_ROW_COUNT = 4;
 function MonthBody(props) {
-  var prefixCls = props.prefixCls, locale4 = props.locale, value = props.value, viewDate = props.viewDate, generateConfig2 = props.generateConfig, cellRender = props.cellRender;
+  var prefixCls = props.prefixCls, locale5 = props.locale, value = props.value, viewDate = props.viewDate, generateConfig2 = props.generateConfig, cellRender = props.cellRender;
   var _React$useContext = React135.useContext(RangeContext_default), rangedValue = _React$useContext.rangedValue, hoverRangedValue = _React$useContext.hoverRangedValue;
   var cellPrefixCls = "".concat(prefixCls, "-cell");
   var getCellClassName = useCellClassName({
@@ -58752,12 +58809,12 @@ function MonthBody(props) {
       return generateConfig2.addMonth(date4, offset);
     }
   });
-  var monthsLocale = locale4.shortMonths || (generateConfig2.locale.getShortMonths ? generateConfig2.locale.getShortMonths(locale4.locale) : []);
+  var monthsLocale = locale5.shortMonths || (generateConfig2.locale.getShortMonths ? generateConfig2.locale.getShortMonths(locale5.locale) : []);
   var baseMonth = generateConfig2.setMonth(viewDate, 0);
   var getCellNode = cellRender ? function(date4, wrapperNode) {
     return cellRender(date4, {
       originNode: wrapperNode,
-      locale: locale4,
+      locale: locale5,
       today: generateConfig2.getNow(),
       type: "month"
     });
@@ -58768,9 +58825,9 @@ function MonthBody(props) {
     baseDate: baseMonth,
     getCellNode,
     getCellText: function getCellText(date4) {
-      return locale4.monthFormat ? formatValue(date4, {
-        locale: locale4,
-        format: locale4.monthFormat,
+      return locale5.monthFormat ? formatValue(date4, {
+        locale: locale5,
+        format: locale5.monthFormat,
         generateConfig: generateConfig2
       }) : monthsLocale[generateConfig2.getMonth(date4)];
     },
@@ -58778,7 +58835,7 @@ function MonthBody(props) {
     getCellDate: generateConfig2.addMonth,
     titleCell: function titleCell(date4) {
       return formatValue(date4, {
-        locale: locale4,
+        locale: locale5,
         format: "YYYY-MM",
         generateConfig: generateConfig2
       });
@@ -58843,7 +58900,7 @@ var React139 = __toESM(require_react());
 // node_modules/.pnpm/rc-picker@3.12.0_dayjs@1.11.9_react-dom@18.2.0_react@18.2.0/node_modules/rc-picker/es/panels/QuarterPanel/QuarterHeader.js
 var React137 = __toESM(require_react());
 function QuarterHeader(props) {
-  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, locale4 = props.locale, viewDate = props.viewDate, onNextYear = props.onNextYear, onPrevYear = props.onPrevYear, onYearClick = props.onYearClick;
+  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, locale5 = props.locale, viewDate = props.viewDate, onNextYear = props.onNextYear, onPrevYear = props.onPrevYear, onYearClick = props.onYearClick;
   var _React$useContext = React137.useContext(PanelContext_default), hideHeader = _React$useContext.hideHeader;
   if (hideHeader) {
     return null;
@@ -58858,8 +58915,8 @@ function QuarterHeader(props) {
     onClick: onYearClick,
     className: "".concat(prefixCls, "-year-btn")
   }, formatValue(viewDate, {
-    locale: locale4,
-    format: locale4.yearFormat,
+    locale: locale5,
+    format: locale5.yearFormat,
     generateConfig: generateConfig2
   })));
 }
@@ -58870,7 +58927,7 @@ var React138 = __toESM(require_react());
 var QUARTER_COL_COUNT = 4;
 var QUARTER_ROW_COUNT = 1;
 function QuarterBody(props) {
-  var prefixCls = props.prefixCls, locale4 = props.locale, value = props.value, viewDate = props.viewDate, generateConfig2 = props.generateConfig, cellRender = props.cellRender;
+  var prefixCls = props.prefixCls, locale5 = props.locale, value = props.value, viewDate = props.viewDate, generateConfig2 = props.generateConfig, cellRender = props.cellRender;
   var _React$useContext = React138.useContext(RangeContext_default), rangedValue = _React$useContext.rangedValue, hoverRangedValue = _React$useContext.hoverRangedValue;
   var cellPrefixCls = "".concat(prefixCls, "-cell");
   var getCellClassName = useCellClassName({
@@ -58893,7 +58950,7 @@ function QuarterBody(props) {
   var getCellNode = cellRender ? function(date4, wrapperNode) {
     return cellRender(date4, {
       originNode: wrapperNode,
-      locale: locale4,
+      locale: locale5,
       today: generateConfig2.getNow(),
       type: "quarter"
     });
@@ -58905,8 +58962,8 @@ function QuarterBody(props) {
     getCellNode,
     getCellText: function getCellText(date4) {
       return formatValue(date4, {
-        locale: locale4,
-        format: locale4.quarterFormat || "[Q]Q",
+        locale: locale5,
+        format: locale5.quarterFormat || "[Q]Q",
         generateConfig: generateConfig2
       });
     },
@@ -58916,7 +58973,7 @@ function QuarterBody(props) {
     },
     titleCell: function titleCell(date4) {
       return formatValue(date4, {
-        locale: locale4,
+        locale: locale5,
         format: "YYYY-[Q]Q",
         generateConfig: generateConfig2
       });
@@ -58975,7 +59032,7 @@ var QuarterPanel_default = QuarterPanel;
 var import_classnames35 = __toESM(require_classnames());
 var React140 = __toESM(require_react());
 function WeekPanel(props) {
-  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, locale4 = props.locale, value = props.value, disabledDate = props.disabledDate, onSelect = props.onSelect;
+  var prefixCls = props.prefixCls, generateConfig2 = props.generateConfig, locale5 = props.locale, value = props.value, disabledDate = props.disabledDate, onSelect = props.onSelect;
   var _React$useContext = React140.useContext(RangeContext_default), rangedValue = _React$useContext.rangedValue, hoverRangedValue = _React$useContext.hoverRangedValue;
   var _React$useContext2 = React140.useContext(PanelContext_default), onDateMouseEnter = _React$useContext2.onDateMouseEnter, onDateMouseLeave = _React$useContext2.onDateMouseLeave;
   var rangeStart = (hoverRangedValue === null || hoverRangedValue === void 0 ? void 0 : hoverRangedValue[0]) || (rangedValue === null || rangedValue === void 0 ? void 0 : rangedValue[0]);
@@ -59008,14 +59065,14 @@ function WeekPanel(props) {
       }
     }, /* @__PURE__ */ React140.createElement("div", {
       className: "".concat(cellPrefixCls, "-inner")
-    }, generateConfig2.locale.getWeek(locale4.locale, date4)));
+    }, generateConfig2.locale.getWeek(locale5.locale, date4)));
   };
   var rowPrefixCls = "".concat(prefixCls, "-week-panel-row");
   var rowClassName = function rowClassName2(date4) {
     var _classNames;
-    var isRangeStart = isSameWeek(generateConfig2, locale4.locale, rangeStart, date4);
-    var isRangeEnd = isSameWeek(generateConfig2, locale4.locale, rangeEnd, date4);
-    return (0, import_classnames35.default)(rowPrefixCls, (_classNames = {}, _defineProperty(_classNames, "".concat(rowPrefixCls, "-selected"), !rangedValue && isSameWeek(generateConfig2, locale4.locale, value, date4)), _defineProperty(_classNames, "".concat(rowPrefixCls, "-range-start"), isRangeStart), _defineProperty(_classNames, "".concat(rowPrefixCls, "-range-end"), isRangeEnd), _defineProperty(_classNames, "".concat(rowPrefixCls, "-range-hover"), !isRangeStart && !isRangeEnd && isInRange(generateConfig2, rangeStart, rangeEnd, date4)), _classNames));
+    var isRangeStart = isSameWeek(generateConfig2, locale5.locale, rangeStart, date4);
+    var isRangeEnd = isSameWeek(generateConfig2, locale5.locale, rangeEnd, date4);
+    return (0, import_classnames35.default)(rowPrefixCls, (_classNames = {}, _defineProperty(_classNames, "".concat(rowPrefixCls, "-selected"), !rangedValue && isSameWeek(generateConfig2, locale5.locale, value, date4)), _defineProperty(_classNames, "".concat(rowPrefixCls, "-range-start"), isRangeStart), _defineProperty(_classNames, "".concat(rowPrefixCls, "-range-end"), isRangeEnd), _defineProperty(_classNames, "".concat(rowPrefixCls, "-range-hover"), !isRangeStart && !isRangeEnd && isInRange(generateConfig2, rangeStart, rangeEnd, date4)), _classNames));
   };
   return /* @__PURE__ */ React140.createElement(DatePanel_default, _extends({}, props, {
     panelName: "week",
@@ -59068,7 +59125,7 @@ var React142 = __toESM(require_react());
 var YEAR_COL_COUNT = 3;
 var YEAR_ROW_COUNT = 4;
 function YearBody(props) {
-  var prefixCls = props.prefixCls, value = props.value, viewDate = props.viewDate, locale4 = props.locale, generateConfig2 = props.generateConfig, cellRender = props.cellRender;
+  var prefixCls = props.prefixCls, value = props.value, viewDate = props.viewDate, locale5 = props.locale, generateConfig2 = props.generateConfig, cellRender = props.cellRender;
   var _React$useContext = React142.useContext(RangeContext_default), rangedValue = _React$useContext.rangedValue, hoverRangedValue = _React$useContext.hoverRangedValue;
   var yearPrefixCls = "".concat(prefixCls, "-cell");
   var yearNumber = generateConfig2.getYear(viewDate);
@@ -59099,7 +59156,7 @@ function YearBody(props) {
       originNode: wrapperNode,
       today,
       type: "year",
-      locale: locale4
+      locale: locale5
     });
   } : void 0;
   return /* @__PURE__ */ React142.createElement(PanelBody, _extends({}, props, {
@@ -59112,7 +59169,7 @@ function YearBody(props) {
     getCellDate: generateConfig2.addYear,
     titleCell: function titleCell(date4) {
       return formatValue(date4, {
-        locale: locale4,
+        locale: locale5,
         format: "YYYY",
         generateConfig: generateConfig2
       });
@@ -59185,7 +59242,7 @@ function getExtraFooter(prefixCls, mode, renderExtraFooter) {
 // node_modules/.pnpm/rc-picker@3.12.0_dayjs@1.11.9_react-dom@18.2.0_react@18.2.0/node_modules/rc-picker/es/utils/getRanges.js
 var React145 = __toESM(require_react());
 function getRanges(_ref) {
-  var prefixCls = _ref.prefixCls, _ref$components = _ref.components, components = _ref$components === void 0 ? {} : _ref$components, needConfirmButton = _ref.needConfirmButton, onNow = _ref.onNow, onOk = _ref.onOk, okDisabled = _ref.okDisabled, showNow = _ref.showNow, locale4 = _ref.locale;
+  var prefixCls = _ref.prefixCls, _ref$components = _ref.components, components = _ref$components === void 0 ? {} : _ref$components, needConfirmButton = _ref.needConfirmButton, onNow = _ref.onNow, onOk = _ref.onOk, okDisabled = _ref.okDisabled, showNow = _ref.showNow, locale5 = _ref.locale;
   var presetNode;
   var okNode;
   if (needConfirmButton) {
@@ -59196,14 +59253,14 @@ function getRanges(_ref) {
       }, /* @__PURE__ */ React145.createElement("a", {
         className: "".concat(prefixCls, "-now-btn"),
         onClick: onNow
-      }, locale4.now));
+      }, locale5.now));
     }
     okNode = needConfirmButton && /* @__PURE__ */ React145.createElement("li", {
       className: "".concat(prefixCls, "-ok")
     }, /* @__PURE__ */ React145.createElement(Button2, {
       disabled: okDisabled,
       onClick: onOk
-    }, locale4.ok));
+    }, locale5.ok));
   }
   if (!presetNode && !okNode) {
     return null;
@@ -59217,7 +59274,7 @@ function getRanges(_ref) {
 var CALENDAR_PANEL_MODE = ["date", "month"];
 function PickerPanel(props) {
   var _classNames;
-  var _ref = props, _ref$prefixCls = _ref.prefixCls, prefixCls = _ref$prefixCls === void 0 ? "rc-picker" : _ref$prefixCls, className = _ref.className, style2 = _ref.style, locale4 = _ref.locale, generateConfig2 = _ref.generateConfig, value = _ref.value, defaultValue = _ref.defaultValue, pickerValue = _ref.pickerValue, defaultPickerValue = _ref.defaultPickerValue, disabledDate = _ref.disabledDate, mode = _ref.mode, _ref$picker = _ref.picker, picker = _ref$picker === void 0 ? "date" : _ref$picker, _ref$tabIndex = _ref.tabIndex, tabIndex = _ref$tabIndex === void 0 ? 0 : _ref$tabIndex, showNow = _ref.showNow, showTime = _ref.showTime, showToday = _ref.showToday, renderExtraFooter = _ref.renderExtraFooter, hideHeader = _ref.hideHeader, onSelect = _ref.onSelect, onChange = _ref.onChange, onPanelChange = _ref.onPanelChange, onMouseDown = _ref.onMouseDown, onPickerValueChange = _ref.onPickerValueChange, _onOk = _ref.onOk, components = _ref.components, direction = _ref.direction, _ref$hourStep = _ref.hourStep, hourStep = _ref$hourStep === void 0 ? 1 : _ref$hourStep, _ref$minuteStep = _ref.minuteStep, minuteStep = _ref$minuteStep === void 0 ? 1 : _ref$minuteStep, _ref$secondStep = _ref.secondStep, secondStep = _ref$secondStep === void 0 ? 1 : _ref$secondStep, dateRender = _ref.dateRender, monthCellRender = _ref.monthCellRender, cellRender = _ref.cellRender;
+  var _ref = props, _ref$prefixCls = _ref.prefixCls, prefixCls = _ref$prefixCls === void 0 ? "rc-picker" : _ref$prefixCls, className = _ref.className, style2 = _ref.style, locale5 = _ref.locale, generateConfig2 = _ref.generateConfig, value = _ref.value, defaultValue = _ref.defaultValue, pickerValue = _ref.pickerValue, defaultPickerValue = _ref.defaultPickerValue, disabledDate = _ref.disabledDate, mode = _ref.mode, _ref$picker = _ref.picker, picker = _ref$picker === void 0 ? "date" : _ref$picker, _ref$tabIndex = _ref.tabIndex, tabIndex = _ref$tabIndex === void 0 ? 0 : _ref$tabIndex, showNow = _ref.showNow, showTime = _ref.showTime, showToday = _ref.showToday, renderExtraFooter = _ref.renderExtraFooter, hideHeader = _ref.hideHeader, onSelect = _ref.onSelect, onChange = _ref.onChange, onPanelChange = _ref.onPanelChange, onMouseDown = _ref.onMouseDown, onPickerValueChange = _ref.onPickerValueChange, _onOk = _ref.onOk, components = _ref.components, direction = _ref.direction, _ref$hourStep = _ref.hourStep, hourStep = _ref$hourStep === void 0 ? 1 : _ref$hourStep, _ref$minuteStep = _ref.minuteStep, minuteStep = _ref$minuteStep === void 0 ? 1 : _ref$minuteStep, _ref$secondStep = _ref.secondStep, secondStep = _ref$secondStep === void 0 ? 1 : _ref$secondStep, dateRender = _ref.dateRender, monthCellRender = _ref.monthCellRender, cellRender = _ref.cellRender;
   var needConfirmButton = picker === "date" && !!showTime || picker === "time";
   var isHourStepValid = 24 % hourStep === 0;
   var isMinuteStepValid = 60 % minuteStep === 0;
@@ -59496,7 +59553,7 @@ function PickerPanel(props) {
         components,
         needConfirmButton,
         okDisabled: !mergedValue || disabledDate && disabledDate(mergedValue),
-        locale: locale4,
+        locale: locale5,
         showNow,
         onNow: needConfirmButton && onNow,
         onOk: function onOk() {
@@ -59523,7 +59580,7 @@ function PickerPanel(props) {
           triggerSelect(now, "mouse", true);
         }
       }
-    }, locale4.today);
+    }, locale5.today);
   }
   return /* @__PURE__ */ React146.createElement(PanelContext_default.Provider, {
     value: _objectSpread2(_objectSpread2({}, panelContext), {}, {
@@ -59655,7 +59712,7 @@ function getClearIcon(prefixCls, allowClear, clearIcon) {
 // node_modules/.pnpm/rc-picker@3.12.0_dayjs@1.11.9_react-dom@18.2.0_react@18.2.0/node_modules/rc-picker/es/Picker.js
 function InnerPicker(props) {
   var _classNames2;
-  var _ref = props, _ref$prefixCls = _ref.prefixCls, prefixCls = _ref$prefixCls === void 0 ? "rc-picker" : _ref$prefixCls, id = _ref.id, name = _ref.name, tabIndex = _ref.tabIndex, style2 = _ref.style, className = _ref.className, dropdownClassName = _ref.dropdownClassName, dropdownAlign = _ref.dropdownAlign, popupStyle = _ref.popupStyle, transitionName = _ref.transitionName, generateConfig2 = _ref.generateConfig, locale4 = _ref.locale, inputReadOnly = _ref.inputReadOnly, allowClear = _ref.allowClear, autoFocus = _ref.autoFocus, showTime = _ref.showTime, _ref$picker = _ref.picker, picker = _ref$picker === void 0 ? "date" : _ref$picker, format3 = _ref.format, use12Hours = _ref.use12Hours, value = _ref.value, defaultValue = _ref.defaultValue, presets = _ref.presets, open = _ref.open, defaultOpen = _ref.defaultOpen, defaultOpenValue = _ref.defaultOpenValue, suffixIcon = _ref.suffixIcon, clearIcon = _ref.clearIcon, disabled = _ref.disabled, disabledDate = _ref.disabledDate, placeholder = _ref.placeholder, getPopupContainer = _ref.getPopupContainer, pickerRef = _ref.pickerRef, panelRender = _ref.panelRender, onChange = _ref.onChange, onOpenChange = _ref.onOpenChange, onFocus = _ref.onFocus, onBlur = _ref.onBlur, onMouseDown = _ref.onMouseDown, onMouseUp = _ref.onMouseUp, onMouseEnter = _ref.onMouseEnter, onMouseLeave = _ref.onMouseLeave, onContextMenu = _ref.onContextMenu, onClick = _ref.onClick, _onKeyDown = _ref.onKeyDown, _onSelect = _ref.onSelect, direction = _ref.direction, _ref$autoComplete = _ref.autoComplete, autoComplete = _ref$autoComplete === void 0 ? "off" : _ref$autoComplete, inputRender = _ref.inputRender, changeOnBlur = _ref.changeOnBlur;
+  var _ref = props, _ref$prefixCls = _ref.prefixCls, prefixCls = _ref$prefixCls === void 0 ? "rc-picker" : _ref$prefixCls, id = _ref.id, name = _ref.name, tabIndex = _ref.tabIndex, style2 = _ref.style, className = _ref.className, dropdownClassName = _ref.dropdownClassName, dropdownAlign = _ref.dropdownAlign, popupStyle = _ref.popupStyle, transitionName = _ref.transitionName, generateConfig2 = _ref.generateConfig, locale5 = _ref.locale, inputReadOnly = _ref.inputReadOnly, allowClear = _ref.allowClear, autoFocus = _ref.autoFocus, showTime = _ref.showTime, _ref$picker = _ref.picker, picker = _ref$picker === void 0 ? "date" : _ref$picker, format3 = _ref.format, use12Hours = _ref.use12Hours, value = _ref.value, defaultValue = _ref.defaultValue, presets = _ref.presets, open = _ref.open, defaultOpen = _ref.defaultOpen, defaultOpenValue = _ref.defaultOpenValue, suffixIcon = _ref.suffixIcon, clearIcon = _ref.clearIcon, disabled = _ref.disabled, disabledDate = _ref.disabledDate, placeholder = _ref.placeholder, getPopupContainer = _ref.getPopupContainer, pickerRef = _ref.pickerRef, panelRender = _ref.panelRender, onChange = _ref.onChange, onOpenChange = _ref.onOpenChange, onFocus = _ref.onFocus, onBlur = _ref.onBlur, onMouseDown = _ref.onMouseDown, onMouseUp = _ref.onMouseUp, onMouseEnter = _ref.onMouseEnter, onMouseLeave = _ref.onMouseLeave, onContextMenu = _ref.onContextMenu, onClick = _ref.onClick, _onKeyDown = _ref.onKeyDown, _onSelect = _ref.onSelect, direction = _ref.direction, _ref$autoComplete = _ref.autoComplete, autoComplete = _ref$autoComplete === void 0 ? "off" : _ref$autoComplete, inputRender = _ref.inputRender, changeOnBlur = _ref.changeOnBlur;
   var inputRef = React150.useRef(null);
   var needConfirmButton = picker === "date" && !!showTime || picker === "time";
   var presetList = usePresets(presets);
@@ -59690,13 +59747,13 @@ function InnerPicker(props) {
   var _useValueTexts = useValueTexts(selectedValue, {
     formatList,
     generateConfig: generateConfig2,
-    locale: locale4
+    locale: locale5
   }), _useValueTexts2 = _slicedToArray(_useValueTexts, 2), valueTexts = _useValueTexts2[0], firstValueText = _useValueTexts2[1];
   var _useTextValueMapping = useTextValueMapping({
     valueTexts,
     onTextChange: function onTextChange(newText) {
       var inputDate = parseValue(newText, {
-        locale: locale4,
+        locale: locale5,
         formatList,
         generateConfig: generateConfig2
       });
@@ -59711,7 +59768,7 @@ function InnerPicker(props) {
     if (onChange && !isEqual2(generateConfig2, mergedValue, newValue)) {
       onChange(newValue, newValue ? formatValue(newValue, {
         generateConfig: generateConfig2,
-        locale: locale4,
+        locale: locale5,
         format: formatList[0]
       }) : "");
     }
@@ -59814,7 +59871,7 @@ function InnerPicker(props) {
   var _useHoverValue = useHoverValue(text, {
     formatList,
     generateConfig: generateConfig2,
-    locale: locale4
+    locale: locale5
   }), _useHoverValue2 = _slicedToArray(_useHoverValue, 3), hoverValue = _useHoverValue2[0], onEnter = _useHoverValue2[1], onLeave = _useHoverValue2[2];
   var panelProps = _objectSpread2(_objectSpread2({}, props), {}, {
     className: void 0,
@@ -59836,7 +59893,7 @@ function InnerPicker(props) {
     generateConfig: generateConfig2,
     className: (0, import_classnames38.default)(_defineProperty({}, "".concat(prefixCls, "-panel-focused"), !typing)),
     value: selectedValue,
-    locale: locale4,
+    locale: locale5,
     tabIndex: -1,
     onSelect: function onSelect(date4) {
       _onSelect === null || _onSelect === void 0 ? void 0 : _onSelect(date4);
@@ -59999,11 +60056,11 @@ var import_react37 = __toESM(require_react());
 // node_modules/.pnpm/rc-picker@3.12.0_dayjs@1.11.9_react-dom@18.2.0_react@18.2.0/node_modules/rc-picker/es/hooks/useRangeDisabled.js
 var React151 = __toESM(require_react());
 function useRangeDisabled(_ref, firstTimeOpen) {
-  var picker = _ref.picker, locale4 = _ref.locale, selectedValue = _ref.selectedValue, disabledDate = _ref.disabledDate, disabled = _ref.disabled, generateConfig2 = _ref.generateConfig;
+  var picker = _ref.picker, locale5 = _ref.locale, selectedValue = _ref.selectedValue, disabledDate = _ref.disabledDate, disabled = _ref.disabled, generateConfig2 = _ref.generateConfig;
   var startDate = getValue3(selectedValue, 0);
   var endDate = getValue3(selectedValue, 1);
   function weekFirstDate(date4) {
-    return generateConfig2.locale.getWeekFirstDate(locale4.locale, date4);
+    return generateConfig2.locale.getWeekFirstDate(locale5.locale, date4);
   }
   function monthNumber(date4) {
     var year = generateConfig2.getYear(date4);
@@ -60219,7 +60276,7 @@ function canValueTrigger(value, index2, disabled, allowEmpty) {
 }
 function InnerRangePicker(props) {
   var _classNames2, _classNames3, _classNames4;
-  var _ref = props, _ref$prefixCls = _ref.prefixCls, prefixCls = _ref$prefixCls === void 0 ? "rc-picker" : _ref$prefixCls, id = _ref.id, style2 = _ref.style, className = _ref.className, popupStyle = _ref.popupStyle, dropdownClassName = _ref.dropdownClassName, transitionName = _ref.transitionName, dropdownAlign = _ref.dropdownAlign, getPopupContainer = _ref.getPopupContainer, generateConfig2 = _ref.generateConfig, locale4 = _ref.locale, placeholder = _ref.placeholder, autoFocus = _ref.autoFocus, disabled = _ref.disabled, format3 = _ref.format, _ref$picker = _ref.picker, picker = _ref$picker === void 0 ? "date" : _ref$picker, showTime = _ref.showTime, use12Hours = _ref.use12Hours, _ref$separator = _ref.separator, separator = _ref$separator === void 0 ? "~" : _ref$separator, value = _ref.value, defaultValue = _ref.defaultValue, defaultPickerValue = _ref.defaultPickerValue, open = _ref.open, defaultOpen = _ref.defaultOpen, disabledDate = _ref.disabledDate, _disabledTime = _ref.disabledTime, dateRender = _ref.dateRender, monthCellRender = _ref.monthCellRender, cellRender = _ref.cellRender, panelRender = _ref.panelRender, presets = _ref.presets, ranges = _ref.ranges, allowEmpty = _ref.allowEmpty, allowClear = _ref.allowClear, suffixIcon = _ref.suffixIcon, clearIcon = _ref.clearIcon, pickerRef = _ref.pickerRef, inputReadOnly = _ref.inputReadOnly, mode = _ref.mode, renderExtraFooter = _ref.renderExtraFooter, onChange = _ref.onChange, onOpenChange = _ref.onOpenChange, onPanelChange = _ref.onPanelChange, onCalendarChange = _ref.onCalendarChange, _onFocus = _ref.onFocus, onBlur = _ref.onBlur, onMouseDown = _ref.onMouseDown, onMouseUp = _ref.onMouseUp, onMouseEnter = _ref.onMouseEnter, onMouseLeave = _ref.onMouseLeave, onClick = _ref.onClick, _onOk = _ref.onOk, _onKeyDown = _ref.onKeyDown, components = _ref.components, order = _ref.order, direction = _ref.direction, activePickerIndex = _ref.activePickerIndex, _ref$autoComplete = _ref.autoComplete, autoComplete = _ref$autoComplete === void 0 ? "off" : _ref$autoComplete, changeOnBlur = _ref.changeOnBlur;
+  var _ref = props, _ref$prefixCls = _ref.prefixCls, prefixCls = _ref$prefixCls === void 0 ? "rc-picker" : _ref$prefixCls, id = _ref.id, style2 = _ref.style, className = _ref.className, popupStyle = _ref.popupStyle, dropdownClassName = _ref.dropdownClassName, transitionName = _ref.transitionName, dropdownAlign = _ref.dropdownAlign, getPopupContainer = _ref.getPopupContainer, generateConfig2 = _ref.generateConfig, locale5 = _ref.locale, placeholder = _ref.placeholder, autoFocus = _ref.autoFocus, disabled = _ref.disabled, format3 = _ref.format, _ref$picker = _ref.picker, picker = _ref$picker === void 0 ? "date" : _ref$picker, showTime = _ref.showTime, use12Hours = _ref.use12Hours, _ref$separator = _ref.separator, separator = _ref$separator === void 0 ? "~" : _ref$separator, value = _ref.value, defaultValue = _ref.defaultValue, defaultPickerValue = _ref.defaultPickerValue, open = _ref.open, defaultOpen = _ref.defaultOpen, disabledDate = _ref.disabledDate, _disabledTime = _ref.disabledTime, dateRender = _ref.dateRender, monthCellRender = _ref.monthCellRender, cellRender = _ref.cellRender, panelRender = _ref.panelRender, presets = _ref.presets, ranges = _ref.ranges, allowEmpty = _ref.allowEmpty, allowClear = _ref.allowClear, suffixIcon = _ref.suffixIcon, clearIcon = _ref.clearIcon, pickerRef = _ref.pickerRef, inputReadOnly = _ref.inputReadOnly, mode = _ref.mode, renderExtraFooter = _ref.renderExtraFooter, onChange = _ref.onChange, onOpenChange = _ref.onOpenChange, onPanelChange = _ref.onPanelChange, onCalendarChange = _ref.onCalendarChange, _onFocus = _ref.onFocus, onBlur = _ref.onBlur, onMouseDown = _ref.onMouseDown, onMouseUp = _ref.onMouseUp, onMouseEnter = _ref.onMouseEnter, onMouseLeave = _ref.onMouseLeave, onClick = _ref.onClick, _onOk = _ref.onOk, _onKeyDown = _ref.onKeyDown, components = _ref.components, order = _ref.order, direction = _ref.direction, activePickerIndex = _ref.activePickerIndex, _ref$autoComplete = _ref.autoComplete, autoComplete = _ref$autoComplete === void 0 ? "off" : _ref$autoComplete, changeOnBlur = _ref.changeOnBlur;
   var needConfirmButton = picker === "date" && !!showTime || picker === "time";
   var containerRef = (0, import_react37.useRef)(null);
   var panelDivRef = (0, import_react37.useRef)(null);
@@ -60285,7 +60342,7 @@ function InnerRangePicker(props) {
   var _useRangeDisabled = useRangeDisabled({
     picker,
     selectedValue,
-    locale: locale4,
+    locale: locale5,
     disabled: mergedDisabled,
     disabledDate,
     generateConfig: generateConfig2
@@ -60311,7 +60368,7 @@ function InnerRangePicker(props) {
     if (startValue && endValue && generateConfig2.isAfter(startValue, endValue)) {
       if (
         // WeekPicker only compare week
-        picker === "week" && !isSameWeek(generateConfig2, locale4.locale, startValue, endValue) || // QuotaPicker only compare week
+        picker === "week" && !isSameWeek(generateConfig2, locale5.locale, startValue, endValue) || // QuotaPicker only compare week
         picker === "quarter" && !isSameQuarter(generateConfig2, startValue, endValue) || // Other non-TimePicker compare date
         picker !== "week" && picker !== "quarter" && picker !== "time" && !isSameDate(generateConfig2, startValue, endValue)
       ) {
@@ -60329,12 +60386,12 @@ function InnerRangePicker(props) {
     setSelectedValue(values);
     var startStr2 = values && values[0] ? formatValue(values[0], {
       generateConfig: generateConfig2,
-      locale: locale4,
+      locale: locale5,
       format: formatList[0]
     }) : "";
     var endStr2 = values && values[1] ? formatValue(values[1], {
       generateConfig: generateConfig2,
-      locale: locale4,
+      locale: locale5,
       format: formatList[0]
     }) : "";
     if (onCalendarChange) {
@@ -60365,13 +60422,13 @@ function InnerRangePicker(props) {
   var sharedTextHooksProps = {
     formatList,
     generateConfig: generateConfig2,
-    locale: locale4
+    locale: locale5
   };
   var _useValueTexts = useValueTexts(getValue3(selectedValue, 0), sharedTextHooksProps), _useValueTexts2 = _slicedToArray(_useValueTexts, 2), startValueTexts = _useValueTexts2[0], firstStartValueText = _useValueTexts2[1];
   var _useValueTexts3 = useValueTexts(getValue3(selectedValue, 1), sharedTextHooksProps), _useValueTexts4 = _slicedToArray(_useValueTexts3, 2), endValueTexts = _useValueTexts4[0], firstEndValueText = _useValueTexts4[1];
   var _onTextChange = function onTextChange(newText, index2) {
     var inputDate = parseValue(newText, {
-      locale: locale4,
+      locale: locale5,
       formatList,
       generateConfig: generateConfig2
     });
@@ -60398,12 +60455,12 @@ function InnerRangePicker(props) {
   var _useHoverValue = useHoverValue(startText, {
     formatList,
     generateConfig: generateConfig2,
-    locale: locale4
+    locale: locale5
   }), _useHoverValue2 = _slicedToArray(_useHoverValue, 3), startHoverValue = _useHoverValue2[0], onStartEnter = _useHoverValue2[1], onStartLeave = _useHoverValue2[2];
   var _useHoverValue3 = useHoverValue(endText, {
     formatList,
     generateConfig: generateConfig2,
-    locale: locale4
+    locale: locale5
   }), _useHoverValue4 = _slicedToArray(_useHoverValue3, 3), endHoverValue = _useHoverValue4[0], onEndEnter = _useHoverValue4[1], onEndLeave = _useHoverValue4[2];
   var onDateMouseEnter = function onDateMouseEnter2(date4) {
     setHoverRangedValue(updateValues(selectedValue, date4, mergedActivePickerIndex));
@@ -60513,12 +60570,12 @@ function InnerRangePicker(props) {
     }
   };
   var startStr = mergedValue && mergedValue[0] ? formatValue(mergedValue[0], {
-    locale: locale4,
+    locale: locale5,
     format: "YYYYMMDDHHmmss",
     generateConfig: generateConfig2
   }) : "";
   var endStr = mergedValue && mergedValue[1] ? formatValue(mergedValue[1], {
-    locale: locale4,
+    locale: locale5,
     format: "YYYYMMDDHHmmss",
     generateConfig: generateConfig2
   }) : "";
@@ -60617,7 +60674,7 @@ function InnerRangePicker(props) {
       },
       className: (0, import_classnames39.default)(_defineProperty({}, "".concat(prefixCls, "-panel-focused"), mergedActivePickerIndex === 0 ? !startTyping : !endTyping)),
       value: getValue3(selectedValue, mergedActivePickerIndex),
-      locale: locale4,
+      locale: locale5,
       tabIndex: -1,
       onPanelChange: function onPanelChange2(date4, newMode) {
         if (mergedActivePickerIndex === 0) {
@@ -60664,7 +60721,7 @@ function InnerRangePicker(props) {
       components,
       needConfirmButton,
       okDisabled: !getValue3(selectedValue, mergedActivePickerIndex) || disabledDate && disabledDate(selectedValue[mergedActivePickerIndex]),
-      locale: locale4,
+      locale: locale5,
       // rangeList,
       onOk: function onOk() {
         var selectedIndexValue = getValue3(selectedValue, mergedActivePickerIndex);
@@ -64054,7 +64111,7 @@ function getRemovable(closable, closeIcon, editable, disabled) {
 // node_modules/.pnpm/rc-tabs@12.9.0_react-dom@18.2.0_react@18.2.0/node_modules/rc-tabs/es/TabNavList/AddButton.js
 var React165 = __toESM(require_react());
 function AddButton(_ref, ref) {
-  var prefixCls = _ref.prefixCls, editable = _ref.editable, locale4 = _ref.locale, style2 = _ref.style;
+  var prefixCls = _ref.prefixCls, editable = _ref.editable, locale5 = _ref.locale, style2 = _ref.style;
   if (!editable || editable.showAdd === false) {
     return null;
   }
@@ -64063,7 +64120,7 @@ function AddButton(_ref, ref) {
     type: "button",
     className: "".concat(prefixCls, "-nav-add"),
     style: style2,
-    "aria-label": (locale4 === null || locale4 === void 0 ? void 0 : locale4.addAriaLabel) || "Add tab",
+    "aria-label": (locale5 === null || locale5 === void 0 ? void 0 : locale5.addAriaLabel) || "Add tab",
     onClick: function onClick(event) {
       editable.onEdit("add", {
         event
@@ -64107,13 +64164,13 @@ var import_classnames45 = __toESM(require_classnames());
 var React167 = __toESM(require_react());
 var import_react44 = __toESM(require_react());
 function OperationNode(_ref, ref) {
-  var prefixCls = _ref.prefixCls, id = _ref.id, tabs = _ref.tabs, locale4 = _ref.locale, mobile = _ref.mobile, _ref$moreIcon = _ref.moreIcon, moreIcon = _ref$moreIcon === void 0 ? "More" : _ref$moreIcon, moreTransitionName = _ref.moreTransitionName, style2 = _ref.style, className = _ref.className, editable = _ref.editable, tabBarGutter = _ref.tabBarGutter, rtl = _ref.rtl, removeAriaLabel = _ref.removeAriaLabel, onTabClick = _ref.onTabClick, getPopupContainer = _ref.getPopupContainer, popupClassName = _ref.popupClassName;
+  var prefixCls = _ref.prefixCls, id = _ref.id, tabs = _ref.tabs, locale5 = _ref.locale, mobile = _ref.mobile, _ref$moreIcon = _ref.moreIcon, moreIcon = _ref$moreIcon === void 0 ? "More" : _ref$moreIcon, moreTransitionName = _ref.moreTransitionName, style2 = _ref.style, className = _ref.className, editable = _ref.editable, tabBarGutter = _ref.tabBarGutter, rtl = _ref.rtl, removeAriaLabel = _ref.removeAriaLabel, onTabClick = _ref.onTabClick, getPopupContainer = _ref.getPopupContainer, popupClassName = _ref.popupClassName;
   var _useState = (0, import_react44.useState)(false), _useState2 = _slicedToArray(_useState, 2), open = _useState2[0], setOpen = _useState2[1];
   var _useState3 = (0, import_react44.useState)(null), _useState4 = _slicedToArray(_useState3, 2), selectedKey = _useState4[0], setSelectedKey = _useState4[1];
   var popupId = "".concat(id, "-more-popup");
   var dropdownPrefix = "".concat(prefixCls, "-dropdown");
   var selectedItemId = selectedKey !== null ? "".concat(popupId, "-").concat(selectedKey) : null;
-  var dropdownAriaLabel = locale4 === null || locale4 === void 0 ? void 0 : locale4.dropdownAriaLabel;
+  var dropdownAriaLabel = locale5 === null || locale5 === void 0 ? void 0 : locale5.dropdownAriaLabel;
   function onRemoveTab(event, key) {
     event.preventDefault();
     event.stopPropagation();
@@ -64246,7 +64303,7 @@ function OperationNode(_ref, ref) {
     ref
   }, moreNode, /* @__PURE__ */ React167.createElement(AddButton_default, {
     prefixCls,
-    locale: locale4,
+    locale: locale5,
     editable
   }));
 }
@@ -64330,7 +64387,7 @@ var getUnitValue = function getUnitValue2(size, tabPositionTopOrBottom) {
 function TabNavList(props, ref) {
   var _classNames;
   var _React$useContext = React169.useContext(TabContext_default), prefixCls = _React$useContext.prefixCls, tabs = _React$useContext.tabs;
-  var className = props.className, style2 = props.style, id = props.id, animated = props.animated, activeKey = props.activeKey, rtl = props.rtl, extra = props.extra, editable = props.editable, locale4 = props.locale, tabPosition = props.tabPosition, tabBarGutter = props.tabBarGutter, children = props.children, onTabClick = props.onTabClick, onTabScroll = props.onTabScroll;
+  var className = props.className, style2 = props.style, id = props.id, animated = props.animated, activeKey = props.activeKey, rtl = props.rtl, extra = props.extra, editable = props.editable, locale5 = props.locale, tabPosition = props.tabPosition, tabBarGutter = props.tabBarGutter, children = props.children, onTabClick = props.onTabClick, onTabScroll = props.onTabScroll;
   var containerRef = (0, import_react45.useRef)();
   var extraLeftRef = (0, import_react45.useRef)();
   var extraRightRef = (0, import_react45.useRef)();
@@ -64492,7 +64549,7 @@ function TabNavList(props, ref) {
       editable,
       active: key === activeKey,
       renderWrapper: children,
-      removeAriaLabel: locale4 === null || locale4 === void 0 ? void 0 : locale4.removeAriaLabel,
+      removeAriaLabel: locale5 === null || locale5 === void 0 ? void 0 : locale5.removeAriaLabel,
       onClick: function onClick(e2) {
         onTabClick(key, e2);
       },
@@ -64630,7 +64687,7 @@ function TabNavList(props, ref) {
   }, tabNodes, /* @__PURE__ */ React169.createElement(AddButton_default, {
     ref: innerAddButtonRef,
     prefixCls,
-    locale: locale4,
+    locale: locale5,
     editable,
     style: _objectSpread2(_objectSpread2({}, tabNodes.length === 0 ? void 0 : tabNodeStyle), {}, {
       visibility: hasDropdown ? "hidden" : null
@@ -64639,7 +64696,7 @@ function TabNavList(props, ref) {
     className: (0, import_classnames47.default)("".concat(prefixCls, "-ink-bar"), _defineProperty({}, "".concat(prefixCls, "-ink-bar-animated"), animated.inkBar)),
     style: inkStyle
   })))), /* @__PURE__ */ React169.createElement(OperationNode_default, _extends({}, props, {
-    removeAriaLabel: locale4 === null || locale4 === void 0 ? void 0 : locale4.removeAriaLabel,
+    removeAriaLabel: locale5 === null || locale5 === void 0 ? void 0 : locale5.removeAriaLabel,
     ref: operationsRef,
     prefixCls,
     tabs: hiddenTabs,
@@ -64716,7 +64773,7 @@ var _excluded30 = ["id", "prefixCls", "className", "items", "direction", "active
 var uuid4 = 0;
 function Tabs(_ref, ref) {
   var _classNames;
-  var id = _ref.id, _ref$prefixCls = _ref.prefixCls, prefixCls = _ref$prefixCls === void 0 ? "rc-tabs" : _ref$prefixCls, className = _ref.className, items = _ref.items, direction = _ref.direction, activeKey = _ref.activeKey, defaultActiveKey = _ref.defaultActiveKey, editable = _ref.editable, animated = _ref.animated, _ref$tabPosition = _ref.tabPosition, tabPosition = _ref$tabPosition === void 0 ? "top" : _ref$tabPosition, tabBarGutter = _ref.tabBarGutter, tabBarStyle = _ref.tabBarStyle, tabBarExtraContent = _ref.tabBarExtraContent, locale4 = _ref.locale, moreIcon = _ref.moreIcon, moreTransitionName = _ref.moreTransitionName, destroyInactiveTabPane = _ref.destroyInactiveTabPane, renderTabBar = _ref.renderTabBar, onChange = _ref.onChange, onTabClick = _ref.onTabClick, onTabScroll = _ref.onTabScroll, getPopupContainer = _ref.getPopupContainer, popupClassName = _ref.popupClassName, restProps = _objectWithoutProperties(_ref, _excluded30);
+  var id = _ref.id, _ref$prefixCls = _ref.prefixCls, prefixCls = _ref$prefixCls === void 0 ? "rc-tabs" : _ref$prefixCls, className = _ref.className, items = _ref.items, direction = _ref.direction, activeKey = _ref.activeKey, defaultActiveKey = _ref.defaultActiveKey, editable = _ref.editable, animated = _ref.animated, _ref$tabPosition = _ref.tabPosition, tabPosition = _ref$tabPosition === void 0 ? "top" : _ref$tabPosition, tabBarGutter = _ref.tabBarGutter, tabBarStyle = _ref.tabBarStyle, tabBarExtraContent = _ref.tabBarExtraContent, locale5 = _ref.locale, moreIcon = _ref.moreIcon, moreTransitionName = _ref.moreTransitionName, destroyInactiveTabPane = _ref.destroyInactiveTabPane, renderTabBar = _ref.renderTabBar, onChange = _ref.onChange, onTabClick = _ref.onTabClick, onTabScroll = _ref.onTabScroll, getPopupContainer = _ref.getPopupContainer, popupClassName = _ref.popupClassName, restProps = _objectWithoutProperties(_ref, _excluded30);
   var tabs = React171.useMemo(function() {
     return (items || []).filter(function(item) {
       return item && _typeof(item) === "object" && "key" in item;
@@ -64781,7 +64838,7 @@ function Tabs(_ref, ref) {
   var tabNavBar;
   var tabNavBarProps = _objectSpread2(_objectSpread2({}, sharedProps), {}, {
     editable,
-    locale: locale4,
+    locale: locale5,
     moreIcon,
     moreTransitionName,
     tabBarGutter,
@@ -67616,47 +67673,47 @@ var React192 = __toESM(require_react());
 var import_react56 = __toESM(require_react());
 
 // node_modules/.pnpm/antd@5.8.2_react-dom@18.2.0_react@18.2.0/node_modules/antd/es/date-picker/util.js
-function getPlaceholder(locale4, picker, customizePlaceholder) {
+function getPlaceholder(locale5, picker, customizePlaceholder) {
   if (customizePlaceholder !== void 0) {
     return customizePlaceholder;
   }
-  if (picker === "year" && locale4.lang.yearPlaceholder) {
-    return locale4.lang.yearPlaceholder;
+  if (picker === "year" && locale5.lang.yearPlaceholder) {
+    return locale5.lang.yearPlaceholder;
   }
-  if (picker === "quarter" && locale4.lang.quarterPlaceholder) {
-    return locale4.lang.quarterPlaceholder;
+  if (picker === "quarter" && locale5.lang.quarterPlaceholder) {
+    return locale5.lang.quarterPlaceholder;
   }
-  if (picker === "month" && locale4.lang.monthPlaceholder) {
-    return locale4.lang.monthPlaceholder;
+  if (picker === "month" && locale5.lang.monthPlaceholder) {
+    return locale5.lang.monthPlaceholder;
   }
-  if (picker === "week" && locale4.lang.weekPlaceholder) {
-    return locale4.lang.weekPlaceholder;
+  if (picker === "week" && locale5.lang.weekPlaceholder) {
+    return locale5.lang.weekPlaceholder;
   }
-  if (picker === "time" && locale4.timePickerLocale.placeholder) {
-    return locale4.timePickerLocale.placeholder;
+  if (picker === "time" && locale5.timePickerLocale.placeholder) {
+    return locale5.timePickerLocale.placeholder;
   }
-  return locale4.lang.placeholder;
+  return locale5.lang.placeholder;
 }
-function getRangePlaceholder(locale4, picker, customizePlaceholder) {
+function getRangePlaceholder(locale5, picker, customizePlaceholder) {
   if (customizePlaceholder !== void 0) {
     return customizePlaceholder;
   }
-  if (picker === "year" && locale4.lang.yearPlaceholder) {
-    return locale4.lang.rangeYearPlaceholder;
+  if (picker === "year" && locale5.lang.yearPlaceholder) {
+    return locale5.lang.rangeYearPlaceholder;
   }
-  if (picker === "quarter" && locale4.lang.quarterPlaceholder) {
-    return locale4.lang.rangeQuarterPlaceholder;
+  if (picker === "quarter" && locale5.lang.quarterPlaceholder) {
+    return locale5.lang.rangeQuarterPlaceholder;
   }
-  if (picker === "month" && locale4.lang.monthPlaceholder) {
-    return locale4.lang.rangeMonthPlaceholder;
+  if (picker === "month" && locale5.lang.monthPlaceholder) {
+    return locale5.lang.rangeMonthPlaceholder;
   }
-  if (picker === "week" && locale4.lang.weekPlaceholder) {
-    return locale4.lang.rangeWeekPlaceholder;
+  if (picker === "week" && locale5.lang.weekPlaceholder) {
+    return locale5.lang.rangeWeekPlaceholder;
   }
-  if (picker === "time" && locale4.timePickerLocale.placeholder) {
-    return locale4.timePickerLocale.rangePlaceholder;
+  if (picker === "time" && locale5.timePickerLocale.placeholder) {
+    return locale5.timePickerLocale.rangePlaceholder;
   }
-  return locale4.lang.rangePlaceholder;
+  return locale5.lang.rangePlaceholder;
 }
 function transPlacement2DropdownAlign(direction, placement) {
   const overflow = {
@@ -67841,7 +67898,7 @@ function generateRangePicker(generateConfig2) {
       }
     }));
     const [contextLocale] = useLocale_default("Calendar", en_US_default4);
-    const locale4 = Object.assign(Object.assign({}, contextLocale), props.locale);
+    const locale5 = Object.assign(Object.assign({}, contextLocale), props.locale);
     return wrapSSR(/* @__PURE__ */ React192.createElement(RangePicker_default, Object.assign({
       separator: /* @__PURE__ */ React192.createElement("span", {
         "aria-label": "to",
@@ -67850,7 +67907,7 @@ function generateRangePicker(generateConfig2) {
       disabled: mergedDisabled,
       ref: innerRef,
       dropdownAlign: transPlacement2DropdownAlign(direction, placement),
-      placeholder: getRangePlaceholder(locale4, picker, placeholder),
+      placeholder: getRangePlaceholder(locale5, picker, placeholder),
       suffixIcon: suffixNode,
       prevIcon: /* @__PURE__ */ React192.createElement("span", {
         className: `${prefixCls}-prev-icon`
@@ -67870,7 +67927,7 @@ function generateRangePicker(generateConfig2) {
         [`${prefixCls}-${mergedSize}`]: mergedSize,
         [`${prefixCls}-borderless`]: !bordered
       }, getStatusClassNames(prefixCls, getMergedStatus(contextStatus, customStatus), hasFeedback), hashId, compactItemClassnames, className),
-      locale: locale4.lang,
+      locale: locale5.lang,
       prefixCls,
       getPopupContainer: customGetPopupContainer || getPopupContainer,
       generateConfig: generateConfig2,
@@ -67987,10 +68044,10 @@ function generatePicker(generateConfig2) {
       } = formItemContext;
       const suffixNode = /* @__PURE__ */ React193.createElement(React193.Fragment, null, mergedPicker === "time" ? /* @__PURE__ */ React193.createElement(ClockCircleOutlined_default2, null) : /* @__PURE__ */ React193.createElement(CalendarOutlined_default2, null), hasFeedback && feedbackIcon);
       const [contextLocale] = useLocale_default("DatePicker", en_US_default4);
-      const locale4 = Object.assign(Object.assign({}, contextLocale), props.locale);
+      const locale5 = Object.assign(Object.assign({}, contextLocale), props.locale);
       return wrapSSR(/* @__PURE__ */ React193.createElement(es_default10, Object.assign({
         ref: innerRef,
-        placeholder: getPlaceholder(locale4, mergedPicker, placeholder),
+        placeholder: getPlaceholder(locale5, mergedPicker, placeholder),
         suffixIcon: suffixNode,
         dropdownAlign: transPlacement2DropdownAlign(direction, placement),
         prevIcon: /* @__PURE__ */ React193.createElement("span", {
@@ -68007,7 +68064,7 @@ function generatePicker(generateConfig2) {
         }),
         transitionName: `${rootPrefixCls}-slide-up`
       }, additionalProps, restProps, additionalOverrideProps, {
-        locale: locale4.lang,
+        locale: locale5.lang,
         className: (0, import_classnames62.default)({
           [`${prefixCls}-${mergedSize}`]: mergedSize,
           [`${prefixCls}-borderless`]: !bordered
@@ -69567,10 +69624,14 @@ var import_dayjs3 = __toESM(require_dayjs_min());
 var import_en_US14 = __toESM(require_en_US7());
 var import_zh_CN = __toESM(require_zh_CN7());
 var import_zh_cn = __toESM(require_zh_cn());
+var import_zh = __toESM(require_zh());
 var localeMap2 = {
   en: import_en_US14.default,
-  zh: import_zh_CN.default
+  "en-us": import_en_US14.default,
+  zh: import_zh_CN.default,
+  "zh-cn": import_zh_CN.default
 };
+var locale4 = window.localStorage.getItem("language") || "en";
 var AddTemplate = () => {
   const { app, settings } = useApp() || {};
   const [periodicActiveTab, setPeriodicActiveTab] = (0, import_react64.useState)(DAILY);
@@ -69582,11 +69643,8 @@ var AddTemplate = () => {
     form_default.Item,
     {
       style: {
-        display: "flex",
-        justifyContent: "right",
-        alignItems: "center",
-        paddingTop: 25,
-        paddingRight: 25
+        width: "100%",
+        textAlign: "end"
       }
     },
     /* @__PURE__ */ React206.createElement(
@@ -69600,87 +69658,75 @@ var AddTemplate = () => {
       }
     )
   );
-  const createFile = async (values) => {
+  const createPeriodicFile = async (d) => {
+    const dates = (0, import_dayjs3.default)(d.format()).locale(locale4);
     if (!app || !settings) {
       return;
     }
     let templateFile = "";
-    let folder;
-    let file;
+    let folder = "";
+    let file = "";
+    let year = dates.year();
+    let value;
+    if (periodicActiveTab === DAILY) {
+      folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}/${String(dates.month() + 1).padStart(
+        2,
+        "0"
+      )}`;
+      value = dates.format("YYYY-MM-DD");
+    } else if (periodicActiveTab === WEEKLY) {
+      folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}`;
+      value = dates.format("gggg-[W]w");
+    } else if (periodicActiveTab === MONTHLY) {
+      folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}`;
+      value = dates.format("YYYY-MM");
+    } else if (periodicActiveTab === QUARTERLY) {
+      folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}`;
+      value = dates.format("YYYY-[Q]Q");
+    } else if (periodicActiveTab === YEARLY) {
+      folder = `${settings.periodicNotesPath}/${year}`;
+      value = year;
+    }
+    file = `${folder}/${value}.md`;
+    templateFile = `${settings.periodicNotesPath}/Templates/${periodicActiveTab}.md`;
+    await createFile(app, {
+      templateFile,
+      folder,
+      file
+    });
+  };
+  const createPARAFile = async (values) => {
+    if (!app || !settings) {
+      return;
+    }
+    let templateFile = "";
+    let folder = "";
+    let file = "";
     let tag = "";
     let README = "";
-    if (type4 === PARA) {
-      let path;
-      let key;
-      path = settings[`${paraActiveTab.toLocaleLowerCase()}sPath`];
-      key = values[`${paraActiveTab}Folder`];
-      tag = values[`${paraActiveTab}Tag`];
-      README = values[`${paraActiveTab}README`];
-      if (!tag) {
-        return new import_obsidian12.Notice(ERROR_MESSAGES.TAGS_MUST_INPUT);
-      }
-      folder = `${path}/${key}`;
-      file = `${folder}/${README}`;
-      templateFile = `${path}/Template.md`;
-    } else if (type4 === PERIODIC) {
-      const key = periodicActiveTab;
-      let year = values[key]["$y"];
-      let value;
-      if (periodicActiveTab === DAILY) {
-        folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}/${String(
-          values[key].month() + 1
-        ).padStart(2, "0")}`;
-        value = values[key].format("YYYY-MM-DD");
-      } else if (periodicActiveTab === WEEKLY) {
-        folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}`;
-        value = values[key].format("gggg-[W]w");
-      } else if (periodicActiveTab === MONTHLY) {
-        folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}`;
-        value = values[key].format("YYYY-MM");
-      } else if (periodicActiveTab === QUARTERLY) {
-        folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}`;
-        value = values[key].format("YYYY-[Q]Q");
-      } else if (periodicActiveTab === YEARLY) {
-        folder = `${settings.periodicNotesPath}/${year}`;
-        value = year;
-      }
-      file = `${folder}/${value}.md`;
-      templateFile = `${settings.periodicNotesPath}/Templates/${periodicActiveTab}.md`;
+    let path;
+    let key;
+    path = settings[`${paraActiveTab.toLocaleLowerCase()}sPath`];
+    key = values[`${paraActiveTab}Folder`];
+    tag = values[`${paraActiveTab}Tag`];
+    README = values[`${paraActiveTab}README`];
+    if (!tag) {
+      return new import_obsidian12.Notice(ERROR_MESSAGES.TAGS_MUST_INPUT);
     }
-    const templateTFile = app.vault.getAbstractFileByPath(templateFile);
-    if (!templateTFile) {
-      return new import_obsidian12.Notice(ERROR_MESSAGES.NO_TEMPLATE_EXIST + templateFile);
-    }
-    if (templateTFile instanceof import_obsidian12.TFile) {
-      const templateContent = await app.vault.cachedRead(templateTFile);
-      if (!folder || !file) {
-        return;
-      }
-      let tFile = app.vault.getAbstractFileByPath(file);
-      if (tFile && tFile instanceof import_obsidian12.TFile) {
-        return await app.workspace.getLeaf().openFile(tFile);
-      }
-      if (!app.vault.getAbstractFileByPath(folder)) {
-        app.vault.createFolder(folder);
-      }
-      const fileCreated = await app.vault.create(file, templateContent);
-      await Promise.all([
-        app.fileManager.processFrontMatter(fileCreated, (frontMatter) => {
-          if (!tag) {
-            return;
-          }
-          frontMatter.tags = frontMatter.tags || [];
-          frontMatter.tags.push(tag);
-        }),
-        app.workspace.getLeaf().openFile(fileCreated)
-      ]);
-      form.resetFields();
-    }
+    folder = `${path}/${key}`;
+    file = `${folder}/${README}`;
+    templateFile = `${path}/Template.md`;
+    await createFile(app, {
+      templateFile,
+      folder,
+      file,
+      tag
+    });
   };
   return /* @__PURE__ */ React206.createElement(
     config_provider_default,
     {
-      locale: localeMap2[window.localStorage.getItem("language") || "en"],
+      locale: localeMap2[locale4],
       theme: {
         token: {
           colorPrimary: (0, import_reduce_css_calc.default)(
@@ -69695,7 +69741,12 @@ var AddTemplate = () => {
     /* @__PURE__ */ React206.createElement(
       form_default,
       {
-        style: { maxWidth: 750 },
+        style: {
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          alignContent: "flex-start"
+        },
         initialValues: {
           [DAILY]: today,
           [WEEKLY]: today,
@@ -69704,7 +69755,7 @@ var AddTemplate = () => {
           [YEARLY]: today
         },
         form,
-        onFinish: createFile
+        onFinish: createPARAFile
       },
       (settings == null ? void 0 : settings.usePARANotes) && (settings == null ? void 0 : settings.usePeriodicNotes) && /* @__PURE__ */ React206.createElement(
         radio_default2.Group,
@@ -69713,7 +69764,11 @@ var AddTemplate = () => {
           buttonStyle: "solid",
           value: type4,
           onChange: (e2) => setType(e2.target.value),
-          style: { marginBottom: 40 }
+          style: {
+            width: "100%",
+            textAlign: "center",
+            marginBottom: 5
+          }
         },
         /* @__PURE__ */ React206.createElement(radio_default2.Button, { value: PERIODIC }, PERIODIC),
         /* @__PURE__ */ React206.createElement(radio_default2.Button, { value: PARA }, PARA)
@@ -69724,6 +69779,7 @@ var AddTemplate = () => {
           key: PERIODIC,
           activeKey: periodicActiveTab,
           onChange: setPeriodicActiveTab,
+          centered: true,
           items: [DAILY, WEEKLY, MONTHLY, QUARTERLY, YEARLY].map(
             (periodic) => {
               const pickerMap = {
@@ -69737,18 +69793,18 @@ var AddTemplate = () => {
               return {
                 label: periodic,
                 key: periodic,
-                children: /* @__PURE__ */ React206.createElement(React206.Fragment, null, /* @__PURE__ */ React206.createElement(form_default.Item, { name: periodic }, /* @__PURE__ */ React206.createElement(
+                children: /* @__PURE__ */ React206.createElement(form_default.Item, { name: periodic }, /* @__PURE__ */ React206.createElement(
                   date_picker_default,
                   {
+                    onSelect: createPeriodicFile,
                     picker,
                     showToday: false,
                     style: { width: 200 },
                     inputReadOnly: true,
                     open: true,
-                    renderExtraFooter: () => SubmitButton,
                     getPopupContainer: (triggerNode) => triggerNode.parentNode
                   }
-                )))
+                ))
               };
             }
           )
@@ -69760,6 +69816,8 @@ var AddTemplate = () => {
           key: "PARA",
           activeKey: paraActiveTab,
           onChange: setParaActiveTab,
+          centered: true,
+          style: { width: "100%" },
           items: [PROJECT, AREA, RESOURCE, ARCHIVE].map((item) => {
             return {
               label: item,
