@@ -1,5 +1,3 @@
-%%本模版用于新建 Project/Area/Resource/Archive，将文件夹复制到对应目录，并重命名为你的 Project/Area/Resource/Archive%%
-
 # README
 
 ## 任务

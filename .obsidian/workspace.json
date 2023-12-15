@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "522aecf389341be3",
+        "id": "2ed4c8a257202ea4",
         "type": "tabs",
         "children": [
           {
-            "id": "0a3cfb1c2ee9d940",
+            "id": "f5cf05f02f3386b7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0. 周期笔记/2023/Weekly/2023-W23.md",
+                "file": "0. 周期笔记/Templates/Quarterly.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -32,16 +32,8 @@
       {
         "id": "d32bd3e9f2db57a0",
         "type": "tabs",
-        "dimension": 30.900473933649288,
+        "dimension": 43.5121107266436,
         "children": [
-          {
-            "id": "df59f08946ce9655",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
           {
             "id": "e2f9ecf537a853a4",
             "type": "leaf",
@@ -49,13 +41,22 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "d7617813d99db84a",
+            "type": "leaf",
+            "state": {
+              "type": "periodic-para",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "90362f6f602f507d",
         "type": "tabs",
-        "dimension": 69.0995260663507,
+        "dimension": 56.4878892733564,
         "children": [
           {
             "id": "318abbbcd7749f6f",
@@ -65,14 +66,6 @@
               "state": {
                 "sortOrder": "alphabetical"
               }
-            }
-          },
-          {
-            "id": "d7617813d99db84a",
-            "type": "leaf",
-            "state": {
-              "type": "periodic-para",
-              "state": {}
             }
           },
           {
@@ -105,7 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 420.5024719238281
+    "width": 400.5024719238281
   },
   "right": {
     "id": "e909704c2c67d329",
@@ -121,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0. 周期笔记/2023/Weekly/2023-W23.md",
+                "file": "0. 周期笔记/Templates/Quarterly.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0. 周期笔记/2023/Weekly/2023-W23.md"
+                "file": "0. 周期笔记/Templates/Quarterly.md"
               }
             }
           },
@@ -143,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0. 周期笔记/2023/Weekly/2023-W23.md",
+                "file": "0. 周期笔记/Templates/Quarterly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,10 +177,17 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "0a3cfb1c2ee9d940",
+  "active": "f5cf05f02f3386b7",
   "lastOpenFiles": [
-    "0. 周期笔记/2023/Weekly/2023-W32.md",
+    "0. 周期笔记/Templates/Monthly.md",
+    "0. 周期笔记/Templates/Daily.md",
+    "1. 项目/Template.md",
+    "5. 表达/README.md",
+    "4. 存档/Template.md",
+    "3. 资源/Template.md",
+    "2. 领域/Template.md",
     "0. 周期笔记/2023/Weekly/2023-W23.md",
+    "0. 周期笔记/2023/Weekly/2023-W32.md",
     "0. 周期笔记/2023/Weekly/2023-W22.md",
     "0. 周期笔记/2023/Weekly/2023-W24.md",
     "0. 周期笔记/2023/Daily/06/2023-06-12.md",
@@ -205,7 +205,6 @@
     "0. 周期笔记/2023/Daily/10",
     "0. 周期笔记/2023/Daily/10/2023-10-05.md",
     "0. 周期笔记/2023/Daily/06/2023-06-06.md",
-    "5. 表达/README.md",
     "5. 表达",
     "-1. 捕获",
     "0. 周期笔记/2023/Daily/06/2023-06-09.md",
@@ -213,15 +212,9 @@
     "2. 领域/知识管理/README.md",
     "2. 领域/工作/README.md",
     "2. 领域/育儿",
-    "0. 周期笔记/Templates/Monthly.md",
     "2. 领域/README.md",
-    "0. 周期笔记/2023/日记/09/2023-09-06.md",
     "0. 周期笔记/2023/日记/09",
-    "任务.md",
     "主页.canvas",
-    "4. 存档/育儿-宝宝起名/规则.md",
-    "4. 存档/育儿-宝宝起名/程序起名.md",
-    "4. 存档/育儿-宝宝起名/五行/金.md",
     "4. 存档/育儿-宝宝起名/program/package.json",
     "4. 存档/育儿-宝宝起名/林奕如.png",
     "4. 存档/育儿-宝宝起名/baby-name.png",
