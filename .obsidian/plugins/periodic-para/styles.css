@@ -20,6 +20,14 @@
   position: relative;
   inset: -20px auto auto 0px !important;
 }
+.periodic-para .ant-picker-dropdown .ant-picker-cell::before {
+  height: 30px;
+}
+.periodic-para .ant-picker-dropdown .ant-picker-cell .ant-picker-cell-inner {
+  line-height: 30px;
+  min-width: 30px;
+  height: 30px;
+}
 .is-phone .periodic-para button {
   width: unset;
 }

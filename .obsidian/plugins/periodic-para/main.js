@@ -7514,6 +7514,83 @@ var require_lib = __commonJS({
   }
 });
 
+// node_modules/.pnpm/debounce@2.0.0/node_modules/debounce/index.js
+var require_debounce = __commonJS({
+  "node_modules/.pnpm/debounce@2.0.0/node_modules/debounce/index.js"(exports, module2) {
+    function debounce2(function_, wait = 100, options = {}) {
+      if (typeof function_ !== "function") {
+        throw new TypeError(`Expected the first parameter to be a function, got \`${typeof function_}\`.`);
+      }
+      if (wait < 0) {
+        throw new RangeError("`wait` must not be negative.");
+      }
+      const { immediate } = typeof options === "boolean" ? { immediate: options } : options;
+      let storedContext;
+      let storedArguments;
+      let timeoutId;
+      let timestamp;
+      let result;
+      function later() {
+        const last = Date.now() - timestamp;
+        if (last < wait && last >= 0) {
+          timeoutId = setTimeout(later, wait - last);
+        } else {
+          timeoutId = void 0;
+          if (!immediate) {
+            const callContext = storedContext;
+            const callArguments = storedArguments;
+            storedContext = void 0;
+            storedArguments = void 0;
+            result = function_.apply(callContext, callArguments);
+          }
+        }
+      }
+      const debounced = function(...arguments_) {
+        if (storedContext && this !== storedContext) {
+          throw new Error("Debounced method called with different contexts.");
+        }
+        storedContext = this;
+        storedArguments = arguments_;
+        timestamp = Date.now();
+        const callNow = immediate && !timeoutId;
+        if (!timeoutId) {
+          timeoutId = setTimeout(later, wait);
+        }
+        if (callNow) {
+          const callContext = storedContext;
+          const callArguments = storedArguments;
+          storedContext = void 0;
+          storedArguments = void 0;
+          result = function_.apply(callContext, callArguments);
+        }
+        return result;
+      };
+      debounced.clear = () => {
+        if (!timeoutId) {
+          return;
+        }
+        clearTimeout(timeoutId);
+        timeoutId = void 0;
+      };
+      debounced.flush = () => {
+        if (!timeoutId) {
+          return;
+        }
+        const callContext = storedContext;
+        const callArguments = storedArguments;
+        storedContext = void 0;
+        storedArguments = void 0;
+        result = function_.apply(callContext, callArguments);
+        clearTimeout(timeoutId);
+        timeoutId = void 0;
+      };
+      return debounced;
+    }
+    module2.exports.debounce = debounce2;
+    module2.exports = debounce2;
+  }
+});
+
 // node_modules/.pnpm/react@18.2.0/node_modules/react/cjs/react.development.js
 var require_react_development = __commonJS({
   "node_modules/.pnpm/react@18.2.0/node_modules/react/cjs/react.development.js"(exports, module2) {
@@ -39259,10 +39336,7 @@ ${finalRecordContent}
             if (!this.app.vault.getAbstractFileByPath(folder)) {
               this.app.vault.createFolder(folder);
             }
-            await this.app.vault.adapter.writeBinary(
-              resourcePath,
-              Buffer.from(data2)
-            );
+            await this.app.vault.adapter.writeBinary(resourcePath, data2);
           })
         );
         return data;
@@ -39284,6 +39358,7 @@ ${finalRecordContent}
 
 // src/SettingTab.ts
 var import_obsidian11 = require("obsidian");
+var import_debounce = __toESM(require_debounce());
 var DEFAULT_SETTINGS = {
   periodicNotesPath: "PeriodicNotes",
   projectsPath: "1. Projects",
@@ -39318,28 +39393,36 @@ var SettingTab = class extends import_obsidian11.PluginSettingTab {
     );
     if (this.plugin.settings.usePeriodicNotes) {
       new import_obsidian11.Setting(containerEl).setName("Periodic Notes Folder:").addText(
-        (text) => text.setPlaceholder(DEFAULT_SETTINGS.periodicNotesPath).setValue(this.plugin.settings.periodicNotesPath).onChange(async (value) => {
-          this.plugin.settings.periodicNotesPath = value;
-          await this.plugin.saveSettings();
-        })
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.periodicNotesPath).setValue(this.plugin.settings.periodicNotesPath).onChange(
+          (0, import_debounce.default)(async (value) => {
+            this.plugin.settings.periodicNotesPath = value;
+            await this.plugin.saveSettings();
+          }, 500)
+        )
       );
       new import_obsidian11.Setting(containerEl).setName("Habit Header:").setDesc("Where the Habit module is in a daily note").addText(
-        (text) => text.setPlaceholder(DEFAULT_SETTINGS.habitHeader).setValue(this.plugin.settings.habitHeader).onChange(async (value) => {
-          this.plugin.settings.habitHeader = value;
-          await this.plugin.saveSettings();
-        })
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.habitHeader).setValue(this.plugin.settings.habitHeader).onChange(
+          (0, import_debounce.default)(async (value) => {
+            this.plugin.settings.habitHeader = value;
+            await this.plugin.saveSettings();
+          }, 500)
+        )
       );
       new import_obsidian11.Setting(containerEl).setName("Project List Header:").setDesc("Where the Project List is in a daily note").addText(
-        (text) => text.setPlaceholder(DEFAULT_SETTINGS.projectListHeader).setValue(this.plugin.settings.projectListHeader).onChange(async (value) => {
-          this.plugin.settings.projectListHeader = value;
-          await this.plugin.saveSettings();
-        })
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.projectListHeader).setValue(this.plugin.settings.projectListHeader).onChange(
+          (0, import_debounce.default)(async (value) => {
+            this.plugin.settings.projectListHeader = value;
+            await this.plugin.saveSettings();
+          }, 500)
+        )
       );
       new import_obsidian11.Setting(containerEl).setName("Area List Header:").setDesc("Where the Area List is in a quarterly note").addText(
-        (text) => text.setPlaceholder(DEFAULT_SETTINGS.areaListHeader).setValue(this.plugin.settings.areaListHeader).onChange(async (value) => {
-          this.plugin.settings.areaListHeader = value;
-          await this.plugin.saveSettings();
-        })
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.areaListHeader).setValue(this.plugin.settings.areaListHeader).onChange(
+          (0, import_debounce.default)(async (value) => {
+            this.plugin.settings.areaListHeader = value;
+            await this.plugin.saveSettings();
+          }, 500)
+        )
       );
       new import_obsidian11.Setting(containerEl).setName("Daily Record").setDesc("Sync daily record by remote API").addToggle(
         (toggle) => toggle.setValue(this.plugin.settings.useDailyRecord).onChange(async (value) => {
@@ -39350,22 +39433,28 @@ var SettingTab = class extends import_obsidian11.PluginSettingTab {
       );
       if (this.plugin.settings.useDailyRecord) {
         new import_obsidian11.Setting(containerEl).setName("Header:").setDesc("Where the Daily Record module is in a daily note").addText(
-          (text) => text.setPlaceholder(DEFAULT_SETTINGS.dailyRecordHeader).setValue(this.plugin.settings.dailyRecordHeader).onChange(async (value) => {
-            this.plugin.settings.dailyRecordHeader = value;
-            await this.plugin.saveSettings();
-          })
+          (text) => text.setPlaceholder(DEFAULT_SETTINGS.dailyRecordHeader).setValue(this.plugin.settings.dailyRecordHeader).onChange(
+            (0, import_debounce.default)(async (value) => {
+              this.plugin.settings.dailyRecordHeader = value;
+              await this.plugin.saveSettings();
+            }, 500)
+          )
         );
         new import_obsidian11.Setting(containerEl).setName("API:").setDesc("The daily record API").addText(
-          (text) => text.setPlaceholder(DEFAULT_SETTINGS.dailyRecordAPI).setValue(this.plugin.settings.dailyRecordAPI).onChange(async (value) => {
-            this.plugin.settings.dailyRecordAPI = value;
-            await this.plugin.saveSettings();
-          })
+          (text) => text.setPlaceholder(DEFAULT_SETTINGS.dailyRecordAPI).setValue(this.plugin.settings.dailyRecordAPI).onChange(
+            (0, import_debounce.default)(async (value) => {
+              this.plugin.settings.dailyRecordAPI = value;
+              await this.plugin.saveSettings();
+            }, 500)
+          )
         );
         new import_obsidian11.Setting(containerEl).setName("Token:").setDesc("The token of your API").addText(
-          (text) => text.setPlaceholder(DEFAULT_SETTINGS.dailyRecordToken).setValue(this.plugin.settings.dailyRecordToken).onChange(async (value) => {
-            this.plugin.settings.dailyRecordToken = value;
-            await this.plugin.saveSettings();
-          })
+          (text) => text.setPlaceholder(DEFAULT_SETTINGS.dailyRecordToken).setValue(this.plugin.settings.dailyRecordToken).onChange(
+            (0, import_debounce.default)(async (value) => {
+              this.plugin.settings.dailyRecordToken = value;
+              await this.plugin.saveSettings();
+            }, 500)
+          )
         );
       }
     }
@@ -39379,28 +39468,36 @@ var SettingTab = class extends import_obsidian11.PluginSettingTab {
     );
     if (this.plugin.settings.usePARANotes) {
       new import_obsidian11.Setting(containerEl).setName("Projects Folder:").addText(
-        (text) => text.setPlaceholder(DEFAULT_SETTINGS.projectsPath).setValue(this.plugin.settings.projectsPath).onChange(async (value) => {
-          this.plugin.settings.projectsPath = value;
-          await this.plugin.saveSettings();
-        })
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.projectsPath).setValue(this.plugin.settings.projectsPath).onChange(
+          (0, import_debounce.default)(async (value) => {
+            this.plugin.settings.projectsPath = value;
+            await this.plugin.saveSettings();
+          }, 500)
+        )
       );
       new import_obsidian11.Setting(containerEl).setName("Areas Folder:").addText(
-        (text) => text.setPlaceholder(DEFAULT_SETTINGS.areasPath).setValue(this.plugin.settings.areasPath).onChange(async (value) => {
-          this.plugin.settings.areasPath = value;
-          await this.plugin.saveSettings();
-        })
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.areasPath).setValue(this.plugin.settings.areasPath).onChange(
+          (0, import_debounce.default)(async (value) => {
+            this.plugin.settings.areasPath = value;
+            await this.plugin.saveSettings();
+          }, 500)
+        )
       );
       new import_obsidian11.Setting(containerEl).setName("Resources Folder:").addText(
-        (text) => text.setPlaceholder(DEFAULT_SETTINGS.resourcesPath).setValue(this.plugin.settings.resourcesPath).onChange(async (value) => {
-          this.plugin.settings.resourcesPath = value;
-          await this.plugin.saveSettings();
-        })
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.resourcesPath).setValue(this.plugin.settings.resourcesPath).onChange(
+          (0, import_debounce.default)(async (value) => {
+            this.plugin.settings.resourcesPath = value;
+            await this.plugin.saveSettings();
+          }, 500)
+        )
       );
       new import_obsidian11.Setting(containerEl).setName("Archives Folder:").addText(
-        (text) => text.setPlaceholder(DEFAULT_SETTINGS.archivesPath).setValue(this.plugin.settings.archivesPath).onChange(async (value) => {
-          this.plugin.settings.archivesPath = value;
-          await this.plugin.saveSettings();
-        })
+        (text) => text.setPlaceholder(DEFAULT_SETTINGS.archivesPath).setValue(this.plugin.settings.archivesPath).onChange(
+          (0, import_debounce.default)(async (value) => {
+            this.plugin.settings.archivesPath = value;
+            await this.plugin.saveSettings();
+          }, 500)
+        )
       );
     }
   }
