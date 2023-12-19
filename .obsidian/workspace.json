@@ -32,7 +32,7 @@
       {
         "id": "d32bd3e9f2db57a0",
         "type": "tabs",
-        "dimension": 43.0795847750865,
+        "dimension": 41.54818325434439,
         "children": [
           {
             "id": "e2f9ecf537a853a4",
@@ -56,7 +56,7 @@
       {
         "id": "90362f6f602f507d",
         "type": "tabs",
-        "dimension": 56.92041522491349,
+        "dimension": 58.451816745655606,
         "children": [
           {
             "id": "318abbbcd7749f6f",
@@ -177,7 +177,7 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "1ae82b8d469273d8",
+  "active": "9110575c83bff6ab",
   "lastOpenFiles": [
     "3. Resources/EnglishLearning/README.md",
     "2. Areas/Life/Life.README.md",

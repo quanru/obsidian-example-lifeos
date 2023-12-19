@@ -9,7 +9,7 @@
     "Checkboxes",
     "DoneTaskInEditingMode"
   ],
-  "baseFontSize": 14,
+  "baseFontSize": 16,
   "nativeMenus": false,
   "showViewHeader": true,
   "translucency": false
