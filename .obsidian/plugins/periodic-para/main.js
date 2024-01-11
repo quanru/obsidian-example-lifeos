@@ -36259,11 +36259,11 @@ var Date2 = class {
     const [[, year], [, quarter], [, month], [, week], [, day]] = [
       (fileName == null ? void 0 : fileName.match(/(^\d{4})/)) || [],
       // year
-      (fileName == null ? void 0 : fileName.match(/^\d{4}-Q(\d{1})/)) || [],
+      (fileName == null ? void 0 : fileName.match(/^\d{4}-Q(\d{1,2})/)) || [],
       // quarter
-      (fileName == null ? void 0 : fileName.match(/^\d{4}-(\d{2})/)) || [],
+      (fileName == null ? void 0 : fileName.match(/^\d{4}-(\d{1,2})/)) || [],
       // month
-      (fileName == null ? void 0 : fileName.match(/^\d{4}-W(\d{2})/)) || [],
+      (fileName == null ? void 0 : fileName.match(/^\d{4}-W(\d{1,2})/)) || [],
       // week
       (fileName == null ? void 0 : fileName.match(/^\d{4}-\d{2}-(\d{2})/)) || []
       // day
@@ -36358,7 +36358,7 @@ var Date2 = class {
     const quarters = /* @__PURE__ */ new Set();
     const currentDate = (0, import_obsidian.moment)(from2).clone();
     while (currentDate.isBefore((0, import_obsidian.moment)(to))) {
-      const weekLink = `${currentDate.weekYear()}-W${String(
+      const weekLink = `${currentDate.weekYear()}/Weekly/${currentDate.weekYear()}-W${String(
         currentDate.isoWeek()
       ).padStart(2, "0")}.md`;
       const weekFile = this.file.get(
@@ -36369,7 +36369,7 @@ var Date2 = class {
       if (weekFile) {
         weeks.add(weekFile.path);
       }
-      const monthLink = `${currentDate.year()}-${String(
+      const monthLink = `${currentDate.year()}/Monthly/${currentDate.year()}-${String(
         currentDate.month() + 1
       ).padStart(2, "0")}.md`;
       const monthFile = this.file.get(
@@ -36380,7 +36380,7 @@ var Date2 = class {
       if (monthFile) {
         months.add(monthFile.path);
       }
-      const quarterLink = `${currentDate.year()}-Q${Math.ceil(
+      const quarterLink = `${currentDate.year()}/Quarterly/${currentDate.year()}-Q${Math.ceil(
         (currentDate.month() + 1) / 3
       )}.md`;
       const quarterFile = this.file.get(
@@ -36503,7 +36503,7 @@ async function createFile(app, options) {
     if (!folder || !file) {
       return;
     }
-    let tFile = app.vault.getAbstractFileByPath(file);
+    const tFile = app.vault.getAbstractFileByPath(file);
     if (tFile && tFile instanceof import_obsidian4.TFile) {
       return await app.workspace.getLeaf().openFile(tFile);
     }
@@ -36636,6 +36636,7 @@ var Project = class extends Item {
   }, header) {
     const { from: from2, to } = condition;
     const timeReg = /\d+hr(\d+)?/;
+    const totalTimeReg = /^\d+hr(\d+)?$/;
     let day = from2;
     const projectList = [];
     const projectTimeConsume = {};
@@ -36643,7 +36644,9 @@ var Project = class extends Item {
     const tasks = [];
     while (true) {
       const momentDay = (0, import_obsidian5.moment)(day);
-      const link = `${momentDay.format("YYYY-MM-DD")}.md`;
+      const link = `${momentDay.year()}/Daily/${String(
+        momentDay.month() + 1
+      ).padStart(2, "0")}/${momentDay.format("YYYY-MM-DD")}.md`;
       const file = this.file.get(link, "", this.settings.periodicNotesPath);
       if (file instanceof import_obsidian5.TFile) {
         const reg = generateHeaderRegExp(header);
@@ -36658,10 +36661,10 @@ var Project = class extends Item {
             if (!project) {
               return;
             }
-            if (project.match(timeReg)) {
-              todayTotalTime = project;
+            if (project == null ? void 0 : project.trim().match(totalTimeReg)) {
+              todayTotalTime = project == null ? void 0 : project.trim();
             }
-            const realProject = (_a2 = (project.match(/\[\[(.*)\|?(.*)\]\]/) || [])[1]) == null ? void 0 : _a2.replace(/\|.*/, "");
+            const realProject = (_a2 = (project.match(/\d+\. \[\[(.*)\|?(.*)\]\]/) || [])[1]) == null ? void 0 : _a2.replace(/\|.*/, "");
             if (!realProject) {
               return;
             }
@@ -36741,7 +36744,7 @@ var Area = class extends Item {
     const tasks = [];
     for (let index2 = 0; index2 < quarterList.length; index2++) {
       const quarter = quarterList[index2];
-      const link = `${year}-${quarter}.md`;
+      const link = `${year}/Quarterly/${year}-${quarter}.md`;
       const file = this.file.get(link, "", this.settings.periodicNotesPath);
       if (file instanceof import_obsidian7.TFile) {
         const reg = generateHeaderRegExp(header);
@@ -36756,7 +36759,7 @@ var Area = class extends Item {
               if (!area) {
                 return;
               }
-              const realArea = (_a2 = (area.match(/\[\[(.*)\|?(.*)\]\]/) || [])[1]) == null ? void 0 : _a2.replace(/\|.*/, "");
+              const realArea = (_a2 = (area.match(/\d+\. \[\[(.*)\|?(.*)\]\]/) || [])[1]) == null ? void 0 : _a2.replace(/\|.*/, "");
               if (realArea && !areaList.includes(realArea)) {
                 areaList.push(realArea);
               }
@@ -36907,6 +36910,7 @@ var Task = class {
       const tags = this.file.tags(filepath);
       const div = el.createEl("div");
       const component = new Markdown(div);
+      const periodicNotesPath = this.settings.periodicNotesPath;
       if (!tags.length) {
         return renderError(
           this.app,
@@ -36920,7 +36924,7 @@ var Task = class {
       }).join(" ");
       const { values: tasks } = await this.dataview.tryQuery(`
 TASK
-FROM -"Templates"
+FROM -"${periodicNotesPath}/Templates"
 WHERE ${where} AND file.path != "${filepath}"
 SORT completed ASC
     `);
@@ -36974,6 +36978,7 @@ var Bullet = class {
       const tags = this.file.tags(filepath);
       const div = el.createEl("div");
       const component = new Markdown(div);
+      const periodicNotesPath = this.settings.periodicNotesPath;
       if (!tags.length) {
         return renderError(
           this.app,
@@ -36991,7 +36996,7 @@ var Bullet = class {
       const result = await this.dataview.tryQuery(
         `
 TABLE WITHOUT ID rows.L.text AS "Bullet", rows.file.link AS "File"
-FROM (${from2}) AND -"Templates"
+FROM (${from2}) AND -"${periodicNotesPath}/Templates"
 FLATTEN file.lists AS L
 WHERE ${where} AND !L.task AND file.path != "${filepath}"
 GROUP BY file.link
@@ -39145,12 +39150,13 @@ var DailyRecord = class {
       this.sync();
     };
     this.sync = async () => {
+      logMessage("Start sync daily record");
       this.offset = 0;
       this.downloadResource();
       this.insertDailyRecord();
     };
     this.insertDailyRecord = async () => {
-      var _a, _b, _c;
+      var _a, _b, _c, _d;
       const header = this.settings.dailyRecordHeader;
       const dailyRecordByDay = {};
       const records = await this.fetch() || [];
@@ -39161,7 +39167,7 @@ var DailyRecord = class {
         return;
       }
       for (const record of records) {
-        if (!record.content) {
+        if (!record.content && !((_d = record.resourceList) == null ? void 0 : _d.length)) {
           continue;
         }
         const [date4, timeStamp, formattedRecord] = formatDailyRecord(record);
@@ -39176,8 +39182,12 @@ var DailyRecord = class {
       await Promise.all(
         Object.keys(dailyRecordByDay).map(async (today) => {
           var _a2, _b2, _c2;
+          const momentDay = (0, import_obsidian10.moment)(today);
+          const link = `${momentDay.year()}/Daily/${String(
+            momentDay.month() + 1
+          ).padStart(2, "0")}/${momentDay.format("YYYY-MM-DD")}.md`;
           const targetFile = this.file.get(
-            today,
+            link,
             "",
             this.settings.periodicNotesPath
           );
@@ -39253,6 +39263,18 @@ ${finalRecordContent}
       this.offset = this.offset + this.limit;
       this.insertDailyRecord();
     };
+    if (!settings.dailyRecordAPI) {
+      logMessage(ERROR_MESSAGES.NO_DAILY_RECORD_API);
+      return;
+    }
+    if (!settings.dailyRecordToken) {
+      logMessage(ERROR_MESSAGES.NO_DAILY_RECORD_TOKEN);
+      return;
+    }
+    if (!settings.dailyRecordHeader) {
+      logMessage(ERROR_MESSAGES.NO_DAILY_RECORD_HEADER);
+      return;
+    }
     this.app = app;
     this.file = file;
     this.settings = settings;
@@ -39266,19 +39288,6 @@ ${finalRecordContent}
         Accept: "application/json"
       }
     });
-    if (!this.settings.dailyRecordAPI) {
-      logMessage(ERROR_MESSAGES.NO_DAILY_RECORD_API);
-      return;
-    }
-    if (!this.settings.dailyRecordToken) {
-      logMessage(ERROR_MESSAGES.NO_DAILY_RECORD_TOKEN);
-      return;
-    }
-    if (!this.settings.dailyRecordHeader) {
-      logMessage(ERROR_MESSAGES.NO_DAILY_RECORD_HEADER);
-      return;
-    }
-    logMessage("Start sync daily record");
   }
   async fetch() {
     try {
@@ -39424,7 +39433,7 @@ var SettingTab = class extends import_obsidian11.PluginSettingTab {
           }, 500)
         )
       );
-      new import_obsidian11.Setting(containerEl).setName("Daily Record").setDesc("Sync daily record by remote API").addToggle(
+      new import_obsidian11.Setting(containerEl).setName("Daily Record").setDesc("Sync daily record from usememos service").addToggle(
         (toggle) => toggle.setValue(this.plugin.settings.useDailyRecord).onChange(async (value) => {
           this.plugin.settings.useDailyRecord = value;
           await this.plugin.saveSettings();
@@ -39441,7 +39450,9 @@ var SettingTab = class extends import_obsidian11.PluginSettingTab {
           )
         );
         new import_obsidian11.Setting(containerEl).setName("API:").setDesc("The daily record API").addText(
-          (text) => text.setPlaceholder(DEFAULT_SETTINGS.dailyRecordAPI).setValue(this.plugin.settings.dailyRecordAPI).onChange(
+          (text) => text.setPlaceholder(
+            DEFAULT_SETTINGS.dailyRecordAPI || "Usememos server + API(https://your-use-memos.com/api/v1/memo)"
+          ).setValue(this.plugin.settings.dailyRecordAPI).onChange(
             (0, import_debounce.default)(async (value) => {
               this.plugin.settings.dailyRecordAPI = value;
               await this.plugin.saveSettings();
@@ -39449,7 +39460,9 @@ var SettingTab = class extends import_obsidian11.PluginSettingTab {
           )
         );
         new import_obsidian11.Setting(containerEl).setName("Token:").setDesc("The token of your API").addText(
-          (text) => text.setPlaceholder(DEFAULT_SETTINGS.dailyRecordToken).setValue(this.plugin.settings.dailyRecordToken).onChange(
+          (text) => text.setPlaceholder(
+            DEFAULT_SETTINGS.dailyRecordToken || "Find token in https://your-use-memos.com/setting"
+          ).setValue(this.plugin.settings.dailyRecordToken).onChange(
             (0, import_debounce.default)(async (value) => {
               this.plugin.settings.dailyRecordToken = value;
               await this.plugin.saveSettings();
@@ -69763,7 +69776,7 @@ var AddTemplate = () => {
     let templateFile = "";
     let folder = "";
     let file = "";
-    let year = dates.year();
+    const year = dates.year();
     let value;
     if (periodicActiveTab === DAILY) {
       folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}/${String(dates.month() + 1).padStart(
@@ -69773,7 +69786,7 @@ var AddTemplate = () => {
       value = dates.format("YYYY-MM-DD");
     } else if (periodicActiveTab === WEEKLY) {
       folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}`;
-      value = dates.format("gggg-[W]w");
+      value = dates.format("gggg-[W]ww");
     } else if (periodicActiveTab === MONTHLY) {
       folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}`;
       value = dates.format("YYYY-MM");
