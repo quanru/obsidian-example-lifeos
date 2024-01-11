@@ -153,7 +153,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -166,24 +168,28 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "command-palette:Open command palette": false,
-      "random-note:Open random note": false,
-      "workspaces:Manage workspace layouts": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "random-note:开始漫游笔记": false,
+      "workspaces:管理工作区布局": false,
       "templater-obsidian:Templater": false,
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "9110575c83bff6ab",
+  "active": "1ae82b8d469273d8",
   "lastOpenFiles": [
+    "0. PeriodicNotes/2024/Weekly/2024-W02.md",
+    "3. Resources/Template.md",
+    "0. PeriodicNotes/2024/Weekly",
+    "0. PeriodicNotes/2024",
+    "0. PeriodicNotes/2024/Weekly/2024-W2.md",
     "3. Resources/EnglishLearning/README.md",
     "2. Areas/Life/Life.README.md",
     "1. Projects/PKM-LifeOS/LifeOS.README.md",
     "1. Projects/PKM-LifeOS/PeriodicPARA.md",
-    "3. Resources/Template.md",
     "5. Express/README.md",
     "5. Express",
     "1. Projects/Template.md",
@@ -212,10 +218,6 @@
     "0. PeriodicNotes/2023/Daily/08/2023-08-26.md",
     "0. PeriodicNotes/2023/Daily/08",
     "4. Archives/Template.md",
-    "2. Areas/Template.md",
-    "0. PeriodicNotes/Templates/Weekly.md",
-    "0. PeriodicNotes/Templates",
-    "Templates/PeriodicNotes",
     "4. Archives/育儿-宝宝起名/林奕如.png",
     "4. Archives/育儿-宝宝起名/baby-name.png",
     "1. Projects/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
