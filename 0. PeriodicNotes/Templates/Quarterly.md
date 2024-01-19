@@ -6,7 +6,7 @@
 
 ## First Things Dimension
 %%A snapshot of the area this quarter%%
-<% PeriodicPARA.Area.snapshot() %>
+No files in 2. 领域
 
 ## Role Dimension
 ### Employee
