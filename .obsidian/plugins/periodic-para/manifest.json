@@ -1,7 +1,7 @@
 {
 	"id": "periodic-para",
 	"name": "Periodic PARA",
-	"version": "1.7.9",
+	"version": "1.8.0",
 	"minAppVersion": "0.15.0",
 	"description": "Assist in practicing the PARA method with periodic notes and usememos.",
 	"author": "YiBing Lin",
