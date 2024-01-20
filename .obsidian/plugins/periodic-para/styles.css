@@ -37,3 +37,6 @@
 .is-phone .periodic-para button {
   width: unset;
 }
+.is-phone .periodic-para .ant-tabs-tab + .ant-tabs-tab {
+  margin: 0 0 0 24px;
+}
