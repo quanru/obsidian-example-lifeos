@@ -72458,7 +72458,12 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
         this.app.workspace.revealLeaf(leafs[0]);
         return;
       }
-      const leaf = this.app.workspace.getLeftLeaf(false);
+      let leaf;
+      if (this.app.isMobile) {
+        leaf = this.app.workspace.getRightLeaf(false);
+      } else {
+        leaf = this.app.workspace.getLeftLeaf(false);
+      }
       await leaf.setViewState({ type: VIEW_TYPE, active: true });
     };
     if (!(0, import_obsidian_dataview.isPluginEnabled)(app)) {
