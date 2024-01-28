@@ -2704,7 +2704,7 @@ var PromptModal = class extends import_obsidian9.Modal {
   onClose() {
     this.contentEl.empty();
     if (!this.submitted) {
-      this.reject();
+      this.reject(new TemplaterError("Cancelled prompt"));
     }
   }
   createForm() {
@@ -2734,15 +2734,8 @@ var PromptModal = class extends import_obsidian9.Modal {
     if (evt.isComposing || evt.keyCode === 229)
       return;
     if (this.multi_line) {
-      if (import_obsidian9.Platform.isDesktop) {
-        if (evt.shiftKey && evt.key === "Enter") {
-        } else if (evt.key === "Enter") {
-          this.resolveAndClose(evt);
-        }
-      } else {
-        if (evt.key === "Enter") {
-          evt.preventDefault();
-        }
+      if (import_obsidian9.Platform.isDesktop && evt.key === "Enter" && !evt.shiftKey) {
+        this.resolveAndClose(evt);
       }
     } else {
       if (evt.key === "Enter") {
@@ -2988,8 +2981,8 @@ var UserScriptFunctions = class {
       exports: exp
     };
     const file_content = await app.vault.read(file);
-    const wrapping_fn = window.eval("(function anonymous(require, module, exports){" + file_content + "\n})");
     try {
+      const wrapping_fn = window.eval("(function anonymous(require, module, exports){" + file_content + "\n})");
       wrapping_fn(req, mod, exp);
     } catch (err) {
       throw new TemplaterError(`Failed to load user script at "${file.path}".`, err.message);

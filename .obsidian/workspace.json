@@ -4,15 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "a165dac2809840dd",
+        "id": "29886ebd024c88f3",
         "type": "tabs",
         "children": [
           {
-            "id": "25c9a14ce07f5033",
+            "id": "1ec691a399114bfe",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "canvas",
+              "state": {
+                "file": "主页.canvas",
+                "viewState": {
+                  "x": -180,
+                  "y": 130,
+                  "zoom": 0
+                }
+              }
             }
           }
         ]
@@ -27,16 +34,8 @@
       {
         "id": "d32bd3e9f2db57a0",
         "type": "tabs",
-        "dimension": 38.309636650868875,
+        "dimension": 38.70458135860979,
         "children": [
-          {
-            "id": "e2f9ecf537a853a4",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
-            }
-          },
           {
             "id": "9110575c83bff6ab",
             "type": "leaf",
@@ -45,13 +44,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
-        "id": "90362f6f602f507d",
+        "id": "58ef8e8ac188ff27",
         "type": "tabs",
-        "dimension": 61.69036334913112,
+        "dimension": 61.29541864139021,
         "children": [
           {
             "id": "318abbbcd7749f6f",
@@ -69,13 +67,21 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "listByFolder",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
+            }
+          },
+          {
+            "id": "e2f9ecf537a853a4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
             }
           },
           {
@@ -109,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "主页.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +126,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "主页.canvas"
+              }
             }
           },
           {
@@ -128,6 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "主页.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,56 +180,56 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "25c9a14ce07f5033",
+  "active": "1ec691a399114bfe",
   "lastOpenFiles": [
-    "任务.md",
+    "0. 周期笔记/2024/Daily/01/2024-01-01.md",
+    "2. 领域/个人品牌/个人品牌.README.md",
+    "3. 资源/摄影摄像/摄影摄像.README.md",
+    "4. 存档/育儿-宝宝起名/宝宝起名.README.md",
+    "1. 项目/个人品牌-分享-2023-WOT-分享会/2023-WOT-分享会.README.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-11.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-10.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-09.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-08.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-07.md",
     "0. 周期笔记/2023/Daily/06/2023-06-06.md",
-    "0. 周期笔记/2023/Weekly/2023-W23.md",
     "0. 周期笔记/2023/Daily/06/2023-06-05.md",
-    "0. 周期笔记/2023/Weekly/2023-W22.md",
-    "0. 周期笔记/2024/Weekly/2024-W03.md",
-    "0. 周期笔记/2024/Daily/01/2024-01-18.md",
-    "0. 周期笔记/2024/Weekly",
-    "-1. 捕获/README.md",
-    "0. 周期笔记/2024/Daily/01/2024-01-17.md",
-    "0. 周期笔记/2024/Daily/01/2024-01-16.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-04.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-03.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-02.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-01.md",
+    "0. 周期笔记/Templates/Daily.md",
+    "0. 周期笔记/Templates/Yearly.md",
+    "0. 周期笔记/Templates/Weekly.md",
+    "0. 周期笔记/Templates/Quarterly.md",
+    "0. 周期笔记/Templates/Monthly.md",
+    "0. 周期笔记/2024/Daily/01/2024-01-28.md",
+    "0. 周期笔记/2023/2023.md",
+    "0. 周期笔记/2023/Quarterly/2023-Q1.md",
+    "0. 周期笔记/2023/Monthly/2023-06.md",
+    "0. 周期笔记/2023/Weekly/2023-W23.md",
     "0. 周期笔记/2024/Daily/01",
     "0. 周期笔记/2024/Daily",
     "0. 周期笔记/2024",
+    "0. 周期笔记/2022/Quarterly",
+    "0. 周期笔记/2022",
+    "0. 周期笔记/2024/Quarterly",
+    "0. 周期笔记/2024/Monthly",
+    "1. 项目/个人品牌-分享-2023-WOT-分享会",
+    "2. 领域/个人品牌",
+    "0. 周期笔记/2024/Weekly",
     "HOME.canvas",
     "主页.canvas",
-    "5. 表达/README.md",
-    "5. 表达",
-    "4. 存档/育儿-宝宝起名/规则.md",
-    "4. 存档/育儿-宝宝起名/程序起名.md",
-    "4. 存档/育儿-宝宝起名/五行/金.md",
-    "4. 存档/育儿-宝宝起名/五行/火.md",
-    "4. 存档/育儿-宝宝起名/五行/水.md",
-    "4. 存档/育儿-宝宝起名/五行/木.md",
-    "4. 存档/育儿-宝宝起名/五行/土.md",
-    "4. 存档/育儿-宝宝起名/program/package.json",
-    "4. 存档/育儿-宝宝起名/program/nameCandidateList.md",
-    "4. 存档/育儿-宝宝起名/program/index.js",
-    "4. 存档/育儿-宝宝起名/program/README.md",
     "4. 存档/育儿-宝宝起名/林奕如.png",
-    "4. 存档/育儿-宝宝起名/单字.md",
-    "4. 存档/育儿-宝宝起名/候选列表.md",
-    "4. 存档/育儿-宝宝起名/五行和字义查询.md",
-    "4. 存档/育儿-宝宝起名/五行",
-    "4. 存档/育儿-宝宝起名/program",
     "4. 存档/育儿-宝宝起名/baby-name.png",
-    "4. 存档/育儿-宝宝起名/README.md",
-    "4. 存档/育儿-宝宝起名",
-    "4. 存档/Template.md",
-    "4. 存档/README.md",
-    "1. 项目/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
-    "1. 项目/分享-2023 WOT 分享会/架构图/Monorepo.svg",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/warning.svg",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/warning.png",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/rollup-logo.svg",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/repo-hero-logo-light.svg",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.svg",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.png",
+    "1. 项目/个人品牌-分享-2023-WOT-分享会/架构图/Polyrepo.svg",
+    "1. 项目/个人品牌-分享-2023-WOT-分享会/架构图/Monorepo.svg",
+    "1. 项目/个人品牌-分享-2023-WOT-分享会/Attachments/PPT 素材/warning.svg",
+    "1. 项目/个人品牌-分享-2023-WOT-分享会/Attachments/PPT 素材/warning.png",
+    "1. 项目/个人品牌-分享-2023-WOT-分享会/Attachments/PPT 素材/rollup-logo.svg",
+    "1. 项目/个人品牌-分享-2023-WOT-分享会/Attachments/PPT 素材/repo-hero-logo-light.svg",
+    "1. 项目/个人品牌-分享-2023-WOT-分享会/Attachments/PPT 素材/monitor.svg",
+    "1. 项目/个人品牌-分享-2023-WOT-分享会/Attachments/PPT 素材/monitor.png",
     "Templates/HOME.canvas",
     "hello/HOME.canvas",
     "hello/Templates/HOME.canvas"

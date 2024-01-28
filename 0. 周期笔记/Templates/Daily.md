@@ -1,5 +1,3 @@
-# <% tp.file.title %>
-
 ## 项目列表
 %%项目的今日快照%%
 <% PeriodicPARA.Project.snapshot() %>
