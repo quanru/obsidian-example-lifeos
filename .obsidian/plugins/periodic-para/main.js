@@ -36560,7 +36560,7 @@ var Task = class {
 TASK
 FROM -"${periodicNotesPath}/Templates"
 WHERE ${where} AND file.path != "${filepath}"
-SORT completed ASC
+SORT status ASC
     `);
       this.dataview.taskList(tasks, false, div, component);
       ctx.addChild(component);
@@ -36629,7 +36629,7 @@ var Bullet = class {
       }).join(" ");
       const result = await this.dataview.tryQuery(
         `
-TABLE WITHOUT ID rows.L.text AS "Bullet", rows.file.link AS "File"
+TABLE WITHOUT ID rows.L.text AS "Bullet", rows.L.link AS "Link"
 FROM (${from2}) AND -"${periodicNotesPath}/Templates"
 FLATTEN file.lists AS L
 WHERE ${where} AND !L.task AND file.path != "${filepath}"

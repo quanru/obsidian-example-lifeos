@@ -11,6 +11,7 @@ ProjectListByTime
 
 ## 角色维度
 ### 职员
+%% 作为职员，对于这个月的任务，你如何拆解本周任务呢？ %%
 - OKR
 <%* let weekNum = Number(tp.file.title.match(/-W(\d\d)/)[1]); if (weekNum%2 !== 0) { -%>
 - #工作/one-one 

@@ -3,5 +3,6 @@
   "obsidian-tasks-plugin",
   "templater-obsidian",
   "hot-reload",
-  "periodic-para"
+  "periodic-para",
+  "obsidian-copy-block-link"
 ]

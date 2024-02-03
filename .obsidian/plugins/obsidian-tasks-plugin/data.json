@@ -5,6 +5,7 @@
   "taskFormat": "tasksPluginEmoji",
   "setCreatedDate": false,
   "setDoneDate": true,
+  "setCancelledDate": true,
   "autoSuggestInEditor": true,
   "autoSuggestMinMatch": 3,
   "autoSuggestMaxItems": 6,
@@ -85,5 +86,16 @@
   "debugSettings": {
     "ignoreSortInstructions": false,
     "showTaskHiddenData": false
+  },
+  "loggingOptions": {
+    "minLevels": {
+      "": "info",
+      "tasks": "info",
+      "tasks.Cache": "info",
+      "tasks.Events": "info",
+      "tasks.File": "info",
+      "tasks.Query": "info",
+      "tasks.Task": "info"
+    }
   }
 }
