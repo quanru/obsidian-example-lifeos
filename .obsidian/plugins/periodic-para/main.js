@@ -36161,10 +36161,17 @@ function formatDailyRecord(record) {
   const [date4, time] = (0, import_obsidian4.moment)(timeStamp * 1e3).format("YYYY-MM-DD HH:mm").split(" ");
   const [firstLine, ...otherLine] = content.trim().split("\n");
   const isTask = /^- \[.*?\]/.test(firstLine);
-  const targetFirstLine = (
-    // 将标签和时间戳加到第一行
-    (isTask ? `- [ ] ${time} ${firstLine.replace(/^- \[.*?\]/, "")}` : `- ${time} ${firstLine.replace(/^- /, "")}`) + ` #daily-record ^${timeStamp}`
-  );
+  const isCode = /```/.test(firstLine);
+  let targetFirstLine = "";
+  if (isTask) {
+    targetFirstLine = `- [ ] ${time} ${firstLine.replace(/^- \[.*?\]/, "")}`;
+  } else if (isCode) {
+    targetFirstLine = `- ${time}`;
+    otherLine.unshift(firstLine);
+  } else {
+    targetFirstLine = `- ${time} ${firstLine.replace(/^- /, "")}`;
+  }
+  targetFirstLine += ` #daily-record ^${timeStamp}`;
   const targetOtherLine = (otherLine == null ? void 0 : otherLine.length) ? "\n" + otherLine.map((line2) => /^[ \t]/.test(line2) ? line2 : `	${line2}`).join("\n").trimEnd() : "";
   const targetResourceLine = (resourceList == null ? void 0 : resourceList.length) ? "\n" + (resourceList == null ? void 0 : resourceList.map(
     (resource) => `	 - ![[${generateFileName(resource)}]]`
@@ -36553,7 +36560,7 @@ var Task = class {
 TASK
 FROM -"${periodicNotesPath}/Templates"
 WHERE ${where} AND file.path != "${filepath}"
-SORT completed ASC
+SORT status ASC
     `);
       this.dataview.taskList(tasks, false, div, component);
       ctx.addChild(component);
@@ -36622,7 +36629,7 @@ var Bullet = class {
       }).join(" ");
       const result = await this.dataview.tryQuery(
         `
-TABLE WITHOUT ID rows.L.text AS "Bullet", rows.file.link AS "File"
+TABLE WITHOUT ID rows.L.text AS "Bullet", rows.L.link AS "Link"
 FROM (${from2}) AND -"${periodicNotesPath}/Templates"
 FLATTEN file.lists AS L
 WHERE ${where} AND !L.task AND file.path != "${filepath}"
@@ -38962,7 +38969,7 @@ ${finalRecordContent}
               return;
             }
             const { data: data2 } = await this.axios.get(
-              `${origin}/o/r/${resource.id}`,
+              `${origin}/o/r/${resource.name || resource.id}`,
               {
                 responseType: "arraybuffer"
               }
@@ -72156,7 +72163,8 @@ var AddTemplate = () => {
   const { app, settings, width } = useApp() || {};
   const [periodicActiveTab, setPeriodicActiveTab] = (0, import_react71.useState)(DAILY);
   const [paraActiveTab, setParaActiveTab] = (0, import_react71.useState)(PROJECT);
-  const [type4, setType] = (0, import_react71.useState)(PERIODIC);
+  const defaultType = (settings == null ? void 0 : settings.usePeriodicNotes) ? PERIODIC : PARA;
+  const [type4, setType] = (0, import_react71.useState)(defaultType);
   const [form] = form_default.useForm();
   const today = (0, import_dayjs3.default)(new Date());
   const SubmitButton = /* @__PURE__ */ React216.createElement(
@@ -72255,7 +72263,7 @@ var AddTemplate = () => {
         },
         components: {
           DatePicker: {
-            cellWidth: width ? width / 7.25 : 55,
+            cellWidth: width ? width / 7.5 : 45,
             cellHeight: 30
           }
         },
@@ -72354,7 +72362,17 @@ var AddTemplate = () => {
                 {
                   labelCol: { flex: "80px" },
                   label: "Tag",
-                  name: `${item}Tag`
+                  name: `${item}Tag`,
+                  rules: [
+                    {
+                      required: true,
+                      message: "Tag is required"
+                    },
+                    {
+                      pattern: /^[^\s]*$/,
+                      message: `Tag can't contain spaces`
+                    }
+                  ]
                 },
                 /* @__PURE__ */ React216.createElement(
                   input_default,
@@ -72363,11 +72381,15 @@ var AddTemplate = () => {
                       const itemTag = form.getFieldValue(`${item}Tag`).replace(/^#/, "");
                       const itemFolder = itemTag.replace(/\//g, "-");
                       const itemREADME = itemTag.split("/").reverse()[0];
+                      form.setFieldValue(`${item}Folder`, itemFolder);
                       form.setFieldValue(
                         `${item}README`,
-                        (itemREADME ? itemREADME + "." : "") + "README.md"
+                        itemREADME ? itemREADME + ".README.md" : ""
                       );
-                      form.setFieldValue(`${item}Folder`, itemFolder);
+                      form.validateFields([
+                        `${item}Folder`,
+                        `${item}README`
+                      ]);
                     },
                     allowClear: true,
                     placeholder: `${item} Tag, eg: ${item === PROJECT ? "PKM/LifeOS" : "PKM"}`
@@ -72378,7 +72400,13 @@ var AddTemplate = () => {
                 {
                   labelCol: { flex: "80px" },
                   label: "Folder",
-                  name: `${item}Folder`
+                  name: `${item}Folder`,
+                  rules: [
+                    {
+                      required: true,
+                      message: "Folder is required"
+                    }
+                  ]
                 },
                 /* @__PURE__ */ React216.createElement(
                   input_default,
@@ -72393,7 +72421,13 @@ var AddTemplate = () => {
                 {
                   labelCol: { flex: "80px" },
                   label: "README",
-                  name: `${item}README`
+                  name: `${item}README`,
+                  rules: [
+                    {
+                      required: true,
+                      message: "README is required"
+                    }
+                  ]
                 },
                 /* @__PURE__ */ React216.createElement(input_default, { allowClear: true, placeholder: "LifeOS.README.md" })
               ))
@@ -72411,6 +72445,9 @@ var PeriodicPARAView = class extends import_obsidian13.ItemView {
   constructor(leaf, settings) {
     super(leaf);
     this.onResize = (0, import_obsidian13.debounce)(async () => {
+      if (this.app.isMobile) {
+        return;
+      }
       this.onClose();
       this.onOpen();
     }, 500);

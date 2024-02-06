@@ -11,8 +11,13 @@
             "id": "25c9a14ce07f5033",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "0. PeriodicNotes/Templates/Monthly.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -109,6 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "0. PeriodicNotes/Templates/Monthly.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "0. PeriodicNotes/Templates/Monthly.md"
+              }
             }
           },
           {
@@ -128,6 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "0. PeriodicNotes/Templates/Monthly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,19 +168,23 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "command-palette:Open command palette": false,
-      "random-note:Open random note": false,
-      "workspaces:Manage workspace layouts": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "random-note:开始漫游笔记": false,
+      "workspaces:管理工作区布局": false,
       "templater-obsidian:Templater": false,
       "periodic-para:Periodic PARA": false
     }
   },
   "active": "25c9a14ce07f5033",
   "lastOpenFiles": [
+    "0. PeriodicNotes/2024/Monthly/2024-02.md",
+    "0. PeriodicNotes/Templates/Monthly.md",
+    "0. PeriodicNotes/2024/Monthly",
+    "0. PeriodicNotes/2024",
     "主页.canvas",
     "TASK.md",
     "HOME.canvas",
@@ -195,11 +208,9 @@
     "2. Areas/Template.md",
     "2. Areas/PKM",
     "2. Areas/Life",
-    "2. Areas",
     "1. Projects/PKM-LifeOS/PeriodicPARA.md",
     "1. Projects/PKM-LifeOS/LifeOS.README.md",
     "1. Projects/Template.md",
-    "1. Projects/PKM-LifeOS",
     "1. Projects/README.md",
     "0. PeriodicNotes/2023/Daily/06/2023-06-04.md",
     "0. PeriodicNotes/2023/Daily/06/2023-06-03.md",
@@ -208,7 +219,6 @@
     "0. PeriodicNotes/2023/Quarterly/2023-Q2.md",
     "0. PeriodicNotes/2023/Quarterly/2023-Q1.md",
     "0. PeriodicNotes/2023/Weekly/2023-W22.md",
-    "0. PeriodicNotes/2023/Monthly/2023-06.md",
     "4. 存档/育儿-宝宝起名/林奕如.png",
     "4. 存档/育儿-宝宝起名/baby-name.png",
     "1. 项目/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
