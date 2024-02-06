@@ -12,9 +12,9 @@ ProjectListByTime
 
 ## Role Dimension
 ### Employee
-<%* let monthNum = Number(tp.file.title.match(/-(\d\d)/)[1]); if (monthNum%2 === 0) { -%>
+<%* let current = PeriodicPARA.Date.parse(app.workspace.getActiveFile().path); if (current.month%2 === 0) { -%>
 - #work/one-one 
-	- [ ] Fill in bimonthly #work/trivia 📅 <% PeriodicPARA.Date.lastDay(PeriodicPARA.Date.parse()).month %>
+	- [ ] Fill in bimonthly #work/trivia 📅  <% PeriodicPARA.Date.lastDay(current).month %>
 <%* } -%>
 - OKR
 ### Husband
