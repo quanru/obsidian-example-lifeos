@@ -3,6 +3,7 @@
 ## Description
 
 - This repository is a sample project for the blog [Building my second brain 🧠 with Obsidian](https://quanru.github.io/2023/07/08/Building%20my%20second%20brain%20%F0%9F%A7%A0%20with%20Obsidian/), Please read it first.
+- 更多教程请前往[Obsidian LifeOS 官网](https://obsidian-life-os.netlify.app/)
 
 ![](https://github.com/quanru/obsidian-periodic-para/blob/main/assets/periodic-para-plugin-en.png)
 ![](https://github.com/quanru/obsidian-periodic-para/blob/main/assets/periodic-para-plugin-add-1-en.png)
@@ -18,7 +19,10 @@
 
 ## Support
 
-- [Discord](https://discord.gg/HZGanKEkuZ)
+- [🎮Discord](https://discord.gg/HZGanKEkuZ)
+- [🐦Twitter](https://twitter.com/quanruzhuoxiu)
+- [📧Email](mailto:quanruzhuoxiu@gmail.com)
+- [🤖AI LifeOS Coach](https://ciciai.com/bot/VVdcRTYZ)
 
 ## Donations
 
