@@ -4,5 +4,7 @@
   "templater-obsidian",
   "hot-reload",
   "periodic-para",
-  "obsidian-copy-block-link"
+  "obsidian-copy-block-link",
+  "fuzzy-chinese-pinyin",
+  "better-search-views"
 ]
