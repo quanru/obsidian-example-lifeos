@@ -21,7 +21,7 @@
 
 ### 用户群
 
-- [👥 飞书](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=36cl5bb9-8e09-40e7-881b-08e659012135)
+- [👥飞书](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=704oa7b2-2a6b-4861-b07f-afeb9d971a23)
 - [🎮Discord](https://discord.gg/HZGanKEkuZ)
 
 ### 联系作者
