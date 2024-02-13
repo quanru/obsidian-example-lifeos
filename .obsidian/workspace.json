@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "8a5ad3c3e4c7ab6c",
+        "id": "068b4fe2ccc307c0",
         "type": "tabs",
         "children": [
           {
-            "id": "379c9311f1c61603",
+            "id": "ea53afc8d1162297",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "0. 周期笔记/Templates/Quarterly.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -108,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "0. 周期笔记/Templates/Quarterly.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "0. 周期笔记/Templates/Quarterly.md"
+              }
             }
           },
           {
@@ -127,6 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "0. 周期笔记/Templates/Quarterly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,12 +175,26 @@
       "random-note:开始漫游笔记": false,
       "workspaces:管理工作区布局": false,
       "templater-obsidian:Templater": false,
-      "periodic-para:Periodic PARA": false,
-      "fuzzy-chinese-pinyin:FuzzySearch": false
+      "fuzzy-chinese-pinyin:FuzzySearch": false,
+      "periodic-para:Periodic PARA": false
     }
   },
-  "active": "379c9311f1c61603",
+  "active": "9110575c83bff6ab",
   "lastOpenFiles": [
+    "0. 周期笔记/Templates/Monthly.md",
+    "0. 周期笔记/Templates/Daily.md",
+    "0. 周期笔记/2023/2023.md",
+    "0. 周期笔记/2023/Quarterly/2023-Q2.md",
+    "0. 周期笔记/2023/Quarterly/2023-Q1.md",
+    "0. 周期笔记/2023/Quarterly/2023-Q3.md",
+    "1. 项目/育儿-筹办满月酒/育儿-筹办满月酒.README.md",
+    "2. 领域/育儿/育儿.README.md",
+    "1. 项目/photography/photography.README.md",
+    "1. 项目/photography",
+    "2. 领域/README.md",
+    "任务.md",
+    "4. 存档/育儿-宝宝起名/单字.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-01.md",
     "-1. 捕获/README.md",
     "0. 周期笔记/2024/Daily/02/2024-02-05.md",
     "1. 项目/个人品牌-WOT-分享会/ChatGPT/参考1.md",
@@ -185,31 +208,17 @@
     "0. 周期笔记/2024/Monthly/2024-01.md",
     "0. 周期笔记/2024/Quarterly/2024-Q1.md",
     "0. 周期笔记/2024/Weekly/2024-W06.md",
-    "0. 周期笔记/2024/2024.md",
-    "0. 周期笔记/2024/Monthly/2024-02.md",
     "0. 周期笔记/2024/Quarterly",
-    "0. 周期笔记/2024/Weekly/2024-W05.md",
     "0. 周期笔记/2024/Weekly",
     "0. 周期笔记/2024/Daily/02",
     "0. 周期笔记/2024/Daily",
-    "0. 周期笔记/2024/Monthly/2024-06.md",
-    "0. 周期笔记/2024/Monthly/2024-04.md",
-    "0. 周期笔记/Templates/Monthly.md",
     "0. 周期笔记/2024/Monthly",
     "0. 周期笔记/2024",
-    "0. 周期笔记/2024/Monthly/2024-05.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-01.md",
-    "0. 周期笔记/2024/Monthly/2024-03.md",
-    "0. 周期笔记/2024/Weekly/2024-W07.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-08.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-07.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-06.md",
     "主页.canvas",
     "pbcopy",
     "1. 项目/育儿-筹办满月酒",
     "1. 项目/育儿-",
     "4. 存档/育儿-宝宝起名/林奕如.png",
-    "2. 领域/父母关系",
     "HOME.canvas",
     "4. 存档/育儿-宝宝起名/baby-name.png",
     "1. 项目/个人品牌-WOT-分享会/架构图/Polyrepo.svg",

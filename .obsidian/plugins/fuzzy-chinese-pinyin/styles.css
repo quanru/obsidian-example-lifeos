@@ -2,6 +2,11 @@
     position: relative;
     display: flex;
 }
+.suggestion-item.fz-item .suggestion-flair {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .suggestion-item .fz-suggestion-content {
     width: 100%;
     display: inline-block;

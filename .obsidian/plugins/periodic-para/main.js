@@ -36110,6 +36110,7 @@ var WEEKLY = "Weekly";
 var MONTHLY = "Monthly";
 var QUARTERLY = "Quarterly";
 var YEARLY = "Yearly";
+var LIFE_OS_OFFICIAL_SITE = "https://obsidian-life-os.netlify.app";
 
 // src/util.ts
 function renderError(app, msg, containerEl, sourcePath) {
@@ -72357,7 +72358,7 @@ var AddTemplate = () => {
             return {
               label: item,
               key: item,
-              children: /* @__PURE__ */ React216.createElement(React216.Fragment, null, /* @__PURE__ */ React216.createElement(
+              children: paraActiveTab === item ? /* @__PURE__ */ React216.createElement(React216.Fragment, null, /* @__PURE__ */ React216.createElement(
                 form_default.Item,
                 {
                   labelCol: { flex: "80px" },
@@ -72430,7 +72431,7 @@ var AddTemplate = () => {
                   ]
                 },
                 /* @__PURE__ */ React216.createElement(input_default, { allowClear: true, placeholder: "LifeOS.README.md" })
-              ))
+              )) : null
             };
           })
         }
@@ -72526,6 +72527,11 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
       id: "periodic-para",
       name: "Create Notes",
       callback: this.initView
+    });
+    this.addCommand({
+      id: "periodic-para-life-os-guide",
+      name: "LifeOS Guide",
+      callback: () => window.location.href = LIFE_OS_OFFICIAL_SITE
     });
     this.app.workspace.onLayoutReady(this.initView);
     this.loadHelpers();
