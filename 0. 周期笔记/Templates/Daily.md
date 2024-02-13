@@ -3,6 +3,7 @@
 <% PeriodicPARA.Project.snapshot() %>
 
 ## 日常记录
+%%你的记录%%
 - %%你的记录%%
 
 ## 习惯打卡

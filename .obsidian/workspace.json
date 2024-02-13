@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "068b4fe2ccc307c0",
+        "id": "ffe851199ef8e34a",
         "type": "tabs",
         "children": [
           {
-            "id": "ea53afc8d1162297",
+            "id": "bcc136a76d3f898d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0. 周期笔记/Templates/Quarterly.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -113,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0. 周期笔记/Templates/Quarterly.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "0. 周期笔记/Templates/Quarterly.md"
-              }
+              "state": {}
             }
           },
           {
@@ -135,7 +127,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0. 周期笔记/Templates/Quarterly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,35 +170,39 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "9110575c83bff6ab",
+  "active": "318abbbcd7749f6f",
   "lastOpenFiles": [
-    "0. 周期笔记/Templates/Monthly.md",
-    "0. 周期笔记/Templates/Daily.md",
-    "0. 周期笔记/2023/2023.md",
-    "0. 周期笔记/2023/Quarterly/2023-Q2.md",
-    "0. 周期笔记/2023/Quarterly/2023-Q1.md",
-    "0. 周期笔记/2023/Quarterly/2023-Q3.md",
-    "1. 项目/育儿-筹办满月酒/育儿-筹办满月酒.README.md",
-    "2. 领域/育儿/育儿.README.md",
-    "1. 项目/photography/photography.README.md",
-    "1. 项目/photography",
-    "2. 领域/README.md",
-    "任务.md",
+    "4. 存档/育儿-宝宝起名/五行/土.md",
+    "4. 存档/育儿-宝宝起名/五行/水.md",
+    "4. 存档/育儿-宝宝起名/五行/木.md",
+    "4. 存档/育儿-宝宝起名/五行/金.md",
+    "4. 存档/育儿-宝宝起名/五行/火.md",
+    "4. 存档/育儿-宝宝起名/宝宝起名.README.md",
+    "4. 存档/育儿-宝宝起名/程序起名.md",
+    "4. 存档/育儿-宝宝起名/规则.md",
     "4. 存档/育儿-宝宝起名/单字.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-01.md",
-    "-1. 捕获/README.md",
-    "0. 周期笔记/2024/Daily/02/2024-02-05.md",
-    "1. 项目/个人品牌-WOT-分享会/ChatGPT/参考1.md",
-    "1. 项目/个人品牌-WOT-分享会/ChatGPT/参考2.md",
-    "1. 项目/个人品牌-WOT-分享会/ChatGPT/前端工程化的内容.md",
-    "1. 项目/个人品牌-WOT-分享会/演讲排练/逐字稿.md",
-    "1. 项目/个人品牌-WOT-分享会/演讲排练/排练注意事项.md",
-    "1. 项目/个人品牌-WOT-分享会/演讲排练/存在的问题.md",
+    "4. 存档/育儿-宝宝起名/候选列表.md",
+    "4. 存档/育儿-宝宝起名/林奕如.png",
+    "4. 存档/育儿-宝宝起名/五行和字义查询.md",
+    "4. 存档/育儿-宝宝起名/baby-name.png",
+    "4. 存档/Template.md",
+    "4. 存档/README.md",
+    "3. 资源/摄影摄像/摄影摄像.README.md",
+    "3. 资源/知识管理/知识管理.README.md",
+    "2. 领域/夫妻关系/夫妻关系.README.md",
+    "2. 领域/父母关系/父母关系.README.md",
     "2. 领域/个人品牌/个人品牌.README.md",
-    "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
-    "0. 周期笔记/2024/Monthly/2024-01.md",
-    "0. 周期笔记/2024/Quarterly/2024-Q1.md",
-    "0. 周期笔记/2024/Weekly/2024-W06.md",
+    "2. 领域/同事工作/工作.README.md",
+    "2. 领域/育儿/育儿.README.md",
+    "5. 表达/README.md",
+    "3. 资源/README.md",
+    "3. 资源/Template.md",
+    "1. 项目/Template.md",
+    "2. 领域/Template.md",
+    "2. 领域/README.md",
+    "0. 周期笔记/2022/Quarterly",
+    "0. 周期笔记/2022",
+    "1. 项目/photography",
     "0. 周期笔记/2024/Quarterly",
     "0. 周期笔记/2024/Weekly",
     "0. 周期笔记/2024/Daily/02",
@@ -216,11 +211,7 @@
     "0. 周期笔记/2024",
     "主页.canvas",
     "pbcopy",
-    "1. 项目/育儿-筹办满月酒",
-    "1. 项目/育儿-",
-    "4. 存档/育儿-宝宝起名/林奕如.png",
     "HOME.canvas",
-    "4. 存档/育儿-宝宝起名/baby-name.png",
     "1. 项目/个人品牌-WOT-分享会/架构图/Polyrepo.svg",
     "1. 项目/个人品牌-WOT-分享会/架构图/Monorepo.svg",
     "1. 项目/个人品牌-WOT-分享会/Attachments/PPT 素材/warning.svg",

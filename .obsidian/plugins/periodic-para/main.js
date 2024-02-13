@@ -72195,7 +72195,7 @@ var AddTemplate = () => {
     let templateFile = "";
     let folder = "";
     let file = "";
-    const year = dates.format("gggg");
+    const year = dates.format("YYYY");
     let value;
     if (periodicActiveTab === DAILY) {
       folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}/${String(dates.month() + 1).padStart(
@@ -72204,7 +72204,9 @@ var AddTemplate = () => {
       )}`;
       value = dates.format("YYYY-MM-DD");
     } else if (periodicActiveTab === WEEKLY) {
-      folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}`;
+      folder = `${settings.periodicNotesPath}/${dates.format(
+        "gggg"
+      )}/${periodicActiveTab}`;
       value = dates.format("gggg-[W]ww");
     } else if (periodicActiveTab === MONTHLY) {
       folder = `${settings.periodicNotesPath}/${year}/${periodicActiveTab}`;

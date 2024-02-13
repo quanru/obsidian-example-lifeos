@@ -1,4 +1,3 @@
-# README
 
 %% 73 【LifeOS项目管理实战，让你生活更有控制感！ - 林宜丙 | 小红书 - 你的生活指南】 😆 pCq54cvkWgRrM5z 😆 http://xhslink.com/jp0woA %%
 
