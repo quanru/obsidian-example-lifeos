@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "457baadb053a3849",
+        "id": "cdd60f73626110ef",
         "type": "tabs",
         "children": [
           {
-            "id": "b6ed55a448c1f91f",
+            "id": "f925848ea1cd6e24",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -170,17 +170,18 @@
       "fuzzy-chinese-pinyin:FuzzySearch": false
     }
   },
-  "active": "b6ed55a448c1f91f",
+  "active": "f925848ea1cd6e24",
   "lastOpenFiles": [
-    "0. 周期笔记/Templates/Quarterly.md",
-    "0. 周期笔记/2024/Weekly/2024-W07.md",
-    "0. 周期笔记/2024/Weekly",
+    "主页.canvas",
     "0. 周期笔记/2024/2024.md",
     "0. 周期笔记/2024/Quarterly/2024-Q1.md",
-    "0. 周期笔记/2024/Quarterly",
     "0. 周期笔记/2024/Monthly/2024-02.md",
+    "0. 周期笔记/2024/Quarterly",
+    "0. 周期笔记/2024/Weekly/2024-W07.md",
     "0. 周期笔记/2024/Monthly",
+    "0. 周期笔记/2024/Weekly",
     "0. 周期笔记/2024",
+    "0. 周期笔记/Templates/Quarterly.md",
     "0. 周期笔记/Templates/Monthly.md",
     "0. 周期笔记/Templates/Daily.md",
     "0. 周期笔记/2024/Daily/02/2024-02-16.md",
@@ -208,7 +209,6 @@
     "0. 周期笔记/2022/Quarterly",
     "0. 周期笔记/2022",
     "1. 项目/photography",
-    "主页.canvas",
     "pbcopy",
     "HOME.canvas",
     "1. 项目/个人品牌-WOT-分享会/架构图/Polyrepo.svg",
