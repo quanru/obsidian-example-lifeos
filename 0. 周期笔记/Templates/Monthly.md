@@ -14,8 +14,7 @@ ProjectListByTime
 ### 职员
 %% 作为职员，对于这个季度的目标，你如何拆解本月任务呢？ %%
 <%* let current = PeriodicPARA.Date.parse(app.workspace.getActiveFile().path); if (current.month%2 === 0) { -%>
-- #工作/one-one 
-	- [ ] 双月刊填写 #工作/琐事 📅 <% PeriodicPARA.Date.lastDay(current).month %>
+- [ ] 双月刊填写 #工作/琐事 📅 <% PeriodicPARA.Date.lastDay(current).month %>
 <%* } -%>
 - OKR
 ### 丈夫
