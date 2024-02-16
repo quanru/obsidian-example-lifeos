@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "a165dac2809840dd",
+        "id": "98412e05242771b5",
         "type": "tabs",
         "children": [
           {
-            "id": "25c9a14ce07f5033",
+            "id": "e51918b63a868167",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0. PeriodicNotes/Templates/Monthly.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -30,18 +25,10 @@
     "type": "split",
     "children": [
       {
-        "id": "d32bd3e9f2db57a0",
+        "id": "b454898db4c8f945",
         "type": "tabs",
-        "dimension": 38.467614533965246,
+        "dimension": 42.756183745583044,
         "children": [
-          {
-            "id": "e2f9ecf537a853a4",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
-            }
-          },
           {
             "id": "9110575c83bff6ab",
             "type": "leaf",
@@ -50,13 +37,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
-        "id": "90362f6f602f507d",
+        "id": "84e30e37024d9f2a",
         "type": "tabs",
-        "dimension": 61.532385466034754,
+        "dimension": 57.243816254416956,
         "children": [
           {
             "id": "318abbbcd7749f6f",
@@ -74,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "listByFolder",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,12 +79,20 @@
                 "useHierarchy": true
               }
             }
+          },
+          {
+            "id": "e2f9ecf537a853a4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 397.5024719238281
+    "width": 377.50312423706055
   },
   "right": {
     "id": "e909704c2c67d329",
@@ -114,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0. PeriodicNotes/Templates/Monthly.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "0. PeriodicNotes/Templates/Monthly.md"
-              }
+              "state": {}
             }
           },
           {
@@ -136,7 +127,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0. PeriodicNotes/Templates/Monthly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,67 +158,67 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "command-palette:打开命令面板": false,
-      "random-note:开始漫游笔记": false,
-      "workspaces:管理工作区布局": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false,
       "templater-obsidian:Templater": false,
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "25c9a14ce07f5033",
+  "active": "e51918b63a868167",
   "lastOpenFiles": [
-    "0. PeriodicNotes/2024/Monthly/2024-02.md",
     "0. PeriodicNotes/Templates/Monthly.md",
-    "0. PeriodicNotes/2024/Monthly",
-    "0. PeriodicNotes/2024",
-    "主页.canvas",
-    "TASK.md",
-    "HOME.canvas",
+    "0. PeriodicNotes/2023/Monthly/2023-06.md",
+    "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
     "5. Express/README.md",
-    "5. Express",
-    "4. Archives/Template.md",
-    "4. Archives/README.md",
-    "4. Archives",
-    "3. Resources/EnglishLearning/README.md",
-    "3. Resources/BlockChain/README.md",
-    "3. Resources/Template.md",
-    "3. Resources/README.md",
-    "3. Resources/EnglishLearning",
-    "3. Resources/BlockChain",
-    "3. Resources",
-    "2. Areas/PKM/PKM.README.md",
-    "2. Areas/Work/Work.README.md",
-    "2. Areas/Life/Life.README.md",
-    "2. Areas/README.md",
-    "2. Areas/Work",
-    "2. Areas/Template.md",
-    "2. Areas/PKM",
-    "2. Areas/Life",
-    "1. Projects/PKM-LifeOS/PeriodicPARA.md",
-    "1. Projects/PKM-LifeOS/LifeOS.README.md",
-    "1. Projects/Template.md",
-    "1. Projects/README.md",
-    "0. PeriodicNotes/2023/Daily/06/2023-06-04.md",
-    "0. PeriodicNotes/2023/Daily/06/2023-06-03.md",
-    "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
-    "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
-    "0. PeriodicNotes/2023/Quarterly/2023-Q2.md",
-    "0. PeriodicNotes/2023/Quarterly/2023-Q1.md",
+    "-1. Capture/README.md",
+    "5. Express/blogs",
+    "5. Express/未命名文件夹",
+    "-1. Capture/Quality software deserves your hard‑earned cash.md",
+    "-1. Capture/Predicting The Future.md",
+    "-1. Capture/Advice for ambitious 19 year olds.md",
     "0. PeriodicNotes/2023/Weekly/2023-W22.md",
-    "4. 存档/育儿-宝宝起名/林奕如.png",
-    "4. 存档/育儿-宝宝起名/baby-name.png",
-    "1. 项目/分享-2023 WOT 分享会/架构图/Polyrepo.svg",
-    "1. 项目/分享-2023 WOT 分享会/架构图/Monorepo.svg",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/warning.svg",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/warning.png",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/rollup-logo.svg",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/repo-hero-logo-light.svg",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.svg",
-    "1. 项目/分享-2023 WOT 分享会/Attachments/PPT 素材/monitor.png",
+    "0. PeriodicNotes/2023/Daily/06/2023-06-02.md",
+    "TASK.md",
+    "0. PeriodicNotes/2023/Weekly/2023-W23.md",
+    "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
+    "3. Resources/knowledge-management/knowledge-management.README.md",
+    "2. Areas/personal-brand/personal-brand.README.md",
+    "1. Projects/personal-brand-wot-sharing-meeting/wot-sharing-meeting.README.md",
+    "4. Archives/parenting-take-a-name/take-a-name.README.md",
+    "0. PeriodicNotes/2023/2023.md",
+    "1. Projects/personal-brand-wot-sharing-meeting/Front-end Engineering Practice of ByteDance.pdf",
+    "0. PeriodicNotes/2023/Quarterly/2023-Q2.md",
+    "0. PeriodicNotes/2023/Daily/06/2023-06-11.md",
+    "0. PeriodicNotes/2023/Quarterly/2023-Q1.md",
+    "README.md",
+    "HOME.canvas",
+    "0. PeriodicNotes/Templates/Yearly.md",
+    "0. PeriodicNotes/Templates/Quarterly.md",
+    "0. PeriodicNotes/Templates/Weekly.md",
+    "0. PeriodicNotes/Templates/Daily.md",
+    "4. Archives/parenting-take-a-name/baby-name.png",
+    "4. Archives/parenting-take-a-name/林奕如.png",
+    "1. Projects/personal-brand-wot-sharing-meeting/architecture diagram/Polyrepo.svg",
+    "1. Projects/personal-brand-wot-sharing-meeting/architecture diagram/Monorepo.svg",
+    "0. PeriodicNotes/2024/Daily/02",
+    "0. PeriodicNotes/2024/Daily",
+    "0. PeriodicNotes/2024",
+    "0. PeriodicNotes/2022/Quarterly",
+    "0. PeriodicNotes/2022",
+    "0. PeriodicNotes/2023/Daily/06",
+    "0. PeriodicNotes/2023/Weekly",
+    "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/warning.svg",
+    "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/warning.png",
+    "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/rollup-logo.svg",
+    "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/repo-hero-logo-light.svg",
+    "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/monitor.svg",
+    "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/monitor.png",
+    "主页.canvas",
     "Templates/HOME.canvas",
     "hello/HOME.canvas",
     "hello/Templates/HOME.canvas"

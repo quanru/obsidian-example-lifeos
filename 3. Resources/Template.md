@@ -1,4 +1,3 @@
-# README
 
 ## Task
 %%Query tasks based on the tags field of the [Metadata](https://help.obsidian.md/Editing+and+formatting/Metadata) of the current file, extracted from all the notes%%

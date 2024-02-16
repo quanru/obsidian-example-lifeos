@@ -1,10 +1,10 @@
 > Setting yearly goals
 
-%%Setting goals from the "First Things Dimension" and the "Role Dimension" respectively%%
+%%Setting goals from the "Priority First Dimension" and the "Role Dimension" respectively%%
 
 # Goals
 
-## First Things Dimension
+## Priority First Dimension
 %%A list of areas experienced during this month, extracted from this year's quartly notes%%
 ```PeriodicPARA
 AreaListByTime
@@ -12,11 +12,12 @@ AreaListByTime
 
 ## Role Dimension
 ### Employee
+%% As an employee, what are your annual goals? %%
 ### Husband
 ### Father
 ### Son
 ### Myself
-- [ ] Planning for the next year
+- Planning for the next year
 
 # Review
 ## Project List

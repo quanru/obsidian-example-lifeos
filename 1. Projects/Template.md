@@ -1,4 +1,4 @@
-# README
+
 %%Set the project deadline and its result description%%
 - [ ] deadline 📅 2023-xx-xx
 - key result

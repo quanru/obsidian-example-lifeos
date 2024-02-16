@@ -1,9 +1,9 @@
 ## Project List
 %%A snapshot of the project today%%
-No files in 1. 项目
+<% PeriodicPARA.Project.snapshot() %>
 
 ## Daily Record
-- %%Your Record%%
+%%Your Record%%
 
 ## Habit
 %%Habit will not be counted as a task%%

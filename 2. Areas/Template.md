@@ -1,4 +1,3 @@
-# README
 
 ## Archived
 %%A list of archived projects in this area%%

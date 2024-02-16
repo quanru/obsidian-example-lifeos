@@ -1,22 +1,23 @@
 > Setting quarterly goals
 
-%%Setting goals from the "First Things Dimension" and the "Role Dimension" respectively%%
+%%Setting goals from the "Priority First Dimension" and the "Role Dimension" respectively%%
 
 # Goals
 
-## First Things Dimension
+## Priority First Dimension
 %%A snapshot of the area this quarter%%
-No files in 2. 领域
+<% PeriodicPARA.Area.snapshot() %>
 
 ## Role Dimension
 ### Employee
+%% As an employee, what are your annual goals? %%
 ### Husband
 ### Father
 ### Son
 - [ ] One phone call with #family/grandpa
 - [ ] One phone call with #family/grandma
 ### Myself
-- [ ] Planning for the next quarter
+- Planning for the next quarter
 
 # Review
 ## Project List

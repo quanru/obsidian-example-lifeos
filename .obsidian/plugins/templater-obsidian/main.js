@@ -3580,7 +3580,11 @@ var Templater = class {
           break;
       }
     }
-    const created_note = await errorWrapper(async () => app.fileManager.createNewMarkdownFile(folder, filename ?? "Untitled"), "Couldn't create markdown file.");
+    const extension = template instanceof import_obsidian12.TFile ? template.extension || "md" : "md";
+    const created_note = await errorWrapper(async () => {
+      const path = app.vault.getAvailablePath((0, import_obsidian12.normalizePath)(`${folder?.path ?? ""}/${filename ?? "Untitled"}`), extension);
+      return app.vault.create(path, "");
+    }, `Couldn't create ${extension} file.`);
     if (created_note == null) {
       await this.end_templater_task();
       return;
@@ -3640,7 +3644,6 @@ var Templater = class {
     const doc = editor.getDoc();
     const oldSelections = doc.listSelections();
     doc.replaceSelection(output_content);
-    active_view?.save();
     app.workspace.trigger("templater:template-appended", {
       view: active_view,
       editor: active_editor,
@@ -3661,7 +3664,7 @@ var Templater = class {
       return;
     }
     await app.vault.modify(file, output_content);
-    if (active_file?.path !== file.path && active_editor && active_editor.editor) {
+    if (active_file?.path === file.path && active_editor && active_editor.editor) {
       const editor = active_editor.editor;
       editor.setSelection({ line: 0, ch: 0 }, { line: 0, ch: 0 });
     }

@@ -1,9 +1,9 @@
 > Arrange weekly tasks
 
-%%Arrange tasks from the "First Things Dimension" and the "Role Dimension" respectively%%
+%%Arrange tasks from the "Priority First Dimension" and the "Role Dimension" respectively%%
 
 # Task
-## First Things Dimension
+## Priority First Dimension
 %%A list of projects experienced during this week, extracted from this week's diary, with automatic statistics on the percentage of time spent on projects%%
 ```PeriodicPARA
 ProjectListByTime
@@ -11,6 +11,7 @@ ProjectListByTime
 
 ## Role Dimension
 ### Employee
+%% As an employee, how do you break down this week's tasks for this month's tasks? %%
 - OKR
 <%* let weekNum = Number(tp.file.title.match(/-W(\d\d)/)[1]); if (weekNum%2 !== 0) { -%>
 - #work/one-one 
@@ -21,7 +22,7 @@ ProjectListByTime
 ### Father
 ### Son
 ### Myself
-- [ ] Planning for the next week
+- Planning for the next week
 
 # Review
 ## Collected this week
