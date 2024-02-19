@@ -8585,7 +8585,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
-        function useEffect53(create, deps) {
+        function useEffect54(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useEffect(create, deps);
         }
@@ -9367,7 +9367,7 @@ var require_react_development = __commonJS({
         exports.useContext = useContext93;
         exports.useDebugValue = useDebugValue;
         exports.useDeferredValue = useDeferredValue;
-        exports.useEffect = useEffect53;
+        exports.useEffect = useEffect54;
         exports.useId = useId3;
         exports.useImperativeHandle = useImperativeHandle15;
         exports.useInsertionEffect = useInsertionEffect3;
@@ -36154,7 +36154,7 @@ async function createFile(app, options) {
 function isDarkTheme() {
   var _a;
   const el = document.querySelector("body");
-  return (_a = el == null ? void 0 : el.className.includes("theme-dark")) != null ? _a : false;
+  return (_a = el == null ? void 0 : el.className.split(" ").includes("theme-dark")) != null ? _a : false;
 }
 function formatDailyRecord(record) {
   const { createdTs, createdAt, content, resourceList } = record;
@@ -72165,6 +72165,7 @@ var AddTemplate = () => {
   const [periodicActiveTab, setPeriodicActiveTab] = (0, import_react71.useState)(DAILY);
   const [paraActiveTab, setParaActiveTab] = (0, import_react71.useState)(PROJECT);
   const defaultType = (settings == null ? void 0 : settings.usePeriodicNotes) ? PERIODIC : PARA;
+  const [isDark, setDark] = (0, import_react71.useState)(isDarkTheme());
   const [type4, setType] = (0, import_react71.useState)(defaultType);
   const [form] = form_default.useForm();
   const today = (0, import_dayjs3.default)(new Date());
@@ -72252,6 +72253,19 @@ var AddTemplate = () => {
       tag
     });
   };
+  (0, import_react71.useEffect)(() => {
+    const handleBodyClassChange = () => {
+      setDark(isDarkTheme());
+    };
+    const observer = new MutationObserver(handleBodyClassChange);
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
   return /* @__PURE__ */ React216.createElement(
     config_provider_default,
     {
@@ -72270,7 +72284,7 @@ var AddTemplate = () => {
             cellHeight: 30
           }
         },
-        algorithm: isDarkTheme() ? theme_default.darkAlgorithm : theme_default.defaultAlgorithm
+        algorithm: isDark ? theme_default.darkAlgorithm : theme_default.defaultAlgorithm
       }
     },
     /* @__PURE__ */ React216.createElement(
