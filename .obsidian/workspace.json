@@ -11,8 +11,13 @@
             "id": "1cf81d4e7cf7a374",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "1. 项目/Template.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -108,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "1. 项目/Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "1. 项目/Template.md"
+              }
             }
           },
           {
@@ -127,6 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "1. 项目/Template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,10 +181,11 @@
   },
   "active": "1cf81d4e7cf7a374",
   "lastOpenFiles": [
-    "-1. 捕获/README.md",
-    "-1. 捕获/2024 新年建议 - 陈思远.md",
-    "-1. 捕获/不理解超线性回报，就无法理解这个世界.md",
+    "1. 项目/README.md",
     "-1. 捕获/高盛的 2024 宏观经济预测.md",
+    "-1. 捕获/不理解超线性回报，就无法理解这个世界.md",
+    "-1. 捕获/2024 新年建议 - 陈思远.md",
+    "-1. 捕获/README.md",
     "0. 周期笔记/Templates/Yearly.md",
     "0. 周期笔记/Templates/Weekly.md",
     "0. 周期笔记/Templates/Quarterly.md",
@@ -204,7 +214,6 @@
     "4. 存档/育儿-宝宝起名/五行/火.md",
     "4. 存档/育儿-宝宝起名/宝宝起名.README.md",
     "4. 存档/育儿-宝宝起名/程序起名.md",
-    "4. 存档/育儿-宝宝起名/规则.md",
     "4. 存档/育儿-宝宝起名/林奕如.png",
     "4. 存档/育儿-宝宝起名/baby-name.png",
     "0. 周期笔记/2022/Quarterly",
