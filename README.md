@@ -21,14 +21,18 @@
 
 ### 用户群
 
-- [👥飞书](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=704oa7b2-2a6b-4861-b07f-afeb9d971a23)
+- [👥飞书](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=ba8p19af-4cdf-4c94-8a59-95cea664ea61)
 - [🎮Discord](https://discord.gg/HZGanKEkuZ)
 
 ### 联系作者
 
-- [📕 小红书](https://www.xiaohongshu.com/user/profile/5b06db60f7e8b974ec6ff7fc)
+- [📕小红书](https://www.xiaohongshu.com/user/profile/5b06db60f7e8b974ec6ff7fc)
 - [🐦Twitter](https://twitter.com/quanruzhuoxiu)
 - [📧Email](mailto:quanruzhuoxiu@gmail.com)
+
+### AI LifeOS 教练
+
+- [🤖林大师](https://doubao.com/bot/scE9Z4Ne)
 
 ---
 
