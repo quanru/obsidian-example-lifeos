@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "5431138620925575",
+        "id": "c2b75f223a9bc920",
         "type": "tabs",
         "children": [
           {
-            "id": "6d639dd6f9c65f95",
+            "id": "cb928929bba7d287",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "0. 周期笔记/Templates/Quarterly.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -27,7 +32,7 @@
       {
         "id": "58ef8e8ac188ff27",
         "type": "tabs",
-        "dimension": 38.388625592417064,
+        "dimension": 35.56998556998557,
         "children": [
           {
             "id": "9110575c83bff6ab",
@@ -42,7 +47,7 @@
       {
         "id": "d80b12b7817209fd",
         "type": "tabs",
-        "dimension": 61.61137440758294,
+        "dimension": 64.43001443001442,
         "children": [
           {
             "id": "318abbbcd7749f6f",
@@ -60,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:育儿/筹办周岁宴",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -108,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "0. 周期笔记/Templates/Quarterly.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "0. 周期笔记/Templates/Quarterly.md"
+              }
             }
           },
           {
@@ -127,6 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "0. 周期笔记/Templates/Quarterly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,53 +167,53 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "command-palette:Open command palette": false,
-      "random-note:Open random note": false,
-      "workspaces:Manage workspace layouts": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "random-note:开始漫游笔记": false,
+      "workspaces:管理工作区布局": false,
       "templater-obsidian:Templater": false,
       "fuzzy-chinese-pinyin:FuzzySearch": false,
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "6d639dd6f9c65f95",
+  "active": "cb928929bba7d287",
   "lastOpenFiles": [
-    "1. 项目/Template.md",
+    "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
+    "0. 周期笔记/Templates/Quarterly.md",
+    "1. 项目/育儿-筹办周岁宴/育儿-筹办周岁宴.README.md",
+    "2. 领域/夫妻关系/夫妻关系.README.md",
+    "2. 领域/父母关系/父母关系.README.md",
+    "2. 领域/个人品牌/个人品牌.README.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-11.md",
     "1. 项目/README.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-06.md",
+    "0. 周期笔记/2023/Weekly/2023-W23.md",
+    "任务.md",
+    "0. 周期笔记/2023/Quarterly/2023-Q1.md",
+    "主页.canvas",
+    "1. 项目/Template.md",
     "-1. 捕获/高盛的 2024 宏观经济预测.md",
     "-1. 捕获/不理解超线性回报，就无法理解这个世界.md",
     "-1. 捕获/2024 新年建议 - 陈思远.md",
     "-1. 捕获/README.md",
     "0. 周期笔记/Templates/Yearly.md",
     "0. 周期笔记/Templates/Weekly.md",
-    "0. 周期笔记/Templates/Quarterly.md",
     "0. 周期笔记/Templates/Monthly.md",
     "0. 周期笔记/Templates/Daily.md",
     "0. 周期笔记/README.md",
-    "1. 项目/育儿-筹办周岁宴/育儿-筹办周岁宴.README.md",
     "0. 周期笔记/2023/Daily/06/2023-06-03.md",
-    "主页.canvas",
     "0. 周期笔记/2024/2024.md",
     "0. 周期笔记/2024/Quarterly/2024-Q1.md",
     "0. 周期笔记/2024/Monthly/2024-02.md",
     "0. 周期笔记/2024/Quarterly",
-    "0. 周期笔记/2024/Weekly/2024-W07.md",
     "0. 周期笔记/2024/Monthly",
     "0. 周期笔记/2024/Weekly",
     "0. 周期笔记/2024",
-    "0. 周期笔记/2024/Daily/02/2024-02-16.md",
     "0. 周期笔记/2024/Daily/02",
     "0. 周期笔记/2024/Daily",
-    "4. 存档/育儿-宝宝起名/五行/土.md",
-    "4. 存档/育儿-宝宝起名/五行/水.md",
-    "4. 存档/育儿-宝宝起名/五行/木.md",
-    "4. 存档/育儿-宝宝起名/五行/金.md",
-    "4. 存档/育儿-宝宝起名/五行/火.md",
-    "4. 存档/育儿-宝宝起名/宝宝起名.README.md",
-    "4. 存档/育儿-宝宝起名/程序起名.md",
     "4. 存档/育儿-宝宝起名/林奕如.png",
     "4. 存档/育儿-宝宝起名/baby-name.png",
     "0. 周期笔记/2022/Quarterly",
