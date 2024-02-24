@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b7007e220a75a8ad",
+        "id": "e1dcbd9476b552e3",
         "type": "tabs",
         "children": [
           {
-            "id": "0386f0c08dd3720b",
+            "id": "0ae97260506f4037",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -27,7 +27,7 @@
       {
         "id": "b454898db4c8f945",
         "type": "tabs",
-        "dimension": 42.75618374558305,
+        "dimension": 36.69790915645277,
         "children": [
           {
             "id": "9110575c83bff6ab",
@@ -42,7 +42,7 @@
       {
         "id": "84e30e37024d9f2a",
         "type": "tabs",
-        "dimension": 57.24381625441695,
+        "dimension": 63.30209084354722,
         "children": [
           {
             "id": "318abbbcd7749f6f",
@@ -169,8 +169,13 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "0386f0c08dd3720b",
+  "active": "0ae97260506f4037",
   "lastOpenFiles": [
+    "0. PeriodicNotes/Templates/Quarterly.md",
+    "1. Projects/personal-brand-wot-sharing-meeting/wot-sharing-meeting.README.md",
+    "0. PeriodicNotes/2023/Weekly/2023-W23.md",
+    "TASK.md",
+    "0. PeriodicNotes/2023/Quarterly/2023-Q2.md",
     "HOME.canvas",
     "0. PeriodicNotes/2024/2024.md",
     "0. PeriodicNotes/2024/Quarterly/2024-Q1.md",
@@ -199,16 +204,12 @@
     "2. Areas/parenting/parenting.README.md",
     "2. Areas/parental-relationship/parental-relationship.README.md",
     "2. Areas/marriage-relationship/marriage-relationship.README.md",
-    "1. Projects/personal-brand-wot-sharing-meeting/wot-sharing-meeting.README.md",
     "1. Projects/personal-brand-wot-sharing-meeting/speech rehearsal/Verbatim manuscript.md",
     "1. Projects/personal-brand-wot-sharing-meeting/speech rehearsal/Tips for Public Speaking.md",
     "1. Projects/personal-brand-wot-sharing-meeting/speech rehearsal/Rehearsal Tips.md",
     "1. Projects/personal-brand-wot-sharing-meeting/speech rehearsal/Existing problems.md",
-    "1. Projects/personal-brand-wot-sharing-meeting/speech rehearsal/Possible questions from the audience.md",
-    "1. Projects/personal-brand-wot-sharing-meeting/previous theme.md",
     "1. Projects/personal-brand-wot-sharing-meeting/architecture diagram/Polyrepo.svg",
     "1. Projects/personal-brand-wot-sharing-meeting/architecture diagram/Monorepo.svg",
-    "1. Projects/parenting-first-birthday-banquet/first-birthday-banquet.README.md",
     "4. Archives/parenting-take-a-name/baby-name.png",
     "4. Archives/parenting-take-a-name/林奕如.png",
     "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/warning.svg",

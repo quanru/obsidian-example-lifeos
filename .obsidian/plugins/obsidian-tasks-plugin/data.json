@@ -1,10 +1,11 @@
 {
-  "globalQuery": "path does not include Templates\nheading does not include Habit\nsort by done reverse\nsort by status.name reverse",
+  "globalQuery": "path does not include Template\nheading does not include Habit\nsort by done reverse\nsort by status.name reverse",
   "globalFilter": "",
   "removeGlobalFilter": false,
   "taskFormat": "tasksPluginEmoji",
   "setCreatedDate": false,
   "setDoneDate": true,
+  "setCancelledDate": true,
   "autoSuggestInEditor": true,
   "autoSuggestMinMatch": 3,
   "autoSuggestMaxItems": 6,
@@ -85,5 +86,16 @@
   "debugSettings": {
     "ignoreSortInstructions": false,
     "showTaskHiddenData": false
+  },
+  "loggingOptions": {
+    "minLevels": {
+      "": "info",
+      "tasks": "info",
+      "tasks.Cache": "info",
+      "tasks.Events": "info",
+      "tasks.File": "info",
+      "tasks.Query": "info",
+      "tasks.Task": "info"
+    }
   }
 }
