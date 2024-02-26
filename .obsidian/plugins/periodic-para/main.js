@@ -36146,7 +36146,7 @@ async function createFile(app, options) {
           return;
         }
         frontMatter.tags = frontMatter.tags || [];
-        frontMatter.tags.push(tag);
+        frontMatter.tags.push(tag.replace(/^#/, ""));
       }),
       app.workspace.getLeaf().openFile(fileCreated)
     ]);
