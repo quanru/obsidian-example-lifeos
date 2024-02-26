@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c2b75f223a9bc920",
+        "id": "652827318253a5be",
         "type": "tabs",
         "children": [
           {
-            "id": "cb928929bba7d287",
+            "id": "96c45d0ed657b45d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0. 周期笔记/Templates/Quarterly.md",
+                "file": "0. 周期笔记/Templates/Daily.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0. 周期笔记/Templates/Quarterly.md",
+                "file": "0. 周期笔记/Templates/Daily.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0. 周期笔记/Templates/Quarterly.md"
+                "file": "0. 周期笔记/Templates/Daily.md"
               }
             }
           },
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0. 周期笔记/Templates/Quarterly.md",
+                "file": "0. 周期笔记/Templates/Daily.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,10 +179,19 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "cb928929bba7d287",
+  "active": "96c45d0ed657b45d",
   "lastOpenFiles": [
-    "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
+    "0. 周期笔记/Templates/Monthly.md",
+    "0. 周期笔记/Templates/Daily.md",
+    "1. 项目/个人品牌-WOT-分享会111/WOT-分享会111.README.md",
+    "0. 周期笔记/2024/Daily/02/2024-02-26.md",
+    "0. 周期笔记/2024/Daily/02",
+    "0. 周期笔记/2024/Daily",
+    "0. 周期笔记/2024",
+    "1. 项目/个人品牌-WOT-分享会111",
+    "0. 周期笔记/2023/Quarterly/2023-Q1.md",
     "0. 周期笔记/Templates/Quarterly.md",
+    "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
     "1. 项目/育儿-筹办周岁宴/育儿-筹办周岁宴.README.md",
     "2. 领域/夫妻关系/夫妻关系.README.md",
     "2. 领域/父母关系/父母关系.README.md",
@@ -192,7 +201,6 @@
     "0. 周期笔记/2023/Daily/06/2023-06-06.md",
     "0. 周期笔记/2023/Weekly/2023-W23.md",
     "任务.md",
-    "0. 周期笔记/2023/Quarterly/2023-Q1.md",
     "主页.canvas",
     "1. 项目/Template.md",
     "-1. 捕获/高盛的 2024 宏观经济预测.md",
@@ -201,25 +209,17 @@
     "-1. 捕获/README.md",
     "0. 周期笔记/Templates/Yearly.md",
     "0. 周期笔记/Templates/Weekly.md",
-    "0. 周期笔记/Templates/Monthly.md",
-    "0. 周期笔记/Templates/Daily.md",
     "0. 周期笔记/README.md",
     "0. 周期笔记/2023/Daily/06/2023-06-03.md",
     "0. 周期笔记/2024/2024.md",
-    "0. 周期笔记/2024/Quarterly/2024-Q1.md",
-    "0. 周期笔记/2024/Monthly/2024-02.md",
     "0. 周期笔记/2024/Quarterly",
     "0. 周期笔记/2024/Monthly",
     "0. 周期笔记/2024/Weekly",
-    "0. 周期笔记/2024",
-    "0. 周期笔记/2024/Daily/02",
-    "0. 周期笔记/2024/Daily",
     "4. 存档/育儿-宝宝起名/林奕如.png",
     "4. 存档/育儿-宝宝起名/baby-name.png",
     "0. 周期笔记/2022/Quarterly",
     "0. 周期笔记/2022",
     "1. 项目/photography",
-    "pbcopy",
     "HOME.canvas",
     "1. 项目/个人品牌-WOT-分享会/架构图/Polyrepo.svg",
     "1. 项目/个人品牌-WOT-分享会/架构图/Monorepo.svg",
