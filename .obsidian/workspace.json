@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "830fcb9dff3958a2",
+        "id": "a57b207720423c23",
         "type": "tabs",
         "children": [
           {
-            "id": "790a6b9db4b2bfb7",
+            "id": "3ebfd8da0461c688",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -32,7 +27,7 @@
       {
         "id": "58ef8e8ac188ff27",
         "type": "tabs",
-        "dimension": 35.56998556998557,
+        "dimension": 44.49152542372881,
         "children": [
           {
             "id": "9110575c83bff6ab",
@@ -47,7 +42,7 @@
       {
         "id": "d80b12b7817209fd",
         "type": "tabs",
-        "dimension": 64.43001443001442,
+        "dimension": 55.50847457627118,
         "children": [
           {
             "id": "318abbbcd7749f6f",
@@ -97,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 397.5024719238281
+    "width": 309.5
   },
   "right": {
     "id": "e909704c2c67d329",
@@ -113,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md"
-              }
+              "state": {}
             }
           },
           {
@@ -135,7 +127,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,18 +170,21 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "790a6b9db4b2bfb7",
+  "active": "9110575c83bff6ab",
   "lastOpenFiles": [
-    "1. 项目/abc/abc.README.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-11.md",
     "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
+    "0. 周期笔记/2024/Daily/03/2024-03-03.md",
+    "0. 周期笔记/2024/Daily/03",
+    "0. 周期笔记/2024/Daily",
+    "0. 周期笔记/2024",
+    "1. 项目/abc/abc.README.md",
     "1. 项目/abc",
     "0. 周期笔记/Templates/Daily.md",
     "0. 周期笔记/Templates/Monthly.md",
     "1. 项目/个人品牌-WOT-分享会111/WOT-分享会111.README.md",
     "0. 周期笔记/2024/Daily/02/2024-02-26.md",
     "0. 周期笔记/2024/Daily/02",
-    "0. 周期笔记/2024/Daily",
-    "0. 周期笔记/2024",
     "1. 项目/个人品牌-WOT-分享会111",
     "0. 周期笔记/2023/Quarterly/2023-Q1.md",
     "0. 周期笔记/Templates/Quarterly.md",
@@ -198,7 +192,6 @@
     "2. 领域/夫妻关系/夫妻关系.README.md",
     "2. 领域/父母关系/父母关系.README.md",
     "2. 领域/个人品牌/个人品牌.README.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-11.md",
     "1. 项目/README.md",
     "0. 周期笔记/2023/Daily/06/2023-06-06.md",
     "0. 周期笔记/2023/Weekly/2023-W23.md",
@@ -212,14 +205,12 @@
     "0. 周期笔记/Templates/Yearly.md",
     "0. 周期笔记/Templates/Weekly.md",
     "0. 周期笔记/README.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-03.md",
     "0. 周期笔记/2024/Quarterly",
     "0. 周期笔记/2024/Monthly",
     "0. 周期笔记/2024/Weekly",
     "4. 存档/育儿-宝宝起名/林奕如.png",
     "4. 存档/育儿-宝宝起名/baby-name.png",
     "0. 周期笔记/2022/Quarterly",
-    "0. 周期笔记/2022",
     "HOME.canvas",
     "1. 项目/个人品牌-WOT-分享会/架构图/Polyrepo.svg",
     "1. 项目/个人品牌-WOT-分享会/架构图/Monorepo.svg",

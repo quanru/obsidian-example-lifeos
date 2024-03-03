@@ -35874,6 +35874,80 @@ var import_obsidian5 = require("obsidian");
 
 // src/periodic/Date.ts
 var import_obsidian = require("obsidian");
+
+// src/constant.ts
+var ERROR_MESSAGES = {
+  NO_FRONT_MATTER_TAG: "Please add the tags field for frontMatter!",
+  NO_DATAVIEW_INSTALL: "You need to install dataview first!",
+  FAILED_DATAVIEW_API: "Dataview API enable failed!",
+  NO_VIEW_PROVIDED: "Please provide a view name!",
+  NO_VIEW_EXISTED: "There is no this view in periodic PARA plugin",
+  NO_INDEX_FILE_EXIST: "There is no Index file exists(README.md/xxx.README.md/",
+  NO_TEMPLATE_EXIST: "There is no template file exist: ",
+  TAGS_MUST_INPUT: "Please input tags!",
+  DAILY_RECORD_FETCH_FAILED: "Fetch daily record failed: ",
+  RESOURCE_FETCH_FAILED: "Fetch resource failed: ",
+  NO_DAILY_RECORD_HEADER: "Please set daily record header in Periodic PARA plugin",
+  NO_DAILY_RECORD_API: "Please set daily record API in Periodic PARA plugin",
+  NO_DAILY_RECORD_TOKEN: "Please set daily record access token in Periodic PARA plugin",
+  NO_DAILY_FILE_EXIST: "Daily file not exists, please create it first: "
+};
+var PARA = "PARA Notes";
+var PROJECT = "Project";
+var AREA = "Area";
+var RESOURCE = "Resource";
+var ARCHIVE = "Archive";
+var PERIODIC = "Periodic Notes";
+var DAILY = "Daily";
+var WEEKLY = "Weekly";
+var MONTHLY = "Monthly";
+var QUARTERLY = "Quarterly";
+var YEARLY = "Yearly";
+var TAG = "Tag";
+var FOLDER = "Folder";
+var INDEX = "Index";
+var DAILY_REG = /^\d{4}-\d{2}-(\d{2})/;
+var WEEKLY_REG = /^\d{4}-W(\d{1,2})/;
+var MONTHLY_REG = /^\d{4}-(\d{1,2})/;
+var QUARTERLY_REG = /^\d{4}-Q(\d{1,2})/;
+var YEARLY_REG = /(^\d{4})/;
+var LIFE_OS_OFFICIAL_SITE = "https://obsidian-life-os.netlify.app";
+var LOCALE_MAP = {
+  "en-us": {
+    [PERIODIC]: "Periodic Notes",
+    [DAILY]: "Day",
+    [WEEKLY]: "Week",
+    [MONTHLY]: "Month",
+    [QUARTERLY]: "Quarter",
+    [YEARLY]: "Year",
+    [PARA]: "PARA Notes",
+    [PROJECT]: "Project",
+    [AREA]: "Area",
+    [RESOURCE]: "Resource",
+    [ARCHIVE]: "Archive",
+    [TAG]: "Tag",
+    [FOLDER]: "Folder",
+    [INDEX]: "Index"
+  },
+  "zh-cn": {
+    [PERIODIC]: "\u5468\u671F\u7B14\u8BB0",
+    [DAILY]: "\u65E5\u8BB0",
+    [WEEKLY]: "\u5468\u8BB0",
+    [MONTHLY]: "\u6708\u8BB0",
+    [QUARTERLY]: "\u5B63\u8BB0",
+    [YEARLY]: "\u5E74\u8BB0",
+    [PARA]: "PARA \u7B14\u8BB0",
+    [PROJECT]: "\u9879\u76EE",
+    [AREA]: "\u9886\u57DF",
+    [RESOURCE]: "\u8D44\u6E90",
+    [ARCHIVE]: "\u5B58\u6863",
+    [TAG]: "\u6807\u7B7E",
+    [FOLDER]: "\u76EE\u5F55",
+    [INDEX]: "\u7D22\u5F15"
+  }
+};
+
+// src/periodic/Date.ts
 var Date2 = class {
   constructor(app, settings, file) {
     this.app = app;
@@ -35884,15 +35958,15 @@ var Date2 = class {
     var _a;
     const fileName = (_a = this.app.vault.getAbstractFileByPath(path)) == null ? void 0 : _a.name;
     const [[, year], [, quarter], [, month], [, week], [, day]] = [
-      (fileName == null ? void 0 : fileName.match(/(^\d{4})/)) || [],
+      (fileName == null ? void 0 : fileName.match(YEARLY_REG)) || [],
       // year
-      (fileName == null ? void 0 : fileName.match(/^\d{4}-Q(\d{1,2})/)) || [],
+      (fileName == null ? void 0 : fileName.match(QUARTERLY_REG)) || [],
       // quarter
-      (fileName == null ? void 0 : fileName.match(/^\d{4}-(\d{1,2})/)) || [],
+      (fileName == null ? void 0 : fileName.match(MONTHLY_REG)) || [],
       // month
-      (fileName == null ? void 0 : fileName.match(/^\d{4}-W(\d{1,2})/)) || [],
+      (fileName == null ? void 0 : fileName.match(WEEKLY_REG)) || [],
       // week
-      (fileName == null ? void 0 : fileName.match(/^\d{4}-\d{2}-(\d{2})/)) || []
+      (fileName == null ? void 0 : fileName.match(DAILY_REG)) || []
       // day
     ];
     return {
@@ -36082,38 +36156,6 @@ var Item = class {
 // src/util.ts
 var import_obsidian4 = require("obsidian");
 var import_dayjs = __toESM(require_dayjs_min());
-
-// src/constant.ts
-var ERROR_MESSAGES = {
-  NO_FRONT_MATTER_TAG: "Please add the tags field for frontMatter!",
-  NO_DATAVIEW_INSTALL: "You need to install dataview first!",
-  FAILED_DATAVIEW_API: "Dataview API enable failed!",
-  NO_VIEW_PROVIDED: "Please provide a view name!",
-  NO_VIEW_EXISTED: "There is no this view in periodic PARA plugin",
-  NO_README_EXIST: "There is no README.md or xxx.README.md in ",
-  NO_TEMPLATE_EXIST: "There is no template file exist: ",
-  TAGS_MUST_INPUT: "Please input tags!",
-  DAILY_RECORD_FETCH_FAILED: "Fetch daily record failed: ",
-  RESOURCE_FETCH_FAILED: "Fetch resource failed: ",
-  NO_DAILY_RECORD_HEADER: "Please set daily record header in Periodic PARA plugin",
-  NO_DAILY_RECORD_API: "Please set daily record API in Periodic PARA plugin",
-  NO_DAILY_RECORD_TOKEN: "Please set daily record access token in Periodic PARA plugin",
-  NO_DAILY_FILE_EXIST: "Daily file not exists, please create it first: "
-};
-var PARA = "PARA Notes";
-var PROJECT = "Project";
-var AREA = "Area";
-var RESOURCE = "Resource";
-var ARCHIVE = "Archive";
-var PERIODIC = "Periodic Notes";
-var DAILY = "Daily";
-var WEEKLY = "Weekly";
-var MONTHLY = "Monthly";
-var QUARTERLY = "Quarterly";
-var YEARLY = "Yearly";
-var LIFE_OS_OFFICIAL_SITE = "https://obsidian-life-os.netlify.app";
-
-// src/util.ts
 function renderError(app, msg, containerEl, sourcePath) {
   const component = new import_obsidian4.Component();
   return import_obsidian4.MarkdownRenderer.render(app, msg, containerEl, sourcePath, component);
@@ -36185,7 +36227,7 @@ function generateFileName(resource) {
   return `${resource.id}-${resource.filename.replace(/[/\\?%*:|"<>]/g, "-")}`;
 }
 function logMessage(message, level = 0 /* info */) {
-  new import_obsidian4.Notice(message);
+  new import_obsidian4.Notice(message, 5e3);
   if (level === 0 /* info */) {
     console.info(message);
   } else if (level === 1 /* warn */) {
@@ -36459,8 +36501,43 @@ var import_obsidian9 = require("obsidian");
 
 // src/periodic/File.ts
 var import_obsidian8 = require("obsidian");
+var import_dayjs2 = __toESM(require_dayjs_min());
 var File = class {
   constructor(app, settings, dataview) {
+    this.listByTag = async (source, el, ctx) => {
+      const filepath = ctx.sourcePath;
+      const tags = this.tags(filepath);
+      const div = el.createEl("div");
+      const component = new Markdown(div);
+      const periodicNotesPath = this.settings.periodicNotesPath;
+      if (!tags.length) {
+        return renderError(
+          this.app,
+          ERROR_MESSAGES.NO_FRONT_MATTER_TAG,
+          div,
+          filepath
+        );
+      }
+      const from2 = tags.map((tag, index2) => {
+        return `#${tag} ${index2 === tags.length - 1 ? "" : "OR"}`;
+      }).join(" ").trim();
+      this.dataview.table(
+        ["File", "Date"],
+        this.dataview.pages(from2).filter(
+          (b) => {
+            var _a, _b, _c, _d, _e, _f, _g;
+            return !((_a = b.file.name) == null ? void 0 : _a.match(YEARLY_REG)) && !((_b = b.file.name) == null ? void 0 : _b.match(QUARTERLY_REG)) && !((_c = b.file.name) == null ? void 0 : _c.match(MONTHLY_REG)) && !((_d = b.file.name) == null ? void 0 : _d.match(WEEKLY_REG)) && !((_e = b.file.name) == null ? void 0 : _e.match(DAILY_REG)) && !((_f = b.file.name) == null ? void 0 : _f.match(/Template$/)) && !((_g = b.file.path) == null ? void 0 : _g.includes(`${periodicNotesPath}/Templates`));
+          }
+        ).sort((b) => b.file.ctime, "desc").map((b) => [
+          b.file.link,
+          `[[${(0, import_dayjs2.default)(b.file.ctime.ts).format("YYYY-MM-DD")}]]`
+        ]),
+        div,
+        component,
+        filepath
+      );
+      ctx.addChild(component);
+    };
     this.app = app;
     this.settings = settings;
     this.dataview = dataview;
@@ -36479,31 +36556,39 @@ var File = class {
     const folder = this.app.vault.getAbstractFileByPath(fileFolder);
     if (folder instanceof import_obsidian8.TFolder) {
       const subFolderList = folder.children.sort().filter((file) => file instanceof import_obsidian8.TFolder);
-      const READMEList = subFolderList.map((subFolder) => {
+      const IndexList = subFolderList.map((subFolder) => {
         if (subFolder instanceof import_obsidian8.TFolder) {
+          const { name } = subFolder;
           const files = subFolder.children;
-          const README = files.find(
-            (file) => file.path.match(/(.*\.)?README\.md/)
-          );
+          const indexFile = files.find((file) => {
+            if (file.basename === name) {
+              return true;
+            }
+            if (file.path.match(/(.*\.)?README\.md/)) {
+              return true;
+            }
+          });
           if (condition.tags.length) {
-            const tags = this.tags((README == null ? void 0 : README.path) || "");
+            const tags = this.tags((indexFile == null ? void 0 : indexFile.path) || "");
             if (!this.hasCommonPrefix(tags, condition.tags)) {
               return "";
             }
           }
-          if (!README) {
-            logMessage(ERROR_MESSAGES.NO_README_EXIST + subFolder.path);
+          if (!indexFile) {
+            logMessage(
+              ERROR_MESSAGES.NO_INDEX_FILE_EXIST + `${subFolder.name}.md) in folder: ` + subFolder.path
+            );
           }
-          if (README instanceof import_obsidian8.TFile) {
+          if (indexFile instanceof import_obsidian8.TFile) {
             const link = this.app.metadataCache.fileToLinktext(
-              README,
-              README == null ? void 0 : README.path
+              indexFile,
+              indexFile == null ? void 0 : indexFile.path
             );
             return `[[${link}|${subFolder.name}]]`;
           }
         }
       }).filter((link) => !!link).map((link, index2) => `${index2 + 1}. ${link}`);
-      return READMEList.join("\n");
+      return IndexList.join("\n");
     }
     return `No files in ${fileFolder}`;
   }
@@ -36543,7 +36628,7 @@ var Task = class {
       }
       const tasks = this.dataview.pages("").file.tasks.where(
         (t2) => this.filter(t2, {
-          date: "DONE" /* DONE */,
+          status: "DONE" /* DONE */,
           ...condition
         })
       ).sort((t2) => t2.completion, "asc");
@@ -36562,7 +36647,7 @@ var Task = class {
       let tasks = [];
       const dailyTasks = this.dataview.pages("").file.tasks.where(
         (t2) => this.filter(t2, {
-          date: "RECORD" /* RECORD */,
+          status: "RECORD" /* RECORD */,
           ...condition
         })
       );
@@ -36614,16 +36699,17 @@ SORT status ASC
     this.date = new Date2(this.app, this.settings, this.file);
   }
   filter(task, condition = {
-    date: "DONE" /* DONE */
+    status: "DONE" /* DONE */
   }) {
     var _a, _b, _c;
-    const { date: date4 = "DONE" /* DONE */, from: from2, to } = condition;
+    const { status: date4 = "DONE" /* DONE */, from: from2, to } = condition;
     if (!task)
       return false;
     if (!from2 && !to)
       return false;
-    if (((_a = task == null ? void 0 : task.section) == null ? void 0 : _a.type) === "header" && ((_c = (_b = task == null ? void 0 : task.section) == null ? void 0 : _b.subpath) == null ? void 0 : _c.trim()) === this.settings.habitHeader.trim())
+    if (((_a = task == null ? void 0 : task.section) == null ? void 0 : _a.type) === "header" && ((_c = (_b = task == null ? void 0 : task.section) == null ? void 0 : _b.subpath) == null ? void 0 : _c.trim()) === this.settings.habitHeader.trim()) {
       return false;
+    }
     let dateText = "";
     if (date4 === "DONE" /* DONE */) {
       const ret = task == null ? void 0 : task.text.match(/✅ (\d\d\d\d-\d\d-\d\d)/);
@@ -39192,12 +39278,12 @@ var SettingTab = class extends import_obsidian11.PluginSettingTab {
   }
 };
 
-// src/view/PeriodicPARA.tsx
+// src/view/CreateNote.tsx
 var import_obsidian13 = require("obsidian");
 var React258 = __toESM(require_react());
 var import_client = __toESM(require_client());
 
-// src/component/AddTemplate.tsx
+// src/component/CreateNote/index.tsx
 var React257 = __toESM(require_react());
 var import_react82 = __toESM(require_react());
 
@@ -39215,7 +39301,7 @@ var useApp = () => {
   return React2.useContext(AppContext);
 };
 
-// src/component/AddTemplate.tsx
+// src/component/CreateNote/index.tsx
 var import_obsidian12 = require("obsidian");
 
 // node_modules/.pnpm/@babel+runtime@7.23.8/node_modules/@babel/runtime/helpers/esm/extends.js
@@ -63543,20 +63629,20 @@ if (true) {
 var EllipsisOutlined_default2 = /* @__PURE__ */ React162.forwardRef(EllipsisOutlined2);
 
 // node_modules/.pnpm/rc-picker@3.14.6_dayjs@1.11.10_react-dom@18.2.0_react@18.2.0/node_modules/rc-picker/es/generate/dayjs.js
-var import_dayjs2 = __toESM(require_dayjs_min());
+var import_dayjs3 = __toESM(require_dayjs_min());
 var import_weekday = __toESM(require_weekday());
 var import_localeData = __toESM(require_localeData());
 var import_weekOfYear = __toESM(require_weekOfYear());
 var import_weekYear = __toESM(require_weekYear());
 var import_advancedFormat = __toESM(require_advancedFormat());
 var import_customParseFormat = __toESM(require_customParseFormat());
-import_dayjs2.default.extend(import_customParseFormat.default);
-import_dayjs2.default.extend(import_advancedFormat.default);
-import_dayjs2.default.extend(import_weekday.default);
-import_dayjs2.default.extend(import_localeData.default);
-import_dayjs2.default.extend(import_weekOfYear.default);
-import_dayjs2.default.extend(import_weekYear.default);
-import_dayjs2.default.extend(function(o3, c) {
+import_dayjs3.default.extend(import_customParseFormat.default);
+import_dayjs3.default.extend(import_advancedFormat.default);
+import_dayjs3.default.extend(import_weekday.default);
+import_dayjs3.default.extend(import_localeData.default);
+import_dayjs3.default.extend(import_weekOfYear.default);
+import_dayjs3.default.extend(import_weekYear.default);
+import_dayjs3.default.extend(function(o3, c) {
   var proto = c.prototype;
   var oldFormat = proto.format;
   proto.format = function f(formatStr) {
@@ -63642,10 +63728,10 @@ var parseNoMatchNotice = function parseNoMatchNotice2() {
 var generateConfig = {
   // get
   getNow: function getNow() {
-    return (0, import_dayjs2.default)();
+    return (0, import_dayjs3.default)();
   },
   getFixedDate: function getFixedDate(string3) {
-    return (0, import_dayjs2.default)(string3, ["YYYY-M-DD", "YYYY-MM-DD"]);
+    return (0, import_dayjs3.default)(string3, ["YYYY-M-DD", "YYYY-MM-DD"]);
   },
   getEndDate: function getEndDate(date4) {
     return date4.endOf("month");
@@ -63709,7 +63795,7 @@ var generateConfig = {
   },
   locale: {
     getWeekFirstDay: function getWeekFirstDay(locale6) {
-      return (0, import_dayjs2.default)().locale(parseLocale(locale6)).localeData().firstDayOfWeek();
+      return (0, import_dayjs3.default)().locale(parseLocale(locale6)).localeData().firstDayOfWeek();
     },
     getWeekFirstDate: function getWeekFirstDate(locale6, date4) {
       return date4.locale(parseLocale(locale6)).weekday(0);
@@ -63718,10 +63804,10 @@ var generateConfig = {
       return date4.locale(parseLocale(locale6)).week();
     },
     getShortWeekDays: function getShortWeekDays(locale6) {
-      return (0, import_dayjs2.default)().locale(parseLocale(locale6)).localeData().weekdaysMin();
+      return (0, import_dayjs3.default)().locale(parseLocale(locale6)).localeData().weekdaysMin();
     },
     getShortMonths: function getShortMonths(locale6) {
-      return (0, import_dayjs2.default)().locale(parseLocale(locale6)).localeData().monthsShort();
+      return (0, import_dayjs3.default)().locale(parseLocale(locale6)).localeData().monthsShort();
     },
     format: function format2(locale6, date4, _format) {
       return date4.locale(parseLocale(locale6)).format(_format);
@@ -63734,7 +63820,7 @@ var generateConfig = {
         if (format3.includes("wo") || format3.includes("Wo")) {
           var year = formatText.split("-")[0];
           var weekStr = formatText.split("-")[1];
-          var firstWeek = (0, import_dayjs2.default)(year, "YYYY").startOf("year").locale(localeStr);
+          var firstWeek = (0, import_dayjs3.default)(year, "YYYY").startOf("year").locale(localeStr);
           for (var j = 0; j <= 52; j += 1) {
             var nextWeek = firstWeek.add(j, "week");
             if (nextWeek.format("Wo") === weekStr) {
@@ -63744,7 +63830,7 @@ var generateConfig = {
           parseNoMatchNotice();
           return null;
         }
-        var date4 = (0, import_dayjs2.default)(formatText, format3, true).locale(localeStr);
+        var date4 = (0, import_dayjs3.default)(formatText, format3, true).locale(localeStr);
         if (date4.isValid()) {
           return date4;
         }
@@ -77041,29 +77127,20 @@ var theme_default = {
 // node_modules/.pnpm/antd@5.13.2_react-dom@18.2.0_react@18.2.0/node_modules/antd/es/index.js
 "use client";
 
-// src/component/AddTemplate.tsx
+// src/component/CreateNote/index.tsx
 var import_reduce_css_calc = __toESM(require_dist());
-var import_dayjs4 = __toESM(require_dayjs_min());
-var import_en_US14 = __toESM(require_en_US7());
-var import_zh_CN = __toESM(require_zh_CN7());
-var import_zh_cn = __toESM(require_zh_cn());
-var import_zh = __toESM(require_zh());
-var localeMap2 = {
-  en: import_en_US14.default,
-  "en-us": import_en_US14.default,
-  zh: import_zh_CN.default,
-  "zh-cn": import_zh_CN.default
-};
-var locale5 = window.localStorage.getItem("language") || "en";
-var AddTemplate = () => {
-  const { app, settings, width } = useApp() || {};
+var import_dayjs5 = __toESM(require_dayjs_min());
+var CreateNote = (props) => {
+  const { app, settings, locale: locale6 } = useApp() || {};
+  const { width } = props;
   const [periodicActiveTab, setPeriodicActiveTab] = (0, import_react82.useState)(DAILY);
   const [paraActiveTab, setParaActiveTab] = (0, import_react82.useState)(PROJECT);
   const defaultType = (settings == null ? void 0 : settings.usePeriodicNotes) ? PERIODIC : PARA;
   const [isDark, setDark] = (0, import_react82.useState)(isDarkTheme());
   const [type4, setType] = (0, import_react82.useState)(defaultType);
   const [form] = form_default.useForm();
-  const today = (0, import_dayjs4.default)(new Date());
+  const today = (0, import_dayjs5.default)(new Date());
+  const localeMap3 = LOCALE_MAP[(locale6 == null ? void 0 : locale6.locale) || "en-us"] || LOCALE_MAP["en-us"];
   const SubmitButton = /* @__PURE__ */ React257.createElement(
     form_default.Item,
     {
@@ -77091,16 +77168,16 @@ var AddTemplate = () => {
     let folder = "";
     let file = "";
     let tag = "";
-    let README = "";
+    let INDEX2 = "";
     const path = settings[`${paraActiveTab.toLocaleLowerCase()}sPath`];
     const key = values[`${paraActiveTab}Folder`];
     tag = values[`${paraActiveTab}Tag`];
-    README = values[`${paraActiveTab}README`];
+    INDEX2 = values[`${paraActiveTab}Index`];
     if (!tag) {
       return new import_obsidian12.Notice(ERROR_MESSAGES.TAGS_MUST_INPUT);
     }
     folder = `${path}/${key}`;
-    file = `${folder}/${README}`;
+    file = `${folder}/${INDEX2}`;
     templateFile = `${path}/Template.md`;
     await createFile(app, {
       templateFile,
@@ -77134,12 +77211,28 @@ var AddTemplate = () => {
     );
     setTagOptions(filteredOptions);
   };
+  const handleTagInput = (item) => {
+    const itemTag = form.getFieldValue(`${item}Tag`).replace(/^#/, "");
+    const itemFolder = itemTag.replace(/\//g, "-");
+    const itemIndex = itemTag.split("/").reverse()[0];
+    form.setFieldValue(`${item}Folder`, itemFolder);
+    form.setFieldValue(
+      `${item}Index`,
+      itemIndex ? itemIndex + ".README.md" : ""
+    );
+    form.validateFields([`${item}Folder`, `${item}Index`]);
+  };
+  const computedStyle = getComputedStyle(
+    document.querySelector(".app-container")
+  );
+  const fontSize = parseInt(computedStyle == null ? void 0 : computedStyle.getPropertyValue("--nav-item-size")) || 13;
   return /* @__PURE__ */ React257.createElement(
     config_provider_default,
     {
-      locale: localeMap2[locale5],
+      locale: locale6,
       theme: {
         token: {
+          fontSize,
           colorPrimary: (0, import_reduce_css_calc.default)(
             getComputedStyle(document.body).getPropertyValue(
               "--interactive-accent"
@@ -77148,8 +77241,7 @@ var AddTemplate = () => {
         },
         components: {
           DatePicker: {
-            cellWidth: width ? width / 7.5 : 45,
-            cellHeight: 30
+            cellWidth: width ? width / 7.5 : 45
           }
         },
         algorithm: isDark ? theme_default.darkAlgorithm : theme_default.defaultAlgorithm
@@ -77180,14 +77272,14 @@ var AddTemplate = () => {
           name: "type",
           value: type4,
           onChange: (e3) => setType(e3.target.value),
+          size: "small",
           style: {
             width: "100%",
-            textAlign: "center",
-            marginBottom: 5
+            textAlign: "center"
           }
         },
-        /* @__PURE__ */ React257.createElement(radio_default2.Button, { value: PERIODIC }, PERIODIC),
-        /* @__PURE__ */ React257.createElement(radio_default2.Button, { value: PARA }, PARA)
+        /* @__PURE__ */ React257.createElement(radio_default2.Button, { value: PERIODIC }, localeMap3[PERIODIC]),
+        /* @__PURE__ */ React257.createElement(radio_default2.Button, { value: PARA }, localeMap3[PARA])
       ),
       type4 === PERIODIC && (settings == null ? void 0 : settings.usePeriodicNotes) && /* @__PURE__ */ React257.createElement(
         tabs_default,
@@ -77208,8 +77300,9 @@ var AddTemplate = () => {
                 [YEARLY]: "year"
               };
               const picker = pickerMap[periodic];
+              const label = localeMap3[periodic];
               return {
-                label: periodic,
+                label,
                 key: periodic,
                 children: /* @__PURE__ */ React257.createElement(form_default.Item, { name: periodic }, /* @__PURE__ */ React257.createElement(
                   date_picker_default,
@@ -77245,16 +77338,16 @@ var AddTemplate = () => {
           size: "small",
           indicator: { size: 0 },
           style: { width: "100%" },
-          items: [PROJECT, AREA, RESOURCE, ARCHIVE].map((item) => {
+          items: [PROJECT, AREA, RESOURCE, ARCHIVE].map((para) => {
+            const label = localeMap3[para];
             return {
-              label: item,
-              key: item,
-              children: paraActiveTab === item ? /* @__PURE__ */ React257.createElement(React257.Fragment, null, /* @__PURE__ */ React257.createElement(
+              label,
+              key: para,
+              children: paraActiveTab === para ? /* @__PURE__ */ React257.createElement(React257.Fragment, null, /* @__PURE__ */ React257.createElement(
                 form_default.Item,
                 {
-                  labelCol: { flex: "80px" },
-                  label: "Tag",
-                  name: `${item}Tag`,
+                  label: localeMap3[TAG],
+                  name: `${para}Tag`,
                   rules: [
                     {
                       required: true,
@@ -77270,36 +77363,23 @@ var AddTemplate = () => {
                   auto_complete_default,
                   {
                     options: tagsOptions,
-                    onSearch: handleTagsSearch
+                    onSearch: handleTagsSearch,
+                    onSelect: () => handleTagInput(para)
                   },
                   /* @__PURE__ */ React257.createElement(
                     input_default,
                     {
-                      onChange: () => {
-                        const itemTag = form.getFieldValue(`${item}Tag`).replace(/^#/, "");
-                        const itemFolder = itemTag.replace(/\//g, "-");
-                        const itemREADME = itemTag.split("/").reverse()[0];
-                        form.setFieldValue(`${item}Folder`, itemFolder);
-                        form.setFieldValue(
-                          `${item}README`,
-                          itemREADME ? itemREADME + ".README.md" : ""
-                        );
-                        form.validateFields([
-                          `${item}Folder`,
-                          `${item}README`
-                        ]);
-                      },
+                      onChange: () => handleTagInput(para),
                       allowClear: true,
-                      placeholder: `${item} Tag, eg: ${item === PROJECT ? "PKM/LifeOS" : "PKM"}`
+                      placeholder: `${para} Tag, eg: ${para === PROJECT ? "PKM/LifeOS" : "PKM"}`
                     }
                   )
                 )
               ), /* @__PURE__ */ React257.createElement(
                 form_default.Item,
                 {
-                  labelCol: { flex: "80px" },
-                  label: "Folder",
-                  name: `${item}Folder`,
+                  label: localeMap3[FOLDER],
+                  name: `${para}Folder`,
                   rules: [
                     {
                       required: true,
@@ -77318,13 +77398,12 @@ var AddTemplate = () => {
               ), /* @__PURE__ */ React257.createElement(
                 form_default.Item,
                 {
-                  labelCol: { flex: "80px" },
-                  label: "README",
-                  name: `${item}README`,
+                  label: localeMap3[INDEX],
+                  name: `${para}Index`,
                   rules: [
                     {
                       required: true,
-                      message: "README is required"
+                      message: "Index is required"
                     }
                   ]
                 },
@@ -77338,10 +77417,10 @@ var AddTemplate = () => {
   );
 };
 
-// src/view/PeriodicPARA.tsx
-var VIEW_TYPE = "periodic-para";
-var PeriodicPARAView = class extends import_obsidian13.ItemView {
-  constructor(leaf, settings) {
+// src/view/CreateNote.tsx
+var CREATE_NOTE = "periodic-para";
+var CreateNoteView = class extends import_obsidian13.ItemView {
+  constructor(leaf, settings, locale6) {
     super(leaf);
     this.onResize = (0, import_obsidian13.debounce)(async () => {
       if (this.app.isMobile) {
@@ -77351,9 +77430,10 @@ var PeriodicPARAView = class extends import_obsidian13.ItemView {
       this.onOpen();
     }, 500);
     this.settings = settings;
+    this.locale = locale6;
   }
   getViewType() {
-    return VIEW_TYPE;
+    return CREATE_NOTE;
   }
   getDisplayText() {
     return "Periodic PARA";
@@ -77363,7 +77443,7 @@ var PeriodicPARAView = class extends import_obsidian13.ItemView {
   }
   async onOpen() {
     this.contentEl.empty();
-    this.contentEl.addClass("periodic-para");
+    this.contentEl.addClass("periodic-para-create-note");
     this.root = (0, import_client.createRoot)(this.containerEl.children[1]);
     this.root.render(
       /* @__PURE__ */ React258.createElement(
@@ -77372,10 +77452,10 @@ var PeriodicPARAView = class extends import_obsidian13.ItemView {
           value: {
             app: this.app,
             settings: this.settings,
-            width: this.containerEl.innerWidth
+            locale: this.locale
           }
         },
-        /* @__PURE__ */ React258.createElement(AddTemplate, null)
+        /* @__PURE__ */ React258.createElement(CreateNote, { width: this.containerEl.innerWidth })
       )
     );
   }
@@ -77385,12 +77465,23 @@ var PeriodicPARAView = class extends import_obsidian13.ItemView {
 };
 
 // src/main.ts
-var import_dayjs5 = __toESM(require_dayjs_min());
+var import_dayjs6 = __toESM(require_dayjs_min());
+var import_en_US14 = __toESM(require_en_US7());
+var import_zh_CN = __toESM(require_zh_CN7());
+var import_zh_cn = __toESM(require_zh_cn());
+var import_zh = __toESM(require_zh());
+var localeMap2 = {
+  en: import_en_US14.default,
+  "en-us": import_en_US14.default,
+  zh: import_zh_CN.default,
+  "zh-cn": import_zh_CN.default
+};
+var locale5 = window.localStorage.getItem("language") || "en";
 var PeriodicPARA = class extends import_obsidian14.Plugin {
   constructor(app, manifest) {
     super(app, manifest);
-    this.initView = async () => {
-      const leafs = this.app.workspace.getLeavesOfType(VIEW_TYPE);
+    this.initCreateNoteView = async () => {
+      const leafs = this.app.workspace.getLeavesOfType(CREATE_NOTE);
       if (leafs.length > 0) {
         this.app.workspace.revealLeaf(leafs[0]);
         return;
@@ -77401,7 +77492,7 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
       } else {
         leaf = this.app.workspace.getLeftLeaf(false);
       }
-      await leaf.setViewState({ type: VIEW_TYPE, active: true });
+      await leaf.setViewState({ type: CREATE_NOTE, active: true });
     };
     if (!(0, import_obsidian_dataview.isPluginEnabled)(app)) {
       logMessage(ERROR_MESSAGES.NO_DATAVIEW_INSTALL, 2 /* error */);
@@ -77417,15 +77508,19 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
   }
   async onload() {
     await this.loadSettings();
-    this.registerView(VIEW_TYPE, (leaf) => {
-      return new PeriodicPARAView(leaf, this.settings);
+    this.registerView(CREATE_NOTE, (leaf) => {
+      return new CreateNoteView(leaf, this.settings, localeMap2[locale5]);
     });
-    const item = this.addRibbonIcon("zap", "Periodic PARA", this.initView);
-    (0, import_obsidian14.setIcon)(item, "zap");
+    const item = this.addRibbonIcon(
+      "calendar",
+      "Periodic PARA",
+      this.initCreateNoteView
+    );
+    (0, import_obsidian14.setIcon)(item, "calendar");
     this.addCommand({
       id: "periodic-para-create-notes",
       name: "Create Notes",
-      callback: this.initView
+      callback: this.initCreateNoteView
     });
     [DAILY, WEEKLY, MONTHLY, QUARTERLY, YEARLY].map((periodType) => {
       this.addCommand({
@@ -77433,7 +77528,7 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
         name: `Create ${periodType} Note`,
         callback: () => {
           createPeriodicFile(
-            (0, import_dayjs5.default)(),
+            (0, import_dayjs6.default)(),
             periodType,
             this.settings.periodicNotesPath,
             this.app
@@ -77446,7 +77541,7 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
       name: "LifeOS Guide",
       callback: () => window.location.href = LIFE_OS_OFFICIAL_SITE
     });
-    this.app.workspace.onLayoutReady(this.initView);
+    this.app.workspace.onLayoutReady(this.initCreateNoteView);
     this.loadHelpers();
     this.loadDailyRecord();
     this.loadGlobalHelpers();
@@ -77509,6 +77604,7 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
       // views by tag -> topic context -> para
       TaskListByTag: this.task.listByTag,
       BulletListByTag: this.bullet.listByTag,
+      FileListByTag: this.file.listByTag,
       ProjectListByTag: this.project.listByTag,
       AreaListByTag: this.area.listByTag,
       ResourceListByTag: this.resource.listByTag,
