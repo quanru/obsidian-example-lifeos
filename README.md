@@ -24,7 +24,7 @@
 - [📧Email](mailto:quanruzhuoxiu@gmail.com)
 - [🤖AI LifeOS Coach](https://ciciai.com/bot/VVdcRTYZ)
 
-## Donations
+## Buy me a cup of coffee ☕️
 
 If this plugin do help you, please buy me a cup of coffee on [buymeacoffee](https://www.buymeacoffee.com/leyang).
 
