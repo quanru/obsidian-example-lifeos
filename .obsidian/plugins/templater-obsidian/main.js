@@ -3591,7 +3591,7 @@ var Templater = class {
     }
     const extension = template instanceof import_obsidian12.TFile ? template.extension || "md" : "md";
     const created_note = await errorWrapper(async () => {
-      const path = app.vault.getAvailablePath((0, import_obsidian12.normalizePath)(`${folder?.path ?? ""}/${filename ?? "Untitled"}`), extension);
+      const path = app.vault.getAvailablePath((0, import_obsidian12.normalizePath)(`${folder?.path ?? ""}/${filename || "Untitled"}`), extension);
       const folder_path = get_folder_path_from_file_path(path);
       if (folder_path && !app.vault.getAbstractFileByPathInsensitive(folder_path)) {
         await app.vault.createFolder(folder_path);

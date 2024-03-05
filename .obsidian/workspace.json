@@ -27,7 +27,7 @@
       {
         "id": "b454898db4c8f945",
         "type": "tabs",
-        "dimension": 43.96186440677966,
+        "dimension": 45.76086956521739,
         "children": [
           {
             "id": "9110575c83bff6ab",
@@ -42,7 +42,7 @@
       {
         "id": "84e30e37024d9f2a",
         "type": "tabs",
-        "dimension": 56.03813559322034,
+        "dimension": 54.23913043478261,
         "children": [
           {
             "id": "318abbbcd7749f6f",
@@ -169,7 +169,7 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "23a813c64064d41f",
+  "active": "9110575c83bff6ab",
   "lastOpenFiles": [
     "0. PeriodicNotes/Templates/Daily.md",
     "0. PeriodicNotes/Templates/Quarterly.md",

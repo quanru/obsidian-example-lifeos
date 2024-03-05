@@ -17,9 +17,6 @@
 .periodic-para-create-note .ant-tabs-nav::before {
   border: 0;
 }
-.periodic-para-create-note .ant-form-item .ant-form-item-label > label {
-  height: 39.09px;
-}
 .periodic-para-create-note .ant-form-item .ant-picker {
   visibility: hidden;
 }
@@ -42,6 +39,9 @@
 }
 .periodic-para-create-note .ant-form-item .ant-picker-dropdown .ant-picker-header-view {
   line-height: 30px;
+}
+.periodic-para-create-note .ant-form-item .ant-input-affix-wrapper {
+  padding: 0 11px;
 }
 .is-phone .periodic-para button {
   width: unset;
