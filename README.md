@@ -1,5 +1,7 @@
 <p align="center"><a title="中文版本" href="https://github.com/quanru/obsidian-example-LifeOS/blob/chinese-version/README.md">中文版本</a>  |  English Version</p>
 
+<a href="https://www.producthunt.com/posts/lifeos-template-for-obsidian?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lifeos&#0045;template&#0045;for&#0045;obsidian" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=441390&theme=light" alt="LifeOS&#0032;Template&#0032;for&#0032;Obsidian - Obsidian&#0032;LifeOS&#0032;&#0045;&#0032;Your&#0032;Life&#0032;Management&#0032;Assistant&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 ## Description
 
 - This repository is a sample project for the blog [Building my second brain 🧠 with Obsidian](https://quanru.github.io/2023/07/08/Building%20my%20second%20brain%20%F0%9F%A7%A0%20with%20Obsidian/), Please read it first.
