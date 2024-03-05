@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a57b207720423c23",
+        "id": "6a433314cc872311",
         "type": "tabs",
         "children": [
           {
-            "id": "3ebfd8da0461c688",
+            "id": "cc61d74db3b049bd",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -165,13 +165,14 @@
       "command-palette:打开命令面板": false,
       "random-note:开始漫游笔记": false,
       "workspaces:管理工作区布局": false,
-      "templater-obsidian:Templater": false,
       "fuzzy-chinese-pinyin:FuzzySearch": false,
+      "templater-obsidian:Templater": false,
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "9110575c83bff6ab",
+  "active": "cc61d74db3b049bd",
   "lastOpenFiles": [
+    "1. 项目/育儿-筹办周岁宴/育儿-筹办周岁宴.README.md",
     "0. 周期笔记/2023/Daily/06/2023-06-11.md",
     "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
     "0. 周期笔记/2024/Daily/03/2024-03-03.md",
@@ -188,7 +189,6 @@
     "1. 项目/个人品牌-WOT-分享会111",
     "0. 周期笔记/2023/Quarterly/2023-Q1.md",
     "0. 周期笔记/Templates/Quarterly.md",
-    "1. 项目/育儿-筹办周岁宴/育儿-筹办周岁宴.README.md",
     "2. 领域/夫妻关系/夫妻关系.README.md",
     "2. 领域/父母关系/父母关系.README.md",
     "2. 领域/个人品牌/个人品牌.README.md",
