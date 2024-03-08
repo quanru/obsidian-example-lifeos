@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6a433314cc872311",
+        "id": "8f4bcb33215a6e89",
         "type": "tabs",
         "children": [
           {
-            "id": "cc61d74db3b049bd",
+            "id": "cc696616a1f14688",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -170,11 +170,13 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "cc61d74db3b049bd",
+  "active": "cc696616a1f14688",
   "lastOpenFiles": [
-    "1. 项目/育儿-筹办周岁宴/育儿-筹办周岁宴.README.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-11.md",
     "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
+    "1. 项目/个人品牌-WOT-分享会/往届主题.md",
+    "1. 项目/育儿-筹办周岁宴/筹办周岁宴.README.md",
+    "主页.canvas",
+    "0. 周期笔记/2023/Daily/06/2023-06-11.md",
     "0. 周期笔记/2024/Daily/03/2024-03-03.md",
     "0. 周期笔记/2024/Daily/03",
     "0. 周期笔记/2024/Daily",
@@ -196,15 +198,12 @@
     "0. 周期笔记/2023/Daily/06/2023-06-06.md",
     "0. 周期笔记/2023/Weekly/2023-W23.md",
     "任务.md",
-    "主页.canvas",
     "1. 项目/Template.md",
     "-1. 捕获/高盛的 2024 宏观经济预测.md",
     "-1. 捕获/不理解超线性回报，就无法理解这个世界.md",
     "-1. 捕获/2024 新年建议 - 陈思远.md",
     "-1. 捕获/README.md",
     "0. 周期笔记/Templates/Yearly.md",
-    "0. 周期笔记/Templates/Weekly.md",
-    "0. 周期笔记/README.md",
     "0. 周期笔记/2024/Quarterly",
     "0. 周期笔记/2024/Monthly",
     "0. 周期笔记/2024/Weekly",
