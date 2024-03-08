@@ -17,5 +17,5 @@ BulletListByTag
 ## File
 %%Query files based on the tags field of the [Properties](https://help.obsidian.md/Editing+and+formatting/Properties) of the current file, extracted from all the notes%%
 ```PeriodicPARA
-BulletListByTag
+FileListByTag
 ```

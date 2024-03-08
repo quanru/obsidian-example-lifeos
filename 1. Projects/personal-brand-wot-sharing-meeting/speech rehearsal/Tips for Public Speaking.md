@@ -1,3 +1,5 @@
+#personal-brand/wot-sharing-meeting 
+
 - Position your body and screen at a 45-degree angle, facing a corner of the room.
 - Hold the clicker in your right hand with your four fingers open towards the PowerPoint.
 - Speak slowly and if necessary, add pauses. Avoid rushing through the speech.

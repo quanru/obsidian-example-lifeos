@@ -36200,6 +36200,9 @@ var I18N_MAP = {
 };
 
 // src/util.ts
+function sleep(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
 function renderError(app, msg, containerEl, sourcePath) {
   const component = new import_obsidian4.Component();
   return import_obsidian4.MarkdownRenderer.render(app, msg, containerEl, sourcePath, component);
@@ -36228,16 +36231,15 @@ async function createFile(app, options) {
       app.vault.createFolder(folder);
     }
     const fileCreated = await app.vault.create(file, templateContent);
-    await Promise.all([
-      app.fileManager.processFrontMatter(fileCreated, (frontMatter) => {
-        if (!tag) {
-          return;
-        }
-        frontMatter.tags = frontMatter.tags || [];
-        frontMatter.tags.push(tag.replace(/^#/, ""));
-      }),
-      app.workspace.getLeaf().openFile(fileCreated)
-    ]);
+    await app.fileManager.processFrontMatter(fileCreated, (frontMatter) => {
+      if (!tag) {
+        return;
+      }
+      frontMatter.tags = frontMatter.tags || [];
+      frontMatter.tags.push(tag.replace(/^#/, ""));
+    });
+    await sleep(30);
+    await app.workspace.getLeaf().openFile(fileCreated);
   }
 }
 function isDarkTheme() {
@@ -36656,17 +36658,20 @@ var File = class {
     }
   }
   tags(filePath) {
-    var _a;
-    let {
-      frontmatter: { tags }
-    } = ((_a = this.dataview.page(filePath)) == null ? void 0 : _a.file) || { frontmatter: {} };
-    if (!tags) {
-      return [];
+    const file = this.app.vault.getAbstractFileByPath(filePath);
+    if (file instanceof import_obsidian8.TFile) {
+      const { frontmatter } = this.app.metadataCache.getFileCache(file) || {
+        frontmatter: {}
+      };
+      let tags = frontmatter == null ? void 0 : frontmatter.tags;
+      if (!tags) {
+        return [];
+      }
+      if (typeof tags === "string") {
+        tags = [tags];
+      }
+      return tags.map((tag) => tag.replace(/^#(.*)$/, "$1"));
     }
-    if (typeof tags === "string") {
-      tags = [tags];
-    }
-    return tags.map((tag) => tag.replace(/^#(.*)$/, "$1"));
   }
 };
 
