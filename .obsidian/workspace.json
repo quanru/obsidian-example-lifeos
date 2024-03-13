@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8f4bcb33215a6e89",
+        "id": "393d84b2bdfea936",
         "type": "tabs",
         "children": [
           {
-            "id": "cc696616a1f14688",
+            "id": "2f39ea5167a0b859",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -170,8 +170,10 @@
       "periodic-para:Periodic PARA": false
     }
   },
-  "active": "cc696616a1f14688",
+  "active": "2f39ea5167a0b859",
   "lastOpenFiles": [
+    "0. 周期笔记/Templates/Daily.md",
+    "0. 周期笔记/2024/Daily/03/2024-03-12.md",
     "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
     "1. 项目/个人品牌-WOT-分享会/往届主题.md",
     "1. 项目/育儿-筹办周岁宴/筹办周岁宴.README.md",
@@ -183,7 +185,6 @@
     "0. 周期笔记/2024",
     "1. 项目/abc/abc.README.md",
     "1. 项目/abc",
-    "0. 周期笔记/Templates/Daily.md",
     "0. 周期笔记/Templates/Monthly.md",
     "1. 项目/个人品牌-WOT-分享会111/WOT-分享会111.README.md",
     "0. 周期笔记/2024/Daily/02/2024-02-26.md",

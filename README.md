@@ -18,7 +18,7 @@
 
 - [点我下载](https://github.com/quanru/obsidian-example-LifeOS/archive/refs/heads/chinese-version.zip)
 
-## Periodic Para 插件
+## LifeOS 插件
 
 - [README.md](https://github.com/quanru/obsidian-periodic-para)
 
