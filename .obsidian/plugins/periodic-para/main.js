@@ -39162,12 +39162,10 @@ ${finalRecordContent}
             if (isResourceExists) {
               return;
             }
-            const { data: data2 } = await this.axios.get(
-              `${origin}/o/r/${resource.name || resource.id}`,
-              {
-                responseType: "arraybuffer"
-              }
-            );
+            const resourceURL = resource.externalLink || `${origin}/o/r/${resource.name || resource.id}`;
+            const { data: data2 } = await this.axios.get(resourceURL, {
+              responseType: "arraybuffer"
+            });
             if (!data2) {
               return;
             }
@@ -77710,6 +77708,8 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
     };
   }
   onunload() {
+    clearTimeout(this.timeout);
+    clearInterval(this.interval);
   }
   async loadSettings() {
     this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());

@@ -19,7 +19,7 @@
 
 - [Download](https://github.com/quanru/obsidian-example-LifeOS/releases/latest/download/LifeOS.zip)
 
-## Periodic Para Plugin
+## LifeOS Plugin
 
 - [README.md](https://github.com/quanru/obsidian-periodic-para)
 
