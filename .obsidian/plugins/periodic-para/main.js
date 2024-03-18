@@ -36141,15 +36141,15 @@ var EN = {
   [`${ERROR_MESSAGE}NO_DATAVIEW_INSTALL`]: "You need to install dataview first!",
   [`${ERROR_MESSAGE}FAILED_DATAVIEW_API`]: "Dataview API enable failed!",
   [`${ERROR_MESSAGE}NO_VIEW_PROVIDED`]: "Please provide the name of the view you want to query!",
-  [`${ERROR_MESSAGE}NO_VIEW_EXISTED`]: "There is no this view in periodic PARA plugin",
+  [`${ERROR_MESSAGE}NO_VIEW_EXISTED`]: "There is no this view in LifeOS plugin",
   [`${ERROR_MESSAGE}NO_INDEX_FILE_EXIST`]: "There is no Index file exists(README.md/xxx.README.md/the same as the name of the folder it resides in)",
   [`${ERROR_MESSAGE}NO_TEMPLATE_EXIST`]: "There is no template file exist",
   [`${ERROR_MESSAGE}TAGS_MUST_INPUT`]: "Please input tags!",
   [`${ERROR_MESSAGE}DAILY_RECORD_FETCH_FAILED`]: "Fetch usememos failed",
   [`${ERROR_MESSAGE}RESOURCE_FETCH_FAILED`]: "Fetch resource failed",
-  [`${ERROR_MESSAGE}NO_DAILY_RECORD_HEADER`]: "Please set which header the usememos need insert to in Periodic PARA plugin",
-  [`${ERROR_MESSAGE}NO_DAILY_RECORD_API`]: "Please set daily usememos API in Periodic PARA plugin",
-  [`${ERROR_MESSAGE}NO_DAILY_RECORD_TOKEN`]: "Please set usememos token in Periodic PARA plugin",
+  [`${ERROR_MESSAGE}NO_DAILY_RECORD_HEADER`]: "Please set which header the usememos need insert to in LifeOS plugin",
+  [`${ERROR_MESSAGE}NO_DAILY_RECORD_API`]: "Please set daily usememos API in LifeOS plugin",
+  [`${ERROR_MESSAGE}NO_DAILY_RECORD_TOKEN`]: "Please set usememos token in LifeOS plugin",
   [`${ERROR_MESSAGE}NO_DAILY_FILE_EXIST`]: "Daily file not exists, please create it first: "
 };
 var ZH = {
@@ -36181,15 +36181,15 @@ var ZH = {
   [`${ERROR_MESSAGE}NO_DATAVIEW_INSTALL`]: "\u8BF7\u5148\u5B89\u88C5 dataview\uFF01",
   [`${ERROR_MESSAGE}FAILED_DATAVIEW_API`]: "Dataview API \u5F00\u542F\u5931\u8D25\uFF01",
   [`${ERROR_MESSAGE}NO_VIEW_PROVIDED`]: "\u8BF7\u63D0\u4F9B\u6240\u9700\u8981\u67E5\u8BE2\u7684\u89C6\u56FE\u540D\uFF01",
-  [`${ERROR_MESSAGE}NO_VIEW_EXISTED`]: "Periodic PARA \u63D2\u4EF6\u4E2D\u4E0D\u5B58\u5728\u6B64\u89C6\u56FE",
+  [`${ERROR_MESSAGE}NO_VIEW_EXISTED`]: "LifeOS \u63D2\u4EF6\u4E2D\u4E0D\u5B58\u5728\u6B64\u89C6\u56FE",
   [`${ERROR_MESSAGE}NO_INDEX_FILE_EXIST`]: "\u7D22\u5F15\u6587\u4EF6\u4E0D\u5B58\u5728\uFF08README.md/xxx.README.md/\u6240\u5728\u6587\u4EF6\u5939\u540C\u540D\u6587\u4EF6\uFF09",
   [`${ERROR_MESSAGE}NO_TEMPLATE_EXIST`]: "\u6A21\u7248\u6587\u4EF6\u4E0D\u5B58\u5728",
   [`${ERROR_MESSAGE}TAGS_MUST_INPUT`]: "\u8BF7\u8F93\u5165 tags\uFF01",
   [`${ERROR_MESSAGE}DAILY_RECORD_FETCH_FAILED`]: "\u62C9\u53D6 usememos \u5931\u8D25",
   [`${ERROR_MESSAGE}RESOURCE_FETCH_FAILED`]: "\u62C9\u53D6\u8D44\u6E90\u5931\u8D25",
-  [`${ERROR_MESSAGE}NO_DAILY_RECORD_HEADER`]: "\u8BF7\u5728 Periodic PARA \u63D2\u4EF6\u4E2D\u8BBE\u7F6E usememos \u9700\u8981\u5B58\u50A8\u5728\u54EA\u4E2A\u6807\u9898\u4E4B\u4E0B",
-  [`${ERROR_MESSAGE}NO_DAILY_RECORD_API`]: "\u8BF7\u5728 Periodic PARA \u63D2\u4EF6\u4E2D\u8BBE\u7F6E usememos \u7684 API",
-  [`${ERROR_MESSAGE}NO_DAILY_RECORD_TOKEN`]: "\u8BF7\u5728 Periodic PARA \u63D2\u4EF6\u4E2D\u8BBE\u7F6E usememos \u7684 Token",
+  [`${ERROR_MESSAGE}NO_DAILY_RECORD_HEADER`]: "\u8BF7\u5728 LifeOS \u63D2\u4EF6\u4E2D\u8BBE\u7F6E usememos \u9700\u8981\u5B58\u50A8\u5728\u54EA\u4E2A\u6807\u9898\u4E4B\u4E0B",
+  [`${ERROR_MESSAGE}NO_DAILY_RECORD_API`]: "\u8BF7\u5728 LifeOS \u63D2\u4EF6\u4E2D\u8BBE\u7F6E usememos \u7684 API",
+  [`${ERROR_MESSAGE}NO_DAILY_RECORD_TOKEN`]: "\u8BF7\u5728 LifeOS \u63D2\u4EF6\u4E2D\u8BBE\u7F6E usememos \u7684 Token",
   [`${ERROR_MESSAGE}NO_DAILY_FILE_EXIST`]: "\u65E5\u8BB0\u6587\u4EF6\u4E0D\u5B58\u5728\uFF0C\u8BF7\u5148\u521B\u5EFA\uFF1A"
 };
 var I18N_MAP = {
@@ -77516,7 +77516,7 @@ var CreateNoteView = class extends import_obsidian13.ItemView {
     return CREATE_NOTE;
   }
   getDisplayText() {
-    return "Periodic PARA";
+    return "LifeOS";
   }
   getIcon() {
     return "zap";
@@ -77599,7 +77599,7 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
     });
     const item = this.addRibbonIcon(
       "calendar",
-      "Periodic PARA",
+      "LifeOS",
       this.initCreateNoteView
     );
     (0, import_obsidian14.setIcon)(item, "calendar");
