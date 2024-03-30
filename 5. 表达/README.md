@@ -5,7 +5,8 @@ tags:
 - PARA/表达
 
 ---
-%% 77 【实践技巧：说说 LifeOS 模版中的捕获和表达 - 林宜丙 | 小红书 - 你的生活指南】 😆 gvfRQFEDHNzfcKx 😆 http://xhslink.com/u7SwoA %%
+> [实践技巧：说说 LifeOS 模版中的捕获和表达](https://obsidian-life-os.netlify.app/zh/case/capture-and-express.html)
+
 ## 任务
 
 ```PeriodicPARA
