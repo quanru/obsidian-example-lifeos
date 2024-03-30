@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "e46db4e4899d0bda",
+        "id": "5e1f6547bf06333b",
         "type": "tabs",
         "children": [
           {
-            "id": "77f2f76914c83bf4",
+            "id": "aaa2d832abe6d8a4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "-1. Capture/README.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -108,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "-1. Capture/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "-1. Capture/README.md"
+              }
             }
           },
           {
@@ -127,6 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "-1. Capture/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,8 +178,18 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "77f2f76914c83bf4",
+  "active": "aaa2d832abe6d8a4",
   "lastOpenFiles": [
+    "5. Express/README.md",
+    "-1. Capture/README.md",
+    "-1. Capture/Advice for ambitious 19 year olds.md",
+    "-1. Capture/Quality software deserves your hard‑earned cash.md",
+    "-1. Capture/Predicting The Future.md",
+    "1. Projects/README.md",
+    "4. Archives/README.md",
+    "3. Resources/README.md",
+    "2. Areas/README.md",
+    "README.md",
     "HOME.canvas",
     "1. Projects/parenting-first-birthday-banquet/first-birthday-banquet.README.md",
     "1. Projects/personal-brand-wot-sharing-meeting/wot-sharing-meeting.README.md",
@@ -191,23 +210,14 @@
     "0. PeriodicNotes/2024/Quarterly/2024-Q1.md",
     "0. PeriodicNotes/2024/Monthly/2024-02.md",
     "0. PeriodicNotes/2024/Quarterly",
-    "0. PeriodicNotes/2024/Weekly/2024-W07.md",
     "0. PeriodicNotes/2024/Monthly",
-    "0. PeriodicNotes/2024/Daily/02/2024-02-16.md",
     "0. PeriodicNotes/2024/Weekly",
     "0. PeriodicNotes/2024/Daily/02",
     "0. PeriodicNotes/2024/Daily",
     "0. PeriodicNotes/2024",
-    "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
     "5. Express/blogs",
     "4. Archives/parenting-take-a-name/program/package.json",
-    "4. Archives/parenting-take-a-name/program/nameCandidateList.md",
     "4. Archives/parenting-take-a-name/program/index.js",
-    "4. Archives/parenting-take-a-name/program/README.md",
-    "4. Archives/parenting-take-a-name/take-a-name.README.md",
-    "4. Archives/parenting-take-a-name/candidate word.md",
-    "4. Archives/parenting-take-a-name/candidate list.md",
-    "3. Resources/photography/photography.README.md",
     "1. Projects/personal-brand-wot-sharing-meeting/architecture diagram/Polyrepo.svg",
     "4. Archives/parenting-take-a-name/baby-name.png",
     "4. Archives/parenting-take-a-name/林奕如.png",
