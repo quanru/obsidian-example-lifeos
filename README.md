@@ -11,10 +11,6 @@
 - This repository is a sample project for the blog [Building my second brain 🧠 with Obsidian](https://quanru.github.io/2023/07/08/Building%20my%20second%20brain%20%F0%9F%A7%A0%20with%20Obsidian/), Please read it first.
 - For more tutorials, please go to [LifeOS for Obsidian Official Site](https://obsidian-life-os.netlify.app/)
 
-![](https://github.com/quanru/obsidian-periodic-para/blob/main/assets/periodic-para-plugin-en.png)
-![](https://github.com/quanru/obsidian-periodic-para/blob/main/assets/periodic-para-plugin-add-1-en.png)
-![](https://github.com/quanru/obsidian-periodic-para/blob/main/assets/periodic-para-plugin-add-2-en.png)
-
 ## Download example
 
 - [Download](https://github.com/quanru/obsidian-example-LifeOS/releases/latest/download/LifeOS.zip)
