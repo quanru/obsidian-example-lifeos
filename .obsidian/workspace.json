@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "393d84b2bdfea936",
+        "id": "4b203126b0a504ab",
         "type": "tabs",
         "children": [
           {
-            "id": "2f39ea5167a0b859",
+            "id": "36b8a78863612915",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "0. 周期笔记/2024/Weekly/2024-W13.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -108,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "0. 周期笔记/2024/Weekly/2024-W13.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "0. 周期笔记/2024/Weekly/2024-W13.md"
+              }
             }
           },
           {
@@ -127,6 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "0. 周期笔记/2024/Weekly/2024-W13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,52 +174,52 @@
       "command-palette:打开命令面板": false,
       "random-note:开始漫游笔记": false,
       "workspaces:管理工作区布局": false,
-      "fuzzy-chinese-pinyin:FuzzySearch": false,
       "templater-obsidian:Templater": false,
+      "fuzzy-chinese-pinyin:FuzzySearch": false,
       "periodic-para:LifeOS": false
     }
   },
-  "active": "2f39ea5167a0b859",
+  "active": "36b8a78863612915",
   "lastOpenFiles": [
-    "0. 周期笔记/Templates/Daily.md",
-    "0. 周期笔记/2024/Daily/03/2024-03-12.md",
+    "0. 周期笔记/2024/Weekly/2024-W13.md",
+    "0. 周期笔记/2024/Weekly",
+    "0. 周期笔记/2024",
+    "4. 存档/README.md",
+    "3. 资源/README.md",
+    "2. 领域/README.md",
+    "1. 项目/README.md",
+    "README.md",
+    "5. 表达/README.md",
+    "-1. 捕获/README.md",
+    "4. 存档/Template.md",
+    "1. 项目/Template.md",
+    "0. 周期笔记/0. 周期笔记.md",
     "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
-    "1. 项目/个人品牌-WOT-分享会/往届主题.md",
+    "1. 项目/个人品牌-WOT-分享会/个人品牌-WOT-分享会.md",
     "1. 项目/育儿-筹办周岁宴/筹办周岁宴.README.md",
+    "1. 项目/育儿-筹办周岁宴/育儿-筹办周岁宴.md",
+    "1. 项目/1. 项目.md",
+    "0. 周期笔记/2023/2023.md",
+    "0. 周期笔记/Templates/Templates.md",
+    "-1. 捕获/-1. 捕获.md",
+    "2. 领域/2. 领域.md",
+    "1. 项目/个人品牌-WOT-分享会/Attachments/PPT 素材/PPT 素材.md",
+    "0. 周期笔记/2023/Daily/06/06.md",
+    "4. 存档/育儿-宝宝起名/五行/五行.md",
+    "4. 存档/育儿-宝宝起名/program/program.md",
+    "1. 项目/个人品牌-WOT-分享会/演讲排练/演讲排练.md",
+    "1. 项目/个人品牌-WOT-分享会/演讲嘉宾资料包/演讲嘉宾资料包.md",
     "主页.canvas",
-    "0. 周期笔记/2023/Daily/06/2023-06-11.md",
-    "0. 周期笔记/2024/Daily/03/2024-03-03.md",
+    "Dida",
     "0. 周期笔记/2024/Daily/03",
     "0. 周期笔记/2024/Daily",
-    "0. 周期笔记/2024",
-    "1. 项目/abc/abc.README.md",
     "1. 项目/abc",
-    "0. 周期笔记/Templates/Monthly.md",
-    "1. 项目/个人品牌-WOT-分享会111/WOT-分享会111.README.md",
-    "0. 周期笔记/2024/Daily/02/2024-02-26.md",
     "0. 周期笔记/2024/Daily/02",
     "1. 项目/个人品牌-WOT-分享会111",
-    "0. 周期笔记/2023/Quarterly/2023-Q1.md",
-    "0. 周期笔记/Templates/Quarterly.md",
-    "2. 领域/夫妻关系/夫妻关系.README.md",
-    "2. 领域/父母关系/父母关系.README.md",
-    "2. 领域/个人品牌/个人品牌.README.md",
-    "1. 项目/README.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-06.md",
-    "0. 周期笔记/2023/Weekly/2023-W23.md",
-    "任务.md",
-    "1. 项目/Template.md",
-    "-1. 捕获/高盛的 2024 宏观经济预测.md",
-    "-1. 捕获/不理解超线性回报，就无法理解这个世界.md",
-    "-1. 捕获/2024 新年建议 - 陈思远.md",
-    "-1. 捕获/README.md",
-    "0. 周期笔记/Templates/Yearly.md",
     "0. 周期笔记/2024/Quarterly",
     "0. 周期笔记/2024/Monthly",
-    "0. 周期笔记/2024/Weekly",
     "4. 存档/育儿-宝宝起名/林奕如.png",
     "4. 存档/育儿-宝宝起名/baby-name.png",
-    "0. 周期笔记/2022/Quarterly",
     "HOME.canvas",
     "1. 项目/个人品牌-WOT-分享会/架构图/Polyrepo.svg",
     "1. 项目/个人品牌-WOT-分享会/架构图/Monorepo.svg",

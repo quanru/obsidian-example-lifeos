@@ -8875,7 +8875,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useReducer(reducer, initialArg, init);
         }
-        function useRef91(initialValue) {
+        function useRef92(initialValue) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
@@ -9668,7 +9668,7 @@ var require_react_development = __commonJS({
         exports.useLayoutEffect = useLayoutEffect8;
         exports.useMemo = useMemo57;
         exports.useReducer = useReducer;
-        exports.useRef = useRef91;
+        exports.useRef = useRef92;
         exports.useState = useState60;
         exports.useSyncExternalStore = useSyncExternalStore;
         exports.useTransition = useTransition;
@@ -36128,6 +36128,7 @@ var EN = {
   [TAG]: "Tag",
   [FOLDER]: "Folder",
   [INDEX]: "Index",
+  QUICK_JUMP: "Double click to open periodic note for this ",
   [`${TAG}ToolTip`]: "Tags in PARA notes serve as the unique identifiers for indexing tasks, notes, and files",
   [`${FOLDER}ToolTip`]: "The folder where PARA notes are located, is used to store notes related to the corresponding theme",
   [`${INDEX}ToolTip`]: "The index filename of PARA notes is used to index tasks, records, and files scattered across various locations. The required formats are LifeOS.README.md/README.md, or the same as the name of the folder it resides in",
@@ -36168,6 +36169,7 @@ var ZH = {
   [TAG]: "\u6807\u7B7E",
   [FOLDER]: "\u76EE\u5F55",
   [INDEX]: "\u7D22\u5F15",
+  QUICK_JUMP: "\u53CC\u51FB\u6253\u5F00\u672C\u5468\u671F\u7684",
   [`${TAG}ToolTip`]: "PARA \u7B14\u8BB0\u7684\u6807\u7B7E\uFF0C\u4F5C\u4E3A\u7D22\u5F15\u4EFB\u52A1\u3001\u8BB0\u5F55\u3001\u6587\u4EF6\u7684\u552F\u4E00\u6807\u8BC6",
   [`${FOLDER}ToolTip`]: "PARA \u7B14\u8BB0\u6240\u5728\u7684\u6587\u4EF6\u5939\uFF0C\u7528\u4E8E\u5B58\u653E\u5BF9\u5E94\u4E3B\u9898\u7684\u7B14\u8BB0",
   [`${INDEX}ToolTip`]: "PARA \u7B14\u8BB0\u7684\u7D22\u5F15\u6587\u4EF6\u540D\uFF0C\u7528\u4E8E\u7D22\u5F15\u6563\u843D\u5728\u5404\u5904\u7684\u4EFB\u52A1\u3001\u8BB0\u5F55\u3001\u6587\u4EF6\uFF0C\u8981\u6C42\u683C\u5F0F\u4E3A LifeOS.README.md/README.md\uFF0C\u6216\u4E0E\u6240\u5728\u76EE\u5F55\u540C\u540D",
@@ -36265,11 +36267,17 @@ function formatDailyRecord(record) {
   }
   targetFirstLine += ` #daily-record ^${timeStamp}`;
   const targetOtherLine = (otherLine == null ? void 0 : otherLine.length) ? "\n" + otherLine.map((line2) => /^[ \t]/.test(line2) ? line2 : `	${line2}`).join("\n").trimEnd() : "";
-  const targetResourceLine = (resourceList == null ? void 0 : resourceList.length) ? "\n" + (resourceList == null ? void 0 : resourceList.map(
-    (resource) => `	 - ![[${generateFileName(resource)}]]`
-  ).join("\n")) : "";
+  const targetResourceLine = (resourceList == null ? void 0 : resourceList.length) ? "\n" + (resourceList == null ? void 0 : resourceList.map((resource) => `	- ${generateFileLink(resource)}`).join("\n")) : "";
   const finalTargetContent = targetFirstLine + targetOtherLine + targetResourceLine;
   return [date4, timeStamp, finalTargetContent].map(String);
+}
+function generateFileLink(resource) {
+  var _a;
+  if (!resource.externalLink) {
+    return `![[${generateFileName(resource)}]]`;
+  }
+  const prefix = ((_a = resource.type) == null ? void 0 : _a.includes("image")) ? "!" : "";
+  return `${prefix}[${resource.name || resource.filename}](${resource.externalLink})`;
 }
 function generateFileName(resource) {
   return `${resource.id}-${resource.filename.replace(/[/\\?%*:|"<>]/g, "-")}`;
@@ -36812,22 +36820,33 @@ var Bullet = class {
       const from2 = tags.map((tag, index2) => {
         return `#${tag} ${index2 === tags.length - 1 ? "" : "OR"}`;
       }).join(" ").trim();
-      const where = tags.map((tag, index2) => {
-        return `(contains(L.tags, "#${tag}")) ${index2 === tags.length - 1 ? "" : "OR"}`;
-      }).join(" ");
-      const result = await this.dataview.tryQuery(
-        `
-TABLE WITHOUT ID rows.L.text AS "Bullet", rows.L.link AS "Link"
-FROM (${from2}) AND -"${periodicNotesPath}/Templates"
-FLATTEN file.lists AS L
-WHERE ${where} AND !L.task AND file.path != "${filepath}"
-GROUP BY file.link
-SORT rows.file.link DESC
-    `
-      );
+      const lists = await this.dataview.pages(
+        `(${from2}) and -"${periodicNotesPath}/Templates"`
+      ).file.lists;
+      const result = lists.where((L) => {
+        let includeTag = false;
+        if (L.task || L.path === filepath)
+          return false;
+        for (const tag of tags) {
+          includeTag = L.tags.includes(`#${tag}`);
+          if (includeTag) {
+            break;
+          }
+        }
+        return includeTag;
+      });
+      const groupResult = result.groupBy((elem) => {
+        return elem.link;
+      });
+      const sortResult = groupResult.sort((elem) => elem.rows.link, "desc");
+      const tableResult = sortResult.map((k) => [
+        k.rows.text,
+        k.rows.link
+      ]);
+      const tableValues = tableResult.array();
       this.dataview.table(
-        result.headers,
-        result.values,
+        ["Bullet", "Link"],
+        tableValues,
         div,
         component,
         filepath
@@ -39152,6 +39171,9 @@ ${finalRecordContent}
       if (Array.isArray(data)) {
         await Promise.all(
           data.map(async (resource) => {
+            if (resource.externalLink) {
+              return;
+            }
             const folder = `${this.settings.periodicNotesPath}/Attachments`;
             const resourcePath = (0, import_obsidian10.normalizePath)(
               `${folder}/${generateFileName(resource)}`
@@ -39162,7 +39184,7 @@ ${finalRecordContent}
             if (isResourceExists) {
               return;
             }
-            const resourceURL = resource.externalLink || `${origin}/o/r/${resource.name || resource.id}`;
+            const resourceURL = `${origin}/o/r/${resource.name || resource.id}`;
             const { data: data2 } = await this.axios.get(resourceURL, {
               responseType: "arraybuffer"
             });
@@ -77279,6 +77301,7 @@ var CreateNote = (props) => {
     );
     setTagOptions(filteredOptions);
   };
+  const singleClickRef = (0, import_react82.useRef)(null);
   const handleTagInput = (item) => {
     const itemTag = form.getFieldValue(`${item}Tag`).replace(/^#/, "");
     const itemFolder = itemTag.replace(/\//g, "-");
@@ -77363,7 +77386,23 @@ var CreateNote = (props) => {
         {
           key: PERIODIC,
           activeKey: periodicActiveTab,
-          onChange: setPeriodicActiveTab,
+          onTabClick: (key) => {
+            if (singleClickRef.current) {
+              clearTimeout(singleClickRef.current);
+              createPeriodicFile(
+                (0, import_dayjs5.default)(new Date()),
+                key,
+                settings.periodicNotesPath,
+                app
+              );
+              singleClickRef.current = null;
+            } else {
+              singleClickRef.current = window.setTimeout(() => {
+                setPeriodicActiveTab(key);
+                singleClickRef.current = null;
+              }, 200);
+            }
+          },
           centered: true,
           size: "small",
           indicator: { size: 0 },
@@ -77379,7 +77418,14 @@ var CreateNote = (props) => {
               const picker = pickerMap[periodic];
               const label = localeMap3[periodic];
               return {
-                label,
+                label: /* @__PURE__ */ React257.createElement(
+                  tooltip_default,
+                  {
+                    mouseEnterDelay: 1,
+                    title: `${localeMap3.QUICK_JUMP}${label.toLocaleLowerCase()}`
+                  },
+                  label
+                ),
                 key: periodic,
                 children: /* @__PURE__ */ React257.createElement(form_default.Item, { name: periodic }, /* @__PURE__ */ React257.createElement(
                   date_picker_default,
@@ -77655,8 +77701,8 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
       const callback = this.views[view] || this.views[legacyView];
       return callback(view, el, ctx);
     };
+    this.registerMarkdownCodeBlockProcessor("LifeOS", handler);
     this.registerMarkdownCodeBlockProcessor("PeriodicPARA", handler);
-    this.registerMarkdownCodeBlockProcessor("periodic-para", handler);
   }
   loadDailyRecord() {
     if (this.settings.usePeriodicNotes && this.settings.useDailyRecord) {
@@ -77756,15 +77802,18 @@ var PeriodicPARA = class extends import_obsidian14.Plugin {
     );
   }
   loadGlobalHelpers() {
-    window.PeriodicPARA = {};
-    window.PeriodicPARA.Project = this.project;
-    window.PeriodicPARA.Area = this.area;
-    window.PeriodicPARA.Resource = this.resource;
-    window.PeriodicPARA.Archive = this.archive;
-    window.PeriodicPARA.Task = this.task;
-    window.PeriodicPARA.File = this.file;
-    window.PeriodicPARA.Bullet = this.bullet;
-    window.PeriodicPARA.Date = this.date;
+    const helpers = {
+      Project: this.project,
+      Area: this.area,
+      Resource: this.resource,
+      Archive: this.archive,
+      Task: this.task,
+      File: this.file,
+      Bullet: this.bullet,
+      Date: this.date
+    };
+    window.PeriodicPARA = helpers;
+    window.LifeOS = helpers;
   }
 };
 /*! Bundled license information:
