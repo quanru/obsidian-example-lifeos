@@ -36828,7 +36828,7 @@ var Bullet = class {
         if (L.task || L.path === filepath)
           return false;
         for (const tag of tags) {
-          includeTag = L.tags.includes(`#${tag}`);
+          includeTag = L.tags.join(" ").includes(`#${tag}`);
           if (includeTag) {
             break;
           }
@@ -39184,7 +39184,7 @@ ${finalRecordContent}
             if (isResourceExists) {
               return;
             }
-            const resourceURL = `${origin}/o/r/${resource.name || resource.id}`;
+            const resourceURL = `${origin}/o/r/${resource.uid || resource.name || resource.id}`;
             const { data: data2 } = await this.axios.get(resourceURL, {
               responseType: "arraybuffer"
             });

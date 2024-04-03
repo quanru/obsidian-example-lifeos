@@ -7138,6 +7138,10 @@ body {
     --link-external-color-hover: var(--color-blue);
 }
 
+.cm-s-obsidian span:is(.cm-link, .cm-url) a {
+    color: var(--link-external-color);
+}
+
 a:not(.tag, .raindrop-tag, .clickable-icon, :has(img:not(.link-favicon))):hover,
 .cm-s-obsidian .cm-line:not(.cm-active) span.cm-hmd-internal-link:hover,
 .external-link:not(:has(img:not(.link-favicon))):hover,
@@ -7951,7 +7955,6 @@ body {
     --code-white-space: pre-wrap;
     --code-radius: var(--radius-s);
     --code-size: var(--font-smaller);
-    --code-background: #ffffff00;
     --code-background-light: var(--background-alt-light);
     --code-background-dark: var(--background-alt-dark);
     --code-normal: var(--text-muted);
@@ -7965,6 +7968,21 @@ body {
     --code-string: var(--color-green);
     --code-tag: var(--color-red);
     --code-value: var(--color-purple);
+}
+
+.theme-light {
+    --code-background: var(--code-background-light);
+}
+
+.theme-dark {
+    --code-background: var(--code-background-dark);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.cm-s-obsidian div.HyperMD-codeblock-end-bg,
+.cm-s-obsidian div.HyperMD-codeblock-bg,
+.markdown-rendered pre {
+    background: var(--code-background);
 }
 
 .cm-s-obsidian .HyperMD-codeblock {
@@ -7987,7 +8005,8 @@ body {
     --code-value: #bd93f9;
 }
 
-.codeblock-style-dracula .cm-s-obsidian .HyperMD-codeblock span::selection {
+.codeblock-style-dracula .cm-s-obsidian .HyperMD-codeblock ::selection,
+.codeblock-style-dracula .markdown-rendered pre ::selection {
     background-color: hsl(from var(--code-normal) h s l / 20%);
 }
 
@@ -8007,7 +8026,8 @@ body {
     --code-value: #6c71c4;
 }
 
-.codeblock-style-solarized-light .cm-s-obsidian .HyperMD-codeblock span::selection {
+.codeblock-style-solarized-light .cm-s-obsidian .HyperMD-codeblock ::selection,
+.codeblock-style-solarized-light .markdown-rendered pre ::selection {
     background-color: hsl(from var(--code-normal) h s l / 15%);
 }
 
@@ -8027,7 +8047,8 @@ body {
     --code-value: #6c71c4;
 }
 
-.codeblock-style-solarized-dark .cm-s-obsidian .HyperMD-codeblock span::selection {
+.codeblock-style-solarized-dark .cm-s-obsidian .HyperMD-codeblock ::selection,
+.codeblock-style-solarized-dark .markdown-rendered pre ::selection {
     background-color: hsl(from var(--code-normal) h s l / 30%);
 }
 
@@ -8047,27 +8068,14 @@ body {
     --code-value: #C678DD;
 }
 
-.codeblock-style-one-dark .cm-s-obsidian .HyperMD-codeblock span::selection {
+.codeblock-style-one-dark .cm-s-obsidian .HyperMD-codeblock ::selection,
+.codeblock-style-one-dark .markdown-rendered pre ::selection {
     background-color: hsl(from var(--code-normal) h s l / 25%);
 }
 
 .markdown-source-view.mod-cm6 .code-block-flair,
 .markdown-rendered button.copy-code-button {
     color: var(--code-normal);
-}
-
-.theme-light .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
-.theme-light .cm-s-obsidian div.HyperMD-codeblock-end-bg,
-.theme-light .cm-s-obsidian div.HyperMD-codeblock-bg,
-.theme-light .markdown-rendered pre {
-    background: var(--code-background-light);
-}
-
-.theme-dark .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
-.theme-dark .cm-s-obsidian div.HyperMD-codeblock-end-bg,
-.theme-dark .cm-s-obsidian div.HyperMD-codeblock-bg,
-.theme-dark .markdown-rendered pre {
-    background: var(--code-background-dark);
 }
 
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
@@ -8386,10 +8394,6 @@ svg.sidebar-left {
     background-color: var(--background-primary);
 }
 
-.is-phone.theme-dark .modal.mod-settings .vertical-tab-nav-item {
-    background-color: var(--background-tertiary);
-}
-
 .mobile-navbar {
     box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.2), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.1);
 }
@@ -8450,7 +8454,7 @@ body.card-layout-pad-open.is-tablet .workspace-drawer {
     overflow: hidden !important;
     margin: 16px;
     margin-bottom: 24px;
-    margin-top: 8px;
+    margin-top: 32px;
 }
 
 body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer {

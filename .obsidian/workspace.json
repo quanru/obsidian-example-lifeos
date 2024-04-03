@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "-1. Capture/README.md",
+                "file": "0. PeriodicNotes/2024/Weekly/2024-W13.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "-1. Capture/README.md",
+                "file": "0. PeriodicNotes/2024/Weekly/2024-W13.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "-1. Capture/README.md"
+                "file": "0. PeriodicNotes/2024/Weekly/2024-W13.md"
               }
             }
           },
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "-1. Capture/README.md",
+                "file": "0. PeriodicNotes/2024/Weekly/2024-W13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,8 +180,14 @@
   },
   "active": "aaa2d832abe6d8a4",
   "lastOpenFiles": [
-    "5. Express/README.md",
+    "0. PeriodicNotes/2024/Daily/03/2024-03-30.md",
+    "0. PeriodicNotes/2024/Weekly/2024-W13.md",
+    "0. PeriodicNotes/2024/Daily/03",
+    "0. PeriodicNotes/2024/Daily",
     "-1. Capture/README.md",
+    "0. PeriodicNotes/2024/Weekly",
+    "0. PeriodicNotes/2024",
+    "5. Express/README.md",
     "-1. Capture/Advice for ambitious 19 year olds.md",
     "-1. Capture/Quality software deserves your hard‑earned cash.md",
     "-1. Capture/Predicting The Future.md",
@@ -207,17 +213,11 @@
     "TASK.md",
     "0. PeriodicNotes/2023/Quarterly/2023-Q2.md",
     "0. PeriodicNotes/2024/2024.md",
-    "0. PeriodicNotes/2024/Quarterly/2024-Q1.md",
-    "0. PeriodicNotes/2024/Monthly/2024-02.md",
     "0. PeriodicNotes/2024/Quarterly",
     "0. PeriodicNotes/2024/Monthly",
-    "0. PeriodicNotes/2024/Weekly",
     "0. PeriodicNotes/2024/Daily/02",
-    "0. PeriodicNotes/2024/Daily",
-    "0. PeriodicNotes/2024",
     "5. Express/blogs",
     "4. Archives/parenting-take-a-name/program/package.json",
-    "4. Archives/parenting-take-a-name/program/index.js",
     "1. Projects/personal-brand-wot-sharing-meeting/architecture diagram/Polyrepo.svg",
     "4. Archives/parenting-take-a-name/baby-name.png",
     "4. Archives/parenting-take-a-name/林奕如.png",
