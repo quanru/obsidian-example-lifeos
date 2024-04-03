@@ -22,18 +22,18 @@
 # Review
 ## Project List
 %%List of tasks collected this quarter from this quarter's diary%%
-```PeriodicPARA
+```LifeOS
 ProjectListByTime
 ```
 
 ## Collected this quarter
 %%List of tasks collected this quarter from this quarter's diary%%
-```PeriodicPARA
+```LifeOS
 TaskRecordListByTime
 ```
 
 ## Completed this quarter
 %%List of tasks completed this quarter, extracted from all notes%%
-```PeriodicPARA
+```LifeOS
 TaskDoneListByTime
 ```

@@ -5,7 +5,7 @@
 # Task
 ## Priority First Dimension
 %%A list of projects experienced during this week, extracted from this week's diary, with automatic statistics on the percentage of time spent on projects%%
-```PeriodicPARA
+```LifeOS
 ProjectListByTime
 ```
 
@@ -27,12 +27,12 @@ ProjectListByTime
 # Review
 ## Collected this week
 %%List of tasks collected this week from this week's diary%%
-```PeriodicPARA
+```LifeOS
 TaskRecordListByTime
 ```
 
 ## Completed this week
 %%List of tasks completed this week, extracted from all notes%%
-```PeriodicPARA
+```LifeOS
 TaskDoneListByTime
 ```

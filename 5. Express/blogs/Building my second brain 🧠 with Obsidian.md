@@ -208,7 +208,7 @@ I consider there to be three types of task reminders:
 Within each periodic note, the same feature modules use the same statement, such as "tasks collected this period," all inserted through the following query statement. The "this period" variable is provided by the current file name, which makes it very convenient to refactor all periodic files en masse, needing only to perform a batch replacement:
 
 ````markdown
-```PeriodicPARA
+```LifeOS
     TaskRecordListByTime
 ```
 ````

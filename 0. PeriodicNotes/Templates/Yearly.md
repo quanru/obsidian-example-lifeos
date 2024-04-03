@@ -6,7 +6,7 @@
 
 ## Priority First Dimension
 %%A list of areas experienced during this month, extracted from this year's quartly notes%%
-```PeriodicPARA
+```LifeOS
 AreaListByTime
 ```
 
@@ -22,18 +22,18 @@ AreaListByTime
 # Review
 ## Project List
 %%List of tasks collected this year from this year's diary%%
-```PeriodicPARA
+```LifeOS
 ProjectListByTime
 ```
 
 ## Collected this year
 %%List of tasks collected this year from this year's diary%%
-```PeriodicPARA
+```LifeOS
 TaskRecordListByTime
 ```
 
 ## Completed this year
 %%List of tasks completed this year, extracted from all notes%%
-```PeriodicPARA
+```LifeOS
 TaskDoneListByTime
 ```

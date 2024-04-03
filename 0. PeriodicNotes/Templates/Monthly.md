@@ -6,7 +6,7 @@
 
 ## Priority First Dimension
 %%A list of projects experienced during this month, extracted from this month's diary, with automatic statistics on the percentage of time spent on projects%%
-```PeriodicPARA
+```LifeOS
 ProjectListByTime
 ```
 
@@ -29,12 +29,12 @@ ProjectListByTime
 # Review
 ## Collected this month
 %%List of tasks collected this month from this month's diary%%
-```PeriodicPARA
+```LifeOS
 TaskRecordListByTime
 ```
 
 ## Completed this month
 %%List of tasks completed this month, extracted from all notes%%
-```PeriodicPARA
+```LifeOS
 TaskDoneListByTime
 ```

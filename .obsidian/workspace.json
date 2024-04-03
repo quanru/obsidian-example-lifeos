@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0. PeriodicNotes/2024/Weekly/2024-W13.md",
+                "file": "2. Areas/work/work.README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0. PeriodicNotes/2024/Weekly/2024-W13.md",
+                "file": "2. Areas/work/work.README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0. PeriodicNotes/2024/Weekly/2024-W13.md"
+                "file": "2. Areas/work/work.README.md"
               }
             }
           },
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0. PeriodicNotes/2024/Weekly/2024-W13.md",
+                "file": "2. Areas/work/work.README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,6 +180,10 @@
   },
   "active": "aaa2d832abe6d8a4",
   "lastOpenFiles": [
+    "0. PeriodicNotes/2023/Weekly/2023-W23.md",
+    "2. Areas/work/work.README.md",
+    "1. Projects/parenting-first-birthday-banquet/first-birthday-banquet.README.md",
+    "HOME.canvas",
     "0. PeriodicNotes/2024/Daily/03/2024-03-30.md",
     "0. PeriodicNotes/2024/Weekly/2024-W13.md",
     "0. PeriodicNotes/2024/Daily/03",
@@ -196,8 +200,6 @@
     "3. Resources/README.md",
     "2. Areas/README.md",
     "README.md",
-    "HOME.canvas",
-    "1. Projects/parenting-first-birthday-banquet/first-birthday-banquet.README.md",
     "1. Projects/personal-brand-wot-sharing-meeting/wot-sharing-meeting.README.md",
     "1. Projects/personal-brand-wot-sharing-meeting/speech rehearsal/Tips for Public Speaking.md",
     "1. Projects/personal-brand-wot-sharing-meeting/speech rehearsal/Verbatim manuscript.md",
@@ -209,10 +211,8 @@
     "1. Projects/personal-brand-wot-sharing-meeting/Front-end Engineering Practice of ByteDance.pdf",
     "0. PeriodicNotes/Templates/Daily.md",
     "0. PeriodicNotes/Templates/Quarterly.md",
-    "0. PeriodicNotes/2023/Weekly/2023-W23.md",
     "TASK.md",
     "0. PeriodicNotes/2023/Quarterly/2023-Q2.md",
-    "0. PeriodicNotes/2024/2024.md",
     "0. PeriodicNotes/2024/Quarterly",
     "0. PeriodicNotes/2024/Monthly",
     "0. PeriodicNotes/2024/Daily/02",
