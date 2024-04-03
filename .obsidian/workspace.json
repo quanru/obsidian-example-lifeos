@@ -4,15 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "4b203126b0a504ab",
+        "id": "a51f81f3f178a2a5",
         "type": "tabs",
         "children": [
           {
-            "id": "36b8a78863612915",
+            "id": "c8122619f185b3d4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "canvas",
+              "state": {
+                "file": "主页.canvas",
+                "viewState": {
+                  "x": -180,
+                  "y": 130,
+                  "zoom": -0.18539821385424635
+                }
+              }
             }
           }
         ]
@@ -108,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "主页.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +126,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "主页.canvas"
+              }
             }
           },
           {
@@ -127,6 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "主页.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,8 +181,9 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "36b8a78863612915",
+  "active": "c8122619f185b3d4",
   "lastOpenFiles": [
+    "2. 领域/同事工作/工作.README.md",
     "0. 周期笔记/2024/Weekly/2024-W13.md",
     "0. 周期笔记/2024/Weekly",
     "0. 周期笔记/2024",
@@ -199,7 +211,6 @@
     "4. 存档/育儿-宝宝起名/五行/五行.md",
     "4. 存档/育儿-宝宝起名/program/program.md",
     "1. 项目/个人品牌-WOT-分享会/演讲排练/演讲排练.md",
-    "1. 项目/个人品牌-WOT-分享会/演讲嘉宾资料包/演讲嘉宾资料包.md",
     "主页.canvas",
     "Dida",
     "0. 周期笔记/2024/Daily/03",
