@@ -1,6 +1,6 @@
 
 %%Set the project deadline and its result description%%
-- [ ] deadline 📅 2023-xx-xx
+- [ ] deadline 📅 2024-xx-xx
 - key result
 
 ## Task
