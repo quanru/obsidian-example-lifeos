@@ -13,11 +13,11 @@
 
 ## 模版下载
 
-- [点我下载](https://github.com/quanru/obsidian-example-LifeOS/archive/refs/heads/chinese-version.zip)
+点击下载[示例模版库](https://github.com/quanru/obsidian-example-LifeOS/archive/refs/heads/chinese-version.zip)
 
 ## LifeOS 插件
 
-- [README.md](https://github.com/quanru/obsidian-periodic-para)
+Star [GitHub 仓库](https://github.com/quanru/obsidian-periodic-para) 获取最新更新！
 
 ## 寻求支持
 
