@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5e1f6547bf06333b",
+        "id": "21a0c71661d4e0eb",
         "type": "tabs",
         "children": [
           {
-            "id": "aaa2d832abe6d8a4",
+            "id": "83d95d39ec01ff1b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "2. Areas/work/work.README.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "HOME.canvas",
+                "viewState": {
+                  "x": -180,
+                  "y": 130,
+                  "zoom": -0.18539821385424635
+                }
               }
             }
           }
@@ -113,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2. Areas/work/work.README.md",
+                "file": "HOME.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2. Areas/work/work.README.md"
+                "file": "HOME.canvas"
               }
             }
           },
@@ -135,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2. Areas/work/work.README.md",
+                "file": "HOME.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,21 +169,24 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "command-palette:打开命令面板": false,
-      "random-note:开始漫游笔记": false,
-      "workspaces:管理工作区布局": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false,
       "templater-obsidian:Templater": false,
       "periodic-para:LifeOS": false
     }
   },
-  "active": "aaa2d832abe6d8a4",
+  "active": "83d95d39ec01ff1b",
   "lastOpenFiles": [
-    "0. PeriodicNotes/2023/Weekly/2023-W23.md",
     "2. Areas/work/work.README.md",
+    "0. PeriodicNotes/2024/Daily/04/2024-04-28.md",
+    "0. PeriodicNotes/2024/Daily/04/2024-04-04.md",
+    "0. PeriodicNotes/2024/Daily/04",
+    "0. PeriodicNotes/2023/Weekly/2023-W23.md",
     "1. Projects/parenting-first-birthday-banquet/first-birthday-banquet.README.md",
     "HOME.canvas",
     "0. PeriodicNotes/2024/Daily/03/2024-03-30.md",
@@ -211,13 +216,10 @@
     "1. Projects/personal-brand-wot-sharing-meeting/Front-end Engineering Practice of ByteDance.pdf",
     "0. PeriodicNotes/Templates/Daily.md",
     "0. PeriodicNotes/Templates/Quarterly.md",
-    "TASK.md",
-    "0. PeriodicNotes/2023/Quarterly/2023-Q2.md",
     "0. PeriodicNotes/2024/Quarterly",
     "0. PeriodicNotes/2024/Monthly",
     "0. PeriodicNotes/2024/Daily/02",
     "5. Express/blogs",
-    "4. Archives/parenting-take-a-name/program/package.json",
     "1. Projects/personal-brand-wot-sharing-meeting/architecture diagram/Polyrepo.svg",
     "4. Archives/parenting-take-a-name/baby-name.png",
     "4. Archives/parenting-take-a-name/林奕如.png",

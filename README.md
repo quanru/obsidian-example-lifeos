@@ -13,11 +13,11 @@
 
 ## Download example
 
-- [Download](https://github.com/quanru/obsidian-example-LifeOS/releases/latest/download/LifeOS.zip)
+Click to download [example vault](https://github.com/quanru/obsidian-example-LifeOS/releases/latest/download/LifeOS.zip).
 
 ## LifeOS Plugin
 
-- [README.md](https://github.com/quanru/obsidian-periodic-para)
+Star the [github repository](https://github.com/quanru/obsidian-periodic-para) to get the latest updates.
 
 ## Support
 

@@ -12,5 +12,8 @@
   "dailyRecordToken": "",
   "useDailyRecord": false,
   "usePeriodicNotes": true,
-  "usePARANotes": true
+  "usePARANotes": true,
+  "usePARAAdvanced": false,
+  "paraIndexFilename": "readme",
+  "weekStart": -1
 }

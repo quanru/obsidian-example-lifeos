@@ -1,3 +1,4 @@
+/* src/component/SettingTab/index.less */
 /* src/component/CreateNote/index.less */
 .periodic-para-create-note {
   overflow: hidden !important;
@@ -5,6 +6,17 @@
 .periodic-para-create-note button:not(.ant-btn) {
   background-color: unset;
   box-shadow: unset;
+}
+.periodic-para-create-note .cell-container {
+  position: relative;
+}
+.periodic-para-create-note .cell-container .dot {
+  position: absolute;
+  left: 0;
+}
+.periodic-para-create-note .cell-container .week-dot {
+  position: fixed;
+  left: 25px;
 }
 .periodic-para-create-note .ant-btn-primary {
   color: #fff;
