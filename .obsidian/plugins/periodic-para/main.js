@@ -221,7 +221,7 @@ var require_lib = __commonJS({
       second: n2,
       timeZoneName: l2
     };
-    var Zone = class {
+    var Zone2 = class {
       /**
        * The type of zone
        * @abstract
@@ -300,7 +300,7 @@ var require_lib = __commonJS({
       }
     };
     var singleton$1 = null;
-    var SystemZone = class extends Zone {
+    var SystemZone = class extends Zone2 {
       /**
        * Get a singleton instance of the local zone
        * @return {SystemZone}
@@ -389,7 +389,7 @@ var require_lib = __commonJS({
       return filled;
     }
     var ianaZoneCache = {};
-    var IANAZone = class extends Zone {
+    var IANAZone = class extends Zone2 {
       /**
        * @param {string} name - Zone name
        * @return {IANAZone}
@@ -835,7 +835,7 @@ var require_lib = __commonJS({
       }
     };
     var singleton = null;
-    var FixedOffsetZone = class extends Zone {
+    var FixedOffsetZone = class extends Zone2 {
       /**
        * Get a singleton instance of UTC
        * @return {FixedOffsetZone}
@@ -915,7 +915,7 @@ var require_lib = __commonJS({
         return true;
       }
     };
-    var InvalidZone = class extends Zone {
+    var InvalidZone = class extends Zone2 {
       constructor(zoneName) {
         super();
         this.zoneName = zoneName;
@@ -956,7 +956,7 @@ var require_lib = __commonJS({
     function normalizeZone(input, defaultZone2) {
       if (isUndefined2(input) || input === null) {
         return defaultZone2;
-      } else if (input instanceof Zone) {
+      } else if (input instanceof Zone2) {
         return input;
       } else if (isString3(input)) {
         const lowered = input.toLowerCase();
@@ -31433,7 +31433,7 @@ var require_react_is_development = __commonJS({
         }
         var ContextConsumer = REACT_CONTEXT_TYPE;
         var ContextProvider = REACT_PROVIDER_TYPE;
-        var Element2 = REACT_ELEMENT_TYPE;
+        var Element3 = REACT_ELEMENT_TYPE;
         var ForwardRef = REACT_FORWARD_REF_TYPE;
         var Fragment18 = REACT_FRAGMENT_TYPE;
         var Lazy = REACT_LAZY_TYPE;
@@ -31501,7 +31501,7 @@ var require_react_is_development = __commonJS({
         }
         exports.ContextConsumer = ContextConsumer;
         exports.ContextProvider = ContextProvider;
-        exports.Element = Element2;
+        exports.Element = Element3;
         exports.ForwardRef = ForwardRef;
         exports.Fragment = Fragment18;
         exports.Lazy = Lazy;
@@ -36080,7 +36080,7 @@ var require_zh = __commonJS({
 // src/main.ts
 var main_exports = {};
 __export(main_exports, {
-  default: () => PeriodicPARA
+  default: () => LifeOS
 });
 module.exports = __toCommonJS(main_exports);
 var import_obsidian14 = require("obsidian");
@@ -36093,8 +36093,8 @@ var import_obsidian5 = require("obsidian");
 var import_obsidian = require("obsidian");
 
 // src/constant.ts
-var ERROR_MESSAGE = "ERROR_MESSAGE";
-var MESSAGE = "MESSAGE";
+var ERROR_MESSAGE = "ERROR_MESSAGE_";
+var MESSAGE = "MESSAGE_";
 var PARA = "PARA Notes";
 var PROJECT = "Project";
 var AREA = "Area";
@@ -39255,7 +39255,7 @@ var DailyRecord = class {
             "",
             this.settings.periodicNotesPath
           );
-          if (!targetFile) {
+          if (!targetFile && this.settings.dailyRecordWarning) {
             logMessage(
               `${I18N_MAP[this.locale][`${ERROR_MESSAGE}NO_DAILY_FILE_EXIST`]} ${today}`,
               2 /* error */
@@ -79531,6 +79531,14 @@ var SettingTab = (props) => {
                 label: "Token:"
               },
               /* @__PURE__ */ import_react86.default.createElement(input_default, null)
+            ), /* @__PURE__ */ import_react86.default.createElement(
+              form_default.Item,
+              {
+                help: "Warning While Daily Note Not Exist",
+                name: "dailyRecordWarning",
+                label: "Warning:"
+              },
+              /* @__PURE__ */ import_react86.default.createElement(switch_default, null)
             )), /* @__PURE__ */ import_react86.default.createElement(
               form_default.Item,
               {
@@ -79556,6 +79564,14 @@ var SettingTab = (props) => {
                   ]
                 }
               )
+            ), /* @__PURE__ */ import_react86.default.createElement(
+              form_default.Item,
+              {
+                help: "Enable Chinese Calendar",
+                name: "useChineseCalendar",
+                label: "Chinese Calendar:"
+              },
+              /* @__PURE__ */ import_react86.default.createElement(switch_default, null)
             )))
           },
           {
@@ -79619,12 +79635,14 @@ var DEFAULT_SETTINGS = {
   dailyRecordHeader: "Daily Record",
   dailyRecordAPI: "",
   dailyRecordToken: "",
+  dailyRecordWarning: true,
   useDailyRecord: false,
   usePeriodicNotes: true,
   usePARANotes: true,
   usePARAAdvanced: false,
   paraIndexFilename: "readme",
-  weekStart: -1
+  weekStart: -1,
+  useChineseCalendar: false
 };
 var SettingTabView = class extends import_obsidian11.PluginSettingTab {
   constructor(app, settings, plugin, locale6) {
@@ -79689,6 +79707,6211 @@ var useDocumentEvent = (eventName, handler) => {
   }, [eventName, handler]);
 };
 
+// node_modules/.pnpm/tyme4ts@1.0.5/node_modules/tyme4ts/dist/lib/index.mjs
+var __defProp2 = Object.defineProperty;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp2(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __publicField = (obj, key, value) => {
+  __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+  return value;
+};
+var AbstractCulture = class {
+  toString() {
+    return this.getName();
+  }
+  equals(o3) {
+    return o3 && o3.toString() === this.toString();
+  }
+  indexOf(index2, size) {
+    let i2 = index2 % size;
+    if (i2 < 0) {
+      i2 += size;
+    }
+    return i2;
+  }
+};
+var AbstractTyme = class extends AbstractCulture {
+};
+var AbstractCultureDay = class extends AbstractCulture {
+  constructor(culture, dayIndex) {
+    super();
+    __publicField(this, "culture");
+    __publicField(this, "dayIndex");
+    this.culture = culture;
+    this.dayIndex = dayIndex;
+  }
+  getDayIndex() {
+    return this.dayIndex;
+  }
+  getCulture() {
+    return this.culture;
+  }
+  getName() {
+    return this.culture.getName();
+  }
+  toString() {
+    return `${this.culture.toString()}\u7B2C${this.getDayIndex() + 1}\u5929`;
+  }
+};
+var LoopTyme = class extends AbstractTyme {
+  constructor(names4, indexOrName) {
+    super();
+    __publicField(this, "names");
+    __publicField(this, "index");
+    this.names = names4;
+    this.index = this.indexOfBy(indexOrName);
+  }
+  indexOfBy(indexOrName) {
+    if (typeof indexOrName === "number") {
+      return this.indexOf(indexOrName, this.getSize());
+    } else {
+      for (let i2 = 0, j = this.getSize(); i2 < j; i2++) {
+        if (this.names[i2] === indexOrName) {
+          return i2;
+        }
+      }
+      throw new Error(`illegal name ${indexOrName}`);
+    }
+  }
+  getName() {
+    return this.names[this.index];
+  }
+  getIndex() {
+    return this.index;
+  }
+  getSize() {
+    return this.names.length;
+  }
+  nextIndex(n2) {
+    return this.indexOfBy(this.index + n2);
+  }
+};
+var _Animal = class _Animal2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Animal2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Animal2(index2);
+  }
+  static fromName(name) {
+    return new _Animal2(name);
+  }
+  next(n2) {
+    return _Animal2.fromIndex(this.nextIndex(n2));
+  }
+  getTwentyEightStar() {
+    return TwentyEightStar.fromIndex(this.index);
+  }
+};
+__publicField(_Animal, "NAMES", ["\u86DF", "\u9F99", "\u8C89", "\u5154", "\u72D0", "\u864E", "\u8C79", "\u736C", "\u725B", "\u8760", "\u9F20", "\u71D5", "\u732A", "\u735D", "\u72FC", "\u72D7", "\u5F58", "\u9E21", "\u4E4C", "\u7334", "\u733F", "\u72B4", "\u7F8A", "\u7350", "\u9A6C", "\u9E7F", "\u86C7", "\u8693"]);
+var Animal = _Animal;
+var _TwentyEightStar = class _TwentyEightStar2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_TwentyEightStar2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _TwentyEightStar2(index2);
+  }
+  static fromName(name) {
+    return new _TwentyEightStar2(name);
+  }
+  next(n2) {
+    return _TwentyEightStar2.fromIndex(this.nextIndex(n2));
+  }
+  getSevenStar() {
+    return SevenStar.fromIndex(this.index % 7 + 4);
+  }
+  getLand() {
+    return Land.fromIndex([4, 4, 4, 2, 2, 2, 7, 7, 7, 0, 0, 0, 0, 5, 5, 5, 6, 6, 6, 1, 1, 1, 8, 8, 8, 3, 3, 3][this.index]);
+  }
+  getZone() {
+    return Zone.fromIndex(~~(this.index / 7));
+  }
+  getAnimal() {
+    return Animal.fromIndex(this.index);
+  }
+  getLuck() {
+    return Luck.fromIndex([0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0][this.index]);
+  }
+};
+__publicField(_TwentyEightStar, "NAMES", ["\u89D2", "\u4EA2", "\u6C10", "\u623F", "\u5FC3", "\u5C3E", "\u7B95", "\u6597", "\u725B", "\u5973", "\u865A", "\u5371", "\u5BA4", "\u58C1", "\u594E", "\u5A04", "\u80C3", "\u6634", "\u6BD5", "\u89DC", "\u53C2", "\u4E95", "\u9B3C", "\u67F3", "\u661F", "\u5F20", "\u7FFC", "\u8F78"]);
+var TwentyEightStar = _TwentyEightStar;
+var _SevenStar = class _SevenStar2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_SevenStar2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _SevenStar2(index2);
+  }
+  static fromName(name) {
+    return new _SevenStar2(name);
+  }
+  next(n2) {
+    return _SevenStar2.fromIndex(this.nextIndex(n2));
+  }
+  getWeek() {
+    return Week.fromIndex(this.index);
+  }
+};
+__publicField(_SevenStar, "NAMES", ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"]);
+var SevenStar = _SevenStar;
+var _Week = class _Week2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Week2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Week2(index2);
+  }
+  static fromName(name) {
+    return new _Week2(name);
+  }
+  next(n2) {
+    return _Week2.fromIndex(this.nextIndex(n2));
+  }
+  getSevenStar() {
+    return SevenStar.fromIndex(this.index);
+  }
+};
+__publicField(_Week, "NAMES", ["\u65E5", "\u4E00", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D"]);
+var Week = _Week;
+var _Land = class _Land2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Land2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Land2(index2);
+  }
+  static fromName(name) {
+    return new _Land2(name);
+  }
+  next(n2) {
+    return _Land2.fromIndex(this.nextIndex(n2));
+  }
+  getDirection() {
+    return Direction.fromIndex(this.index);
+  }
+};
+__publicField(_Land, "NAMES", ["\u7384\u5929", "\u6731\u5929", "\u82CD\u5929", "\u9633\u5929", "\u94A7\u5929", "\u5E7D\u5929", "\u98A2\u5929", "\u53D8\u5929", "\u708E\u5929"]);
+var Land = _Land;
+var _Direction = class _Direction2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Direction2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Direction2(index2);
+  }
+  static fromName(name) {
+    return new _Direction2(name);
+  }
+  next(n2) {
+    return _Direction2.fromIndex(this.nextIndex(n2));
+  }
+  getLand() {
+    return Land.fromIndex(this.index);
+  }
+};
+__publicField(_Direction, "NAMES", ["\u5317", "\u897F\u5357", "\u4E1C", "\u4E1C\u5357", "\u4E2D", "\u897F\u5317", "\u897F", "\u4E1C\u5317", "\u5357"]);
+var Direction = _Direction;
+var _Zone = class _Zone2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Zone2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Zone2(index2);
+  }
+  static fromName(name) {
+    return new _Zone2(name);
+  }
+  next(n2) {
+    return _Zone2.fromIndex(this.nextIndex(n2));
+  }
+  getDirection() {
+    return Direction.fromName(this.getName());
+  }
+  getBeast() {
+    return Beast.fromIndex(this.getIndex());
+  }
+};
+__publicField(_Zone, "NAMES", ["\u4E1C", "\u5317", "\u897F", "\u5357"]);
+var Zone = _Zone;
+var _Beast = class _Beast2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Beast2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Beast2(index2);
+  }
+  static fromName(name) {
+    return new _Beast2(name);
+  }
+  next(n2) {
+    return _Beast2.fromIndex(this.nextIndex(n2));
+  }
+  getZone() {
+    return Zone.fromIndex(this.index);
+  }
+};
+__publicField(_Beast, "NAMES", ["\u9752\u9F99", "\u7384\u6B66", "\u767D\u864E", "\u6731\u96C0"]);
+var Beast = _Beast;
+var _Luck = class _Luck2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Luck2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Luck2(index2);
+  }
+  static fromName(name) {
+    return new _Luck2(name);
+  }
+  next(n2) {
+    return _Luck2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_Luck, "NAMES", ["\u5409", "\u51F6"]);
+var Luck = _Luck;
+var _Constellation = class _Constellation2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Constellation2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Constellation2(index2);
+  }
+  static fromName(name) {
+    return new _Constellation2(name);
+  }
+  next(n2) {
+    return _Constellation2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_Constellation, "NAMES", ["\u767D\u7F8A", "\u91D1\u725B", "\u53CC\u5B50", "\u5DE8\u87F9", "\u72EE\u5B50", "\u5904\u5973", "\u5929\u79E4", "\u5929\u874E", "\u5C04\u624B", "\u6469\u7FAF", "\u6C34\u74F6", "\u53CC\u9C7C"]);
+var Constellation = _Constellation;
+var _Duty = class _Duty2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Duty2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Duty2(index2);
+  }
+  static fromName(name) {
+    return new _Duty2(name);
+  }
+  next(n2) {
+    return _Duty2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_Duty, "NAMES", ["\u5EFA", "\u9664", "\u6EE1", "\u5E73", "\u5B9A", "\u6267", "\u7834", "\u5371", "\u6210", "\u6536", "\u5F00", "\u95ED"]);
+var Duty = _Duty;
+var _Element = class _Element2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Element2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Element2(index2);
+  }
+  static fromName(name) {
+    return new _Element2(name);
+  }
+  next(n2) {
+    return _Element2.fromIndex(this.nextIndex(n2));
+  }
+  getReinforce() {
+    return this.next(1);
+  }
+  getRestrain() {
+    return this.next(2);
+  }
+  getReinforced() {
+    return this.next(-1);
+  }
+  getRestrained() {
+    return this.next(-2);
+  }
+};
+__publicField(_Element, "NAMES", ["\u6728", "\u706B", "\u571F", "\u91D1", "\u6C34"]);
+var Element2 = _Element;
+var _Phase = class _Phase2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Phase2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Phase2(index2);
+  }
+  static fromName(name) {
+    return new _Phase2(name);
+  }
+  next(n2) {
+    return _Phase2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_Phase, "NAMES", ["\u6714\u6708", "\u65E2\u6714\u6708", "\u86FE\u7709\u65B0\u6708", "\u86FE\u7709\u65B0\u6708", "\u86FE\u7709\u6708", "\u5915\u6708", "\u4E0A\u5F26\u6708", "\u4E0A\u5F26\u6708", "\u4E5D\u591C\u6708", "\u5BB5\u6708", "\u5BB5\u6708", "\u5BB5\u6708", "\u6E10\u76C8\u51F8\u6708", "\u5C0F\u671B\u6708", "\u671B\u6708", "\u65E2\u671B\u6708", "\u7ACB\u5F85\u6708", "\u5C45\u5F85\u6708", "\u5BDD\u5F85\u6708", "\u66F4\u5F85\u6708", "\u6E10\u4E8F\u51F8\u6708", "\u4E0B\u5F26\u6708", "\u4E0B\u5F26\u6708", "\u6709\u660E\u6708", "\u6709\u660E\u6708", "\u86FE\u7709\u6B8B\u6708", "\u86FE\u7709\u6B8B\u6708", "\u6B8B\u6708", "\u6653\u6708", "\u6666\u6708"]);
+var Phase = _Phase;
+var _Sixty = class _Sixty2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Sixty2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Sixty2(index2);
+  }
+  static fromName(name) {
+    return new _Sixty2(name);
+  }
+  next(n2) {
+    return _Sixty2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_Sixty, "NAMES", ["\u4E0A\u5143", "\u4E2D\u5143", "\u4E0B\u5143"]);
+var Sixty = _Sixty;
+var _Sound = class _Sound2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Sound2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Sound2(index2);
+  }
+  static fromName(name) {
+    return new _Sound2(name);
+  }
+  next(n2) {
+    return _Sound2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_Sound, "NAMES", ["\u6D77\u4E2D\u91D1", "\u7089\u4E2D\u706B", "\u5927\u6797\u6728", "\u8DEF\u65C1\u571F", "\u5251\u950B\u91D1", "\u5C71\u5934\u706B", "\u6DA7\u4E0B\u6C34", "\u57CE\u5934\u571F", "\u767D\u8721\u91D1", "\u6768\u67F3\u6728", "\u6CC9\u4E2D\u6C34", "\u5C4B\u4E0A\u571F", "\u9739\u96F3\u706B", "\u677E\u67CF\u6728", "\u957F\u6D41\u6C34", "\u6C99\u4E2D\u91D1", "\u5C71\u4E0B\u706B", "\u5E73\u5730\u6728", "\u58C1\u4E0A\u571F", "\u91D1\u7B94\u91D1", "\u8986\u706F\u706B", "\u5929\u6CB3\u6C34", "\u5927\u9A7F\u571F", "\u9497\u948F\u91D1", "\u6851\u67D8\u6728", "\u5927\u6EAA\u6C34", "\u6C99\u4E2D\u571F", "\u5929\u4E0A\u706B", "\u77F3\u69B4\u6728", "\u5927\u6D77\u6C34"]);
+var Sound = _Sound;
+var _Ten = class _Ten2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Ten2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Ten2(index2);
+  }
+  static fromName(name) {
+    return new _Ten2(name);
+  }
+  next(n2) {
+    return _Ten2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_Ten, "NAMES", ["\u7532\u5B50", "\u7532\u620C", "\u7532\u7533", "\u7532\u5348", "\u7532\u8FB0", "\u7532\u5BC5"]);
+var Ten = _Ten;
+var _Terrain = class _Terrain2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Terrain2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Terrain2(index2);
+  }
+  static fromName(name) {
+    return new _Terrain2(name);
+  }
+  next(n2) {
+    return _Terrain2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_Terrain, "NAMES", ["\u957F\u751F", "\u6C90\u6D74", "\u51A0\u5E26", "\u4E34\u5B98", "\u5E1D\u65FA", "\u8870", "\u75C5", "\u6B7B", "\u5893", "\u7EDD", "\u80CE", "\u517B"]);
+var Terrain = _Terrain;
+var _Twenty = class _Twenty2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Twenty2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Twenty2(index2);
+  }
+  static fromName(name) {
+    return new _Twenty2(name);
+  }
+  next(n2) {
+    return _Twenty2.fromIndex(this.nextIndex(n2));
+  }
+  getSixty() {
+    return Sixty.fromIndex(~~(this.index / 3));
+  }
+};
+__publicField(_Twenty, "NAMES", ["\u4E00\u8FD0", "\u4E8C\u8FD0", "\u4E09\u8FD0", "\u56DB\u8FD0", "\u4E94\u8FD0", "\u516D\u8FD0", "\u4E03\u8FD0", "\u516B\u8FD0", "\u4E5D\u8FD0"]);
+var Twenty = _Twenty;
+var _Zodiac = class _Zodiac2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Zodiac2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Zodiac2(index2);
+  }
+  static fromName(name) {
+    return new _Zodiac2(name);
+  }
+  next(n2) {
+    return _Zodiac2.fromIndex(this.nextIndex(n2));
+  }
+  getEarthBranch() {
+    return EarthBranch.fromIndex(this.index);
+  }
+};
+__publicField(_Zodiac, "NAMES", ["\u9F20", "\u725B", "\u864E", "\u5154", "\u9F99", "\u86C7", "\u9A6C", "\u7F8A", "\u7334", "\u9E21", "\u72D7", "\u732A"]);
+var Zodiac = _Zodiac;
+var _EarthBranch = class _EarthBranch2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_EarthBranch2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _EarthBranch2(index2);
+  }
+  static fromName(name) {
+    return new _EarthBranch2(name);
+  }
+  next(n2) {
+    return _EarthBranch2.fromIndex(this.nextIndex(n2));
+  }
+  getElement() {
+    return Element2.fromIndex([4, 2, 0, 0, 2, 1, 1, 2, 3, 3, 2, 4][this.index]);
+  }
+  getYinYang() {
+    return this.index % 2 === 0 ? 1 : 0;
+  }
+  getHideHeavenStemMain() {
+    return HeavenStem.fromIndex([9, 5, 0, 1, 4, 2, 3, 5, 6, 7, 4, 8][this.index]);
+  }
+  getHideHeavenStemMiddle() {
+    const n2 = [-1, 9, 2, -1, 1, 6, 5, 3, 8, -1, 7, 0][this.index];
+    return n2 === -1 ? null : HeavenStem.fromIndex(n2);
+  }
+  getHideHeavenStemResidual() {
+    const n2 = [-1, 7, 4, -1, 9, 4, -1, 1, 4, -1, 3, -1][this.index];
+    return n2 === -1 ? null : HeavenStem.fromIndex(n2);
+  }
+  getZodiac() {
+    return Zodiac.fromIndex(this.index);
+  }
+  getDirection() {
+    return Direction.fromIndex([0, 4, 2, 2, 4, 8, 8, 4, 6, 6, 4, 0][this.index]);
+  }
+  getOpposite() {
+    return this.next(6);
+  }
+  getOminous() {
+    return Direction.fromIndex([8, 2, 0, 6][this.index % 4]);
+  }
+  getPengZuEarthBranch() {
+    return PengZuEarthBranch.fromIndex(this.index);
+  }
+};
+__publicField(_EarthBranch, "NAMES", ["\u5B50", "\u4E11", "\u5BC5", "\u536F", "\u8FB0", "\u5DF3", "\u5348", "\u672A", "\u7533", "\u9149", "\u620C", "\u4EA5"]);
+var EarthBranch = _EarthBranch;
+var _HeavenStem = class _HeavenStem2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_HeavenStem2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _HeavenStem2(index2);
+  }
+  static fromName(name) {
+    return new _HeavenStem2(name);
+  }
+  next(n2) {
+    return _HeavenStem2.fromIndex(this.nextIndex(n2));
+  }
+  getElement() {
+    return Element2.fromIndex(~~(this.index / 2));
+  }
+  getYinYang() {
+    return this.index % 2 === 0 ? 1 : 0;
+  }
+  getTenStar(target) {
+    const hostElement = this.getElement();
+    const guestElement = target.getElement();
+    let index2 = 0;
+    const sameYinYang = this.getYinYang() == target.getYinYang();
+    if (hostElement.getReinforce().equals(guestElement)) {
+      index2 = 1;
+    } else if (hostElement.getRestrain().equals(guestElement)) {
+      index2 = 2;
+    } else if (guestElement.getRestrain().equals(hostElement)) {
+      index2 = 3;
+    } else if (guestElement.getReinforce().equals(hostElement)) {
+      index2 = 4;
+    }
+    return TenStar.fromIndex(index2 * 2 + (sameYinYang ? 0 : 1));
+  }
+  getDirection() {
+    return Direction.fromIndex([2, 8, 4, 6, 0][~~(this.index / 2)]);
+  }
+  getJoyDirection() {
+    return Direction.fromIndex([7, 5, 1, 8, 3][this.index % 5]);
+  }
+  getYangDirection() {
+    return Direction.fromIndex([1, 1, 6, 5, 7, 0, 8, 7, 2, 3][this.index]);
+  }
+  getYinDirection() {
+    return Direction.fromIndex([7, 0, 5, 6, 1, 1, 7, 8, 3, 2][this.index]);
+  }
+  getWealthDirection() {
+    return Direction.fromIndex([7, 1, 0, 2, 8][~~(this.index / 2)]);
+  }
+  getMascotDirection() {
+    return Direction.fromIndex([3, 3, 2, 2, 0, 8, 1, 1, 5, 6][this.index]);
+  }
+  getPengZuHeavenStem() {
+    return PengZuHeavenStem.fromIndex(this.index);
+  }
+  getTerrain(earthBranch) {
+    const earthBranchIndex = earthBranch.getIndex();
+    return Terrain.fromIndex([1, 6, 10, 9, 10, 9, 7, 0, 4, 3][this.index] + (1 == this.getYinYang() ? earthBranchIndex : -earthBranchIndex));
+  }
+};
+__publicField(_HeavenStem, "NAMES", ["\u7532", "\u4E59", "\u4E19", "\u4E01", "\u620A", "\u5DF1", "\u5E9A", "\u8F9B", "\u58EC", "\u7678"]);
+var HeavenStem = _HeavenStem;
+var _PengZuHeavenStem = class _PengZuHeavenStem2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_PengZuHeavenStem2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _PengZuHeavenStem2(index2);
+  }
+  static fromName(name) {
+    return new _PengZuHeavenStem2(name);
+  }
+  next(n2) {
+    return _PengZuHeavenStem2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_PengZuHeavenStem, "NAMES", ["\u7532\u4E0D\u5F00\u4ED3\u8D22\u7269\u8017\u6563", "\u4E59\u4E0D\u683D\u690D\u5343\u682A\u4E0D\u957F", "\u4E19\u4E0D\u4FEE\u7076\u5FC5\u89C1\u707E\u6B83", "\u4E01\u4E0D\u5243\u5934\u5934\u5FC5\u751F\u75AE", "\u620A\u4E0D\u53D7\u7530\u7530\u4E3B\u4E0D\u7965", "\u5DF1\u4E0D\u7834\u5238\u4E8C\u6BD4\u5E76\u4EA1", "\u5E9A\u4E0D\u7ECF\u7EDC\u7EC7\u673A\u865A\u5F20", "\u8F9B\u4E0D\u5408\u9171\u4E3B\u4EBA\u4E0D\u5C1D", "\u58EC\u4E0D\u6CF1\u6C34\u66F4\u96BE\u63D0\u9632", "\u7678\u4E0D\u8BCD\u8BBC\u7406\u5F31\u654C\u5F3A"]);
+var PengZuHeavenStem = _PengZuHeavenStem;
+var _PengZuEarthBranch = class _PengZuEarthBranch2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_PengZuEarthBranch2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _PengZuEarthBranch2(index2);
+  }
+  static fromName(name) {
+    return new _PengZuEarthBranch2(name);
+  }
+  next(n2) {
+    return _PengZuEarthBranch2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_PengZuEarthBranch, "NAMES", ["\u5B50\u4E0D\u95EE\u535C\u81EA\u60F9\u7978\u6B83", "\u4E11\u4E0D\u51A0\u5E26\u4E3B\u4E0D\u8FD8\u4E61", "\u5BC5\u4E0D\u796D\u7940\u795E\u9B3C\u4E0D\u5C1D", "\u536F\u4E0D\u7A7F\u4E95\u6C34\u6CC9\u4E0D\u9999", "\u8FB0\u4E0D\u54ED\u6CE3\u5FC5\u4E3B\u91CD\u4E27", "\u5DF3\u4E0D\u8FDC\u884C\u8D22\u7269\u4F0F\u85CF", "\u5348\u4E0D\u82EB\u76D6\u5C4B\u4E3B\u66F4\u5F20", "\u672A\u4E0D\u670D\u836F\u6BD2\u6C14\u5165\u80A0", "\u7533\u4E0D\u5B89\u5E8A\u9B3C\u795F\u5165\u623F", "\u9149\u4E0D\u4F1A\u5BA2\u9189\u5750\u98A0\u72C2", "\u620C\u4E0D\u5403\u72AC\u4F5C\u602A\u4E0A\u5E8A", "\u4EA5\u4E0D\u5AC1\u5A36\u4E0D\u5229\u65B0\u90CE"]);
+var PengZuEarthBranch = _PengZuEarthBranch;
+var PengZu = class extends AbstractCulture {
+  constructor(sixtyCycle) {
+    super();
+    __publicField(this, "pengZuHeavenStem");
+    __publicField(this, "pengZuEarthBranch");
+    this.pengZuHeavenStem = PengZuHeavenStem.fromIndex(sixtyCycle.getHeavenStem().getIndex());
+    this.pengZuEarthBranch = PengZuEarthBranch.fromIndex(sixtyCycle.getEarthBranch().getIndex());
+  }
+  static fromSixtyCycle(sixtyCycle) {
+    return new PengZu(sixtyCycle);
+  }
+  getName() {
+    return `${this.pengZuHeavenStem.getName()} ${this.pengZuEarthBranch.getName()}`;
+  }
+  getPengZuHeavenStem() {
+    return this.pengZuHeavenStem;
+  }
+  getPengZuEarthBranch() {
+    return this.pengZuEarthBranch;
+  }
+};
+var _TenStar = class _TenStar2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_TenStar2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _TenStar2(index2);
+  }
+  static fromName(name) {
+    return new _TenStar2(name);
+  }
+  next(n2) {
+    return _TenStar2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_TenStar, "NAMES", ["\u6BD4\u80A9", "\u52AB\u8D22", "\u98DF\u795E", "\u4F24\u5B98", "\u504F\u8D22", "\u6B63\u8D22", "\u4E03\u6740", "\u6B63\u5B98", "\u504F\u5370", "\u6B63\u5370"]);
+var TenStar = _TenStar;
+var _SixtyCycle = class _SixtyCycle2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_SixtyCycle2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _SixtyCycle2(index2);
+  }
+  static fromName(name) {
+    return new _SixtyCycle2(name);
+  }
+  next(n2) {
+    return _SixtyCycle2.fromIndex(this.nextIndex(n2));
+  }
+  getHeavenStem() {
+    return HeavenStem.fromIndex(this.index % HeavenStem.NAMES.length);
+  }
+  getEarthBranch() {
+    return EarthBranch.fromIndex(this.index % EarthBranch.NAMES.length);
+  }
+  getSound() {
+    return Sound.fromIndex(~~(this.index / 2));
+  }
+  getPengZu() {
+    return PengZu.fromSixtyCycle(this);
+  }
+  getTen() {
+    return Ten.fromIndex(~~((this.getHeavenStem().getIndex() - this.getEarthBranch().getIndex()) / 2));
+  }
+  getExtraEarthBranches() {
+    const l2 = [];
+    l2[0] = EarthBranch.fromIndex(10 + this.getEarthBranch().getIndex() - this.getHeavenStem().getIndex());
+    l2[1] = l2[0].next(1);
+    return l2;
+  }
+};
+__publicField(_SixtyCycle, "NAMES", ["\u7532\u5B50", "\u4E59\u4E11", "\u4E19\u5BC5", "\u4E01\u536F", "\u620A\u8FB0", "\u5DF1\u5DF3", "\u5E9A\u5348", "\u8F9B\u672A", "\u58EC\u7533", "\u7678\u9149", "\u7532\u620C", "\u4E59\u4EA5", "\u4E19\u5B50", "\u4E01\u4E11", "\u620A\u5BC5", "\u5DF1\u536F", "\u5E9A\u8FB0", "\u8F9B\u5DF3", "\u58EC\u5348", "\u7678\u672A", "\u7532\u7533", "\u4E59\u9149", "\u4E19\u620C", "\u4E01\u4EA5", "\u620A\u5B50", "\u5DF1\u4E11", "\u5E9A\u5BC5", "\u8F9B\u536F", "\u58EC\u8FB0", "\u7678\u5DF3", "\u7532\u5348", "\u4E59\u672A", "\u4E19\u7533", "\u4E01\u9149", "\u620A\u620C", "\u5DF1\u4EA5", "\u5E9A\u5B50", "\u8F9B\u4E11", "\u58EC\u5BC5", "\u7678\u536F", "\u7532\u8FB0", "\u4E59\u5DF3", "\u4E19\u5348", "\u4E01\u672A", "\u620A\u7533", "\u5DF1\u9149", "\u5E9A\u620C", "\u8F9B\u4EA5", "\u58EC\u5B50", "\u7678\u4E11", "\u7532\u5BC5", "\u4E59\u536F", "\u4E19\u8FB0", "\u4E01\u5DF3", "\u620A\u5348", "\u5DF1\u672A", "\u5E9A\u7533", "\u8F9B\u9149", "\u58EC\u620C", "\u7678\u4EA5"]);
+var SixtyCycle = _SixtyCycle;
+var _Dog = class _Dog2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Dog2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Dog2(index2);
+  }
+  static fromName(name) {
+    return new _Dog2(name);
+  }
+  next(n2) {
+    return _Dog2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_Dog, "NAMES", ["\u521D\u4F0F", "\u4E2D\u4F0F", "\u672B\u4F0F"]);
+var Dog = _Dog;
+var DogDay = class extends AbstractCultureDay {
+  constructor(dog, dayIndex) {
+    super(dog, dayIndex);
+  }
+  getDog() {
+    return this.culture;
+  }
+};
+var _FetusHeavenStem = class _FetusHeavenStem2 extends LoopTyme {
+  constructor(index2) {
+    super(_FetusHeavenStem2.NAMES, index2);
+  }
+  next(n2) {
+    return new _FetusHeavenStem2(this.nextIndex(n2));
+  }
+};
+__publicField(_FetusHeavenStem, "NAMES", ["\u95E8", "\u7893\u78E8", "\u53A8\u7076", "\u4ED3\u5E93", "\u623F\u5E8A"]);
+var FetusHeavenStem = _FetusHeavenStem;
+var _FetusEarthBranch = class _FetusEarthBranch2 extends LoopTyme {
+  constructor(index2) {
+    super(_FetusEarthBranch2.NAMES, index2);
+  }
+  next(n2) {
+    return new _FetusEarthBranch2(this.nextIndex(n2));
+  }
+};
+__publicField(_FetusEarthBranch, "NAMES", ["\u7893", "\u5395", "\u7089", "\u95E8", "\u6816", "\u5E8A"]);
+var FetusEarthBranch = _FetusEarthBranch;
+var FetusDay = class extends AbstractCulture {
+  constructor(lunarDay) {
+    super();
+    __publicField(this, "fetusHeavenStem");
+    __publicField(this, "fetusEarthBranch");
+    __publicField(this, "side");
+    __publicField(this, "direction");
+    const sixtyCycle = lunarDay.getSixtyCycle();
+    this.fetusHeavenStem = new FetusHeavenStem(sixtyCycle.getHeavenStem().getIndex() % 5);
+    this.fetusEarthBranch = new FetusEarthBranch(sixtyCycle.getEarthBranch().getIndex() % 6);
+    const index2 = [3, 3, 8, 8, 8, 8, 8, 1, 1, 1, 1, 1, 1, 6, 6, 6, 6, 6, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, -9, -9, -9, -9, -9, -5, -5, -1, -1, -1, -3, -7, -7, -7, -7, -5, 7, 7, 7, 7, 7, 7, 2, 2, 2, 2, 2, 3, 3, 3, 3][sixtyCycle.getIndex()];
+    this.side = index2 < 0 ? 0 : 1;
+    this.direction = Direction.fromIndex(index2);
+  }
+  static fromLunarDay(lunarDay) {
+    return new FetusDay(lunarDay);
+  }
+  getName() {
+    let s = this.fetusHeavenStem.getName() + this.fetusEarthBranch.getName();
+    if ("\u95E8\u95E8" === s) {
+      s = "\u5360\u5927\u95E8";
+    } else if ("\u7893\u78E8\u7893" === s) {
+      s = "\u5360\u7893\u78E8";
+    } else if ("\u623F\u5E8A\u5E8A" === s) {
+      s = "\u5360\u623F\u5E8A";
+    } else if (s.indexOf("\u95E8") === 0) {
+      s = "\u5360" + s;
+    }
+    s += " ";
+    const directionName = this.direction.getName();
+    if (0 == this.side) {
+      s += "\u623F\u5185";
+    } else {
+      s += "\u5916";
+    }
+    if (1 == this.side && "\u5317\u5357\u897F\u4E1C".indexOf(directionName) > -1) {
+      s += "\u6B63";
+    }
+    s += directionName;
+    return s;
+  }
+  getSide() {
+    return this.side;
+  }
+  getDirection() {
+    return this.direction;
+  }
+  getFetusHeavenStem() {
+    return this.fetusHeavenStem;
+  }
+  getFetusEarthBranch() {
+    return this.fetusEarthBranch;
+  }
+};
+var _Nine = class _Nine2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Nine2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Nine2(index2);
+  }
+  static fromName(name) {
+    return new _Nine2(name);
+  }
+  next(n2) {
+    return _Nine2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_Nine, "NAMES", ["\u4E00\u4E5D", "\u4E8C\u4E5D", "\u4E09\u4E5D", "\u56DB\u4E5D", "\u4E94\u4E5D", "\u516D\u4E5D", "\u4E03\u4E5D", "\u516B\u4E5D", "\u4E5D\u4E5D"]);
+var Nine = _Nine;
+var NineDay = class extends AbstractCultureDay {
+  constructor(nine, dayIndex) {
+    super(nine, dayIndex);
+  }
+  getNine() {
+    return this.culture;
+  }
+};
+var _Phenology = class _Phenology2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Phenology2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Phenology2(index2);
+  }
+  static fromName(name) {
+    return new _Phenology2(name);
+  }
+  next(n2) {
+    return _Phenology2.fromIndex(this.nextIndex(n2));
+  }
+  getThreePhenology() {
+    return ThreePhenology.fromIndex(this.index % 3);
+  }
+};
+__publicField(_Phenology, "NAMES", ["\u86AF\u8693\u7ED3", "\u9E8B\u89D2\u89E3", "\u6C34\u6CC9\u52A8", "\u96C1\u5317\u4E61", "\u9E4A\u59CB\u5DE2", "\u96C9\u59CB\u96CA", "\u9E21\u59CB\u4E73", "\u5F81\u9E1F\u5389\u75BE", "\u6C34\u6CFD\u8179\u575A", "\u4E1C\u98CE\u89E3\u51BB", "\u86F0\u866B\u59CB\u632F", "\u9C7C\u965F\u8D1F\u51B0", "\u736D\u796D\u9C7C", "\u5019\u96C1\u5317", "\u8349\u6728\u840C\u52A8", "\u6843\u59CB\u534E", "\u4ED3\u5E9A\u9E23", "\u9E70\u5316\u4E3A\u9E20", "\u7384\u9E1F\u81F3", "\u96F7\u4E43\u53D1\u58F0", "\u59CB\u7535", "\u6850\u59CB\u534E", "\u7530\u9F20\u5316\u4E3A\u9D3D", "\u8679\u59CB\u89C1", "\u840D\u59CB\u751F", "\u9E23\u9E20\u62C2\u5947\u7FBD", "\u6234\u80DC\u964D\u4E8E\u6851", "\u877C\u8748\u9E23", "\u86AF\u8693\u51FA", "\u738B\u74DC\u751F", "\u82E6\u83DC\u79C0", "\u9761\u8349\u6B7B", "\u9EA6\u79CB\u81F3", "\u87B3\u8782\u751F", "\u9D59\u59CB\u9E23", "\u53CD\u820C\u65E0\u58F0", "\u9E7F\u89D2\u89E3", "\u8729\u59CB\u9E23", "\u534A\u590F\u751F", "\u6E29\u98CE\u81F3", "\u87CB\u87C0\u5C45\u58C1", "\u9E70\u59CB\u631A", "\u8150\u8349\u4E3A\u8424", "\u571F\u6DA6\u6EBD\u6691", "\u5927\u96E8\u884C\u65F6", "\u51C9\u98CE\u81F3", "\u767D\u9732\u964D", "\u5BD2\u8749\u9E23", "\u9E70\u4E43\u796D\u9E1F", "\u5929\u5730\u59CB\u8083", "\u79BE\u4E43\u767B", "\u9E3F\u96C1\u6765", "\u7384\u9E1F\u5F52", "\u7FA4\u9E1F\u517B\u7F9E", "\u96F7\u59CB\u6536\u58F0", "\u86F0\u866B\u576F\u6237", "\u6C34\u59CB\u6DB8", "\u9E3F\u96C1\u6765\u5BBE", "\u96C0\u5165\u5927\u6C34\u4E3A\u86E4", "\u83CA\u6709\u9EC4\u82B1", "\u8C7A\u4E43\u796D\u517D", "\u8349\u6728\u9EC4\u843D", "\u86F0\u866B\u54B8\u4FEF", "\u6C34\u59CB\u51B0", "\u5730\u59CB\u51BB", "\u96C9\u5165\u5927\u6C34\u4E3A\u8703", "\u8679\u85CF\u4E0D\u89C1", "\u5929\u6C14\u4E0A\u5347\u5730\u6C14\u4E0B\u964D", "\u95ED\u585E\u800C\u6210\u51AC", "\u9E56\u9D20\u4E0D\u9E23", "\u864E\u59CB\u4EA4", "\u8354\u633A\u51FA"]);
+var Phenology = _Phenology;
+var _ThreePhenology = class _ThreePhenology2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_ThreePhenology2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _ThreePhenology2(index2);
+  }
+  static fromName(name) {
+    return new _ThreePhenology2(name);
+  }
+  next(n2) {
+    return _ThreePhenology2.fromIndex(this.nextIndex(n2));
+  }
+  getThreePhenology() {
+    return _ThreePhenology2.fromIndex(this.index % 3);
+  }
+};
+__publicField(_ThreePhenology, "NAMES", ["\u521D\u5019", "\u4E8C\u5019", "\u4E09\u5019"]);
+var ThreePhenology = _ThreePhenology;
+var _Dipper = class _Dipper2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Dipper2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Dipper2(index2);
+  }
+  static fromName(name) {
+    return new _Dipper2(name);
+  }
+  next(n2) {
+    return _Dipper2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_Dipper, "NAMES", ["\u5929\u67A2", "\u5929\u7487", "\u5929\u7391", "\u5929\u6743", "\u7389\u8861", "\u5F00\u9633", "\u6447\u5149", "\u6D1E\u660E", "\u9690\u5143"]);
+var Dipper = _Dipper;
+var PhenologyDay = class extends AbstractCultureDay {
+  constructor(phenology, dayIndex) {
+    super(phenology, dayIndex);
+  }
+  getPhenology() {
+    return this.culture;
+  }
+};
+var _NineStar = class _NineStar2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_NineStar2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _NineStar2(index2);
+  }
+  static fromName(name) {
+    return new _NineStar2(name);
+  }
+  next(n2) {
+    return _NineStar2.fromIndex(this.nextIndex(n2));
+  }
+  getColor() {
+    return ["\u767D", "\u9ED2", "\u78A7", "\u7EFF", "\u9EC4", "\u767D", "\u8D64", "\u767D", "\u7D2B"][this.index];
+  }
+  getElement() {
+    return Element2.fromIndex([4, 2, 0, 0, 2, 3, 3, 2, 1][this.index]);
+  }
+  getDipper() {
+    return Dipper.fromIndex(this.index);
+  }
+  getDirection() {
+    return Direction.fromIndex(this.index);
+  }
+  toString() {
+    return this.getName() + this.getColor() + this.getElement();
+  }
+};
+__publicField(_NineStar, "NAMES", ["\u4E00", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D", "\u4E03", "\u516B", "\u4E5D"]);
+var NineStar = _NineStar;
+var _TwelveStar = class _TwelveStar2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_TwelveStar2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _TwelveStar2(index2);
+  }
+  static fromName(name) {
+    return new _TwelveStar2(name);
+  }
+  next(n2) {
+    return _TwelveStar2.fromIndex(this.nextIndex(n2));
+  }
+  getEcliptic() {
+    return Ecliptic.fromIndex([0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1][this.index]);
+  }
+};
+__publicField(_TwelveStar, "NAMES", ["\u9752\u9F99", "\u660E\u5802", "\u5929\u5211", "\u6731\u96C0", "\u91D1\u532E", "\u5929\u5FB7", "\u767D\u864E", "\u7389\u5802", "\u5929\u7262", "\u7384\u6B66", "\u53F8\u547D", "\u52FE\u9648"]);
+var TwelveStar = _TwelveStar;
+var _Ecliptic = class _Ecliptic2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_Ecliptic2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _Ecliptic2(index2);
+  }
+  static fromName(name) {
+    return new _Ecliptic2(name);
+  }
+  next(n2) {
+    return _Ecliptic2.fromIndex(this.nextIndex(n2));
+  }
+  getLuck() {
+    return Luck.fromIndex(this.index);
+  }
+};
+__publicField(_Ecliptic, "NAMES", ["\u9EC4\u9053", "\u9ED1\u9053"]);
+var Ecliptic = _Ecliptic;
+var _LunarYear = class _LunarYear2 extends AbstractTyme {
+  constructor(year) {
+    super();
+    __publicField(this, "year");
+    if (year < -1 || year > 9999) {
+      throw new Error(`illegal lunar year: ${year}`);
+    }
+    this.year = year;
+  }
+  static fromYear(year) {
+    return new _LunarYear2(year);
+  }
+  getYear() {
+    return this.year;
+  }
+  getDayCount() {
+    let n2 = 0;
+    this.getMonths().forEach((m) => {
+      n2 += m.getDayCount();
+    });
+    return n2;
+  }
+  getName() {
+    return `\u519C\u5386${this.getSixtyCycle().getName()}\u5E74`;
+  }
+  next(n2) {
+    return _LunarYear2.fromYear(this.year + n2);
+  }
+  getLeapMonth() {
+    if (this.year === -1) {
+      return 11;
+    }
+    for (const m in _LunarYear2.LEAP) {
+      if (_LunarYear2.LEAP[m].indexOf(this.year) > -1) {
+        return parseInt(m, 10);
+      }
+    }
+    return 0;
+  }
+  getSixtyCycle() {
+    return SixtyCycle.fromIndex(this.year - 4);
+  }
+  getTwenty() {
+    return Twenty.fromIndex(Math.floor((this.year - 1864) / 20));
+  }
+  getNineStar() {
+    return NineStar.fromIndex(63 + this.getTwenty().getSixty().getIndex() * 3 - this.getSixtyCycle().getIndex());
+  }
+  getJupiterDirection() {
+    return Direction.fromIndex([0, 7, 7, 2, 3, 3, 8, 1, 1, 6, 0, 0][this.getSixtyCycle().getEarthBranch().getIndex()]);
+  }
+  getMonths() {
+    const l2 = [];
+    let m = LunarMonth.fromYm(this.year, 1);
+    while (m.getYear().getYear() === this.year) {
+      l2.push(m);
+      m = m.next(1);
+    }
+    return l2;
+  }
+  equals(o3) {
+    return this.year === o3.getYear();
+  }
+};
+__publicField(_LunarYear, "LEAP", {});
+(() => {
+  const chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_@";
+  const months = "080b0r0j0j0j0C0j0j0C0j0j0j0C0j0C0j0C0F0j0V0V0V0u0j0j0C0j0j0j0j0V0C0j1v0u0C0V1v0C0b080u110u0C0j0C1v9K1v2z0j1vmZbl1veN3s1v0V0C2S1v0V0C2S2o0C0j1Z1c2S1v0j1c0j2z1v0j1c0j392H0b2_2S0C0V0j1c0j2z0C0C0j0j1c0j0N250j0C0j0b081n080b0C0C0C1c0j0N,0r1v1c1v0V0V0F0V0j0C0j0C0j0V0j0u1O0j0C0V0j0j0j0V0b080u0r0u080b0j0j0C0V0C0V0j0b080V0u080b0j0j0u0j1v0u080b1c0j080b0j0V0j0j0V0C0N1v0j1c0j0j1v2g1v420j1c0j2z1v0j1v5Q9z1v4l0j1vfn1v420j9z4l1v1v2S1c0j1v2S3s1v0V0C2S1v1v2S1c0j1v2S2_0b0j2_2z0j1c0j,0z0j0j0j0C0j0j0C0j0j0j0C0j0C0j0j0j0j0m0j0C0j0j0C0j0j0j0j0b0V0j0j0C0j0j0j0j0V0j0j0j0V0b0V0V0C0V0C0j0j0b080u110u0V0C0j0N0j0b080b080b0j0r0b0r0b0j0j0j0j0C0j0b0r0C0j0b0j0C0C0j0j0j0j0j0j0j0j0j0b110j0b0j0j0j0C0j0C0j0j0j0j0b080b080b0V080b080b0j0j0j0j0j0j0V0j0j0u1v0j0j0j0C0j0j0j0V0C0N1c0j0C0C0j0j0j1n080b0j0V0C0j0C0C2g0j1c0j0j1v2g1v0j0j1v7N0j1c0j3L0j0j1v5Q1Z5Q1v4lfn1v420j1v5Q1Z5Q1v4l1v2z1v,0H140r0N0r140r0u0r0V171c11140C0j0u110j0u0j1v0j0C0j0j0j0b080V0u080b0C1v0j0j0j0C0j0b080V0j0j0b080b0j0j0j0j0b080b0C080j0b080b0j0j0j0j0j0j0b080j0b080C0b080b080b080b0j0j0j0j080b0j0C0j0j0j0b0j0j080C0b0j0j0j0j0j0j0b08080b0j0C0j0j0j0b0j0j0K0b0j0C0j0j0j0b080b080j0C0b0j080b080b0j0j0j0j080b0j0b0r0j0j0j0b0j0C0r0b0j0j0j0j0j0j0j0b080j0b0r0C0j0b0j0j0j0r0b0j0C0j0j0j0u0r0b0C0j080b0j0j0j0j0j0j0j1c0j0b0j0j0j0C0j0j0j0j0j0j0j0b080j1c0u0j0j0j0C0j1c0j0u0j1c0j0j0j0j0j0j0j0j1c0j0u1v0j0j0V0j0j2g0j0j0j0C1v0C1G0j0j0V0C1Z1O0j0V0j0j2g1v0j0j0V0C2g5x1v4l1v421O7N0V0C4l1v2S1c0j1v2S2_,050b080C0j0j0j0C0j0j0C0j0j0j0C0j0C0j0C030j0j0j0j0j0j0j0j0j0C0j0b080u0V080b0j0j0V0j0j0j0j0j0j0j0j0j0V0N0j0C0C0j0j0j0j0j0j0j0j1c0j0u0j1v0j0j0j0j0j0b080b080j0j0j0b080b080b080b080b0j0j0j080b0j0b080j0j0j0j0b080b0j0j0r0b080b0b080j0j0j0j0b080b080j0b080j0b080b080b080b080b0j0j0r0b0j0b080j0j0j0j0b080b0j0j0C080b0b080j0j0j0j0j0j0j0b080u080j0j0b0j0j0j0C0j0b080j0j0j0j0b080b080b080b0C080b080b080b0j0j0j0j0j0j0b0C080j0j0b0j0j0j0C0j0b080j0j0C0b080b080j0b0j0j0C080b0j0j0j0j0j0j0b0j0j080C0b0j080b0j0j0j0j0j0j0j0C0j0j0j0b0j0j0C080b0j0j0j0j0j0j0b080b080b0K0b080b080b0j0j0j0j0j0j0j0C0j0j0u0j0j0V0j080b0j0C0j0j0j0b0j0r0C0b0j0j0j0j0j0j0j0j0j0C0j0b080b080b0j0C0C0j0C0j0j0j0u110u0j0j0j0j0j0j0j0j0C0j0j0u0j1c0j0j0j0j0j0j0j0j0V0C0u0j0C0C0V0C1Z0j0j0j0C0j0j0j1v0u0j1c0j0j0j0C0j0j2g0j1c1v0C1Z0V0j4l0j0V0j0j2g0j1v0j1v2S1c7N1v,0w0j1c0j0V0j0j0V0V0V0j0m0V0j0C1c140j0j0j0C0V0C0j1v0j0N0j0C0j0j0j0V0j0j1v0N0j0j0V0j0j0j0j0j0j080b0j0j0j0j0j0j0j080b0j0C0j0j0j0b0j0j080u080b0j0j0j0j0j0j0b080b080b080C0b0j080b080b0j0j0j0j080b0j0C0j0j0j0b0j0j080u080b0j0j0j0j0j0j0b080b080b080b0r0b0j080b080b0j0j0j0j080b0j0b0r0j0j0b080b0j0j080b0j080b0j080b080b0j0j0j0j0j0b080b0r0C0b080b0j0j0j0j080b0b080b080j0j0j0b080b080b080b0j0j0j0j080b0j0b080j0j0j0j0b080b0j0j0r0b080b0j0j0j0j0j0b080b080j0b0r0b080j0b080b0j0j0j0j080b0j0b080j0j0j0j0b080b0j080b0r0b0j080b080b0j0j0j0j0j0b080b0r0C0b080b0j0j0j0j0j0j0b080j0j0j0b080b080b080b0j0j0j0r0b0j0b080j0j0j0j0b080b0r0b0r0b0j080b080b0j0j0j0j0j0j0b0r0j0j0j0b0j0j0j0j080b0j0b080j0j0j0j0b080b080b0j0r0b0j080b0j0j0j0j0j0j0j0b0r0C0b0j0j0j0j0j0j0j080b0j0C0j0j0j0b0j0C0r0b0j0j0j0j0j0j0b080b080u0r0b0j080b0j0j0j0j0j0j0j0b0r0C0u0j0j0j0C0j080b0j0C0j0j0j0u110b0j0j0j0j0j0j0j0j0j0C0j0b080b0j0j0C0C0j0C0j0j0j0b0j1c0j080b0j0j0j0j0j0j0V0j0j0u0j1c0j0j0j0C0j0j2g0j0j0j0C0j0j0V0j0b080b1c0C0V0j0j2g0j0j0V0j0j1c0j1Z0j0j0C0C0j1v,160j0j0V0j1c0j0C0j0C0j1f0j0V0C0j0j0C0j0j0j1G080b080u0V080b0j0j0V0j1v0j0u0j1c0j0j0j0C0j0j0j0C0C0j1D0b0j080b0j0j0j0j0C0j0b0r0C0j0b0j0C0C0j0j0j0j0j0j0j0j0j0b0r0b0r0j0b0j0j0j0C0j0b0r0j0j0j0b080b080j0b0C0j080b080b0j0j0j0j0j0j0b0C080j0j0b0j0j0j0C0j0b080j0j0j0j0b080b080j0b0C0r0j0b0j0j0j0j0j0j0b0C080j0j0b0j0j0j0C0j0j0j0j0C0j0j0b080b0j0j0C080b0j0j0j0j0j0j0b080b080b080C0b080b080b080b0j0j0j0j0j0b080C0j0j0b080b0j0j0C080b0j0j0j0j0j0j0b080j0b0C080j0j0b0j0j0j0j0j0j0b080j0b080C0b080b080b080b0j0j0j0j080b0j0C0j0j0b080b0j0j0C080b0j0j0j0j0j0j0b080j0b080u080j0j0b0j0j0j0j0j0j0b080C0j0j0b080b0j0j0C0j0j080b0j0j0j0j0j0b080b0C0r0b080b0j0j0j0j0j0j0b080j0b080u080b080b080b0j0j0j0C0j0b080j0j0j0j0b0j0j0j0C0j0j080b0j0j0j0j0j0b080b0C0r0b080b0j0j0j0j0j0j0b080j0b0r0b080b080b080b0j0j0j0r0b0j0b0r0j0j0j0b0j0j0j0r0b0j080b0j0j0j0j0j0j0j0b0r0C0b0j0j0j0j0j0j0j0b080j0C0u080b080b0j0j0j0r0b0j0C0C0j0b0j110b0j080b0j0j0j0j0j0j0u0r0C0b0j0j0j0j0j0j0j0j0j0C0j0j0j0b0j1c0j0C0j0j0j0b0j0814080b080b0j0j0j0j0j0j1c0j0u0j0j0V0j0j0j0j0j0j0j0u110u0j0j0j,020b0r0C0j0j0j0C0j0j0V0j0j0j0j0j0C0j1f0j0C0j0V1G0j0j0j0j0V0C0j0C1v0u0j0j0j0V0j0j0C0j0j0j1v0N0C0V0j0j0j0K0C250b0C0V0j0j0V0j0j2g0C0V0j0j0C0j0j0b081v0N0j0j0V0V0j0j0u0j1c0j080b0j0j0j0j0j0j0V0j0j0u0j0j0V0j0j0j0C0j0b080b080V0b0j080b0j0j0j0j0j0j0j0b0r0C0j0b0j0j0j0C0j080b0j0j0j0j0j0j0u0r0C0u0j0j0j0j0j0j0b080j0C0j0b080b080b0j0C0j080b0j0j0j0j0j0j0b080b110b0j0j0j0j0j0j0j0j0j0b0r0j0j0j0b0j0j0j0r0b0j0b080j0j0j0j0b080b080b080b0r0b0j080b080b0j0j0j0j0j0j0b0r0C0b080b0j0j0j0j080b0j0b080j0j0j0j0b080b080b0j0j0j0r0b0j0j0j0j0j0j0b080b0j080C0b0j080b080b0j0j0j0j080b0j0b0r0C0b080b0j0j0j0j080b0j0j0j0j0j0b080b080b080b0j0j080b0r0b0j0j0j0j0j0j0b0j0j080C0b0j080b080b0j0j0j0j0j0b080C0j0j0b080b0j0j0C0j0b080j0j0j0j0b080b080b080b0C0C080b0j0j0j0j0j0j0b0C0C080b080b080b0j0j0j0j0j0j0b0C080j0j0b0j0j0j0C0j0b080j0b080j0j0b080b080b080b0C0r0b0j0j0j0j0j0j0b080b0r0b0r0b0j080b080b0j0j0j0j0j0j0b0r0C0j0b0j0j0j0j0j0j0b080j0C0j0b080j0b0j0j0K0b0j0C0j0j0j0b080b0j0K0b0j080b0j0j0j0j0j0j0V0j0j0b0j0j0j0C0j0j0j0j,0l0C0K0N0r0N0j0r1G0V0m0j0V1c0C0j0j0j0j1O0N110u0j0j0j0C0j0j0V0C0j0u110u0j0j0j0C0j0j0j0C0C0j250j1c2S1v1v0j5x2g0j1c0j0j1c2z0j1c0j0j1c0j0N1v0V0C1v0C0b0C0V0j0j0C0j0C1v0u0j0C0C0j0j0j0C0j0j0j0u110u0j0j0j0C0j0C0C0C0b080b0j0C0j080b0j0C0j0j0j0u110u0j0j0j0C0j0j0j0C0j0j0j0u0C0r0u0j0j0j0j0j0j0b0r0b0V080b080b0j0C0j0j0j0V0j0j0b0j0j0j0C0j0j0j0j0j0j0j0b080j0b0C0r0j0b0j0j0j0C0j0b0r0b0r0j0b080b080b0j0C0j0j0j0j0j0j0j0j0b0j0C0r0b0j0j0j0j0j0j0b080b080j0b0r0b0r0j0b0j0j0j0j080b0j0b0r0j0j0j0b080b080b0j0j0j0j080b0j0j0j0j0j0j0b0j0j0j0r0b0j0j0j0j0j0j0b080b080b080b0r0C0b080b0j0j0j0j0j0b080b0r0C0b080b080b080b0j0j0j0j080b0j0C0j0j0j0b0j0j0C080b0j0j0j0j0j0j0b080j0b0C080j0j0b0j0j0j0j0j0j0b0r0b080j0j0b080b080b0j0j0j0j0j0j0b080j0j0j0j0b0j0j0j0r0b0j0b080j0j0j0j0j0b080b080b0C0r0b0j0j0j0j0j0j0b080b080j0C0b0j080b080b0j0j0j0j0j0j,0a0j0j0j0j0C0j0j0C0j0C0C0j0j0j0j0j0j0j0m0C0j0j0j0j0u080j0j0j1n0j0j0j0j0C0j0j0j0V0j0j0j1c0u0j0C0V0j0j0V0j0j1v0N0C0V2o1v1O2S2o141v0j1v4l0j1c0j1v2S2o0C0u1v0j0C0C2S1v0j1c0j0j1v0N251c0j1v0b1c1v1n1v0j0j0V0j0j1v0N1v0C0V0j0j1v0b0C0j0j0V1c0j0u0j1c0j0j0j0j0j0j0j0j1c0j0u0j0j0V0j0j0j0j0j0j0b080u110u0j0j0j0j0j0j1c0j0b0j080b0j0C0j0j0j0V0j0j0u0C0V0j0j0j0C0j0b080j1c0j0b0j0j0j0C0j0C0j0j0j0b080b080b0j0C0j080b0j0j0j0j0j0j0j0b0C0r0u0j0j0j0j0j0j0b080j0b0r0C0j0b0j0j0j0r0b0j0b0r0j0j0j0b080b080b0j0r0b0j080b0j0j0j0j0j0j0b0j0r0C0b0j0j0j0j0j0j0b080j0j0C0j0j0b080b0j0j0j0j0j0j0j0j0j0j0b080b080b080b0C0j0j080b0j0j0j0j0j0j0b0j0j0C080b0j0j0j0j0j0j0j0j0b0C080j0j0b0j0j0j0j0j,0n0Q0j1c14010q0V1c171k0u0r140V0j0j1c0C0N1O0j0V0j0j0j1c0j0u110u0C0j0C0V0C0j0j0b671v0j1v5Q1O2S2o2S1v4l1v0j1v2S2o0C1Z0j0C0C1O141v0j1c0j2z1O0j0V0j0j1v0b2H390j1c0j0V0C2z0j1c0j1v2g0C0V0j1O0b0j0j0V0C1c0j0u0j1c0j0j0j0j0j0j0j0j1c0N0j0j0V0j0j0C0j0j0b081v0u0j0j0j0C0j1c0N0j0j0C0j0j0j0C0j0j0j0u0C0r0u0j0j0j0C0j0b080j1c0j0b0j0C0C0j0C0C0j0b080b080u0C0j080b0j0C0j0j0j0u110u0j0j0j0j0j0j0j0j0C0C0j0b0j0j0j0C0j0C0C0j0b080b080b0j0C0j080b0j0C0j0j0j0b0j110b0j0j0j0j0j,0B0j0V0j0j0C0j0j0j0C0j0C0j0j0C0j0m0j0j0j0j0C0j0C0j0j0u0j1c0j0j0C0C0j0j0j0j0j0j0j0j0u110N0j0j0V0C0V0j0b081n080b0CrU1O5e2SbX2_1Z0V2o141v0j0C0C0j2z1v0j1c0j7N1O420j1c0j1v2S1c0j1v2S2_0b0j0V0j0j1v0N1v0j0j1c0j1v140j0V0j0j0C0C0b080u1v0C0V0u110u0j0j0j0C0j0j0j0C0C0N0C0V0j0j0C0j0j0b080u110u0C0j0C0u0r0C0u080b0j0j0C0j0j0j".split(",", -1);
+  for (let i2 = 0; i2 < 12; i2++) {
+    let n2 = 0;
+    const m = months[i2];
+    const size = ~~(m.length / 2);
+    const l2 = [];
+    for (let y = 0; y < size; y++) {
+      const z = y * 2;
+      const s = m.substring(z, z + 2);
+      let t2 = 0;
+      let c = 1;
+      for (let x = 1; x > -1; x--) {
+        t2 += c * chars.indexOf(s.charAt(x));
+        c *= 64;
+      }
+      n2 += t2;
+      l2.push(n2);
+    }
+    _LunarYear.LEAP[`${i2 + 1}`] = l2;
+  }
+})();
+var LunarYear = _LunarYear;
+var _LunarSeason = class _LunarSeason2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_LunarSeason2.NAMES, indexOfName);
+  }
+  static fromIndex(index2) {
+    return new _LunarSeason2(index2);
+  }
+  static fromName(name) {
+    return new _LunarSeason2(name);
+  }
+  next(n2) {
+    return _LunarSeason2.fromIndex(this.nextIndex(n2));
+  }
+};
+__publicField(_LunarSeason, "NAMES", ["\u5B5F\u6625", "\u4EF2\u6625", "\u5B63\u6625", "\u5B5F\u590F", "\u4EF2\u590F", "\u5B63\u590F", "\u5B5F\u79CB", "\u4EF2\u79CB", "\u5B63\u79CB", "\u5B5F\u51AC", "\u4EF2\u51AC", "\u5B63\u51AC"]);
+var LunarSeason = _LunarSeason;
+var _FetusMonth = class _FetusMonth2 extends LoopTyme {
+  constructor(indexOfName) {
+    super(_FetusMonth2.NAMES, indexOfName);
+  }
+  static fromLunarMonth(lunarMonth) {
+    return lunarMonth.isLeap() ? null : new _FetusMonth2(lunarMonth.getMonth() - 1);
+  }
+  next(n2) {
+    return new _FetusMonth2(this.nextIndex(n2));
+  }
+};
+__publicField(_FetusMonth, "NAMES", ["\u5360\u623F\u5E8A", "\u5360\u6237\u7A97", "\u5360\u95E8\u5802", "\u5360\u53A8\u7076", "\u5360\u623F\u5E8A", "\u5360\u5E8A\u4ED3", "\u5360\u7893\u78E8", "\u5360\u5395\u6237", "\u5360\u95E8\u623F", "\u5360\u623F\u5E8A", "\u5360\u7076\u7089", "\u5360\u623F\u5E8A"]);
+var FetusMonth = _FetusMonth;
+var _LunarMonth = class _LunarMonth2 extends AbstractTyme {
+  constructor(year, month) {
+    super();
+    __publicField(this, "year");
+    __publicField(this, "month");
+    __publicField(this, "leap");
+    __publicField(this, "dayCount");
+    __publicField(this, "indexInYear");
+    __publicField(this, "firstJulianDay");
+    const currentYear = LunarYear.fromYear(year);
+    const currentLeapMonth = currentYear.getLeapMonth();
+    if (month === 0 || month > 12 || month < -12) {
+      throw new Error(`illegal lunar month: ${month}`);
+    }
+    const leap = month < 0;
+    const m = Math.abs(month);
+    if (leap && m != currentLeapMonth) {
+      throw new Error(`illegal leap month ${m} in lunar year ${year}`);
+    }
+    const dongZhi = SolarTerm.fromIndex(year, 0);
+    const dongZhiJd = dongZhi.getCursoryJulianDay();
+    let w = ShouXingUtil.calcShuo(dongZhiJd);
+    if (w > dongZhiJd) {
+      w -= 29.53;
+    }
+    const prevYear = LunarYear.fromYear(year - 1);
+    const prevLeapMonth = prevYear.getLeapMonth();
+    let offset = 2;
+    if (year > 8 && year < 24) {
+      offset = 1;
+    } else if (prevLeapMonth > 10 && year != 239 && year != 240) {
+      offset = 3;
+    }
+    let index2 = m - 1;
+    if (leap || currentLeapMonth > 0 && m > currentLeapMonth) {
+      index2 += 1;
+    }
+    this.indexInYear = index2;
+    w += 29.5306 * (offset + index2);
+    const firstDay = ShouXingUtil.calcShuo(w);
+    this.firstJulianDay = JulianDay.fromJulianDay(JulianDay.J2000 + firstDay);
+    this.dayCount = ~~(ShouXingUtil.calcShuo(w + 29.5306) - firstDay);
+    this.year = currentYear;
+    this.month = m;
+    this.leap = leap;
+  }
+  static fromYm(year, month) {
+    return new _LunarMonth2(year, month);
+  }
+  getYear() {
+    return this.year;
+  }
+  getMonth() {
+    return this.month;
+  }
+  getMonthWithLeap() {
+    return this.leap ? -this.month : this.month;
+  }
+  getDayCount() {
+    return this.dayCount;
+  }
+  getIndexInYear() {
+    return this.indexInYear;
+  }
+  getSeason() {
+    return LunarSeason.fromIndex(this.month - 1);
+  }
+  getFirstJulianDay() {
+    return this.firstJulianDay;
+  }
+  isLeap() {
+    return this.leap;
+  }
+  getWeekCount(start) {
+    return Math.ceil((this.indexOf(this.firstJulianDay.getWeek().getIndex() - start, 7) + this.getDayCount()) / 7);
+  }
+  getName() {
+    return (this.leap ? "\u95F0" : "") + _LunarMonth2.NAMES[this.month - 1];
+  }
+  toString() {
+    return this.year.toString() + this.getName();
+  }
+  next(n2) {
+    if (n2 === 0) {
+      return _LunarMonth2.fromYm(this.year.getYear(), this.getMonthWithLeap());
+    }
+    let m = this.indexInYear + 1 + n2;
+    let y = this.year;
+    let leapMonth = y.getLeapMonth();
+    let monthSize = 12 + (leapMonth > 0 ? 1 : 0);
+    const forward = n2 > 0;
+    const add = forward ? 1 : -1;
+    while (forward ? m > monthSize : m <= 0) {
+      if (forward) {
+        m -= monthSize;
+      }
+      y = y.next(add);
+      leapMonth = y.getLeapMonth();
+      monthSize = 12 + (leapMonth > 0 ? 1 : 0);
+      if (!forward) {
+        m += monthSize;
+      }
+    }
+    let leap = false;
+    if (leapMonth > 0) {
+      if (m === leapMonth + 1) {
+        leap = true;
+      }
+      if (m > leapMonth) {
+        m--;
+      }
+    }
+    return _LunarMonth2.fromYm(y.getYear(), leap ? -m : m);
+  }
+  getDays() {
+    const y = this.year.getYear();
+    const m = this.getMonthWithLeap();
+    const l2 = [];
+    for (let i2 = 0, j = this.getDayCount(); i2 < j; i2++) {
+      l2.push(LunarDay.fromYmd(y, m, i2 + 1));
+    }
+    return l2;
+  }
+  getWeeks(start) {
+    const y = this.year.getYear();
+    const m = this.getMonthWithLeap();
+    const l2 = [];
+    for (let i2 = 0, j = this.getWeekCount(start); i2 < j; i2++) {
+      l2.push(LunarWeek.fromYm(y, m, i2, start));
+    }
+    return l2;
+  }
+  getSixtyCycle() {
+    return SixtyCycle.fromName(HeavenStem.fromIndex((this.year.getSixtyCycle().getHeavenStem().getIndex() + 1) * 2 + this.indexInYear).getName() + EarthBranch.fromIndex(this.indexInYear + 2).getName());
+  }
+  getNineStar() {
+    return NineStar.fromIndex(27 - this.year.getSixtyCycle().getEarthBranch().getIndex() % 3 * 3 - this.getSixtyCycle().getEarthBranch().getIndex());
+  }
+  getJupiterDirection() {
+    const sixtyCycle = this.getSixtyCycle();
+    const n2 = [7, -1, 1, 3][sixtyCycle.getEarthBranch().next(-2).getIndex() % 4];
+    return n2 === -1 ? sixtyCycle.getHeavenStem().getDirection() : Direction.fromIndex(n2);
+  }
+  getFetus() {
+    return FetusMonth.fromLunarMonth(this);
+  }
+  equals(o3) {
+    return this.year.equals(o3.getYear()) && this.getMonthWithLeap() === o3.getMonthWithLeap();
+  }
+};
+__publicField(_LunarMonth, "NAMES", ["\u6B63\u6708", "\u4E8C\u6708", "\u4E09\u6708", "\u56DB\u6708", "\u4E94\u6708", "\u516D\u6708", "\u4E03\u6708", "\u516B\u6708", "\u4E5D\u6708", "\u5341\u6708", "\u5341\u4E00\u6708", "\u5341\u4E8C\u6708"]);
+var LunarMonth = _LunarMonth;
+var _LunarWeek = class _LunarWeek2 extends AbstractTyme {
+  constructor(year, month, index2, start) {
+    super();
+    __publicField(this, "month");
+    __publicField(this, "index");
+    __publicField(this, "start");
+    if (index2 < 0 || index2 > 5) {
+      throw new Error(`illegal lunar week index: ${index2}`);
+    }
+    if (start < 0 || start > 6) {
+      throw new Error(`illegal lunar week start: ${start}`);
+    }
+    const m = LunarMonth.fromYm(year, month);
+    if (index2 >= m.getWeekCount(start)) {
+      throw new Error(`illegal lunar week index: ${index2} in month: ${m.toString()}`);
+    }
+    this.month = m;
+    this.index = index2;
+    this.start = Week.fromIndex(start);
+  }
+  static fromYm(year, month, index2, start) {
+    return new _LunarWeek2(year, month, index2, start);
+  }
+  getMonth() {
+    return this.month;
+  }
+  getIndex() {
+    return this.index;
+  }
+  getStart() {
+    return this.start;
+  }
+  getName() {
+    return _LunarWeek2.NAMES[this.index];
+  }
+  toString() {
+    return this.month.toString() + this.getName();
+  }
+  next(n2) {
+    const startIndex = this.start.getIndex();
+    if (n2 === 0) {
+      return _LunarWeek2.fromYm(this.month.getYear().getYear(), this.month.getMonthWithLeap(), this.index, startIndex);
+    }
+    let d = this.index + n2;
+    let m = this.month;
+    let weeksInMonth = m.getWeekCount(startIndex);
+    const forward = n2 > 0;
+    const add = forward ? 1 : -1;
+    while (forward ? d >= weeksInMonth : d < 0) {
+      if (forward) {
+        d -= weeksInMonth;
+      }
+      if (!forward) {
+        if (!LunarDay.fromYmd(m.getYear().getYear(), m.getMonthWithLeap(), 1).getWeek().equals(this.start)) {
+          d += add;
+        }
+      }
+      m = m.next(add);
+      if (forward) {
+        if (!LunarDay.fromYmd(m.getYear().getYear(), m.getMonthWithLeap(), 1).getWeek().equals(this.start)) {
+          d += add;
+        }
+      }
+      weeksInMonth = m.getWeekCount(startIndex);
+      if (!forward) {
+        d += weeksInMonth;
+      }
+    }
+    return _LunarWeek2.fromYm(m.getYear().getYear(), m.getMonthWithLeap(), d, startIndex);
+  }
+  getFirstDay() {
+    const m = this.getMonth();
+    const firstDay = LunarDay.fromYmd(m.getYear().getYear(), m.getMonthWithLeap(), 1);
+    return firstDay.next(this.index * 7 - this.indexOf(firstDay.getWeek().getIndex() - this.start.getIndex(), 7));
+  }
+  getDays() {
+    const l2 = [];
+    const d = this.getFirstDay();
+    l2.push(d);
+    for (let i2 = 1; i2 < 7; i2++) {
+      l2.push(d.next(i2));
+    }
+    return l2;
+  }
+};
+__publicField(_LunarWeek, "NAMES", ["\u7B2C\u4E00\u5468", "\u7B2C\u4E8C\u5468", "\u7B2C\u4E09\u5468", "\u7B2C\u56DB\u5468", "\u7B2C\u4E94\u5468", "\u7B2C\u516D\u5468"]);
+var LunarWeek = _LunarWeek;
+var _LunarDay = class _LunarDay2 extends AbstractTyme {
+  constructor(year, month, day) {
+    super();
+    __publicField(this, "month");
+    __publicField(this, "day");
+    const m = LunarMonth.fromYm(year, month);
+    if (day < 1 || day > m.getDayCount()) {
+      throw new Error(`illegal day ${day} in ${m.toString()}`);
+    }
+    this.month = m;
+    this.day = day;
+  }
+  static fromYmd(year, month, day) {
+    return new _LunarDay2(year, month, day);
+  }
+  getMonth() {
+    return this.month;
+  }
+  getDay() {
+    return this.day;
+  }
+  getName() {
+    return _LunarDay2.NAMES[this.day - 1];
+  }
+  toString() {
+    return this.month.toString() + this.getName();
+  }
+  next(n2) {
+    if (n2 === 0) {
+      return _LunarDay2.fromYmd(this.month.getYear().getYear(), this.month.getMonthWithLeap(), this.day);
+    }
+    let d = this.day + n2;
+    let lm = this.month;
+    let daysInMonth = lm.getDayCount();
+    const forward = n2 > 0;
+    const add = forward ? 1 : -1;
+    while (forward ? d > daysInMonth : d <= 0) {
+      if (forward) {
+        d -= daysInMonth;
+      }
+      lm = lm.next(add);
+      daysInMonth = lm.getDayCount();
+      if (!forward) {
+        d += daysInMonth;
+      }
+    }
+    return _LunarDay2.fromYmd(lm.getYear().getYear(), lm.getMonthWithLeap(), d);
+  }
+  isBefore(target) {
+    const aYear = this.month.getYear().getYear();
+    const targetMonth = target.getMonth();
+    const bYear = targetMonth.getYear().getYear();
+    if (aYear === bYear) {
+      const aMonth = this.month.getMonth();
+      const bMonth = targetMonth.getMonth();
+      if (aMonth === bMonth) {
+        if (this.month.isLeap() && !targetMonth.isLeap()) {
+          return false;
+        }
+        return this.day < target.getDay();
+      }
+      return aMonth < bMonth;
+    }
+    return aYear < bYear;
+  }
+  isAfter(target) {
+    const aYear = this.month.getYear().getYear();
+    const targetMonth = target.getMonth();
+    const bYear = targetMonth.getYear().getYear();
+    if (aYear === bYear) {
+      const aMonth = this.month.getMonth();
+      const bMonth = targetMonth.getMonth();
+      if (aMonth === bMonth) {
+        if (this.month.isLeap() && !targetMonth.isLeap()) {
+          return true;
+        }
+        return this.day > target.getDay();
+      }
+      return aMonth > bMonth;
+    }
+    return aYear > bYear;
+  }
+  getWeek() {
+    return this.getSolarDay().getJulianDay().getWeek();
+  }
+  getYearSixtyCycle() {
+    const solarDay = this.getSolarDay();
+    const solarYear = solarDay.getMonth().getYear().getYear();
+    const springSolarDay = SolarTerm.fromIndex(solarYear, 3).getJulianDay().getSolarDay();
+    const lunarYear = this.month.getYear();
+    const year = lunarYear.getYear();
+    let sixtyCycle = lunarYear.getSixtyCycle();
+    if (year === solarYear) {
+      if (solarDay.isBefore(springSolarDay)) {
+        sixtyCycle = sixtyCycle.next(-1);
+      }
+    } else if (year < solarYear) {
+      if (!solarDay.isBefore(springSolarDay)) {
+        sixtyCycle = sixtyCycle.next(1);
+      }
+    }
+    return sixtyCycle;
+  }
+  getMonthSixtyCycle() {
+    const solarDay = this.getSolarDay();
+    const year = solarDay.getMonth().getYear().getYear();
+    const term = solarDay.getTerm();
+    let index2 = term.getIndex() - 3;
+    if (index2 < 0 && term.getJulianDay().getSolarDay().isAfter(SolarTerm.fromIndex(year, 3).getJulianDay().getSolarDay())) {
+      index2 += 24;
+    }
+    return LunarMonth.fromYm(year, 1).getSixtyCycle().next(Math.floor(index2 / 2));
+  }
+  getSixtyCycle() {
+    const offset = ~~this.month.getFirstJulianDay().next(this.day - 12).getDay();
+    return SixtyCycle.fromName(HeavenStem.fromIndex(offset).getName() + EarthBranch.fromIndex(offset).getName());
+  }
+  getDuty() {
+    return Duty.fromIndex(this.getSixtyCycle().getEarthBranch().getIndex() - this.getMonthSixtyCycle().getEarthBranch().getIndex());
+  }
+  getTwelveStar() {
+    return TwelveStar.fromIndex(this.getSixtyCycle().getEarthBranch().getIndex() + (8 - this.getMonthSixtyCycle().getEarthBranch().getIndex() % 6) * 2);
+  }
+  getNineStar() {
+    const solar = this.getSolarDay();
+    const dongZhi = SolarTerm.fromIndex(solar.getMonth().getYear().getYear(), 0);
+    const xiaZhi = dongZhi.next(12);
+    const dongZhi2 = dongZhi.next(24);
+    const dongZhiSolar = dongZhi.getJulianDay().getSolarDay();
+    const xiaZhiSolar = xiaZhi.getJulianDay().getSolarDay();
+    const dongZhiSolar2 = dongZhi2.getJulianDay().getSolarDay();
+    const dongZhiIndex = dongZhiSolar.getLunarDay().getSixtyCycle().getIndex();
+    const xiaZhiIndex = xiaZhiSolar.getLunarDay().getSixtyCycle().getIndex();
+    const dongZhiIndex2 = dongZhiSolar2.getLunarDay().getSixtyCycle().getIndex();
+    const solarShunBai = dongZhiSolar.next(dongZhiIndex > 29 ? 60 - dongZhiIndex : -dongZhiIndex);
+    const solarShunBai2 = dongZhiSolar2.next(dongZhiIndex2 > 29 ? 60 - dongZhiIndex2 : -dongZhiIndex2);
+    const solarNiZi = xiaZhiSolar.next(xiaZhiIndex > 29 ? 60 - xiaZhiIndex : -xiaZhiIndex);
+    let offset = 0;
+    if (!solar.isBefore(solarShunBai) && solar.isBefore(solarNiZi)) {
+      offset = solar.subtract(solarShunBai);
+    } else if (!solar.isBefore(solarNiZi) && solar.isBefore(solarShunBai2)) {
+      offset = 8 - solar.subtract(solarNiZi);
+    } else if (!solar.isBefore(solarShunBai2)) {
+      offset = solar.subtract(solarShunBai2);
+    } else if (solar.isBefore(solarShunBai)) {
+      offset = 8 + solarShunBai.subtract(solar);
+    }
+    return NineStar.fromIndex(offset);
+  }
+  getJupiterDirection() {
+    const index2 = this.getSixtyCycle().getIndex();
+    if (index2 % 12 < 6) {
+      return Direction.fromIndex([2, 8, 4, 6, 0][~~(index2 / 12)]);
+    }
+    return this.month.getYear().getJupiterDirection();
+  }
+  getFetusDay() {
+    return FetusDay.fromLunarDay(this);
+  }
+  getPhase() {
+    return Phase.fromIndex(this.day - 1);
+  }
+  getSolarDay() {
+    return this.month.getFirstJulianDay().next(this.day - 1).getSolarDay();
+  }
+  getTwentyEightStar() {
+    return TwentyEightStar.fromIndex([10, 18, 26, 6, 14, 22, 2][this.getSolarDay().getWeek().getIndex()]).next(-7 * this.getSixtyCycle().getEarthBranch().getIndex());
+  }
+  getFestival() {
+    const m = this.getMonth();
+    return LunarFestival.fromYmd(m.getYear().getYear(), m.getMonthWithLeap(), this.day);
+  }
+  equals(o3) {
+    return this.month.equals(o3.getMonth()) && this.day === o3.getDay();
+  }
+};
+__publicField(_LunarDay, "NAMES", ["\u521D\u4E00", "\u521D\u4E8C", "\u521D\u4E09", "\u521D\u56DB", "\u521D\u4E94", "\u521D\u516D", "\u521D\u4E03", "\u521D\u516B", "\u521D\u4E5D", "\u521D\u5341", "\u5341\u4E00", "\u5341\u4E8C", "\u5341\u4E09", "\u5341\u56DB", "\u5341\u4E94", "\u5341\u516D", "\u5341\u4E03", "\u5341\u516B", "\u5341\u4E5D", "\u4E8C\u5341", "\u5EFF\u4E00", "\u5EFF\u4E8C", "\u5EFF\u4E09", "\u5EFF\u56DB", "\u5EFF\u4E94", "\u5EFF\u516D", "\u5EFF\u4E03", "\u5EFF\u516B", "\u5EFF\u4E5D", "\u4E09\u5341"]);
+var LunarDay = _LunarDay;
+var LunarHour = class extends AbstractTyme {
+  constructor(year, month, day, hour, minute, second) {
+    super();
+    __publicField(this, "day");
+    __publicField(this, "hour");
+    __publicField(this, "minute");
+    __publicField(this, "second");
+    if (hour < 0 || hour > 23) {
+      throw new Error(`illegal hour: ${hour}`);
+    }
+    if (minute < 0 || minute > 59) {
+      throw new Error(`illegal minute: ${minute}`);
+    }
+    if (second < 0 || second > 59) {
+      throw new Error(`illegal second: ${second}`);
+    }
+    this.day = LunarDay.fromYmd(year, month, day);
+    this.hour = hour;
+    this.minute = minute;
+    this.second = second;
+  }
+  static fromYmdHms(year, month, day, hour, minute, second) {
+    return new LunarHour(year, month, day, hour, minute, second);
+  }
+  getDay() {
+    return this.day;
+  }
+  getHour() {
+    return this.hour;
+  }
+  getMinute() {
+    return this.minute;
+  }
+  getSecond() {
+    return this.second;
+  }
+  getName() {
+    return EarthBranch.fromIndex(this.getIndexInDay()).getName() + "\u65F6";
+  }
+  toString() {
+    return `${this.day.toString()}${this.getSixtyCycle().getName()}\u65F6`;
+  }
+  getIndexInDay() {
+    return ~~((this.hour + 1) / 2);
+  }
+  next(n2) {
+    const h = this.hour + n2 * 2;
+    const diff = h < 0 ? -1 : 1;
+    let hour = Math.abs(h);
+    let days = ~~(hour / 24) * diff;
+    hour = hour % 24 * diff;
+    if (hour < 0) {
+      hour += 24;
+      days--;
+    }
+    const d = this.day.next(days);
+    const month = d.getMonth();
+    return LunarHour.fromYmdHms(month.getYear().getYear(), month.getMonthWithLeap(), d.getDay(), hour, this.minute, this.second);
+  }
+  isBefore(target) {
+    if (!this.day.equals(target.getDay())) {
+      return this.day.isBefore(target.getDay());
+    }
+    const bHour = target.getHour();
+    if (this.hour === bHour) {
+      const bMinute = target.getMinute();
+      return this.minute === bMinute ? this.second < target.getSecond() : this.minute < bMinute;
+    }
+    return this.hour < bHour;
+  }
+  isAfter(target) {
+    if (!this.day.equals(target.getDay())) {
+      return this.day.isAfter(target.getDay());
+    }
+    const bHour = target.getHour();
+    if (this.hour === bHour) {
+      const bMinute = target.getMinute();
+      return this.minute === bMinute ? this.second > target.getSecond() : this.minute > bMinute;
+    }
+    return this.hour > bHour;
+  }
+  getYearSixtyCycle() {
+    const solarTime = this.getSolarTime();
+    const solarYear = this.day.getSolarDay().getMonth().getYear().getYear();
+    const springSolarTime = SolarTerm.fromIndex(solarYear, 3).getJulianDay().getSolarTime();
+    const lunarYear = this.day.getMonth().getYear();
+    const year = lunarYear.getYear();
+    let sixtyCycle = lunarYear.getSixtyCycle();
+    if (year === solarYear) {
+      if (solarTime.isBefore(springSolarTime)) {
+        sixtyCycle = sixtyCycle.next(-1);
+      }
+    } else if (year < solarYear) {
+      if (!solarTime.isBefore(springSolarTime)) {
+        sixtyCycle = sixtyCycle.next(1);
+      }
+    }
+    return sixtyCycle;
+  }
+  getMonthSixtyCycle() {
+    const solarTime = this.getSolarTime();
+    const year = solarTime.getDay().getMonth().getYear().getYear();
+    const term = solarTime.getTerm();
+    let index2 = term.getIndex() - 3;
+    if (index2 < 0 && term.getJulianDay().getSolarTime().isAfter(SolarTerm.fromIndex(year, 3).getJulianDay().getSolarTime())) {
+      index2 += 24;
+    }
+    return LunarMonth.fromYm(year, 1).getSixtyCycle().next(Math.floor(index2 / 2));
+  }
+  getDaySixtyCycle() {
+    const day = this.day.getSixtyCycle();
+    return this.hour > 22 ? day.next(1) : day;
+  }
+  getSixtyCycle() {
+    const earthBranchIndex = this.getIndexInDay() % 12;
+    const heavenStemIndex = this.getDaySixtyCycle().getHeavenStem().getIndex() % 5 * 2 + earthBranchIndex;
+    return SixtyCycle.fromName(HeavenStem.fromIndex(heavenStemIndex).getName() + EarthBranch.fromIndex(earthBranchIndex).getName());
+  }
+  getNineStar() {
+    const solar = this.day.getSolarDay();
+    const dongZhi = SolarTerm.fromIndex(solar.getMonth().getYear().getYear(), 0);
+    const xiaZhi = dongZhi.next(12);
+    const asc = !solar.isBefore(dongZhi.getJulianDay().getSolarDay()) && solar.isBefore(xiaZhi.getJulianDay().getSolarDay());
+    let start = [8, 5, 2][this.day.getSixtyCycle().getEarthBranch().getIndex() % 3];
+    if (asc) {
+      start = 8 - start;
+    }
+    const earthBranchIndex = this.getIndexInDay() % 12;
+    return NineStar.fromIndex(start + (asc ? earthBranchIndex : -earthBranchIndex));
+  }
+  getSolarTime() {
+    const d = this.day.getSolarDay();
+    const m = d.getMonth();
+    return SolarTime.fromYmdHms(m.getYear().getYear(), m.getMonth(), d.getDay(), this.hour, this.minute, this.second);
+  }
+  getEightChar() {
+    return new EightChar(this.getYearSixtyCycle(), this.getMonthSixtyCycle(), this.getDaySixtyCycle(), this.getSixtyCycle());
+  }
+  equals(o3) {
+    return this.day.equals(o3.getDay()) && this.hour === o3.getHour() && this.minute === o3.getMinute() && this.second === o3.getSecond();
+  }
+};
+var _JulianDay = class _JulianDay2 extends AbstractTyme {
+  constructor(day) {
+    super();
+    __publicField(this, "day");
+    this.day = day;
+  }
+  static fromJulianDay(day) {
+    return new _JulianDay2(day);
+  }
+  static fromYmdHms(year, month, day, hour, minute, second) {
+    const d = day + ((second / 60 + minute) / 60 + hour) / 24;
+    let n2 = 0;
+    const g = year * 372 + month * 31 + ~~d >= 588829;
+    if (month <= 2) {
+      month += 12;
+      year--;
+    }
+    if (g) {
+      n2 = ~~(year / 100);
+      n2 = 2 - n2 + ~~(n2 / 4);
+    }
+    return _JulianDay2.fromJulianDay(~~(365.25 * (year + 4716)) + ~~(30.6001 * (month + 1)) + d + n2 - 1524.5);
+  }
+  getDay() {
+    return this.day;
+  }
+  getName() {
+    return `${this.day}`;
+  }
+  next(n2) {
+    return _JulianDay2.fromJulianDay(this.day + n2);
+  }
+  getSolarDay() {
+    let d = ~~(this.day + 0.5);
+    let f = this.day + 0.5 - d;
+    if (d >= 2299161) {
+      let c = ~~((d - 186721625e-2) / 36524.25);
+      d += 1 + c - ~~(c / 4);
+    }
+    d += 1524;
+    let year = ~~((d - 122.1) / 365.25);
+    d -= ~~(365.25 * year);
+    let month = ~~(d / 30.601);
+    d -= ~~(30.601 * month);
+    let day = d;
+    if (month > 13) {
+      month -= 13;
+      year -= 4715;
+    } else {
+      month -= 1;
+      year -= 4716;
+    }
+    f *= 24;
+    let hour = ~~f;
+    f -= hour;
+    f *= 60;
+    let minute = ~~f;
+    f -= minute;
+    f *= 60;
+    const second = Math.round(f);
+    if (second > 59) {
+      minute++;
+    }
+    if (minute > 59) {
+      hour++;
+    }
+    if (hour > 23) {
+      day += 1;
+    }
+    return SolarDay.fromYmd(year, month, day);
+  }
+  getSolarTime() {
+    let d = ~~(this.day + 0.5);
+    let f = this.day + 0.5 - d;
+    if (d >= 2299161) {
+      let c = ~~((d - 186721625e-2) / 36524.25);
+      d += 1 + c - ~~(c / 4);
+    }
+    d += 1524;
+    let year = ~~((d - 122.1) / 365.25);
+    d -= ~~(365.25 * year);
+    let month = ~~(d / 30.601);
+    d -= ~~(30.601 * month);
+    let day = d;
+    if (month > 13) {
+      month -= 13;
+      year -= 4715;
+    } else {
+      month -= 1;
+      year -= 4716;
+    }
+    f *= 24;
+    let hour = ~~f;
+    f -= hour;
+    f *= 60;
+    let minute = ~~f;
+    f -= minute;
+    f *= 60;
+    let second = Math.round(f);
+    if (second > 59) {
+      second -= 60;
+      minute++;
+    }
+    if (minute > 59) {
+      minute -= 60;
+      hour++;
+    }
+    if (hour > 23) {
+      hour -= 24;
+      day += 1;
+    }
+    return SolarTime.fromYmdHms(year, month, day, hour, minute, second);
+  }
+  getWeek() {
+    return Week.fromIndex(~~(this.day + 0.5) + 7000001);
+  }
+};
+__publicField(_JulianDay, "J2000", 2451545);
+var JulianDay = _JulianDay;
+var _ShouXingUtil = class _ShouXingUtil2 {
+  static decode(s) {
+    const o3 = "0000000000";
+    const o22 = o3 + o3;
+    s = s.replace(/J/g, "00");
+    s = s.replace(/I/g, "000");
+    s = s.replace(/H/g, "0000");
+    s = s.replace(/G/g, "00000");
+    s = s.replace(/t/g, "02");
+    s = s.replace(/s/g, "002");
+    s = s.replace(/r/g, "0002");
+    s = s.replace(/q/g, "00002");
+    s = s.replace(/p/g, "000002");
+    s = s.replace(/o/g, "0000002");
+    s = s.replace(/n/g, "00000002");
+    s = s.replace(/m/g, "000000002");
+    s = s.replace(/l/g, "0000000002");
+    s = s.replace(/k/g, "01");
+    s = s.replace(/j/g, "0101");
+    s = s.replace(/i/g, "001");
+    s = s.replace(/h/g, "001001");
+    s = s.replace(/g/g, "0001");
+    s = s.replace(/f/g, "00001");
+    s = s.replace(/e/g, "000001");
+    s = s.replace(/d/g, "0000001");
+    s = s.replace(/c/g, "00000001");
+    s = s.replace(/b/g, "000000001");
+    s = s.replace(/a/g, "0000000001");
+    s = s.replace(/A/g, o22 + o22 + o22);
+    s = s.replace(/B/g, o22 + o22 + o3);
+    s = s.replace(/C/g, o22 + o22);
+    s = s.replace(/D/g, o22 + o3);
+    s = s.replace(/E/g, o22);
+    s = s.replace(/F/g, o3);
+    return s;
+  }
+  static nutationLon2(t2) {
+    let a = -1.742 * t2, t22 = t2 * t2, dl = 0;
+    for (let i2 = 0, j = _ShouXingUtil2.NUT_B.length; i2 < j; i2 += 5) {
+      dl += (_ShouXingUtil2.NUT_B[i2 + 3] + a) * Math.sin(_ShouXingUtil2.NUT_B[i2] + _ShouXingUtil2.NUT_B[i2 + 1] * t2 + _ShouXingUtil2.NUT_B[i2 + 2] * t22);
+      a = 0;
+    }
+    return dl / 100 / _ShouXingUtil2.SECOND_PER_RAD;
+  }
+  static eLon(t2, n2) {
+    t2 /= 10;
+    let v = 0, tn = 1;
+    let n1, n22;
+    let m;
+    let c;
+    let pn = 1;
+    let n0, m0 = _ShouXingUtil2.XL0[pn + 1] - _ShouXingUtil2.XL0[pn];
+    for (let i2 = 0; i2 < 6; i2++, tn *= t2) {
+      n1 = ~~_ShouXingUtil2.XL0[pn + i2];
+      n22 = ~~_ShouXingUtil2.XL0[pn + 1 + i2];
+      n0 = n22 - n1;
+      if (n0 === 0) {
+        continue;
+      }
+      if (n2 < 0) {
+        m = n22;
+      } else {
+        m = ~~(3 * n2 * n0 / m0 + 0.5 + n1);
+        if (i2 != 0) {
+          m += 3;
+        }
+        if (m > n22) {
+          m = n22;
+        }
+      }
+      c = 0;
+      for (let j = n1; j < m; j += 3) {
+        c += _ShouXingUtil2.XL0[j] * Math.cos(_ShouXingUtil2.XL0[j + 1] + t2 * _ShouXingUtil2.XL0[j + 2]);
+      }
+      v += c * tn;
+    }
+    v /= _ShouXingUtil2.XL0[0];
+    let t22 = t2 * t2;
+    v += (-0.0728 - 2.7702 * t2 - 1.1019 * t22 - 0.0996 * t22 * t2) / _ShouXingUtil2.SECOND_PER_RAD;
+    return v;
+  }
+  static mLon(t2, n2) {
+    let ob = _ShouXingUtil2.XL1;
+    let obl = ob[0].length;
+    let tn = 1;
+    let v = 0;
+    let j;
+    let c;
+    let t22 = t2 * t2, t3 = t22 * t2, t4 = t3 * t2, t5 = t4 * t2, tx = t2 - 10;
+    v += (3.81034409 + 8399.684730072 * t2 - 3319e-8 * t22 + 311e-10 * t3 - 2033e-13 * t4) * _ShouXingUtil2.SECOND_PER_RAD;
+    v += 5028.792262 * t2 + 1.1124406 * t22 + 7699e-8 * t3 - 23479e-9 * t4 - 178e-10 * t5;
+    if (tx > 0) {
+      v += -0.866 + 1.43 * tx + 0.054 * tx * tx;
+    }
+    t22 /= 1e4;
+    t3 /= 1e8;
+    t4 /= 1e8;
+    n2 *= 6;
+    if (n2 < 0) {
+      n2 = obl;
+    }
+    for (let i2 = 0, x = ob.length; i2 < x; i2++, tn *= t2) {
+      let f = ob[i2];
+      let l2 = f.length;
+      let m = ~~(n2 * l2 / obl + 0.5);
+      if (i2 > 0) {
+        m += 6;
+      }
+      if (m >= l2) {
+        m = l2;
+      }
+      for (j = 0, c = 0; j < m; j += 6) {
+        c += f[j] * Math.cos(f[j + 1] + t2 * f[j + 2] + t22 * f[j + 3] + t3 * f[j + 4] + t4 * f[j + 5]);
+      }
+      v += c * tn;
+    }
+    v /= _ShouXingUtil2.SECOND_PER_RAD;
+    return v;
+  }
+  static gxcSunLon(t2) {
+    let t22 = t2 * t2;
+    let v = -0.043126 + 628.301955 * t2 - 2732e-9 * t22;
+    let e3 = 0.016708634 - 42037e-9 * t2 - 1267e-10 * t22;
+    return -20.49552 * (1 + e3 * Math.cos(v)) / _ShouXingUtil2.SECOND_PER_RAD;
+  }
+  static ev(t2) {
+    let f = 628.307585 * t2;
+    return 628.332 + 21 * Math.sin(1.527 + f) + 0.44 * Math.sin(1.48 + f * 2) + 0.129 * Math.sin(5.82 + f) * t2 + 55e-5 * Math.sin(4.21 + f) * t2 * t2;
+  }
+  static saLon(t2, n2) {
+    return _ShouXingUtil2.eLon(t2, n2) + _ShouXingUtil2.nutationLon2(t2) + _ShouXingUtil2.gxcSunLon(t2) + Math.PI;
+  }
+  static dtExt(y, jsd) {
+    let dy = (y - 1820) / 100;
+    return -20 + jsd * dy * dy;
+  }
+  static dtCalc(y) {
+    const size = _ShouXingUtil2.DT_AT.length;
+    let y0 = _ShouXingUtil2.DT_AT[size - 2];
+    let t0 = _ShouXingUtil2.DT_AT[size - 1];
+    if (y >= y0) {
+      let jsd = 31;
+      if (y > y0 + 100) {
+        return _ShouXingUtil2.dtExt(y, jsd);
+      }
+      return _ShouXingUtil2.dtExt(y, jsd) - (_ShouXingUtil2.dtExt(y0, jsd) - t0) * (y0 + 100 - y) / 100;
+    }
+    let i2;
+    for (i2 = 0; i2 < size; i2 += 5) {
+      if (y < _ShouXingUtil2.DT_AT[i2 + 5]) {
+        break;
+      }
+    }
+    let t1 = (y - _ShouXingUtil2.DT_AT[i2]) / (_ShouXingUtil2.DT_AT[i2 + 5] - _ShouXingUtil2.DT_AT[i2]) * 10, t2 = t1 * t1, t3 = t2 * t1;
+    return _ShouXingUtil2.DT_AT[i2 + 1] + _ShouXingUtil2.DT_AT[i2 + 2] * t1 + _ShouXingUtil2.DT_AT[i2 + 3] * t2 + _ShouXingUtil2.DT_AT[i2 + 4] * t3;
+  }
+  static dtT(t2) {
+    return _ShouXingUtil2.dtCalc(t2 / 365.2425 + 2e3) / _ShouXingUtil2.SECOND_PER_DAY;
+  }
+  static mv(t2) {
+    let v = 8399.71 - 914 * Math.sin(0.7848 + 8328.691425 * t2 + 1523e-7 * t2 * t2);
+    v -= 179 * Math.sin(2.543 + 15542.7543 * t2) + 160 * Math.sin(0.1874 + 7214.0629 * t2) + 62 * Math.sin(3.14 + 16657.3828 * t2) + 34 * Math.sin(4.827 + 16866.9323 * t2) + 22 * Math.sin(4.9 + 23871.4457 * t2) + 12 * Math.sin(2.59 + 14914.4523 * t2) + 7 * Math.sin(0.23 + 6585.7609 * t2) + 5 * Math.sin(0.9 + 25195.624 * t2) + 5 * Math.sin(2.32 - 7700.3895 * t2) + 5 * Math.sin(3.88 + 8956.9934 * t2) + 5 * Math.sin(0.49 + 7771.3771 * t2);
+    return v;
+  }
+  static saLonT(w) {
+    let t2, v = 628.3319653318;
+    t2 = (w - 1.75347 - Math.PI) / v;
+    v = _ShouXingUtil2.ev(t2);
+    t2 += (w - _ShouXingUtil2.saLon(t2, 10)) / v;
+    v = _ShouXingUtil2.ev(t2);
+    t2 += (w - _ShouXingUtil2.saLon(t2, -1)) / v;
+    return t2;
+  }
+  static msaLon(t2, mn, sn) {
+    return _ShouXingUtil2.mLon(t2, mn) + -34e-7 - (_ShouXingUtil2.eLon(t2, sn) + _ShouXingUtil2.gxcSunLon(t2) + Math.PI);
+  }
+  static msaLonT(w) {
+    let t2, v = 7771.37714500204;
+    t2 = (w + 1.08472) / v;
+    t2 += (w - _ShouXingUtil2.msaLon(t2, 3, 3)) / v;
+    v = _ShouXingUtil2.mv(t2) - _ShouXingUtil2.ev(t2);
+    t2 += (w - _ShouXingUtil2.msaLon(t2, 20, 10)) / v;
+    t2 += (w - _ShouXingUtil2.msaLon(t2, -1, 60)) / v;
+    return t2;
+  }
+  static saLonT2(w) {
+    const v = 628.3319653318;
+    let t2 = (w - 1.75347 - Math.PI) / v;
+    t2 -= (5297e-9 * t2 * t2 + 0.0334166 * Math.cos(4.669257 + 628.307585 * t2) + 2061e-7 * Math.cos(2.67823 + 628.307585 * t2) * t2) / v;
+    t2 += (w - _ShouXingUtil2.eLon(t2, 8) - Math.PI + (20.5 + 17.2 * Math.sin(2.1824 - 33.75705 * t2)) / _ShouXingUtil2.SECOND_PER_RAD) / v;
+    return t2;
+  }
+  static msaLonT2(w) {
+    let t2, v = 7771.37714500204;
+    t2 = (w + 1.08472) / v;
+    let l2, t22 = t2 * t2;
+    t2 -= (-3309e-8 * t22 + 0.10976 * Math.cos(0.784758 + 8328.6914246 * t2 + 152292e-9 * t22) + 0.02224 * Math.cos(0.1874 + 7214.0628654 * t2 - 21848e-8 * t22) - 0.03342 * Math.cos(4.669257 + 628.307585 * t2)) / v;
+    t22 = t2 * t2;
+    l2 = _ShouXingUtil2.mLon(t2, 20) - (4.8950632 + 628.3319653318 * t2 + 5297e-9 * t22 + 0.0334166 * Math.cos(4.669257 + 628.307585 * t2) + 2061e-7 * Math.cos(2.67823 + 628.307585 * t2) * t2 + 349e-6 * Math.cos(4.6261 + 1256.61517 * t2) - 20.5 / _ShouXingUtil2.SECOND_PER_RAD);
+    v = 7771.38 - 914 * Math.sin(0.7848 + 8328.691425 * t2 + 1523e-7 * t22) - 179 * Math.sin(2.543 + 15542.7543 * t2) - 160 * Math.sin(0.1874 + 7214.0629 * t2);
+    t2 += (w - l2) / v;
+    return t2;
+  }
+  static qiHigh(w) {
+    let t2 = _ShouXingUtil2.saLonT2(w) * 36525;
+    t2 = t2 - _ShouXingUtil2.dtT(t2) + _ShouXingUtil2.ONE_THIRD;
+    const v = (t2 + 0.5) % 1 * _ShouXingUtil2.SECOND_PER_DAY;
+    if (v < 1200 || v > _ShouXingUtil2.SECOND_PER_DAY - 1200) {
+      t2 = _ShouXingUtil2.saLonT(w) * 36525 - _ShouXingUtil2.dtT(t2) + _ShouXingUtil2.ONE_THIRD;
+    }
+    return t2;
+  }
+  static shuoHigh(w) {
+    let t2 = _ShouXingUtil2.msaLonT2(w) * 36525;
+    t2 = t2 - _ShouXingUtil2.dtT(t2) + _ShouXingUtil2.ONE_THIRD;
+    let v = (t2 + 0.5) % 1 * _ShouXingUtil2.SECOND_PER_DAY;
+    if (v < 1800 || v > _ShouXingUtil2.SECOND_PER_DAY - 1800) {
+      t2 = _ShouXingUtil2.msaLonT(w) * 36525 - _ShouXingUtil2.dtT(t2) + _ShouXingUtil2.ONE_THIRD;
+    }
+    return t2;
+  }
+  static qiLow(w) {
+    const v = 628.3319653318;
+    let t2 = (w - 4.895062166) / v;
+    t2 -= (53 * t2 * t2 + 334116 * Math.cos(4.67 + 628.307585 * t2) + 2061 * Math.cos(2.678 + 628.3076 * t2) * t2) / v / 1e7;
+    const n2 = 4895062166e-2 + 6283319653318e-3 * t2 + 53 * t2 * t2 + 334166 * Math.cos(4.669257 + 628.307585 * t2) + 3489 * Math.cos(4.6261 + 1256.61517 * t2) + 2060.6 * Math.cos(2.67823 + 628.307585 * t2) * t2 - 994 - 834 * Math.sin(2.1824 - 33.75705 * t2);
+    t2 -= (n2 / 1e7 - w) / 628.332 + (32 * (t2 + 1.8) * (t2 + 1.8) - 20) / _ShouXingUtil2.SECOND_PER_DAY / 36525;
+    return t2 * 36525 + _ShouXingUtil2.ONE_THIRD;
+  }
+  static shuoLow(w) {
+    let v = 7771.37714500204;
+    let t2 = (w + 1.08472) / v;
+    t2 -= (-331e-7 * t2 * t2 + 0.10976 * Math.cos(0.785 + 8328.6914 * t2) + 0.02224 * Math.cos(0.187 + 7214.0629 * t2) - 0.03342 * Math.cos(4.669 + 628.3076 * t2)) / v + (32 * (t2 + 1.8) * (t2 + 1.8) - 20) / _ShouXingUtil2.SECOND_PER_DAY / 36525;
+    return t2 * 36525 + _ShouXingUtil2.ONE_THIRD;
+  }
+  static calcShuo(jd) {
+    let size = _ShouXingUtil2.SHUO_KB.length;
+    let d = 0;
+    let pc = 14, i2;
+    jd += 2451545;
+    let f1 = _ShouXingUtil2.SHUO_KB[0] - pc, f2 = _ShouXingUtil2.SHUO_KB[size - 1] - pc, f3 = 2436935;
+    if (jd < f1 || jd >= f3) {
+      d = Math.floor(_ShouXingUtil2.shuoHigh(Math.floor((jd + pc - 2451551) / 29.5306) * _ShouXingUtil2.PI_2) + 0.5);
+    } else if (jd >= f1 && jd < f2) {
+      for (i2 = 0; i2 < size; i2 += 2) {
+        if (jd + pc < _ShouXingUtil2.SHUO_KB[i2 + 2]) {
+          break;
+        }
+      }
+      d = _ShouXingUtil2.SHUO_KB[i2] + _ShouXingUtil2.SHUO_KB[i2 + 1] * Math.floor((jd + pc - _ShouXingUtil2.SHUO_KB[i2]) / _ShouXingUtil2.SHUO_KB[i2 + 1]);
+      d = Math.floor(d + 0.5);
+      if (d === 1683460) {
+        d++;
+      }
+      d -= 2451545;
+    } else if (jd >= f2 && jd < f3) {
+      d = Math.floor(_ShouXingUtil2.shuoLow(Math.floor((jd + pc - 2451551) / 29.5306) * _ShouXingUtil2.PI_2) + 0.5);
+      let from2 = Math.floor((jd - f2) / 29.5306);
+      let n2 = _ShouXingUtil2.SB.substring(from2, from2 + 1);
+      if ("1" === n2) {
+        d += 1;
+      } else if ("2" === n2) {
+        d -= 1;
+      }
+    }
+    return d;
+  }
+  static calcQi(jd) {
+    let size = _ShouXingUtil2.QI_KB.length;
+    let d = 0;
+    let pc = 7, i2;
+    jd += 2451545;
+    let f1 = _ShouXingUtil2.QI_KB[0] - pc, f2 = _ShouXingUtil2.QI_KB[size - 1] - pc, f3 = 2436935;
+    if (jd < f1 || jd >= f3) {
+      d = Math.floor(_ShouXingUtil2.qiHigh(Math.floor((jd + pc - 2451259) / 365.2422 * 24) * Math.PI / 12) + 0.5);
+    } else if (jd >= f1 && jd < f2) {
+      for (i2 = 0; i2 < size; i2 += 2) {
+        if (jd + pc < _ShouXingUtil2.QI_KB[i2 + 2]) {
+          break;
+        }
+      }
+      d = _ShouXingUtil2.QI_KB[i2] + _ShouXingUtil2.QI_KB[i2 + 1] * Math.floor((jd + pc - _ShouXingUtil2.QI_KB[i2]) / _ShouXingUtil2.QI_KB[i2 + 1]);
+      d = Math.floor(d + 0.5);
+      if (d === 1683460) {
+        d++;
+      }
+      d -= 2451545;
+    } else if (jd >= f2 && jd < f3) {
+      d = Math.floor(_ShouXingUtil2.qiLow(Math.floor((jd + pc - 2451259) / 365.2422 * 24) * Math.PI / 12) + 0.5);
+      let from2 = Math.floor((jd - f2) / 365.2422 * 24);
+      let n2 = _ShouXingUtil2.QB.substring(from2, from2 + 1);
+      if ("1" === n2) {
+        d += 1;
+      } else if ("2" === n2) {
+        d -= 1;
+      }
+    }
+    return d;
+  }
+  static qiAccurate(w) {
+    const t2 = _ShouXingUtil2.saLonT(w) * 36525;
+    return t2 - _ShouXingUtil2.dtT(t2) + _ShouXingUtil2.ONE_THIRD;
+  }
+  static qiAccurate2(jd) {
+    const d = Math.PI / 12;
+    const w = Math.floor((jd + 293) / 365.2422 * 24) * d;
+    const a = _ShouXingUtil2.qiAccurate(w);
+    if (a - jd > 5) {
+      return _ShouXingUtil2.qiAccurate(w - d);
+    }
+    if (a - jd < -5) {
+      return _ShouXingUtil2.qiAccurate(w + d);
+    }
+    return a;
+  }
+};
+__publicField(_ShouXingUtil, "PI_2", 2 * Math.PI);
+__publicField(_ShouXingUtil, "ONE_THIRD", 1 / 3);
+__publicField(_ShouXingUtil, "SECOND_PER_DAY", 86400);
+__publicField(_ShouXingUtil, "SECOND_PER_RAD", 648e3 / Math.PI);
+__publicField(_ShouXingUtil, "NUT_B", [
+  2.1824,
+  -33.75705,
+  36e-6,
+  -1720,
+  920,
+  3.5069,
+  1256.66393,
+  11e-6,
+  -132,
+  57,
+  1.3375,
+  16799.4182,
+  -51e-6,
+  -23,
+  10,
+  4.3649,
+  -67.5141,
+  72e-6,
+  21,
+  -9,
+  0.04,
+  -628.302,
+  0,
+  -14,
+  0,
+  2.36,
+  8328.691,
+  0,
+  7,
+  0,
+  3.46,
+  1884.966,
+  0,
+  -5,
+  2,
+  5.44,
+  16833.175,
+  0,
+  -4,
+  2,
+  3.69,
+  25128.11,
+  0,
+  -3,
+  0,
+  3.55,
+  628.362,
+  0,
+  2,
+  0
+]);
+__publicField(_ShouXingUtil, "DT_AT", [
+  -4e3,
+  108371.7,
+  -13036.8,
+  392,
+  0,
+  -500,
+  17201,
+  -627.82,
+  16.17,
+  -0.3413,
+  -150,
+  12200.6,
+  -346.41,
+  5.403,
+  -0.1593,
+  150,
+  9113.8,
+  -328.13,
+  -1.647,
+  0.0377,
+  500,
+  5707.5,
+  -391.41,
+  0.915,
+  0.3145,
+  900,
+  2203.4,
+  -283.45,
+  13.034,
+  -0.1778,
+  1300,
+  490.1,
+  -57.35,
+  2.085,
+  -72e-4,
+  1600,
+  120,
+  -9.81,
+  -1.532,
+  0.1403,
+  1700,
+  10.2,
+  -0.91,
+  0.51,
+  -0.037,
+  1800,
+  13.4,
+  -0.72,
+  0.202,
+  -0.0193,
+  1830,
+  7.8,
+  -1.81,
+  0.416,
+  -0.0247,
+  1860,
+  8.3,
+  -0.13,
+  -0.406,
+  0.0292,
+  1880,
+  -5.4,
+  0.32,
+  -0.183,
+  0.0173,
+  1900,
+  -2.3,
+  2.06,
+  0.169,
+  -0.0135,
+  1920,
+  21.2,
+  1.69,
+  -0.304,
+  0.0167,
+  1940,
+  24.2,
+  1.22,
+  -0.064,
+  31e-4,
+  1960,
+  33.2,
+  0.51,
+  0.231,
+  -0.0109,
+  1980,
+  51,
+  1.29,
+  -0.026,
+  32e-4,
+  2e3,
+  63.87,
+  0.1,
+  0,
+  0,
+  2005,
+  64.7,
+  0.21,
+  0,
+  0,
+  2012,
+  66.8,
+  0.22,
+  0,
+  0,
+  2018,
+  69,
+  0.36,
+  0,
+  0,
+  2028,
+  72.6
+]);
+__publicField(_ShouXingUtil, "XL0", [
+  1e10,
+  20,
+  578,
+  920,
+  1100,
+  1124,
+  1136,
+  1148,
+  1217,
+  1226,
+  1229,
+  1229,
+  1229,
+  1229,
+  1937,
+  2363,
+  2618,
+  2633,
+  2660,
+  2666,
+  17534704567,
+  0,
+  0,
+  334165646,
+  4.669256804,
+  6283.075849991,
+  3489428,
+  4.6261024,
+  12566.1517,
+  349706,
+  2.744118,
+  5753.384885,
+  341757,
+  2.828866,
+  3.523118,
+  313590,
+  3.62767,
+  77713.771468,
+  267622,
+  4.418084,
+  7860.419392,
+  234269,
+  6.135162,
+  3930.209696,
+  132429,
+  0.742464,
+  11506.76977,
+  127317,
+  2.037097,
+  529.690965,
+  119917,
+  1.109629,
+  1577.343542,
+  99025,
+  5.23268,
+  5884.92685,
+  90186,
+  2.04505,
+  26.29832,
+  85722,
+  3.50849,
+  398.149,
+  77979,
+  1.17883,
+  5223.69392,
+  75314,
+  2.53339,
+  5507.55324,
+  50526,
+  4.58293,
+  18849.22755,
+  49238,
+  4.20507,
+  775.52261,
+  35666,
+  2.91954,
+  0.06731,
+  31709,
+  5.84902,
+  11790.62909,
+  28413,
+  1.89869,
+  796.29801,
+  27104,
+  0.31489,
+  10977.0788,
+  24281,
+  0.34481,
+  5486.77784,
+  20616,
+  4.80647,
+  2544.31442,
+  20539,
+  1.86948,
+  5573.1428,
+  20226,
+  2.45768,
+  6069.77675,
+  15552,
+  0.83306,
+  213.2991,
+  13221,
+  3.41118,
+  2942.46342,
+  12618,
+  1.08303,
+  20.7754,
+  11513,
+  0.64545,
+  0.98032,
+  10285,
+  0.636,
+  4694.00295,
+  10190,
+  0.97569,
+  15720.83878,
+  10172,
+  4.2668,
+  7.11355,
+  9921,
+  6.2099,
+  2146.1654,
+  9761,
+  0.681,
+  155.4204,
+  8580,
+  5.9832,
+  161000.6857,
+  8513,
+  1.2987,
+  6275.9623,
+  8471,
+  3.6708,
+  71430.6956,
+  7964,
+  1.8079,
+  17260.1547,
+  7876,
+  3.037,
+  12036.4607,
+  7465,
+  1.7551,
+  5088.6288,
+  7387,
+  3.5032,
+  3154.6871,
+  7355,
+  4.6793,
+  801.8209,
+  6963,
+  0.833,
+  9437.7629,
+  6245,
+  3.9776,
+  8827.3903,
+  6115,
+  1.8184,
+  7084.8968,
+  5696,
+  2.7843,
+  6286.599,
+  5612,
+  4.3869,
+  14143.4952,
+  5558,
+  3.4701,
+  6279.5527,
+  5199,
+  0.1891,
+  12139.5535,
+  5161,
+  1.3328,
+  1748.0164,
+  5115,
+  0.2831,
+  5856.4777,
+  4900,
+  0.4874,
+  1194.447,
+  4104,
+  5.3682,
+  8429.2413,
+  4094,
+  2.3985,
+  19651.0485,
+  3920,
+  6.1683,
+  10447.3878,
+  3677,
+  6.0413,
+  10213.2855,
+  3660,
+  2.5696,
+  1059.3819,
+  3595,
+  1.7088,
+  2352.8662,
+  3557,
+  1.776,
+  6812.7668,
+  3329,
+  0.5931,
+  17789.8456,
+  3041,
+  0.4429,
+  83996.8473,
+  3005,
+  2.7398,
+  1349.8674,
+  2535,
+  3.1647,
+  4690.4798,
+  2474,
+  0.2148,
+  3.5904,
+  2366,
+  0.4847,
+  8031.0923,
+  2357,
+  2.0653,
+  3340.6124,
+  2282,
+  5.222,
+  4705.7323,
+  2189,
+  5.5559,
+  553.5694,
+  2142,
+  1.4256,
+  16730.4637,
+  2109,
+  4.1483,
+  951.7184,
+  2030,
+  0.3713,
+  283.8593,
+  1992,
+  5.2221,
+  12168.0027,
+  1986,
+  5.7747,
+  6309.3742,
+  1912,
+  3.8222,
+  23581.2582,
+  1889,
+  5.3863,
+  149854.4001,
+  1790,
+  2.2149,
+  13367.9726,
+  1748,
+  4.5605,
+  135.0651,
+  1622,
+  5.9884,
+  11769.8537,
+  1508,
+  4.1957,
+  6256.7775,
+  1442,
+  4.1932,
+  242.7286,
+  1435,
+  3.7236,
+  38.0277,
+  1397,
+  4.4014,
+  6681.2249,
+  1362,
+  1.8893,
+  7632.9433,
+  1250,
+  1.1305,
+  5.5229,
+  1205,
+  2.6223,
+  955.5997,
+  1200,
+  1.0035,
+  632.7837,
+  1129,
+  0.1774,
+  4164.312,
+  1083,
+  0.3273,
+  103.0928,
+  1052,
+  0.9387,
+  11926.2544,
+  1050,
+  5.3591,
+  1592.596,
+  1033,
+  6.1998,
+  6438.4962,
+  1001,
+  6.0291,
+  5746.2713,
+  980,
+  0.999,
+  11371.705,
+  980,
+  5.244,
+  27511.468,
+  938,
+  2.624,
+  5760.498,
+  923,
+  0.483,
+  522.577,
+  922,
+  4.571,
+  4292.331,
+  905,
+  5.337,
+  6386.169,
+  862,
+  4.165,
+  7058.598,
+  841,
+  3.299,
+  7234.794,
+  836,
+  4.539,
+  25132.303,
+  813,
+  6.112,
+  4732.031,
+  812,
+  6.271,
+  426.598,
+  801,
+  5.821,
+  28.449,
+  787,
+  0.996,
+  5643.179,
+  776,
+  2.957,
+  23013.54,
+  769,
+  3.121,
+  7238.676,
+  758,
+  3.974,
+  11499.656,
+  735,
+  4.386,
+  316.392,
+  731,
+  0.607,
+  11513.883,
+  719,
+  3.998,
+  74.782,
+  706,
+  0.323,
+  263.084,
+  676,
+  5.911,
+  90955.552,
+  663,
+  3.665,
+  17298.182,
+  653,
+  5.791,
+  18073.705,
+  630,
+  4.717,
+  6836.645,
+  615,
+  1.458,
+  233141.314,
+  612,
+  1.075,
+  19804.827,
+  596,
+  3.321,
+  6283.009,
+  596,
+  2.876,
+  6283.143,
+  555,
+  2.452,
+  12352.853,
+  541,
+  5.392,
+  419.485,
+  531,
+  0.382,
+  31441.678,
+  519,
+  4.065,
+  6208.294,
+  513,
+  2.361,
+  10973.556,
+  494,
+  5.737,
+  9917.697,
+  450,
+  3.272,
+  11015.106,
+  449,
+  3.653,
+  206.186,
+  447,
+  2.064,
+  7079.374,
+  435,
+  4.423,
+  5216.58,
+  421,
+  1.906,
+  245.832,
+  413,
+  0.921,
+  3738.761,
+  402,
+  0.84,
+  20.355,
+  387,
+  1.826,
+  11856.219,
+  379,
+  2.344,
+  3.881,
+  374,
+  2.954,
+  3128.389,
+  370,
+  5.031,
+  536.805,
+  365,
+  1.018,
+  16200.773,
+  365,
+  1.083,
+  88860.057,
+  352,
+  5.978,
+  3894.182,
+  352,
+  2.056,
+  244287.6,
+  351,
+  3.713,
+  6290.189,
+  340,
+  1.106,
+  14712.317,
+  339,
+  0.978,
+  8635.942,
+  339,
+  3.202,
+  5120.601,
+  333,
+  0.837,
+  6496.375,
+  325,
+  3.479,
+  6133.513,
+  316,
+  5.089,
+  21228.392,
+  316,
+  1.328,
+  10873.986,
+  309,
+  3.646,
+  10.637,
+  303,
+  1.802,
+  35371.887,
+  296,
+  3.397,
+  9225.539,
+  288,
+  6.026,
+  154717.61,
+  281,
+  2.585,
+  14314.168,
+  262,
+  3.856,
+  266.607,
+  262,
+  2.579,
+  22483.849,
+  257,
+  1.561,
+  23543.231,
+  255,
+  3.949,
+  1990.745,
+  251,
+  3.744,
+  10575.407,
+  240,
+  1.161,
+  10984.192,
+  238,
+  0.106,
+  7.046,
+  236,
+  4.272,
+  6040.347,
+  234,
+  3.577,
+  10969.965,
+  211,
+  3.714,
+  65147.62,
+  210,
+  0.754,
+  13521.751,
+  207,
+  4.228,
+  5650.292,
+  202,
+  0.814,
+  170.673,
+  201,
+  4.629,
+  6037.244,
+  200,
+  0.381,
+  6172.87,
+  199,
+  3.933,
+  6206.81,
+  199,
+  5.197,
+  6262.3,
+  197,
+  1.046,
+  18209.33,
+  195,
+  1.07,
+  5230.807,
+  195,
+  4.869,
+  36.028,
+  194,
+  4.313,
+  6244.943,
+  192,
+  1.229,
+  709.933,
+  192,
+  5.595,
+  6282.096,
+  192,
+  0.602,
+  6284.056,
+  189,
+  3.744,
+  23.878,
+  188,
+  1.904,
+  15.252,
+  188,
+  0.867,
+  22003.915,
+  182,
+  3.681,
+  15110.466,
+  181,
+  0.491,
+  1.484,
+  179,
+  3.222,
+  39302.097,
+  179,
+  1.259,
+  12559.038,
+  62833196674749,
+  0,
+  0,
+  20605886,
+  2.67823456,
+  6283.07584999,
+  430343,
+  2.635127,
+  12566.1517,
+  42526,
+  1.59047,
+  3.52312,
+  11926,
+  5.79557,
+  26.29832,
+  10898,
+  2.96618,
+  1577.34354,
+  9348,
+  2.5921,
+  18849.2275,
+  7212,
+  1.1385,
+  529.691,
+  6777,
+  1.8747,
+  398.149,
+  6733,
+  4.4092,
+  5507.5532,
+  5903,
+  2.888,
+  5223.6939,
+  5598,
+  2.1747,
+  155.4204,
+  4541,
+  0.398,
+  796.298,
+  3637,
+  0.4662,
+  775.5226,
+  2896,
+  2.6471,
+  7.1135,
+  2084,
+  5.3414,
+  0.9803,
+  1910,
+  1.8463,
+  5486.7778,
+  1851,
+  4.9686,
+  213.2991,
+  1729,
+  2.9912,
+  6275.9623,
+  1623,
+  0.0322,
+  2544.3144,
+  1583,
+  1.4305,
+  2146.1654,
+  1462,
+  1.2053,
+  10977.0788,
+  1246,
+  2.8343,
+  1748.0164,
+  1188,
+  3.258,
+  5088.6288,
+  1181,
+  5.2738,
+  1194.447,
+  1151,
+  2.075,
+  4694.003,
+  1064,
+  0.7661,
+  553.5694,
+  997,
+  1.303,
+  6286.599,
+  972,
+  4.239,
+  1349.867,
+  945,
+  2.7,
+  242.729,
+  858,
+  5.645,
+  951.718,
+  758,
+  5.301,
+  2352.866,
+  639,
+  2.65,
+  9437.763,
+  610,
+  4.666,
+  4690.48,
+  583,
+  1.766,
+  1059.382,
+  531,
+  0.909,
+  3154.687,
+  522,
+  5.661,
+  71430.696,
+  520,
+  1.854,
+  801.821,
+  504,
+  1.425,
+  6438.496,
+  433,
+  0.241,
+  6812.767,
+  426,
+  0.774,
+  10447.388,
+  413,
+  5.24,
+  7084.897,
+  374,
+  2.001,
+  8031.092,
+  356,
+  2.429,
+  14143.495,
+  350,
+  4.8,
+  6279.553,
+  337,
+  0.888,
+  12036.461,
+  337,
+  3.862,
+  1592.596,
+  325,
+  3.4,
+  7632.943,
+  322,
+  0.616,
+  8429.241,
+  318,
+  3.188,
+  4705.732,
+  297,
+  6.07,
+  4292.331,
+  295,
+  1.431,
+  5746.271,
+  290,
+  2.325,
+  20.355,
+  275,
+  0.935,
+  5760.498,
+  270,
+  4.804,
+  7234.794,
+  253,
+  6.223,
+  6836.645,
+  228,
+  5.003,
+  17789.846,
+  225,
+  5.672,
+  11499.656,
+  215,
+  5.202,
+  11513.883,
+  208,
+  3.955,
+  10213.286,
+  208,
+  2.268,
+  522.577,
+  206,
+  2.224,
+  5856.478,
+  206,
+  2.55,
+  25132.303,
+  203,
+  0.91,
+  6256.778,
+  189,
+  0.532,
+  3340.612,
+  188,
+  4.735,
+  83996.847,
+  179,
+  1.474,
+  4164.312,
+  178,
+  3.025,
+  5.523,
+  177,
+  3.026,
+  5753.385,
+  159,
+  4.637,
+  3.286,
+  157,
+  6.124,
+  5216.58,
+  155,
+  3.077,
+  6681.225,
+  154,
+  4.2,
+  13367.973,
+  143,
+  1.191,
+  3894.182,
+  138,
+  3.093,
+  135.065,
+  136,
+  4.245,
+  426.598,
+  134,
+  5.765,
+  6040.347,
+  128,
+  3.085,
+  5643.179,
+  127,
+  2.092,
+  6290.189,
+  125,
+  3.077,
+  11926.254,
+  125,
+  3.445,
+  536.805,
+  114,
+  3.244,
+  12168.003,
+  112,
+  2.318,
+  16730.464,
+  111,
+  3.901,
+  11506.77,
+  111,
+  5.32,
+  23.878,
+  105,
+  3.75,
+  7860.419,
+  103,
+  2.447,
+  1990.745,
+  96,
+  0.82,
+  3.88,
+  96,
+  4.08,
+  6127.66,
+  91,
+  5.42,
+  206.19,
+  91,
+  0.42,
+  7079.37,
+  88,
+  5.17,
+  11790.63,
+  81,
+  0.34,
+  9917.7,
+  80,
+  3.89,
+  10973.56,
+  78,
+  2.4,
+  1589.07,
+  78,
+  2.58,
+  11371.7,
+  77,
+  3.98,
+  955.6,
+  77,
+  3.36,
+  36.03,
+  76,
+  1.3,
+  103.09,
+  75,
+  5.18,
+  10969.97,
+  75,
+  4.96,
+  6496.37,
+  73,
+  5.21,
+  38.03,
+  72,
+  2.65,
+  6309.37,
+  70,
+  5.61,
+  3738.76,
+  69,
+  2.6,
+  3496.03,
+  69,
+  0.39,
+  15.25,
+  69,
+  2.78,
+  20.78,
+  65,
+  1.13,
+  7058.6,
+  64,
+  4.28,
+  28.45,
+  61,
+  5.63,
+  10984.19,
+  60,
+  0.73,
+  419.48,
+  60,
+  5.28,
+  10575.41,
+  58,
+  5.55,
+  17298.18,
+  58,
+  3.19,
+  4732.03,
+  5291887,
+  0,
+  0,
+  871984,
+  1.072097,
+  6283.07585,
+  30913,
+  0.86729,
+  12566.1517,
+  2734,
+  0.053,
+  3.5231,
+  1633,
+  5.1883,
+  26.2983,
+  1575,
+  3.6846,
+  155.4204,
+  954,
+  0.757,
+  18849.228,
+  894,
+  2.057,
+  77713.771,
+  695,
+  0.827,
+  775.523,
+  506,
+  4.663,
+  1577.344,
+  406,
+  1.031,
+  7.114,
+  381,
+  3.441,
+  5573.143,
+  346,
+  5.141,
+  796.298,
+  317,
+  6.053,
+  5507.553,
+  302,
+  1.192,
+  242.729,
+  289,
+  6.117,
+  529.691,
+  271,
+  0.306,
+  398.149,
+  254,
+  2.28,
+  553.569,
+  237,
+  4.381,
+  5223.694,
+  208,
+  3.754,
+  0.98,
+  168,
+  0.902,
+  951.718,
+  153,
+  5.759,
+  1349.867,
+  145,
+  4.364,
+  1748.016,
+  134,
+  3.721,
+  1194.447,
+  125,
+  2.948,
+  6438.496,
+  122,
+  2.973,
+  2146.165,
+  110,
+  1.271,
+  161000.686,
+  104,
+  0.604,
+  3154.687,
+  100,
+  5.986,
+  6286.599,
+  92,
+  4.8,
+  5088.63,
+  89,
+  5.23,
+  7084.9,
+  83,
+  3.31,
+  213.3,
+  76,
+  3.42,
+  5486.78,
+  71,
+  6.19,
+  4690.48,
+  68,
+  3.43,
+  4694,
+  65,
+  1.6,
+  2544.31,
+  64,
+  1.98,
+  801.82,
+  61,
+  2.48,
+  10977.08,
+  50,
+  1.44,
+  6836.65,
+  49,
+  2.34,
+  1592.6,
+  46,
+  1.31,
+  4292.33,
+  46,
+  3.81,
+  149854.4,
+  43,
+  0.04,
+  7234.79,
+  40,
+  4.94,
+  7632.94,
+  39,
+  1.57,
+  71430.7,
+  38,
+  3.17,
+  6309.37,
+  35,
+  0.99,
+  6040.35,
+  35,
+  0.67,
+  1059.38,
+  31,
+  3.18,
+  2352.87,
+  31,
+  3.55,
+  8031.09,
+  30,
+  1.92,
+  10447.39,
+  30,
+  2.52,
+  6127.66,
+  28,
+  4.42,
+  9437.76,
+  28,
+  2.71,
+  3894.18,
+  27,
+  0.67,
+  25132.3,
+  26,
+  5.27,
+  6812.77,
+  25,
+  0.55,
+  6279.55,
+  23,
+  1.38,
+  4705.73,
+  22,
+  0.64,
+  6256.78,
+  20,
+  6.07,
+  640.88,
+  28923,
+  5.84384,
+  6283.07585,
+  3496,
+  0,
+  0,
+  1682,
+  5.4877,
+  12566.1517,
+  296,
+  5.196,
+  155.42,
+  129,
+  4.722,
+  3.523,
+  71,
+  5.3,
+  18849.23,
+  64,
+  5.97,
+  242.73,
+  40,
+  3.79,
+  553.57,
+  11408,
+  3.14159,
+  0,
+  772,
+  4.134,
+  6283.076,
+  77,
+  3.84,
+  12566.15,
+  42,
+  0.42,
+  155.42,
+  88,
+  3.14,
+  0,
+  17,
+  2.77,
+  6283.08,
+  5,
+  2.01,
+  155.42,
+  3,
+  2.21,
+  12566.15,
+  27962,
+  3.1987,
+  84334.66158,
+  10164,
+  5.42249,
+  5507.55324,
+  8045,
+  3.8801,
+  5223.6939,
+  4381,
+  3.7044,
+  2352.8662,
+  3193,
+  4.0003,
+  1577.3435,
+  2272,
+  3.9847,
+  1047.7473,
+  1814,
+  4.9837,
+  6283.0758,
+  1639,
+  3.5646,
+  5856.4777,
+  1444,
+  3.7028,
+  9437.7629,
+  1430,
+  3.4112,
+  10213.2855,
+  1125,
+  4.8282,
+  14143.4952,
+  1090,
+  2.0857,
+  6812.7668,
+  1037,
+  4.0566,
+  71092.8814,
+  971,
+  3.473,
+  4694.003,
+  915,
+  1.142,
+  6620.89,
+  878,
+  4.44,
+  5753.385,
+  837,
+  4.993,
+  7084.897,
+  770,
+  5.554,
+  167621.576,
+  719,
+  3.602,
+  529.691,
+  692,
+  4.326,
+  6275.962,
+  558,
+  4.41,
+  7860.419,
+  529,
+  2.484,
+  4705.732,
+  521,
+  6.25,
+  18073.705,
+  903,
+  3.897,
+  5507.553,
+  618,
+  1.73,
+  5223.694,
+  380,
+  5.244,
+  2352.866,
+  166,
+  1.627,
+  84334.662,
+  10001398880,
+  0,
+  0,
+  167069963,
+  3.098463508,
+  6283.075849991,
+  1395602,
+  3.0552461,
+  12566.1517,
+  308372,
+  5.198467,
+  77713.771468,
+  162846,
+  1.173877,
+  5753.384885,
+  157557,
+  2.846852,
+  7860.419392,
+  92480,
+  5.45292,
+  11506.76977,
+  54244,
+  4.56409,
+  3930.2097,
+  47211,
+  3.661,
+  5884.92685,
+  34598,
+  0.96369,
+  5507.55324,
+  32878,
+  5.89984,
+  5223.69392,
+  30678,
+  0.29867,
+  5573.1428,
+  24319,
+  4.2735,
+  11790.62909,
+  21183,
+  5.84715,
+  1577.34354,
+  18575,
+  5.02194,
+  10977.0788,
+  17484,
+  3.01194,
+  18849.22755,
+  10984,
+  5.05511,
+  5486.77784,
+  9832,
+  0.8868,
+  6069.7768,
+  8650,
+  5.6896,
+  15720.8388,
+  8583,
+  1.2708,
+  161000.6857,
+  6490,
+  0.2725,
+  17260.1547,
+  6292,
+  0.9218,
+  529.691,
+  5706,
+  2.0137,
+  83996.8473,
+  5574,
+  5.2416,
+  71430.6956,
+  4938,
+  3.245,
+  2544.3144,
+  4696,
+  2.5781,
+  775.5226,
+  4466,
+  5.5372,
+  9437.7629,
+  4252,
+  6.0111,
+  6275.9623,
+  3897,
+  5.3607,
+  4694.003,
+  3825,
+  2.3926,
+  8827.3903,
+  3749,
+  0.8295,
+  19651.0485,
+  3696,
+  4.9011,
+  12139.5535,
+  3566,
+  1.6747,
+  12036.4607,
+  3454,
+  1.8427,
+  2942.4634,
+  3319,
+  0.2437,
+  7084.8968,
+  3192,
+  0.1837,
+  5088.6288,
+  3185,
+  1.7778,
+  398.149,
+  2846,
+  1.2134,
+  6286.599,
+  2779,
+  1.8993,
+  6279.5527,
+  2628,
+  4.589,
+  10447.3878,
+  2460,
+  3.7866,
+  8429.2413,
+  2393,
+  4.996,
+  5856.4777,
+  2359,
+  0.2687,
+  796.298,
+  2329,
+  2.8078,
+  14143.4952,
+  2210,
+  1.95,
+  3154.6871,
+  2035,
+  4.6527,
+  2146.1654,
+  1951,
+  5.3823,
+  2352.8662,
+  1883,
+  0.6731,
+  149854.4001,
+  1833,
+  2.2535,
+  23581.2582,
+  1796,
+  0.1987,
+  6812.7668,
+  1731,
+  6.152,
+  16730.4637,
+  1717,
+  4.4332,
+  10213.2855,
+  1619,
+  5.2316,
+  17789.8456,
+  1381,
+  5.1896,
+  8031.0923,
+  1364,
+  3.6852,
+  4705.7323,
+  1314,
+  0.6529,
+  13367.9726,
+  1041,
+  4.3329,
+  11769.8537,
+  1017,
+  1.5939,
+  4690.4798,
+  998,
+  4.201,
+  6309.374,
+  966,
+  3.676,
+  27511.468,
+  874,
+  6.064,
+  1748.016,
+  779,
+  3.674,
+  12168.003,
+  771,
+  0.312,
+  7632.943,
+  756,
+  2.626,
+  6256.778,
+  746,
+  5.648,
+  11926.254,
+  693,
+  2.924,
+  6681.225,
+  680,
+  1.423,
+  23013.54,
+  674,
+  0.563,
+  3340.612,
+  663,
+  5.661,
+  11371.705,
+  659,
+  3.136,
+  801.821,
+  648,
+  2.65,
+  19804.827,
+  615,
+  3.029,
+  233141.314,
+  612,
+  5.134,
+  1194.447,
+  563,
+  4.341,
+  90955.552,
+  552,
+  2.091,
+  17298.182,
+  534,
+  5.1,
+  31441.678,
+  531,
+  2.407,
+  11499.656,
+  523,
+  4.624,
+  6438.496,
+  513,
+  5.324,
+  11513.883,
+  477,
+  0.256,
+  11856.219,
+  461,
+  1.722,
+  7234.794,
+  458,
+  3.766,
+  6386.169,
+  458,
+  4.466,
+  5746.271,
+  423,
+  1.055,
+  5760.498,
+  422,
+  1.557,
+  7238.676,
+  415,
+  2.599,
+  7058.598,
+  401,
+  3.03,
+  1059.382,
+  397,
+  1.201,
+  1349.867,
+  379,
+  4.907,
+  4164.312,
+  360,
+  5.707,
+  5643.179,
+  352,
+  3.626,
+  244287.6,
+  348,
+  0.761,
+  10973.556,
+  342,
+  3.001,
+  4292.331,
+  336,
+  4.546,
+  4732.031,
+  334,
+  3.138,
+  6836.645,
+  324,
+  4.164,
+  9917.697,
+  316,
+  1.691,
+  11015.106,
+  307,
+  0.238,
+  35371.887,
+  298,
+  1.306,
+  6283.143,
+  298,
+  1.75,
+  6283.009,
+  293,
+  5.738,
+  16200.773,
+  286,
+  5.928,
+  14712.317,
+  281,
+  3.515,
+  21228.392,
+  280,
+  5.663,
+  8635.942,
+  277,
+  0.513,
+  26.298,
+  268,
+  4.207,
+  18073.705,
+  266,
+  0.9,
+  12352.853,
+  260,
+  2.962,
+  25132.303,
+  255,
+  2.477,
+  6208.294,
+  242,
+  2.8,
+  709.933,
+  231,
+  1.054,
+  22483.849,
+  229,
+  1.07,
+  14314.168,
+  216,
+  1.314,
+  154717.61,
+  215,
+  6.038,
+  10873.986,
+  200,
+  0.561,
+  7079.374,
+  198,
+  2.614,
+  951.718,
+  197,
+  4.369,
+  167283.762,
+  186,
+  2.861,
+  5216.58,
+  183,
+  1.66,
+  39302.097,
+  183,
+  5.912,
+  3738.761,
+  175,
+  2.145,
+  6290.189,
+  173,
+  2.168,
+  10575.407,
+  171,
+  3.702,
+  1592.596,
+  171,
+  1.343,
+  3128.389,
+  164,
+  5.55,
+  6496.375,
+  164,
+  5.856,
+  10984.192,
+  161,
+  1.998,
+  10969.965,
+  161,
+  1.909,
+  6133.513,
+  157,
+  4.955,
+  25158.602,
+  154,
+  6.216,
+  23543.231,
+  153,
+  5.357,
+  13521.751,
+  150,
+  5.77,
+  18209.33,
+  150,
+  5.439,
+  155.42,
+  139,
+  1.778,
+  9225.539,
+  139,
+  1.626,
+  5120.601,
+  128,
+  2.46,
+  13916.019,
+  123,
+  0.717,
+  143571.324,
+  122,
+  2.654,
+  88860.057,
+  121,
+  4.414,
+  3894.182,
+  121,
+  1.192,
+  3.523,
+  120,
+  4.03,
+  553.569,
+  119,
+  1.513,
+  17654.781,
+  117,
+  3.117,
+  14945.316,
+  113,
+  2.698,
+  6040.347,
+  110,
+  3.085,
+  43232.307,
+  109,
+  0.998,
+  955.6,
+  108,
+  2.939,
+  17256.632,
+  107,
+  5.285,
+  65147.62,
+  103,
+  0.139,
+  11712.955,
+  103,
+  5.85,
+  213.299,
+  102,
+  3.046,
+  6037.244,
+  101,
+  2.842,
+  8662.24,
+  100,
+  3.626,
+  6262.3,
+  98,
+  2.36,
+  6206.81,
+  98,
+  5.11,
+  6172.87,
+  98,
+  2,
+  15110.47,
+  97,
+  2.67,
+  5650.29,
+  97,
+  2.75,
+  6244.94,
+  96,
+  4.02,
+  6282.1,
+  96,
+  5.31,
+  6284.06,
+  92,
+  0.1,
+  29088.81,
+  85,
+  3.26,
+  20426.57,
+  84,
+  2.6,
+  28766.92,
+  81,
+  3.58,
+  10177.26,
+  80,
+  5.81,
+  5230.81,
+  78,
+  2.53,
+  16496.36,
+  77,
+  4.06,
+  6127.66,
+  73,
+  0.04,
+  5481.25,
+  72,
+  5.96,
+  12559.04,
+  72,
+  5.92,
+  4136.91,
+  71,
+  5.49,
+  22003.91,
+  70,
+  3.41,
+  7.11,
+  69,
+  0.62,
+  11403.68,
+  69,
+  3.9,
+  1589.07,
+  69,
+  1.96,
+  12416.59,
+  69,
+  4.51,
+  426.6,
+  67,
+  1.61,
+  11087.29,
+  66,
+  4.5,
+  47162.52,
+  66,
+  5.08,
+  283.86,
+  66,
+  4.32,
+  16858.48,
+  65,
+  1.04,
+  6062.66,
+  64,
+  1.59,
+  18319.54,
+  63,
+  5.7,
+  45892.73,
+  63,
+  4.6,
+  66567.49,
+  63,
+  3.82,
+  13517.87,
+  62,
+  2.62,
+  11190.38,
+  61,
+  1.54,
+  33019.02,
+  60,
+  5.58,
+  10344.3,
+  60,
+  5.38,
+  316428.23,
+  60,
+  5.78,
+  632.78,
+  59,
+  6.12,
+  9623.69,
+  57,
+  0.16,
+  17267.27,
+  57,
+  3.86,
+  6076.89,
+  57,
+  1.98,
+  7668.64,
+  56,
+  4.78,
+  20199.09,
+  55,
+  4.56,
+  18875.53,
+  55,
+  3.51,
+  17253.04,
+  54,
+  3.07,
+  226858.24,
+  54,
+  4.83,
+  18422.63,
+  53,
+  5.02,
+  12132.44,
+  52,
+  3.63,
+  5333.9,
+  52,
+  0.97,
+  155427.54,
+  51,
+  3.36,
+  20597.24,
+  50,
+  0.99,
+  11609.86,
+  50,
+  2.21,
+  1990.75,
+  48,
+  1.62,
+  12146.67,
+  48,
+  1.17,
+  12569.67,
+  47,
+  4.62,
+  5436.99,
+  47,
+  1.81,
+  12562.63,
+  47,
+  0.59,
+  21954.16,
+  47,
+  0.76,
+  7342.46,
+  46,
+  0.27,
+  4590.91,
+  46,
+  3.77,
+  156137.48,
+  45,
+  5.66,
+  10454.5,
+  44,
+  5.84,
+  3496.03,
+  43,
+  0.24,
+  17996.03,
+  41,
+  5.93,
+  51092.73,
+  41,
+  4.21,
+  12592.45,
+  40,
+  5.14,
+  1551.05,
+  40,
+  5.28,
+  15671.08,
+  39,
+  3.69,
+  18052.93,
+  39,
+  4.94,
+  24356.78,
+  38,
+  2.72,
+  11933.37,
+  38,
+  5.23,
+  7477.52,
+  38,
+  4.99,
+  9779.11,
+  37,
+  3.7,
+  9388.01,
+  37,
+  4.44,
+  4535.06,
+  36,
+  2.16,
+  28237.23,
+  36,
+  2.54,
+  242.73,
+  36,
+  0.22,
+  5429.88,
+  35,
+  6.15,
+  19800.95,
+  35,
+  2.92,
+  36949.23,
+  34,
+  5.63,
+  2379.16,
+  34,
+  5.73,
+  16460.33,
+  34,
+  5.11,
+  5849.36,
+  33,
+  6.19,
+  6268.85,
+  10301861,
+  1.1074897,
+  6283.07584999,
+  172124,
+  1.064423,
+  12566.1517,
+  70222,
+  3.14159,
+  0,
+  3235,
+  1.0217,
+  18849.2275,
+  3080,
+  2.8435,
+  5507.5532,
+  2497,
+  1.3191,
+  5223.6939,
+  1849,
+  1.4243,
+  1577.3435,
+  1008,
+  5.9138,
+  10977.0788,
+  865,
+  1.42,
+  6275.962,
+  863,
+  0.271,
+  5486.778,
+  507,
+  1.686,
+  5088.629,
+  499,
+  6.014,
+  6286.599,
+  467,
+  5.987,
+  529.691,
+  440,
+  0.518,
+  4694.003,
+  410,
+  1.084,
+  9437.763,
+  387,
+  4.75,
+  2544.314,
+  375,
+  5.071,
+  796.298,
+  352,
+  0.023,
+  83996.847,
+  344,
+  0.949,
+  71430.696,
+  341,
+  5.412,
+  775.523,
+  322,
+  6.156,
+  2146.165,
+  286,
+  5.484,
+  10447.388,
+  284,
+  3.42,
+  2352.866,
+  255,
+  6.132,
+  6438.496,
+  252,
+  0.243,
+  398.149,
+  243,
+  3.092,
+  4690.48,
+  225,
+  3.689,
+  7084.897,
+  220,
+  4.952,
+  6812.767,
+  219,
+  0.42,
+  8031.092,
+  209,
+  1.282,
+  1748.016,
+  193,
+  5.314,
+  8429.241,
+  185,
+  1.82,
+  7632.943,
+  175,
+  3.229,
+  6279.553,
+  173,
+  1.537,
+  4705.732,
+  158,
+  4.097,
+  11499.656,
+  158,
+  5.539,
+  3154.687,
+  150,
+  3.633,
+  11513.883,
+  148,
+  3.222,
+  7234.794,
+  147,
+  3.653,
+  1194.447,
+  144,
+  0.817,
+  14143.495,
+  135,
+  6.151,
+  5746.271,
+  134,
+  4.644,
+  6836.645,
+  128,
+  2.693,
+  1349.867,
+  123,
+  5.65,
+  5760.498,
+  118,
+  2.577,
+  13367.973,
+  113,
+  3.357,
+  17789.846,
+  110,
+  4.497,
+  4292.331,
+  108,
+  5.828,
+  12036.461,
+  102,
+  5.621,
+  6256.778,
+  99,
+  1.14,
+  1059.38,
+  98,
+  0.66,
+  5856.48,
+  93,
+  2.32,
+  10213.29,
+  92,
+  0.77,
+  16730.46,
+  88,
+  1.5,
+  11926.25,
+  86,
+  1.42,
+  5753.38,
+  85,
+  0.66,
+  155.42,
+  81,
+  1.64,
+  6681.22,
+  80,
+  4.11,
+  951.72,
+  66,
+  4.55,
+  5216.58,
+  65,
+  0.98,
+  25132.3,
+  64,
+  4.19,
+  6040.35,
+  64,
+  0.52,
+  6290.19,
+  63,
+  1.51,
+  5643.18,
+  59,
+  6.18,
+  4164.31,
+  57,
+  2.3,
+  10973.56,
+  55,
+  2.32,
+  11506.77,
+  55,
+  2.2,
+  1592.6,
+  55,
+  5.27,
+  3340.61,
+  54,
+  5.54,
+  553.57,
+  53,
+  5.04,
+  9917.7,
+  53,
+  0.92,
+  11371.7,
+  52,
+  3.98,
+  17298.18,
+  52,
+  3.6,
+  10969.97,
+  49,
+  5.91,
+  3894.18,
+  49,
+  2.51,
+  6127.66,
+  48,
+  1.67,
+  12168,
+  46,
+  0.31,
+  801.82,
+  42,
+  3.7,
+  10575.41,
+  42,
+  4.05,
+  10984.19,
+  40,
+  2.17,
+  7860.42,
+  40,
+  4.17,
+  26.3,
+  38,
+  5.82,
+  7058.6,
+  37,
+  3.39,
+  6496.37,
+  36,
+  1.08,
+  6309.37,
+  36,
+  5.34,
+  7079.37,
+  34,
+  3.62,
+  11790.63,
+  32,
+  0.32,
+  16200.77,
+  31,
+  4.24,
+  3738.76,
+  29,
+  4.55,
+  11856.22,
+  29,
+  1.26,
+  8635.94,
+  27,
+  3.45,
+  5884.93,
+  26,
+  5.08,
+  10177.26,
+  26,
+  5.38,
+  21228.39,
+  24,
+  2.26,
+  11712.96,
+  24,
+  1.05,
+  242.73,
+  24,
+  5.59,
+  6069.78,
+  23,
+  3.63,
+  6284.06,
+  23,
+  1.64,
+  4732.03,
+  22,
+  3.46,
+  213.3,
+  21,
+  1.05,
+  3496.03,
+  21,
+  3.92,
+  13916.02,
+  21,
+  4.01,
+  5230.81,
+  20,
+  5.16,
+  12352.85,
+  20,
+  0.69,
+  1990.75,
+  19,
+  2.73,
+  6062.66,
+  19,
+  5.01,
+  11015.11,
+  18,
+  6.04,
+  6283.01,
+  18,
+  2.85,
+  7238.68,
+  18,
+  5.6,
+  6283.14,
+  18,
+  5.16,
+  17253.04,
+  18,
+  2.54,
+  14314.17,
+  17,
+  1.58,
+  7.11,
+  17,
+  0.98,
+  3930.21,
+  17,
+  4.75,
+  17267.27,
+  16,
+  2.19,
+  6076.89,
+  16,
+  2.19,
+  18073.7,
+  16,
+  6.12,
+  3.52,
+  16,
+  4.61,
+  9623.69,
+  16,
+  3.4,
+  16496.36,
+  15,
+  0.19,
+  9779.11,
+  15,
+  5.3,
+  13517.87,
+  15,
+  4.26,
+  3128.39,
+  15,
+  0.81,
+  709.93,
+  14,
+  0.5,
+  25158.6,
+  14,
+  4.38,
+  4136.91,
+  13,
+  0.98,
+  65147.62,
+  13,
+  3.31,
+  154717.61,
+  13,
+  2.11,
+  1589.07,
+  13,
+  1.92,
+  22483.85,
+  12,
+  6.03,
+  9225.54,
+  12,
+  1.53,
+  12559.04,
+  12,
+  5.82,
+  6282.1,
+  12,
+  5.61,
+  5642.2,
+  12,
+  2.38,
+  167283.76,
+  12,
+  0.39,
+  12132.44,
+  12,
+  3.98,
+  4686.89,
+  12,
+  5.81,
+  12569.67,
+  12,
+  0.56,
+  5849.36,
+  11,
+  0.45,
+  6172.87,
+  11,
+  5.8,
+  16858.48,
+  11,
+  6.22,
+  12146.67,
+  11,
+  2.27,
+  5429.88,
+  435939,
+  5.784551,
+  6283.07585,
+  12363,
+  5.57935,
+  12566.1517,
+  1234,
+  3.1416,
+  0,
+  879,
+  3.628,
+  77713.771,
+  569,
+  1.87,
+  5573.143,
+  330,
+  5.47,
+  18849.228,
+  147,
+  4.48,
+  5507.553,
+  110,
+  2.842,
+  161000.686,
+  101,
+  2.815,
+  5223.694,
+  85,
+  3.11,
+  1577.34,
+  65,
+  5.47,
+  775.52,
+  61,
+  1.38,
+  6438.5,
+  50,
+  4.42,
+  6286.6,
+  47,
+  3.66,
+  7084.9,
+  46,
+  5.39,
+  149854.4,
+  42,
+  0.9,
+  10977.08,
+  40,
+  3.2,
+  5088.63,
+  35,
+  1.81,
+  5486.78,
+  32,
+  5.35,
+  3154.69,
+  30,
+  3.52,
+  796.3,
+  29,
+  4.62,
+  4690.48,
+  28,
+  1.84,
+  4694,
+  27,
+  3.14,
+  71430.7,
+  27,
+  6.17,
+  6836.65,
+  26,
+  1.42,
+  2146.17,
+  25,
+  2.81,
+  1748.02,
+  24,
+  2.18,
+  155.42,
+  23,
+  4.76,
+  7234.79,
+  21,
+  3.38,
+  7632.94,
+  21,
+  0.22,
+  4705.73,
+  20,
+  4.22,
+  1349.87,
+  20,
+  2.01,
+  1194.45,
+  20,
+  4.58,
+  529.69,
+  19,
+  1.59,
+  6309.37,
+  18,
+  5.7,
+  6040.35,
+  18,
+  6.03,
+  4292.33,
+  17,
+  2.9,
+  9437.76,
+  17,
+  2,
+  8031.09,
+  17,
+  5.78,
+  83996.85,
+  16,
+  0.05,
+  2544.31,
+  15,
+  0.95,
+  6127.66,
+  14,
+  0.36,
+  10447.39,
+  14,
+  1.48,
+  2352.87,
+  13,
+  0.77,
+  553.57,
+  13,
+  5.48,
+  951.72,
+  13,
+  5.27,
+  6279.55,
+  13,
+  3.76,
+  6812.77,
+  11,
+  5.41,
+  6256.78,
+  10,
+  0.68,
+  1592.6,
+  10,
+  4.95,
+  398.15,
+  10,
+  1.15,
+  3894.18,
+  10,
+  5.2,
+  244287.6,
+  10,
+  1.94,
+  11856.22,
+  9,
+  5.39,
+  25132.3,
+  8,
+  6.18,
+  1059.38,
+  8,
+  0.69,
+  8429.24,
+  8,
+  5.85,
+  242.73,
+  7,
+  5.26,
+  14143.5,
+  7,
+  0.52,
+  801.82,
+  6,
+  2.24,
+  8635.94,
+  6,
+  4,
+  13367.97,
+  6,
+  2.77,
+  90955.55,
+  6,
+  5.17,
+  7058.6,
+  5,
+  1.46,
+  233141.31,
+  5,
+  4.13,
+  7860.42,
+  5,
+  3.91,
+  26.3,
+  5,
+  3.89,
+  12036.46,
+  5,
+  5.58,
+  6290.19,
+  5,
+  5.54,
+  1990.75,
+  5,
+  0.83,
+  11506.77,
+  5,
+  6.22,
+  6681.22,
+  4,
+  5.26,
+  10575.41,
+  4,
+  1.91,
+  7477.52,
+  4,
+  0.43,
+  10213.29,
+  4,
+  1.09,
+  709.93,
+  4,
+  5.09,
+  11015.11,
+  4,
+  4.22,
+  88860.06,
+  4,
+  3.57,
+  7079.37,
+  4,
+  1.98,
+  6284.06,
+  4,
+  3.93,
+  10973.56,
+  4,
+  6.18,
+  9917.7,
+  4,
+  0.36,
+  10177.26,
+  4,
+  2.75,
+  3738.76,
+  4,
+  3.33,
+  5643.18,
+  4,
+  5.36,
+  25158.6,
+  14459,
+  4.27319,
+  6283.07585,
+  673,
+  3.917,
+  12566.152,
+  77,
+  0,
+  0,
+  25,
+  3.73,
+  18849.23,
+  4,
+  2.8,
+  6286.6,
+  386,
+  2.564,
+  6283.076,
+  31,
+  2.27,
+  12566.15,
+  5,
+  3.44,
+  5573.14,
+  2,
+  2.05,
+  18849.23,
+  1,
+  2.06,
+  77713.77,
+  1,
+  4.41,
+  161000.69,
+  1,
+  3.82,
+  149854.4,
+  1,
+  4.08,
+  6127.66,
+  1,
+  5.26,
+  6438.5,
+  9,
+  1.22,
+  6283.08,
+  1,
+  0.66,
+  12566.15
+]);
+__publicField(_ShouXingUtil, "XL1", [
+  [22639.586, 0.78475822, 8328.691424623, 1.5229241, 25.0719, -0.123598, 4586.438, 0.1873974, 7214.06286536, -2.184756, -18.86, 0.0828, 2369.914, 2.542952, 15542.75428998, -0.661832, 6.212, -0.0408, 769.026, 3.140313, 16657.38284925, 3.04585, 50.144, -0.2472, 666.418, 1.527671, 628.30195521, -0.02664, 0.062, -54e-4, 411.596, 4.826607, 16866.932315, -1.28012, -1.07, -59e-4, 211.656, 4.115028, -1114.6285593, -3.70768, -43.93, 0.2064, 205.436, 0.230523, 6585.7609101, -2.15812, -18.92, 0.0882, 191.956, 4.898507, 23871.4457146, 0.86109, 31.28, -0.164, 164.729, 2.586078, 14914.4523348, -0.6352, 6.15, -0.035, 147.321, 5.4553, -7700.3894694, -1.5496, -25.01, 0.118, 124.988, 0.48608, 7771.377145, -0.3309, 3.11, -0.02, 109.38, 3.88323, 8956.9933798, 1.4963, 25.13, -0.129, 55.177, 5.57033, -1324.178025, 0.6183, 7.3, -0.035, 45.1, 0.89898, 25195.62374, 0.2428, 24, -0.129, 39.533, 3.81213, -8538.24089, 2.803, 26.1, -0.118, 38.43, 4.30115, 22756.817155, -2.8466, -12.6, 0.042, 36.124, 5.49587, 24986.074274, 4.5688, 75.2, -0.371, 30.773, 1.94559, 14428.125731, -4.3695, -37.7, 0.166, 28.397, 3.28586, 7842.364821, -2.2114, -18.8, 0.077, 24.358, 5.64142, 16171.056245, -0.6885, 6.3, -0.046, 18.585, 4.41371, -557.31428, -1.8538, -22, 0.1, 17.954, 3.58454, 8399.6791, -0.3576, 3.2, -0.03, 14.53, 4.9416, 23243.143759, 0.888, 31.2, -0.16, 14.38, 0.9709, 32200.137139, 2.384, 56.4, -0.29, 14.251, 5.7641, -2.3012, 1.523, 25.1, -0.12, 13.899, 0.3735, 31085.50858, -1.324, 12.4, -0.08, 13.194, 1.7595, -9443.319984, -5.231, -69, 0.33, 9.679, 3.0997, -16029.080894, -3.072, -50.1, 0.24, 9.366, 0.3016, 24080.99518, -3.465, -19.9, 0.08, 8.606, 4.1582, -1742.930514, -3.681, -44, 0.21, 8.453, 2.8416, 16100.06857, 1.192, 28.2, -0.14, 8.05, 2.6292, 14286.15038, -0.609, 6.1, -0.03, 7.63, 6.2388, 17285.684804, 3.019, 50.2, -0.25, 7.447, 1.4845, 1256.60391, -0.053, 0.1, -0.01, 7.371, 0.2736, 5957.458955, -2.131, -19, 0.09, 7.063, 5.6715, 33.757047, -0.308, -3.6, 0.02, 6.383, 4.7843, 7004.5134, 2.141, 32.4, -0.16, 5.742, 2.6572, 32409.686605, -1.942, 5, -0.05, 4.374, 4.3443, 22128.5152, -2.82, -13, 0.05, 3.998, 3.2545, 33524.31516, 1.766, 49, -0.25, 3.21, 2.2443, 14985.44001, -2.516, -16, 0.06, 2.915, 1.7138, 24499.74767, 0.834, 31, -0.17, 2.732, 1.9887, 13799.82378, -4.343, -38, 0.17, 2.568, 5.4122, -7072.08751, -1.576, -25, 0.11, 2.521, 3.2427, 8470.66678, -2.238, -19, 0.07, 2.489, 4.0719, -486.3266, -3.734, -44, 0.2, 2.146, 5.6135, -1952.47998, 0.645, 7, -0.03, 1.978, 2.7291, 39414.2, 0.199, 37, -0.21, 1.934, 1.5682, 33314.7657, 6.092, 100, -0.5, 1.871, 0.4166, 30457.20662, -1.297, 12, -0.1, 1.753, 2.0582, -8886.0057, -3.38, -47, 0.2, 1.437, 2.386, -695.87607, 0.59, 7, 0, 1.373, 3.026, -209.54947, 4.33, 51, -0.2, 1.262, 5.94, 16728.37052, 1.17, 28, -0.1, 1.224, 6.172, 6656.74859, -4.04, -41, 0.2, 1.187, 5.873, 6099.43431, -5.89, -63, 0.3, 1.177, 1.014, 31571.83518, 2.41, 56, -0.3, 1.162, 3.84, 9585.29534, 1.47, 25, -0.1, 1.143, 5.639, 8364.73984, -2.18, -19, 0.1, 1.078, 1.229, 70.98768, -1.88, -22, 0.1, 1.059, 3.326, 40528.82856, 3.91, 81, -0.4, 0.99, 5.013, 40738.37803, -0.42, 30, -0.2, 0.948, 5.687, -17772.01141, -6.75, -94, 0.5, 0.876, 0.298, -0.35232, 0, 0, 0, 0.822, 2.994, 393.02097, 0, 0, 0, 0.788, 1.836, 8326.39022, 3.05, 50, -0.2, 0.752, 4.985, 22614.8418, 0.91, 31, -0.2, 0.74, 2.875, 8330.99262, 0, 0, 0, 0.669, 0.744, -24357.77232, -4.6, -75, 0.4, 0.644, 1.314, 8393.12577, -2.18, -19, 0.1, 0.639, 5.888, 575.33849, 0, 0, 0, 0.635, 1.116, 23385.11911, -2.87, -13, 0, 0.584, 5.197, 24428.75999, 2.71, 53, -0.3, 0.583, 3.513, -9095.55517, 0.95, 4, 0, 0.572, 6.059, 29970.88002, -5.03, -32, 0.1, 0.565, 2.96, 0.32863, 1.52, 25, -0.1, 0.561, 4.001, -17981.56087, -2.43, -43, 0.2, 0.557, 0.529, 7143.07519, -0.3, 3, 0, 0.546, 2.311, 25614.37623, 4.54, 75, -0.4, 0.536, 4.229, 15752.30376, -4.99, -45, 0.2, 0.493, 3.316, -8294.9344, -1.83, -29, 0.1, 0.491, 1.744, 8362.4485, 1.21, 21, -0.1, 0.478, 1.803, -10071.6219, -5.2, -69, 0.3, 0.454, 0.857, 15333.2048, 3.66, 57, -0.3, 0.445, 2.071, 8311.7707, -2.18, -19, 0.1, 0.426, 0.345, 23452.6932, -3.44, -20, 0.1, 0.42, 4.941, 33733.8646, -2.56, -2, 0, 0.413, 1.642, 17495.2343, -1.31, -1, 0, 0.404, 1.458, 23314.1314, -0.99, 9, -0.1, 0.395, 2.132, 38299.5714, -3.51, -6, 0, 0.382, 2.7, 31781.3846, -1.92, 5, 0, 0.375, 4.827, 6376.2114, 2.17, 32, -0.2, 0.361, 3.867, 16833.1753, -0.97, 3, 0, 0.358, 5.044, 15056.4277, -4.4, -38, 0.2, 0.35, 5.157, -8257.7037, -3.4, -47, 0.2, 0.344, 4.233, 157.7344, 0, 0, 0, 0.34, 2.672, 13657.8484, -0.58, 6, 0, 0.329, 5.61, 41853.0066, 3.29, 74, -0.4, 0.325, 5.895, -39.8149, 0, 0, 0, 0.309, 4.387, 21500.2132, -2.79, -13, 0.1, 0.302, 1.278, 786.0419, 0, 0, 0, 0.302, 5.341, -24567.3218, -0.27, -24, 0.1, 0.301, 1.045, 5889.8848, -1.57, -12, 0, 0.294, 4.201, -2371.2325, -3.65, -44, 0.2, 0.293, 3.704, 21642.1886, -6.55, -57, 0.2, 0.29, 4.069, 32828.4391, 2.36, 56, -0.3, 0.289, 3.472, 31713.8105, -1.35, 12, -0.1, 0.285, 5.407, -33.7814, 0.31, 4, 0, 0.283, 5.998, -16.9207, -3.71, -44, 0.2, 0.283, 2.772, 38785.898, 0.23, 37, -0.2, 0.274, 5.343, 15613.742, -2.54, -16, 0.1, 0.263, 3.997, 25823.9257, 0.22, 24, -0.1, 0.254, 0.6, 24638.3095, -1.61, 2, 0, 0.253, 1.344, 6447.1991, 0.29, 10, -0.1, 0.25, 0.887, 141.9754, -3.76, -44, 0.2, 0.247, 0.317, 5329.157, -2.1, -19, 0.1, 0.245, 0.141, 36.0484, -3.71, -44, 0.2, 0.231, 2.287, 14357.1381, -2.49, -16, 0.1, 0.227, 5.158, 2.6298, 0, 0, 0, 0.219, 5.085, 47742.8914, 1.72, 63, -0.3, 0.211, 2.145, 6638.7244, -2.18, -19, 0.1, 0.201, 4.415, 39623.7495, -4.13, -14, 0, 0.194, 2.091, 588.4927, 0, 0, 0, 0.193, 3.057, -15400.7789, -3.1, -50, 0, 0.186, 5.598, 16799.3582, -0.72, 6, 0, 0.185, 3.886, 1150.677, 0, 0, 0, 0.183, 1.619, 7178.0144, 1.52, 25, 0, 0.181, 2.635, 8328.3391, 1.52, 25, 0, 0.181, 2.077, 8329.0437, 1.52, 25, 0, 0.179, 3.215, -9652.8694, -0.9, -18, 0, 0.176, 1.716, -8815.018, -5.26, -69, 0, 0.175, 5.673, 550.7553, 0, 0, 0, 0.17, 2.06, 31295.058, -5.6, -39, 0, 0.167, 1.239, 7211.7617, -0.7, 6, 0, 0.165, 4.499, 14967.4158, -0.7, 6, 0, 0.164, 3.595, 15540.4531, 0.9, 31, 0, 0.164, 4.237, 522.3694, 0, 0, 0, 0.163, 4.633, 15545.0555, -2.2, -19, 0, 0.161, 0.478, 6428.0209, -2.2, -19, 0, 0.158, 2.03, 13171.5218, -4.3, -38, 0, 0.157, 2.28, 7216.3641, -3.7, -44, 0, 0.154, 5.65, 7935.6705, 1.5, 25, 0, 0.152, 0.46, 29828.9047, -1.3, 12, 0, 0.151, 1.19, -0.7113, 0, 0, 0, 0.15, 1.42, 23942.4334, -1, 9, 0, 0.144, 2.75, 7753.3529, 1.5, 25, 0, 0.137, 2.08, 7213.7105, -2.2, -19, 0, 0.137, 1.44, 7214.4152, -2.2, -19, 0, 0.136, 4.46, -1185.6162, -1.8, -22, 0, 0.136, 3.03, 8000.1048, -2.2, -19, 0, 0.134, 2.83, 14756.7124, -0.7, 6, 0, 0.131, 5.05, 6821.0419, -2.2, -19, 0, 0.128, 5.99, -17214.6971, -4.9, -72, 0, 0.127, 5.35, 8721.7124, 1.5, 25, 0, 0.126, 4.49, 46628.2629, -2, 19, 0, 0.125, 5.94, 7149.6285, 1.5, 25, 0, 0.124, 1.09, 49067.0695, 1.1, 55, 0, 0.121, 2.88, 15471.7666, 1.2, 28, 0, 0.111, 3.92, 41643.4571, 7.6, 125, -1, 0.11, 1.96, 8904.0299, 1.5, 25, 0, 0.106, 3.3, -18.0489, -2.2, -19, 0, 0.105, 2.3, -4.931, 1.5, 25, 0, 0.104, 2.22, -6.559, -1.9, -22, 0, 0.101, 1.44, 1884.9059, -0.1, 0, 0, 0.1, 5.92, 5471.1324, -5.9, -63, 0, 0.099, 1.12, 15149.7333, -0.7, 6, 0, 0.096, 4.73, 15508.9972, -0.4, 10, 0, 0.095, 5.18, 7230.9835, 1.5, 25, 0, 0.093, 3.37, 39900.5266, 3.9, 81, 0, 0.092, 2.01, 25057.0619, 2.7, 53, 0, 0.092, 1.21, -79.6298, 0, 0, 0, 0.092, 1.65, -26310.2523, -4, -68, 0, 0.091, 1.01, 42062.5561, -1, 23, 0, 0.09, 6.1, 29342.5781, -5, -32, 0, 0.09, 4.43, 15542.402, -0.7, 6, 0, 0.09, 3.8, 15543.1066, -0.7, 6, 0, 0.089, 4.15, 6063.3859, -2.2, -19, 0, 0.086, 4.03, 52.9691, 0, 0, 0, 0.085, 0.49, 47952.4409, -2.6, 11, 0, 0.085, 1.6, 7632.8154, 2.1, 32, 0, 0.084, 0.22, 14392.0773, -0.7, 6, 0, 0.083, 6.22, 6028.4466, -4, -41, 0, 0.083, 0.63, -7909.9389, 2.8, 26, 0, 0.083, 5.2, -77.5523, 0, 0, 0, 0.082, 2.74, 8786.1467, -2.2, -19, 0, 0.08, 2.43, 9166.5428, -2.8, -26, 0, 0.08, 3.7, -25405.1732, 4.1, 27, 0, 0.078, 5.68, 48857.52, 5.4, 106, -1, 0.077, 1.85, 8315.5735, -2.2, -19, 0, 0.075, 5.46, -18191.1103, 1.9, 8, 0, 0.075, 1.41, -16238.6304, 1.3, 1, 0, 0.074, 5.06, 40110.0761, -0.4, 30, 0, 0.072, 2.1, 64.4343, -3.7, -44, 0, 0.071, 2.17, 37671.2695, -3.5, -6, 0, 0.069, 1.71, 16693.4313, -0.7, 6, 0, 0.069, 3.33, -26100.7028, -8.3, -119, 1, 0.068, 1.09, 8329.4028, 1.5, 25, 0, 0.068, 3.62, 8327.9801, 1.5, 25, 0, 0.068, 2.41, 16833.1509, -1, 3, 0, 0.067, 3.4, 24709.2971, -3.5, -20, 0, 0.067, 1.65, 8346.7156, -0.3, 3, 0, 0.066, 2.61, 22547.2677, 1.5, 39, 0, 0.066, 3.5, 15576.5113, -1, 3, 0, 0.065, 5.76, 33037.9886, -2, 5, 0, 0.065, 4.58, 8322.1325, -0.3, 3, 0, 0.065, 6.2, 17913.9868, 3, 50, 0, 0.065, 1.5, 22685.8295, -1, 9, 0, 0.065, 2.37, 7180.3058, -1.9, -15, 0, 0.064, 1.06, 30943.5332, 2.4, 56, 0, 0.064, 1.89, 8288.8765, 1.5, 25, 0, 0.064, 4.7, 6.0335, 0.3, 4, 0, 0.063, 2.83, 8368.5063, 1.5, 25, 0, 0.063, 5.66, -2580.7819, 0.7, 7, 0, 0.062, 3.78, 7056.3285, -2.2, -19, 0, 0.061, 1.49, 8294.91, 1.8, 29, 0, 0.061, 0.12, -10281.1714, -0.9, -18, 0, 0.061, 3.06, -8362.4729, -1.2, -21, 0, 0.061, 4.43, 8170.9571, 1.5, 25, 0, 0.059, 5.78, -13.1179, -3.7, -44, 0, 0.059, 5.97, 6625.5702, -2.2, -19, 0, 0.058, 5.01, -0.508, -0.3, 0, 0, 0.058, 2.73, 7161.0938, -2.2, -19, 0, 0.057, 0.19, 7214.0629, -2.2, -19, 0, 0.057, 4, 22199.5029, -4.7, -35, 0, 0.057, 5.38, 8119.142, 5.8, 76, 0, 0.056, 1.07, 7542.6495, 1.5, 25, 0, 0.056, 0.28, 8486.4258, 1.5, 25, 0, 0.054, 4.19, 16655.0816, 4.6, 75, 0, 0.053, 0.72, 7267.032, -2.2, -19, 0, 0.053, 3.12, 12.6192, 0.6, 7, 0, 0.052, 2.99, -32896.013, -1.8, -49, 0, 0.052, 3.46, 1097.708, 0, 0, 0, 0.051, 5.37, -6443.786, -1.6, -25, 0, 0.051, 1.35, 7789.401, -2.2, -19, 0, 0.051, 5.83, 40042.502, 0.2, 38, 0, 0.051, 3.63, 9114.733, 1.5, 25, 0, 0.05, 1.51, 8504.484, -2.5, -22, 0, 0.05, 5.23, 16659.684, 1.5, 25, 0, 0.05, 1.15, 7247.82, -2.5, -23, 0, 0.047, 0.25, -1290.421, 0.3, 0, 0, 0.047, 4.67, -32686.464, -6.1, -100, 0, 0.047, 3.49, 548.678, 0, 0, 0, 0.047, 2.37, 6663.308, -2.2, -19, 0, 0.046, 0.98, 1572.084, 0, 0, 0, 0.046, 2.04, 14954.262, -0.7, 6, 0, 0.046, 3.72, 6691.693, -2.2, -19, 0, 0.045, 6.19, -235.287, 0, 0, 0, 0.044, 2.96, 32967.001, -0.1, 27, 0, 0.044, 3.82, -1671.943, -5.6, -66, 0, 0.043, 5.82, 1179.063, 0, 0, 0, 0.043, 0.07, 34152.617, 1.7, 49, 0, 0.043, 3.71, 6514.773, -0.3, 0, 0, 0.043, 5.62, 15.732, -2.5, -23, 0, 0.043, 5.8, 8351.233, -2.2, -19, 0, 0.042, 0.27, 7740.199, 1.5, 25, 0, 0.042, 6.14, 15385.02, -0.7, 6, 0, 0.042, 6.13, 7285.051, -4.1, -41, 0, 0.041, 1.27, 32757.451, 4.2, 78, 0, 0.041, 4.46, 8275.722, 1.5, 25, 0, 0.04, 0.23, 8381.661, 1.5, 25, 0, 0.04, 5.87, -766.864, 2.5, 29, 0, 0.04, 1.66, 254.431, 0, 0, 0, 0.04, 0.4, 9027.981, -0.4, 0, 0, 0.04, 2.96, 7777.936, 1.5, 25, 0, 0.039, 4.67, 33943.068, 6.1, 100, 0, 0.039, 3.52, 8326.062, 1.5, 25, 0, 0.039, 3.75, 21013.887, -6.5, -57, 0, 0.039, 5.6, 606.978, 0, 0, 0, 0.039, 1.19, 8331.321, 1.5, 25, 0, 0.039, 2.84, 7211.433, -2.2, -19, 0, 0.038, 0.67, 7216.693, -2.2, -19, 0, 0.038, 6.22, 25161.867, 0.6, 28, 0, 0.038, 4.4, 7806.322, 1.5, 25, 0, 0.038, 4.16, 9179.168, -2.2, -19, 0, 0.037, 4.73, 14991.999, -0.7, 6, 0, 0.036, 0.35, 67.514, -0.6, -7, 0, 0.036, 3.7, 25266.611, -1.6, 0, 0, 0.036, 5.39, 16328.796, -0.7, 6, 0, 0.035, 1.44, 7174.248, -2.2, -19, 0, 0.035, 5, 15684.73, -4.4, -38, 0, 0.035, 0.39, -15.419, -2.2, -19, 0, 0.035, 6.07, 15020.385, -0.7, 6, 0, 0.034, 6.01, 7371.797, -2.2, -19, 0, 0.034, 0.96, -16623.626, -3.4, -54, 0, 0.033, 6.24, 9479.368, 1.5, 25, 0, 0.033, 3.21, 23661.896, 5.2, 82, 0, 0.033, 4.06, 8311.418, -2.2, -19, 0, 0.033, 2.4, 1965.105, 0, 0, 0, 0.033, 5.17, 15489.785, -0.7, 6, 0, 0.033, 5.03, 21986.54, 0.9, 31, 0, 0.033, 4.1, 16691.14, 2.7, 46, 0, 0.033, 5.13, 47114.589, 1.7, 63, 0, 0.033, 4.45, 8917.184, 1.5, 25, 0, 0.033, 4.23, 2.078, 0, 0, 0, 0.032, 2.33, 75.251, 1.5, 25, 0, 0.032, 2.1, 7253.878, -2.2, -19, 0, 0.032, 3.11, -0.224, 1.5, 25, 0, 0.032, 4.43, 16640.462, -0.7, 6, 0, 0.032, 5.68, 8328.363, 0, 0, 0, 0.031, 5.32, 8329.02, 3, 50, 0, 0.031, 3.7, 16118.093, -0.7, 6, 0, 0.03, 3.67, 16721.817, -0.7, 6, 0, 0.03, 5.27, -1881.492, -1.2, -15, 0, 0.03, 5.72, 8157.839, -2.2, -19, 0, 0.029, 5.73, -18400.313, -6.7, -94, 0, 0.029, 2.76, 16, -2.2, -19, 0, 0.029, 1.75, 8879.447, 1.5, 25, 0, 0.029, 0.32, 8851.061, 1.5, 25, 0, 0.029, 0.9, 14704.903, 3.7, 57, 0, 0.028, 2.9, 15595.723, -0.7, 6, 0, 0.028, 5.88, 16864.631, 0.2, 24, 0, 0.028, 0.63, 16869.234, -2.8, -26, 0, 0.028, 4.04, -18609.863, -2.4, -43, 0, 0.027, 5.83, 6727.736, -5.9, -63, 0, 0.027, 6.12, 418.752, 4.3, 51, 0, 0.027, 0.14, 41157.131, 3.9, 81, 0, 0.026, 3.8, 15.542, 0, 0, 0, 0.026, 1.68, 50181.698, 4.8, 99, -1, 0.026, 0.32, 315.469, 0, 0, 0, 0.025, 5.67, 19.188, 0.3, 0, 0, 0.025, 3.16, 62.133, -2.2, -19, 0, 0.025, 3.76, 15502.939, -0.7, 6, 0, 0.025, 4.53, 45999.961, -2, 19, 0, 0.024, 3.21, 837.851, -4.4, -51, 0, 0.024, 2.82, 38157.596, 0.3, 37, 0, 0.024, 5.21, 15540.124, -0.7, 6, 0, 0.024, 0.26, 14218.576, 0, 13, 0, 0.024, 3.01, 15545.384, -0.7, 6, 0, 0.024, 1.16, -17424.247, -0.6, -21, 0, 0.023, 2.34, -67.574, 0.6, 7, 0, 0.023, 2.44, 18.024, -1.9, -22, 0, 0.023, 3.7, 469.4, 0, 0, 0, 0.023, 0.72, 7136.511, -2.2, -19, 0, 0.023, 4.5, 15582.569, -0.7, 6, 0, 0.023, 2.8, -16586.395, -4.9, -72, 0, 0.023, 1.51, 80.182, 0, 0, 0, 0.023, 1.09, 5261.583, -1.5, -12, 0, 0.023, 0.56, 54956.954, -0.5, 44, 0, 0.023, 4.01, 8550.86, -2.2, -19, 0, 0.023, 4.46, 38995.448, -4.1, -14, 0, 0.023, 3.82, 2358.126, 0, 0, 0, 0.022, 3.77, 32271.125, 0.5, 34, 0, 0.022, 0.82, 15935.775, -0.7, 6, 0, 0.022, 1.07, 24013.421, -2.9, -13, 0, 0.022, 0.4, 8940.078, -2.2, -19, 0, 0.022, 2.06, 15700.489, -0.7, 6, 0, 0.022, 4.27, 15124.002, -5, -45, 0, 0.021, 1.16, 56071.583, 3.2, 88, 0, 0.021, 5.58, 9572.189, -2.2, -19, 0, 0.02, 1.7, -17.273, -3.7, -44, 0, 0.02, 3.05, 214.617, 0, 0, 0, 0.02, 4.41, 8391.048, -2.2, -19, 0, 0.02, 5.95, 23869.145, 2.4, 56, 0, 0.02, 0.42, 40947.927, -4.7, -21, 0, 0.019, 1.39, 5818.897, 0.3, 10, 0, 0.019, 0.71, 23873.747, -0.7, 6, 0, 0.019, 2.81, 7291.615, -2.2, -19, 0, 0.019, 5.09, 8428.018, -2.2, -19, 0, 0.019, 4.14, 6518.187, -1.6, -12, 0, 0.019, 3.85, 21.33, 0, 0, 0, 0.018, 0.66, 14445.046, -0.7, 6, 0, 0.018, 1.65, 0.966, -4, -48, 0, 0.018, 5.64, -17143.709, -6.8, -94, 0, 0.018, 6.01, 7736.432, -2.2, -19, 0, 0.018, 2.74, 31153.083, -1.9, 5, 0, 0.018, 4.58, 6116.355, -2.2, -19, 0, 0.018, 2.28, 46.401, 0.3, 0, 0, 0.018, 3.8, 10213.597, 1.4, 25, 0, 0.018, 2.84, 56281.132, -1.1, 36, 0, 0.018, 3.53, 8249.062, 1.5, 25, 0, 0.017, 4.43, 20871.911, -3, -13, 0, 0.017, 4.44, 627.596, 0, 0, 0, 0.017, 1.85, 628.308, 0, 0, 0, 0.017, 1.19, 8408.321, 2, 25, 0, 0.017, 1.95, 7214.056, -2, -19, 0, 0.017, 1.57, 7214.07, -2, -19, 0, 0.017, 1.65, 13870.811, -6, -60, 0, 0.017, 0.3, 22.542, -4, -44, 0, 0.017, 2.62, -119.445, 0, 0, 0, 0.016, 4.87, 5747.909, 2, 32, 0, 0.016, 4.45, 14339.108, -1, 6, 0, 0.016, 1.83, 41366.68, 0, 30, 0, 0.016, 4.53, 16309.618, -3, -23, 0, 0.016, 2.54, 15542.754, -1, 6, 0, 0.016, 6.05, 1203.646, 0, 0, 0, 0.015, 5.2, 2751.147, 0, 0, 0, 0.015, 1.8, -10699.924, -5, -69, 0, 0.015, 0.4, 22824.391, -3, -20, 0, 0.015, 2.1, 30666.756, -6, -39, 0, 0.015, 2.1, 6010.417, -2, -19, 0, 0.015, 0.7, -23729.47, -5, -75, 0, 0.015, 1.4, 14363.691, -1, 6, 0, 0.015, 5.8, 16900.689, -2, 0, 0, 0.015, 5.2, 23800.458, 3, 53, 0, 0.015, 5.3, 6035, -2, -19, 0, 0.015, 1.2, 8251.139, 2, 25, 0, 0.015, 3.6, -8.86, 0, 0, 0, 0.015, 0.8, 882.739, 0, 0, 0, 0.015, 3, 1021.329, 0, 0, 0, 0.015, 0.6, 23296.107, 1, 31, 0, 0.014, 5.4, 7227.181, 2, 25, 0, 0.014, 0.1, 7213.352, -2, -19, 0, 0.014, 4, 15506.706, 3, 50, 0, 0.014, 3.4, 7214.774, -2, -19, 0, 0.014, 4.6, 6665.385, -2, -19, 0, 0.014, 0.1, -8.636, -2, -22, 0, 0.014, 3.1, 15465.202, -1, 6, 0, 0.014, 4.9, 508.863, 0, 0, 0, 0.014, 3.5, 8406.244, 2, 25, 0, 0.014, 1.3, 13313.497, -8, -82, 0, 0.014, 2.8, 49276.619, -3, 0, 0, 0.014, 0.1, 30528.194, -3, -10, 0, 0.013, 1.7, 25128.05, 1, 31, 0, 0.013, 2.9, 14128.405, -1, 6, 0, 0.013, 3.4, 57395.761, 3, 80, 0, 0.013, 2.7, 13029.546, -1, 6, 0, 0.013, 3.9, 7802.556, -2, -19, 0, 0.013, 1.6, 8258.802, -2, -19, 0, 0.013, 2.2, 8417.709, -2, -19, 0, 0.013, 0.7, 9965.21, -2, -19, 0, 0.013, 3.4, 50391.247, 0, 48, 0, 0.013, 3, 7134.433, -2, -19, 0, 0.013, 2.9, 30599.182, -5, -31, 0, 0.013, 3.6, -9723.857, 1, 0, 0, 0.013, 4.8, 7607.084, -2, -19, 0, 0.012, 0.8, 23837.689, 1, 35, 0, 0.012, 3.6, 4.409, -4, -44, 0, 0.012, 5, 16657.031, 3, 50, 0, 0.012, 4.4, 16657.735, 3, 50, 0, 0.012, 1.1, 15578.803, -4, -38, 0, 0.012, 6, -11.49, 0, 0, 0, 0.012, 1.9, 8164.398, 0, 0, 0, 0.012, 2.4, 31852.372, -4, -17, 0, 0.012, 2.4, 6607.085, -2, -19, 0, 0.012, 4.2, 8359.87, 0, 0, 0, 0.012, 0.5, 5799.713, -2, -19, 0, 0.012, 2.7, 7220.622, 0, 0, 0, 0.012, 4.3, -139.72, 0, 0, 0, 0.012, 2.3, 13728.836, -2, -16, 0, 0.011, 3.6, 14912.146, 1, 31, 0, 0.011, 4.7, 14916.748, -2, -19, 0],
+  [1.6768, 4.66926, 628.301955, -0.0266, 0.1, -5e-3, 0.51642, 3.3721, 6585.76091, -2.158, -18.9, 0.09, 0.41383, 5.7277, 14914.452335, -0.635, 6.2, -0.04, 0.37115, 3.9695, 7700.389469, 1.55, 25, -0.12, 0.2756, 0.7416, 8956.99338, 1.496, 25.1, -0.13, 0.24599, 4.2253, -2.3012, 1.523, 25.1, -0.12, 0.07118, 0.1443, 7842.36482, -2.211, -19, 0.08, 0.06128, 2.4998, 16171.05625, -0.688, 6, 0, 0.04516, 0.443, 8399.6791, -0.36, 3, 0, 0.04048, 5.771, 14286.15038, -0.61, 6, 0, 0.03747, 4.626, 1256.60391, -0.05, 0, 0, 0.03707, 3.415, 5957.45895, -2.13, -19, 0.1, 0.03649, 1.8, 23243.14376, 0.89, 31, -0.2, 0.02438, 0.042, 16029.08089, 3.07, 50, -0.2, 0.02165, 1.017, -1742.93051, -3.68, -44, 0.2, 0.01923, 3.097, 17285.6848, 3.02, 50, -0.3, 0.01692, 1.28, 0.3286, 1.52, 25, -0.1, 0.01361, 0.298, 8326.3902, 3.05, 50, -0.2, 0.01293, 4.013, 7072.0875, 1.58, 25, -0.1, 0.01276, 4.413, 8330.9926, 0, 0, 0, 0.0127, 0.101, 8470.6668, -2.24, -19, 0.1, 0.01097, 1.203, 22128.5152, -2.82, -13, 0, 0.01088, 2.545, 15542.7543, -0.66, 6, 0, 835e-5, 0.19, 7214.0629, -2.18, -19, 0.1, 734e-5, 4.855, 24499.7477, 0.83, 31, -0.2, 686e-5, 5.13, 13799.8238, -4.34, -38, 0.2, 631e-5, 0.93, -486.3266, -3.73, -44, 0, 585e-5, 0.699, 9585.2953, 1.5, 25, 0, 566e-5, 4.073, 8328.3391, 1.5, 25, 0, 566e-5, 0.638, 8329.0437, 1.5, 25, 0, 539e-5, 2.472, -1952.48, 0.6, 7, 0, 509e-5, 2.88, -0.7113, 0, 0, 0, 469e-5, 3.56, 30457.2066, -1.3, 12, 0, 387e-5, 0.78, -0.3523, 0, 0, 0, 378e-5, 1.84, 22614.8418, 0.9, 31, 0, 362e-5, 5.53, -695.8761, 0.6, 7, 0, 317e-5, 2.8, 16728.3705, 1.2, 28, 0, 303e-5, 6.07, 157.7344, 0, 0, 0, 3e-3, 2.53, 33.757, -0.3, -4, 0, 295e-5, 4.16, 31571.8352, 2.4, 56, 0, 289e-5, 5.98, 7211.7617, -0.7, 6, 0, 285e-5, 2.06, 15540.4531, 0.9, 31, 0, 283e-5, 2.65, 2.6298, 0, 0, 0, 282e-5, 6.17, 15545.0555, -2.2, -19, 0, 278e-5, 1.23, -39.8149, 0, 0, 0, 272e-5, 3.82, 7216.3641, -3.7, -44, 0, 27e-4, 4.37, 70.9877, -1.9, -22, 0, 256e-5, 5.81, 13657.8484, -0.6, 6, 0, 244e-5, 5.64, -0.2237, 1.5, 25, 0, 24e-4, 2.96, 8311.7707, -2.2, -19, 0, 239e-5, 0.87, -33.7814, 0.3, 4, 0, 216e-5, 2.31, 15.9995, -2.2, -19, 0, 186e-5, 3.46, 5329.157, -2.1, -19, 0, 169e-5, 2.4, 24357.772, 4.6, 75, 0, 161e-5, 5.8, 8329.403, 1.5, 25, 0, 161e-5, 5.2, 8327.98, 1.5, 25, 0, 16e-4, 4.26, 23385.119, -2.9, -13, 0, 156e-5, 1.26, 550.755, 0, 0, 0, 155e-5, 1.25, 21500.213, -2.8, -13, 0, 152e-5, 0.6, -16.921, -3.7, -44, 0, 15e-4, 2.71, -79.63, 0, 0, 0, 15e-4, 5.29, 15.542, 0, 0, 0, 148e-5, 1.06, -2371.232, -3.7, -44, 0, 141e-5, 0.77, 8328.691, 1.5, 25, 0, 141e-5, 3.67, 7143.075, -0.3, 0, 0, 138e-5, 5.45, 25614.376, 4.5, 75, 0, 129e-5, 4.9, 23871.446, 0.9, 31, 0, 126e-5, 4.03, 141.975, -3.8, -44, 0, 124e-5, 6.01, 522.369, 0, 0, 0, 12e-4, 4.94, -10071.622, -5.2, -69, 0, 118e-5, 5.07, -15.419, -2.2, -19, 0, 107e-5, 3.49, 23452.693, -3.4, -20, 0, 104e-5, 4.78, 17495.234, -1.3, 0, 0, 103e-5, 1.44, -18.049, -2.2, -19, 0, 102e-5, 5.63, 15542.402, -0.7, 6, 0, 102e-5, 2.59, 15543.107, -0.7, 6, 0, 1e-3, 4.11, -6.559, -1.9, -22, 0, 97e-5, 0.08, 15400.779, 3.1, 50, 0, 96e-5, 5.84, 31781.385, -1.9, 5, 0, 94e-5, 1.08, 8328.363, 0, 0, 0, 94e-5, 2.46, 16799.358, -0.7, 6, 0, 94e-5, 1.69, 6376.211, 2.2, 32, 0, 93e-5, 3.64, 8329.02, 3, 50, 0, 93e-5, 2.65, 16655.082, 4.6, 75, 0, 9e-4, 1.9, 15056.428, -4.4, -38, 0, 89e-5, 1.59, 52.969, 0, 0, 0, 88e-5, 2.02, -8257.704, -3.4, -47, 0, 88e-5, 3.02, 7213.711, -2.2, -19, 0, 87e-5, 0.5, 7214.415, -2.2, -19, 0, 87e-5, 0.49, 16659.684, 1.5, 25, 0, 82e-5, 5.64, -4.931, 1.5, 25, 0, 79e-5, 5.17, 13171.522, -4.3, -38, 0, 76e-5, 3.6, 29828.905, -1.3, 12, 0, 76e-5, 4.08, 24567.322, 0.3, 24, 0, 76e-5, 4.58, 1884.906, -0.1, 0, 0, 73e-5, 0.33, 31713.811, -1.4, 12, 0, 73e-5, 0.93, 32828.439, 2.4, 56, 0, 71e-5, 5.91, 38785.898, 0.2, 37, 0, 69e-5, 2.2, 15613.742, -2.5, -16, 0, 66e-5, 3.87, 15.732, -2.5, -23, 0, 66e-5, 0.86, 25823.926, 0.2, 24, 0, 65e-5, 2.52, 8170.957, 1.5, 25, 0, 63e-5, 0.18, 8322.132, -0.3, 0, 0, 6e-4, 5.84, 8326.062, 1.5, 25, 0, 6e-4, 5.15, 8331.321, 1.5, 25, 0, 6e-4, 2.18, 8486.426, 1.5, 25, 0, 58e-5, 2.3, -1.731, -4, -44, 0, 58e-5, 5.43, 14357.138, -2, -16, 0, 57e-5, 3.09, 8294.91, 2, 29, 0, 57e-5, 4.67, -8362.473, -1, -21, 0, 56e-5, 4.15, 16833.151, -1, 0, 0, 54e-5, 1.93, 7056.329, -2, -19, 0, 54e-5, 5.27, 8315.574, -2, -19, 0, 52e-5, 5.6, 8311.418, -2, -19, 0, 52e-5, 2.7, -77.552, 0, 0, 0, 51e-5, 4.3, 7230.984, 2, 25, 0, 5e-4, 0.4, -0.508, 0, 0, 0, 49e-5, 5.4, 7211.433, -2, -19, 0, 49e-5, 4.4, 7216.693, -2, -19, 0, 49e-5, 4.3, 16864.631, 0, 24, 0, 49e-5, 2.2, 16869.234, -3, -26, 0, 47e-5, 6.1, 627.596, 0, 0, 0, 47e-5, 5, 12.619, 1, 7, 0, 45e-5, 4.9, -8815.018, -5, -69, 0, 44e-5, 1.6, 62.133, -2, -19, 0, 42e-5, 2.9, -13.118, -4, -44, 0, 42e-5, 4.1, -119.445, 0, 0, 0, 41e-5, 4.3, 22756.817, -3, -13, 0, 41e-5, 3.6, 8288.877, 2, 25, 0, 4e-4, 0.5, 6663.308, -2, -19, 0, 4e-4, 1.1, 8368.506, 2, 25, 0, 39e-5, 4.1, 6443.786, 2, 25, 0, 39e-5, 3.1, 16657.383, 3, 50, 0, 38e-5, 0.1, 16657.031, 3, 50, 0, 38e-5, 3, 16657.735, 3, 50, 0, 38e-5, 4.6, 23942.433, -1, 9, 0, 37e-5, 4.3, 15385.02, -1, 6, 0, 37e-5, 5, 548.678, 0, 0, 0, 36e-5, 1.8, 7213.352, -2, -19, 0, 36e-5, 1.7, 7214.774, -2, -19, 0, 35e-5, 1.1, 7777.936, 2, 25, 0, 35e-5, 1.6, -8.86, 0, 0, 0, 35e-5, 4.4, 23869.145, 2, 56, 0, 35e-5, 2, 6691.693, -2, -19, 0, 34e-5, 1.3, -1185.616, -2, -22, 0, 34e-5, 2.2, 23873.747, -1, 6, 0, 33e-5, 2, -235.287, 0, 0, 0, 33e-5, 3.1, 17913.987, 3, 50, 0, 33e-5, 1, 8351.233, -2, -19, 0],
+  [487e-5, 4.6693, 628.30196, -0.027, 0, -0.01, 228e-5, 2.6746, -2.3012, 1.523, 25, -0.12, 15e-4, 3.372, 6585.76091, -2.16, -19, 0.1, 12e-4, 5.728, 14914.45233, -0.64, 6, 0, 108e-5, 3.969, 7700.38947, 1.55, 25, -0.1, 8e-4, 0.742, 8956.99338, 1.5, 25, -0.1, 254e-6, 6.002, 0.3286, 1.52, 25, -0.1, 21e-5, 0.144, 7842.3648, -2.21, -19, 0, 18e-5, 2.5, 16171.0562, -0.7, 6, 0, 13e-5, 0.44, 8399.6791, -0.4, 3, 0, 126e-6, 5.03, 8326.3902, 3, 50, 0, 12e-5, 5.77, 14286.1504, -0.6, 6, 0, 118e-6, 5.96, 8330.9926, 0, 0, 0, 11e-5, 1.8, 23243.1438, 0.9, 31, 0, 11e-5, 3.42, 5957.459, -2.1, -19, 0, 11e-5, 4.63, 1256.6039, -0.1, 0, 0, 99e-6, 4.7, -0.7113, 0, 0, 0, 7e-5, 0.04, 16029.0809, 3.1, 50, 0, 7e-5, 5.14, 8328.3391, 1.5, 25, 0, 7e-5, 5.85, 8329.0437, 1.5, 25, 0, 6e-5, 1.02, -1742.9305, -3.7, -44, 0, 6e-5, 3.1, 17285.6848, 3, 50, 0, 54e-6, 5.69, -0.352, 0, 0, 0, 43e-6, 0.52, 15.542, 0, 0, 0, 41e-6, 2.03, 2.63, 0, 0, 0, 4e-5, 0.1, 8470.667, -2.2, -19, 0, 4e-5, 4.01, 7072.088, 1.6, 25, 0, 36e-6, 2.93, -8.86, -0.3, 0, 0, 3e-5, 1.2, 22128.515, -2.8, -13, 0, 3e-5, 2.54, 15542.754, -0.7, 6, 0, 27e-6, 4.43, 7211.762, -0.7, 6, 0, 26e-6, 0.51, 15540.453, 0.9, 31, 0, 26e-6, 1.44, 15545.055, -2.2, -19, 0, 25e-6, 5.37, 7216.364, -3.7, -44, 0],
+  [12e-6, 1.041, -2.3012, 1.52, 25, -0.1, 17e-7, 0.31, -0.711, 0, 0, 0]
+]);
+__publicField(_ShouXingUtil, "QI_KB", [
+  1640650479938e-6,
+  15.218425,
+  1642476703182e-6,
+  15.21874996,
+  1683430515601e-6,
+  15.218750011,
+  1752157640664e-6,
+  15.218749978,
+  1807675003759e-6,
+  15.218620279,
+  1883627765182e-6,
+  15.218612292,
+  19073691281e-4,
+  15.218449176,
+  1936603140413e-6,
+  15.218425,
+  193914552418e-5,
+  15.218466998,
+  19471807983e-4,
+  15.218524844,
+  1964362041824e-6,
+  15.218533526,
+  1987372340971e-6,
+  15.218513908,
+  1999653819126e-6,
+  15.218530782,
+  2007445469786e-6,
+  15.218535181,
+  2021324917146e-6,
+  15.218526248,
+  2047257232342e-6,
+  15.218519654,
+  2070282898213e-6,
+  15.218425,
+  207320487285e-5,
+  15.218515221,
+  2080144500926e-6,
+  15.218530782,
+  2086703688963e-6,
+  15.218523776,
+  2110033182763e-6,
+  15.218425,
+  2111190300888e-6,
+  15.218425,
+  2113731271005e-6,
+  15.218515671,
+  2120670840263e-6,
+  15.218425,
+  2123973309063e-6,
+  15.218425,
+  2125068997336e-6,
+  15.218477932,
+  2136026312633e-6,
+  15.218472436,
+  2156099495538e-6,
+  15.218425,
+  2159021324663e-6,
+  15.218425,
+  2162308575254e-6,
+  15.218461742,
+  2178485706538e-6,
+  15.218425,
+  2178759662849e-6,
+  15.218445786,
+  21853340208e-4,
+  15.218425,
+  2187525481425e-6,
+  15.218425,
+  2188621191481e-6,
+  15.218437494,
+  232214776e-2
+]);
+__publicField(_ShouXingUtil, "QB", _ShouXingUtil.decode("FrcFs22AFsckF2tsDtFqEtF1posFdFgiFseFtmelpsEfhkF2anmelpFlF1ikrotcnEqEq2FfqmcDsrFor22FgFrcgDscFs22FgEeFtE2sfFs22sCoEsaF2tsD1FpeE2eFsssEciFsFnmelpFcFhkF2tcnEqEpFgkrotcnEqrEtFermcDsrE222FgBmcmr22DaEfnaF222sD1FpeForeF2tssEfiFpEoeFssD1iFstEqFppDgFstcnEqEpFg11FscnEqrAoAF2ClAEsDmDtCtBaDlAFbAEpAAAAAD2FgBiBqoBbnBaBoAAAAAAAEgDqAdBqAFrBaBoACdAAf1AACgAAAeBbCamDgEifAE2AABa1C1BgFdiAAACoCeE1ADiEifDaAEqAAFe1AcFbcAAAAAF1iFaAAACpACmFmAAAAAAAACrDaAAADG0"));
+__publicField(_ShouXingUtil, "SHUO_KB", [1457698231017e-6, 29.53067166, 1546082512234e-6, 29.53085106, 16406407353e-4, 29.5306, 1642472151543e-6, 29.53085439, 16834305093e-4, 29.53086148, 1752148041079e-6, 29.53085097, 1807665420323e-6, 29.53059851, 18836181141e-4, 29.5306, 19073607047e-4, 29.5306, 19365962249e-4, 29.5306, 19391356753e-4, 29.5306, 1947168]);
+__publicField(_ShouXingUtil, "SB", _ShouXingUtil.decode("EqoFscDcrFpmEsF2DfFideFelFpFfFfFiaipqti1ksttikptikqckstekqttgkqttgkqteksttikptikq2fjstgjqttjkqttgkqtekstfkptikq2tijstgjiFkirFsAeACoFsiDaDiADc1AFbBfgdfikijFifegF1FhaikgFag1E2btaieeibggiffdeigFfqDfaiBkF1kEaikhkigeidhhdiegcFfakF1ggkidbiaedksaFffckekidhhdhdikcikiakicjF1deedFhFccgicdekgiFbiaikcfi1kbFibefgEgFdcFkFeFkdcfkF1kfkcickEiFkDacFiEfbiaejcFfffkhkdgkaiei1ehigikhdFikfckF1dhhdikcfgjikhfjicjicgiehdikcikggcifgiejF1jkieFhegikggcikFegiegkfjebhigikggcikdgkaFkijcfkcikfkcifikiggkaeeigefkcdfcfkhkdgkegieidhijcFfakhfgeidieidiegikhfkfckfcjbdehdikggikgkfkicjicjF1dbidikFiggcifgiejkiegkigcdiegfggcikdbgfgefjF1kfegikggcikdgFkeeijcfkcikfkekcikdgkabhkFikaffcfkhkdgkegbiaekfkiakicjhfgqdq2fkiakgkfkhfkfcjiekgFebicggbedF1jikejbbbiakgbgkacgiejkijjgigfiakggfggcibFifjefjF1kfekdgjcibFeFkijcfkfhkfkeaieigekgbhkfikidfcjeaibgekgdkiffiffkiakF1jhbakgdki1dj1ikfkicjicjieeFkgdkicggkighdF1jfgkgfgbdkicggfggkidFkiekgijkeigfiskiggfaidheigF1jekijcikickiggkidhhdbgcfkFikikhkigeidieFikggikhkffaffijhidhhakgdkhkijF1kiakF1kfheakgdkifiggkigicjiejkieedikgdfcggkigieeiejfgkgkigbgikicggkiaideeijkefjeijikhkiggkiaidheigcikaikffikijgkiahi1hhdikgjfifaakekighie1hiaikggikhkffakicjhiahaikggikhkijF1kfejfeFhidikggiffiggkigicjiekgieeigikggiffiggkidheigkgfjkeigiegikifiggkidhedeijcfkFikikhkiggkidhh1ehigcikaffkhkiggkidhh1hhigikekfiFkFikcidhh1hitcikggikhkfkicjicghiediaikggikhkijbjfejfeFhaikggifikiggkigiejkikgkgieeigikggiffiggkigieeigekijcijikggifikiggkideedeijkefkfckikhkiggkidhh1ehijcikaffkhkiggkidhh1hhigikhkikFikfckcidhh1hiaikgjikhfjicjicgiehdikcikggifikigiejfejkieFhegikggifikiggfghigkfjeijkhigikggifikiggkigieeijcijcikfksikifikiggkidehdeijcfdckikhkiggkhghh1ehijikifffffkhsFngErD1pAfBoDd1BlEtFqA2AqoEpDqElAEsEeB2BmADlDkqBtC1FnEpDqnEmFsFsAFnllBbFmDsDiCtDmAB2BmtCgpEplCpAEiBiEoFqFtEqsDcCnFtADnFlEgdkEgmEtEsCtDmADqFtAFrAtEcCqAE1BoFqC1F1DrFtBmFtAC2ACnFaoCgADcADcCcFfoFtDlAFgmFqBq2bpEoAEmkqnEeCtAE1bAEqgDfFfCrgEcBrACfAAABqAAB1AAClEnFeCtCgAADqDoBmtAAACbFiAAADsEtBqAB2FsDqpFqEmFsCeDtFlCeDtoEpClEqAAFrAFoCgFmFsFqEnAEcCqFeCtFtEnAEeFtAAEkFnErAABbFkADnAAeCtFeAfBoAEpFtAABtFqAApDcCGJ"));
+var ShouXingUtil = _ShouXingUtil;
+var _SolarTerm = class _SolarTerm2 extends LoopTyme {
+  constructor(year, indexOrName, cursoryJulianDay) {
+    super(_SolarTerm2.NAMES, indexOrName);
+    __publicField(this, "cursoryJulianDay");
+    if (cursoryJulianDay) {
+      this.cursoryJulianDay = cursoryJulianDay;
+    } else {
+      this.cursoryJulianDay = 0;
+      this.initByYear(year, typeof indexOrName === "number" ? indexOrName : this.index);
+    }
+  }
+  initByYear(year, offset) {
+    const jd = Math.floor((year - 2e3) * 365.2422 + 180);
+    let w = Math.floor((jd - 355 + 183) / 365.2422) * 365.2422 + 355;
+    if (ShouXingUtil.calcQi(w) > jd) {
+      w -= 365.2422;
+    }
+    this.cursoryJulianDay = ShouXingUtil.calcQi(w + 15.2184 * offset);
+  }
+  static fromIndex(year, index2) {
+    return new _SolarTerm2(year, index2);
+  }
+  static fromName(year, name) {
+    return new _SolarTerm2(year, name);
+  }
+  next(n2) {
+    return new _SolarTerm2(0, this.nextIndex(n2), this.cursoryJulianDay + 15.2184 * n2);
+  }
+  isJie() {
+    return this.index % 2 === 1;
+  }
+  isQi() {
+    return this.index % 2 === 0;
+  }
+  getJulianDay() {
+    return JulianDay.fromJulianDay(ShouXingUtil.qiAccurate2(this.cursoryJulianDay) + JulianDay.J2000);
+  }
+  getCursoryJulianDay() {
+    return this.cursoryJulianDay;
+  }
+};
+__publicField(_SolarTerm, "NAMES", ["\u51AC\u81F3", "\u5C0F\u5BD2", "\u5927\u5BD2", "\u7ACB\u6625", "\u96E8\u6C34", "\u60CA\u86F0", "\u6625\u5206", "\u6E05\u660E", "\u8C37\u96E8", "\u7ACB\u590F", "\u5C0F\u6EE1", "\u8292\u79CD", "\u590F\u81F3", "\u5C0F\u6691", "\u5927\u6691", "\u7ACB\u79CB", "\u5904\u6691", "\u767D\u9732", "\u79CB\u5206", "\u5BD2\u9732", "\u971C\u964D", "\u7ACB\u51AC", "\u5C0F\u96EA", "\u5927\u96EA"]);
+var SolarTerm = _SolarTerm;
+var SolarYear = class extends AbstractTyme {
+  constructor(year) {
+    super();
+    __publicField(this, "year");
+    if (year < 1 || year > 9999) {
+      throw new Error(`illegal solar year: ${year}`);
+    }
+    this.year = year;
+  }
+  static fromYear(year) {
+    return new SolarYear(year);
+  }
+  getYear() {
+    return this.year;
+  }
+  getDayCount() {
+    if (1582 === this.year) {
+      return 355;
+    }
+    return this.isLeap() ? 366 : 365;
+  }
+  isLeap() {
+    if (this.year < 1600) {
+      return this.year % 4 === 0;
+    }
+    return this.year % 4 === 0 && this.year % 100 !== 0 || this.year % 400 === 0;
+  }
+  getName() {
+    return `${this.year}\u5E74`;
+  }
+  next(n2) {
+    return SolarYear.fromYear(this.year + n2);
+  }
+  getMonths() {
+    const l2 = [];
+    for (let i2 = 0; i2 < 12; i2++) {
+      l2.push(SolarMonth.fromYm(this.year, i2 + 1));
+    }
+    return l2;
+  }
+  getSeasons() {
+    const l2 = [];
+    for (let i2 = 0; i2 < 4; i2++) {
+      l2.push(SolarSeason.fromIndex(this.year, i2));
+    }
+    return l2;
+  }
+  getHalfYears() {
+    const l2 = [];
+    for (let i2 = 0; i2 < 2; i2++) {
+      l2.push(SolarHalfYear.fromIndex(this.year, i2));
+    }
+    return l2;
+  }
+};
+var _SolarHalfYear = class _SolarHalfYear2 extends AbstractTyme {
+  constructor(year, index2) {
+    super();
+    __publicField(this, "year");
+    __publicField(this, "index");
+    this.year = SolarYear.fromYear(year);
+    if (index2 < 0 || index2 > 1) {
+      throw new Error(`illegal solar half year index: ${index2}`);
+    }
+    this.index = index2;
+  }
+  static fromIndex(year, index2) {
+    return new _SolarHalfYear2(year, index2);
+  }
+  getYear() {
+    return this.year;
+  }
+  getIndex() {
+    return this.index;
+  }
+  getName() {
+    return _SolarHalfYear2.NAMES[this.index];
+  }
+  toString() {
+    return this.year.toString() + this.getName();
+  }
+  next(n2) {
+    if (n2 == 0) {
+      return _SolarHalfYear2.fromIndex(this.year.getYear(), this.index);
+    }
+    let i2 = this.index + n2;
+    let y = this.year.getYear() + ~~(i2 / 2);
+    i2 %= 2;
+    if (i2 < 0) {
+      i2 += 2;
+      y -= 1;
+    }
+    return _SolarHalfYear2.fromIndex(y, i2);
+  }
+  getMonths() {
+    const l2 = [];
+    const y = this.year.getYear();
+    for (let i2 = 0; i2 < 6; i2++) {
+      l2.push(SolarMonth.fromYm(y, this.index * 6 + i2 + 1));
+    }
+    return l2;
+  }
+  getSeasons() {
+    const l2 = [];
+    const y = this.year.getYear();
+    for (let i2 = 0; i2 < 2; i2++) {
+      l2.push(SolarSeason.fromIndex(y, this.index * 2 + i2));
+    }
+    return l2;
+  }
+};
+__publicField(_SolarHalfYear, "NAMES", ["\u4E0A\u534A\u5E74", "\u4E0B\u534A\u5E74"]);
+var SolarHalfYear = _SolarHalfYear;
+var _SolarSeason = class _SolarSeason2 extends AbstractTyme {
+  constructor(year, index2) {
+    super();
+    __publicField(this, "year");
+    __publicField(this, "index");
+    this.year = SolarYear.fromYear(year);
+    if (index2 < 0 || index2 > 3) {
+      throw new Error(`illegal solar season index: ${index2}`);
+    }
+    this.index = index2;
+  }
+  static fromIndex(year, index2) {
+    return new _SolarSeason2(year, index2);
+  }
+  getYear() {
+    return this.year;
+  }
+  getIndex() {
+    return this.index;
+  }
+  getName() {
+    return _SolarSeason2.NAMES[this.index];
+  }
+  toString() {
+    return this.year.toString() + this.getName();
+  }
+  next(n2) {
+    if (n2 == 0) {
+      return _SolarSeason2.fromIndex(this.year.getYear(), this.index);
+    }
+    let i2 = this.index + n2;
+    let y = this.year.getYear() + ~~(i2 / 4);
+    i2 %= 4;
+    if (i2 < 0) {
+      i2 += 4;
+      y -= 1;
+    }
+    return _SolarSeason2.fromIndex(y, i2);
+  }
+  getMonths() {
+    const l2 = [];
+    const y = this.year.getYear();
+    for (let i2 = 0; i2 < 3; i2++) {
+      l2.push(SolarMonth.fromYm(y, this.index * 3 + i2 + 1));
+    }
+    return l2;
+  }
+};
+__publicField(_SolarSeason, "NAMES", ["\u4E00\u5B63\u5EA6", "\u4E8C\u5B63\u5EA6", "\u4E09\u5B63\u5EA6", "\u56DB\u5B63\u5EA6"]);
+var SolarSeason = _SolarSeason;
+var _SolarMonth = class _SolarMonth2 extends AbstractTyme {
+  constructor(year, month) {
+    super();
+    __publicField(this, "year");
+    __publicField(this, "month");
+    this.year = SolarYear.fromYear(year);
+    if (month < 1 || month > 12) {
+      throw new Error(`illegal solar month: ${month}`);
+    }
+    this.month = month;
+  }
+  static fromYm(year, month) {
+    return new _SolarMonth2(year, month);
+  }
+  getYear() {
+    return this.year;
+  }
+  getMonth() {
+    return this.month;
+  }
+  getDayCount() {
+    if (1582 === this.year.getYear() && 10 === this.month) {
+      return 21;
+    }
+    let d = _SolarMonth2.DAYS[this.getIndexInYear()];
+    if (2 === this.month && this.year.isLeap()) {
+      d++;
+    }
+    return d;
+  }
+  getIndexInYear() {
+    return this.month - 1;
+  }
+  getSeason() {
+    return SolarSeason.fromIndex(this.year.getYear(), ~~(this.getIndexInYear() / 3));
+  }
+  getWeekCount(start) {
+    return Math.ceil((this.indexOf(SolarDay.fromYmd(this.year.getYear(), this.month, 1).getWeek().getIndex() - start, 7) + this.getDayCount()) / 7);
+  }
+  getName() {
+    return _SolarMonth2.NAMES[this.getIndexInYear()];
+  }
+  toString() {
+    return this.year.toString() + this.getName();
+  }
+  next(n2) {
+    if (n2 == 0) {
+      return _SolarMonth2.fromYm(this.year.getYear(), this.month);
+    }
+    let m = this.month + n2;
+    let y = this.year.getYear() + ~~(m / 12);
+    m %= 12;
+    if (m < 1) {
+      m += 12;
+      y--;
+    }
+    return _SolarMonth2.fromYm(y, m);
+  }
+  getWeeks(start) {
+    const l2 = [];
+    const y = this.year.getYear();
+    for (let i2 = 0; i2 < this.getWeekCount(start); i2++) {
+      l2.push(SolarWeek.fromYm(y, this.month, i2, start));
+    }
+    return l2;
+  }
+  getDays() {
+    const l2 = [];
+    const y = this.year.getYear();
+    for (let i2 = 0; i2 < this.getDayCount(); i2++) {
+      l2.push(SolarDay.fromYmd(y, this.month, i2 + 1));
+    }
+    return l2;
+  }
+};
+__publicField(_SolarMonth, "NAMES", ["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"]);
+__publicField(_SolarMonth, "DAYS", [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]);
+var SolarMonth = _SolarMonth;
+var _SolarWeek = class _SolarWeek2 extends AbstractTyme {
+  constructor(year, month, index2, start) {
+    super();
+    __publicField(this, "month");
+    __publicField(this, "index");
+    __publicField(this, "start");
+    if (index2 < 0 || index2 > 5) {
+      throw new Error(`illegal solar week index: ${index2}`);
+    }
+    if (start < 0 || start > 6) {
+      throw new Error(`illegal solar week start: ${start}`);
+    }
+    const m = SolarMonth.fromYm(year, month);
+    if (index2 >= m.getWeekCount(start)) {
+      throw new Error(`illegal solar week index: ${index2} in month: ${m.toString()}`);
+    }
+    this.month = m;
+    this.index = index2;
+    this.start = Week.fromIndex(start);
+  }
+  static fromYm(year, month, index2, start) {
+    return new _SolarWeek2(year, month, index2, start);
+  }
+  getMonth() {
+    return this.month;
+  }
+  getIndex() {
+    return this.index;
+  }
+  getIndexInYear() {
+    let i2 = 0;
+    let w = _SolarWeek2.fromYm(this.month.getYear().getYear(), 1, 0, this.start.getIndex());
+    while (!w.equals(this)) {
+      w = w.next(1);
+      i2++;
+    }
+    return i2;
+  }
+  getStart() {
+    return this.start;
+  }
+  getName() {
+    return _SolarWeek2.NAMES[this.index];
+  }
+  toString() {
+    return this.month.toString() + this.getName();
+  }
+  next(n2) {
+    const startIndex = this.start.getIndex();
+    if (n2 === 0) {
+      return _SolarWeek2.fromYm(this.month.getYear().getYear(), this.month.getMonth(), this.index, startIndex);
+    }
+    let d = this.index + n2;
+    let m = this.month;
+    let weeksInMonth = m.getWeekCount(startIndex);
+    const forward = n2 > 0;
+    const add = forward ? 1 : -1;
+    while (forward ? d >= weeksInMonth : d < 0) {
+      if (forward) {
+        d -= weeksInMonth;
+      }
+      if (!forward) {
+        if (!SolarDay.fromYmd(m.getYear().getYear(), m.getMonth(), 1).getWeek().equals(this.start)) {
+          d += add;
+        }
+      }
+      m = m.next(add);
+      if (forward) {
+        if (!SolarDay.fromYmd(m.getYear().getYear(), m.getMonth(), 1).getWeek().equals(this.start)) {
+          d += add;
+        }
+      }
+      weeksInMonth = m.getWeekCount(startIndex);
+      if (!forward) {
+        d += weeksInMonth;
+      }
+    }
+    return _SolarWeek2.fromYm(m.getYear().getYear(), m.getMonth(), d, startIndex);
+  }
+  getFirstDay() {
+    const m = this.getMonth();
+    const firstDay = SolarDay.fromYmd(m.getYear().getYear(), m.getMonth(), 1);
+    return firstDay.next(this.index * 7 - this.indexOf(firstDay.getWeek().getIndex() - this.start.getIndex(), 7));
+  }
+  getDays() {
+    const l2 = [];
+    const d = this.getFirstDay();
+    l2.push(d);
+    for (let i2 = 1; i2 < 7; i2++) {
+      l2.push(d.next(i2));
+    }
+    return l2;
+  }
+};
+__publicField(_SolarWeek, "NAMES", ["\u7B2C\u4E00\u5468", "\u7B2C\u4E8C\u5468", "\u7B2C\u4E09\u5468", "\u7B2C\u56DB\u5468", "\u7B2C\u4E94\u5468", "\u7B2C\u516D\u5468"]);
+var SolarWeek = _SolarWeek;
+var _SolarDay = class _SolarDay2 extends AbstractTyme {
+  constructor(year, month, day) {
+    super();
+    __publicField(this, "month");
+    __publicField(this, "day");
+    if (day < 1) {
+      throw new Error(`illegal solar day: ${year}-${month}-${day}`);
+    }
+    let m = SolarMonth.fromYm(year, month);
+    if (1582 === year && 10 === month) {
+      if (day > 4 && day < 15 || day > 31) {
+        throw new Error(`illegal solar day: ${year}-${month}-${day}`);
+      }
+    } else if (day > m.getDayCount()) {
+      throw new Error(`illegal solar day: ${year}-${month}-${day}`);
+    }
+    this.month = m;
+    this.day = day;
+  }
+  static fromYmd(year, month, day) {
+    return new _SolarDay2(year, month, day);
+  }
+  getMonth() {
+    return this.month;
+  }
+  getDay() {
+    return this.day;
+  }
+  getWeek() {
+    return this.getJulianDay().getWeek();
+  }
+  getConstellation() {
+    let index2 = 11;
+    const y = this.month.getMonth() * 100 + this.day;
+    if (y >= 321 && y <= 419) {
+      index2 = 0;
+    } else if (y >= 420 && y <= 520) {
+      index2 = 1;
+    } else if (y >= 521 && y <= 621) {
+      index2 = 2;
+    } else if (y >= 622 && y <= 722) {
+      index2 = 3;
+    } else if (y >= 723 && y <= 822) {
+      index2 = 4;
+    } else if (y >= 823 && y <= 922) {
+      index2 = 5;
+    } else if (y >= 923 && y <= 1023) {
+      index2 = 6;
+    } else if (y >= 1024 && y <= 1122) {
+      index2 = 7;
+    } else if (y >= 1123 && y <= 1221) {
+      index2 = 8;
+    } else if (y >= 1222 || y <= 119) {
+      index2 = 9;
+    } else if (y <= 218) {
+      index2 = 10;
+    }
+    return Constellation.fromIndex(index2);
+  }
+  getName() {
+    return _SolarDay2.NAMES[this.day - 1];
+  }
+  toString() {
+    return this.month.toString() + this.getName();
+  }
+  next(n2) {
+    return this.getJulianDay().next(n2).getSolarDay();
+  }
+  isBefore(target) {
+    const aYear = this.month.getYear().getYear();
+    const targetMonth = target.getMonth();
+    const bYear = targetMonth.getYear().getYear();
+    if (aYear === bYear) {
+      const aMonth = this.month.getMonth();
+      const bMonth = targetMonth.getMonth();
+      return aMonth === bMonth ? this.day < target.getDay() : aMonth < bMonth;
+    }
+    return aYear < bYear;
+  }
+  isAfter(target) {
+    const aYear = this.month.getYear().getYear();
+    const targetMonth = target.getMonth();
+    const bYear = targetMonth.getYear().getYear();
+    if (aYear === bYear) {
+      const aMonth = this.month.getMonth();
+      const bMonth = targetMonth.getMonth();
+      return aMonth === bMonth ? this.day > target.getDay() : aMonth > bMonth;
+    }
+    return aYear > bYear;
+  }
+  getTerm() {
+    let term = SolarTerm.fromIndex(this.month.getYear().getYear() + 1, 0);
+    while (this.isBefore(term.getJulianDay().getSolarDay())) {
+      term = term.next(-1);
+    }
+    return term;
+  }
+  getSolarWeek(start) {
+    let y = this.month.getYear().getYear();
+    let m = this.month.getMonth();
+    return SolarWeek.fromYm(y, m, Math.ceil((this.day + _SolarDay2.fromYmd(y, m, 1).getWeek().next(-start).getIndex()) / 7) - 1, start);
+  }
+  getPhenologyDay() {
+    const term = this.getTerm();
+    let dayIndex = this.subtract(term.getJulianDay().getSolarDay());
+    let index2 = ~~(dayIndex / 5);
+    if (index2 > 2) {
+      index2 = 2;
+    }
+    dayIndex -= index2 * 5;
+    return new PhenologyDay(Phenology.fromIndex(term.getIndex() * 3 + index2), dayIndex);
+  }
+  getDogDay() {
+    const xiaZhi = SolarTerm.fromIndex(this.month.getYear().getYear(), 12);
+    let start = xiaZhi.getJulianDay().getSolarDay();
+    let add = 6 - start.getLunarDay().getSixtyCycle().getHeavenStem().getIndex();
+    if (add < 0) {
+      add += 10;
+    }
+    add += 20;
+    start = start.next(add);
+    let days = this.subtract(start);
+    if (days < 0) {
+      return null;
+    }
+    if (days < 10) {
+      return new DogDay(Dog.fromIndex(0), days);
+    }
+    start = start.next(10);
+    days = this.subtract(start);
+    if (days < 10) {
+      return new DogDay(Dog.fromIndex(1), days);
+    }
+    start = start.next(10);
+    days = this.subtract(start);
+    if (xiaZhi.next(3).getJulianDay().getSolarDay().isAfter(start)) {
+      if (days < 10) {
+        return new DogDay(Dog.fromIndex(1), days + 10);
+      }
+      start = start.next(10);
+      days = this.subtract(start);
+    }
+    if (days < 10) {
+      return new DogDay(Dog.fromIndex(2), days);
+    }
+    return null;
+  }
+  getNineDay() {
+    const year = this.month.getYear().getYear();
+    let start = SolarTerm.fromIndex(year + 1, 0).getJulianDay().getSolarDay();
+    if (this.isBefore(start)) {
+      start = SolarTerm.fromIndex(year, 0).getJulianDay().getSolarDay();
+    }
+    const end = start.next(81);
+    if (this.isBefore(start) || !this.isBefore(end)) {
+      return null;
+    }
+    const days = this.subtract(start);
+    return new NineDay(Nine.fromIndex(~~(days / 9)), days % 9);
+  }
+  getIndexInYear() {
+    const m = this.month.getMonth();
+    const y = this.month.getYear().getYear();
+    let days = 0;
+    for (let i2 = 1; i2 < m; i2++) {
+      days += SolarMonth.fromYm(y, i2).getDayCount();
+    }
+    let d = this.day;
+    if (1582 === y && 10 === m) {
+      if (d >= 15) {
+        d -= 10;
+      }
+    }
+    return days + d - 1;
+  }
+  subtract(target) {
+    return ~~(this.getJulianDay().getDay() - target.getJulianDay().getDay());
+  }
+  getJulianDay() {
+    return JulianDay.fromYmdHms(this.month.getYear().getYear(), this.month.getMonth(), this.day, 0, 0, 0);
+  }
+  getLunarDay() {
+    let m = LunarMonth.fromYm(this.month.getYear().getYear(), this.month.getMonth()).next(-3);
+    let days = this.subtract(m.getFirstJulianDay().getSolarDay());
+    while (days >= m.getDayCount()) {
+      m = m.next(1);
+      days = this.subtract(m.getFirstJulianDay().getSolarDay());
+    }
+    return LunarDay.fromYmd(m.getYear().getYear(), m.getMonthWithLeap(), days + 1);
+  }
+  getLegalHoliday() {
+    const m = this.getMonth();
+    return LegalHoliday.fromYmd(m.getYear().getYear(), m.getMonth(), this.day);
+  }
+  getFestival() {
+    const m = this.getMonth();
+    return SolarFestival.fromYmd(m.getYear().getYear(), m.getMonth(), this.day);
+  }
+};
+__publicField(_SolarDay, "NAMES", ["1\u65E5", "2\u65E5", "3\u65E5", "4\u65E5", "5\u65E5", "6\u65E5", "7\u65E5", "8\u65E5", "9\u65E5", "10\u65E5", "11\u65E5", "12\u65E5", "13\u65E5", "14\u65E5", "15\u65E5", "16\u65E5", "17\u65E5", "18\u65E5", "19\u65E5", "20\u65E5", "21\u65E5", "22\u65E5", "23\u65E5", "24\u65E5", "25\u65E5", "26\u65E5", "27\u65E5", "28\u65E5", "29\u65E5", "30\u65E5", "31\u65E5"]);
+var SolarDay = _SolarDay;
+var SolarTime = class extends AbstractTyme {
+  constructor(year, month, day, hour, minute, second) {
+    super();
+    __publicField(this, "day");
+    __publicField(this, "hour");
+    __publicField(this, "minute");
+    __publicField(this, "second");
+    if (hour < 0 || hour > 23) {
+      throw new Error(`illegal hour: ${hour}`);
+    }
+    if (minute < 0 || minute > 59) {
+      throw new Error(`illegal minute: ${minute}`);
+    }
+    if (second < 0 || second > 59) {
+      throw new Error(`illegal second: ${second}`);
+    }
+    this.day = SolarDay.fromYmd(year, month, day);
+    this.hour = hour;
+    this.minute = minute;
+    this.second = second;
+  }
+  static fromYmdHms(year, month, day, hour, minute, second) {
+    return new SolarTime(year, month, day, hour, minute, second);
+  }
+  getDay() {
+    return this.day;
+  }
+  getHour() {
+    return this.hour;
+  }
+  getMinute() {
+    return this.minute;
+  }
+  getSecond() {
+    return this.second;
+  }
+  getName() {
+    const h = (this.hour < 10 ? "0" : "") + this.hour;
+    const m = (this.minute < 10 ? "0" : "") + this.minute;
+    const s = (this.second < 10 ? "0" : "") + this.second;
+    return `${h}:${m}:${s}`;
+  }
+  toString() {
+    return `${this.day.toString()} ${this.getName()}`;
+  }
+  next(n2) {
+    if (n2 == 0) {
+      const month = this.day.getMonth();
+      return SolarTime.fromYmdHms(month.getYear().getYear(), month.getMonth(), this.day.getDay(), this.hour, this.minute, this.second);
+    }
+    let ts = this.second + n2;
+    let tm = this.minute + ~~(ts / 60);
+    ts %= 60;
+    if (ts < 0) {
+      ts += 60;
+      tm -= 1;
+    }
+    let th = this.hour + ~~(tm / 60);
+    tm %= 60;
+    if (tm < 0) {
+      tm += 60;
+      th -= 1;
+    }
+    let td = ~~(th / 24);
+    th %= 24;
+    if (th < 0) {
+      th += 24;
+      td -= 1;
+    }
+    const d = this.day.next(td);
+    const m = d.getMonth();
+    return SolarTime.fromYmdHms(m.getYear().getYear(), m.getMonth(), d.getDay(), th, tm, ts);
+  }
+  isBefore(target) {
+    if (!this.day.equals(target.getDay())) {
+      return this.day.isBefore(target.getDay());
+    }
+    const bHour = target.getHour();
+    if (this.hour === bHour) {
+      const bMinute = target.getMinute();
+      return this.minute === bMinute ? this.second < target.getSecond() : this.minute < bMinute;
+    }
+    return this.hour < bHour;
+  }
+  isAfter(target) {
+    if (!this.day.equals(target.getDay())) {
+      return this.day.isAfter(target.getDay());
+    }
+    const bHour = target.getHour();
+    if (this.hour === bHour) {
+      const bMinute = target.getMinute();
+      return this.minute === bMinute ? this.second > target.getSecond() : this.minute > bMinute;
+    }
+    return this.hour > bHour;
+  }
+  getTerm() {
+    let term = SolarTerm.fromIndex(this.day.getMonth().getYear().getYear() + 1, 0);
+    while (this.isBefore(term.getJulianDay().getSolarTime())) {
+      term = term.next(-1);
+    }
+    return term;
+  }
+  getJulianDay() {
+    const month = this.day.getMonth();
+    return JulianDay.fromYmdHms(month.getYear().getYear(), month.getMonth(), this.day.getDay(), this.hour, this.minute, this.second);
+  }
+  subtract(target) {
+    let days = this.day.subtract(target.getDay());
+    const cs = this.hour * 3600 + this.minute * 60 + this.second;
+    const ts = target.getHour() * 3600 + target.getMinute() * 60 + target.getSecond();
+    let seconds = cs - ts;
+    if (seconds < 0) {
+      seconds += 86400;
+      days--;
+    }
+    seconds += days * 86400;
+    return seconds;
+  }
+  getLunarHour() {
+    const d = this.day.getLunarDay();
+    const m = d.getMonth();
+    return LunarHour.fromYmdHms(m.getYear().getYear(), m.getMonthWithLeap(), d.getDay(), this.hour, this.minute, this.second);
+  }
+};
+var _LegalHoliday = class _LegalHoliday2 extends AbstractTyme {
+  constructor(year, month, day, data) {
+    super();
+    __publicField(this, "day");
+    __publicField(this, "name");
+    __publicField(this, "work");
+    this.day = SolarDay.fromYmd(year, month, day);
+    this.work = 48 === data.charCodeAt(8);
+    this.name = _LegalHoliday2.NAMES[data.charCodeAt(9) - 48];
+  }
+  static fromYmd(year, month, day) {
+    const y = (Array(4).join("0") + year).slice(-4);
+    const m = (month < 10 ? "0" : "") + month;
+    const d = (day < 10 ? "0" : "") + day;
+    const matcher = new RegExp(`${y}${m}${d}[0-1][0-8][+|-]\\d{2}`, "g").exec(_LegalHoliday2.DATA);
+    if (!matcher) {
+      return null;
+    }
+    return new _LegalHoliday2(year, month, day, matcher[0]);
+  }
+  getName() {
+    return this.name;
+  }
+  getDay() {
+    return this.day;
+  }
+  isWork() {
+    return this.work;
+  }
+  toString() {
+    return `${this.day.toString()} ${this.name}(${this.work ? "\u73ED" : "\u4F11"})`;
+  }
+  next(n2) {
+    const m = this.day.getMonth();
+    const year = m.getYear().getYear();
+    const month = m.getMonth();
+    const day = this.day.getDay();
+    if (n2 === 0) {
+      return _LegalHoliday2.fromYmd(year, month, day);
+    }
+    let ys = (Array(4).join("0") + year).slice(-4);
+    const ms = (month < 10 ? "0" : "") + month;
+    const ds = (day < 10 ? "0" : "") + day;
+    const data = [];
+    const today = `${ys}${ms}${ds}`;
+    let reg = new RegExp(`${ys}\\d{4}[0-1][0-8][+|-]\\d{2}`, "g");
+    let matcher = reg.exec(_LegalHoliday2.DATA);
+    while (matcher) {
+      data.push(matcher[0]);
+      matcher = reg.exec(_LegalHoliday2.DATA);
+    }
+    let index2 = -1;
+    let size = data.length;
+    for (let i2 = 0; i2 < size; i2++) {
+      if (data[i2].indexOf(today) === 0) {
+        index2 = i2;
+        break;
+      }
+    }
+    if (index2 === -1) {
+      return null;
+    }
+    index2 += n2;
+    let y = year;
+    const forward = n2 > 0;
+    const add = forward ? 1 : -1;
+    while (forward ? index2 >= size : index2 < 0) {
+      if (forward) {
+        index2 -= size;
+      }
+      y += add;
+      data.length = 0;
+      ys = (Array(4).join("0") + y).slice(-4);
+      reg = new RegExp(`${ys}\\d{4}[0-1][0-8][+|-]\\d{2}`, "g");
+      matcher = reg.exec(_LegalHoliday2.DATA);
+      while (matcher) {
+        data.push(matcher[0]);
+        matcher = reg.exec(_LegalHoliday2.DATA);
+      }
+      size = data.length;
+      if (size < 1) {
+        return null;
+      }
+      if (!forward) {
+        index2 += size;
+      }
+    }
+    let d = data[index2];
+    return new _LegalHoliday2(parseInt(d.substring(0, 4), 10), parseInt(d.substring(4, 6), 10), parseInt(d.substring(6, 8), 10), d);
+  }
+};
+__publicField(_LegalHoliday, "NAMES", ["\u5143\u65E6\u8282", "\u6625\u8282", "\u6E05\u660E\u8282", "\u52B3\u52A8\u8282", "\u7AEF\u5348\u8282", "\u4E2D\u79CB\u8282", "\u56FD\u5E86\u8282", "\u56FD\u5E86\u4E2D\u79CB", "\u6297\u6218\u80DC\u5229\u65E5"]);
+__publicField(_LegalHoliday, "DATA", "2001122900+032001123000+022002010110+002002010210-012002010310-022002020901+032002021001+022002021211+002002021311-012002021411-022002021511-032002021611-042002021711-052002021811-062002042703+042002042803+032002050113+002002050213-012002050313-022002050413-032002050513-042002050613-052002050713-062002092806+032002092906+022002100116+002002100216-012002100316-022002100416-032002100516-042002100616-052002100716-062003010110+002003020111+002003020211-012003020311-022003020411-032003020511-042003020611-052003020711-062003020801-072003020901-082003042603+052003042703+042003050113+002003050213-012003050313-022003050413-032003050513-042003050613-052003050713-062003092706+042003092806+032003100116+002003100216-012003100316-022003100416-032003100516-042003100616-052003100716-062004010110+002004011701+052004011801+042004012211+002004012311-012004012411-022004012511-032004012611-042004012711-052004012811-062004050113+002004050213-012004050313-022004050413-032004050513-042004050613-052004050713-062004050803-072004050903-082004100116+002004100216-012004100316-022004100416-032004100516-042004100616-052004100716-062004100906-082004101006-092005010110+002005010210-012005010310-022005020501+042005020601+032005020911+002005021011-012005021111-022005021211-032005021311-042005021411-052005021511-062005043003+012005050113+002005050213-012005050313-022005050413-032005050513-042005050613-052005050713-062005050803-072005100116+002005100216-012005100316-022005100416-032005100516-042005100616-052005100716-062005100806-072005100906-082005123100+012006010110+002006010210-012006010310-022006012801+012006012911+002006013011-012006013111-022006020111-032006020211-042006020311-052006020411-062006020501-072006042903+022006043003+012006050113+002006050213-012006050313-022006050413-032006050513-042006050613-052006050713-062006093006+012006100116+002006100216-012006100316-022006100416-032006100516-042006100616-052006100716-062006100806-072006123000+022006123100+012007010110+002007010210-012007010310-022007021701+012007021811+002007021911-012007022011-022007022111-032007022211-042007022311-052007022411-062007022501-072007042803+032007042903+022007050113+002007050213-012007050313-022007050413-032007050513-042007050613-052007050713-062007092906+022007093006+012007100116+002007100216-012007100316-022007100416-032007100516-042007100616-052007100716-062007122900+032007123010+022007123110+012008010110+002008020201+042008020301+032008020611+002008020711-012008020811-022008020911-032008021011-042008021111-052008021211-062008040412+002008040512-012008040612-022008050113+002008050213-012008050313-022008050403-032008060714+012008060814+002008060914-012008091315+012008091415+002008091515-012008092706+042008092806+032008092916+022008093016+012008100116+002008100216-012008100316-022008100416-032008100516-042009010110+002009010210-012009010310-022009010400-032009012401+012009012511+002009012611-012009012711-022009012811-032009012911-042009013011-052009013111-062009020101-072009040412+002009040512-012009040612-022009050113+002009050213-012009050313-022009052814+002009052914-012009053014-022009053104-032009092706+042009100116+002009100216-012009100316-022009100416-032009100515-022009100615-032009100715-042009100815-052009101005-072010010110+002010010210-012010010310-022010021311+002010021411-012010021511-022010021611-032010021711-042010021811-052010021911-062010022001-072010022101-082010040312+022010040412+012010040512+002010050113+002010050213-012010050313-022010061204+042010061304+032010061414+022010061514+012010061614+002010091905+032010092215+002010092315-012010092415-022010092505-032010092606+052010100116+002010100216-012010100316-022010100416-032010100516-042010100616-052010100716-062010100906-082011010110+002011010210-012011010310-022011013001+042011020211+012011020311+002011020411-012011020511-022011020611-032011020711-042011020811-052011021201-092011040202+032011040312+022011040412+012011040512+002011043013+012011050113+002011050213-012011060414+022011060514+012011060614+002011091015+022011091115+012011091215+002011100116+002011100216-012011100316-022011100416-032011100516-042011100616-052011100716-062011100806-072011100906-082011123100+012012010110+002012010210-012012010310-022012012101+022012012211+012012012311+002012012411-012012012511-022012012611-032012012711-042012012811-052012012901-062012033102+042012040102+032012040212+022012040312+012012040412+002012042803+032012042913+022012043013+012012050113+002012050203-012012062214+012012062314+002012062414-012012092905+012012093015+002012100116+002012100216-012012100316-022012100416-032012100516-042012100616-052012100716-062012100806-072013010110+002013010210-012013010310-022013010500-042013010600-052013020911+012013021011+002013021111-012013021211-022013021311-032013021411-042013021511-052013021601-062013021701-072013040412+002013040512-012013040612-022013042703+042013042803+032013042913+022013043013+012013050113+002013060804+042013060904+032013061014+022013061114+012013061214+002013091915+002013092015-012013092115-022013092205-032013092906+022013100116+002013100216-012013100316-022013100416-032013100516-042013100616-052013100716-062014010110+002014012601+052014013111+002014020111-012014020211-022014020311-032014020411-042014020511-052014020611-062014020801-082014040512+002014040612-012014040712-022014050113+002014050213-012014050313-022014050403-032014053114+022014060114+012014060214+002014090615+022014090715+012014090815+002014092806+032014100116+002014100216-012014100316-022014100416+002014100516-042014100616-052014100716-062014101106-102015010110+002015010210-012015010310-022015010400-032015021501+042015021811+012015021911+002015022011-012015022111-022015022211-032015022311-042015022411-052015022801-092015040412+012015040512+002015040612-012015050113+002015050213-012015050313-022015062014+002015062114-012015062214-022015090318+002015090418-012015090518-022015090608-032015092615+012015092715+002015100116+002015100216-012015100316-022015100416+002015100516-042015100616-052015100716-062015101006-092016010110+002016010210-012016010310-022016020601+022016020711+012016020811+002016020911-012016021011-022016021111-032016021211-042016021311-052016021401-062016040212+022016040312+012016040412+002016043013+012016050113+002016050213-012016060914+002016061014-012016061114-022016061204-032016091515+002016091615-012016091715-022016091805-032016100116+002016100216-012016100316-022016100416-032016100516-042016100616-052016100716-062016100806-072016100906-082016123110+012017010110+002017010210-012017012201+062017012711+012017012811+002017012911-012017013011-022017013111-032017020111-042017020211-052017020401-072017040102+032017040212+022017040312+012017040412+002017042913+022017043013+012017050113+002017052704+032017052814+022017052914+012017053014+002017093006+012017100116+002017100216-012017100316-022017100415+002017100516-042017100616-052017100716-062017100816-072017123010+022017123110+012018010110+002018021101+052018021511+012018021611+002018021711-012018021811-022018021911-032018022011-042018022111-052018022401-082018040512+002018040612-012018040712-022018040802-032018042803+032018042913+022018043013+012018050113+002018061614+022018061714+012018061814+002018092215+022018092315+012018092415+002018092906+022018093006+012018100116+002018100216-012018100316-022018100416-032018100516-042018100616-052018100716-062018122900+032018123010+022018123110+012019010110+002019020201+032019020301+022019020411+012019020511+002019020611-012019020711-022019020811-032019020911-042019021011-052019040512+002019040612-012019040712-022019042803+032019050113+002019050213-012019050313-022019050413-032019050503-042019060714+002019060814-012019060914-022019091315+002019091415-012019091515-022019092906+022019100116+002019100216-012019100316-022019100416-032019100516-042019100616-052019100716-062019101206-112020010110+002020011901+062020012411+012020012511+002020012611-012020012711-022020012811-032020012911-042020013011-052020013111-062020020111-072020020211-082020040412+002020040512-012020040612-022020042603+052020050113+002020050213-012020050313-022020050413-032020050513-042020050903-082020062514+002020062614-012020062714-022020062804-032020092707+042020100117+002020100216-012020100316-022020100416-032020100516-042020100616-052020100716-062020100816-072020101006-092021010110+002021010210-012021010310-022021020701+052021021111+012021021211+002021021311-012021021411-022021021511-032021021611-042021021711-052021022001-082021040312+012021040412+002021040512-012021042503+062021050113+002021050213-012021050313-022021050413-032021050513-042021050803-072021061214+022021061314+012021061414+002021091805+032021091915+022021092015+012021092115+002021092606+052021100116+002021100216-012021100316-022021100416-032021100516-042021100616-052021100716-062021100906-082022010110+002022010210-012022010310-022022012901+032022013001+022022013111+012022020111+002022020211-012022020311-022022020411-032022020511-042022020611-052022040202+032022040312+022022040412+012022040512+002022042403+072022043013+012022050113+002022050213-012022050313-022022050413-032022050703-062022060314+002022060414-012022060514-022022091015+002022091115-012022091215-022022100116+002022100216-012022100316-022022100416-032022100516-042022100616-052022100716-062022100806-072022100906-082022123110+012023010110+002023010210-012023012111+012023012211+002023012311-012023012411-022023012511-032023012611-042023012711-052023012801-062023012901-072023040512+002023042303+082023042913+022023043013+012023050113+002023050213-012023050313-022023050603-052023062214+002023062314-012023062414-022023062504-032023092915+002023093016+012023100116+002023100216-012023100316-022023100416-032023100516-042023100616-052023100706-062023100806-072023123010+022023123110+012024010110+002024020401+062024021011+002024021111-012024021211-022024021311-032024021411-042024021511-052024021611-062024021711-072024021801-082024040412+002024040512-012024040612-022024040702-032024042803+032024050113+002024050213-012024050313-022024050413-032024050513-042024051103-102024060814+022024060914+012024061014+002024091405+032024091515+022024091615+012024091715+002024092906+022024100116+002024100216-012024100316-022024100416-032024100516-042024100616-052024100716-062024101206-11");
+var LegalHoliday = _LegalHoliday;
+var _SolarFestival = class _SolarFestival2 extends AbstractTyme {
+  constructor(type4, day, startYear, data) {
+    super();
+    __publicField(this, "type");
+    __publicField(this, "index");
+    __publicField(this, "day");
+    __publicField(this, "name");
+    __publicField(this, "startYear");
+    this.type = type4;
+    this.day = day;
+    this.startYear = startYear;
+    this.index = parseInt(data.substring(1, 3), 10);
+    this.name = _SolarFestival2.NAMES[this.index];
+  }
+  static fromIndex(year, index2) {
+    if (index2 < 0 || index2 >= _SolarFestival2.NAMES.length) {
+      throw new Error(`illegal index: ${index2}`);
+    }
+    const is = (index2 < 10 ? "0" : "") + index2;
+    const matcher = new RegExp(`@${is}\\d+`, "g").exec(_SolarFestival2.DATA);
+    if (matcher) {
+      const data = matcher[0];
+      const type4 = data.charCodeAt(3) - 48;
+      if (type4 === 0) {
+        const startYear = parseInt(data.substring(8), 10);
+        if (year >= startYear) {
+          return new _SolarFestival2(0, SolarDay.fromYmd(year, parseInt(data.substring(4, 6), 10), parseInt(data.substring(6, 8), 10)), startYear, data);
+        }
+      }
+    }
+    return null;
+  }
+  static fromYmd(year, month, day) {
+    const m = (month < 10 ? "0" : "") + month;
+    const d = (day < 10 ? "0" : "") + day;
+    const matcher = new RegExp(`@\\d{2}0${m}${d}\\d+`, "g").exec(_SolarFestival2.DATA);
+    if (matcher) {
+      const data = matcher[0];
+      const startYear = parseInt(data.substring(8), 10);
+      if (year >= startYear) {
+        return new _SolarFestival2(0, SolarDay.fromYmd(year, month, day), startYear, data);
+      }
+    }
+    return null;
+  }
+  getName() {
+    return this.name;
+  }
+  getIndex() {
+    return this.index;
+  }
+  getDay() {
+    return this.day;
+  }
+  getType() {
+    return this.type;
+  }
+  getStartYear() {
+    return this.startYear;
+  }
+  toString() {
+    return `${this.day.toString()} ${this.name}`;
+  }
+  next(n2) {
+    const m = this.day.getMonth();
+    const year = m.getYear().getYear();
+    if (n2 === 0) {
+      return _SolarFestival2.fromYmd(year, m.getMonth(), this.day.getDay());
+    }
+    const size = _SolarFestival2.NAMES.length;
+    let t2 = this.index + n2;
+    const offset = this.indexOf(t2, size);
+    if (t2 < 0) {
+      t2 -= size;
+    }
+    return _SolarFestival2.fromIndex(year + ~~(t2 / size), offset);
+  }
+};
+__publicField(_SolarFestival, "NAMES", ["\u5143\u65E6", "\u4E09\u516B\u5987\u5973\u8282", "\u690D\u6811\u8282", "\u4E94\u4E00\u52B3\u52A8\u8282", "\u4E94\u56DB\u9752\u5E74\u8282", "\u516D\u4E00\u513F\u7AE5\u8282", "\u5EFA\u515A\u8282", "\u516B\u4E00\u5EFA\u519B\u8282", "\u6559\u5E08\u8282", "\u56FD\u5E86\u8282"]);
+__publicField(_SolarFestival, "DATA", "@00001011950@01003081950@02003121979@03005011950@04005041950@05006011950@06007011941@07008011933@08009101985@09010011950");
+var SolarFestival = _SolarFestival;
+var _LunarFestival = class _LunarFestival2 extends AbstractTyme {
+  constructor(type4, day, solarTerm, data) {
+    super();
+    __publicField(this, "type");
+    __publicField(this, "index");
+    __publicField(this, "day");
+    __publicField(this, "name");
+    __publicField(this, "solarTerm");
+    this.type = type4;
+    this.day = day;
+    this.solarTerm = solarTerm;
+    this.index = parseInt(data.substring(1, 3), 10);
+    this.name = _LunarFestival2.NAMES[this.index];
+  }
+  static fromIndex(year, index2) {
+    if (index2 < 0 || index2 >= _LunarFestival2.NAMES.length) {
+      throw new Error(`illegal index: ${index2}`);
+    }
+    const is = (index2 < 10 ? "0" : "") + index2;
+    const matcher = new RegExp(`@${is}\\d+`, "g").exec(_LunarFestival2.DATA);
+    if (matcher) {
+      const data = matcher[0];
+      const type4 = data.charCodeAt(3) - 48;
+      switch (type4) {
+        case 0:
+          return new _LunarFestival2(0, LunarDay.fromYmd(year, parseInt(data.substring(4, 6), 10), parseInt(data.substring(6), 10)), null, data);
+        case 1:
+          const solarTerm = SolarTerm.fromIndex(year, parseInt(data.substring(4), 10));
+          return new _LunarFestival2(1, solarTerm.getJulianDay().getSolarDay().getLunarDay(), solarTerm, data);
+        case 2:
+          return new _LunarFestival2(2, LunarDay.fromYmd(year + 1, 1, 1).next(-1), null, data);
+      }
+    }
+    return null;
+  }
+  static fromYmd(year, month, day) {
+    const m = (month < 10 ? "0" : "") + month;
+    const d = (day < 10 ? "0" : "") + day;
+    let matcher = new RegExp(`@\\d{2}0${m}${d}`, "g").exec(_LunarFestival2.DATA);
+    if (matcher) {
+      return new _LunarFestival2(0, LunarDay.fromYmd(year, month, day), null, matcher[0]);
+    }
+    const reg = new RegExp(`@\\d{2}1\\d{2}`, "g");
+    matcher = reg.exec(_LunarFestival2.DATA);
+    while (matcher) {
+      const data = matcher[0];
+      const solarTerm = SolarTerm.fromIndex(year, parseInt(data.substring(4), 10));
+      const lunarDay = solarTerm.getJulianDay().getSolarDay().getLunarDay();
+      const lunarMonth = lunarDay.getMonth();
+      if (lunarMonth.getYear().getYear() === year && lunarMonth.getMonth() === month && lunarDay.getDay() === day) {
+        return new _LunarFestival2(1, lunarDay, solarTerm, data);
+      }
+      matcher = reg.exec(LegalHoliday.DATA);
+    }
+    matcher = new RegExp(`@\\d{2}2`, "g").exec(_LunarFestival2.DATA);
+    if (matcher) {
+      const lunarDay = LunarDay.fromYmd(year, month, day);
+      const nextDay = lunarDay.next(1);
+      if (nextDay.getMonth().getMonth() === 1 && nextDay.getDay() === 1) {
+        return new _LunarFestival2(2, lunarDay, null, matcher[0]);
+      }
+    }
+    return null;
+  }
+  getName() {
+    return this.name;
+  }
+  getIndex() {
+    return this.index;
+  }
+  getDay() {
+    return this.day;
+  }
+  getType() {
+    return this.type;
+  }
+  getSolarTerm() {
+    return this.solarTerm;
+  }
+  toString() {
+    return `${this.day.toString()} ${this.name}`;
+  }
+  next(n2) {
+    const m = this.day.getMonth();
+    const year = m.getYear().getYear();
+    if (n2 === 0) {
+      return _LunarFestival2.fromYmd(year, m.getMonthWithLeap(), this.day.getDay());
+    }
+    const size = _LunarFestival2.NAMES.length;
+    let t2 = this.index + n2;
+    const offset = this.indexOf(t2, size);
+    if (t2 < 0) {
+      t2 -= size;
+    }
+    return _LunarFestival2.fromIndex(year + ~~(t2 / size), offset);
+  }
+};
+__publicField(_LunarFestival, "NAMES", ["\u6625\u8282", "\u5143\u5BB5\u8282", "\u9F99\u5934\u8282", "\u4E0A\u5DF3\u8282", "\u6E05\u660E\u8282", "\u7AEF\u5348\u8282", "\u4E03\u5915\u8282", "\u4E2D\u5143\u8282", "\u4E2D\u79CB\u8282", "\u91CD\u9633\u8282", "\u51AC\u81F3\u8282", "\u814A\u516B\u8282", "\u9664\u5915"]);
+__publicField(_LunarFestival, "DATA", "@0000101@0100115@0200202@0300303@04107@0500505@0600707@0700715@0800815@0900909@10124@1101208@122");
+var LunarFestival = _LunarFestival;
+var EightChar = class extends AbstractCulture {
+  constructor(year, month, day, hour) {
+    super();
+    __publicField(this, "year");
+    __publicField(this, "month");
+    __publicField(this, "day");
+    __publicField(this, "hour");
+    this.year = year instanceof SixtyCycle ? year : SixtyCycle.fromName(year);
+    this.month = month instanceof SixtyCycle ? month : SixtyCycle.fromName(month);
+    this.day = day instanceof SixtyCycle ? day : SixtyCycle.fromName(day);
+    this.hour = hour instanceof SixtyCycle ? hour : SixtyCycle.fromName(hour);
+  }
+  getYear() {
+    return this.year;
+  }
+  getMonth() {
+    return this.month;
+  }
+  getDay() {
+    return this.day;
+  }
+  getHour() {
+    return this.hour;
+  }
+  getFetalOrigin() {
+    return SixtyCycle.fromName(this.month.getHeavenStem().next(1).getName() + this.month.getEarthBranch().next(3).getName());
+  }
+  getFetalBreath() {
+    return SixtyCycle.fromName(this.day.getHeavenStem().next(5).getName() + EarthBranch.fromIndex(13 - this.day.getEarthBranch().getIndex()).getName());
+  }
+  getOwnSign() {
+    let offset = this.month.getEarthBranch().next(-1).getIndex() + this.hour.getEarthBranch().next(-1).getIndex();
+    offset = (offset >= 14 ? 26 : 14) - offset;
+    offset -= 1;
+    return SixtyCycle.fromName(HeavenStem.fromIndex((this.year.getHeavenStem().getIndex() + 1) * 2 + offset).getName() + EarthBranch.fromIndex(2 + offset).getName());
+  }
+  getBodySign() {
+    let offset = this.month.getEarthBranch().getIndex() + this.hour.getEarthBranch().getIndex();
+    offset %= 12;
+    offset -= 1;
+    return SixtyCycle.fromName(HeavenStem.fromIndex((this.year.getHeavenStem().getIndex() + 1) * 2 + offset).getName() + EarthBranch.fromIndex(2 + offset).getName());
+  }
+  getDuty() {
+    return Duty.fromIndex(this.day.getEarthBranch().getIndex() - this.month.getEarthBranch().getIndex());
+  }
+  getName() {
+    return `${this.year.toString()} ${this.month.toString()} ${this.day.toString()} ${this.hour.toString()}`;
+  }
+  getSolarTimes(startYear, endYear) {
+    const l2 = [];
+    let m = this.month.getEarthBranch().next(-2).getIndex();
+    if (!HeavenStem.fromIndex((this.year.getHeavenStem().getIndex() + 1) * 2 + m).equals(this.month.getHeavenStem())) {
+      return l2;
+    }
+    let y = this.year.next(-57).getIndex() + 1;
+    m *= 2;
+    const h = this.hour.getEarthBranch().getIndex() * 2;
+    const baseYear = startYear - 1;
+    while (y <= endYear) {
+      if (y >= baseYear) {
+        let term = SolarTerm.fromIndex(y, 3);
+        if (m > 0) {
+          term = term.next(m);
+        }
+        let solarTime = term.getJulianDay().getSolarTime();
+        if (solarTime.getDay().getMonth().getYear().getYear() >= startYear) {
+          let mi = 0;
+          let s = 0;
+          let solarDay = solarTime.getDay();
+          const d = this.day.next(-solarDay.getLunarDay().getSixtyCycle().getIndex()).getIndex();
+          if (d > 0) {
+            solarDay = solarDay.next(d);
+          } else if (h == solarTime.getHour()) {
+            mi = solarTime.getMinute();
+            s = solarTime.getSecond();
+          }
+          const solarMonth = solarDay.getMonth();
+          const time = SolarTime.fromYmdHms(solarMonth.getYear().getYear(), solarMonth.getMonth(), solarDay.getDay(), h, mi, s);
+          if (time.getLunarHour().getEightChar().equals(this)) {
+            l2.push(time);
+          }
+        }
+      }
+      y += 60;
+    }
+    return l2;
+  }
+};
+var ChildLimitInfo = class {
+  constructor(startTime, endTime, yearCount, monthCount, dayCount, hourCount, minuteCount) {
+    __publicField(this, "startTime");
+    __publicField(this, "endTime");
+    __publicField(this, "yearCount");
+    __publicField(this, "monthCount");
+    __publicField(this, "dayCount");
+    __publicField(this, "hourCount");
+    __publicField(this, "minuteCount");
+    this.startTime = startTime;
+    this.endTime = endTime;
+    this.yearCount = yearCount;
+    this.monthCount = monthCount;
+    this.dayCount = dayCount;
+    this.hourCount = hourCount;
+    this.minuteCount = minuteCount;
+  }
+  getStartTime() {
+    return this.startTime;
+  }
+  getEndTime() {
+    return this.endTime;
+  }
+  getYearCount() {
+    return this.yearCount;
+  }
+  getMonthCount() {
+    return this.monthCount;
+  }
+  getDayCount() {
+    return this.dayCount;
+  }
+  getHourCount() {
+    return this.hourCount;
+  }
+  getMinuteCount() {
+    return this.minuteCount;
+  }
+};
+var DefaultChildLimitProvider = class {
+  getInfo(birthTime, term) {
+    let seconds = Math.abs(term.getJulianDay().getSolarTime().subtract(birthTime));
+    const year = ~~(seconds / 259200);
+    seconds %= 259200;
+    const month = ~~(seconds / 21600);
+    seconds %= 21600;
+    const day = ~~(seconds / 720);
+    seconds %= 720;
+    const hour = ~~(seconds / 30);
+    seconds %= 30;
+    const minute = seconds * 2;
+    const birthday = birthTime.getDay();
+    const birthMonth = birthday.getMonth();
+    let d = birthday.getDay() + day;
+    let h = birthTime.getHour() + hour;
+    let mi = birthTime.getMinute() + minute;
+    h += ~~(mi / 60);
+    mi %= 60;
+    d += ~~(h / 24);
+    h %= 24;
+    let sm = SolarMonth.fromYm(birthMonth.getYear().getYear() + year, birthMonth.getMonth()).next(month);
+    const dc = sm.getDayCount();
+    if (d > dc) {
+      d -= dc;
+      sm = sm.next(1);
+    }
+    return new ChildLimitInfo(birthTime, SolarTime.fromYmdHms(sm.getYear().getYear(), sm.getMonth(), d, h, mi, birthTime.getSecond()), year, month, day, hour, minute);
+  }
+};
+var _ChildLimit = class _ChildLimit2 {
+  constructor(birthTime, gender) {
+    __publicField(this, "eightChar");
+    __publicField(this, "gender");
+    __publicField(this, "forward");
+    __publicField(this, "info");
+    this.gender = gender;
+    this.eightChar = birthTime.getLunarHour().getEightChar();
+    const yang = 1 == this.eightChar.getYear().getHeavenStem().getYinYang();
+    const man = 1 == gender;
+    this.forward = yang && man || !yang && !man;
+    let term = birthTime.getTerm();
+    if (!term.isJie()) {
+      term = term.next(-1);
+    }
+    if (this.forward) {
+      term = term.next(2);
+    }
+    this.info = _ChildLimit2.provider.getInfo(birthTime, term);
+  }
+  static fromSolarTime(birthTime, gender) {
+    return new _ChildLimit2(birthTime, gender);
+  }
+  getEightChar() {
+    return this.eightChar;
+  }
+  getGender() {
+    return this.gender;
+  }
+  getYearCount() {
+    return this.info.getYearCount();
+  }
+  getMonthCount() {
+    return this.info.getMonthCount();
+  }
+  getDayCount() {
+    return this.info.getDayCount();
+  }
+  getHourCount() {
+    return this.info.getHourCount();
+  }
+  getMinuteCount() {
+    return this.info.getMinuteCount();
+  }
+  getStartTime() {
+    return this.info.getStartTime();
+  }
+  getEndTime() {
+    return this.info.getEndTime();
+  }
+  isForward() {
+    return this.forward;
+  }
+  getStartDecadeFortune() {
+    return DecadeFortune.fromChildLimit(this, 0);
+  }
+  getStartFortune() {
+    return Fortune.fromChildLimit(this, 0);
+  }
+};
+__publicField(_ChildLimit, "provider", new DefaultChildLimitProvider());
+var DecadeFortune = class extends AbstractTyme {
+  constructor(childLimit, index2) {
+    super();
+    __publicField(this, "childLimit");
+    __publicField(this, "index");
+    this.childLimit = childLimit;
+    this.index = index2;
+  }
+  static fromChildLimit(childLimit, index2) {
+    return new DecadeFortune(childLimit, index2);
+  }
+  getStartAge() {
+    return this.childLimit.getYearCount() + 1 + this.index * 10;
+  }
+  getEndAge() {
+    return this.getStartAge() + 9;
+  }
+  getStartLunarYear() {
+    return this.childLimit.getEndTime().getLunarHour().getDay().getMonth().getYear().next(this.index * 10);
+  }
+  getEndLunarYear() {
+    return this.getStartLunarYear().next(9);
+  }
+  getSixtyCycle() {
+    return this.childLimit.getEightChar().getMonth().next(this.childLimit.isForward() ? this.index + 1 : -this.index - 1);
+  }
+  getName() {
+    return this.getSixtyCycle().getName();
+  }
+  next(n2) {
+    return DecadeFortune.fromChildLimit(this.childLimit, this.index + n2);
+  }
+  getStartFortune() {
+    return Fortune.fromChildLimit(this.childLimit, this.index * 10);
+  }
+};
+var Fortune = class extends AbstractTyme {
+  constructor(childLimit, index2) {
+    super();
+    __publicField(this, "childLimit");
+    __publicField(this, "index");
+    this.childLimit = childLimit;
+    this.index = index2;
+  }
+  static fromChildLimit(childLimit, index2) {
+    return new Fortune(childLimit, index2);
+  }
+  getAge() {
+    return this.childLimit.getYearCount() + 1 + this.index;
+  }
+  getLunarYear() {
+    return this.childLimit.getEndTime().getLunarHour().getDay().getMonth().getYear().next(this.index);
+  }
+  getSixtyCycle() {
+    const n2 = this.getAge();
+    return this.childLimit.getEightChar().getHour().next(this.childLimit.isForward() ? n2 : -n2);
+  }
+  getName() {
+    return this.getSixtyCycle().getName();
+  }
+  next(n2) {
+    return Fortune.fromChildLimit(this.childLimit, this.index + n2);
+  }
+};
+
 // src/component/CreateNote/index.tsx
 import_dayjs5.default.extend(import_isoWeek.default);
 import_dayjs5.default.extend(import_quarterOfYear.default);
@@ -79735,6 +85958,7 @@ var CreateNote = (props) => {
   );
   useDocumentEvent("settingUpdate", (event) => {
     setSettings(event.detail);
+    setType(event.detail.usePeriodicNotes ? PERIODIC : PARA);
   });
   app == null ? void 0 : app.vault.on("create", (file) => {
     if (file instanceof import_obsidian12.TFile) {
@@ -79757,12 +85981,35 @@ var CreateNote = (props) => {
     weekStart: (settings == null ? void 0 : settings.weekStart) === -1 ? (locale6 == null ? void 0 : locale6.locale) === "zh-cn" ? 1 : 0 : settings == null ? void 0 : settings.weekStart
   });
   const cellRender = (value, picker) => {
+    var _a, _b;
     let formattedDate;
     let badgeText;
     const locale7 = window.localStorage.getItem("language") || "en";
     const date4 = (0, import_dayjs5.default)(value.format()).locale(locale7);
+    let chineseCalendarText = "";
+    let dayWorkStatus = "";
     switch (picker) {
       case "date":
+        if (settings == null ? void 0 : settings.useChineseCalendar) {
+          const solar = SolarDay.fromYmd(
+            date4.year(),
+            date4.month() + 1,
+            date4.date()
+          );
+          const lunar = solar.getLunarDay();
+          const [, lunarMonthDay] = lunar.toString().split("\u5E74");
+          chineseCalendarText = lunarMonthDay.includes("\u6708\u521D\u4E00") ? lunarMonthDay.slice(0, 2) : lunarMonthDay.slice(2, 4);
+          const holiday = solar.getLegalHoliday();
+          dayWorkStatus = typeof (holiday == null ? void 0 : holiday.isWork) !== "function" ? "" : (holiday == null ? void 0 : holiday.isWork()) ? "\u73ED" : "\u4F11";
+          const term = solar.getTerm();
+          if (term.getJulianDay().getSolarDay().toString() === solar.toString()) {
+            chineseCalendarText = term.getName();
+          }
+          const lunarFestivalName = (_a = lunar.getFestival()) == null ? void 0 : _a.toString().split(" ")[1];
+          chineseCalendarText = lunarFestivalName ? lunarFestivalName.slice(-3) : chineseCalendarText;
+          const solarFestivalName = (_b = solar.getFestival()) == null ? void 0 : _b.toString().split(" ")[1];
+          chineseCalendarText = solarFestivalName ? solarFestivalName.slice(-3) : chineseCalendarText;
+        }
         formattedDate = date4.format("YYYY-MM-DD");
         badgeText = `${date4.date()}`;
         break;
@@ -79786,15 +86033,25 @@ var CreateNote = (props) => {
         formattedDate = date4.format("YYYY-MM-DD");
         badgeText = `${date4.date()}`;
     }
+    const cell = /* @__PURE__ */ import_react89.default.createElement(import_react89.default.Fragment, null, /* @__PURE__ */ import_react89.default.createElement("span", { style: { lineHeight: "initial", display: "block" } }, badgeText), (settings == null ? void 0 : settings.useChineseCalendar) && /* @__PURE__ */ import_react89.default.createElement(import_react89.default.Fragment, null, /* @__PURE__ */ import_react89.default.createElement("span", { className: "chinese-cal" }, chineseCalendarText), /* @__PURE__ */ import_react89.default.createElement(
+      "p",
+      {
+        className: `label
+                          ${dayWorkStatus === "\u4F11" ? "holiday" : ""}
+                          ${dayWorkStatus === "\u73ED" ? "workday" : ""}
+                        `
+      },
+      dayWorkStatus
+    )));
     if (existsDates.includes(formattedDate)) {
       if (picker !== "week") {
-        return /* @__PURE__ */ import_react89.default.createElement("div", { className: "ant-picker-cell-inner" }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "cell-container" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "dot" }, "."), /* @__PURE__ */ import_react89.default.createElement("span", null, badgeText)));
+        return /* @__PURE__ */ import_react89.default.createElement("div", { className: "ant-picker-cell-inner" }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "cell-container" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "dot" }, "\u2022"), cell));
       }
       if (date4.day() === 1) {
-        return /* @__PURE__ */ import_react89.default.createElement("div", { className: "ant-picker-cell-inner" }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "cell-container" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "week-dot" }, "."), /* @__PURE__ */ import_react89.default.createElement("span", null, badgeText)));
+        return /* @__PURE__ */ import_react89.default.createElement("div", { className: "ant-picker-cell-inner" }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "cell-container" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "week-dot" }, "\u2022"), /* @__PURE__ */ import_react89.default.createElement("span", { style: { lineHeight: "initial" } }, badgeText)));
       }
     }
-    return /* @__PURE__ */ import_react89.default.createElement("div", { className: "ant-picker-cell-inner" }, badgeText);
+    return /* @__PURE__ */ import_react89.default.createElement("div", { className: "ant-picker-cell-inner" }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "cell-container" }, cell));
   };
   const createPARAFile = async (values) => {
     if (!app || !settings) {
@@ -80063,8 +86320,8 @@ var CreateNoteView = class extends import_obsidian13.ItemView {
       if (this.app.isMobile) {
         return;
       }
-      this.onClose();
-      this.onOpen();
+      await this.onClose();
+      await this.onOpen();
     }, 500);
     this.settings = settings;
     this.locale = locale6;
@@ -80114,7 +86371,7 @@ var localeMap2 = {
   "zh-cn": import_zh_CN.default
 };
 var locale5 = window.localStorage.getItem("language") || "en";
-var PeriodicPARA = class extends import_obsidian14.Plugin {
+var LifeOS = class extends import_obsidian14.Plugin {
   constructor(app, manifest) {
     super(app, manifest);
     this.initCreateNoteView = async () => {

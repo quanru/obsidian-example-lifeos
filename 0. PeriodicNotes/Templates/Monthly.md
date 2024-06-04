@@ -13,8 +13,8 @@ ProjectListByTime
 ## Role Dimension
 ### Employee
 %% As an employee, how do you disassemble this month's tasks for this quarter's goals? %%
-<%* let current = PeriodicPARA.Date.parse(app.workspace.getActiveFile().path); if (current.month%2 === 0) { -%>
-- [ ] Fill in bimonthly #work/trivia 📅 <% PeriodicPARA.Date.lastDay(current).month %>
+<%* let current = LifeOS.Date.parse(app.workspace.getActiveFile().path); if (current.month%2 === 0) { -%>
+- [ ] Fill in bimonthly #work/trivia 📅 <% LifeOS.Date.lastDay(current).month %>
 <%* } -%>
 - OKR
 ### Husband

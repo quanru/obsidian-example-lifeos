@@ -6,7 +6,7 @@
 
 ## Priority First Dimension
 %%A snapshot of the area this quarter%%
-<% PeriodicPARA.Area.snapshot() %>
+<% LifeOS.Area.snapshot() %>
 
 ## Role Dimension
 ### Employee

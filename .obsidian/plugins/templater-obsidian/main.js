@@ -1671,7 +1671,7 @@ var FolderSuggest = class extends TextInputSuggest {
         folders.push(folder);
       }
     });
-    return folders;
+    return folders.slice(0, 1e3);
   }
   renderSuggestion(file, el) {
     el.setText(file.path);
@@ -1791,7 +1791,7 @@ var FileSuggest = class extends TextInputSuggest {
         files.push(file);
       }
     });
-    return files;
+    return files.slice(0, 1e3);
   }
   renderSuggestion(file, el) {
     el.setText(file.path);

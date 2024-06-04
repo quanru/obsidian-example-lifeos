@@ -1,6 +1,6 @@
 ## Project List
 %%A snapshot of the project today%%
-<% PeriodicPARA.Project.snapshot() %>
+<% LifeOS.Project.snapshot() %>
 
 ## Daily Record
 %%Your Record%%
