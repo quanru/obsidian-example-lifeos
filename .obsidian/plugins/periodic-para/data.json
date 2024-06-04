@@ -15,5 +15,6 @@
   "usePARANotes": true,
   "usePARAAdvanced": false,
   "paraIndexFilename": "readme",
-  "weekStart": -1
+  "weekStart": 1,
+  "useChineseCalendar": true
 }

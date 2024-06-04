@@ -6,7 +6,7 @@
 
 ## 要事维度
 %%领域的本季快照%%
-<% PeriodicPARA.Area.snapshot() %>
+<% LifeOS.Area.snapshot() %>
 
 ## 角色维度
 ### 职员

@@ -1,6 +1,6 @@
 ## 项目列表
 %%项目的今日快照%%
-<% PeriodicPARA.Project.snapshot() %>
+<% LifeOS.Project.snapshot() %>
 
 ## 日常记录
 %%你的记录%%
@@ -18,7 +18,7 @@
 	- [ ] +1
 - [ ] 原味英语
 - [ ] 项目耗时统计
-<%* let weekDay = moment(tp.file.title).weekday(); console.log(weekDay); if (weekDay + 1 <= 5) { -%>
+<%* let weekDay = moment(tp.file.title).weekday(); if (weekDay + 1 <= 5) { -%>
 - 休息一下
 	- [ ] +1
 	- [ ] +1
