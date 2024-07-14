@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "7f074422eb95ae93",
+        "id": "d70210bc1b5301f5",
         "type": "tabs",
         "children": [
           {
-            "id": "9d37df8c580e0e58",
+            "id": "8cea6fa5449da45f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "任务.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -113,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "任务.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "任务.md"
-              }
+              "state": {}
             }
           },
           {
@@ -135,7 +127,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "任务.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,10 +170,17 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "9d37df8c580e0e58",
+  "active": "318abbbcd7749f6f",
   "lastOpenFiles": [
-    "主页.canvas",
+    "Attachments/3-Screenshot_2024-06-14-11-22-23-404_com.microsoft.emmx.jpg",
+    "Attachments/5-屏幕截图 2024-05-28 201931.png",
+    "Attachments/2-monkey.webp",
+    "0. 周期笔记/2024/Daily/06/2024-06-13.md",
+    "0. 周期笔记/2024/Daily/06/2024-06-14.md",
+    "0. 周期笔记/2024/Daily/06",
+    "Attachments",
     "任务.md",
+    "主页.canvas",
     "0. 周期笔记/2023/Daily/06/2023-06-02.md",
     "0. 周期笔记/2023/Daily/06/2023-06-01.md",
     "0. 周期笔记/2024/Daily/05/2024-05-13.md",
@@ -208,15 +206,11 @@
     "1. 项目/1. 项目.md",
     "0. 周期笔记/2023/2023.md",
     "0. 周期笔记/Templates/Templates.md",
-    "-1. 捕获/-1. 捕获.md",
-    "2. 领域/2. 领域.md",
     "Dida",
     "0. 周期笔记/2024/Daily/03",
     "0. 周期笔记/2024/Daily",
     "1. 项目/abc",
     "0. 周期笔记/2024/Daily/02",
-    "1. 项目/个人品牌-WOT-分享会111",
-    "0. 周期笔记/2024/Quarterly",
     "4. 存档/育儿-宝宝起名/林奕如.png",
     "4. 存档/育儿-宝宝起名/baby-name.png",
     "HOME.canvas",
@@ -226,8 +220,6 @@
     "1. 项目/个人品牌-WOT-分享会/Attachments/PPT 素材/warning.png",
     "1. 项目/个人品牌-WOT-分享会/Attachments/PPT 素材/rollup-logo.svg",
     "1. 项目/个人品牌-WOT-分享会/Attachments/PPT 素材/repo-hero-logo-light.svg",
-    "1. 项目/个人品牌-WOT-分享会/Attachments/PPT 素材/monitor.svg",
-    "1. 项目/个人品牌-WOT-分享会/Attachments/PPT 素材/monitor.png",
     "Templates/HOME.canvas",
     "hello/HOME.canvas",
     "hello/Templates/HOME.canvas"
