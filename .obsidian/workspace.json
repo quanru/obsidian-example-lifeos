@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "21a0c71661d4e0eb",
+        "id": "28abf56fd54b40bd",
         "type": "tabs",
         "children": [
           {
-            "id": "83d95d39ec01ff1b",
+            "id": "25e3520d0b966f90",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "HOME.canvas",
-                "viewState": {
-                  "x": -180,
-                  "y": 130,
-                  "zoom": -0.18539821385424635
-                }
+                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -34,7 +32,7 @@
       {
         "id": "b454898db4c8f945",
         "type": "tabs",
-        "dimension": 45.76086956521739,
+        "dimension": 42.58001939864209,
         "children": [
           {
             "id": "9110575c83bff6ab",
@@ -49,7 +47,7 @@
       {
         "id": "84e30e37024d9f2a",
         "type": "tabs",
-        "dimension": 54.23913043478261,
+        "dimension": 57.41998060135791,
         "children": [
           {
             "id": "318abbbcd7749f6f",
@@ -115,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HOME.canvas",
+                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HOME.canvas"
+                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-01.md"
               }
             }
           },
@@ -137,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HOME.canvas",
+                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,15 +178,15 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "83d95d39ec01ff1b",
+  "active": "25e3520d0b966f90",
   "lastOpenFiles": [
+    "HOME.canvas",
     "2. Areas/work/work.README.md",
     "0. PeriodicNotes/2024/Daily/04/2024-04-28.md",
     "0. PeriodicNotes/2024/Daily/04/2024-04-04.md",
     "0. PeriodicNotes/2024/Daily/04",
     "0. PeriodicNotes/2023/Weekly/2023-W23.md",
     "1. Projects/parenting-first-birthday-banquet/first-birthday-banquet.README.md",
-    "HOME.canvas",
     "0. PeriodicNotes/2024/Daily/03/2024-03-30.md",
     "0. PeriodicNotes/2024/Weekly/2024-W13.md",
     "0. PeriodicNotes/2024/Daily/03",
@@ -215,7 +213,6 @@
     "1. Projects/personal-brand-wot-sharing-meeting/architecture diagram/Monorepo.svg",
     "1. Projects/personal-brand-wot-sharing-meeting/Front-end Engineering Practice of ByteDance.pdf",
     "0. PeriodicNotes/Templates/Daily.md",
-    "0. PeriodicNotes/Templates/Quarterly.md",
     "0. PeriodicNotes/2024/Quarterly",
     "0. PeriodicNotes/2024/Monthly",
     "0. PeriodicNotes/2024/Daily/02",
