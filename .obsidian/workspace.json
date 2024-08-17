@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5a06f19d12c37640",
+        "id": "cce12f4efd6cdf73",
         "type": "tabs",
         "children": [
           {
-            "id": "1af2da200d4a9ee4",
+            "id": "a309453e64b43502",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. 项目/个人品牌-LifeOS-录制上手视频/LifeOS-录制上手视频.README.md",
+                "file": "0. 周期笔记/2023/2023.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1. 项目/个人品牌-LifeOS-录制上手视频/LifeOS-录制上手视频.README.md",
+                "file": "0. 周期笔记/2023/2023.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1. 项目/个人品牌-LifeOS-录制上手视频/LifeOS-录制上手视频.README.md"
+                "file": "0. 周期笔记/2023/2023.md"
               }
             }
           },
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1. 项目/个人品牌-LifeOS-录制上手视频/LifeOS-录制上手视频.README.md",
+                "file": "0. 周期笔记/2023/2023.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,15 +179,22 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "1af2da200d4a9ee4",
+  "active": "a309453e64b43502",
   "lastOpenFiles": [
-    "1. 项目/个人品牌-LifeOS-录制上手视频/视频教程大纲.canvas",
+    "0. 周期笔记/2023/Quarterly/2023-Q1.md",
+    "0. 周期笔记/2023/Weekly/2023-W23.md",
+    "0. 周期笔记/2023/Weekly/2023-W22.md",
+    "0. 周期笔记/2023/Quarterly/2023-Q2.md",
+    "0. 周期笔记/2023/Monthly/2023-06.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-02.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-01.md",
+    "主页.canvas",
     "1. 项目/个人品牌-LifeOS-录制上手视频/LifeOS-录制上手视频.README.md",
+    "1. 项目/个人品牌-LifeOS-录制上手视频/视频教程大纲.canvas",
     "README.md",
     "1. 项目/个人品牌-LifeOS-录制视频教程/大纲.md",
     "1. 项目/个人品牌-LifeOS-录制上手视频",
     "1. 项目/未命名",
-    "0. 周期笔记/2023/Daily/06/2023-06-01.md",
     "Attachments/3-Screenshot_2024-06-14-11-22-23-404_com.microsoft.emmx.jpg",
     "Attachments/5-屏幕截图 2024-05-28 201931.png",
     "Attachments/2-monkey.webp",
@@ -196,8 +203,6 @@
     "0. 周期笔记/2024/Daily/06",
     "Attachments",
     "任务.md",
-    "主页.canvas",
-    "0. 周期笔记/2023/Daily/06/2023-06-02.md",
     "0. 周期笔记/2024/Daily/05/2024-05-13.md",
     "0. 周期笔记/2024/Daily/05",
     "2. 领域/同事工作/工作.README.md",
@@ -214,10 +219,6 @@
     "1. 项目/Template.md",
     "0. 周期笔记/0. 周期笔记.md",
     "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
-    "1. 项目/个人品牌-WOT-分享会/个人品牌-WOT-分享会.md",
-    "1. 项目/育儿-筹办周岁宴/筹办周岁宴.README.md",
-    "1. 项目/育儿-筹办周岁宴/育儿-筹办周岁宴.md",
-    "1. 项目/1. 项目.md",
     "Dida",
     "0. 周期笔记/2024/Daily/03",
     "0. 周期笔记/2024/Daily",
