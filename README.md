@@ -29,6 +29,7 @@ Star [GitHub 仓库](https://github.com/quanru/obsidian-periodic-para) 获取最
 ### 联系作者
 
 - [📕小红书](https://www.xiaohongshu.com/user/profile/5b06db60f7e8b974ec6ff7fc)
+- [哔哩哔哩](https://space.bilibili.com/437191204)
 - [🐦Twitter](https://twitter.com/quanruzhuoxiu)
 - [📧Email](mailto:quanruzhuoxiu@gmail.com)
 
