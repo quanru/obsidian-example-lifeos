@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-01.md"
+                "file": "README.md"
               }
             }
           },
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,6 +180,7 @@
   },
   "active": "25e3520d0b966f90",
   "lastOpenFiles": [
+    "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
     "HOME.canvas",
     "2. Areas/work/work.README.md",
     "0. PeriodicNotes/2024/Daily/04/2024-04-28.md",

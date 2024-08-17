@@ -21,6 +21,7 @@ Star the [github repository](https://github.com/quanru/obsidian-periodic-para) t
 
 ## Support
 
+- [📺Youtube](https://www.youtube.com/@LeYangLin)
 - [🎮Discord](https://discord.gg/HZGanKEkuZ)
 - [🐦Twitter](https://twitter.com/quanruzhuoxiu)
 - [📧Email](mailto:quanruzhuoxiu@gmail.com)
