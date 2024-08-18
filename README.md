@@ -1,3 +1,4 @@
+
 <p align="center">中文版本  |  <a title="English" href="https://github.com/quanru/obsidian-example-LifeOS/blob/main/README.md">English Version</a></p>
 
 <div align="center">
