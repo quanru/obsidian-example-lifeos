@@ -14,7 +14,7 @@ tags:
 
 本文将以 [Obsidian](https://obsidian.md/) 为例，分享我使用 Obsidian 构建第二大脑的实践！
 
-更多内容请参考官网 [LifeOS](https://obsidian-life-os.netlify.app)！
+更多内容请参考官网 [LifeOS](https://lifeos.vip)！
 
 ## 前言
 

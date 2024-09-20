@@ -1,4 +1,4 @@
-> [LifeOS项目管理实战，让你生活更有控制感！](https://obsidian-life-os.netlify.app/zh/case/project.html)
+> [LifeOS项目管理实战，让你生活更有控制感！](https://lifeos.vip/zh/case/project.html)
 
 - A project is a series of tasks linked to a goal, with a deadline.
 - 项目是与目标相关的一系列任务，有截止日期。

@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"b3e0c500da035631","type":"text","text":"LifeOS 视频教程大纲","x":-380,"y":-116,"width":250,"height":60},
+		{"id":"0a79a995630c6a8d","type":"text","text":"LifeOS 是什么？","x":-52,"y":-280,"width":250,"height":60},
+		{"id":"dcd5b6884ef83ba0","type":"text","text":"LifeOS 为什么有效？","x":-52,"y":-176,"width":250,"height":60},
+		{"id":"30f523ffc545820c","type":"text","text":"如何实践 LifeOS？","x":-52,"y":-56,"width":250,"height":60},
+		{"id":"196a56dcb665092b","type":"text","text":"LifeOS 对我的积极影响","x":-52,"y":60,"width":250,"height":60},
+		{"id":"841a46ea9ccbd9d1","type":"text","text":"什么是第二大脑？","x":310,"y":-360,"width":250,"height":60},
+		{"id":"15b45516274b18b8","type":"text","text":"Obsidian 的独特之处？","x":310,"y":-280,"width":250,"height":60},
+		{"id":"405165d974b004fd","type":"text","text":"什么是 LifeOS？","x":310,"y":-206,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"6e95b877e709b299","fromNode":"b3e0c500da035631","fromSide":"right","toNode":"0a79a995630c6a8d","toSide":"left"},
+		{"id":"9ee8946b2f039f9e","fromNode":"b3e0c500da035631","fromSide":"right","toNode":"dcd5b6884ef83ba0","toSide":"left"},
+		{"id":"acd7185c1e559cf0","fromNode":"b3e0c500da035631","fromSide":"right","toNode":"30f523ffc545820c","toSide":"left"},
+		{"id":"f6634b7398cca82a","fromNode":"b3e0c500da035631","fromSide":"right","toNode":"196a56dcb665092b","toSide":"left"},
+		{"id":"344fe94c60fe0cf2","fromNode":"0a79a995630c6a8d","fromSide":"right","toNode":"841a46ea9ccbd9d1","toSide":"left"},
+		{"id":"b5bdbd001885749b","fromNode":"0a79a995630c6a8d","fromSide":"right","toNode":"15b45516274b18b8","toSide":"left"},
+		{"id":"65b8977cb6501646","fromNode":"0a79a995630c6a8d","fromSide":"right","toNode":"405165d974b004fd","toSide":"left"}
+	]
+}
