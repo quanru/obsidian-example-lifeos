@@ -16,7 +16,7 @@ tags:
 
 This article will take [Obsidian](https://obsidian.md/) as an example to share my practice of using Obsidian to build a second brain!
 
-For more information, please refer to the official website [LifeOS](https://obsidian-life-os.netlify.app)!
+For more information, please refer to the official website [LifeOS](https://lifeos.vip)!
 
 ## Preface
 
