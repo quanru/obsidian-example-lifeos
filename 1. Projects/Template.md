@@ -1,4 +1,3 @@
-
 %%Set the project deadline and its result description%%
 - [ ] deadline 📅 2024-xx-xx
 - key result

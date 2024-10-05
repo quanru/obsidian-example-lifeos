@@ -1,5 +1,3 @@
-# TASK
-
 ## Focus
 > Important || In progress || Due in 7 days || High priority
 ```tasks

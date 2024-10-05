@@ -1,35 +1,31 @@
-我的最新文章：高质量的软件值得你的辛苦挣来的钱
+> https://stephango.com/quality-software
 
-来自独立制作者的高质量软件就像来自农贸市场的优质食品。手工制作的有机果酱与超级市场的大规模生产含有大量玉米糖浆的果酱并不一样。
+Quality software from independent makers is like quality food from the farmer’s market. A jar of handmade organic jam is not the same as mass-produced corn syrup-laden jam from the supermarket.
 
-工业化的果酱充满了廉价的成分和货架稳定剂。工业软件充满了侵犯隐私的追踪器和专有格式。
+Industrial fruit jam is filled with cheap ingredients and shelf stabilizers. Industrial software is filled with privacy-invasive trackers and proprietary formats.
 
-谷歌、苹果和微软生产工业软件。就像工业果酱一样，工业软件也有其好处——它便宜、相当可靠、广泛可得，通常能完成任务。
+Google, Apple, and Microsoft make industrial software. Like industrial jam, industrial software has its benefits — it’s cheap, fairly reliable, widely available, and often gets the job done.
 
-大型科技公司赚取数千亿美元并雇用数十万人。他们制作新应用时，可以轻易地将其推销给他们的十亿客户。他们在开发和维护应用的费用上具有无法比拟的优势。
+Big tech companies earn hundreds of billions of dollars and employ hundreds of thousands of people. When they make a new app, they can market it to their billions of customers easily. They have unbeatable leverage over the cost of developing and maintaining their apps.
 
-独立软件制作者是小团队，他们没有这种规模经济。他们可以尝试通过妥协手艺来与价格竞争，或者他们可以知道这将使大量人选择大科技公司而收取合理的价格。无论哪种方式，大科技公司都将赢得胜利，因为他们从大多数独立制作者的应用商店收入中抽取 20-30% 的提成。这是大型科技公司不需要承担的费用。
+Independent software makers are small teams that don’t have those economies of scale. They can try to compete on price by compromising their craft, or they can charge a fair price knowing this will drive a large number of people to choose big tech instead. Either way, big tech wins because they take a 20–30% cut of the app store money earned by most independent makers. A cost that the big tech companies do not incur.
 
-大型科技公司可以通过各种方式补贴成本来使其软件变得便宜：
+Big tech companies have the ability to make their software cheap by subsidizing costs in a variety of ways:
 
-谷歌销售高利润的广告并让其应用免费，但是你将接受广告和侵入隐私的追踪。
+- Google sells highly profitable advertising and makes its apps free, but you are subjected to ads and privacy-invasive tracking.
+- Apple sells highly profitable devices and makes its apps free, but locks you into a proprietary ecosystem.
+- Microsoft sells highly profitable enterprise contracts using a bundling strategy, and makes its apps cheap, also locking you into a proprietary ecosystem.
 
-苹果销售高利润的设备并制作免费的应用，但是你会被锁定在专有的生态系统中。
+Some tech companies raise hundreds of millions of dollars from [venture capital investors](https://stephango.com/vcware), and use this money to subsidize pricing — until the money runs out, and the quality soon declines.
 
-微软通过捆绑政策销售高利润的企业合同，并且以便宜的价格制作应用，同样将你锁定在专有生态系统中。
+I’m not saying these companies are evil. But their subsidies create the illusion that all software should be cheap or free.
 
-有些科技公司从风险资本投资者那里筹集数亿美元，并用这些钱来补贴价格 – 直到钱用完，质量很快便开始下降。
+Industrial software has become so incredibly cheap that most of us have lost the sense for how much value a quality piece of software can provide. We have become numb to the taste of good software and hypnotized by the idea of “free”.
 
-我并不是在说这些公司是邪恶的。但是他们的补贴制造了一种幻觉，那就是所有的软件都应该便宜或者免费。
+I’m not sure why, but we seem more willing to spend money on good fruit jam than on good software. I notice that I spend less on personal software than I do on groceries and many basic things. Yet software is one of the few things I pay for that truly gives me leverage. Consider its [cost per use](https://stephango.com/buy-wisely).
 
-工业软件变得如此便宜，以至于我们大多数人都失去了感知优质软件可以提供多大价值的感觉。我们对好软件的味道已经麻木不仁，被“免费”的想法迷住。
+Independent makers of quality software go out of their way to make apps that are _better for you_. They take a principled approach to making tools that don’t compromise your privacy, and [don’t lock you in](https://stephango.com/file-over-app).
 
-我不知道为什么，但我们似乎更愿意花钱在好的果酱上，而不是在好的软件上。我注意到我在个人软件上的花费少于我在杂货和许多基本事物上的花费。然而软件是我付钱的少数几件真正给我杠杆效应的东西之一。考虑它的每次使用成本。
+Independent software makers are people you can talk to. Like quality jam from the farmer’s market, you might become friends with the person who made it — they’ll listen to your suggestions and your complaints.
 
-优质软件的独立制作者会尽力制作对你更好的应用。他们采取原则性的方法制作工具，不妥协你的隐私，不会让你被束缚。
-
-独立软件制作者是你可以交谈的人。就像来自农贸市场的优质果酱，你可能会成为制作它的人的朋友——他们会倾听你的建议和投诉。
-
-如果你想在一个拥有超过少数几个软件制造商的世界中生活，那么在优质的独立软件上多花点钱。它值得你辛辛苦苦赚来的现金。
-
-总结：本文强调了独立制作者的优质软件的价值，比较了它和大型科技公司的产品，并呼吁大众支持独立制作者的产品，以保证多样性和质量。
+If you want to live in a world with more than a handful of software makers, then spend a bit more on quality independent software. It deserves your hard-earned cash.

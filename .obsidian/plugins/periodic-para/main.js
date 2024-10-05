@@ -38204,6 +38204,11 @@ var WEEKLY_REG = /^\d{4}-W(\d{1,2})/;
 var MONTHLY_REG = /^\d{4}-(\d{1,2})/;
 var QUARTERLY_REG = /^\d{4}-Q(\d{1,2})/;
 var YEARLY_REG = /(^\d{4})/;
+var FULL_DAILY_REG = /\d{4}\/Daily\/\d{2}\/\d{4}-\d{2}-\d{2}.md$/;
+var FULL_WEEKLY_REG = /\d{4}\/Weekly\/\d{4}-W(\d{1,2}).md$/;
+var FULL_MONTHLY_REG = /\d{4}\/Monthly\/\d{4}-\d{1,2}.md$/;
+var FULL_QUARTERLY_REG = /\d{4}\/Quarterly\/\d{4}-Q\d{1,2}.md$/;
+var FULL_YEARLY_REG = /\d{4}\/\d{4}.md$/;
 var LIFE_OS_OFFICIAL_SITE = "https://lifeos.vip";
 
 // src/para/Item.ts
@@ -38534,7 +38539,7 @@ async function createFile(app, options) {
   if (!app) {
     return;
   }
-  const { templateFile, folder, file, tag, locale: locale6 } = options;
+  const { templateFile, folder, file, tag, locale: locale6, newLeaf } = options;
   const templateTFile = app.vault.getAbstractFileByPath(templateFile);
   const finalFile = file.match(/\.md$/) ? file : `${file}.md`;
   if (!templateTFile) {
@@ -38549,7 +38554,7 @@ async function createFile(app, options) {
     }
     const tFile = app.vault.getAbstractFileByPath(finalFile);
     if (tFile && tFile instanceof import_obsidian4.TFile) {
-      return await app.workspace.getLeaf().openFile(tFile);
+      return await app.workspace.getLeaf(newLeaf).openFile(tFile);
     }
     if (!app.vault.getAbstractFileByPath(folder)) {
       app.vault.createFolder(folder);
@@ -38563,7 +38568,7 @@ async function createFile(app, options) {
       frontMatter.tags.push(tag.replace(/^#/, ""));
     });
     await sleep2(30);
-    await app.workspace.getLeaf().openFile(fileCreated);
+    await app.workspace.getLeaf(newLeaf).openFile(fileCreated);
   }
 }
 function isDarkTheme() {
@@ -38638,7 +38643,7 @@ function generateHeaderRegExp(header) {
 ]*)([\\s\\S]*?)(?=\\n##|$)`);
   return reg;
 }
-async function createPeriodicFile(day, periodType, settings, app) {
+async function createPeriodicFile(day, periodType, settings, app, newLeaf = false) {
   if (!app || !settings.periodicNotesPath) {
     return;
   }
@@ -38675,7 +38680,8 @@ async function createPeriodicFile(day, periodType, settings, app) {
     locale: locale6,
     templateFile,
     folder,
-    file
+    file,
+    newLeaf
   });
 }
 function openOfficialSite(locale6) {
@@ -38701,6 +38707,51 @@ function generateIgnoreOperator(settings) {
     periodicNotesTemplateFilePathWeekly,
     periodicNotesTemplateFilePathDaily
   ].filter((path) => path).map((path) => `AND -"${path}"`).join(" ");
+}
+function getAllTemplateFiles(settings) {
+  const {
+    projectsTemplateFilePath,
+    areasTemplateFilePath,
+    resourcesTemplateFilePath,
+    archivesTemplateFilePath,
+    periodicNotesPath,
+    periodicNotesTemplateFilePathYearly,
+    periodicNotesTemplateFilePathQuarterly,
+    periodicNotesTemplateFilePathMonthly,
+    periodicNotesTemplateFilePathWeekly,
+    periodicNotesTemplateFilePathDaily
+  } = settings;
+  return [
+    "Template.md",
+    `${periodicNotesPath}/Templates/`,
+    projectsTemplateFilePath,
+    areasTemplateFilePath,
+    resourcesTemplateFilePath,
+    archivesTemplateFilePath,
+    periodicNotesTemplateFilePathYearly,
+    periodicNotesTemplateFilePathQuarterly,
+    periodicNotesTemplateFilePathMonthly,
+    periodicNotesTemplateFilePathWeekly,
+    periodicNotesTemplateFilePathDaily
+  ].filter((path) => path);
+}
+function isInTemplateNote(path, settings) {
+  return getAllTemplateFiles(settings).some(
+    (template) => path.includes(template)
+  );
+}
+function isInPeriodicNote(path, settings) {
+  return (path == null ? void 0 : path.match(
+    new RegExp(`${settings.periodicNotesPath}/${FULL_YEARLY_REG.source}`)
+  )) || (path == null ? void 0 : path.match(
+    new RegExp(`${settings.periodicNotesPath}/${FULL_QUARTERLY_REG.source}`)
+  )) || (path == null ? void 0 : path.match(
+    new RegExp(`${settings.periodicNotesPath}/${FULL_MONTHLY_REG.source}`)
+  )) || (path == null ? void 0 : path.match(
+    new RegExp(`${settings.periodicNotesPath}/${FULL_WEEKLY_REG.source}`)
+  )) || (path == null ? void 0 : path.match(
+    new RegExp(`${settings.periodicNotesPath}/${FULL_DAILY_REG.source}`)
+  ));
 }
 
 // src/para/Area.ts
@@ -38882,6 +38933,9 @@ var Project = class extends Item {
               return;
             }
             const projectFile = ((_b = this.file.get(realProject)) == null ? void 0 : _b.path) || "";
+            if (!projectFile) {
+              return;
+            }
             const [projectTime = ""] = project.match(timeReg) || [];
             projectTimeConsume[projectFile] = this.timeAdd(
               projectTimeConsume[projectFile],
@@ -38928,18 +38982,10 @@ var File = class {
       const tags = this.tags(filepath);
       const div = el.createEl("div");
       const component = new Markdown(div);
-      const {
-        periodicNotesPath,
-        periodicNotesTemplateFilePathYearly,
-        periodicNotesTemplateFilePathQuarterly,
-        periodicNotesTemplateFilePathMonthly,
-        periodicNotesTemplateFilePathWeekly,
-        periodicNotesTemplateFilePathDaily
-      } = this.settings;
       if (!tags.length) {
         return renderError(
           this.app,
-          getI18n(this.locale)[`${ERROR_MESSAGE}}NO_FRONT_MATTER_TAG`],
+          getI18n(this.locale)[`${ERROR_MESSAGE}NO_FRONT_MATTER_TAG`],
           div,
           filepath
         );
@@ -38950,17 +38996,7 @@ var File = class {
       this.dataview.table(
         ["File", "Date"],
         this.dataview.pages(from2).filter(
-          (b) => {
-            var _a, _b, _c, _d, _e, _f, _g;
-            return !((_a = b.file.name) == null ? void 0 : _a.match(YEARLY_REG)) && !((_b = b.file.name) == null ? void 0 : _b.match(QUARTERLY_REG)) && !((_c = b.file.name) == null ? void 0 : _c.match(MONTHLY_REG)) && !((_d = b.file.name) == null ? void 0 : _d.match(WEEKLY_REG)) && !((_e = b.file.name) == null ? void 0 : _e.match(DAILY_REG)) && !((_f = b.file.name) == null ? void 0 : _f.match(/Template$/)) && !((_g = b.file.path) == null ? void 0 : _g.includes(`${periodicNotesPath}/Templates`)) && ![
-              filepath,
-              periodicNotesTemplateFilePathYearly,
-              periodicNotesTemplateFilePathQuarterly,
-              periodicNotesTemplateFilePathMonthly,
-              periodicNotesTemplateFilePathWeekly,
-              periodicNotesTemplateFilePathDaily
-            ].includes(b.file.path);
-          }
+          (b) => !isInPeriodicNote(b.file.path, this.settings) && !isInTemplateNote(filepath, this.settings) && b.file.path !== filepath
         ).sort(
           (b) => b.file.ctime.ts,
           "desc"
@@ -39009,13 +39045,19 @@ var File = class {
           });
           if (condition.tags.length) {
             const tags = this.tags((indexFile == null ? void 0 : indexFile.path) || "");
+            if (!tags) {
+              return "";
+            }
+            if (!condition.tags) {
+              return "";
+            }
             if (!this.hasCommonPrefix(tags, condition.tags)) {
               return "";
             }
           }
           if (!indexFile) {
             logMessage(
-              `${getI18n(this.locale)[`${ERROR_MESSAGE}}NO_INDEX_FILE_EXIST`]} @ ${subFolder.path}`
+              `${getI18n(this.locale)[`${ERROR_MESSAGE}NO_INDEX_FILE_EXIST`]} @ ${subFolder.path}`
             );
           }
           if (indexFile instanceof import_obsidian8.TFile) {
@@ -39095,7 +39137,7 @@ var Bullet = class {
           if (L.task || L.path === filepath)
             return false;
           for (const tag of tags) {
-            includeTag = L.tags.join(" ").includes(`#${tag}`);
+            includeTag = L.tags.join(" ").toLowerCase().includes(`#${tag.toLowerCase()}`);
             if (includeTag) {
               break;
             }
@@ -42001,7 +42043,7 @@ var Task = class {
         return `#${tag} ${index2 === tags.length - 1 ? "" : "OR"}`;
       }).join(" ").trim();
       const where = tags.map((tag, index2) => {
-        return `contains(tags, "#${tag}") ${index2 === tags.length - 1 ? "" : "OR"}`;
+        return `contains(lower(tags), "#${tag.toLowerCase()}") ${index2 === tags.length - 1 ? "" : "OR"}`;
       }).join(" ");
       const { values: tasks } = await this.dataview.tryQuery(`
 TASK
@@ -42055,7 +42097,7 @@ SORT status ASC
 
 // src/view/CreateNote.tsx
 var import_obsidian12 = require("obsidian");
-var import_react90 = __toESM(require_react());
+var import_react91 = __toESM(require_react());
 var import_client = __toESM(require_client());
 
 // node_modules/.pnpm/@ant-design+icons@5.4.0_react-dom@18.3.1_react@18.3.1/node_modules/@ant-design/icons/es/components/Context.js
@@ -82390,6 +82432,7 @@ var typography_default = Typography2;
 var import_dayjs6 = __toESM(require_dayjs_min());
 var import_obsidian11 = require("obsidian");
 var import_react89 = __toESM(require_react());
+var import_react90 = __toESM(require_react());
 
 // src/hooks/useApp.ts
 var import_react85 = __toESM(require_react());
@@ -88974,14 +89017,14 @@ import_dayjs6.default.extend(import_quarterOfYear.default);
 import_dayjs6.default.extend(import_updateLocale.default);
 var CreateNote = (props) => {
   const { app, settings: initialSettings, locale: locale6 } = useApp() || {};
-  const [settings, setSettings] = (0, import_react89.useState)(
+  const [settings, setSettings] = (0, import_react90.useState)(
     initialSettings
   );
   const { width } = props;
-  const [periodicActiveTab, setPeriodicActiveTab] = (0, import_react89.useState)(DAILY);
-  const [paraActiveTab, setParaActiveTab] = (0, import_react89.useState)(PROJECT);
+  const [periodicActiveTab, setPeriodicActiveTab] = (0, import_react90.useState)(DAILY);
+  const [paraActiveTab, setParaActiveTab] = (0, import_react90.useState)(PROJECT);
   const defaultType = (settings == null ? void 0 : settings.usePeriodicNotes) ? PERIODIC : PARA;
-  const [type5, setType] = (0, import_react89.useState)(defaultType);
+  const [type5, setType] = (0, import_react90.useState)(defaultType);
   const [form] = form_default.useForm();
   const today = (0, import_dayjs6.default)(new Date());
   const localeKey = (locale6 == null ? void 0 : locale6.locale) || "en";
@@ -89007,7 +89050,7 @@ var CreateNote = (props) => {
       }
     )
   );
-  const [existsDates, setExistsDates] = (0, import_react89.useState)(
+  const [existsDates, setExistsDates] = (0, import_react90.useState)(
     (app == null ? void 0 : app.vault.getAllLoadedFiles().filter(
       (file) => (settings == null ? void 0 : settings.periodicNotesPath) && file.path.indexOf(settings == null ? void 0 : settings.periodicNotesPath) === 0 && file.extension === "md"
     ).map((file) => file.basename)) || []
@@ -89016,7 +89059,7 @@ var CreateNote = (props) => {
     setSettings(event.detail);
     setType(event.detail.usePeriodicNotes ? PERIODIC : PARA);
   });
-  (0, import_react89.useEffect)(() => {
+  (0, import_react90.useEffect)(() => {
     const createHandler = (file) => {
       if (file instanceof import_obsidian11.TFile) {
         setExistsDates((prevDates) => [file.basename, ...prevDates]);
@@ -89046,7 +89089,7 @@ var CreateNote = (props) => {
       app == null ? void 0 : app.vault.off("rename", renameHandler);
     };
   }, []);
-  (0, import_react89.useEffect)(() => {
+  (0, import_react90.useEffect)(() => {
     const leafChangeHandler = (leaf) => {
       const { path, basename } = (leaf == null ? void 0 : leaf.view).file || {};
       if (!path || path.indexOf(settings == null ? void 0 : settings.periodicNotesPath) !== 0) {
@@ -89112,8 +89155,9 @@ var CreateNote = (props) => {
     const date4 = (0, import_dayjs6.default)(value.format()).locale(locale7);
     let chineseCalendarText = "";
     let dayWorkStatus = "";
-    const onClick = (day) => {
-      createPeriodicFile(day, periodicActiveTab, settings, app);
+    const onClick = (day, event) => {
+      const newLeaf = event.ctrlKey || event.metaKey || event.altKey;
+      createPeriodicFile(day, periodicActiveTab, settings, app, newLeaf);
     };
     switch (picker) {
       case "date":
@@ -89172,13 +89216,27 @@ var CreateNote = (props) => {
     )));
     if (existsDates.includes(formattedDate)) {
       if (picker !== "week") {
-        return /* @__PURE__ */ import_react89.default.createElement("div", { className: "ant-picker-cell-inner", onClick: () => onClick(value) }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "cell-container" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "dot" }, "\u2022"), cell));
+        return /* @__PURE__ */ import_react89.default.createElement(
+          "div",
+          {
+            className: "ant-picker-cell-inner",
+            onClick: (e3) => onClick(value, e3)
+          },
+          /* @__PURE__ */ import_react89.default.createElement("div", { className: "cell-container" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "dot" }, "\u2022"), cell)
+        );
       }
       if (date4.day() === 1) {
-        return /* @__PURE__ */ import_react89.default.createElement("div", { className: "ant-picker-cell-inner", onClick: () => onClick(value) }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "cell-container" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "week-dot" }, "\u2022"), /* @__PURE__ */ import_react89.default.createElement("span", null, badgeText)));
+        return /* @__PURE__ */ import_react89.default.createElement(
+          "div",
+          {
+            className: "ant-picker-cell-inner",
+            onClick: (e3) => onClick(value, e3)
+          },
+          /* @__PURE__ */ import_react89.default.createElement("div", { className: "cell-container" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "week-dot" }, "\u2022"), /* @__PURE__ */ import_react89.default.createElement("span", null, badgeText))
+        );
       }
     }
-    return /* @__PURE__ */ import_react89.default.createElement("div", { className: "ant-picker-cell-inner", onClick: () => onClick(value) }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "cell-container" }, cell));
+    return /* @__PURE__ */ import_react89.default.createElement("div", { className: "ant-picker-cell-inner", onClick: (e3) => onClick(value, e3) }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "cell-container" }, cell));
   };
   const createPARAFile = async (values) => {
     if (!app || !settings) {
@@ -89213,7 +89271,7 @@ var CreateNote = (props) => {
   ).sort((a, b) => b[1] - a[1]).map(([tag, _]) => {
     return { value: tag, label: tag };
   });
-  const singleClickRef = (0, import_react89.useRef)(null);
+  const singleClickRef = (0, import_react90.useRef)(null);
   const handleTagInput = (item) => {
     const itemTag = form.getFieldValue(`${item}Tag`).replace(/^#/, "");
     const itemFolder = itemTag.replace(/\//g, "-");
@@ -89318,7 +89376,7 @@ var CreateNote = (props) => {
                 date_picker_default,
                 {
                   cellRender: (value, info) => {
-                    return cellRender(value, picker);
+                    return cellRender(value, info.type);
                   },
                   picker,
                   showNow: false,
@@ -89452,7 +89510,7 @@ var CreateNoteView = class extends import_obsidian12.ItemView {
     this.contentEl.addClass("periodic-para-create-note");
     this.root = (0, import_client.createRoot)(this.containerEl.children[1]);
     this.root.render(
-      /* @__PURE__ */ import_react90.default.createElement(
+      /* @__PURE__ */ import_react91.default.createElement(
         AppContext.Provider,
         {
           value: {
@@ -89461,7 +89519,7 @@ var CreateNoteView = class extends import_obsidian12.ItemView {
             locale: this.locale
           }
         },
-        /* @__PURE__ */ import_react90.default.createElement(CreateNote, { width: this.containerEl.innerWidth })
+        /* @__PURE__ */ import_react91.default.createElement(CreateNote, { width: this.containerEl.innerWidth })
       )
     );
   }
@@ -89472,15 +89530,15 @@ var CreateNoteView = class extends import_obsidian12.ItemView {
 
 // src/view/SettingTab.tsx
 var import_obsidian13 = require("obsidian");
-var import_react92 = __toESM(require_react());
+var import_react93 = __toESM(require_react());
 var import_client2 = __toESM(require_client());
 
 // src/component/SettingTab/index.tsx
-var import_react91 = __toESM(require_react());
+var import_react92 = __toESM(require_react());
 var SettingTab = (props) => {
   const { app, locale: locale6 } = useApp() || {};
   const { settings: initialSettings, saveSettings } = props;
-  const [settings, setSetting] = (0, import_react91.useState)(initialSettings);
+  const [settings, setSetting] = (0, import_react92.useState)(initialSettings);
   const [form] = form_default.useForm();
   const folders = (app == null ? void 0 : app.vault.getAllLoadedFiles().filter((file) => !file.extension).map((file) => {
     return {
@@ -89494,10 +89552,10 @@ var SettingTab = (props) => {
       value: file.path
     };
   })) || [];
-  (0, import_react91.useEffect)(() => {
+  (0, import_react92.useEffect)(() => {
     setSetting(initialSettings);
   }, [initialSettings]);
-  return /* @__PURE__ */ import_react91.default.createElement(ConfigProvider2, null, /* @__PURE__ */ import_react91.default.createElement(
+  return /* @__PURE__ */ import_react92.default.createElement(ConfigProvider2, null, /* @__PURE__ */ import_react92.default.createElement(
     form_default,
     {
       form,
@@ -89510,7 +89568,7 @@ var SettingTab = (props) => {
         saveSettings(changedValues);
       }
     },
-    /* @__PURE__ */ import_react91.default.createElement(
+    /* @__PURE__ */ import_react92.default.createElement(
       tabs_default,
       {
         defaultActiveKey: "periodic",
@@ -89519,60 +89577,60 @@ var SettingTab = (props) => {
           {
             key: "periodic",
             label: "Periodic Notes",
-            children: /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, /* @__PURE__ */ import_react91.default.createElement(form_default.Item, { name: "usePeriodicNotes", label: "Turn on" }, /* @__PURE__ */ import_react91.default.createElement(switch_default, null)), settings.usePeriodicNotes && /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, /* @__PURE__ */ import_react91.default.createElement(
+            children: /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, /* @__PURE__ */ import_react92.default.createElement(form_default.Item, { name: "usePeriodicNotes", label: "Turn on" }, /* @__PURE__ */ import_react92.default.createElement(switch_default, null)), settings.usePeriodicNotes && /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 name: "periodicNotesPath",
                 label: "Periodic Notes Folder"
               },
-              /* @__PURE__ */ import_react91.default.createElement(AutoComplete2, { options: folders }, /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(AutoComplete2, { options: folders }, /* @__PURE__ */ import_react92.default.createElement(
                 input_default,
                 {
                   placeholder: DEFAULT_SETTINGS.periodicNotesPath
                 }
               ))
-            ), /* @__PURE__ */ import_react91.default.createElement(
+            ), /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 help: "Where the habit module is in a daily note",
                 name: "habitHeader",
                 label: "Habit Header:"
               },
-              /* @__PURE__ */ import_react91.default.createElement(input_default, { placeholder: DEFAULT_SETTINGS.habitHeader })
-            ), settings.usePARANotes && /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(input_default, { placeholder: DEFAULT_SETTINGS.habitHeader })
+            ), settings.usePARANotes && /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 help: "Where the project list is in a daily note",
                 name: "projectListHeader",
                 label: "Project List Header:"
               },
-              /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(
                 input_default,
                 {
                   placeholder: DEFAULT_SETTINGS.projectListHeader
                 }
               )
-            ), /* @__PURE__ */ import_react91.default.createElement(
+            ), /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 help: "Where the area list is in a quarterly note",
                 name: "areaListHeader",
                 label: "Area List Header:"
               },
-              /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(
                 input_default,
                 {
                   placeholder: DEFAULT_SETTINGS.areaListHeader
                 }
               )
-            )), /* @__PURE__ */ import_react91.default.createElement(
+            )), /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 help: "The start day of the week",
                 name: "weekStart",
                 label: "Week Start:"
               },
-              /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(
                 select_default,
                 {
                   options: [
@@ -89590,32 +89648,32 @@ var SettingTab = (props) => {
                   ]
                 }
               )
-            ), /* @__PURE__ */ import_react91.default.createElement(
+            ), /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 help: "Show chinese calendar and holidays",
                 name: "useChineseCalendar",
                 label: "Chinese Calendar:"
               },
-              /* @__PURE__ */ import_react91.default.createElement(switch_default, null)
-            ), /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(switch_default, null)
+            ), /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 help: "Custom template file Path",
                 name: "usePeriodicAdvanced",
                 label: "Advanced Settings"
               },
-              /* @__PURE__ */ import_react91.default.createElement(switch_default, null)
-            ), settings.usePeriodicAdvanced && /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, [DAILY, WEEKLY, MONTHLY, QUARTERLY, YEARLY].map(
+              /* @__PURE__ */ import_react92.default.createElement(switch_default, null)
+            ), settings.usePeriodicAdvanced && /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, [DAILY, WEEKLY, MONTHLY, QUARTERLY, YEARLY].map(
               (item) => {
-                return /* @__PURE__ */ import_react91.default.createElement(
+                return /* @__PURE__ */ import_react92.default.createElement(
                   form_default.Item,
                   {
                     key: item,
                     name: `periodicNotesTemplateFilePath${item}`,
                     label: `${item} Template`
                   },
-                  /* @__PURE__ */ import_react91.default.createElement(AutoComplete2, { options: files }, /* @__PURE__ */ import_react91.default.createElement(
+                  /* @__PURE__ */ import_react92.default.createElement(AutoComplete2, { options: files }, /* @__PURE__ */ import_react92.default.createElement(
                     input_default,
                     {
                       placeholder: `${settings.periodicNotesPath}/Templates/${item}.md`
@@ -89623,84 +89681,84 @@ var SettingTab = (props) => {
                   ))
                 );
               }
-            )), /* @__PURE__ */ import_react91.default.createElement(divider_default, null), /* @__PURE__ */ import_react91.default.createElement(
+            )), /* @__PURE__ */ import_react92.default.createElement(divider_default, null), /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
-                help: /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, "Sync daily record from", /* @__PURE__ */ import_react91.default.createElement(typography_default.Link, { href: "https://usememos.com" }, " usememos "), "service"),
+                help: /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, "Sync daily record from", /* @__PURE__ */ import_react92.default.createElement(typography_default.Link, { href: "https://usememos.com" }, " usememos "), "service"),
                 name: "useDailyRecord",
                 label: "Daily Record"
               },
-              /* @__PURE__ */ import_react91.default.createElement(switch_default, null)
-            ), settings.useDailyRecord && /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(switch_default, null)
+            ), settings.useDailyRecord && /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 help: "Where the daily record module is in a daily note",
                 name: "dailyRecordHeader",
                 label: "Header:"
               },
-              /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(
                 input_default,
                 {
                   placeholder: DEFAULT_SETTINGS.dailyRecordHeader
                 }
               )
-            ), /* @__PURE__ */ import_react91.default.createElement(
+            ), /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
-                help: /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, "The", /* @__PURE__ */ import_react91.default.createElement(typography_default.Link, { href: "https://usememos.com" }, " usememos "), "service URL, < 0.22.0 or >= 0.22.3"),
+                help: /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, "The", /* @__PURE__ */ import_react92.default.createElement(typography_default.Link, { href: "https://usememos.com" }, " usememos "), "service URL, < 0.22.0 or >= 0.22.3"),
                 name: "dailyRecordAPI",
                 label: "API:"
               },
-              /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(
                 input_default,
                 {
                   placeholder: DEFAULT_SETTINGS.dailyRecordAPI || "https://your-use-memos.com"
                 }
               )
-            ), /* @__PURE__ */ import_react91.default.createElement(
+            ), /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
-                help: /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, "The", /* @__PURE__ */ import_react91.default.createElement(typography_default.Link, { href: "https://www.usememos.com/docs/security/access-tokens" }, " token "), "of your API"),
+                help: /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, "The", /* @__PURE__ */ import_react92.default.createElement(typography_default.Link, { href: "https://www.usememos.com/docs/security/access-tokens" }, " token "), "of your API"),
                 name: "dailyRecordToken",
                 label: "Token:"
               },
-              /* @__PURE__ */ import_react91.default.createElement(input_default, null)
-            ), /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(input_default, null)
+            ), /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 help: "Creating while daily note not exist",
                 name: "dailyRecordCreating",
                 label: "Creating:"
               },
-              /* @__PURE__ */ import_react91.default.createElement(switch_default, null)
-            ), /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(switch_default, null)
+            ), /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 help: "Warning while daily note not exist",
                 name: "dailyRecordWarning",
                 label: "Warning:"
               },
-              /* @__PURE__ */ import_react91.default.createElement(switch_default, null)
+              /* @__PURE__ */ import_react92.default.createElement(switch_default, null)
             ))))
           },
           {
             key: "para",
             label: "PARA Notes",
-            children: /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, /* @__PURE__ */ import_react91.default.createElement(form_default.Item, { name: "usePARANotes", label: "Turn on" }, /* @__PURE__ */ import_react91.default.createElement(switch_default, null)), settings.usePARANotes && /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, /* @__PURE__ */ import_react91.default.createElement(form_default.Item, { name: "projectsPath", label: "Projects Folder:" }, /* @__PURE__ */ import_react91.default.createElement(AutoComplete2, { options: folders }, /* @__PURE__ */ import_react91.default.createElement(input_default, null))), /* @__PURE__ */ import_react91.default.createElement(form_default.Item, { name: "areasPath", label: "Areas Folder:" }, /* @__PURE__ */ import_react91.default.createElement(AutoComplete2, { options: folders }, /* @__PURE__ */ import_react91.default.createElement(input_default, null))), /* @__PURE__ */ import_react91.default.createElement(form_default.Item, { name: "resourcesPath", label: "Resources Folder:" }, /* @__PURE__ */ import_react91.default.createElement(AutoComplete2, { options: folders }, /* @__PURE__ */ import_react91.default.createElement(input_default, null))), /* @__PURE__ */ import_react91.default.createElement(form_default.Item, { name: "archivesPath", label: "Archives Folder:" }, /* @__PURE__ */ import_react91.default.createElement(AutoComplete2, { options: folders }, /* @__PURE__ */ import_react91.default.createElement(input_default, null))), /* @__PURE__ */ import_react91.default.createElement(
+            children: /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, /* @__PURE__ */ import_react92.default.createElement(form_default.Item, { name: "usePARANotes", label: "Turn on" }, /* @__PURE__ */ import_react92.default.createElement(switch_default, null)), settings.usePARANotes && /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, /* @__PURE__ */ import_react92.default.createElement(form_default.Item, { name: "projectsPath", label: "Projects Folder:" }, /* @__PURE__ */ import_react92.default.createElement(AutoComplete2, { options: folders }, /* @__PURE__ */ import_react92.default.createElement(input_default, null))), /* @__PURE__ */ import_react92.default.createElement(form_default.Item, { name: "areasPath", label: "Areas Folder:" }, /* @__PURE__ */ import_react92.default.createElement(AutoComplete2, { options: folders }, /* @__PURE__ */ import_react92.default.createElement(input_default, null))), /* @__PURE__ */ import_react92.default.createElement(form_default.Item, { name: "resourcesPath", label: "Resources Folder:" }, /* @__PURE__ */ import_react92.default.createElement(AutoComplete2, { options: folders }, /* @__PURE__ */ import_react92.default.createElement(input_default, null))), /* @__PURE__ */ import_react92.default.createElement(form_default.Item, { name: "archivesPath", label: "Archives Folder:" }, /* @__PURE__ */ import_react92.default.createElement(AutoComplete2, { options: folders }, /* @__PURE__ */ import_react92.default.createElement(input_default, null))), /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 help: "Custom template file path and index filename",
                 name: "usePARAAdvanced",
                 label: "Advanced Settings"
               },
-              /* @__PURE__ */ import_react91.default.createElement(switch_default, null)
-            ), settings.usePARAAdvanced && /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(switch_default, null)
+            ), settings.usePARAAdvanced && /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, /* @__PURE__ */ import_react92.default.createElement(
               form_default.Item,
               {
                 name: "paraIndexFilename",
                 label: "Index Filename:"
               },
-              /* @__PURE__ */ import_react91.default.createElement(
+              /* @__PURE__ */ import_react92.default.createElement(
                 select_default,
                 {
                   options: [
@@ -89715,20 +89773,20 @@ var SettingTab = (props) => {
                   ]
                 }
               )
-            ), /* @__PURE__ */ import_react91.default.createElement(import_react91.default.Fragment, null, [
+            ), /* @__PURE__ */ import_react92.default.createElement(import_react92.default.Fragment, null, [
               [PROJECT, settings.projectsPath],
               [AREA, settings.areasPath],
               [RESOURCE, settings.resourcesPath],
               [ARCHIVE, settings.archivesPath]
             ].map(([name, path]) => {
-              return /* @__PURE__ */ import_react91.default.createElement(
+              return /* @__PURE__ */ import_react92.default.createElement(
                 form_default.Item,
                 {
                   key: name,
                   name: `${name.toLocaleLowerCase()}sTemplateFilePath`,
                   label: `${name} Template`
                 },
-                /* @__PURE__ */ import_react91.default.createElement(AutoComplete2, { options: files }, /* @__PURE__ */ import_react91.default.createElement(
+                /* @__PURE__ */ import_react92.default.createElement(AutoComplete2, { options: files }, /* @__PURE__ */ import_react92.default.createElement(
                   input_default,
                   {
                     placeholder: `${path}/template.md`
@@ -89805,7 +89863,7 @@ var SettingTabView = class extends import_obsidian13.PluginSettingTab {
       document.dispatchEvent(event);
     };
     this.root.render(
-      /* @__PURE__ */ import_react92.default.createElement(
+      /* @__PURE__ */ import_react93.default.createElement(
         AppContext.Provider,
         {
           value: {
@@ -89814,7 +89872,7 @@ var SettingTabView = class extends import_obsidian13.PluginSettingTab {
             locale: this.locale
           }
         },
-        /* @__PURE__ */ import_react92.default.createElement(SettingTab, { settings: this.settings, saveSettings })
+        /* @__PURE__ */ import_react93.default.createElement(SettingTab, { settings: this.settings, saveSettings })
       )
     );
   }
@@ -89899,7 +89957,6 @@ var LifeOS = class extends import_obsidian14.Plugin {
       name: "LifeOS Guide",
       callback: () => openOfficialSite(locale5)
     });
-    this.app.workspace.onLayoutReady(this.initCreateNoteView);
     this.loadHelpers();
     this.loadDailyRecord();
     this.loadGlobalHelpers();

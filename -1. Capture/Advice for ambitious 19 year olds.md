@@ -1,13 +1,39 @@
-我是一个有野心的 19 岁年轻人，我应该做什么？”这个问题的答案因人而异，可能是去上大学（同时进行一些项目），或者去公司工作，或者创立自己的创业公司。
+> https://blog.samaltman.com/advice-for-ambitious-19-year-olds
 
-**无论选择何种道路，制造东西和与聪明的人打交道是关键。" 东西 " 可以是很多不同的事情——课外的开源项目，创业公司，公司内部的新销售流程——显然，仅与朋友坐在一起讨论你们应该一起建立一个网站并不能算在 " 制造东西 "。**
+“I’m an ambitious 19 year old, what should I do?” 
 
-正确的风险的取舍很重要。比如在大学停留似乎是非风险的路径，然而在你生产力最强的四年里什么都没做，实际上是相当有风险的。开始你热爱的公司是正确的风险，成为一个还有可能失败的公司的第 50 名员工是错误的风险。
+I get asked this question fairly often, and I now have a lot of data on what works, so I thought I’d share my response.
 
-如果你选择去大学，确保你学习有价值的东西并且从事有趣的项目。如果你真的担心退出大学会错过一些重要的社交体验，那你可能应该待在大学。**如果你加入公司，通常建议选择一个有突破的公司，这里面有很好的风险/收益权衡。**
+Usually, people are deciding between going to college (and usually working on side projects while they do so), joining a company, or starting their own startup. [1] [2]
 
-创业则需要热爱你的想法，对于泛泛的复制别人创业公司的点子可能并不适合你。记住，你会有更多的机会创业，并且创业公司需要 6-10 年的承诺，等待合适的机会。
+The secret is that any of these can be right answer, and you should make your decision based on the specific circumstances of each option.  The critical point is that you want to do the thing that is most likely to get you on a path to do something great.
 
-**不论你选择什么，保持你的个人支出低并且减少你的承诺。很多人由于无法接受减薪或者无法搬家，或者没有时间而错过了很好的机会。**
+No matter what you choose, build stuff and be around smart people.  “Stuff” can be a lot of different things—open source projects outside of class, a startup, a new sales process at a company you work at—but, obviously, sitting around talking with your friends about how you guys really should build a website together does not count.
 
-总结来说，所有路都有可能是正确的，**关键是根据你自己的情况做出选择，无论选择什么都要坚持做一些事情（比如制造一些东西）并跟聪明的人在一起。同时要合理地看待风险，做自己热爱并且有可能有所成就的事情。**
+The best people always seem to be building stuff and hanging around smart people, so if you have to decide between several options, this may be a good filter.
+
+Working on something good will pull you along a path where good things keep happening to you.  (In fact, this effect is so strong that there’s a danger of getting sucked into too many interesting things and getting distracted from what you really want to do.)
+
+In making this decision, you want to take the right kind of risk.  Most people think about risk the wrong way—for example, staying in college seems like a non-risky path.  However, getting nothing done for four of your most productive years is actually pretty risky.  Starting a company that you’re in love with is the right kind of risk.  Becoming employee number 50 at a company that still has a good chance of failure is the wrong kind of risk.
+
+If you stay in college, make sure you learn something worthwhile and work on interesting projects—college is probably the best place to meet people to work with.  If you’re really worried you’ll miss some critical social experience by dropping out of college, you should probably stay.
+
+If you join a company, my general advice is to join a company on a breakout trajectory.  There are a usually a handful of these at a time, and they are usually identifiable to a smart young person.  They are a very good risk/reward tradeoff.  Such a company is almost certainly going to be successful, but the rest of the world isn’t quite as convinced of it as they should be.  Fortunately, these companies love ambitious young people.  In addition to the equity being a great deal (you might get 1/10th of the equity you’d get if you join a tiny new startup, but at 1/100th or 1/1000th of the risk), you will work with very good people, learn what success looks like, and get a W on your record (which turns out to be quite valuable).  Spending a few years at a company that fails has path consequences, and working at an already-massively-successful company means you will learn much less, and probably work with less impressive people.
+
+Incidentally, don’t let salary be a factor.  I just watched someone turn down one of these breakout companies because Microsoft offered him $30k per year more in salary—that was a terrible decision.  He will not build interesting things and may not work with smart people.  In a few years, when it’s time for something new, the options in front of him will be much worse than they could have been.
+
+If you start a company, only do so if you have an idea you’re in love with.  If you’re hanging out with your friends trying to come up with an idea, I don’t think you should start that company (although there are many who disagree with me).  Starting a failed startup is less bad than joining a failed company as an employee (and you’ll certainly learn much more in the former case).  If you fail at an idea that you really loved and could have been great, you’re unlikely to regret it, and people will not hold it against you. Failing at a me-too copycat startup is worse.  Remember that there will be lots of other opportunities to start companies, and that startups are a 6-10 year commitment—wait for the right one
+
+One big pro for starting a company is that it’s usually the way to learn the most in the shortest amount of time.  One big con is that it’s easy to start a company for the wrong reasons—usually so that you can say you’re starting a company—and this makes it easy to cloud your judgment. 
+
+No matter what you choose, keep your personal burn rate low and minimize your commitments.  I have seen a lot of people miss great opportunities because they couldn’t afford a reduction in salary or because they couldn’t move or didn’t have the time.
+
+Think about risk the right way.  Drew Houston gave a great commencement speech where he said you only have to be right once.  That’s true.  The risk is not getting on the path where you get to be right that one critical time. 
+
+  
+
+Thanks to Lachy Groom and Nick Sivo for reading drafts of this. 
+
+[1] Sometimes, a 4th option is being a VC.  This is usually a mistake—the best way to become a VC is not to grind your way up the ladder from junior associate intern.  Even if you want to be a VC, you’re much better off starting or joining a startup, and getting partner offers when you’re 28.  Plus, good founders want to work with an investor that has operational experience.
+
+[2] Interestingly, no one is ever considering going into academia.
