@@ -2,15 +2,18 @@
 .periodic-para-create-note {
   overflow: hidden !important;
 }
-.periodic-para-create-note * {
-  font-family: var(--font-interface);
-}
 .periodic-para-create-note button:not(.ant-btn) {
   background-color: unset;
   box-shadow: unset;
 }
+.periodic-para-create-note .periodic-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
 .periodic-para-create-note .ant-picker-cell-selected .ant-picker-cell-inner .cell-container .chinese-cal {
-  color: #fff;
+  color: var(--text-on-accent);
 }
 .periodic-para-create-note .ant-picker-cell-inner {
   display: flex !important;
@@ -21,13 +24,13 @@
 }
 .periodic-para-create-note .ant-picker-cell-inner .cell-container {
   position: relative;
-  border-radius: 10px;
+  border-radius: var(--radius-s);
 }
 .periodic-para-create-note .ant-picker-cell-inner .cell-container .chinese-cal {
   display: block;
   line-height: initial;
-  font-size: 11px;
-  color: rgba(153, 153, 153, 0.45);
+  font-size: var(--font-smallest);
+  color: var(--text-muted);
 }
 .periodic-para-create-note .ant-picker-cell-inner .cell-container .dot {
   position: relative;
@@ -45,27 +48,27 @@
 }
 .periodic-para-create-note .ant-picker-cell-inner .cell-container .label {
   position: absolute;
-  top: -5px;
-  right: -8px;
-  color: #fff;
-  width: 13px;
-  line-height: 13px;
-  border-radius: 8px;
-  font-size: 8px;
+  top: calc(var(--size-4-1) * -1.5);
+  right: calc(var(--size-4-1) * -2.5);
+  color: var(--text-on-accent);
+  width: calc(var(--size-4-1) * 3);
+  line-height: calc(var(--size-4-1) * 3);
+  border-radius: calc(var(--size-4-1) * 3);
+  font-size: var(--font-smallest);
 }
 .periodic-para-create-note .ant-picker-cell-inner .cell-container .label.workday {
-  background-color: rgba(153, 153, 153, 0.45);
+  background-color: var(--text-muted);
 }
 .periodic-para-create-note .ant-picker-cell-inner .cell-container .label.holiday {
   background-color: var(--interactive-accent);
 }
 .periodic-para-create-note .ant-btn-primary {
-  color: #fff;
+  color: var(--text-on-accent);
   background-color: var(--interactive-accent);
-  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+  box-shadow: 0 2px 0 var(--background-modifier-box-shadow);
 }
 .periodic-para-create-note .ant-tabs-nav {
-  margin: 8px 0;
+  margin: var(--size-4-1) 0;
 }
 .periodic-para-create-note .ant-tabs-nav::before {
   border: 0;
@@ -83,24 +86,25 @@
   border-radius: 0;
   box-shadow: unset;
   transition: unset;
+  background-color: transparent !important;
 }
 .periodic-para-create-note .ant-form-item .ant-picker-dropdown .ant-picker-header {
   border: 0;
 }
 .periodic-para-create-note .ant-form-item .ant-picker-dropdown .ant-picker-body {
-  padding: 0 18px;
+  padding: 0 var(--size-4-3);
 }
 .periodic-para-create-note .ant-form-item .ant-picker-dropdown .ant-picker-header-view {
-  line-height: 30px;
+  line-height: var(--line-height-normal);
 }
 .periodic-para-create-note .ant-form-item .ant-input-affix-wrapper {
-  padding: 0 11px;
+  padding: 0 var(--size-4-2);
 }
 .is-phone .periodic-para button {
   width: unset;
 }
 .is-phone .periodic-para .ant-tabs-tab + .ant-tabs-tab {
-  margin: 0 0 0 24px;
+  margin: 0 0 0 var(--size-4-6);
 }
 
 /* src/component/SettingTab/index.less */

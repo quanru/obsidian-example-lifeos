@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d681d7f1fc387428",
+        "id": "75cc3ac218435d11",
         "type": "tabs",
         "children": [
           {
-            "id": "3d01383e0a90eea8",
+            "id": "d99506660cfeac49",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "-1. 捕获/Advice for ambitious 19 year olds.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Advice for ambitious 19 year olds"
             }
           }
         ]
@@ -32,16 +37,6 @@
         "dimension": 52.73279352226721,
         "children": [
           {
-            "id": "9110575c83bff6ab",
-            "type": "leaf",
-            "state": {
-              "type": "periodic-para",
-              "state": {},
-              "icon": "zap",
-              "title": "LifeOS"
-            }
-          },
-          {
             "id": "ec6b6bd3ee7fa86c",
             "type": "leaf",
             "state": {
@@ -51,8 +46,7 @@
               "title": "LifeOS"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "d80b12b7817209fd",
@@ -68,7 +62,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -189,20 +183,24 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "command-palette:打开命令面板": false,
-      "random-note:开始漫游笔记": false,
-      "workspaces:管理工作区布局": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false,
       "templater-obsidian:Templater": false,
-      "fuzzy-chinese-pinyin:FuzzySearch": false,
-      "periodic-para:LifeOS": false
+      "periodic-para:LifeOS": false,
+      "fuzzy-chinese-pinyin:FuzzySearch": false
     }
   },
-  "active": "ec6b6bd3ee7fa86c",
+  "active": "d99506660cfeac49",
   "lastOpenFiles": [
+    "-1. 捕获/Predicting The Future.md",
+    "-1. 捕获/Quality software deserves your hard‑earned cash.md",
+    "-1. 捕获/Advice for ambitious 19 year olds.md",
+    "README.md",
     "0. 周期笔记/Templates/Daily.md",
     "0. 周期笔记/Templates/Quarterly.md",
     "0. 周期笔记/Templates/Weekly.md",
@@ -218,7 +216,6 @@
     "0. 周期笔记/2023/2023.md",
     "0. 周期笔记/2023/Quarterly/2023-Q1.md",
     "0. 周期笔记/2023/Monthly/2023-06.md",
-    "README.md",
     "0. 周期笔记/未命名",
     "5. 表达/README.md",
     "-1. 捕获/README.md",
@@ -230,8 +227,6 @@
     "2. 领域/Template.md",
     "1. 项目/Template.md",
     "0. 周期笔记/2023/Daily/06/2023-06-04.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-03.md",
-    "0. 周期笔记/2023/Weekly/2023-W23.md",
     "1. 项目/个人品牌-LifeOS-录制上手视频",
     "1. 项目/未命名",
     "Attachments/3-Screenshot_2024-06-14-11-22-23-404_com.microsoft.emmx.jpg",
