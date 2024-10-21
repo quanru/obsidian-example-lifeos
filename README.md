@@ -1,11 +1,11 @@
-<p align="center"><a title="中文版本" href="https://github.com/quanru/obsidian-periodic-para/blob/main/README-ZH.md">中文版本</a>  |  English Version</p>
+<p align="center"><a title="中文版本" href="https://github.com/quanru/obsidian-example-lifeos/tree/chinese-version">中文版本</a>  |  English Version</p>
 
 <a href="https://www.producthunt.com/posts/lifeos-template-for-obsidian?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lifeos&#0045;template&#0045;for&#0045;obsidian" target="_blank">
   <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=441390&theme=light" alt="LifeOS&#0032;Template&#0032;for&#0032;Obsidian - Obsidian&#0032;LifeOS&#0032;&#0045;&#0032;Your&#0032;Life&#0032;Management&#0032;Assistant&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
 </a>
 
-- This is a plugin for [LifeOS](https://quanru.github.io/2023/07/08/Building%20my%20second%20brain%20%F0%9F%A7%A0%20with%20Obsidian/), which assist in practicing the PARA method with periodic notes and [usememos](https://www.usememos.com/).
-- It is recommended to download the [LifeOS-example](https://github.com/quanru/obsidian-example-LifeOS/tree/main) to experience it.
+- This is a plugin for [LifeOS](https://lifeos.vip), which assist in practicing the PARA method with periodic notes and [usememos](https://www.usememos.com/).
+- It is recommended to download the [LifeOS-example](https://github.com/quanru/obsidian-example-lifeos/archive/refs/heads/main.zip) to experience it.
 - For more tutorials, please go to [LifeOS for Obsidian Official Site](https://lifeos.vip/)
 
 ## Features
@@ -13,6 +13,10 @@
 - Basic: https://lifeos.vip/guide/readme/free.html
 - **Pro** : https://lifeos.vip/guide/readme/pro.html
 
+
+## Download
+
+- [LifeOS-example](https://github.com/quanru/obsidian-lifeos/archive/refs/heads/main.zip)
 
 ## Support
 
