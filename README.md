@@ -1,18 +1,22 @@
 
-<p align="center">中文版本  |  <a title="English" href="https://github.com/quanru/obsidian-periodic-para">English Version</a></p>
+<p align="center">中文版本  |  <a title="English" href="https://github.com/quanru/obsidian-example-lifeos">English Version</a></p>
 
 <a href="https://www.producthunt.com/posts/lifeos-template-for-obsidian?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lifeos&#0045;template&#0045;for&#0045;obsidian" target="_blank">
   <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=441390&theme=light" alt="LifeOS&#0032;Template&#0032;for&#0032;Obsidian - Obsidian&#0032;LifeOS&#0032;&#0045;&#0032;Your&#0032;Life&#0032;Management&#0032;Assistant&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
 </a>
 
-- 这是一个专为 [LifeOS](https://quanru.github.io/2023/06/18/%E4%B8%80%E7%A7%8D%E5%AE%9E%E7%94%A8%E6%96%B0%E5%9E%8B%20Obsidian%20%E5%AE%9E%E8%B7%B5%E4%B9%8B%E6%9E%84%E5%BB%BA%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E5%A4%A7%E8%84%91%20%F0%9F%A7%A0/) 开发的 Obsidian 插件，可通过『周期笔记』和『[usememos](https://www.usememos.com/)』来实践 PARA 方法。
-- 强烈推荐下载 [LifeOS-example](https://github.com/quanru/obsidian-example-LifeOS/tree/chinese-version) 示例仓库来体验本插件。
+- 这是一个专为 [LifeOS](https://lifeos.vip/zh) 开发的 Obsidian 插件，可通过『周期笔记』和『[usememos](https://www.usememos.com/)』来实践 PARA 方法。
+- 强烈推荐下载 [LifeOS-example](https://github.com/quanru/obsidian-example-lifeos/archive/refs/heads/chinese-version.zip) 示例仓库来体验本插件。
 - 更多教程，请访问[Obsidian LifeOS 官网](https://lifeos.vip/zh)查看
 
 ## 特性
 
 - 免费版：https://lifeos.vip/zh/guide/readme/free.html
 - **专业版** ：https://lifeos.vip/zh/guide/readme/pro.html
+
+## 下载
+
+- [LifeOS-example](https://github.com/quanru/obsidian-example-lifeos/archive/refs/heads/chinese-version.zip)
 
 ## 用户支持
 
