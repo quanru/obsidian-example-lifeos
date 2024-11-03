@@ -16,20 +16,24 @@
 
 ## Download
 
-- [LifeOS-example](https://github.com/quanru/obsidian-lifeos/archive/refs/heads/main.zip)
+- [LifeOS-example](https://github.com/quanru/obsidian-example-lifeos/archive/refs/heads/main.zip)
 
 ## Support
 
-- [Twitter](https://twitter.com/quanruzhuoxiu)
-- [Discord](https://discord.gg/HZGanKEkuZ)
-- [Lark](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=ba8p19af-4cdf-4c94-8a59-95cea664ea61)
-- [Email](mailto:quanruzhuoxiu@gmail.com)
+- [🎮 Discord](https://discord.gg/HZGanKEkuZ)
+- [💬 Telegram](https://t.me/+OLTasChvEEthMjBl)
+- [🐦 LifeOS for Obsidian](https://twitter.com/quan_ru)
+- [🐦 Twitter](https://twitter.com/quanruzhuoxiu)
+- [📺 Youtub](https://www.youtube.com/@LeYangLin)
+- [🧑‍🔧 Bento](https://bento.me/leyang)
+- [📧 Email](mailto:quanruzhuoxiu@gmail.com)
 
 ## Acknowledgements
 
 Also, I relied on the code from these excellent plugins:
 
 - [PARA](https://fortelabs.com/blog/para/). Thanks to Tiago Forte for inventing such a great organizational method.
+- [PARA Starter Kit](https://forum.obsidian.md/t/para-starter-kit/223). Thanks to cotemaxime for creating such a great starter vault.
 - [obsidian-periodic-notes](https://github.com/liamcain/obsidian-periodic-notes). Gave me the inspiration to develop this plugin.
 - [obsidian-dataview](https://github.com/blacksmithgu/obsidian-dataview). The underlying plugin uses dataview's query interface.
 - [Templater](https://github.com/SilentVoid13/Templater). Provides decoupled template creation, allowing a very large number of plugins to create files with the help of it.
@@ -37,6 +41,8 @@ Also, I relied on the code from these excellent plugins:
 ## Donations
 
 If this plugin do help you, please buy me a cup of coffee on [buymeacoffee](https://www.buymeacoffee.com/leyang).
+
+In addition, you can also support me in further developing a better LifeOS by purchasing the [LifeOS Pro](https://lifeos.vip/plugin/life-os-pro.html)!
 
 <a href="https://www.buymeacoffee.com/leyang"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=leyang&button_colour=40DCA5&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
