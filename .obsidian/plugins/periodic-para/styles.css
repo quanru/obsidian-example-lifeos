@@ -108,3 +108,54 @@
 }
 
 /* src/component/SettingTab/index.less */
+.periodic-para-setting-tab .ant-tabs-nav-list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.periodic-para-setting-tab .ant-tabs-nav-wrap {
+  justify-content: center;
+}
+.periodic-para-setting-tab .ant-tabs-tab {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.periodic-para-setting-tab .ant-tabs-tab + .ant-tabs-tab {
+  margin-left: 0;
+}
+.periodic-para-setting-tab .ant-form-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+.periodic-para-setting-tab .ant-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* src/component/TopBanner/index.less */
+.m-top-banner .pro-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+.m-top-banner .pro-link a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 40px;
+}
+.m-top-banner .icon-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+}
+.m-top-banner .icon-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 40px;
+}

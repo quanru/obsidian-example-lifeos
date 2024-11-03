@@ -4,22 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "75cc3ac218435d11",
+        "id": "527f756cac42e152",
         "type": "tabs",
         "children": [
           {
-            "id": "d99506660cfeac49",
+            "id": "676c23ede8548a3f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "-1. 捕获/Advice for ambitious 19 year olds.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "主页.canvas",
+                "viewState": {
+                  "x": -180,
+                  "y": 130,
+                  "zoom": -0.18539821385424635
+                }
               },
-              "icon": "lucide-file",
-              "title": "Advice for ambitious 19 year olds"
+              "icon": "lucide-layout-dashboard",
+              "title": "主页"
             }
           }
         ]
@@ -62,7 +64,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -183,23 +185,24 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "command-palette:Open command palette": false,
-      "random-note:Open random note": false,
-      "workspaces:Manage workspace layouts": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "random-note:开始漫游笔记": false,
+      "workspaces:管理工作区布局": false,
       "templater-obsidian:Templater": false,
       "periodic-para:LifeOS": false,
-      "fuzzy-chinese-pinyin:FuzzySearch": false
+      "fuzzy-chinese-pinyin:FuzzySearch": false,
+      "periodic-para:LifeOS 创建": false
     }
   },
-  "active": "d99506660cfeac49",
+  "active": "676c23ede8548a3f",
   "lastOpenFiles": [
+    "-1. 捕获/Advice for ambitious 19 year olds.md",
     "-1. 捕获/Predicting The Future.md",
     "-1. 捕获/Quality software deserves your hard‑earned cash.md",
-    "-1. 捕获/Advice for ambitious 19 year olds.md",
     "README.md",
     "0. 周期笔记/Templates/Daily.md",
     "0. 周期笔记/Templates/Quarterly.md",
