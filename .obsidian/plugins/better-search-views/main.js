@@ -2768,7 +2768,10 @@ var require_plugin_context = __commonJS({
     var _obsidian = require("obsidian");
     var PluginContext = (0, _solidJs.createContext)();
     function PluginContextProvider(props) {
-      const handleClick = async (path, line) => {
+      const handleClick = async (event, path, line) => {
+        if (event.target instanceof HTMLAnchorElement) {
+          return;
+        }
         const file = props.plugin.app.metadataCache.getFirstLinkpathDest(path, path);
         if (!file) {
           new _obsidian.Notice(`File ${path} does not exist`);
@@ -2811,7 +2814,8 @@ var require_plugin_context = __commonJS({
             handleClick,
             handleMouseover,
             handleHeightChange,
-            plugin: props.plugin
+            plugin: props.plugin,
+            app: props.plugin.app
           };
         },
         get children() {
@@ -2838,24 +2842,8 @@ var require_list_icon = __commonJS({
     });
     exports.ListIcon = ListIcon;
     var _web = require_web();
-    var _tmpl$ = /* @__PURE__ */ (0, _web.template)(`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="better-search-views-icon lucide lucide-list"><line x1="8" x2="21" y1="6" y2="6"></line><line x1="8" x2="21" y1="12" y2="12"></line><line x1="8" x2="21" y1="18" y2="18"></line><line x1="3" x2="3.01" y1="6" y2="6"></line><line x1="3" x2="3.01" y1="12" y2="12"></line><line x1="3" x2="3.01" y1="18" y2="18">`);
+    var _tmpl$ = /* @__PURE__ */ (0, _web.template)(`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="better-search-views-icon lucide lucide-dot"><circle cx="12.1" cy="12.1" r="1">`);
     function ListIcon() {
-      return _tmpl$();
-    }
-  }
-});
-
-// src/ui/solid/icons/arrow-right-icon.tsx
-var require_arrow_right_icon = __commonJS({
-  "src/ui/solid/icons/arrow-right-icon.tsx"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.ArrowRightIcon = ArrowRightIcon;
-    var _web = require_web();
-    var _tmpl$ = /* @__PURE__ */ (0, _web.template)(`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="better-search-views-icon lucide lucide-corner-down-right"><polyline points="15 10 20 15 15 20"></polyline><path d="M4 4v7a4 4 0 0 0 4 4h12">`);
-    function ArrowRightIcon() {
       return _tmpl$();
     }
   }
@@ -2903,7 +2891,6 @@ var require_title = __commonJS({
     var _solidJs = require_solid();
     var _pluginContext = require_plugin_context();
     var _listIcon = require_list_icon();
-    var _arrowRightIcon = require_arrow_right_icon();
     var _headingIcon = require_heading_icon();
     var _patterns = (init_patterns(), __toCommonJS(patterns_exports));
     var _tmpl$ = /* @__PURE__ */ (0, _web.template)(`<div class="better-search-views-titles-container">`);
@@ -2923,32 +2910,25 @@ var require_title = __commonJS({
             return props.breadcrumbs;
           },
           children: (breadcrumb, i) => {
-            var _a;
-            const handleTitleClick = async () => await handleClick(props.contextTree.filePath, breadcrumb.position.start.line);
+            const handleTitleClick = async (event) => await handleClick(event, props.contextTree.filePath, breadcrumb.position.start.line);
             const handleTitleMouseover = (event) => handleMouseover(event, props.contextTree.filePath, breadcrumb.position.start.line);
-            const previousIsHeading = ((_a = props.breadcrumbs[i() - 1]) == null ? void 0 : _a.type) === "heading";
-            const isFirstListItemInBreadcrumbs = breadcrumb.type === "list" && (i() === 0 || previousIsHeading);
-            const isFirstHeadingInBreadcrumbs = i() === 0 && breadcrumb.type === "heading";
             return (() => {
               const _el$2 = _tmpl$2(), _el$3 = _el$2.firstChild, _el$4 = _el$3.firstChild, _el$5 = _el$4.nextSibling;
               _el$3.$$mouseover = handleTitleMouseover;
               _el$3.$$click = handleTitleClick;
               (0, _web.insert)(_el$4, (0, _web.createComponent)(_solidJs.Switch, {
                 get fallback() {
-                  return (0, _web.createComponent)(_arrowRightIcon.ArrowRightIcon, {});
+                  return (0, _web.createComponent)(_listIcon.ListIcon, {});
                 },
                 get children() {
-                  return [(0, _web.createComponent)(_solidJs.Match, {
-                    when: isFirstListItemInBreadcrumbs,
-                    get children() {
-                      return (0, _web.createComponent)(_listIcon.ListIcon, {});
-                    }
-                  }), (0, _web.createComponent)(_solidJs.Match, {
-                    when: isFirstHeadingInBreadcrumbs,
+                  return (0, _web.createComponent)(_solidJs.Match, {
+                    get when() {
+                      return breadcrumb.type === "heading";
+                    },
                     get children() {
                       return (0, _web.createComponent)(_headingIcon.HeadingIcon, {});
                     }
-                  })];
+                  });
                 }
               }));
               (0, _web.insert)(_el$5, () => removeListToken(breadcrumb.text));
@@ -2980,7 +2960,8 @@ var require_match_section = __commonJS({
     function MatchSection(props) {
       const {
         handleClick,
-        handleMouseover
+        handleMouseover,
+        app
       } = (0, _pluginContext.usePluginContext)();
       const matchLifecycleManager = new _obsidian.Component();
       (0, _solidJs.onCleanup)(() => {
@@ -3003,11 +2984,11 @@ var require_match_section = __commonJS({
                 _el$2.$$mouseover = (event) => {
                   handleMouseover(event, section.filePath, line);
                 };
-                _el$2.$$click = async () => {
-                  await handleClick(section.filePath, line);
+                _el$2.$$click = async (event) => {
+                  await handleClick(event, section.filePath, line);
                 };
                 (0, _web.use)(async (el) => {
-                  await _obsidian.MarkdownRenderer.renderMarkdown(section.text, el, section.filePath, matchLifecycleManager);
+                  await _obsidian.MarkdownRenderer.render(app, section.text, el, section.filePath, matchLifecycleManager);
                   matchLifecycleManager.load();
                 }, _el$2);
                 return _el$2;
@@ -4588,10 +4569,11 @@ var Patcher = class {
         addChild(old) {
           return function(child, ...args) {
             const thisIsSearchView = this.hasOwnProperty("searchQuery");
-            if (thisIsSearchView && !patcher.triedPatchingSearchResultItem) {
+            const hasBacklinks = child == null ? void 0 : child.backlinkDom;
+            if ((thisIsSearchView || hasBacklinks) && !patcher.triedPatchingSearchResultItem) {
               patcher.triedPatchingSearchResultItem = true;
               try {
-                patcher.patchSearchResultDom(child.dom);
+                patcher.patchSearchResultDom(child.dom || child.backlinkDom);
               } catch (error) {
                 patcher.reportError(
                   error,
@@ -4747,3 +4729,5 @@ mark.js/dist/mark.js:
   * Released under the MIT license https://git.io/vwTVl
   *****************************************************)
 */
+
+/* nosourcemap */

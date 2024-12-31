@@ -42,8 +42,7 @@
 }
 .periodic-para-create-note .ant-picker-cell-inner .cell-container .week-dot {
   position: fixed;
-  height: 2px;
-  left: 20px;
+  left: calc(var(--size-4-1) * 2);
   color: var(--interactive-accent);
 }
 .periodic-para-create-note .ant-picker-cell-inner .cell-container .label {
