@@ -6,6 +6,11 @@
   white-space: normal;
 }
 
+.better-search-views-file-match.markdown-rendered ul > li,
+.better-search-views-file-match.markdown-rendered ol > li {
+  margin-inline-start: calc(var(--list-indent) * 0.8);
+}
+
 .better-search-views-file-match > blockquote {
   margin-inline-start: 0;
   margin-inline-end: 0;
@@ -13,7 +18,7 @@
 
 .better-search-views-file-match ul {
   position: relative;
-  padding-inline-start: var(--list-indent);
+  padding-inline-start: 0;
 }
 
 .better-search-views-file-match a {
@@ -139,8 +144,8 @@ body:not(.is-grabbing)
 
 .better-search-views-tree .better-search-views-breadcrumb-container {
   flex-grow: 1;
-  padding-right: 4px;
-  padding-left: 4px;
+  padding-right: 2px;
+  padding-left: 2px;
 }
 
 .better-search-views-tree
@@ -151,13 +156,15 @@ body:not(.is-grabbing)
 }
 
 .better-search-views-breadcrumb-token {
+  color: var(--text-faint);
   display: flex;
   align-items: center;
+  height: calc(1em * var(--line-height-tight));
 }
 
 .better-search-views-tree .collapse-icon {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   align-self: flex-start;
 
   padding-top: 4px;
