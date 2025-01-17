@@ -1,6 +1,8 @@
 
 <p align="center">中文版本  |  <a title="English" href="https://github.com/quanru/obsidian-example-lifeos">English Version</a></p>
 
+<a href="https://discord.com/channels/686053708261228577/702717892533157999/1328858581331607564">🔥 十万火急，LifeOS 入围官方最佳模版，需要你的关键一票！</a>
+
 <a href="https://www.producthunt.com/posts/lifeos-template-for-obsidian?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lifeos&#0045;template&#0045;for&#0045;obsidian" target="_blank">
   <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=441390&theme=light" alt="LifeOS&#0032;Template&#0032;for&#0032;Obsidian - Obsidian&#0032;LifeOS&#0032;&#0045;&#0032;Your&#0032;Life&#0032;Management&#0032;Assistant&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
 </a>
