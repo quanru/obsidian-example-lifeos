@@ -13,9 +13,7 @@ ProjectListByTime
 ## 角色维度
 ### 职员
 %% 作为职员，对于这个季度的目标，你如何拆解本月任务呢？ %%
-<%* let current = LifeOS.Date.parse(app.workspace.getActiveFile().path); if (current.month%2 === 0) { -%>
-- [ ] 双月刊填写 #工作/琐事 📅 <% LifeOS.Date.lastDay(current).month %>
-<%* } -%>
+- [ ] 月刊填写 #工作/琐事
 - OKR
 ### 丈夫
 ### 父亲
