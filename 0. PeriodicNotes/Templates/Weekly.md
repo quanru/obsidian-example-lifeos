@@ -13,10 +13,8 @@ ProjectListByTime
 ### Employee
 %% As an employee, how do you break down this week's tasks for this month's tasks? %%
 - OKR
-<%* let weekNum = Number(tp.file.title.match(/-W(\d\d)/)[1]); if (weekNum%2 !== 0) { -%>
 - #work/one-one 
 	- [ ] #work/one-one with xxx
-<%* } -%>
 
 ### Husband
 ### Father
