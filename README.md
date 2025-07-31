@@ -12,8 +12,9 @@
 
 ## Features
 
-- Basic: https://lifeos.vip/guide/readme/free.html
-- **Pro** : https://lifeos.vip/guide/readme/pro.html
+- LifeOS Basic: https://lifeos.vip/plugin/lifeos/life-os.html
+- **LifeOS Pro** : https://lifeos.vip/plugin/lifeos/life-os-pro.html
+- **DeepAsk AI Assistant** : https://lifeos.vip/plugin/deepask/deepask.html
 
 
 ## Download
