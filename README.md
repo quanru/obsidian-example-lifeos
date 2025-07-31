@@ -13,8 +13,9 @@
 
 ## 特性
 
-- 免费版：https://lifeos.vip/zh/guide/readme/free.html
-- **专业版** ：https://lifeos.vip/zh/guide/readme/pro.html
+- LifeOS 免费版：https://lifeos.vip/zh/plugin/lifeos/life-os.html
+- **LifeOS 专业版**: https://lifeos.vip/zh/plugin/lifeos/life-os-pro.html
+- **DeepAsk AI Assistant**: https://lifeos.vip/zh/plugin/deepask/deepask.html
 
 ## 下载
 
