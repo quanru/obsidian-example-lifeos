@@ -44,7 +44,7 @@
             "state": {
               "type": "periodic-para",
               "state": {},
-              "icon": "zap",
+              "icon": "file-plus",
               "title": "LifeOS"
             }
           }
@@ -61,10 +61,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -185,15 +186,15 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "command-palette:打开命令面板": false,
-      "random-note:开始漫游笔记": false,
-      "workspaces:管理工作区布局": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false,
+      "periodic-para:LifeOS Creation": false,
       "templater-obsidian:Templater": false,
-      "periodic-para:LifeOS 创建": false,
       "fuzzy-chinese-pinyin:FuzzySearch": false
     }
   },
