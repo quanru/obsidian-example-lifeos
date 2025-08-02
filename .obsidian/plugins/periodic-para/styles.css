@@ -3,8 +3,8 @@
   overflow: hidden !important;
 }
 .periodic-para-create-note button:not(.ant-btn) {
-  background-color: unset;
-  box-shadow: unset;
+  background-color: unset !important;
+  box-shadow: unset !important;
 }
 .periodic-para-create-note .periodic-form {
   display: flex;
@@ -38,7 +38,7 @@
   color: var(--interactive-accent);
   display: block;
   margin: auto;
-  top: -15px;
+  top: 12px;
 }
 .periodic-para-create-note .ant-picker-cell-inner .cell-container .week-dot {
   position: fixed;
@@ -134,11 +134,17 @@
 }
 
 /* src/component/TopBanner/index.less */
+.m-top-banner .banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 0;
+}
 .m-top-banner .pro-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 0;
 }
 .m-top-banner .pro-link a {
   display: flex;
@@ -146,15 +152,41 @@
   text-decoration: none;
   height: 40px;
 }
+.m-top-banner .deepask-ad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.m-top-banner .deepask-ad a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 40px;
+  border-radius: 4px;
+  padding: 0 12px;
+  transition: all 0.3s;
+}
 .m-top-banner .icon-links {
+  overflow: scroll;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 5px 0;
+}
+.m-top-banner .icon-links::-webkit-scrollbar {
+  display: none;
 }
 .m-top-banner .icon-links a {
   display: flex;
   align-items: center;
   text-decoration: none;
   height: 40px;
+}
+
+/* src/index.less */
+.lifeos * {
+  font-family: var(--font-interface);
+}
+.lifeos button[class*=ant-] {
+  padding: unset !important;
 }

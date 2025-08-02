@@ -4,24 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "33a6ffc28c30bd4d",
+        "id": "ccef7e0177645b53",
         "type": "tabs",
         "children": [
           {
-            "id": "dc4b2b485ebe6689",
+            "id": "1cf306690600ce40",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "HOME.canvas",
-                "viewState": {
-                  "x": -180,
-                  "y": 130,
-                  "zoom": -0.18539821385424635
+                "file": "README.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
                 }
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "HOME"
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ]
@@ -34,39 +41,9 @@
     "type": "split",
     "children": [
       {
-        "id": "b454898db4c8f945",
-        "type": "tabs",
-        "dimension": 42.58001939864209,
-        "children": [
-          {
-            "id": "84f717612dca405e",
-            "type": "leaf",
-            "state": {
-              "type": "periodic-para",
-              "state": {},
-              "icon": "zap",
-              "title": "LifeOS"
-            }
-          }
-        ]
-      },
-      {
         "id": "84e30e37024d9f2a",
         "type": "tabs",
-        "dimension": 57.41998060135791,
         "children": [
-          {
-            "id": "318abbbcd7749f6f",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-folder-closed",
-              "title": "文件列表"
-            }
-          },
           {
             "id": "cc8540b919f4ee67",
             "type": "leaf",
@@ -104,7 +81,37 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "书签"
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "ca3c5cd231d5a7be",
+            "type": "leaf",
+            "state": {
+              "type": "periodic-para",
+              "state": {},
+              "icon": "file-plus",
+              "title": "LifeOS"
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "d4f73cbc47977f75",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "318abbbcd7749f6f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           }
         ]
@@ -189,28 +196,28 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "command-palette:打开命令面板": false,
-      "random-note:开始漫游笔记": false,
-      "workspaces:管理工作区布局": false,
-      "templater-obsidian:Templater": false,
-      "periodic-para:LifeOS 创建": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false,
+      "periodic-para:LifeOS Creation": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "dc4b2b485ebe6689",
+  "active": "ca3c5cd231d5a7be",
   "lastOpenFiles": [
+    "README.md",
+    "HOME.canvas",
     "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
     "-1. Capture/Predicting The Future.md",
     "-1. Capture/Advice for ambitious 19 year olds.md",
     "0. PeriodicNotes/Templates/Daily.md",
     "0. PeriodicNotes/Templates/Quarterly.md",
     "0. PeriodicNotes/Templates/Monthly.md",
-    "README.md",
     "0. PeriodicNotes/2023/Daily/06/2023-06-01.md",
-    "HOME.canvas",
     "2. Areas/work/work.README.md",
     "0. PeriodicNotes/2024/Daily/04/2024-04-28.md",
     "0. PeriodicNotes/2024/Daily/04/2024-04-04.md",
@@ -233,7 +240,6 @@
     "1. Projects/personal-brand-wot-sharing-meeting/wot-sharing-meeting.README.md",
     "1. Projects/personal-brand-wot-sharing-meeting/speech rehearsal/Tips for Public Speaking.md",
     "1. Projects/personal-brand-wot-sharing-meeting/speech rehearsal/Verbatim manuscript.md",
-    "1. Projects/personal-brand-wot-sharing-meeting/speech rehearsal/Existing problems.md",
     "1. Projects/personal-brand-wot-sharing-meeting/architecture diagram/Monorepo.svg",
     "1. Projects/personal-brand-wot-sharing-meeting/Front-end Engineering Practice of ByteDance.pdf",
     "0. PeriodicNotes/2024/Quarterly",
