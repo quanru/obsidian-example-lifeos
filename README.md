@@ -10,6 +10,8 @@
 </a>
 <a href="https://trendshift.io/repositories/7903" target="_blank"><img src="https://trendshift.io/api/badge/repositories/7903" alt="quanru%2Fobsidian-example-LifeOS | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
+<a href="https://trendshift.io/repositories/7903" target="_blank"><img src="https://trendshift.io/api/badge/repositories/7903" alt="quanru%2Fobsidian-example-LifeOS | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
 - This is a plugin for [LifeOS](https://lifeos.vip), which assist in practicing the PARA method with periodic notes and [usememos](https://www.usememos.com/).
 - It is recommended to download the [LifeOS-example](https://github.com/quanru/obsidian-example-lifeos/archive/refs/heads/main.zip) to experience it.
 - For more tutorials, please go to [LifeOS for Obsidian Official Site](https://lifeos.vip/)
