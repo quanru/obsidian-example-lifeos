@@ -51,8 +51,6 @@
 
 此外，你也可以通过购买 [LifeOS Pro](https://lifeos.vip/zh/plugin/life-os-pro.html) 版本的插件来支持我进一步开发更棒的 LifeOS！
 
-<a href="https://www.buymeacoffee.com/leyang"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=leyang&button_colour=40DCA5&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
-
 ---
 
 或者支付宝
