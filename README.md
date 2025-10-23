@@ -13,6 +13,8 @@
 - 强烈推荐下载 [LifeOS-example](https://github.com/quanru/obsidian-example-lifeos/archive/refs/heads/chinese-version.zip) 示例仓库来体验本插件。
 - 更多教程，请访问[Obsidian LifeOS 官网](https://lifeos.vip/zh)查看
 
+![](https://lifeos.vip/plugin/periodic-para-plugin.png)
+
 ## 特性
 
 - LifeOS 免费版：https://lifeos.vip/zh/plugin/lifeos/life-os.html
