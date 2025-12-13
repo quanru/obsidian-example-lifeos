@@ -91,6 +91,10 @@ body{
 	border-left: 1px solid var(--cus-code-block-border);
 	border-right: 1px solid var(--cus-code-block-border);
 }
+
+.markdown-rendered li code{
+	color: var(--cus-inline-code-text);
+}
 /* code block END*/
 
 

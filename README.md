@@ -6,7 +6,9 @@
 <a href="https://www.producthunt.com/posts/lifeos-template-for-obsidian?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lifeos&#0045;template&#0045;for&#0045;obsidian" target="_blank">
   <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=441390&theme=light" alt="LifeOS&#0032;Template&#0032;for&#0032;Obsidian - Obsidian&#0032;LifeOS&#0032;&#0045;&#0032;Your&#0032;Life&#0032;Management&#0032;Assistant&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
 </a>
-
+<a href="https://www.uneed.best/tool/lifeos-for-obsidian" target="_blank">
+    <img src="https://www.uneed.best/POTD2.png" style="width: 250px;" alt="Uneed POTD2 Badge" />
+</a>
 <a href="https://trendshift.io/repositories/7903" target="_blank"><img src="https://trendshift.io/api/badge/repositories/7903" alt="quanru%2Fobsidian-example-LifeOS | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 - 这是一个专为 [LifeOS](https://lifeos.vip/zh) 开发的 Obsidian 插件，可通过『周期笔记』和『[usememos](https://www.usememos.com/)』来实践 PARA 方法。
@@ -19,7 +21,8 @@
 
 - LifeOS 免费版：https://lifeos.vip/zh/plugin/lifeos/life-os.html
 - **LifeOS 专业版**: https://lifeos.vip/zh/plugin/lifeos/life-os-pro.html
-- **DeepAsk AI Assistant**: https://lifeos.vip/zh/plugin/deepask/deepask.html
+- **DeepAsk AI for Obsidian** : https://lifeos.vip/plugin/deepask/deepask.html
+- **DeepAsk AI for Chrome** : https://chromewebstore.google.com/detail/deepask-ai/abhoenehflglmgbohaibihggedfcpcep
 
 ## 下载
 
@@ -35,6 +38,7 @@
 - [🐦 Twitter](https://twitter.com/quanruzhuoxiu)
 - [📧 Email](mailto:quanruzhuoxiu@gmail.com)
 - [🧑‍🔧 Bento](https://bento.me/leyang)
+- [📻 Podcast](https://www.xiaoyuzhoufm.com/podcast/690d4bca1609e341f8bf698a)
 - 👥 微信 - 添加微信 `zhuoxiu_` 并备注 LifeOS
 
 ## 致谢
