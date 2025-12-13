@@ -5,7 +5,9 @@
 <a href="https://www.producthunt.com/posts/lifeos-template-for-obsidian?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lifeos&#0045;template&#0045;for&#0045;obsidian" target="_blank">
   <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=441390&theme=light" alt="LifeOS&#0032;Template&#0032;for&#0032;Obsidian - Obsidian&#0032;LifeOS&#0032;&#0045;&#0032;Your&#0032;Life&#0032;Management&#0032;Assistant&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
 </a>
-
+<a href="https://www.uneed.best/tool/lifeos-for-obsidian" target="_blank">
+    <img src="https://www.uneed.best/POTD2.png" style="width: 250px;" alt="Uneed POTD2 Badge" />
+</a>
 <a href="https://trendshift.io/repositories/7903" target="_blank"><img src="https://trendshift.io/api/badge/repositories/7903" alt="quanru%2Fobsidian-example-LifeOS | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 - This is a plugin for [LifeOS](https://lifeos.vip), which assist in practicing the PARA method with periodic notes and [usememos](https://www.usememos.com/).
@@ -18,8 +20,8 @@
 
 - LifeOS Basic: https://lifeos.vip/plugin/lifeos/life-os.html
 - **LifeOS Pro** : https://lifeos.vip/plugin/lifeos/life-os-pro.html
-- **DeepAsk AI Assistant** : https://lifeos.vip/plugin/deepask/deepask.html
-
+- **DeepAsk AI for Obsidian** : https://lifeos.vip/plugin/deepask/deepask.html
+- **DeepAsk AI for Chrome** : https://chromewebstore.google.com/detail/deepask-ai/abhoenehflglmgbohaibihggedfcpcep
 
 ## Download
 
@@ -34,6 +36,7 @@
 - [📺 Youtube](https://www.youtube.com/@LeYangLin)
 - [🧑‍🔧 Bento](https://bento.me/leyang)
 - [📧 Email](mailto:quanruzhuoxiu@gmail.com)
+- [📻 Podcast](https://open.spotify.com/show/2uEwTN48SC5wkTx1nPbct1)
 
 ## Acknowledgements
 
