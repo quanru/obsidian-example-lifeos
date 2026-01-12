@@ -4,24 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cf059d5c1c39664b",
+        "id": "9c3aaa963b2df70d",
         "type": "tabs",
         "children": [
           {
-            "id": "733c828b6da92f6a",
+            "id": "aca2a89acf778deb",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "主页.canvas",
-                "viewState": {
-                  "x": -180,
-                  "y": 130,
-                  "zoom": -0.18539821385424635
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "主页"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -186,6 +179,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -193,14 +187,20 @@
       "command-palette:打开命令面板": false,
       "random-note:开始漫游笔记": false,
       "workspaces:管理工作区布局": false,
-      "bases:创建新数据库": false,
       "periodic-para:LifeOS 创建": false,
       "templater-obsidian:Templater": false,
       "fuzzy-chinese-pinyin:FuzzySearch": false
     }
   },
-  "active": "733c828b6da92f6a",
+  "active": "ec6b6bd3ee7fa86c",
   "lastOpenFiles": [
+    "0. 周期笔记/2023/Weekly/2023-W22.md",
+    "0. 周期笔记/2023/Weekly/2023-W23.md",
+    "0. 周期笔记/2023/Monthly/2023-06.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-11.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-01.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-03.md",
+    "0. 周期笔记/2023/Daily/06/2023-06-09.md",
     "主页.canvas",
     "-1. 捕获/Advice for ambitious 19 year olds.md",
     "-1. 捕获/Predicting The Future.md",
@@ -211,15 +211,12 @@
     "0. 周期笔记/Templates/Weekly.md",
     "1. 项目/个人品牌-WOT-分享会/WOT-分享会.README.md",
     "1. 项目/个人品牌-LifeOS-录制上手视频/视频教程大纲.canvas",
-    "0. 周期笔记/2023/Weekly/2023-W22.md",
     "1. 项目/个人品牌-LifeOS-录制上手视频/LifeOS 示意图.png",
     "任务.md",
     "1. 项目/个人品牌-LifeOS-录制上手视频/LifeOS-录制上手视频.README.md",
     "1. 项目/个人品牌-LifeOS-录制上手视频/录制上手视频.README.md",
-    "0. 周期笔记/2023/Daily/06/2023-06-01.md",
     "0. 周期笔记/2023/2023.md",
     "0. 周期笔记/2023/Quarterly/2023-Q1.md",
-    "0. 周期笔记/2023/Monthly/2023-06.md",
     "0. 周期笔记/未命名",
     "5. 表达/README.md",
     "-1. 捕获/README.md",
@@ -227,9 +224,6 @@
     "0. 周期笔记/Templates/Monthly.md",
     "0. 周期笔记/2023/Daily/06/2023-06-02.md",
     "4. 存档/Template.md",
-    "3. 资源/Template.md",
-    "2. 领域/Template.md",
-    "1. 项目/Template.md",
     "1. 项目/个人品牌-LifeOS-录制上手视频",
     "1. 项目/未命名",
     "Attachments/3-Screenshot_2024-06-14-11-22-23-404_com.microsoft.emmx.jpg",
