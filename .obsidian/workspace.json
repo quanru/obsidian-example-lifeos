@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ccef7e0177645b53",
+        "id": "c74f6a1576271495",
         "type": "tabs",
         "children": [
           {
-            "id": "1cf306690600ce40",
+            "id": "4830c2cf01ebbe61",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "新标签页"
             }
           }
         ]
@@ -196,6 +182,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -203,13 +190,13 @@
       "command-palette:打开命令面板": false,
       "random-note:开始漫游笔记": false,
       "workspaces:管理工作区布局": false,
-      "bases:创建新数据库": false,
       "periodic-para:LifeOS 创建": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ca3c5cd231d5a7be",
+  "active": "4830c2cf01ebbe61",
   "lastOpenFiles": [
+    "0. PeriodicNotes/2023/Weekly/2023-W22.md",
     "README.md",
     "HOME.canvas",
     "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
