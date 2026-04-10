@@ -29,6 +29,11 @@ ProjectListByTime
 TaskRecordListByTime
 ```
 
+%%List of bullets/flash notes collected this week from this week's diary%%
+```LifeOS
+BulletRecordListByTime
+```
+
 ## Completed this week
 %%List of tasks completed this week, extracted from all notes%%
 ```LifeOS

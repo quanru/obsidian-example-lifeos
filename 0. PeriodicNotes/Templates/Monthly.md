@@ -31,6 +31,11 @@ ProjectListByTime
 TaskRecordListByTime
 ```
 
+%%List of bullets/flash notes collected this month from this month's diary%%
+```LifeOS
+BulletRecordListByTime
+```
+
 ## Completed this month
 %%List of tasks completed this month, extracted from all notes%%
 ```LifeOS
