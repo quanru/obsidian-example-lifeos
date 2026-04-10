@@ -32,6 +32,11 @@ ProjectListByTime
 TaskRecordListByTime
 ```
 
+%%本季收集的闪念列表，从本季的日记中提取%%
+```LifeOS
+BulletRecordListByTime
+```
+
 ## 本季完成
 %%本季完成的任务列表，从所有的笔记中提取%%
 ```LifeOS
