@@ -4,49 +4,103 @@ on:
   push:
     tags:
       - '*'
-env:
-    NAME: LifeOS
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - name: Checkout main
+        uses: actions/checkout@v4
         with:
-          node-version: '18.x'
+          fetch-depth: 0
 
-      - name: Build
-        id: build
+      - name: Fetch legacy branches
         run: |
-            mkdir ${{ env.NAME }}
-            cp -r -- .obsidian \-1.\ Capture 0.\ PeriodicNotes 1.\ Projects 2.\ Areas 3.\ Resources 4.\ Archives 5.\ Express HOME.canvas README.md TASK.md ${{ env.NAME }}
-            zip -r ${{ env.NAME }}.zip ${{ env.NAME }}
-            ls
-            echo "::set-output name=tag_name::$(git tag --sort version:refname | tail -n 1)"
+          LEGACY_BRANCHES=$(node -e "
+            const m = require('./i18n/manifest.json');
+            const branches = new Set();
+            for (const [lang, entry] of Object.entries(m.languages)) {
+              if (entry.role === 'legacy' && entry.legacySource && entry.legacySource.startsWith('branch:')) {
+                branches.add(entry.legacySource.slice('branch:'.length));
+              }
+            }
+            console.log([...branches].join(' '));
+          ")
+          for branch in $LEGACY_BRANCHES; do
+            echo "Fetching legacy branch: $branch"
+            git fetch origin "$branch:$branch" || true
+          done
 
-      - name: Create release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            VERSION: ${{ github.ref }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-            tag_name: ${{ github.ref }}
-            release_name: ${{ github.ref }}
-            draft: false
-            prerelease: false
+          node-version: '20'
 
-      - name: Upload zip file
-        id: upload-zip
-        uses: actions/upload-release-asset@v1
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate localized vaults
+        run: |
+          LANGS=$(node -e "
+            const m = require('./i18n/manifest.json');
+            console.log(Object.keys(m.languages).filter(l => l !== 'en').join(','));
+          ")
+          echo "Generating: $LANGS"
+          node scripts/i18n/index.mjs generate --lang "$LANGS"
+
+      - name: Package all language vaults
+        run: |
+          mkdir -p dist build
+
+          EN_NAME=$(node -e "
+            const m = require('./i18n/manifest.json');
+            console.log(m.languages.en.archiveName || 'LifeOS');
+          ")
+          echo "Packaging en -> ${EN_NAME}.zip"
+          mkdir -p "build/${EN_NAME}"
+          rsync -a \
+            --exclude 'i18n' \
+            --exclude 'scripts' \
+            --exclude '.github' \
+            --exclude '.git' \
+            --exclude 'dist' \
+            --exclude 'build' \
+            --exclude 'node_modules' \
+            ./ "build/${EN_NAME}/"
+          (cd build && zip -r "../dist/${EN_NAME}.zip" "${EN_NAME}" >/dev/null)
+
+          LANGS=$(node -e "
+            const m = require('./i18n/manifest.json');
+            console.log(Object.keys(m.languages).filter(l => l !== 'en').join(' '));
+          ")
+
+          for lang in $LANGS; do
+            ARCHIVE_NAME=$(node -e "
+              const m = require('./i18n/manifest.json');
+              console.log(m.languages['${lang}'].archiveName || 'LifeOS_${lang}');
+            ")
+            SRC="i18n/${lang}"
+            if [ ! -d "$SRC" ]; then
+              echo "Skipping ${lang}: ${SRC} does not exist"
+              continue
+            fi
+            echo "Packaging ${lang} -> ${ARCHIVE_NAME}.zip"
+            mkdir -p "build/${ARCHIVE_NAME}"
+            rsync -a "$SRC/" "build/${ARCHIVE_NAME}/"
+            (cd build && zip -r "../dist/${ARCHIVE_NAME}.zip" "${ARCHIVE_NAME}" >/dev/null)
+          done
+
+          echo "Generated archives:"
+          ls -lh dist/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-            upload_url: ${{ steps.create_release.outputs.upload_url }}
-            asset_path: ./${{ env.NAME }}.zip
-            asset_name: ${{ env.NAME }}.zip
-            asset_content_type: application/zip
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          files: |
+            dist/*.zip
