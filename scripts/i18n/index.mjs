@@ -796,9 +796,9 @@ function rewriteReadmeLanguageSelector(content, lang) {
   const allLangs = Object.keys(LANG_NAMES_NATIVE);
   const links = allLangs.map((l) => {
     const name = LANG_NAMES_NATIVE[l];
-    if (l === lang) return `**${name}**`;
-    if (l === "en") return `[${name}](https://github.com/quanru/obsidian-example-lifeos)`;
-    return `[${name}](https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/${l})`;
+    if (l === lang) return `<strong>${name}</strong>`;
+    if (l === "en") return `<a href="https://github.com/quanru/obsidian-example-lifeos">${name}</a>`;
+    return `<a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/${l}">${name}</a>`;
   });
 
   // Replace old language selector line
