@@ -1,0 +1,143 @@
+{
+  "sources": {
+    "Priority First Dimension": {
+      "zh": "优先级维度",
+      "zh-tw": "優先級維度",
+      "de": "Prioritätsdimension",
+      "es": "Dimensión de Prioridad",
+      "fr": "Dimension Priorité Absolue",
+      "pt": "Dimensão de Prioridade",
+      "ja": "優先度ファースト軸",
+      "ar": "بُعد الأولوية أولاً"
+    },
+    "Role Dimension": {
+      "zh": "角色维度",
+      "zh-tw": "角色維度",
+      "de": "Rollendimension",
+      "es": "Dimensión de Roles",
+      "fr": "Dimension Rôle",
+      "pt": "Dimensão de Papéis",
+      "ja": "役割軸",
+      "ar": "بُعد الأدوار"
+    },
+    "Setting goals from the \"Priority First Dimension\" and the \"Role Dimension\" respectively": {
+      "zh": "分别从\"优先级维度\"和\"角色维度\"设定目标",
+      "zh-tw": "分別從「優先級維度」和「角色維度」設定目標",
+      "de": "Ziele aus der \"Prioritätsdimension\" und der \"Rollendimension\" festlegen",
+      "es": "Establecer metas desde la \"Dimensión de Prioridad\" y la \"Dimensión de Roles\" respectivamente",
+      "fr": "Définir les objectifs selon la \"Dimension Priorité Absolue\" et la \"Dimension Rôle\" respectivement",
+      "pt": "Definir metas a partir da \"Dimensão de Prioridade\" e da \"Dimensão de Papéis\", respectivamente",
+      "ja": "「優先度ファースト軸」と「役割軸」それぞれからの目標設定",
+      "ar": "تحديد الأهداف من \"بُعد الأولوية أولاً\" و\"بُعد الأدوار\" على التوالي"
+    },
+    "Arrange tasks from the \"Priority First Dimension\" and the \"Role Dimension\" respectively": {
+      "zh": "分别从\"优先级维度\"和\"角色维度\"安排任务",
+      "zh-tw": "分別從「優先級維度」和「角色維度」安排任務",
+      "de": "Aufgaben nach der \"Prioritätsdimension\" und der \"Rollendimension\" aufteilen",
+      "es": "Organizar tareas según la \"Dimensión de Prioridad\" y la \"Dimensión de Roles\" respectivamente",
+      "fr": "Planifier les tâches selon la \"Dimension Priorité Absolue\" et la \"Dimension Rôle\" respectivement",
+      "pt": "Organizar tarefas pela \"Dimensão de Prioridade\" e pela \"Dimensão de Papéis\" respectivamente",
+      "ja": "「優先度ファースト軸」と「役割軸」それぞれの観点からタスクを整理する",
+      "ar": "ترتيب المهام من \"بُعد الأولوية أولاً\" و\"بُعد الأدوار\" على حدة"
+    },
+    "Employee": {
+      "zh": "员工", "zh-tw": "員工", "de": "Angestellte/r", "es": "Empleado/a",
+      "fr": "Employé(e)", "pt": "Funcionário/a", "ja": "従業員", "ar": "موظف"
+    },
+    "Husband": {
+      "zh": "丈夫", "zh-tw": "丈夫", "de": "Ehemann", "es": "Esposo",
+      "fr": "Mari", "pt": "Marido", "ja": "夫", "ar": "زوج"
+    },
+    "Father": {
+      "zh": "父亲", "zh-tw": "父親", "de": "Vater", "es": "Padre",
+      "fr": "Père", "pt": "Pai", "ja": "父親", "ar": "أب"
+    },
+    "Son": {
+      "zh": "儿子", "zh-tw": "兒子", "de": "Sohn", "es": "Hijo",
+      "fr": "Fils", "pt": "Filho", "ja": "息子", "ar": "ابن"
+    },
+    "Myself": {
+      "zh": "自我", "zh-tw": "自我", "de": "Ich selbst", "es": "Yo mismo",
+      "fr": "Moi-même", "pt": "Eu mesmo", "ja": "自分自身", "ar": "أنا"
+    },
+    "Features": {
+      "zh": "功能特性", "zh-tw": "功能特性", "de": "Funktionen", "es": "Características",
+      "fr": "Fonctionnalités", "pt": "Funcionalidades", "ja": "機能", "ar": "الميزات"
+    },
+    "Download": {
+      "zh": "下载", "zh-tw": "下載", "de": "Herunterladen", "es": "Descarga",
+      "fr": "Téléchargement", "pt": "Download", "ja": "ダウンロード", "ar": "تحميل"
+    },
+    "Support": {
+      "zh": "支持", "zh-tw": "支持", "de": "Unterstützung", "es": "Soporte",
+      "fr": "Support", "pt": "Suporte", "ja": "サポート", "ar": "الدعم"
+    },
+    "Acknowledgements": {
+      "zh": "致谢", "zh-tw": "致謝", "de": "Danksagungen", "es": "Agradecimientos",
+      "fr": "Remerciements", "pt": "Agradecimentos", "ja": "謝辞", "ar": "شكر وتقدير"
+    },
+    "Donations": {
+      "zh": "捐赠", "zh-tw": "捐贈", "de": "Spenden", "es": "Donaciones",
+      "fr": "Dons", "pt": "Doações", "ja": "寄付", "ar": "التبرعات"
+    },
+    "This is a plugin for": {
+      "zh": "这是一款", "zh-tw": "這是一款", "de": "Dies ist ein Plugin für",
+      "es": "Este es un plugin para", "fr": "Ceci est un plugin pour",
+      "pt": "Este é um plugin para", "ja": "これは", "ar": "هذا ملحق لـ"
+    },
+    ", which assist in practicing the PARA method with periodic notes and": {
+      "zh": "的插件，帮助您通过周期性笔记和", "zh-tw": "的外掛，協助您透過週期性筆記和",
+      "de": ", das bei der Anwendung der PARA-Methode mit periodischen Notizen und",
+      "es": ", que ayuda a practicar el método PARA con notas periódicas y",
+      "fr": ", qui aide à pratiquer la méthode PARA avec des notes périodiques et",
+      "pt": ", que auxilia na prática do método PARA com notas periódicas e",
+      "ja": "のプラグインで、定期ノートと", "ar": "، والذي يساعد في تطبيق منهج PARA مع الملاحظات الدورية و"
+    },
+    "to experience it.": {
+      "zh": "来体验。", "zh-tw": "來體驗。", "de": "um es auszuprobieren.",
+      "es": "para experimentarlo.", "fr": "pour l'essayer.",
+      "pt": "para experimentar.", "ja": "をダウンロードして体験することをお勧めします。", "ar": "لتجربته."
+    },
+    "It is recommended to download the": {
+      "zh": "推荐下载", "zh-tw": "推薦下載", "de": "Es wird empfohlen, das",
+      "es": "Se recomienda descargar", "fr": "Il est recommandé de télécharger",
+      "pt": "Recomenda-se baixar o", "ja": "", "ar": "يُنصح بتحميل"
+    },
+    "For more tutorials, please go to": {
+      "zh": "更多教程请前往", "zh-tw": "更多教程請前往", "de": "Weitere Tutorials finden Sie auf der",
+      "es": "Para más tutoriales, visite", "fr": "Pour plus de tutoriels, rendez-vous sur",
+      "pt": "Para mais tutoriais, acesse", "ja": "詳しいチュートリアルは", "ar": "لمزيد من الدروس، يرجى زيارة"
+    },
+    "LifeOS for Obsidian Official Site": {
+      "zh": "LifeOS for Obsidian 官方网站", "zh-tw": "LifeOS for Obsidian 官方網站",
+      "de": "LifeOS für Obsidian Offizielle Website", "es": "Sitio Oficial de LifeOS para Obsidian",
+      "fr": "Site Officiel LifeOS pour Obsidian", "pt": "Site Oficial do LifeOS para Obsidian",
+      "ja": "LifeOS for Obsidian 公式サイト", "ar": "الموقع الرسمي لـ LifeOS for Obsidian"
+    },
+    "Also, I relied on the code from these excellent plugins:": {
+      "zh": "同时，我也参考了以下优秀插件的代码：", "zh-tw": "同時，我也參考了以下優秀外掛的程式碼：",
+      "de": "Außerdem habe ich auf den Code dieser hervorragenden Plugins aufgebaut:",
+      "es": "Además, me basé en el código de estos excelentes plugins:",
+      "fr": "J'ai également utilisé le code de ces excellents plugins :",
+      "pt": "Além disso, contei com o código destes excelentes plugins:",
+      "ja": "また、以下の素晴らしいプラグインのコードを参考にしました：",
+      "ar": "كما اعتمدت على الكود من هذه الإضافات الممتازة:"
+    },
+    "If this plugin do help you, please buy me a cup of coffee on": {
+      "zh": "如果这个插件对你有帮助，请在", "zh-tw": "如果這個外掛對你有幫助，請在",
+      "de": "Wenn dieses Plugin Ihnen hilft, spendieren Sie mir bitte einen Kaffee auf",
+      "es": "Si este plugin te ayuda, por favor invítame un café en",
+      "fr": "Si ce plugin vous aide, offrez-moi un café sur",
+      "pt": "Se este plugin te ajudou, por favor me pague um café no",
+      "ja": "このプラグインがお役に立ちましたら、ぜひ", "ar": "إذا ساعدك هذا الملحق، يرجى شراء فنجان قهوة لي على"
+    },
+    "Or Alipay": {
+      "zh": "或者支付宝", "zh-tw": "或者支付寶", "de": "Oder Alipay", "es": "O Alipay",
+      "fr": "Ou Alipay", "pt": "Ou Alipay", "ja": "または Alipay", "ar": "أو Alipay"
+    },
+    "Or WeChat": {
+      "zh": "或者微信", "zh-tw": "或者微信", "de": "Oder WeChat", "es": "O WeChat",
+      "fr": "Ou WeChat", "pt": "Ou WeChat", "ja": "または WeChat", "ar": "أو WeChat"
+    }
+  }
+}

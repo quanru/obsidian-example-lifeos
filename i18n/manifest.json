@@ -1,0 +1,50 @@
+{
+  "sourceRoot": ".",
+  "sourceExcludes": [
+    ".obsidian",
+    ".git",
+    ".github",
+    "scripts",
+    "i18n",
+    "node_modules"
+  ],
+  "languages": {
+    "en": {
+      "role": "source",
+      "archiveName": "LifeOS"
+    },
+    "zh": {
+      "role": "legacy",
+      "legacySource": "branch:chinese-version",
+      "archiveName": "LifeOS_ZH"
+    },
+    "zh-tw": {
+      "role": "generated",
+      "archiveName": "LifeOS_ZH_TW"
+    },
+    "ja": {
+      "role": "generated",
+      "archiveName": "LifeOS_JA"
+    },
+    "de": {
+      "role": "generated",
+      "archiveName": "LifeOS_DE"
+    },
+    "es": {
+      "role": "generated",
+      "archiveName": "LifeOS_ES"
+    },
+    "fr": {
+      "role": "generated",
+      "archiveName": "LifeOS_FR"
+    },
+    "pt": {
+      "role": "generated",
+      "archiveName": "LifeOS_PT"
+    },
+    "ar": {
+      "role": "generated",
+      "archiveName": "LifeOS_AR"
+    }
+  }
+}

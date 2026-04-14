@@ -1,4 +1,4 @@
-<p align="center"><a title="中文版本" href="https://github.com/quanru/obsidian-example-lifeos/tree/chinese-version">中文版本</a>  |  English Version</p>
+<p align="center">**English** | <a href="i18n/zh">简体中文</a> | <a href="i18n/zh-tw">繁體中文</a> | <a href="i18n/ja">日本語</a> | <a href="i18n/de">Deutsch</a> | <a href="i18n/es">Español</a> | <a href="i18n/fr">Français</a> | <a href="i18n/pt">Português</a> | <a href="i18n/ar">العربية</a></p>
 
 <a href="https://obsidian.md/blog/2024-goty-winners/">🔥 LifeOS for Obsidian won the third place 🥉 in the Best Templates category at the 2024 Obsidian Gems of the Year awards!</a>
 
@@ -25,7 +25,17 @@
 
 ## Download
 
-- [LifeOS-example](https://github.com/quanru/obsidian-example-lifeos/archive/refs/heads/main.zip)
+Download the vault in your preferred language from the [latest release](https://github.com/quanru/obsidian-example-lifeos/releases/latest):
+
+- [LifeOS (English)](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS.zip)
+- [LifeOS 简体中文](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_ZH.zip)
+- [LifeOS 繁體中文](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_ZH_TW.zip)
+- [LifeOS 日本語](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_JA.zip)
+- [LifeOS Deutsch](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_DE.zip)
+- [LifeOS Español](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_ES.zip)
+- [LifeOS Français](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_FR.zip)
+- [LifeOS Português](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_PT.zip)
+- [LifeOS العربية](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_AR.zip)
 
 ## Support
 
