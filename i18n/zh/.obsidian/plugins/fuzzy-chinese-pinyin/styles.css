@@ -1,0 +1,68 @@
+.suggestion-item.fz-item {
+    position: relative;
+    display: flex;
+}
+.suggestion-item.fz-item .suggestion-flair {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.suggestion-item .fz-suggestion-content {
+    width: 100%;
+    display: inline-block;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: auto;
+}
+.suggestion-item .fz-suggestion-title {
+    overflow-wrap: break-word;
+}
+.suggestion-item .fz-suggestion-tags {
+    display: inline;
+    margin-left: 10px;
+}
+.suggestion-item .fz-suggestion-tags .tag {
+    position: relative;
+    bottom: 2px;
+    font-size: 10px;
+    margin-left: 6px;
+    pointer-events: none;
+}
+.suggestion-item .fz-suggestion-flair {
+    display: inline-block;
+    align-items: center;
+    align-self: center;
+    flex-shrink: 0;
+    position: absolute;
+    right: 2%;
+    top: 17px;
+    color: var(--text-muted);
+    opacity: var(--icon-opacity);
+    margin: 0 4px 0 12px;
+}
+
+.suggestion-item .fz-suggestion-note {
+    font-size: 0.8em;
+    color: var(--text-muted);
+    width: 100%;
+    flex-basis: 100%;
+    overflow-wrap: break-word;
+}
+
+.suggestion-item .fz-suggestion-aux {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.suggestion-item .fz-suggestion-aux kbd.suggestion-command {
+    margin-left: 10px;
+}
+
+.fuzzy-chinese-attachment-extensions {
+    width: 7rem;
+    height: 20rem;
+    resize: vertical;
+}

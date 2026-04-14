@@ -1,0 +1,17 @@
+- 2022
+  - Frontend-Tabellentechnologien
+  - Enterprise-Node.js-Webframework für das Frontend
+  - Beike Rushi: Erkundung, Praxis und Verbreitung von VR-3D-Technologie
+  - Nächste Generation responsives Design: Container Queries
+- 2020: Keine Konferenz!
+- 2019: Kein Thema fürs Frontend!
+- 2018
+  - Abstrakte Syntaxbäume im Frontend
+  - WeChat-Mini-Programme und native Apps mit Vue entwickeln
+  - Weex-Technologie in der Praxis: Meizu Mini-Programme
+  - [DiDis Ansatz zum Frontend-Engineering](http://www.uml.org.cn/AJAX/201809251.asp)
+- 2017
+  - Schnelles Canary-Deployment für mobile Apps mit mehreren Nutzergruppen und Rollen
+  - Neue SDK-Integrationslösung auf Basis von Gradle-Plugins
+  - [Aufbau der Frontend-Infrastruktur bei Ele.me](https://www.51cto.com/article/555665.html)
+- 2016–2012: Kein Thema fürs Frontend!

@@ -1,0 +1,63 @@
+> https://www.ecotopia.com/webpress/futures.htm
+> _Por Alan C. Kay_
+
+> _Alan C. Kay é fellow da Apple Computer Inc., um visionário e um dos poucos cientistas selecionados que têm uma missão independente para perseguir ideias arrojadas. Como ele mesmo explica, é um trabalho que o proíbe de crescer. Os comentários a seguir foram extraídos do discurso de Kay na 20ª reunião anual do Stanford Computer Forum._
+
+\"A Xerox PARC (um laboratório de pesquisa em ciência da computação do qual Kay foi um dos fundadores em 1970) foi instalada em Palo Alto para ficar o mais longe possível da sede corporativa em Stamford, Connecticut, ainda dentro dos EUA continentais. Costumávamos receber visitas dos executivos da Xerox — geralmente em janeiro e fevereiro — e, quando conseguíamos tirá-los das quadras de tênis, eles entravam no prédio da PARC. Eles estavam principalmente preocupados com o futuro e nos pressionavam sobre o que iria acontecer. Por fim, eu disse: 'Olha, **a melhor forma de prever o futuro é inventá-lo**. Este é o século em que você pode ser proativo em relação ao futuro; você não precisa ser reativo. A ideia toda de ter cientistas e tecnologia é que as coisas que você consegue imaginar e descrever podem de fato ser construídas.' Foi uma surpresa para eles e os deixou preocupados.\"
+
+Outra forma de prever o futuro é perceber que leva muito tempo — cerca de 10 a 20 anos — para tirar uma tecnologia do laboratório de pesquisa e inseri-la na vida cotidiana. É muito difícil colocar ideias completamente novas no mundo em menos de uma década; no caso do transistor, levou quase 25 anos. Independentemente do que se faça, pode ser necessário passar por várias empresas, vários grupos de pessoas, várias rodadas de financiamento de capital de risco e mais, antes de obter algum resultado.
+
+No que diz respeito a prever o futuro, isso é bastante conveniente, porque significa que grande parte do futuro com o qual teremos de lidar está hoje em algum laboratório de pesquisa. E, simplesmente visitando os lugares certos, você pode ter uma ideia enorme do tipo de coisas que irão acontecer.
+
+Outra forma de prever o futuro é explicada da melhor forma por uma anedota no livro de John Dessauer. Dessauer foi executivo da Haloid Corporation, a pequena empresa de Rochester, N.Y., que eventualmente se tornou a Xerox, onde atuou como executivo por algum tempo. Seu livro se chama **_My Years at Xerox, the Billions Nobody Wanted_**.
+
+A história descreve como, em 1956, após alguns anos de luta, Dessauer conseguiu construir o protótipo da copiadora de papel comum modelo 914. Sem dinheiro para levar a copiadora ao mercado e construir fábricas, ele decidiu levá-la até a IBM, que ficava logo ali perto. Ele disse à IBM: \"Peguem isso, construam fábricas, saiam e vendam. Só quero uma pequena royalty.\" E a IBM fez o que todas as empresas fazem quando não conseguem tomar uma decisão: contratou consultores.
+
+Após um estudo exaustivo que levou 18 meses, os consultores voltaram com um relatório bem volumoso que provava conclusivamente que não havia mercado para uma copiadora de papel comum. Eles tinham dois motivos principais e uma série de razões menores. O primeiro: não havia volume de cópias suficiente. Era um problema sério. O outro era que o processo de xerografia custava mais de dez vezes por cópia em comparação ao processo de mimeógrafo AB Dick, que era a tecnologia usada como referência de comparação. Os consultores concluíram que ninguém pagaria dez vezes mais para copiar qualquer coisa. Com base no relatório, a IBM recusou a oferta da copiadora — e isso foi várias centenas de bilhões de dólares atrás.
+
+É uma história muito interessante, porque a IBM achava que sua divisão de computadores não estava no ramo das comunicações — e o consultor deles pensava o mesmo. Ambos perderam um ponto fundamental: os seres humanos não conseguem existir sem comunicação. É uma das características mais básicas da nossa espécie, e sempre estamos dispostos a pagar mais por um amplificador de comunicação melhor.
+
+Muitos outros cometeram esse mesmo erro. Após a Primeira Guerra Mundial, as ferrovias fizeram um estudo que mostrava que, até onde conseguiam enxergar no futuro, o transporte aéreo sempre seria mais caro do que o ferroviário. E sabe de uma coisa? Eles ainda estão certos hoje; ainda é mais caro. O problema é que as ferrovias praticamente desapareceram, porque ninguém se importa se a viagem aérea custa mais — as pessoas estão dispostas a pagar. A indústria ferroviária não percebeu que nem tudo é um mercado de commodities, e que o preço importa, mas também existem mercados de valor, onde as pessoas pagam mais por algo que vale mais.
+
+### DE ONDE VÊM AS IDEIAS?
+
+Entre as diversas formas de gerar novas ideias, acredito que o brainstorming seja a mais fraca — pegar o que você já tem e tentar juntar tudo em algo, pintar e vender. Claro que dá para tirar um produto daí: junte todas as coisas irritantes do quarto de um adolescente de 12 anos e cole tudo, e você terá um rádio portátil, que aliás vende muito bem. Mas a maioria das coisas criadas por brainstorming se parece com esse rádio portátil.
+
+A abordagem orientada a objetivos que os livros de gestão defendem é encontrar uma necessidade e supri-la. Raramente surgem ideias realmente novas assim, porque se você perguntar à maioria das pessoas o que elas querem, a resposta é basicamente o que já têm — 10% mais rápido, 10% mais barato, com 10% mais funcionalidades. É uma forma bastante entediante de prever o futuro. Mas se olharmos para os grandes marcos do século XX — a máquina Xerox, o computador pessoal, a calculadora de bolso — todos fizeram algo diferente. Não eram variações de coisas existentes. Não estavam suprindo uma necessidade: estavam criando uma necessidade que só eles podiam atender. A presença deles no cenário fez surgir uma necessidade, e quase paradoxalmente, a empresa estava lá para criar e suprir essa necessidade. Foi isso que a máquina Xerox fez; ninguém sentia falta de copiar documentos antes que ela existisse. Ninguém precisava calcular antes da calculadora de bolso. Quando os minicomputadores e microcomputadores chegaram, as pessoas perguntavam: "Para que precisamos dessas coisas? Já dá para fazer tudo no mainframe." E a resposta era: "Claro que dá para fazer tudo no mainframe, mas é para as coisas extras que você faria e nem pensaria em fazer no mainframe."
+
+### POR QUE NÃO SOMOS MELHORES DESIGNERS?
+
+Marshall McLuhan tem uma frase para explicar parte disso: "Não sei quem descobriu a água, mas com certeza não foi um peixe."
+
+Parte do que ele quis dizer é que, quando você está imerso em um contexto, é extremamente difícil enxergar o que está acontecendo. Já se observou que os japoneses fazem um trabalho melhor de marketing para nós do que nós mesmos, porque conhecem o mercado a partir de uma cultura diferente. Eles nos estudam de uma forma que nós não nos olhamos.
+
+Outro motivo pelo qual não criamos muito bem é o medo. Nos últimos 20 ou 30 anos, a América passou por uma crise de coragem. McLuhan diz: "Para quem detém a sabedoria convencional, a inovação não é novidade — é aniquilação." É exatamente assim que nossos executivos reagem com frequência demais.
+
+|   |
+|---|
+|Quando pensamos nas formas pelas quais a humanidade se expandiu ao longo dos anos — pelo menos para os fins desta conversa —, gosto de pensar em duas grandes maneiras: uma é por meio das chamadas **ferramentas amplificadoras**, que ampliam nosso alcance no mundo. Muitas dessas ferramentas são extensões do corpo, como o microscópio e o telescópio; algumas são ferramentas retóricas. Penso nelas como formas melhores de manipular as coisas.<br><br>O outro método é a **clonagem de objetivos** — ou seja, convencer outras pessoas de que deveriam trabalhar em nossos objetivos, e não nos deles. Lewis Mumford escreveu um bom livro sobre esse processo chamado _The Myth of the Machine_. Quando você quer construir uma pirâmide, precisa de algumas ferramentas, mas também precisa encontrar maneiras de convencer 10.000 ou 100.000 pessoas a trabalhar com você para realizar o projeto.|
+
+Lembro que nos primeiros tempos do PARC — durante uma das muitas visitas de executivos da Xerox — eu havia acabado de ter a ideia das janelas sobrepostas. Implementamos uma versão de teste e a mostrei ao executivo que estava lá naquele dia. Encerrei a demonstração dizendo: "O que é ainda melhor é que essa ideia tem apenas 20% de chance de sucesso; estamos assumindo riscos, como vocês nos pediram." E o executivo me olhou diretamente nos olhos e disse: "Cara, que ótimo, mas garanta que funcione."
+
+Executivos demais querem que você esteja naqueles 20%, 200% do tempo. A ideia de que ter 20% de chance de sucesso significa falhar quatro em cada cinco vezes é completamente repugnante para eles. Gostaria de perguntar a quem está aqui no Stanford Computer Forum: quantas de suas empresas têm um prêmio para o melhor fracasso do ano? Provavelmente nenhuma. Isso é um grande problema, porque as pessoas vão para onde estão as recompensas, e as chances de se criar algo realmente excepcional diminuem consideravelmente.
+
+Outro problema é que não temos um conceito muito bom do próprio futuro. Uma das minhas frases favoritas de McLuhan é: "Estamos indo cada vez mais rápido em direção ao futuro, tentando nos guiar apenas pelo espelho retrovisor."
+
+Whitehead, o filósofo britânico, observou que a maior invenção do século XIX foi a invenção da própria invenção. Não apenas havia dez ou vinte vezes mais pedidos de patente no escritório de patentes do governo britânico, mas cerca de 80% dessas patentes eram ideias completamente absurdas. Foi o século em que qualquer pessoa com uma ideia achava que podia ser inventor e registrar uma patente, porque todo mundo estava fazendo o mesmo.
+
+McLuhan tinha uma frase marcante sobre o século XX: "O século XX é o século em que a mudança mudou." Ele estava retomando Heráclito, o grego que disse: "A única constante é a própria mudança." Do nosso ponto de vista, é difícil ver isso como uma afirmação revolucionária, mas lembre-se: antes dos gregos, era impensável que uma pessoa nascesse, vivesse e morresse em um mundo diferente daquele em que seus pais haviam vivido, ou os pais de seus pais. As coisas eram praticamente as mesmas por muitos milhares de anos.
+
+Mas McLuhan estava dizendo algo a mais: quando a mudança muda, você não consegue mais prever o futuro da mesma forma; surgem efeitos de segunda e terceira ordem. Por isso, a maior coisa que precisávamos inventar nos anos 1990 era a própria invenção do futuro. Em outras palavras, pensar no conceito de futuro não como algo que vem do passado — embora de certa forma venha —, mas reconhecer que as forças que estão provocando mudanças agora são tão grandes que é muito difícil sentar e fazer extrapolações simples.
+
+A ficção científica tinha algumas ideias sobre irmos à Lua, em parte porque existiam coisas rudimentares chamadas foguetes e alguém conseguia imaginar um grande o suficiente para nos levar lá. E a ficção científica conseguia imaginar robôs com cérebros positrônicos, porque Isaac Asimov não precisava explicar como eles funcionavam. Mas a ficção científica não antecipou a ideia do computador. Antes do poder do transistor se tornar evidente, simplesmente não havia nenhuma extrapolação concebível.
+
+Em certo sentido, nossa capacidade de abrir o futuro não dependerá mais de quão bem aprendemos, mas de quão bem conseguimos desaprender. Você consegue imaginar um curso em Stanford sobre desaprender? Isso seria revolucionário. Como poderíamos tentar subtrair as vidas que estamos vivendo das nossas projeções?
+
+Acredito que a forma mais fraca de resolver um problema é simplesmente resolvê-lo; é isso que ensinam na escola primária. Em alguns cursos de matemática e ciências, ensinam que é melhor reformular o problema. Acho que é muito melhor mudar o contexto em que o problema está sendo enunciado. Há alguns anos, Marvin Minsky disse: "Você não entende algo até entendê-lo de mais de uma maneira." Acho que o que precisaremos aprender é que devemos ter múltiplos pontos de vista.
+
+No PARC tínhamos um slogan: "**O ponto de vista vale 80 pontos de QI**." Era baseado em algumas coisas do passado, como o quão inteligente você precisava ser na Roma Antiga para multiplicar dois números; só os gênios conseguiam. Não ficamos mais inteligentes — apenas mudamos nosso sistema de representação. Em geral, pensamos melhor inventando representações melhores; isso é algo que nós, como cientistas da computação, reconhecemos como uma das principais coisas que tentamos fazer.
+
+---
+
+_de **Stanford Engineering**, Volume 1, Número 1, Outono de 1989, pp. 1-6_
+

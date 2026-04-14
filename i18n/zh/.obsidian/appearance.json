@@ -1,0 +1,16 @@
+{
+  "accentColor": "",
+  "cssTheme": "Border",
+  "theme": "system",
+  "enabledCssSnippets": [
+    "HideMarkdownEmbedTitle",
+    "MultiColumn",
+    "ImageWidth",
+    "Checkboxes",
+    "DoneTaskInEditingMode"
+  ],
+  "baseFontSize": 16,
+  "nativeMenus": false,
+  "showViewHeader": true,
+  "translucency": false
+}

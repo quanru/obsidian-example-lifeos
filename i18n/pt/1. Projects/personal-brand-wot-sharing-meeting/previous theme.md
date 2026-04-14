@@ -1,0 +1,17 @@
+- 2022
+  - Tecnologias de tabelas para o ecossistema front-end
+  - Framework web Node.js de nível empresarial voltado para o front-end
+  - Exploração, prática e difusão de tecnologia VR 3D pela Beike Rushi
+  - Design responsivo de próxima geração: consultas de contêiner
+- 2020: A conferência não aconteceu!
+- 2019: Nada para o front-end!
+- 2018
+  - Aplicações de árvores de sintaxe abstrata no front-end
+  - Desenvolvimento de Mini Programas WeChat e apps nativos com Vue
+  - Prática da tecnologia Weex nos Mini Programas da Meizu
+  - [Pensamento de engenharia front-end na Didi](http://www.uml.org.cn/AJAX/201809251.asp)
+- 2017
+  - Lançamento gradual rápido em apps móveis com múltiplos grupos de usuários e funções
+  - Nova solução de integração de SDK baseada em plugin Gradle
+  - [Construção da infraestrutura front-end da Ele.me](https://www.51cto.com/article/555665.html)
+- 2016-2012: Nada para o front-end!

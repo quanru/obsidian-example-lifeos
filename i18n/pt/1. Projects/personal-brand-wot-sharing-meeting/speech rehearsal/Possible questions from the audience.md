@@ -1,0 +1,10 @@
+- Aproximadamente quantos projetos adotaram o Rspack dentro e fora da empresa?
+	- Interno: n+
+	- Externamente não temos dados precisos, mas os downloads semanais no NPM chegam a 16k, o que pode servir de referência
+- A ferramenta de diagnóstico suporta apenas Webpack?
+	- Atualmente, já há suporte para Webpack e Rspack
+	- Se necessário no futuro, consideraremos adicionar suporte a vite e esbuild
+	- Ou fornecer um mecanismo de adaptador para que usuários que precisem possam fazer extensões
+- A ferramenta XXX considera se tornar open source?
+	- Não descartamos essa possibilidade, mas não abriremos o código apenas pelo ato de abrir
+	- Se for suficientemente útil e diferenciado das soluções da comunidade, optaremos pelo open source para retribuir à comunidade

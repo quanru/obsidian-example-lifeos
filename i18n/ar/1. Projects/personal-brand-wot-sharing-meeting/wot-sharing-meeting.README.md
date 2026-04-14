@@ -1,0 +1,27 @@
+---
+tags:
+  - personal-brand/wot-sharing-meeting
+---
+
+%%حدّد الموعد النهائي للمشروع ووصف نتيجته%%
+- [ ] الموعد النهائي 📅 2023-xx-xx
+- النتيجة الرئيسية
+
+## المهمة
+%%استعلام المهام بناءً على حقل الوسوم في [الخصائص](https://help.obsidian.md/Editing+and+formatting/Properties) الملف الحالي، المستخرجة من جميع الملاحظات%%
+```LifeOS
+TaskListByTag
+```
+
+## تدوينة سريعة
+%%استعلام النقاط بناءً على حقل الوسوم في [الخصائص](https://help.obsidian.md/Editing+and+formatting/Properties) الملف الحالي، المستخرجة من جميع الملاحظات%%
+```LifeOS
+BulletListByTag
+```
+
+## الملف
+%%استعلام الملفات بناءً على حقل الوسوم في [الخصائص](https://help.obsidian.md/Editing+and+formatting/Properties) الملف الحالي، المستخرجة من جميع الملاحظات%%
+```LifeOS
+FileListByTag
+```
+

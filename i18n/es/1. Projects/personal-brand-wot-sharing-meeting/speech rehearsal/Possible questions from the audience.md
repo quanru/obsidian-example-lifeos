@@ -1,0 +1,10 @@
+- ¿Cuántos proyectos han integrado Rspack dentro y fuera de la empresa?
+	- Interno: n+
+	- En cuanto al exterior, no tenemos datos, pero las descargas semanales en NPM alcanzan 16k, puedes tomarlo como referencia
+- ¿La herramienta de diagnóstico solo admite Webpack?
+	- Por ahora, ya se admiten tanto Webpack como Rspack
+	- Si fuera necesario en el futuro, también consideraríamos admitir vite y esbuild
+	- O bien, ofrecer un mecanismo de adaptadores para que los usuarios que lo necesiten puedan extenderlo
+- ¿Se considera abrir el código de la herramienta XXX?
+	- No se descarta esa posibilidad, pero no se abrirá el código solo por abrirlo
+	- Si es suficientemente útil y se diferencia lo bastante de las soluciones de la comunidad, optaremos por abrirlo como forma de retribuir a la comunidad

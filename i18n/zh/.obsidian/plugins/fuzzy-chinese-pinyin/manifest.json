@@ -1,0 +1,9 @@
+{
+    "id": "fuzzy-chinese-pinyin",
+    "name": "Fuzzy Chinese Pinyin",
+    "description": "Provide the function of fuzzy search using Chinese Pinyin.",
+    "author": "lazyloong",
+
+    "minAppVersion": "1.0.0",
+    "version": "2.27.23"
+}

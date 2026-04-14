@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"type":"text","text":"## 💫 领域\n> 领域是一种活动领域，需要在一定时间内保持一定的标准\n```LifeOS\nAreaListByFolder\n```","id":"45f7f22634f0bb7e","x":-180,"y":-360,"width":380,"height":500,"color":"5"},
+		{"type":"text","text":"## 🔥 项目\n>项目是与目标相关的一系列任务，有截止日期\n```LifeOS\nProjectListByFolder\n```","id":"b78fa040a3fea1ec","x":-560,"y":-360,"width":380,"height":500,"color":"2"},
+		{"type":"text","text":"## 📝 资源\n>资源是持续感兴趣的话题或主题\n```LifeOS\nResourceListByFolder\n```","id":"9ec2492e84f151f4","x":-560,"y":140,"width":380,"height":480},
+		{"type":"text","text":"## 📦 存档\n> 存档是来自其他三个类别的非活动条目\n```LifeOS\nArchiveListByFolder\n```","id":"528e809ab3b9cd3c","x":-180,"y":140,"width":380,"height":480}
+	],
+	"edges":[]
+}

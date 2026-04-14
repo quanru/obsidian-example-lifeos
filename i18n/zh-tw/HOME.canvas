@@ -1,0 +1,43 @@
+{
+	"nodes": [
+		{
+			"type": "text",
+			"text": "## 💫 Areas\n> 領域是一個需要長期維持標準的活動範疇。\n```LifeOS\nAreaListByFolder\n```",
+			"id": "45f7f22634f0bb7e",
+			"x": -180,
+			"y": -360,
+			"width": 380,
+			"height": 500,
+			"color": "5"
+		},
+		{
+			"type": "text",
+			"text": "## 🔥 Projects\n> 專案是一系列與目標掛鉤、有截止期限的任務集合。\n```LifeOS\nProjectListByFolder\n```",
+			"id": "b78fa040a3fea1ec",
+			"x": -560,
+			"y": -360,
+			"width": 380,
+			"height": 500,
+			"color": "2"
+		},
+		{
+			"type": "text",
+			"text": "## 📝 Resources\n> 資源是持續感興趣的主題或議題。\n```LifeOS\nResourceListByFolder\n```",
+			"id": "9ec2492e84f151f4",
+			"x": -560,
+			"y": 140,
+			"width": 380,
+			"height": 480
+		},
+		{
+			"type": "text",
+			"text": "## 📦 Archives\n> 封存是其他三個類別中非活躍項目的集合。\n```LifeOS\nArchiveListByFolder\n```",
+			"id": "528e809ab3b9cd3c",
+			"x": -180,
+			"y": 140,
+			"width": 380,
+			"height": 480
+		}
+	],
+	"edges": []
+}

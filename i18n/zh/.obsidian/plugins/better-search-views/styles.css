@@ -1,0 +1,190 @@
+/* TODO: blockquotes need a better fix */
+.better-search-views-file-match.markdown-rendered > *,
+.better-search-views-file-match.markdown-rendered > blockquote > * {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  white-space: normal;
+}
+
+.better-search-views-file-match.markdown-rendered ul > li,
+.better-search-views-file-match.markdown-rendered ol > li {
+  margin-inline-start: calc(var(--list-indent) * 0.8);
+}
+
+.better-search-views-file-match > blockquote {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.better-search-views-file-match ul {
+  position: relative;
+  padding-inline-start: 0;
+}
+
+.better-search-views-file-match a {
+  cursor: default;
+  text-decoration: none;
+}
+
+/* Copied from Obsidian */
+.better-search-views-file-match li > ul::before {
+  content: "\200B";
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1em;
+
+  display: block;
+
+  border-right: var(--indentation-guide-width) solid
+    var(--indentation-guide-color);
+}
+
+.better-search-views-breadcrumbs {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.better-search-views-tree-item-children {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: var(--nav-indentation-guide-width) solid
+    var(--indentation-guide-color);
+}
+
+.better-search-views-tree-item-children:hover {
+  border-left-color: var(--indentation-guide-color-active);
+}
+
+.better-search-views-breadcrumb-container {
+  display: flex;
+  gap: 0.5em;
+  align-items: flex-start;
+}
+
+.better-search-views-tree .tree-item-inner {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 2px;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  border-radius: var(--radius-s);
+}
+
+.better-search-views-titles-container .tree-item-inner:not(:hover) {
+  color: var(--text-muted);
+}
+
+.search-result-file-matches:has(.better-search-views-tree) {
+  overflow: hidden;
+
+  font-size: var(--font-ui-smaller);
+  line-height: var(--line-height-tight);
+  color: var(--text-muted);
+
+  background-color: revert;
+  border-radius: var(--radius-s);
+}
+
+.search-result-file-matches:has(.better-search-views-tree),
+.better-search-views-tree .search-result-file-matches {
+  margin: var(--size-4-1) 0 var(--size-4-1);
+}
+
+.better-search-views-tree .search-result-file-matches {
+  margin-left: 21px;
+}
+
+.tree-item.search-result
+  > .search-result-file-matches:has(.better-search-views-tree) {
+  /* This fixes box shadow in child match boxes */
+  padding-right: 1px;
+  box-shadow: none;
+}
+
+.search-result-file-matches:has(.better-search-views-tree)
+  .better-search-views-file-match:not(:hover) {
+  background-color: var(--search-result-background);
+  box-shadow: 0 0 0 1px var(--background-modifier-border);
+}
+
+.better-search-views-icon {
+  width: var(--icon-xs);
+  height: var(--icon-xs);
+  color: var(--text-faint);
+}
+
+.better-search-views-tree blockquote {
+  padding-left: 10px;
+  border-left: var(--blockquote-border-thickness) solid
+    var(--blockquote-border-color);
+}
+
+.better-search-views-tree .tree-item-inner:hover {
+  background-color: var(--nav-item-background-hover);
+}
+
+.better-search-views-tree .search-result-file-title {
+  padding-right: 0;
+
+  /* TODO: this is still hardcoded */
+  padding-left: calc(20px + var(--nav-indentation-guide-width));
+}
+
+body:not(.is-grabbing)
+  .better-search-views-tree
+  .tree-item-self.search-result-file-title:hover {
+  background-color: unset;
+}
+
+.better-search-views-tree .better-search-views-breadcrumb-container {
+  flex-grow: 1;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+.better-search-views-tree
+  .better-search-views-breadcrumb-container:not(:last-child) {
+  padding-bottom: 2px;
+  border-bottom: var(--nav-indentation-guide-width) solid
+    var(--nav-indentation-guide-color);
+}
+
+.better-search-views-breadcrumb-token {
+  color: var(--text-faint);
+  display: flex;
+  align-items: center;
+  height: calc(1em * var(--line-height-tight));
+}
+
+.better-search-views-tree .collapse-icon {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+
+  padding-top: 4px;
+  padding-bottom: 2px;
+
+  border-radius: var(--radius-s);
+}
+
+.better-search-views-titles-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.markdown-source-view.mod-cm6
+  .better-search-views-tree
+  .task-list-item-checkbox {
+  margin-inline-start: calc(var(--checkbox-size) * -1.5);
+}
+
+.better-search-views-is-hidden {
+  display: none;
+}

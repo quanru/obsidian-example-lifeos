@@ -1,0 +1,44 @@
+> Organizar las tareas del mes
+
+%%Organizar tareas según la "Dimensión de Prioridad" y la "Dimensión de Roles" respectivamente%%
+
+# Tarea
+
+## Dimensión de Prioridad
+%%Lista de proyectos en los que participé este mes, extraída del diario mensual, con estadísticas automáticas del porcentaje de tiempo dedicado a cada proyecto%%
+```LifeOS
+ProjectListByTime
+```
+
+## Dimensión de Roles
+### Empleado/a
+%% Como empleado, ¿cómo desglosas las tareas de este mes en función de los objetivos del trimestre? %%
+- [ ] Completar mensualmente #work/trivia
+- OKR
+### Esposo
+### Padre
+- [ ] Comprar un pequeño regalo #family/baby 
+### Hijo
+- [ ] Una llamada con #family/dad
+- [ ] Una llamada con #family/mom
+### Yo mismo
+- Planificación para el próximo mes
+
+# Revisión
+## Recopilado este mes
+%%Lista de tareas recopiladas este mes a partir del diario mensual%%
+```LifeOS
+TaskRecordListByTime
+```
+
+%%Lista de notas rápidas/bullets recopilados este mes a partir del diario mensual%%
+```LifeOS
+BulletRecordListByTime
+```
+
+## Completado este mes
+%%Lista de tareas completadas este mes, extraída de todas las notas%%
+```LifeOS
+TaskDoneListByTime
+```
+

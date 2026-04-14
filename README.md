@@ -1,4 +1,4 @@
-<p align="center">**English** | <a href="i18n/zh">简体中文</a> | <a href="i18n/zh-tw">繁體中文</a> | <a href="i18n/ja">日本語</a> | <a href="i18n/de">Deutsch</a> | <a href="i18n/es">Español</a> | <a href="i18n/fr">Français</a> | <a href="i18n/pt">Português</a> | <a href="i18n/ar">العربية</a></p>
+<p align="center"> **English** | <a href="i18n/zh">简体中文</a> | <a href="i18n/zh-tw">繁體中文</a> | <a href="i18n/ja">日本語</a> | <a href="i18n/de">Deutsch</a> | <a href="i18n/es">Español</a> | <a href="i18n/fr">Français</a> | <a href="i18n/pt">Português</a> | <a href="i18n/ar">العربية</a></p>
 
 <a href="https://obsidian.md/blog/2024-goty-winners/">🔥 LifeOS for Obsidian won the third place 🥉 in the Best Templates category at the 2024 Obsidian Gems of the Year awards!</a>
 

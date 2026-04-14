@@ -1,0 +1,10 @@
+- Combien de projets environ ont intégré Rspack, tant en interne qu'en externe ?
+	- Interne : n+
+	- Pour l'externe, nous n'avons pas de données, mais les téléchargements hebdomadaires sur NPM atteignent 16k, à titre de référence
+- L'outil de diagnostic ne supporte-t-il que Webpack ?
+	- Pour l'instant, Webpack et Rspack sont déjà supportés
+	- Si nécessaire à l'avenir, nous envisagerons également de supporter vite et esbuild
+	- Ou fournir un mécanisme d'adaptateur pour permettre aux utilisateurs qui en ont besoin d'étendre l'outil
+- Envisagez-vous d'ouvrir XXX en open source ?
+	- Cette possibilité n'est pas exclue, mais nous n'ouvrirons pas le code juste pour le principe
+	- Si l'outil est suffisamment bon et se différencie assez des solutions communautaires, nous choisirons de l'ouvrir en open source pour redonner à la communauté

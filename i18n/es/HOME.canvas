@@ -1,0 +1,43 @@
+{
+	"nodes": [
+		{
+			"type": "text",
+			"text": "## 💫 Areas\n> Un área es una esfera de actividad con un estándar que debe mantenerse a lo largo del tiempo.\n```LifeOS\nAreaListByFolder\n```",
+			"id": "45f7f22634f0bb7e",
+			"x": -180,
+			"y": -360,
+			"width": 380,
+			"height": 500,
+			"color": "5"
+		},
+		{
+			"type": "text",
+			"text": "## 🔥 Projects\n> Un proyecto es una serie de tareas vinculadas a un objetivo, con una fecha límite.\n```LifeOS\nProjectListByFolder\n```",
+			"id": "b78fa040a3fea1ec",
+			"x": -560,
+			"y": -360,
+			"width": 380,
+			"height": 500,
+			"color": "2"
+		},
+		{
+			"type": "text",
+			"text": "## 📝 Resources\n> Los recursos son un tema o materia de interés continuo.\n```LifeOS\nResourceListByFolder\n```",
+			"id": "9ec2492e84f151f4",
+			"x": -560,
+			"y": 140,
+			"width": 380,
+			"height": 480
+		},
+		{
+			"type": "text",
+			"text": "## 📦 Archives\n> El archivo contiene los elementos inactivos de las otras tres categorías.\n```LifeOS\nArchiveListByFolder\n```",
+			"id": "528e809ab3b9cd3c",
+			"x": -180,
+			"y": 140,
+			"width": 380,
+			"height": 480
+		}
+	],
+	"edges": []
+}

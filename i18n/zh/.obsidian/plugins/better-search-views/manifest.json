@@ -1,0 +1,11 @@
+{
+	"id": "better-search-views",
+	"name": "Better Search Views",
+	"version": "0.3.0",
+	"minAppVersion": "0.16.0",
+	"description": "Outliner-like breadcrumb trees for search, backlinks and embedded queries ",
+	"author": "ivan-lednev",
+	"authorUrl": "https://github.com/ivan-lednev",
+	"fundingUrl": "https://www.buymeacoffee.com/machineelf",
+	"isDesktopOnly": false
+}

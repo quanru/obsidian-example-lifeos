@@ -15,39 +15,11 @@ jobs:
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Fetch legacy branches
-        run: |
-          LEGACY_BRANCHES=$(node -e "
-            const m = require('./i18n/manifest.json');
-            const branches = new Set();
-            for (const [lang, entry] of Object.entries(m.languages)) {
-              if (entry.role === 'legacy' && entry.legacySource && entry.legacySource.startsWith('branch:')) {
-                branches.add(entry.legacySource.slice('branch:'.length));
-              }
-            }
-            console.log([...branches].join(' '));
-          ")
-          for branch in $LEGACY_BRANCHES; do
-            echo "Fetching legacy branch: $branch"
-            git fetch origin "$branch:$branch" || true
-          done
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Generate localized vaults
-        run: |
-          LANGS=$(node -e "
-            const m = require('./i18n/manifest.json');
-            console.log(Object.keys(m.languages).filter(l => l !== 'en').join(','));
-          ")
-          echo "Generating: $LANGS"
-          node scripts/i18n/index.mjs generate --lang "$LANGS"
 
       - name: Package all language vaults
         run: |
@@ -87,6 +59,11 @@ jobs:
             fi
             echo "Packaging ${lang} -> ${ARCHIVE_NAME}.zip"
             mkdir -p "build/${ARCHIVE_NAME}"
+            # If the language dir already has .obsidian/ (e.g. legacy zh), use it as-is.
+            # Otherwise, copy root .obsidian/ to provide full vault config.
+            if [ ! -d "$SRC/.obsidian" ]; then
+              rsync -a .obsidian "build/${ARCHIVE_NAME}/"
+            fi
             rsync -a "$SRC/" "build/${ARCHIVE_NAME}/"
             (cd build && zip -r "../dist/${ARCHIVE_NAME}.zip" "${ARCHIVE_NAME}" >/dev/null)
           done
