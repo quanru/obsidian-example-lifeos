@@ -12,82 +12,82 @@ tags:
   - Time-Management
 ---
 
-This article will take [Obsidian](https://obsidian.md/) as an example to share my practice of using Obsidian to build a second brain!
+This article will take [Obsidian](https://obsidian.md/) Obsidian を使ってセカンドブレインを構築する私の実践例をご紹介します！
 
-For more information, please refer to the official website [LifeOS](https://lifeos.vip)!
+詳細については、公式サイトをご参照ください [LifeOS](https://lifeos.vip)!
 
 ## Preface
 
 ### What is Obsidian?
 
-Here is how it introduces itself on the official website:
+公式サイトでの自己紹介はこちらです：
 
-- [Obsidian](https://obsidian.md/) is the private and flexible note‑taking app that adapts to the way you think.
-- [Obsidian](https://obsidian.md/) is a private and flexible note-taking app that adapts to your way of thinking.
+- [Obsidian](https://obsidian.md/) あなたの思考スタイルに合わせて柔軟に使えるプライベートなノートアプリです。
+- [Obsidian](https://obsidian.md/) あなたの思考方法に適応する、プライベートで柔軟なノートアプリです。
 
-What I especially appreciate is its rich plugin ecosystem. If you like Vscode, then you will probably like Obsidian as well. The only difference is that Vscode is for writing code, and Obsidian is for taking notes.
+特に気に入っているのは、豊富なプラグインのエコシステムです。VSCode が好きな方なら、Obsidian もきっと気に入るはずです。違いといえば、VSCode がコードを書くためのツールであるのに対し、Obsidian はノートを取るためのツールである点だけです。
 
 ### First Brain VS Second Brain
 
-The first brain is our actual brain. It never stops working as long as we are alive. It performs tasks such as knowledge management, task management, and goal management. Most of the time, we cannot multitask, thus the first brain acts more like a CPU, with various tasks competing for CPU cycles. When there are too many tasks to handle, the brain becomes overwhelmed. It has to deal with current tasks while keeping the context of other tasks to switch between them, so we cannot focus on executing the current task. This is when an external system is needed to assist the first brain, which is the second brain.
+ファーストブレインとは、私たちの実際の脳のことです。生きている限り、脳は常に働き続けています。知識管理・タスク管理・目標管理といった処理を担っていますが、多くの場合、複数のことを同時にこなすことはできません。そのため、ファーストブレインはCPUのように機能し、さまざまなタスクがCPUサイクルを奪い合う状態になります。処理すべきタスクが多すぎると、脳はパンクしてしまいます。現在のタスクをこなしながら他のタスクのコンテキストも保持しなければならず、目の前のことに集中できなくなります。そこで、ファーストブレインを補助する外部システム、すなわちセカンドブレインが必要になります。
 
-The second brain is an external system. If we compare the first brain to a CPU, then the second brain is more like a storage system. It acts as a buffer between the first brain and the real world, reducing the load on the first brain so it can focus on the current matter. It can be compared to memory and hard disks, but memory is more frequent in communication with the CPU (the first brain) and has a faster read speed. This storage system stores things that the first brain doesn’t need to focus on all the time. Of course, it's up to the first brain to decide whether these things need to be stored. The content could be notes, to-dos, processes, and the medium could be text, images, videos.
+セカンドブレインとは外部システムのことです。ファーストブレインをCPUに例えるなら、セカンドブレインはストレージシステムに相当します。ファーストブレインと現実世界の間のバッファとして機能し、ファーストブレインの負荷を軽減して目の前のことに集中できるようにします。メモリとハードディスクに例えることもできますが、メモリはCPU（ファーストブレイン）とのやり取りが頻繁で読み取り速度も速いという違いがあります。このストレージシステムには、常に意識しなくてよい情報を保存します。もちろん、何を保存するかはファーストブレインが判断します。内容はノート・ToDo・プロセスなどで、媒体はテキスト・画像・動画などが考えられます。
 
-For example, when we use the second brain for task management, important and urgent items are stored in memory, while unimportant and non-urgent items are stored on the hard disk; this week's tasks are in memory, while this month's tasks might be on the hard disk. Therefore, by utilizing the second brain, we can focus on the present without any pressure and switch contexts when necessary.
+たとえば、セカンドブレインをタスク管理に活用する場合、重要かつ緊急なものはメモリに、重要でも緊急でもないものはハードディスクに保存します。今週のタスクはメモリに、今月のタスクはハードディスクに置くイメージです。このようにセカンドブレインを活用することで、プレッシャーなく今この瞬間に集中し、必要に応じてコンテキストを切り替えられるようになります。
 
-This article will use Obsidian as an example to share my practice in building a second brain! You may call it a second brain, but looking at it from different angles, I could also refer to it as "LifeOS," because I record everything concerning life and work upon it. Additionally, it could be termed a "programmable personal productivity system." I have written considerable code on it to do some querying and automation, and it is also the productivity system that I use to manage tasks and goals. It could even be likened to a "Monorepo project," where every folder represents a project, and the README.md within the project is like the Package.json, describing the metadata of the current project.
+この記事では、Obsidian を例にセカンドブレイン構築の実践をご紹介します！セカンドブレインとも呼べますが、見方を変えれば「LifeOS」とも言えます。生活と仕事に関するすべてをここに記録しているからです。また、「プログラマブルな個人生産性システム」とも言えるでしょう。クエリや自動化のためのコードをかなり書いており、タスクと目標を管理する生産性システムとしても活用しています。さらに「Monorepo プロジェクト」にも例えられます。各フォルダがプロジェクトを表し、その中の README.md は Package.json のように、現在のプロジェクトのメタデータを記述しています。
 
-📢 Attention: This system is not a top-down one with pre-established processes to implement. It gradually formed as I used Obsidian and is still evolving. Let's tentatively call the current version 1.0. The purpose of sharing it now is to inspire others to improve their systems! I have already written an [Obsidian Periodic PARA](https://github.com/quanru/obsidian-periodic-para) plugin to support this system! With this plugin, you don't need any programming background. You can easily create periodic and PARA notes by simple visual clicks!
+📢 注意：このシステムは、あらかじめ決まったプロセスをトップダウンで実装するものではありません。Obsidian を使いながら少しずつ形成されてきたものであり、現在も進化し続けています。現時点のバージョンを仮に 1.0 と呼ぶことにします。今共有する目的は、皆さんが自分のシステムを改善するヒントにしてもらうためです！すでに [Obsidian Periodic PARA](https://github.com/quanru/obsidian-periodic-para) このシステムをサポートするプラグインも開発済みです！このプラグインを使えば、プログラミングの知識は一切不要。シンプルな視覚的操作で、定期ノートや PARA ノートを簡単に作成できます！
 
 ## My Practice
 
-I adopt two systems: one for knowledge management and another for periodic notes. The former manages knowledge with dimensions like project/area/resource, and the latter manages tasks/goals/time with time as the dimension.
+私は2つのシステムを採用しています。1つは知識管理、もう1つは定期ノートのためのものです。前者はプロジェクト・エリア・リソースという軸で知識を管理し、後者は時間を軸にタスク・目標・時間を管理します。
 
 ### Core Systems
 
 - Knowledge management: Using the [PARA](https://fortelabs.com/blog/para/) system
-  - Projects -> Projects are a series of tasks related to a goal with a deadline.
-  - Areas -> Areas are activity domains that need to maintain certain standards over time.
-  - Resources -> Resources are topics or subjects of ongoing interest.
-  - Archives -> Archives are inactive items from the above three categories.
+  - プロジェクト（Projects）-> プロジェクトとは、期限のある目標に関連する一連のタスクのことです。
+  - エリア（Areas）-> エリアとは、一定の基準を継続的に維持する必要がある活動領域のことです。
+  - リソース（Resources）-> リソースとは、継続的に関心を持っているトピックや分野のことです。
+  - アーカイブ（Archives）-> アーカイブとは、上記3つのカテゴリで非アクティブになった項目のことです。
 - Periodic notes
-  - Long-term: Top-down, focusing on long-term goals.
+  - 長期：トップダウン方式で、長期的な目標に焦点を当てます。
     - Three-year Review
     - Annual Review
     - Quarterly Review
-  - Short-term: Bottom-up, focusing on short-term tasks.
+  - 短期：ボトムアップ方式で、短期的なタスクに焦点を当てます。
     - Monthly Review
     - Weekly Review
-  - Daily: Capturing thoughts and insights, achieving self-awareness; time consumption statistics, focusing on projects.
+  - デイリー：思考やひらめきを記録し、自己認識を高める。時間消費の統計を取り、プロジェクトへの集中を促す。
     - Daily Log
 
-The closer to Projects the PARA component, the more actionable it is; the more long-term the periodic note, the less predictable it is;
+PARA のコンポーネントがプロジェクトに近いほど実行可能性が高く、定期ノートが長期であるほど予測しにくくなります。
 
-These two systems effectively create two contexts that keep me focused:
+この2つのシステムは、集中力を維持するための2つのコンテキストを効果的に生み出しています：
 
-- One based on time (periodic notes), i.e., when I reach a certain time node, I work based on the corresponding periodic notes, and the notes have enough context;
-- The other based on the topic (PARA), i.e., when I want to research a topic, I work based on the index of the corresponding topic (README.md), and the notes have already collected a lot of context;
+- 1つは時間ベース（定期ノート）のもので、特定の時間ノードに達したとき、対応する定期ノートをもとに作業します。ノートには十分なコンテキストが含まれています。
+- もう1つはトピックベース（PARA）のもので、あるトピックを調査したいときに、対応するトピックのインデックス（README.md）をもとに作業します。ノートにはすでに多くのコンテキストが蓄積されています。
 
 ### Aspect-oriented Subsystem
 
 > [Aspect-oriented programming - Wikiwand](https://www.wikiwand.com/zh-hans/%E9%9D%A2%E5%90%91%E5%88%87%E9%9D%A2%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
 
-Beneath the two systems mentioned above, there's a hidden subsystem for managing tasks/goals/time, primarily through "periodic notes":
+上記2つのシステムの下には、「定期ノート」を中心にタスク・目標・時間を管理するサブシステムが隠れています：
 
 - Task management
   - Collecting via daily/weekly logs.
   - Organizing via weekly/monthly reviews.
 - Goal management
-  - Planning annual goals with the annual review.
-  - Splitting annual goals with the quarterly review.
-  - Breaking down pending items with the monthly review.
-    - Top-down sorting (through goal decomposition).
-    - Bottom-up sorting (through collection decomposition -> daily/weekly logs).
+  - 年次レビューで年間目標を計画する。
+  - 四半期レビューで年間目標を分割する。
+  - 月次レビューで積み残し項目を細分化する。
+    - トップダウンの並べ替え（目標分解を通じて）。
+    - ボトムアップの並べ替え（収集の分解 -> デイリー・ウィークリーログを通じて）。
 - Time management
-  - Manually tracking the time spent on various projects in the daily log and its proportions, adjusting time investment.
-  - Using scripts in daily, weekly, monthly, quarterly, and annual reviews to automatically track the time spent on various projects and their proportions, reviewing time investment.
+  - デイリーログで各プロジェクトに費やした時間とその割合を手動で記録し、時間の投資を調整する。
+  - デイリー・ウィークリー・マンスリー・クォータリー・アニュアルレビューでスクリプトを使用し、各プロジェクトの時間と割合を自動集計して時間投資を振り返る。
 
-You might be curious that the above subsystem seems to only use "periodic notes." In fact, the two main systems are connected through two methods.
+上記のサブシステムは「定期ノート」しか使っていないように見えるかもしれませんが、実際には2つのメインシステムが2つの方法でつながっています。
 
 ### Connection
 
@@ -95,30 +95,30 @@ You might be curious that the above subsystem seems to only use "periodic notes.
 
 #### Tag Connection
 
-Treat the first-level folders under PARA as special tags (they don't need to be exactly the same as the folder names), use them in "periodic notes," then you can index uniformly in each PARA folder in the same way. This ensures that the README.md index in each PARA folder has all the context for the current topic:
+PARA の第一階層フォルダを特殊タグとして扱い（フォルダ名と完全に一致させる必要はありません）、「定期ノート」で使用します。そうすることで、各 PARA フォルダで同じ方法により一括インデックスを作成できます。これにより、各 PARA フォルダ内の README.md インデックスが、現在のトピックに関するすべてのコンテキストを持つことができます：
 
 #### Project Connection
 
-Generate a project in "knowledge management," to enhance focus on the project, there's a "main event list" or "project list" in every class of "periodic notes," such as:
+「知識管理」でプロジェクトを生成し、プロジェクトへの集中を高めるため、すべての「定期ノート」のクラスに「主要イベントリスト」または「プロジェクトリスト」を設けています。例えば：
 
-- The "project list" in the daily log is a snapshot of the current project list, used for calculating the time spent that day on various projects and their proportions, ensuring enough time is spent on projects.
-- The "main event dimensions" in the weekly and monthly reviews automatically merge and deduplicate from the daily reviews of the week or month, used for arranging project dimension tasks and subsequent reviews.
-- The "main event dimensions" in the quarterly review is a snapshot of the current domain list, used for arranging main event dimension goals and subsequent reviews.
-- The "main event dimensions" in the annual review, automatically merged and deduplicated from the quarter's main event dimensions, used for setting domain dimension goals and subsequent reviews.
+- デイリーログの「プロジェクトリスト」は現在のプロジェクトリストのスナップショットであり、その日に各プロジェクトに費やした時間と割合を計算し、プロジェクトに十分な時間が割かれているかを確認するために使用します。
+- ウィークリーおよびマンスリーレビューの「主要イベントの次元」は、その週または月のデイリーレビューから自動的にマージ・重複排除されたものであり、プロジェクト次元のタスクの整理と事後レビューに使用します。
+- クォータリーレビューの「主要イベントの次元」は現在のドメインリストのスナップショットであり、主要イベント次元の目標設定と事後レビューに使用します。
+- アニュアルレビューの「主要イベントの次元」は、各四半期の主要イベント次元から自動的にマージ・重複排除されたものであり、ドメイン次元の目標設定と事後レビューに使用します。
 
 ### Search
 
 - Tags
   - For example, the [holiday](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/PeriodicNotes/2023/Daily/06/2023-06-01.md#L3), [vacation](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/PeriodicNotes/2023/Daily/06/2023-06-11.md#L4) tags in the daily log.
 - Index files
-  - For example, the [README.md](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/1.%20Projects/%E5%88%86%E4%BA%AB-2023%20WOT%20%E5%88%86%E4%BA%AB%E4%BC%9A/README.md) index of each project's tasks, logs, and context.
+  - For example, the [README.md](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/1.%20Projects/%E5%88%86%E4%BA%AB-2023%20WOT%20%E5%88%86%E4%BA%AB%E4%BC%9A/README.md) 各プロジェクトのタスク・ログ・コンテキストのインデックス。
 - Folders
-  - For example, using a consistent directory structure for each PARA category.
+  - たとえば、各 PARA カテゴリに一貫したディレクトリ構造を使用する。
 
 ### 振り返り
 
-- The review focuses on the projects of the current period while planning the tasks for the next period.
-- Weekly reviews reflect on the week's daily logs, monthly reviews on each week's reviews, and quarterly reviews on each month's reviews.
+- レビューでは現在の期間のプロジェクトを振り返りながら、次の期間のタスクを計画します。
+- ウィークリーレビューはその週のデイリーログを振り返り、マンスリーレビューは各週のレビューを、クォータリーレビューは各月のレビューを振り返ります。
 
 ## Quick Start
 
@@ -129,55 +129,55 @@ Generate a project in "knowledge management," to enhance focus on the project, t
 
 ### Creating Notes
 
-- Quickly create daily, weekly, monthly, seasonal, and annual notes through the note creation module in the upper left corner.
-- Quickly create PARA notes, i.e., projects, areas, resources, archives through the note creation module in the upper left corner.
+- 左上のノート作成モジュールから、デイリー・ウィークリー・マンスリー・クォータリー・アニュアルノートをすばやく作成できます。
+- 左上角のノート作成モジュールから、プロジェクト・エリア・リソース・アーカイブなどのPARAノートをすばやく作成できます。
 
 ### "Daily Log" and "Project README"
 
-- Used for daily management, including project lists, daily records, habit tracking, energy allocation, today's accomplishments, etc.
-- The "project list" in the daily log is a snapshot of the current projects (i.e., under the Projects directory).
+- デイリー管理に使用します。プロジェクトリスト、日々の記録、習慣トラッキング、エネルギー配分、今日の成果などが含まれます。
+- デイリーログの「プロジェクトリスト」は、現在のプロジェクト（Projectsディレクトリ配下）のスナップショットです。
 
 ### "Weekly Review" and "Monthly Review"
 
-- Used for arranging weekly and monthly tasks, including task and review modules.
-- In the weekly and monthly reviews, the "main event dimensions" are a collection of snapshots of the project lists from dailynotesof the period (generated automatically).
-- The "reviews" in the weekly and monthly notes mainly focus on the projects of the period.
+- 週次・月次のタスク整理に使用します。タスクモジュールとレビューモジュールが含まれます。
+- 週次・月次レビューの「主要イベント軸」は、対象期間のデイリーノートに記録されたプロジェクトリストのスナップショットを集めたものです（自動生成）。
+- 週次・月次ノートの「レビュー」は、主にその期間のプロジェクトに焦点を当てます。
 
 ### "Quarterly Review" and "Annual Review"
 
-- Used for setting quarterly and annual goals, including goals and review modules.
-- In the quarterly review, the "main event dimensions" is a snapshot of the current domain (i.e., under the Areas directory).
-- In the annual review, the "main event dimensions" is a collection of snapshots from the main event dimensions of the period's quarterly reviews (generated automatically).
-- The "reviews" in the quarterly and annual notes mainly focus on the domains of the period.
+- 四半期・年間の目標設定に使用します。目標モジュールとレビューモジュールが含まれます。
+- 四半期レビューの「主要イベント軸」は、現在のドメイン（Areasディレクトリ配下）のスナップショットです。
+- 年次レビューの「主要イベント軸」は、対象期間の四半期レビューにおける主要イベント軸のスナップショットを集めたものです（自動生成）。
+- 四半期・年次ノートの「レビュー」は、主にその期間のドメインに焦点を当てます。
 
 ### "PARA Index" and "Task Index"
 
 ### "Capture" and "Express"
 
-First, let's introduce a concept, the CODE model, where:
+まず、CODEモデルという概念を紹介します。
 
-- C is for Capture: Collecting resonant information.
-- O is for Organize: Sorting the collected information, i.e., PARA.
-- D is for Distill: Extracting the essence of the content, selecting the most useful information.
-- E is for Express: Sharing with others, applying your knowledge in practice.
+- CはCapture（収集）：共鳴する情報を集めることです。
+- OはOrganize（整理）：収集した情報を整理すること、すなわちPARAです。
+- DはDistill（抽出）：コンテンツの本質を抽出し、最も有用な情報を選び取ることです。
+- EはExpress（発信）：他者と共有し、知識を実践に活かすことです。
 
-Those familiar with PARA will see that this model is actually proposed by Tiago Forte in "Building a Second Brain," and it's the higher-level model that includes the PARA organization method, with O indicating the PARA organization method.
+PARAをご存知の方なら、このモデルがTiago Forteの「Building a Second Brain」で提唱されたものだとわかるでしょう。PARAという整理手法を包含するより上位のモデルであり、OがPARAの整理手法を指しています。
 
-My practice is to temporarily store some marked articles in the "Capture" directory while using the "-1. Capture/README.md" file to index the notes tagged with `#PARA/Capture` scattered in the daily logs. This makes it convenient for me during specific time nodes, such as weekends, month-ends, and quarter-ends, to review and sort, first organizing marked articles into each PARA topical directory, then transferring some inspirational notes from the dailynotesinto some explicit to-dos;
+私の実践では、マークした記事を一時的に「Capture」ディレクトリに保存しつつ、「-1. Capture/README.md」ファイルを使って、タグ付きのノートをインデックス化しています。 `#PARA/Capture` デイリーログに散らばったメモを整理するため、週末・月末・四半期末などの特定のタイミングでレビューと整理を行います。まずマークした記事を各PARAトピックのディレクトリに振り分け、次にデイリーノートの閃きメモを具体的なタスクに転換します。
 
-Next, let's talk about "Express." I place my blog in the express section and also record some fragmentary notes in the daily log tagged with `PARA/Express`. These are outputs after internalization. If this output needs to be further posted on a specific social platform, such as Zhihu or Xiaohongshu, I will conveniently record it as a task. When I review the tasks indexed in the "5. Express/README.md" file and find pending ones, just complete them one by one.
+次に「Express」について話します。私はブログをExpressセクションに置き、またデイリーログにタグ付きの断片的なメモを記録しています。 `PARA/Express`これらは内面化を経たアウトプットです。知乎や小紅書などのSNSへの投稿が必要な場合は、タスクとして記録します。「5. Express/README.md」でインデックス化されたタスクをレビューし、未完了のものを一つずつ片付けていきます。
 
 ## Small Tips in Practice
 
 ### Buffer Zone Mechanism
 
-Place less important and non-urgent items swiftly into a buffer zone (Inbox) by creating tasks, keeping the main focus on "Projects."
+重要度・緊急度の低いものは、タスクを作成してすばやくバッファゾーン（Inbox）に入れ、「Projects」に集中できるようにします。
 
 ### Task Lists
 
-Recording tasks shouldn't be a mental burden – writing them down doesn't mean they must be done. Having them written relieves your mind from having to continuously remember or fear forgetting them. I've recorded many tasks, many of which, upon reassessment, were indeed not completed.
+タスクの記録は精神的な負担にすべきではありません。書き留めたからといって必ずやらなければならないわけではなく、書くことで頭の中から解放され、忘れる心配がなくなります。私も多くのタスクを記録していますが、後から見直すと完了していないものも多くあります。
 
-It's important to have mechanisms in place that allow for review of recorded tasks, for example:
+記録したタスクをレビューできる仕組みを持つことが重要です。例えば：
 
 - Using a tasks plugin to create [query views](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/TASK.md) for task lists
 - Each periodic note contains a [collected tasks list](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/PeriodicNotes/2023/Weekly/2023-W22.md#%E6%9C%AC%E5%91%A8%E6%94%B6%E9%9B%86) for the current period
@@ -185,25 +185,25 @@ It's important to have mechanisms in place that allow for review of recorded tas
 
 ### Task Reminders
 
-I consider there to be three types of task reminders:
+タスクのリマインダーには3種類あると考えています：
 
-- Strong reminders, such as snapping up Moutai liquor or concert tickets, which need an alarm to remind you when it's time
-- Soft reminders, for things that need to be done on a certain day, like credit card repayments or loan repayments, which can be set up through GTD software for reminders
-- List-style, for recording tasks which will be arranged later; based on the need, these can be converted to strong or soft reminders, akin to the inbox in GTD systems
+- 強いリマインダー：茅台酒やコンサートチケットの先着購入など、時間になったらアラームで知らせる必要があるもの
+- ソフトなリマインダー：クレジットカードの支払いやローン返済など、特定の日にやるべきことで、GTDソフトウェアでリマインダーを設定できるもの
+- リスト形式：後で整理するためにタスクを記録するもの。必要に応じて強いリマインダーやソフトなリマインダーに変換できます。GTDシステムのインボックスに相当します。
 
 ### Micro-Habits
 
-- I list micro-habits in my journal, and remember, they are not tasks. It's okay whether they are completed or not; they mainly serve as a reminder, "Do you consider practicing these micro-habits today?" These act as prompts when I have the "capability" and "motivation." For example:
+- 私はジャーナルにマイクロ習慣をリストアップしていますが、これらはタスクではありません。できてもできなくてもかまいません。主な目的は「今日これらのマイクロ習慣を実践してみますか？」というリマインダーです。「能力」と「意欲」があるときのプロンプトとして機能します。例えば：
   - Micro-Habits
-    - Get up and drink water as soon as the alarm goes off
-    - Put on headphones and listen to the Little Universe podcast right after getting off the vehicle
-    - Open WeChat Read as soon as I get on the subway
-    - Write down three to-dos as soon as I reach my workstation
-    - Start serious work as soon as it's 10:30 am
+    - アラームが鳴ったらすぐに起きて水を飲む
+    - 乗り物を降りたらすぐにイヤホンをつけて「小宇宙」ポッドキャストを聴く
+    - 地下鉄に乗ったらすぐにWeChat Readを開く
+    - デスクに着いたらすぐにToDo 3つを書き下ろす
+    - 午前10時30分になったら本格的な作業を開始する
 
 ### Easy to Refactor
 
-Within each periodic note, the same feature modules use the same statement, such as "tasks collected this period," all inserted through the following query statement. The "this period" variable is provided by the current file name, which makes it very convenient to refactor all periodic files en masse, needing only to perform a batch replacement:
+各定期ノートの同じ機能モジュールは同じ記述を使用します。例えば「この期間に収集したタスク」はすべて以下のクエリ文で挿入されます。「この期間」という変数は現在のファイル名から提供されるため、全定期ファイルを一括リファクタリングする際は置換を一度行うだけで非常に便利です：
 
 ````markdown
 ```LifeOS
@@ -213,10 +213,10 @@ Within each periodic note, the same feature modules use the same statement, such
 
 ### Efficient Use of Shortcuts
 
-Set consistent global shortcuts, so that no matter in which software, you can invoke the same function with the same shortcut. Here are some of my configurations:
+グローバルショートカットを統一することで、どのソフトウェアでも同じショートカットで同じ機能を呼び出せます。私の設定例を以下に示します：
 
 - Cursor movement
-  - Pattern: Control + directional initial/VIM direction
+  - パターン：Control + 方向キーの頭文字／VIM方向キー
   - Examples:
     - A: Head of line
     - E: End of line
@@ -236,12 +236,12 @@ Set consistent global shortcuts, so that no matter in which software, you can in
     - `[`: Show/Hide left sidebar
     - `]`: Show/Hide right sidebar
     - ': Show/Hide bottom bar
-    - T: New Tab (for more specific windows, the top level uses Command + T)
-    - W: Close Tab (for more specific windows, the top level uses Command + W)
+    - T：新しいタブ（より具体的なウィンドウの場合、上位レベルはCommand + T）
+    - W：タブを閉じる（より具体的なウィンドウの場合、上位レベルはCommand + W）
     - J: Next Tab
     - K: Previous Tab
 - Document editing
-  - Pattern 1: Command + Option + number/symbol
+  - パターン1：Command + Option + 数字／記号
   - Examples:
     - 1: Markdown level-one heading
     - 2: Markdown level-two heading
@@ -254,7 +254,7 @@ Set consistent global shortcuts, so that no matter in which software, you can in
 - Function category
   - Pattern: Control + initial
   - Examples:
-    - C: Copy link (Obsidian block link, Arc browser link, VScode git link)
+    - C：リンクをコピー（Obsidianブロックリンク、Arcブラウザリンク、VSCode gitリンク）
     - D: Download
     - I: Add to inbox
     - K: Quick Search

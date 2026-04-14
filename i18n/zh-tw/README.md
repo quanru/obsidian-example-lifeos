@@ -1,6 +1,6 @@
 <p align="center"><a href="https://github.com/quanru/obsidian-example-lifeos">English</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/zh">简体中文</a> | <strong>繁體中文</strong> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/ja">日本語</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/de">Deutsch</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/es">Español</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/fr">Français</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/pt">Português</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/ar">العربية</a></p>
 
-<a href="https://obsidian.md/blog/2024-goty-winners/">🔥 LifeOS for Obsidian won the third place 🥉 in the Best Templates category at the 2024 Obsidian Gems of the Year awards!</a>
+<a href="https://obsidian.md/blog/2024-goty-winners/">🔥 LifeOS for Obsidian 榮獲 2024 年 Obsidian 年度精選獎最佳模板類別第三名 🥉！</a>
 
 <a href="https://www.producthunt.com/posts/lifeos-template-for-obsidian?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lifeos&#0045;template&#0045;for&#0045;obsidian" target="_blank">
   <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=441390&theme=light" alt="LifeOS&#0032;Template&#0032;for&#0032;Obsidian - Obsidian&#0032;LifeOS&#0032;&#0045;&#0032;Your&#0032;Life&#0032;Management&#0032;Assistant&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
@@ -52,17 +52,17 @@ Download the vault in your preferred language from the [latest release](https://
 
 同時，我也參考了以下優秀外掛的程式碼：
 
-- [PARA](https://fortelabs.com/blog/para/). Thanks to Tiago Forte for inventing such a great organizational method.
-- [PARA Starter Kit](https://forum.obsidian.md/t/para-starter-kit/223). Thanks to cotemaxime for creating such a great starter vault.
-- [obsidian-periodic-notes](https://github.com/liamcain/obsidian-periodic-notes). Gave me the inspiration to develop this plugin.
-- [obsidian-dataview](https://github.com/blacksmithgu/obsidian-dataview). The underlying plugin uses dataview's query interface.
-- [Templater](https://github.com/SilentVoid13/Templater). Provides decoupled template creation, allowing a very large number of plugins to create files with the help of it.
+- [PARA](https://fortelabs.com/blog/para/)。感謝 Tiago Forte 發明瞭如此出色的組織方法。
+- [PARA Starter Kit](https://forum.obsidian.md/t/para-starter-kit/223)。感謝 cotemaxime 打造了如此優秀的入門 Vault。
+- [obsidian-periodic-notes](https://github.com/liamcain/obsidian-periodic-notes)。給了我開發此插件的靈感。
+- [obsidian-dataview](https://github.com/blacksmithgu/obsidian-dataview)。底層插件使用了 dataview 的查詢介面。
+- [Templater](https://github.com/SilentVoid13/Templater)。提供了解耦的模板建立方式，使大量插件能借助它來建立檔案。
 
 ## 捐贈
 
 如果這個外掛對你有幫助，請在 [buymeacoffee](https://www.buymeacoffee.com/leyang).
 
-In addition, you can also support me in further developing a better LifeOS by purchasing the [LifeOS Pro](https://lifeos.vip/zh/plugin/life-os-pro.html)!
+此外，你也可以透過購買 [LifeOS Pro](https://lifeos.vip/zh/plugin/life-os-pro.html)!
 
 ---
 

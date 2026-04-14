@@ -1,7 +1,7 @@
 {
   "sourceLang": "en",
   "targetLang": "zh-tw",
-  "generatedAt": "2026-04-13T16:14:48.875Z",
+  "generatedAt": "2026-04-14T01:40:07.305Z",
   "entries": [
     {
       "id": "text:64b8e350cc54",
@@ -11439,14 +11439,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "as an example to share my practice of using Obsidian to build a second brain!",
-      "translation": "as an example to share my practice of using Obsidian to build a second brain!"
+      "translation": "以此為例，分享我使用 Obsidian 建立第二大腦的實踐心得！"
     },
     {
       "id": "text:ee6be72269da",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "For more information, please refer to the official website",
-      "translation": "For more information, please refer to the official website"
+      "translation": "更多資訊請參考官方網站"
     },
     {
       "id": "link-label:77d5a3865cb5",
@@ -11474,7 +11474,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Here is how it introduces itself on the official website:",
-      "translation": "Here is how it introduces itself on the official website:"
+      "translation": "以下是官方網站上的自我介紹："
     },
     {
       "id": "link-label:7431a11bb0ec",
@@ -11488,7 +11488,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "is the private and flexible note‑taking app that adapts to the way you think.",
-      "translation": "is the private and flexible note‑taking app that adapts to the way you think."
+      "translation": "是一款私密且靈活的筆記應用程式，能夠適應你的思考方式。"
     },
     {
       "id": "link-label:57c8156d12bc",
@@ -11502,14 +11502,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "is a private and flexible note-taking app that adapts to your way of thinking.",
-      "translation": "is a private and flexible note-taking app that adapts to your way of thinking."
+      "translation": "是一款私密且靈活的筆記應用程式，能夠配合你的思維方式。"
     },
     {
       "id": "text:f17360262b1d",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "What I especially appreciate is its rich plugin ecosystem. If you like Vscode, then you will probably like Obsidian as well. The only difference is that Vscode is for writing code, and Obsidian is for taking notes.",
-      "translation": "What I especially appreciate is its rich plugin ecosystem. If you like Vscode, then you will probably like Obsidian as well. The only difference is that Vscode is for writing code, and Obsidian is for taking notes."
+      "translation": "我特別欣賞的是它豐富的插件生態系統。如果你喜歡 VSCode，那你很可能也會喜歡 Obsidian。唯一的差別在於：VSCode 是用來寫程式碼的，而 Obsidian 是用來做筆記的。"
     },
     {
       "id": "text:bc9ba704b57e",
@@ -11523,35 +11523,35 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The first brain is our actual brain. It never stops working as long as we are alive. It performs tasks such as knowledge management, task management, and goal management. Most of the time, we cannot multitask, thus the first brain acts more like a CPU, with various tasks competing for CPU cycles. When there are too many tasks to handle, the brain becomes overwhelmed. It has to deal with current tasks while keeping the context of other tasks to switch between them, so we cannot focus on executing the current task. This is when an external system is needed to assist the first brain, which is the second brain.",
-      "translation": "The first brain is our actual brain. It never stops working as long as we are alive. It performs tasks such as knowledge management, task management, and goal management. Most of the time, we cannot multitask, thus the first brain acts more like a CPU, with various tasks competing for CPU cycles. When there are too many tasks to handle, the brain becomes overwhelmed. It has to deal with current tasks while keeping the context of other tasks to switch between them, so we cannot focus on executing the current task. This is when an external system is needed to assist the first brain, which is the second brain."
+      "translation": "第一大腦是我們真實的大腦。只要我們活著，它就不會停止運作，負責知識管理、任務管理和目標管理等工作。大多數時候，我們無法同時處理多件事，因此第一大腦更像一顆 CPU，各種任務相互競爭運算資源。當任務過多時，大腦就會不堪負荷——它必須在處理當前任務的同時，保留其他任務的上下文以便切換，導致我們無法專注於執行眼前的任務。這時就需要一個外部系統來輔助第一大腦，這便是第二大腦。"
     },
     {
       "id": "text:7f8724110d89",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The second brain is an external system. If we compare the first brain to a CPU, then the second brain is more like a storage system. It acts as a buffer between the first brain and the real world, reducing the load on the first brain so it can focus on the current matter. It can be compared to memory and hard disks, but memory is more frequent in communication with the CPU (the first brain) and has a faster read speed. This storage system stores things that the first brain doesn’t need to focus on all the time. Of course, it's up to the first brain to decide whether these things need to be stored. The content could be notes, to-dos, processes, and the medium could be text, images, videos.",
-      "translation": "The second brain is an external system. If we compare the first brain to a CPU, then the second brain is more like a storage system. It acts as a buffer between the first brain and the real world, reducing the load on the first brain so it can focus on the current matter. It can be compared to memory and hard disks, but memory is more frequent in communication with the CPU (the first brain) and has a faster read speed. This storage system stores things that the first brain doesn’t need to focus on all the time. Of course, it's up to the first brain to decide whether these things need to be stored. The content could be notes, to-dos, processes, and the medium could be text, images, videos."
+      "translation": "第二大腦是一個外部系統。如果把第一大腦比作 CPU，那第二大腦更像一個儲存系統，充當第一大腦與現實世界之間的緩衝，減輕第一大腦的負擔，使其能夠專注於當下的事務。可以把它比作記憶體和硬碟——記憶體與 CPU（第一大腦）的溝通更為頻繁，讀取速度也更快。這個儲存系統存放著第一大腦不需要時刻關注的內容。當然，哪些內容需要儲存，由第一大腦決定。內容可以是筆記、待辦事項、流程等，媒介可以是文字、圖片、影片。"
     },
     {
       "id": "text:71c5c941989e",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "For example, when we use the second brain for task management, important and urgent items are stored in memory, while unimportant and non-urgent items are stored on the hard disk; this week's tasks are in memory, while this month's tasks might be on the hard disk. Therefore, by utilizing the second brain, we can focus on the present without any pressure and switch contexts when necessary.",
-      "translation": "For example, when we use the second brain for task management, important and urgent items are stored in memory, while unimportant and non-urgent items are stored on the hard disk; this week's tasks are in memory, while this month's tasks might be on the hard disk. Therefore, by utilizing the second brain, we can focus on the present without any pressure and switch contexts when necessary."
+      "translation": "例如，當我們用第二大腦進行任務管理時，重要且緊急的事項存放在記憶體中，不重要且不緊急的事項則存放在硬碟上；本週的任務放在記憶體，本月的任務則可能存放在硬碟。因此，善用第二大腦，我們便能無壓力地專注於當下，並在必要時切換情境。"
     },
     {
       "id": "text:d1b452c0034b",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "This article will use Obsidian as an example to share my practice in building a second brain! You may call it a second brain, but looking at it from different angles, I could also refer to it as \"LifeOS,\" because I record everything concerning life and work upon it. Additionally, it could be termed a \"programmable personal productivity system.\" I have written considerable code on it to do some querying and automation, and it is also the productivity system that I use to manage tasks and goals. It could even be likened to a \"Monorepo project,\" where every folder represents a project, and the README.md within the project is like the Package.json, describing the metadata of the current project.",
-      "translation": "This article will use Obsidian as an example to share my practice in building a second brain! You may call it a second brain, but looking at it from different angles, I could also refer to it as \"LifeOS,\" because I record everything concerning life and work upon it. Additionally, it could be termed a \"programmable personal productivity system.\" I have written considerable code on it to do some querying and automation, and it is also the productivity system that I use to manage tasks and goals. It could even be likened to a \"Monorepo project,\" where every folder represents a project, and the README.md within the project is like the Package.json, describing the metadata of the current project."
+      "translation": "本文將以 Obsidian 為例，分享我建立第二大腦的實踐心得！你可以稱它為第二大腦，但從不同角度來看，我也可以稱它為「LifeOS」，因為我將生活與工作中的一切都記錄於其中。此外，它也可以被稱為「可程式化的個人生產力系統」——我在上面寫了大量程式碼來進行查詢和自動化，同時它也是我用來管理任務與目標的生產力系統。甚至可以把它比作一個「Monorepo 專案」：每個資料夾代表一個專案，而專案內的 README.md 就像 Package.json，描述著當前專案的元資料。"
     },
     {
       "id": "text:01a646847d3e",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "📢 Attention: This system is not a top-down one with pre-established processes to implement. It gradually formed as I used Obsidian and is still evolving. Let's tentatively call the current version 1.0. The purpose of sharing it now is to inspire others to improve their systems! I have already written an",
-      "translation": "📢 Attention: This system is not a top-down one with pre-established processes to implement. It gradually formed as I used Obsidian and is still evolving. Let's tentatively call the current version 1.0. The purpose of sharing it now is to inspire others to improve their systems! I have already written an"
+      "translation": "📢 注意：這套系統並非由上而下、事先建立好流程再執行的。它是我在使用 Obsidian 的過程中逐漸形成的，至今仍在持續演進。暫且將目前的版本稱為 1.0。現在分享的目的，是希望能拋磚引玉，幫助大家完善自己的系統！我已經寫了一個"
     },
     {
       "id": "link-label:9061e531121d",
@@ -11565,7 +11565,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "plugin to support this system! With this plugin, you don't need any programming background. You can easily create periodic and PARA notes by simple visual clicks!",
-      "translation": "plugin to support this system! With this plugin, you don't need any programming background. You can easily create periodic and PARA notes by simple visual clicks!"
+      "translation": "插件來支援這套系統！有了這個插件，你無需任何程式設計背景，只需簡單的視覺化點擊，就能輕鬆建立週期性筆記和 PARA 筆記！"
     },
     {
       "id": "text:7562d8e44b6c",
@@ -11579,7 +11579,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "I adopt two systems: one for knowledge management and another for periodic notes. The former manages knowledge with dimensions like project/area/resource, and the latter manages tasks/goals/time with time as the dimension.",
-      "translation": "I adopt two systems: one for knowledge management and another for periodic notes. The former manages knowledge with dimensions like project/area/resource, and the latter manages tasks/goals/time with time as the dimension."
+      "translation": "我採用兩套系統：一套用於知識管理，另一套用於週期性筆記。前者以專案／領域／資源等維度管理知識，後者則以時間為維度管理任務／目標／時間。"
     },
     {
       "id": "text:4fe2d5c65a5d",
@@ -11614,28 +11614,28 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Projects -> Projects are a series of tasks related to a goal with a deadline.",
-      "translation": "Projects -> Projects are a series of tasks related to a goal with a deadline."
+      "translation": "Projects -> 專案是一系列與某個有截止日期的目標相關的任務。"
     },
     {
       "id": "text:7b79b88742c0",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Areas -> Areas are activity domains that need to maintain certain standards over time.",
-      "translation": "Areas -> Areas are activity domains that need to maintain certain standards over time."
+      "translation": "Areas -> 領域是需要長期維持一定標準的活動範疇。"
     },
     {
       "id": "text:d16a4ba4929f",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Resources -> Resources are topics or subjects of ongoing interest.",
-      "translation": "Resources -> Resources are topics or subjects of ongoing interest."
+      "translation": "Resources -> 資源是持續感興趣的主題或科目。"
     },
     {
       "id": "text:bd96fd153238",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Archives -> Archives are inactive items from the above three categories.",
-      "translation": "Archives -> Archives are inactive items from the above three categories."
+      "translation": "Archives -> 檔案庫是上述三個類別中已停用的項目。"
     },
     {
       "id": "text:9f16c9e6e117",
@@ -11649,7 +11649,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Long-term: Top-down, focusing on long-term goals.",
-      "translation": "Long-term: Top-down, focusing on long-term goals."
+      "translation": "長期：由上而下，聚焦於長期目標。"
     },
     {
       "id": "text:a14a1ac7c8fd",
@@ -11677,7 +11677,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Short-term: Bottom-up, focusing on short-term tasks.",
-      "translation": "Short-term: Bottom-up, focusing on short-term tasks."
+      "translation": "短期：由下而上，聚焦於短期任務。"
     },
     {
       "id": "text:122523c557f6",
@@ -11698,7 +11698,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Daily: Capturing thoughts and insights, achieving self-awareness; time consumption statistics, focusing on projects.",
-      "translation": "Daily: Capturing thoughts and insights, achieving self-awareness; time consumption statistics, focusing on projects."
+      "translation": "日記：記錄想法與洞察，達成自我認知；統計時間消耗，專注於專案。"
     },
     {
       "id": "text:c8a15a795826",
@@ -11712,28 +11712,28 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The closer to Projects the PARA component, the more actionable it is; the more long-term the periodic note, the less predictable it is;",
-      "translation": "The closer to Projects the PARA component, the more actionable it is; the more long-term the periodic note, the less predictable it is;"
+      "translation": "PARA 組成越接近 Projects，可執行性越強；週期性筆記的時間跨度越長，可預測性越低；"
     },
     {
       "id": "text:4e614f505349",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "These two systems effectively create two contexts that keep me focused:",
-      "translation": "These two systems effectively create two contexts that keep me focused:"
+      "translation": "這兩套系統有效地建立了兩種情境，讓我保持專注："
     },
     {
       "id": "text:2c1a33499c9b",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "One based on time (periodic notes), i.e., when I reach a certain time node, I work based on the corresponding periodic notes, and the notes have enough context;",
-      "translation": "One based on time (periodic notes), i.e., when I reach a certain time node, I work based on the corresponding periodic notes, and the notes have enough context;"
+      "translation": "一種以時間為基礎（週期性筆記），即當我到達某個時間節點時，便根據對應的週期性筆記展開工作，筆記中已有足夠的情境；"
     },
     {
       "id": "text:c0c6082b53e1",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The other based on the topic (PARA), i.e., when I want to research a topic, I work based on the index of the corresponding topic (README.md), and the notes have already collected a lot of context;",
-      "translation": "The other based on the topic (PARA), i.e., when I want to research a topic, I work based on the index of the corresponding topic (README.md), and the notes have already collected a lot of context;"
+      "translation": "另一種以主題為基礎（PARA），即當我想研究某個主題時，便根據對應主題的索引（README.md）展開工作，筆記中已積累了大量情境；"
     },
     {
       "id": "text:66f92ddb094a",
@@ -11754,7 +11754,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Beneath the two systems mentioned above, there's a hidden subsystem for managing tasks/goals/time, primarily through \"periodic notes\":",
-      "translation": "Beneath the two systems mentioned above, there's a hidden subsystem for managing tasks/goals/time, primarily through \"periodic notes\":"
+      "translation": "在上述兩套系統之下，還有一個隱含的子系統，主要透過「週期性筆記」來管理任務／目標／時間："
     },
     {
       "id": "text:351c7012abf5",
@@ -11789,35 +11789,35 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Planning annual goals with the annual review.",
-      "translation": "Planning annual goals with the annual review."
+      "translation": "透過年度回顧規劃年度目標。"
     },
     {
       "id": "text:e003d6de3db4",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Splitting annual goals with the quarterly review.",
-      "translation": "Splitting annual goals with the quarterly review."
+      "translation": "透過季度回顧拆解年度目標。"
     },
     {
       "id": "text:ee9f7898362e",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Breaking down pending items with the monthly review.",
-      "translation": "Breaking down pending items with the monthly review."
+      "translation": "透過月度回顧分解待辦事項。"
     },
     {
       "id": "text:0c0ab71f8b7b",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Top-down sorting (through goal decomposition).",
-      "translation": "Top-down sorting (through goal decomposition)."
+      "translation": "由上而下排序（透過目標分解）。"
     },
     {
       "id": "text:347c79199384",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Bottom-up sorting (through collection decomposition -> daily/weekly logs).",
-      "translation": "Bottom-up sorting (through collection decomposition -> daily/weekly logs)."
+      "translation": "由下而上排序（透過收集分解 -> 日誌／週誌）。"
     },
     {
       "id": "text:a8d3f1a7d60b",
@@ -11831,21 +11831,21 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Manually tracking the time spent on various projects in the daily log and its proportions, adjusting time investment.",
-      "translation": "Manually tracking the time spent on various projects in the daily log and its proportions, adjusting time investment."
+      "translation": "在日誌中手動記錄各專案的時間花費及其比例，並據此調整時間投入。"
     },
     {
       "id": "text:4dcb4a494308",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Using scripts in daily, weekly, monthly, quarterly, and annual reviews to automatically track the time spent on various projects and their proportions, reviewing time investment.",
-      "translation": "Using scripts in daily, weekly, monthly, quarterly, and annual reviews to automatically track the time spent on various projects and their proportions, reviewing time investment."
+      "translation": "在日、週、月、季、年度回顧中，使用腳本自動統計各專案的時間花費及比例，以便回顧時間投入情況。"
     },
     {
       "id": "text:e33ff03b3562",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "You might be curious that the above subsystem seems to only use \"periodic notes.\" In fact, the two main systems are connected through two methods.",
-      "translation": "You might be curious that the above subsystem seems to only use \"periodic notes.\" In fact, the two main systems are connected through two methods."
+      "translation": "你可能會好奇，上述子系統似乎只使用了「週期性筆記」。事實上，這兩套主要系統是透過兩種方法相互連結的。"
     },
     {
       "id": "text:5ca6bf31e7a8",
@@ -11873,7 +11873,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Treat the first-level folders under PARA as special tags (they don't need to be exactly the same as the folder names), use them in \"periodic notes,\" then you can index uniformly in each PARA folder in the same way. This ensures that the README.md index in each PARA folder has all the context for the current topic:",
-      "translation": "Treat the first-level folders under PARA as special tags (they don't need to be exactly the same as the folder names), use them in \"periodic notes,\" then you can index uniformly in each PARA folder in the same way. This ensures that the README.md index in each PARA folder has all the context for the current topic:"
+      "translation": "將 PARA 下的第一層資料夾視為特殊標籤（不必與資料夾名稱完全相同），並在「週期性筆記」中使用它們，這樣就能以相同方式在每個 PARA 資料夾中統一建立索引。這確保了每個 PARA 資料夾中的 README.md 索引都包含當前主題的完整情境："
     },
     {
       "id": "text:1850510daac0",
@@ -11887,35 +11887,35 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Generate a project in \"knowledge management,\" to enhance focus on the project, there's a \"main event list\" or \"project list\" in every class of \"periodic notes,\" such as:",
-      "translation": "Generate a project in \"knowledge management,\" to enhance focus on the project, there's a \"main event list\" or \"project list\" in every class of \"periodic notes,\" such as:"
+      "translation": "在「知識管理」中建立專案後，為了加強對專案的專注，每類「週期性筆記」中都有一個「主要事件清單」或「專案清單」，例如："
     },
     {
       "id": "text:a8b3d2cb5b71",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"project list\" in the daily log is a snapshot of the current project list, used for calculating the time spent that day on various projects and their proportions, ensuring enough time is spent on projects.",
-      "translation": "The \"project list\" in the daily log is a snapshot of the current project list, used for calculating the time spent that day on various projects and their proportions, ensuring enough time is spent on projects."
+      "translation": "日誌中的「專案清單」是當前專案清單的快照，用於計算當天各專案的時間花費及比例，確保在專案上投入足夠的時間。"
     },
     {
       "id": "text:06ea03f7238c",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"main event dimensions\" in the weekly and monthly reviews automatically merge and deduplicate from the daily reviews of the week or month, used for arranging project dimension tasks and subsequent reviews.",
-      "translation": "The \"main event dimensions\" in the weekly and monthly reviews automatically merge and deduplicate from the daily reviews of the week or month, used for arranging project dimension tasks and subsequent reviews."
+      "translation": "週度和月度回顧中的「主要事件維度」，會自動從當週或當月的日誌中合併並去重，用於安排專案維度的任務及後續回顧。"
     },
     {
       "id": "text:dc1b679c687e",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"main event dimensions\" in the quarterly review is a snapshot of the current domain list, used for arranging main event dimension goals and subsequent reviews.",
-      "translation": "The \"main event dimensions\" in the quarterly review is a snapshot of the current domain list, used for arranging main event dimension goals and subsequent reviews."
+      "translation": "季度回顧中的「主要事件維度」是當前領域清單的快照，用於安排主要事件維度的目標及後續回顧。"
     },
     {
       "id": "text:9d956ea60e39",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"main event dimensions\" in the annual review, automatically merged and deduplicated from the quarter's main event dimensions, used for setting domain dimension goals and subsequent reviews.",
-      "translation": "The \"main event dimensions\" in the annual review, automatically merged and deduplicated from the quarter's main event dimensions, used for setting domain dimension goals and subsequent reviews."
+      "translation": "年度回顧中的「主要事件維度」，從各季度的主要事件維度自動合併去重，用於設定領域維度的目標及後續回顧。"
     },
     {
       "id": "text:6c53445b7af8",
@@ -11985,7 +11985,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "index of each project's tasks, logs, and context.",
-      "translation": "index of each project's tasks, logs, and context."
+      "translation": "各專案任務、日誌與情境的索引。"
     },
     {
       "id": "text:55415d9af3f9",
@@ -11999,7 +11999,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "For example, using a consistent directory structure for each PARA category.",
-      "translation": "For example, using a consistent directory structure for each PARA category."
+      "translation": "例如，為每個 PARA 類別使用一致的目錄結構。"
     },
     {
       "id": "text:0fb172da84a9",
@@ -12013,14 +12013,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The review focuses on the projects of the current period while planning the tasks for the next period.",
-      "translation": "The review focuses on the projects of the current period while planning the tasks for the next period."
+      "translation": "回顧聚焦於當前週期的專案，同時規劃下一週期的任務。"
     },
     {
       "id": "text:7fe9108e315a",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Weekly reviews reflect on the week's daily logs, monthly reviews on each week's reviews, and quarterly reviews on each month's reviews.",
-      "translation": "Weekly reviews reflect on the week's daily logs, monthly reviews on each week's reviews, and quarterly reviews on each month's reviews."
+      "translation": "週度回顧反思本週的日誌，月度回顧反思每週的回顧，季度回顧反思每月的回顧。"
     },
     {
       "id": "text:a8023849cb0f",
@@ -12062,14 +12062,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Quickly create daily, weekly, monthly, seasonal, and annual notes through the note creation module in the upper left corner.",
-      "translation": "Quickly create daily, weekly, monthly, seasonal, and annual notes through the note creation module in the upper left corner."
+      "translation": "透過左上角的筆記建立模組，快速建立日、週、月、季、年度筆記。"
     },
     {
       "id": "text:0b4ddd701d4f",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Quickly create PARA notes, i.e., projects, areas, resources, archives through the note creation module in the upper left corner.",
-      "translation": "Quickly create PARA notes, i.e., projects, areas, resources, archives through the note creation module in the upper left corner."
+      "translation": "透過左上角的筆記建立模組，快速建立 PARA 筆記，即專案、領域、資源、檔案庫。"
     },
     {
       "id": "text:3f4689642159",
@@ -12083,14 +12083,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Used for daily management, including project lists, daily records, habit tracking, energy allocation, today's accomplishments, etc.",
-      "translation": "Used for daily management, including project lists, daily records, habit tracking, energy allocation, today's accomplishments, etc."
+      "translation": "用於日常管理，包含專案清單、每日紀錄、習慣追蹤、精力分配、今日成果等。"
     },
     {
       "id": "text:27149d9eb31c",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"project list\" in the daily log is a snapshot of the current projects (i.e., under the Projects directory).",
-      "translation": "The \"project list\" in the daily log is a snapshot of the current projects (i.e., under the Projects directory)."
+      "translation": "日誌中的「專案清單」是當前專案的快照（即 Projects 目錄下的內容）。"
     },
     {
       "id": "text:4326242ae45b",
@@ -12104,21 +12104,21 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Used for arranging weekly and monthly tasks, including task and review modules.",
-      "translation": "Used for arranging weekly and monthly tasks, including task and review modules."
+      "translation": "用於安排每週與每月的任務，包含任務與回顧模組。"
     },
     {
       "id": "text:8a1400b71d1b",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "In the weekly and monthly reviews, the \"main event dimensions\" are a collection of snapshots of the project lists from dailynotesof the period (generated automatically).",
-      "translation": "In the weekly and monthly reviews, the \"main event dimensions\" are a collection of snapshots of the project lists from dailynotesof the period (generated automatically)."
+      "translation": "在週回顧與月回顧中，「主要事件維度」是該時段每日日誌中專案清單快照的集合（自動生成）。"
     },
     {
       "id": "text:dff4754d30ce",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"reviews\" in the weekly and monthly notes mainly focus on the projects of the period.",
-      "translation": "The \"reviews\" in the weekly and monthly notes mainly focus on the projects of the period."
+      "translation": "週記與月記中的「回顧」主要聚焦於該時段的專案。"
     },
     {
       "id": "text:de3473aa887a",
@@ -12132,28 +12132,28 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Used for setting quarterly and annual goals, including goals and review modules.",
-      "translation": "Used for setting quarterly and annual goals, including goals and review modules."
+      "translation": "用於設定季度與年度目標，包含目標與回顧模組。"
     },
     {
       "id": "text:1d4f634f69db",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "In the quarterly review, the \"main event dimensions\" is a snapshot of the current domain (i.e., under the Areas directory).",
-      "translation": "In the quarterly review, the \"main event dimensions\" is a snapshot of the current domain (i.e., under the Areas directory)."
+      "translation": "在季度回顧中，「主要事件維度」是當前領域的快照（即 Areas 目錄下的內容）。"
     },
     {
       "id": "text:1972847a03cf",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "In the annual review, the \"main event dimensions\" is a collection of snapshots from the main event dimensions of the period's quarterly reviews (generated automatically).",
-      "translation": "In the annual review, the \"main event dimensions\" is a collection of snapshots from the main event dimensions of the period's quarterly reviews (generated automatically)."
+      "translation": "在年度回顧中，「主要事件維度」是該時段各季度回顧主要事件維度快照的集合（自動生成）。"
     },
     {
       "id": "text:41467bb6c012",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"reviews\" in the quarterly and annual notes mainly focus on the domains of the period.",
-      "translation": "The \"reviews\" in the quarterly and annual notes mainly focus on the domains of the period."
+      "translation": "季記與年記中的「回顧」主要聚焦於該時段的領域。"
     },
     {
       "id": "text:603aba8dc197",
@@ -12174,70 +12174,70 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "First, let's introduce a concept, the CODE model, where:",
-      "translation": "First, let's introduce a concept, the CODE model, where:"
+      "translation": "首先，介紹一個概念——CODE 模型，其中："
     },
     {
       "id": "text:dc94eb1f99c8",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "C is for Capture: Collecting resonant information.",
-      "translation": "C is for Capture: Collecting resonant information."
+      "translation": "C 代表 Capture（捕捉）：收集引發共鳴的資訊。"
     },
     {
       "id": "text:a07a200f1e4c",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "O is for Organize: Sorting the collected information, i.e., PARA.",
-      "translation": "O is for Organize: Sorting the collected information, i.e., PARA."
+      "translation": "O 代表 Organize（整理）：對收集的資訊進行分類，即 PARA。"
     },
     {
       "id": "text:cc3fe4dde2cd",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "D is for Distill: Extracting the essence of the content, selecting the most useful information.",
-      "translation": "D is for Distill: Extracting the essence of the content, selecting the most useful information."
+      "translation": "D 代表 Distill（萃取）：提煉內容精華，篩選出最有價值的資訊。"
     },
     {
       "id": "text:3c32f5a581dd",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "E is for Express: Sharing with others, applying your knowledge in practice.",
-      "translation": "E is for Express: Sharing with others, applying your knowledge in practice."
+      "translation": "E 代表 Express（表達）：與他人分享，將知識付諸實踐。"
     },
     {
       "id": "text:142dc13b3eaf",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Those familiar with PARA will see that this model is actually proposed by Tiago Forte in \"Building a Second Brain,\" and it's the higher-level model that includes the PARA organization method, with O indicating the PARA organization method.",
-      "translation": "Those familiar with PARA will see that this model is actually proposed by Tiago Forte in \"Building a Second Brain,\" and it's the higher-level model that includes the PARA organization method, with O indicating the PARA organization method."
+      "translation": "熟悉 PARA 的人會發現，這個模型其實是 Tiago Forte 在《打造第二大腦》中提出的，它是包含 PARA 組織方法的更高層次模型，其中 O 代表 PARA 組織方法。"
     },
     {
       "id": "text:d3ffd93bf2a0",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "My practice is to temporarily store some marked articles in the \"Capture\" directory while using the \"-1. Capture/README.md\" file to index the notes tagged with",
-      "translation": "My practice is to temporarily store some marked articles in the \"Capture\" directory while using the \"-1. Capture/README.md\" file to index the notes tagged with"
+      "translation": "我的做法是將一些已標記的文章暫存於「Capture」目錄，同時用「-1. Capture/README.md」檔案索引散落在日誌中、標有"
     },
     {
       "id": "text:16827da85ffa",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "scattered in the daily logs. This makes it convenient for me during specific time nodes, such as weekends, month-ends, and quarter-ends, to review and sort, first organizing marked articles into each PARA topical directory, then transferring some inspirational notes from the dailynotesinto some explicit to-dos;",
-      "translation": "scattered in the daily logs. This makes it convenient for me during specific time nodes, such as weekends, month-ends, and quarter-ends, to review and sort, first organizing marked articles into each PARA topical directory, then transferring some inspirational notes from the dailynotesinto some explicit to-dos;"
+      "translation": "標籤的筆記。這樣便於我在特定時間節點（如週末、月底、季末）進行回顧與整理——先將標記的文章歸入各 PARA 主題目錄，再將日誌中一些有啟發性的筆記轉化為明確的待辦事項；"
     },
     {
       "id": "text:b59bfb2aee78",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Next, let's talk about \"Express.\" I place my blog in the express section and also record some fragmentary notes in the daily log tagged with",
-      "translation": "Next, let's talk about \"Express.\" I place my blog in the express section and also record some fragmentary notes in the daily log tagged with"
+      "translation": "接下來談談「Express（表達）」。我將部落格放在 Express 區塊，同時在日誌中記錄一些片段式筆記，並標上"
     },
     {
       "id": "text:380e45eee05c",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": ". These are outputs after internalization. If this output needs to be further posted on a specific social platform, such as Zhihu or Xiaohongshu, I will conveniently record it as a task. When I review the tasks indexed in the \"5. Express/README.md\" file and find pending ones, just complete them one by one.",
-      "translation": ". These are outputs after internalization. If this output needs to be further posted on a specific social platform, such as Zhihu or Xiaohongshu, I will conveniently record it as a task. When I review the tasks indexed in the \"5. Express/README.md\" file and find pending ones, just complete them one by one."
+      "translation": "標籤。這些都是內化後的輸出成果。如果這些輸出需要進一步發布到知乎或小紅書等特定社群平台，我會順手將其記錄為一項任務。當我回顧「5. Express/README.md」中索引的任務，發現有待完成的，逐一處理即可。"
     },
     {
       "id": "text:4b1aa453bf71",
@@ -12258,7 +12258,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Place less important and non-urgent items swiftly into a buffer zone (Inbox) by creating tasks, keeping the main focus on \"Projects.\"",
-      "translation": "Place less important and non-urgent items swiftly into a buffer zone (Inbox) by creating tasks, keeping the main focus on \"Projects.\""
+      "translation": "將不太重要且不緊急的事項迅速建立任務，放入緩衝區（Inbox），讓主要精力集中在「Projects」上。"
     },
     {
       "id": "text:45daf4705fd2",
@@ -12272,14 +12272,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Recording tasks shouldn't be a mental burden – writing them down doesn't mean they must be done. Having them written relieves your mind from having to continuously remember or fear forgetting them. I've recorded many tasks, many of which, upon reassessment, were indeed not completed.",
-      "translation": "Recording tasks shouldn't be a mental burden – writing them down doesn't mean they must be done. Having them written relieves your mind from having to continuously remember or fear forgetting them. I've recorded many tasks, many of which, upon reassessment, were indeed not completed."
+      "translation": "記錄任務不應成為心理負擔——寫下來並不代表一定要完成。把它們記下來，就能讓大腦不必持續惦記或擔心遺忘。我記錄了許多任務，其中不少在重新評估後確實沒有完成。"
     },
     {
       "id": "text:b0495b85ec10",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "It's important to have mechanisms in place that allow for review of recorded tasks, for example:",
-      "translation": "It's important to have mechanisms in place that allow for review of recorded tasks, for example:"
+      "translation": "重要的是要有機制能讓你定期回顧已記錄的任務，例如："
     },
     {
       "id": "text:3f88aad7fa2b",
@@ -12349,28 +12349,28 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "I consider there to be three types of task reminders:",
-      "translation": "I consider there to be three types of task reminders:"
+      "translation": "我認為任務提醒有三種類型："
     },
     {
       "id": "text:1b879de24a36",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Strong reminders, such as snapping up Moutai liquor or concert tickets, which need an alarm to remind you when it's time",
-      "translation": "Strong reminders, such as snapping up Moutai liquor or concert tickets, which need an alarm to remind you when it's time"
+      "translation": "強提醒：例如搶購茅台或演唱會門票，需要在時間到來時以鬧鐘提醒"
     },
     {
       "id": "text:6c8ffda4246e",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Soft reminders, for things that need to be done on a certain day, like credit card repayments or loan repayments, which can be set up through GTD software for reminders",
-      "translation": "Soft reminders, for things that need to be done on a certain day, like credit card repayments or loan repayments, which can be set up through GTD software for reminders"
+      "translation": "軟提醒：需要在某天完成的事項，如信用卡還款或貸款還款，可透過 GTD 軟體設定提醒"
     },
     {
       "id": "text:8eb3ad9e7a65",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "List-style, for recording tasks which will be arranged later; based on the need, these can be converted to strong or soft reminders, akin to the inbox in GTD systems",
-      "translation": "List-style, for recording tasks which will be arranged later; based on the need, these can be converted to strong or soft reminders, akin to the inbox in GTD systems"
+      "translation": "清單式：用於記錄之後再安排的任務；視需要可轉換為強提醒或軟提醒，類似 GTD 系統中的收件匣"
     },
     {
       "id": "text:e3691341607b",
@@ -12384,7 +12384,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "I list micro-habits in my journal, and remember, they are not tasks. It's okay whether they are completed or not; they mainly serve as a reminder, \"Do you consider practicing these micro-habits today?\" These act as prompts when I have the \"capability\" and \"motivation.\" For example:",
-      "translation": "I list micro-habits in my journal, and remember, they are not tasks. It's okay whether they are completed or not; they mainly serve as a reminder, \"Do you consider practicing these micro-habits today?\" These act as prompts when I have the \"capability\" and \"motivation.\" For example:"
+      "translation": "我在日誌中列出微習慣，要記住，它們不是任務。完成與否都無妨，主要是作為一種提示：「今天你有想練習這些微習慣嗎？」這些提示會在我有「能力」且有「動力」時發揮作用。例如："
     },
     {
       "id": "text:4a1d4eb72365",
@@ -12398,35 +12398,35 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Get up and drink water as soon as the alarm goes off",
-      "translation": "Get up and drink water as soon as the alarm goes off"
+      "translation": "鬧鐘一響立刻起床喝水"
     },
     {
       "id": "text:bbeae7c713d8",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Put on headphones and listen to the Little Universe podcast right after getting off the vehicle",
-      "translation": "Put on headphones and listen to the Little Universe podcast right after getting off the vehicle"
+      "translation": "下車後立刻戴上耳機收聽小宇宙 Podcast"
     },
     {
       "id": "text:686982e53274",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Open WeChat Read as soon as I get on the subway",
-      "translation": "Open WeChat Read as soon as I get on the subway"
+      "translation": "一上地鐵立刻打開微信閱讀"
     },
     {
       "id": "text:93e14c2e8fe8",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Write down three to-dos as soon as I reach my workstation",
-      "translation": "Write down three to-dos as soon as I reach my workstation"
+      "translation": "到工位後立刻寫下三件待辦事項"
     },
     {
       "id": "text:e128103f7aed",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Start serious work as soon as it's 10:30 am",
-      "translation": "Start serious work as soon as it's 10:30 am"
+      "translation": "上午 10:30 一到立刻進入專注工作狀態"
     },
     {
       "id": "text:36140d0dff96",
@@ -12440,7 +12440,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Within each periodic note, the same feature modules use the same statement, such as \"tasks collected this period,\" all inserted through the following query statement. The \"this period\" variable is provided by the current file name, which makes it very convenient to refactor all periodic files en masse, needing only to perform a batch replacement:",
-      "translation": "Within each periodic note, the same feature modules use the same statement, such as \"tasks collected this period,\" all inserted through the following query statement. The \"this period\" variable is provided by the current file name, which makes it very convenient to refactor all periodic files en masse, needing only to perform a batch replacement:"
+      "translation": "在每個週期筆記中，相同功能模組使用相同的語句，例如「本期收集的任務」，均透過以下查詢語句插入。「本期」變數由當前檔案名稱提供，這使得批次重構所有週期檔案非常方便，只需執行一次批次替換即可："
     },
     {
       "id": "text:e60f58b01d27",
@@ -12461,7 +12461,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Set consistent global shortcuts, so that no matter in which software, you can invoke the same function with the same shortcut. Here are some of my configurations:",
-      "translation": "Set consistent global shortcuts, so that no matter in which software, you can invoke the same function with the same shortcut. Here are some of my configurations:"
+      "translation": "設定一致的全域快捷鍵，讓你無論在哪個軟體中，都能用相同的快捷鍵呼叫相同的功能。以下是我的部分設定："
     },
     {
       "id": "text:c566d91c8366",
@@ -12475,7 +12475,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Pattern: Control + directional initial/VIM direction",
-      "translation": "Pattern: Control + directional initial/VIM direction"
+      "translation": "模式：Control + 方向首字母／VIM 方向鍵"
     },
     {
       "id": "text:ae9fc5326c7c",
@@ -12615,14 +12615,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "T: New Tab (for more specific windows, the top level uses Command + T)",
-      "translation": "T: New Tab (for more specific windows, the top level uses Command + T)"
+      "translation": "T：新增分頁（針對更具體的視窗，頂層使用 Command + T）"
     },
     {
       "id": "text:606a17ca578a",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "W: Close Tab (for more specific windows, the top level uses Command + W)",
-      "translation": "W: Close Tab (for more specific windows, the top level uses Command + W)"
+      "translation": "W：關閉分頁（針對更具體的視窗，頂層使用 Command + W）"
     },
     {
       "id": "text:00db3ac66b78",
@@ -12650,7 +12650,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Pattern 1: Command + Option + number/symbol",
-      "translation": "Pattern 1: Command + Option + number/symbol"
+      "translation": "模式一：Command + Option + 數字／符號"
     },
     {
       "id": "text:01b95d5ba734",
@@ -12741,7 +12741,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "C: Copy link (Obsidian block link, Arc browser link, VScode git link)",
-      "translation": "C: Copy link (Obsidian block link, Arc browser link, VScode git link)"
+      "translation": "C：複製連結（Obsidian 區塊連結、Arc 瀏覽器連結、VSCode Git 連結）"
     },
     {
       "id": "text:98723df708dc",
@@ -12769,70 +12769,70 @@
       "kind": "text",
       "file": "README.md",
       "source": "**English** |",
-      "translation": ""
+      "translation": "**English** |"
     },
     {
       "id": "text:0cd03afb6c85",
       "kind": "text",
       "file": "README.md",
       "source": "简体中文",
-      "translation": ""
+      "translation": "简体中文"
     },
     {
       "id": "text:6ca9c5237f4d",
       "kind": "text",
       "file": "README.md",
       "source": "繁體中文",
-      "translation": ""
+      "translation": "繁體中文"
     },
     {
       "id": "text:f25025ffdbac",
       "kind": "text",
       "file": "README.md",
       "source": "日本語",
-      "translation": ""
+      "translation": "日本語"
     },
     {
       "id": "text:7db89d9ea986",
       "kind": "text",
       "file": "README.md",
       "source": "Deutsch",
-      "translation": ""
+      "translation": "Deutsch"
     },
     {
       "id": "text:45a68c30cadb",
       "kind": "text",
       "file": "README.md",
       "source": "Español",
-      "translation": ""
+      "translation": "Español"
     },
     {
       "id": "text:ce6ebfd6e84f",
       "kind": "text",
       "file": "README.md",
       "source": "Français",
-      "translation": ""
+      "translation": "Français"
     },
     {
       "id": "text:d9fa8df7d26e",
       "kind": "text",
       "file": "README.md",
       "source": "Português",
-      "translation": ""
+      "translation": "Português"
     },
     {
       "id": "text:cecac1f596b5",
       "kind": "text",
       "file": "README.md",
       "source": "العربية",
-      "translation": ""
+      "translation": "العربية"
     },
     {
       "id": "text:a1e1e1c31c2a",
       "kind": "text",
       "file": "README.md",
       "source": "🔥 LifeOS for Obsidian won the third place 🥉 in the Best Templates category at the 2024 Obsidian Gems of the Year awards!",
-      "translation": "🔥 LifeOS for Obsidian won the third place 🥉 in the Best Templates category at the 2024 Obsidian Gems of the Year awards!"
+      "translation": "🔥 LifeOS for Obsidian 榮獲 2024 年 Obsidian 年度精選獎最佳模板類別第三名 🥉！"
     },
     {
       "id": "text:f0e964a8fc6a",
@@ -13035,7 +13035,7 @@
       "kind": "text",
       "file": "README.md",
       "source": ". Thanks to Tiago Forte for inventing such a great organizational method.",
-      "translation": ". Thanks to Tiago Forte for inventing such a great organizational method."
+      "translation": "。感謝 Tiago Forte 發明瞭如此出色的組織方法。"
     },
     {
       "id": "link-label:f43e657d6f31",
@@ -13049,7 +13049,7 @@
       "kind": "text",
       "file": "README.md",
       "source": ". Thanks to cotemaxime for creating such a great starter vault.",
-      "translation": ". Thanks to cotemaxime for creating such a great starter vault."
+      "translation": "。感謝 cotemaxime 打造了如此優秀的入門 Vault。"
     },
     {
       "id": "link-label:cf8b838fe2b9",
@@ -13063,7 +13063,7 @@
       "kind": "text",
       "file": "README.md",
       "source": ". Gave me the inspiration to develop this plugin.",
-      "translation": ". Gave me the inspiration to develop this plugin."
+      "translation": "。給了我開發此插件的靈感。"
     },
     {
       "id": "link-label:b569ad3db1fc",
@@ -13077,7 +13077,7 @@
       "kind": "text",
       "file": "README.md",
       "source": ". The underlying plugin uses dataview's query interface.",
-      "translation": ". The underlying plugin uses dataview's query interface."
+      "translation": "。底層插件使用了 dataview 的查詢介面。"
     },
     {
       "id": "link-label:52f8140de919",
@@ -13091,7 +13091,7 @@
       "kind": "text",
       "file": "README.md",
       "source": ". Provides decoupled template creation, allowing a very large number of plugins to create files with the help of it.",
-      "translation": ". Provides decoupled template creation, allowing a very large number of plugins to create files with the help of it."
+      "translation": "。提供了解耦的模板建立方式，使大量插件能借助它來建立檔案。"
     },
     {
       "id": "text:b20d6b3ff644",
@@ -13119,7 +13119,7 @@
       "kind": "text",
       "file": "README.md",
       "source": "In addition, you can also support me in further developing a better LifeOS by purchasing the",
-      "translation": "In addition, you can also support me in further developing a better LifeOS by purchasing the"
+      "translation": "此外，你也可以透過購買"
     },
     {
       "id": "link-label:deb83d827480",
@@ -13154,7 +13154,7 @@
       "kind": "text",
       "file": "TASK.md",
       "source": "Important || In progress || Due in 7 days || High priority",
-      "translation": "Important || In progress || Due in 7 days || High priority"
+      "translation": "重要 || 進行中 || 7 天內到期 || 高優先級"
     },
     {
       "id": "text:49a8b1a2603b",
@@ -13177,5 +13177,8 @@
       "source": "Cancelled",
       "translation": "Cancelled"
     }
-  ]
+  ],
+  "aiTranslatedAt": "2026-04-14T01:42:09.640Z",
+  "aiTranslationProvider": "claude-cli",
+  "aiTranslationModel": "sonnet"
 }

@@ -84,10 +84,10 @@ Por debajo de los dos sistemas mencionados, hay un subsistema oculto para gestio
     - Clasificación de arriba hacia abajo (mediante descomposición de objetivos).
     - Clasificación de abajo hacia arriba (mediante descomposición de colección -> registros diarios/semanales).
 - Gestión del tiempo
-  - Manually tracking the time spent on various projects in the daily log and its proportions, adjusting time investment.
-  - Using scripts in daily, weekly, monthly, quarterly, and annual reviews to automatically track the time spent on various projects and their proportions, reviewing time investment.
+  - Registrar manualmente el tiempo dedicado a cada proyecto en el diario y sus proporciones, ajustando la inversión de tiempo.
+  - Usar scripts en las revisiones diarias, semanales, mensuales, trimestrales y anuales para rastrear automáticamente el tiempo dedicado a cada proyecto y sus proporciones, evaluando la inversión de tiempo.
 
-You might be curious that the above subsystem seems to only use "periodic notes." In fact, the two main systems are connected through two methods.
+Puede que te preguntes por qué el subsistema anterior parece usar solo "notas periódicas". En realidad, los dos sistemas principales están conectados mediante dos métodos.
 
 ### Connection
 
@@ -95,30 +95,30 @@ You might be curious that the above subsystem seems to only use "periodic notes.
 
 #### Tag Connection
 
-Treat the first-level folders under PARA as special tags (they don't need to be exactly the same as the folder names), use them in "periodic notes," then you can index uniformly in each PARA folder in the same way. This ensures that the README.md index in each PARA folder has all the context for the current topic:
+Trata las carpetas de primer nivel bajo PARA como etiquetas especiales (no tienen que coincidir exactamente con los nombres de las carpetas), úsalas en las "notas periódicas" y podrás indexar de forma uniforme en cada carpeta PARA del mismo modo. Esto garantiza que el índice README.md de cada carpeta PARA tenga todo el contexto del tema actual:
 
 #### Project Connection
 
-Generate a project in "knowledge management," to enhance focus on the project, there's a "main event list" or "project list" in every class of "periodic notes," such as:
+Genera un proyecto en "gestión del conocimiento"; para reforzar el enfoque en el proyecto, hay una "lista de eventos principales" o "lista de proyectos" en cada clase de "notas periódicas", por ejemplo:
 
-- The "project list" in the daily log is a snapshot of the current project list, used for calculating the time spent that day on various projects and their proportions, ensuring enough time is spent on projects.
-- The "main event dimensions" in the weekly and monthly reviews automatically merge and deduplicate from the daily reviews of the week or month, used for arranging project dimension tasks and subsequent reviews.
-- The "main event dimensions" in the quarterly review is a snapshot of the current domain list, used for arranging main event dimension goals and subsequent reviews.
-- The "main event dimensions" in the annual review, automatically merged and deduplicated from the quarter's main event dimensions, used for setting domain dimension goals and subsequent reviews.
+- La "lista de proyectos" en el diario es una instantánea de la lista de proyectos actual, usada para calcular el tiempo dedicado ese día a cada proyecto y sus proporciones, asegurando que se invierta suficiente tiempo en los proyectos.
+- Las "dimensiones de eventos principales" en las revisiones semanales y mensuales se fusionan y deduplicen automáticamente a partir de las revisiones diarias de la semana o el mes, y se usan para organizar las tareas por dimensión de proyecto y revisiones posteriores.
+- Las "dimensiones de eventos principales" en la revisión trimestral son una instantánea de la lista de dominios actual, usada para organizar los objetivos por dimensión de evento principal y las revisiones posteriores.
+- Las "dimensiones de eventos principales" en la revisión anual se fusionan y deduplican automáticamente a partir de las dimensiones de eventos principales de los trimestres, y se usan para establecer objetivos por dimensión de dominio y revisiones posteriores.
 
 ### Search
 
 - Tags
   - For example, the [holiday](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/PeriodicNotes/2023/Daily/06/2023-06-01.md#L3), [vacation](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/PeriodicNotes/2023/Daily/06/2023-06-11.md#L4) tags in the daily log.
 - Index files
-  - For example, the [README.md](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/1.%20Projects/%E5%88%86%E4%BA%AB-2023%20WOT%20%E5%88%86%E4%BA%AB%E4%BC%9A/README.md) index of each project's tasks, logs, and context.
+  - For example, the [README.md](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/1.%20Projects/%E5%88%86%E4%BA%AB-2023%20WOT%20%E5%88%86%E4%BA%AB%E4%BC%9A/README.md) índice de tareas, registros y contexto de cada proyecto.
 - Folders
-  - For example, using a consistent directory structure for each PARA category.
+  - Por ejemplo, usando una estructura de directorios coherente para cada categoría de PARA.
 
 ### Revisión
 
-- The review focuses on the projects of the current period while planning the tasks for the next period.
-- Weekly reviews reflect on the week's daily logs, monthly reviews on each week's reviews, and quarterly reviews on each month's reviews.
+- La revisión se centra en los proyectos del período actual mientras se planifican las tareas del siguiente período.
+- Las revisiones semanales reflexionan sobre los diarios de la semana, las mensuales sobre las revisiones de cada semana, y las trimestrales sobre las revisiones de cada mes.
 
 ## Quick Start
 
@@ -129,55 +129,55 @@ Generate a project in "knowledge management," to enhance focus on the project, t
 
 ### Creating Notes
 
-- Quickly create daily, weekly, monthly, seasonal, and annual notes through the note creation module in the upper left corner.
-- Quickly create PARA notes, i.e., projects, areas, resources, archives through the note creation module in the upper left corner.
+- Crea rápidamente notas diarias, semanales, mensuales, estacionales y anuales mediante el módulo de creación de notas en la esquina superior izquierda.
+- Crea rápidamente notas PARA —es decir, proyectos, áreas, recursos y archivos— mediante el módulo de creación de notas en la esquina superior izquierda.
 
 ### "Daily Log" and "Project README"
 
-- Used for daily management, including project lists, daily records, habit tracking, energy allocation, today's accomplishments, etc.
-- The "project list" in the daily log is a snapshot of the current projects (i.e., under the Projects directory).
+- Usado para la gestión diaria, incluyendo listas de proyectos, registros del día, seguimiento de hábitos, distribución de energía, logros del día, etc.
+- La "lista de proyectos" en el diario es una instantánea de los proyectos actuales (es decir, los que están bajo el directorio Projects).
 
 ### "Weekly Review" and "Monthly Review"
 
-- Used for arranging weekly and monthly tasks, including task and review modules.
-- In the weekly and monthly reviews, the "main event dimensions" are a collection of snapshots of the project lists from dailynotesof the period (generated automatically).
-- The "reviews" in the weekly and monthly notes mainly focus on the projects of the period.
+- Usado para organizar tareas semanales y mensuales, incluyendo módulos de tareas y revisiones.
+- En las revisiones semanales y mensuales, las "dimensiones de eventos principales" son una colección de instantáneas de las listas de proyectos de las notas diarias del período (generadas automáticamente).
+- Las "revisiones" en las notas semanales y mensuales se centran principalmente en los proyectos del período.
 
 ### "Quarterly Review" and "Annual Review"
 
-- Used for setting quarterly and annual goals, including goals and review modules.
-- In the quarterly review, the "main event dimensions" is a snapshot of the current domain (i.e., under the Areas directory).
-- In the annual review, the "main event dimensions" is a collection of snapshots from the main event dimensions of the period's quarterly reviews (generated automatically).
-- The "reviews" in the quarterly and annual notes mainly focus on the domains of the period.
+- Usado para establecer objetivos trimestrales y anuales, incluyendo módulos de objetivos y revisiones.
+- En la revisión trimestral, las "dimensiones de eventos principales" son una instantánea del dominio actual (es decir, lo que está bajo el directorio Areas).
+- En la revisión anual, las "dimensiones de eventos principales" son una colección de instantáneas tomadas de las dimensiones de eventos principales de las revisiones trimestrales del período (generadas automáticamente).
+- Las "revisiones" en las notas trimestrales y anuales se centran principalmente en los dominios del período.
 
 ### "PARA Index" and "Task Index"
 
 ### "Capture" and "Express"
 
-First, let's introduce a concept, the CODE model, where:
+Primero, presentemos un concepto: el modelo CODE, donde:
 
-- C is for Capture: Collecting resonant information.
-- O is for Organize: Sorting the collected information, i.e., PARA.
-- D is for Distill: Extracting the essence of the content, selecting the most useful information.
-- E is for Express: Sharing with others, applying your knowledge in practice.
+- C es de Capturar: recopilar información que resuena contigo.
+- O es de Organizar: clasificar la información recopilada, es decir, PARA.
+- D es de Destilar: extraer la esencia del contenido, seleccionando la información más útil.
+- E es de Expresar: compartir con otros, aplicando tu conocimiento en la práctica.
 
-Those familiar with PARA will see that this model is actually proposed by Tiago Forte in "Building a Second Brain," and it's the higher-level model that includes the PARA organization method, with O indicating the PARA organization method.
+Quienes conozcan PARA reconocerán que este modelo fue propuesto por Tiago Forte en "Building a Second Brain"; es el modelo de nivel superior que engloba el método de organización PARA, donde la O representa precisamente dicho método.
 
-My practice is to temporarily store some marked articles in the "Capture" directory while using the "-1. Capture/README.md" file to index the notes tagged with `#PARA/Capture` scattered in the daily logs. This makes it convenient for me during specific time nodes, such as weekends, month-ends, and quarter-ends, to review and sort, first organizing marked articles into each PARA topical directory, then transferring some inspirational notes from the dailynotesinto some explicit to-dos;
+Mi práctica es almacenar temporalmente algunos artículos marcados en el directorio "Capture", mientras uso el archivo "-1. Capture/README.md" para indexar las notas etiquetadas con `#PARA/Capture` dispersas en los diarios. Esto me facilita, en momentos específicos como fines de semana, fin de mes o fin de trimestre, revisar y ordenar: primero organizando los artículos marcados en cada directorio temático de PARA, y luego convirtiendo algunas notas inspiradoras de los diarios en tareas concretas pendientes;
 
-Next, let's talk about "Express." I place my blog in the express section and also record some fragmentary notes in the daily log tagged with `PARA/Express`. These are outputs after internalization. If this output needs to be further posted on a specific social platform, such as Zhihu or Xiaohongshu, I will conveniently record it as a task. When I review the tasks indexed in the "5. Express/README.md" file and find pending ones, just complete them one by one.
+A continuación, hablemos de "Expresar". Coloco mi blog en la sección de expresión y también registro notas fragmentarias en el diario etiquetadas con `PARA/Express`. Estas son salidas después de la internalización. Si alguna de estas salidas necesita publicarse en una plataforma social específica, como Zhihu o Xiaohongshu, la registro convenientemente como tarea. Cuando reviso las tareas indexadas en el archivo "5. Express/README.md" y encuentro pendientes, simplemente las voy completando una a una.
 
 ## Small Tips in Practice
 
 ### Buffer Zone Mechanism
 
-Place less important and non-urgent items swiftly into a buffer zone (Inbox) by creating tasks, keeping the main focus on "Projects."
+Incorpora rápidamente los elementos menos importantes y no urgentes a una zona de entrada (Inbox) creando tareas, manteniendo el foco principal en "Projects".
 
 ### Task Lists
 
-Recording tasks shouldn't be a mental burden – writing them down doesn't mean they must be done. Having them written relieves your mind from having to continuously remember or fear forgetting them. I've recorded many tasks, many of which, upon reassessment, were indeed not completed.
+Registrar tareas no debe ser una carga mental: escribirlas no significa que deban hacerse obligatoriamente. Tenerlas anotadas libera tu mente de tener que recordarlas continuamente o temer olvidarlas. He registrado muchas tareas, y muchas de ellas, al reevaluarlas, efectivamente no se completaron.
 
-It's important to have mechanisms in place that allow for review of recorded tasks, for example:
+Es importante contar con mecanismos que permitan revisar las tareas registradas; por ejemplo:
 
 - Using a tasks plugin to create [query views](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/TASK.md) for task lists
 - Each periodic note contains a [collected tasks list](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/PeriodicNotes/2023/Weekly/2023-W22.md#%E6%9C%AC%E5%91%A8%E6%94%B6%E9%9B%86) for the current period
@@ -185,25 +185,25 @@ It's important to have mechanisms in place that allow for review of recorded tas
 
 ### Task Reminders
 
-I consider there to be three types of task reminders:
+Considero que existen tres tipos de recordatorios de tareas:
 
-- Strong reminders, such as snapping up Moutai liquor or concert tickets, which need an alarm to remind you when it's time
-- Soft reminders, for things that need to be done on a certain day, like credit card repayments or loan repayments, which can be set up through GTD software for reminders
-- List-style, for recording tasks which will be arranged later; based on the need, these can be converted to strong or soft reminders, akin to the inbox in GTD systems
+- Recordatorios fuertes, como reservar entradas para un concierto o productos de edición limitada, que requieren una alarma que avise en el momento preciso
+- Recordatorios suaves, para cosas que deben hacerse en un día concreto, como el pago de la tarjeta de crédito o de un préstamo, que pueden configurarse mediante software GTD
+- En formato de lista, para registrar tareas que se organizarán más adelante; según la necesidad, pueden convertirse en recordatorios fuertes o suaves, similar a la bandeja de entrada en los sistemas GTD
 
 ### Micro-Habits
 
-- I list micro-habits in my journal, and remember, they are not tasks. It's okay whether they are completed or not; they mainly serve as a reminder, "Do you consider practicing these micro-habits today?" These act as prompts when I have the "capability" and "motivation." For example:
+- Anoto microhábitos en mi diario y, recuerda, no son tareas. No importa si se cumplen o no; sirven principalmente como recordatorio: "¿Consideras practicar estos microhábitos hoy?" Actúan como impulsos cuando tengo la "capacidad" y la "motivación". Por ejemplo:
   - Micro-Habits
-    - Get up and drink water as soon as the alarm goes off
-    - Put on headphones and listen to the Little Universe podcast right after getting off the vehicle
-    - Open WeChat Read as soon as I get on the subway
-    - Write down three to-dos as soon as I reach my workstation
-    - Start serious work as soon as it's 10:30 am
+    - Levantarme y beber agua en cuanto suene el despertador
+    - Ponerme los auriculares y escuchar el podcast Little Universe justo al bajar del vehículo
+    - Abrir WeChat Read en cuanto suba al metro
+    - Anotar tres tareas pendientes en cuanto llegue a mi puesto de trabajo
+    - Comenzar el trabajo en serio en cuanto sean las 10:30
 
 ### Easy to Refactor
 
-Within each periodic note, the same feature modules use the same statement, such as "tasks collected this period," all inserted through the following query statement. The "this period" variable is provided by the current file name, which makes it very convenient to refactor all periodic files en masse, needing only to perform a batch replacement:
+Dentro de cada nota periódica, los módulos de funciones idénticas usan la misma declaración, como "tareas recopiladas en este período", todas insertadas mediante la siguiente consulta. La variable "este período" la proporciona el nombre del archivo actual, lo que hace muy conveniente refactorizar todos los archivos periódicos en bloque, bastando con realizar un reemplazo masivo:
 
 ````markdown
 ```LifeOS
@@ -213,10 +213,10 @@ Within each periodic note, the same feature modules use the same statement, such
 
 ### Efficient Use of Shortcuts
 
-Set consistent global shortcuts, so that no matter in which software, you can invoke the same function with the same shortcut. Here are some of my configurations:
+Configura atajos globales coherentes para que, sin importar en qué software estés, puedas invocar la misma función con el mismo atajo. Aquí algunas de mis configuraciones:
 
 - Cursor movement
-  - Pattern: Control + directional initial/VIM direction
+  - Patrón: Control + inicial direccional/dirección VIM
   - Examples:
     - A: Head of line
     - E: End of line
@@ -236,12 +236,12 @@ Set consistent global shortcuts, so that no matter in which software, you can in
     - `[`: Show/Hide left sidebar
     - `]`: Show/Hide right sidebar
     - ': Show/Hide bottom bar
-    - T: New Tab (for more specific windows, the top level uses Command + T)
-    - W: Close Tab (for more specific windows, the top level uses Command + W)
+    - T: Nueva pestaña (para ventanas más específicas, el nivel superior usa Command + T)
+    - W: Cerrar pestaña (para ventanas más específicas, el nivel superior usa Command + W)
     - J: Next Tab
     - K: Previous Tab
 - Document editing
-  - Pattern 1: Command + Option + number/symbol
+  - Patrón 1: Command + Opción + número/símbolo
   - Examples:
     - 1: Markdown level-one heading
     - 2: Markdown level-two heading
@@ -254,7 +254,7 @@ Set consistent global shortcuts, so that no matter in which software, you can in
 - Function category
   - Pattern: Control + initial
   - Examples:
-    - C: Copy link (Obsidian block link, Arc browser link, VScode git link)
+    - C: Copiar enlace (enlace de bloque de Obsidian, enlace del navegador Arc, enlace git de VSCode)
     - D: Download
     - I: Add to inbox
     - K: Quick Search

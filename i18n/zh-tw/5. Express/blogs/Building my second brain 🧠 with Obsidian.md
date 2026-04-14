@@ -12,82 +12,82 @@ tags:
   - Time-Management
 ---
 
-This article will take [Obsidian](https://obsidian.md/) as an example to share my practice of using Obsidian to build a second brain!
+This article will take [Obsidian](https://obsidian.md/) 以此為例，分享我使用 Obsidian 建立第二大腦的實踐心得！
 
-For more information, please refer to the official website [LifeOS](https://lifeos.vip)!
+更多資訊請參考官方網站 [LifeOS](https://lifeos.vip)!
 
 ## Preface
 
 ### What is Obsidian?
 
-Here is how it introduces itself on the official website:
+以下是官方網站上的自我介紹：
 
-- [Obsidian](https://obsidian.md/) is the private and flexible note‑taking app that adapts to the way you think.
-- [Obsidian](https://obsidian.md/) is a private and flexible note-taking app that adapts to your way of thinking.
+- [Obsidian](https://obsidian.md/) 是一款私密且靈活的筆記應用程式，能夠適應你的思考方式。
+- [Obsidian](https://obsidian.md/) 是一款私密且靈活的筆記應用程式，能夠配合你的思維方式。
 
-What I especially appreciate is its rich plugin ecosystem. If you like Vscode, then you will probably like Obsidian as well. The only difference is that Vscode is for writing code, and Obsidian is for taking notes.
+我特別欣賞的是它豐富的插件生態系統。如果你喜歡 VSCode，那你很可能也會喜歡 Obsidian。唯一的差別在於：VSCode 是用來寫程式碼的，而 Obsidian 是用來做筆記的。
 
 ### First Brain VS Second Brain
 
-The first brain is our actual brain. It never stops working as long as we are alive. It performs tasks such as knowledge management, task management, and goal management. Most of the time, we cannot multitask, thus the first brain acts more like a CPU, with various tasks competing for CPU cycles. When there are too many tasks to handle, the brain becomes overwhelmed. It has to deal with current tasks while keeping the context of other tasks to switch between them, so we cannot focus on executing the current task. This is when an external system is needed to assist the first brain, which is the second brain.
+第一大腦是我們真實的大腦。只要我們活著，它就不會停止運作，負責知識管理、任務管理和目標管理等工作。大多數時候，我們無法同時處理多件事，因此第一大腦更像一顆 CPU，各種任務相互競爭運算資源。當任務過多時，大腦就會不堪負荷——它必須在處理當前任務的同時，保留其他任務的上下文以便切換，導致我們無法專注於執行眼前的任務。這時就需要一個外部系統來輔助第一大腦，這便是第二大腦。
 
-The second brain is an external system. If we compare the first brain to a CPU, then the second brain is more like a storage system. It acts as a buffer between the first brain and the real world, reducing the load on the first brain so it can focus on the current matter. It can be compared to memory and hard disks, but memory is more frequent in communication with the CPU (the first brain) and has a faster read speed. This storage system stores things that the first brain doesn’t need to focus on all the time. Of course, it's up to the first brain to decide whether these things need to be stored. The content could be notes, to-dos, processes, and the medium could be text, images, videos.
+第二大腦是一個外部系統。如果把第一大腦比作 CPU，那第二大腦更像一個儲存系統，充當第一大腦與現實世界之間的緩衝，減輕第一大腦的負擔，使其能夠專注於當下的事務。可以把它比作記憶體和硬碟——記憶體與 CPU（第一大腦）的溝通更為頻繁，讀取速度也更快。這個儲存系統存放著第一大腦不需要時刻關注的內容。當然，哪些內容需要儲存，由第一大腦決定。內容可以是筆記、待辦事項、流程等，媒介可以是文字、圖片、影片。
 
-For example, when we use the second brain for task management, important and urgent items are stored in memory, while unimportant and non-urgent items are stored on the hard disk; this week's tasks are in memory, while this month's tasks might be on the hard disk. Therefore, by utilizing the second brain, we can focus on the present without any pressure and switch contexts when necessary.
+例如，當我們用第二大腦進行任務管理時，重要且緊急的事項存放在記憶體中，不重要且不緊急的事項則存放在硬碟上；本週的任務放在記憶體，本月的任務則可能存放在硬碟。因此，善用第二大腦，我們便能無壓力地專注於當下，並在必要時切換情境。
 
-This article will use Obsidian as an example to share my practice in building a second brain! You may call it a second brain, but looking at it from different angles, I could also refer to it as "LifeOS," because I record everything concerning life and work upon it. Additionally, it could be termed a "programmable personal productivity system." I have written considerable code on it to do some querying and automation, and it is also the productivity system that I use to manage tasks and goals. It could even be likened to a "Monorepo project," where every folder represents a project, and the README.md within the project is like the Package.json, describing the metadata of the current project.
+本文將以 Obsidian 為例，分享我建立第二大腦的實踐心得！你可以稱它為第二大腦，但從不同角度來看，我也可以稱它為「LifeOS」，因為我將生活與工作中的一切都記錄於其中。此外，它也可以被稱為「可程式化的個人生產力系統」——我在上面寫了大量程式碼來進行查詢和自動化，同時它也是我用來管理任務與目標的生產力系統。甚至可以把它比作一個「Monorepo 專案」：每個資料夾代表一個專案，而專案內的 README.md 就像 Package.json，描述著當前專案的元資料。
 
-📢 Attention: This system is not a top-down one with pre-established processes to implement. It gradually formed as I used Obsidian and is still evolving. Let's tentatively call the current version 1.0. The purpose of sharing it now is to inspire others to improve their systems! I have already written an [Obsidian Periodic PARA](https://github.com/quanru/obsidian-periodic-para) plugin to support this system! With this plugin, you don't need any programming background. You can easily create periodic and PARA notes by simple visual clicks!
+📢 注意：這套系統並非由上而下、事先建立好流程再執行的。它是我在使用 Obsidian 的過程中逐漸形成的，至今仍在持續演進。暫且將目前的版本稱為 1.0。現在分享的目的，是希望能拋磚引玉，幫助大家完善自己的系統！我已經寫了一個 [Obsidian Periodic PARA](https://github.com/quanru/obsidian-periodic-para) 插件來支援這套系統！有了這個插件，你無需任何程式設計背景，只需簡單的視覺化點擊，就能輕鬆建立週期性筆記和 PARA 筆記！
 
 ## My Practice
 
-I adopt two systems: one for knowledge management and another for periodic notes. The former manages knowledge with dimensions like project/area/resource, and the latter manages tasks/goals/time with time as the dimension.
+我採用兩套系統：一套用於知識管理，另一套用於週期性筆記。前者以專案／領域／資源等維度管理知識，後者則以時間為維度管理任務／目標／時間。
 
 ### Core Systems
 
 - Knowledge management: Using the [PARA](https://fortelabs.com/blog/para/) system
-  - Projects -> Projects are a series of tasks related to a goal with a deadline.
-  - Areas -> Areas are activity domains that need to maintain certain standards over time.
-  - Resources -> Resources are topics or subjects of ongoing interest.
-  - Archives -> Archives are inactive items from the above three categories.
+  - Projects -> 專案是一系列與某個有截止日期的目標相關的任務。
+  - Areas -> 領域是需要長期維持一定標準的活動範疇。
+  - Resources -> 資源是持續感興趣的主題或科目。
+  - Archives -> 檔案庫是上述三個類別中已停用的項目。
 - Periodic notes
-  - Long-term: Top-down, focusing on long-term goals.
+  - 長期：由上而下，聚焦於長期目標。
     - Three-year Review
     - Annual Review
     - Quarterly Review
-  - Short-term: Bottom-up, focusing on short-term tasks.
+  - 短期：由下而上，聚焦於短期任務。
     - Monthly Review
     - Weekly Review
-  - Daily: Capturing thoughts and insights, achieving self-awareness; time consumption statistics, focusing on projects.
+  - 日記：記錄想法與洞察，達成自我認知；統計時間消耗，專注於專案。
     - Daily Log
 
-The closer to Projects the PARA component, the more actionable it is; the more long-term the periodic note, the less predictable it is;
+PARA 組成越接近 Projects，可執行性越強；週期性筆記的時間跨度越長，可預測性越低；
 
-These two systems effectively create two contexts that keep me focused:
+這兩套系統有效地建立了兩種情境，讓我保持專注：
 
-- One based on time (periodic notes), i.e., when I reach a certain time node, I work based on the corresponding periodic notes, and the notes have enough context;
-- The other based on the topic (PARA), i.e., when I want to research a topic, I work based on the index of the corresponding topic (README.md), and the notes have already collected a lot of context;
+- 一種以時間為基礎（週期性筆記），即當我到達某個時間節點時，便根據對應的週期性筆記展開工作，筆記中已有足夠的情境；
+- 另一種以主題為基礎（PARA），即當我想研究某個主題時，便根據對應主題的索引（README.md）展開工作，筆記中已積累了大量情境；
 
 ### Aspect-oriented Subsystem
 
 > [Aspect-oriented programming - Wikiwand](https://www.wikiwand.com/zh-hans/%E9%9D%A2%E5%90%91%E5%88%87%E9%9D%A2%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
 
-Beneath the two systems mentioned above, there's a hidden subsystem for managing tasks/goals/time, primarily through "periodic notes":
+在上述兩套系統之下，還有一個隱含的子系統，主要透過「週期性筆記」來管理任務／目標／時間：
 
 - Task management
   - Collecting via daily/weekly logs.
   - Organizing via weekly/monthly reviews.
 - Goal management
-  - Planning annual goals with the annual review.
-  - Splitting annual goals with the quarterly review.
-  - Breaking down pending items with the monthly review.
-    - Top-down sorting (through goal decomposition).
-    - Bottom-up sorting (through collection decomposition -> daily/weekly logs).
+  - 透過年度回顧規劃年度目標。
+  - 透過季度回顧拆解年度目標。
+  - 透過月度回顧分解待辦事項。
+    - 由上而下排序（透過目標分解）。
+    - 由下而上排序（透過收集分解 -> 日誌／週誌）。
 - Time management
-  - Manually tracking the time spent on various projects in the daily log and its proportions, adjusting time investment.
-  - Using scripts in daily, weekly, monthly, quarterly, and annual reviews to automatically track the time spent on various projects and their proportions, reviewing time investment.
+  - 在日誌中手動記錄各專案的時間花費及其比例，並據此調整時間投入。
+  - 在日、週、月、季、年度回顧中，使用腳本自動統計各專案的時間花費及比例，以便回顧時間投入情況。
 
-You might be curious that the above subsystem seems to only use "periodic notes." In fact, the two main systems are connected through two methods.
+你可能會好奇，上述子系統似乎只使用了「週期性筆記」。事實上，這兩套主要系統是透過兩種方法相互連結的。
 
 ### Connection
 
@@ -95,30 +95,30 @@ You might be curious that the above subsystem seems to only use "periodic notes.
 
 #### Tag Connection
 
-Treat the first-level folders under PARA as special tags (they don't need to be exactly the same as the folder names), use them in "periodic notes," then you can index uniformly in each PARA folder in the same way. This ensures that the README.md index in each PARA folder has all the context for the current topic:
+將 PARA 下的第一層資料夾視為特殊標籤（不必與資料夾名稱完全相同），並在「週期性筆記」中使用它們，這樣就能以相同方式在每個 PARA 資料夾中統一建立索引。這確保了每個 PARA 資料夾中的 README.md 索引都包含當前主題的完整情境：
 
 #### Project Connection
 
-Generate a project in "knowledge management," to enhance focus on the project, there's a "main event list" or "project list" in every class of "periodic notes," such as:
+在「知識管理」中建立專案後，為了加強對專案的專注，每類「週期性筆記」中都有一個「主要事件清單」或「專案清單」，例如：
 
-- The "project list" in the daily log is a snapshot of the current project list, used for calculating the time spent that day on various projects and their proportions, ensuring enough time is spent on projects.
-- The "main event dimensions" in the weekly and monthly reviews automatically merge and deduplicate from the daily reviews of the week or month, used for arranging project dimension tasks and subsequent reviews.
-- The "main event dimensions" in the quarterly review is a snapshot of the current domain list, used for arranging main event dimension goals and subsequent reviews.
-- The "main event dimensions" in the annual review, automatically merged and deduplicated from the quarter's main event dimensions, used for setting domain dimension goals and subsequent reviews.
+- 日誌中的「專案清單」是當前專案清單的快照，用於計算當天各專案的時間花費及比例，確保在專案上投入足夠的時間。
+- 週度和月度回顧中的「主要事件維度」，會自動從當週或當月的日誌中合併並去重，用於安排專案維度的任務及後續回顧。
+- 季度回顧中的「主要事件維度」是當前領域清單的快照，用於安排主要事件維度的目標及後續回顧。
+- 年度回顧中的「主要事件維度」，從各季度的主要事件維度自動合併去重，用於設定領域維度的目標及後續回顧。
 
 ### Search
 
 - Tags
   - For example, the [holiday](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/PeriodicNotes/2023/Daily/06/2023-06-01.md#L3), [vacation](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/PeriodicNotes/2023/Daily/06/2023-06-11.md#L4) tags in the daily log.
 - Index files
-  - For example, the [README.md](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/1.%20Projects/%E5%88%86%E4%BA%AB-2023%20WOT%20%E5%88%86%E4%BA%AB%E4%BC%9A/README.md) index of each project's tasks, logs, and context.
+  - For example, the [README.md](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/1.%20Projects/%E5%88%86%E4%BA%AB-2023%20WOT%20%E5%88%86%E4%BA%AB%E4%BC%9A/README.md) 各專案任務、日誌與情境的索引。
 - Folders
-  - For example, using a consistent directory structure for each PARA category.
+  - 例如，為每個 PARA 類別使用一致的目錄結構。
 
 ### 回顧
 
-- The review focuses on the projects of the current period while planning the tasks for the next period.
-- Weekly reviews reflect on the week's daily logs, monthly reviews on each week's reviews, and quarterly reviews on each month's reviews.
+- 回顧聚焦於當前週期的專案，同時規劃下一週期的任務。
+- 週度回顧反思本週的日誌，月度回顧反思每週的回顧，季度回顧反思每月的回顧。
 
 ## Quick Start
 
@@ -129,55 +129,55 @@ Generate a project in "knowledge management," to enhance focus on the project, t
 
 ### Creating Notes
 
-- Quickly create daily, weekly, monthly, seasonal, and annual notes through the note creation module in the upper left corner.
-- Quickly create PARA notes, i.e., projects, areas, resources, archives through the note creation module in the upper left corner.
+- 透過左上角的筆記建立模組，快速建立日、週、月、季、年度筆記。
+- 透過左上角的筆記建立模組，快速建立 PARA 筆記，即專案、領域、資源、檔案庫。
 
 ### "Daily Log" and "Project README"
 
-- Used for daily management, including project lists, daily records, habit tracking, energy allocation, today's accomplishments, etc.
-- The "project list" in the daily log is a snapshot of the current projects (i.e., under the Projects directory).
+- 用於日常管理，包含專案清單、每日紀錄、習慣追蹤、精力分配、今日成果等。
+- 日誌中的「專案清單」是當前專案的快照（即 Projects 目錄下的內容）。
 
 ### "Weekly Review" and "Monthly Review"
 
-- Used for arranging weekly and monthly tasks, including task and review modules.
-- In the weekly and monthly reviews, the "main event dimensions" are a collection of snapshots of the project lists from dailynotesof the period (generated automatically).
-- The "reviews" in the weekly and monthly notes mainly focus on the projects of the period.
+- 用於安排每週與每月的任務，包含任務與回顧模組。
+- 在週回顧與月回顧中，「主要事件維度」是該時段每日日誌中專案清單快照的集合（自動生成）。
+- 週記與月記中的「回顧」主要聚焦於該時段的專案。
 
 ### "Quarterly Review" and "Annual Review"
 
-- Used for setting quarterly and annual goals, including goals and review modules.
-- In the quarterly review, the "main event dimensions" is a snapshot of the current domain (i.e., under the Areas directory).
-- In the annual review, the "main event dimensions" is a collection of snapshots from the main event dimensions of the period's quarterly reviews (generated automatically).
-- The "reviews" in the quarterly and annual notes mainly focus on the domains of the period.
+- 用於設定季度與年度目標，包含目標與回顧模組。
+- 在季度回顧中，「主要事件維度」是當前領域的快照（即 Areas 目錄下的內容）。
+- 在年度回顧中，「主要事件維度」是該時段各季度回顧主要事件維度快照的集合（自動生成）。
+- 季記與年記中的「回顧」主要聚焦於該時段的領域。
 
 ### "PARA Index" and "Task Index"
 
 ### "Capture" and "Express"
 
-First, let's introduce a concept, the CODE model, where:
+首先，介紹一個概念——CODE 模型，其中：
 
-- C is for Capture: Collecting resonant information.
-- O is for Organize: Sorting the collected information, i.e., PARA.
-- D is for Distill: Extracting the essence of the content, selecting the most useful information.
-- E is for Express: Sharing with others, applying your knowledge in practice.
+- C 代表 Capture（捕捉）：收集引發共鳴的資訊。
+- O 代表 Organize（整理）：對收集的資訊進行分類，即 PARA。
+- D 代表 Distill（萃取）：提煉內容精華，篩選出最有價值的資訊。
+- E 代表 Express（表達）：與他人分享，將知識付諸實踐。
 
-Those familiar with PARA will see that this model is actually proposed by Tiago Forte in "Building a Second Brain," and it's the higher-level model that includes the PARA organization method, with O indicating the PARA organization method.
+熟悉 PARA 的人會發現，這個模型其實是 Tiago Forte 在《打造第二大腦》中提出的，它是包含 PARA 組織方法的更高層次模型，其中 O 代表 PARA 組織方法。
 
-My practice is to temporarily store some marked articles in the "Capture" directory while using the "-1. Capture/README.md" file to index the notes tagged with `#PARA/Capture` scattered in the daily logs. This makes it convenient for me during specific time nodes, such as weekends, month-ends, and quarter-ends, to review and sort, first organizing marked articles into each PARA topical directory, then transferring some inspirational notes from the dailynotesinto some explicit to-dos;
+我的做法是將一些已標記的文章暫存於「Capture」目錄，同時用「-1. Capture/README.md」檔案索引散落在日誌中、標有 `#PARA/Capture` 標籤的筆記。這樣便於我在特定時間節點（如週末、月底、季末）進行回顧與整理——先將標記的文章歸入各 PARA 主題目錄，再將日誌中一些有啟發性的筆記轉化為明確的待辦事項；
 
-Next, let's talk about "Express." I place my blog in the express section and also record some fragmentary notes in the daily log tagged with `PARA/Express`. These are outputs after internalization. If this output needs to be further posted on a specific social platform, such as Zhihu or Xiaohongshu, I will conveniently record it as a task. When I review the tasks indexed in the "5. Express/README.md" file and find pending ones, just complete them one by one.
+接下來談談「Express（表達）」。我將部落格放在 Express 區塊，同時在日誌中記錄一些片段式筆記，並標上 `PARA/Express`標籤。這些都是內化後的輸出成果。如果這些輸出需要進一步發布到知乎或小紅書等特定社群平台，我會順手將其記錄為一項任務。當我回顧「5. Express/README.md」中索引的任務，發現有待完成的，逐一處理即可。
 
 ## Small Tips in Practice
 
 ### Buffer Zone Mechanism
 
-Place less important and non-urgent items swiftly into a buffer zone (Inbox) by creating tasks, keeping the main focus on "Projects."
+將不太重要且不緊急的事項迅速建立任務，放入緩衝區（Inbox），讓主要精力集中在「Projects」上。
 
 ### Task Lists
 
-Recording tasks shouldn't be a mental burden – writing them down doesn't mean they must be done. Having them written relieves your mind from having to continuously remember or fear forgetting them. I've recorded many tasks, many of which, upon reassessment, were indeed not completed.
+記錄任務不應成為心理負擔——寫下來並不代表一定要完成。把它們記下來，就能讓大腦不必持續惦記或擔心遺忘。我記錄了許多任務，其中不少在重新評估後確實沒有完成。
 
-It's important to have mechanisms in place that allow for review of recorded tasks, for example:
+重要的是要有機制能讓你定期回顧已記錄的任務，例如：
 
 - Using a tasks plugin to create [query views](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/TASK.md) for task lists
 - Each periodic note contains a [collected tasks list](https://github.com/quanru/obsidian-example-LifeOS/blob/1.0.1/PeriodicNotes/2023/Weekly/2023-W22.md#%E6%9C%AC%E5%91%A8%E6%94%B6%E9%9B%86) for the current period
@@ -185,25 +185,25 @@ It's important to have mechanisms in place that allow for review of recorded tas
 
 ### Task Reminders
 
-I consider there to be three types of task reminders:
+我認為任務提醒有三種類型：
 
-- Strong reminders, such as snapping up Moutai liquor or concert tickets, which need an alarm to remind you when it's time
-- Soft reminders, for things that need to be done on a certain day, like credit card repayments or loan repayments, which can be set up through GTD software for reminders
-- List-style, for recording tasks which will be arranged later; based on the need, these can be converted to strong or soft reminders, akin to the inbox in GTD systems
+- 強提醒：例如搶購茅台或演唱會門票，需要在時間到來時以鬧鐘提醒
+- 軟提醒：需要在某天完成的事項，如信用卡還款或貸款還款，可透過 GTD 軟體設定提醒
+- 清單式：用於記錄之後再安排的任務；視需要可轉換為強提醒或軟提醒，類似 GTD 系統中的收件匣
 
 ### Micro-Habits
 
-- I list micro-habits in my journal, and remember, they are not tasks. It's okay whether they are completed or not; they mainly serve as a reminder, "Do you consider practicing these micro-habits today?" These act as prompts when I have the "capability" and "motivation." For example:
+- 我在日誌中列出微習慣，要記住，它們不是任務。完成與否都無妨，主要是作為一種提示：「今天你有想練習這些微習慣嗎？」這些提示會在我有「能力」且有「動力」時發揮作用。例如：
   - Micro-Habits
-    - Get up and drink water as soon as the alarm goes off
-    - Put on headphones and listen to the Little Universe podcast right after getting off the vehicle
-    - Open WeChat Read as soon as I get on the subway
-    - Write down three to-dos as soon as I reach my workstation
-    - Start serious work as soon as it's 10:30 am
+    - 鬧鐘一響立刻起床喝水
+    - 下車後立刻戴上耳機收聽小宇宙 Podcast
+    - 一上地鐵立刻打開微信閱讀
+    - 到工位後立刻寫下三件待辦事項
+    - 上午 10:30 一到立刻進入專注工作狀態
 
 ### Easy to Refactor
 
-Within each periodic note, the same feature modules use the same statement, such as "tasks collected this period," all inserted through the following query statement. The "this period" variable is provided by the current file name, which makes it very convenient to refactor all periodic files en masse, needing only to perform a batch replacement:
+在每個週期筆記中，相同功能模組使用相同的語句，例如「本期收集的任務」，均透過以下查詢語句插入。「本期」變數由當前檔案名稱提供，這使得批次重構所有週期檔案非常方便，只需執行一次批次替換即可：
 
 ````markdown
 ```LifeOS
@@ -213,10 +213,10 @@ Within each periodic note, the same feature modules use the same statement, such
 
 ### Efficient Use of Shortcuts
 
-Set consistent global shortcuts, so that no matter in which software, you can invoke the same function with the same shortcut. Here are some of my configurations:
+設定一致的全域快捷鍵，讓你無論在哪個軟體中，都能用相同的快捷鍵呼叫相同的功能。以下是我的部分設定：
 
 - Cursor movement
-  - Pattern: Control + directional initial/VIM direction
+  - 模式：Control + 方向首字母／VIM 方向鍵
   - Examples:
     - A: Head of line
     - E: End of line
@@ -236,12 +236,12 @@ Set consistent global shortcuts, so that no matter in which software, you can in
     - `[`: Show/Hide left sidebar
     - `]`: Show/Hide right sidebar
     - ': Show/Hide bottom bar
-    - T: New Tab (for more specific windows, the top level uses Command + T)
-    - W: Close Tab (for more specific windows, the top level uses Command + W)
+    - T：新增分頁（針對更具體的視窗，頂層使用 Command + T）
+    - W：關閉分頁（針對更具體的視窗，頂層使用 Command + W）
     - J: Next Tab
     - K: Previous Tab
 - Document editing
-  - Pattern 1: Command + Option + number/symbol
+  - 模式一：Command + Option + 數字／符號
   - Examples:
     - 1: Markdown level-one heading
     - 2: Markdown level-two heading
@@ -254,7 +254,7 @@ Set consistent global shortcuts, so that no matter in which software, you can in
 - Function category
   - Pattern: Control + initial
   - Examples:
-    - C: Copy link (Obsidian block link, Arc browser link, VScode git link)
+    - C：複製連結（Obsidian 區塊連結、Arc 瀏覽器連結、VSCode Git 連結）
     - D: Download
     - I: Add to inbox
     - K: Quick Search

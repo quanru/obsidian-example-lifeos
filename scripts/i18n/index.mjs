@@ -95,11 +95,11 @@ function applyGlossaryOverrides(entries, targetLang) {
 
   return entries.map((entry) => {
     const overrides = sourceMap[entry.source];
-    const translation = overrides?.[targetLang];
-    if (typeof translation === "string" && translation.trim().length > 0) {
-      return { ...entry, translation };
-    }
-    return entry;
+    if (!overrides || !(targetLang in overrides)) return entry;
+    const translation = overrides[targetLang];
+    if (typeof translation !== "string") return entry;
+    // Allow explicit empty string to remove a segment
+    return { ...entry, translation };
   });
 }
 
@@ -191,7 +191,8 @@ function createSegmentRecorder(relativePath, lookups) {
       entries.push(entry);
 
       const translated = lookups.byId.get(id) ?? lookups.bySource.get(source);
-      return translated && translated.trim().length > 0 ? translated : source;
+      // translated can be "" (explicit glossary override); undefined means no translation
+      return typeof translated === "string" ? translated : source;
     },
   };
 }
@@ -418,7 +419,8 @@ function buildTranslationLookups(catalog) {
   const byId = new Map();
   const bySource = new Map();
   for (const entry of catalog?.entries || []) {
-    if (typeof entry.translation !== "string" || entry.translation.trim().length === 0) continue;
+    if (typeof entry.translation !== "string") continue;
+    // Allow empty string translations (explicit glossary override to remove segment)
     byId.set(entry.id, entry.translation);
     if (!bySource.has(entry.source)) bySource.set(entry.source, entry.translation);
   }
@@ -553,10 +555,11 @@ function buildAiTranslationBatchPrompt(targetLang, batch) {
     `Translate the following English strings into ${targetLanguage} (${targetLang}) for a LifeOS / Obsidian example vault.`,
     "",
     "Rules:",
-    `- Preserve these product terms: ${STABLE_TERMS.join(", ")}.`,
+    `- Preserve these product terms as-is: ${STABLE_TERMS.join(", ")}.`,
     "- Preserve Markdown, placeholders (xx, 5k, %), block refs (^abc123), URLs, and code fragments.",
     "- Translate naturally, not word-for-word.",
-    "- If a string already reads best in English, return it unchanged.",
+    `- ALWAYS translate natural-language English sentences into ${targetLanguage}. Do not return English unchanged for normal prose.`,
+    "- Only keep a source unchanged if it is a URL, a lone product name, or a code token with no translatable words.",
     "",
     "Input (array of {index, source}):",
     JSON.stringify(records, null, 2),
@@ -921,6 +924,33 @@ function generateLanguageExamples(lang) {
 
 // --- Glossary ---
 
+function resetUntranslatedEntries(lang, { minChars = 40 } = {}) {
+  const catalogPath = getCatalogPath(lang);
+  const catalog = readCatalog(catalogPath);
+  assert(catalog, `Missing catalog for "${lang}". Run extract first.`);
+
+  const glossary = readTranslationGlossary();
+  const glossaryKeys = new Set(Object.keys(glossary.sources || {}));
+
+  let resetCount = 0;
+  catalog.entries = catalog.entries.map((entry) => {
+    if (entry.kind !== "text") return entry;
+    if (glossaryKeys.has(entry.source)) return entry; // don't reset glossary-controlled
+    const translation = (entry.translation || "").trim();
+    const source = entry.source.trim();
+    if (translation === source && source.length >= minChars) {
+      resetCount += 1;
+      return { ...entry, translation: "" };
+    }
+    return entry;
+  });
+
+  catalog.generatedAt = new Date().toISOString();
+  fs.writeFileSync(catalogPath, `${JSON.stringify(catalog, null, 2)}\n`);
+  console.log(`Reset ${resetCount} untranslated entries in ${lang}`);
+  return resetCount;
+}
+
 function syncGlossaryForLanguage(lang) {
   const catalogPath = getCatalogPath(lang);
   const catalog = readCatalog(catalogPath);
@@ -979,6 +1009,16 @@ async function main() {
     case "glossary":
       for (const lang of catalogLangs) {
         syncGlossaryForLanguage(lang);
+      }
+      break;
+
+    case "retranslate":
+      // Reset entries where AI returned source unchanged, then re-translate
+      for (const lang of catalogLangs) {
+        const n = resetUntranslatedEntries(lang);
+        if (n > 0) {
+          await aiTranslateCatalog(lang, { batchSize, batchChars, model, overwrite: false });
+        }
       }
       break;
 

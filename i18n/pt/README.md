@@ -1,6 +1,6 @@
 <p align="center"><a href="https://github.com/quanru/obsidian-example-lifeos">English</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/zh">简体中文</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/zh-tw">繁體中文</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/ja">日本語</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/de">Deutsch</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/es">Español</a> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/fr">Français</a> | <strong>Português</strong> | <a href="https://github.com/quanru/obsidian-example-lifeos/tree/main/i18n/ar">العربية</a></p>
 
-<a href="https://obsidian.md/blog/2024-goty-winners/">🔥 LifeOS for Obsidian won the third place 🥉 in the Best Templates category at the 2024 Obsidian Gems of the Year awards!</a>
+<a href="https://obsidian.md/blog/2024-goty-winners/">🔥 LifeOS for Obsidian conquistou o terceiro lugar 🥉 na categoria Melhores Templates no prêmio Obsidian Gems of the Year 2024!</a>
 
 <a href="https://www.producthunt.com/posts/lifeos-template-for-obsidian?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-lifeos&#0045;template&#0045;for&#0045;obsidian" target="_blank">
   <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=441390&theme=light" alt="LifeOS&#0032;Template&#0032;for&#0032;Obsidian - Obsidian&#0032;LifeOS&#0032;&#0045;&#0032;Your&#0032;Life&#0032;Management&#0032;Assistant&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
@@ -52,17 +52,17 @@ Download the vault in your preferred language from the [latest release](https://
 
 Além disso, contei com o código destes excelentes plugins:
 
-- [PARA](https://fortelabs.com/blog/para/). Thanks to Tiago Forte for inventing such a great organizational method.
-- [PARA Starter Kit](https://forum.obsidian.md/t/para-starter-kit/223). Thanks to cotemaxime for creating such a great starter vault.
-- [obsidian-periodic-notes](https://github.com/liamcain/obsidian-periodic-notes). Gave me the inspiration to develop this plugin.
-- [obsidian-dataview](https://github.com/blacksmithgu/obsidian-dataview). The underlying plugin uses dataview's query interface.
-- [Templater](https://github.com/SilentVoid13/Templater). Provides decoupled template creation, allowing a very large number of plugins to create files with the help of it.
+- [PARA](https://fortelabs.com/blog/para/). Obrigado a Tiago Forte por inventar um método de organização tão excelente.
+- [PARA Starter Kit](https://forum.obsidian.md/t/para-starter-kit/223). Obrigado a cotemaxime por criar um vault inicial tão incrível.
+- [obsidian-periodic-notes](https://github.com/liamcain/obsidian-periodic-notes). Me deu a inspiração para desenvolver este plugin.
+- [obsidian-dataview](https://github.com/blacksmithgu/obsidian-dataview). O plugin subjacente utiliza a interface de consulta do dataview.
+- [Templater](https://github.com/SilentVoid13/Templater). Oferece criação de templates desacoplada, permitindo que um grande número de plugins crie arquivos com sua ajuda.
 
 ## Doações
 
 Se este plugin te ajudou, por favor me pague um café no [buymeacoffee](https://www.buymeacoffee.com/leyang).
 
-In addition, you can also support me in further developing a better LifeOS by purchasing the [LifeOS Pro](https://lifeos.vip/pt/plugin/life-os-pro.html)!
+Além disso, você também pode me apoiar no desenvolvimento de um LifeOS ainda melhor adquirindo o [LifeOS Pro](https://lifeos.vip/pt/plugin/life-os-pro.html)!
 
 ---
 

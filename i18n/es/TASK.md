@@ -1,5 +1,5 @@
 ## Focus
-> Important || In progress || Due in 7 days || High priority
+> Importante || En progreso || Vence en 7 días || Alta prioridad
 ```tasks
 folder includes 0. PeriodicNotes
 not done

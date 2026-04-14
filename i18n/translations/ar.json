@@ -1,7 +1,7 @@
 {
   "sourceLang": "en",
   "targetLang": "ar",
-  "generatedAt": "2026-04-13T16:26:52.253Z",
+  "generatedAt": "2026-04-14T01:40:12.630Z",
   "entries": [
     {
       "id": "text:64b8e350cc54",
@@ -13129,7 +13129,7 @@
       "translation": "ملغى"
     }
   ],
-  "aiTranslatedAt": "2026-04-13T16:26:41.641Z",
+  "aiTranslatedAt": "2026-04-14T01:40:26.405Z",
   "aiTranslationProvider": "claude-cli",
   "aiTranslationModel": "sonnet"
 }

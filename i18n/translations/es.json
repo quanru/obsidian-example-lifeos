@@ -1,7 +1,7 @@
 {
   "sourceLang": "en",
   "targetLang": "es",
-  "generatedAt": "2026-04-13T16:14:48.896Z",
+  "generatedAt": "2026-04-14T01:40:10.081Z",
   "entries": [
     {
       "id": "text:64b8e350cc54",
@@ -11831,21 +11831,21 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Manually tracking the time spent on various projects in the daily log and its proportions, adjusting time investment.",
-      "translation": "Manually tracking the time spent on various projects in the daily log and its proportions, adjusting time investment."
+      "translation": "Registrar manualmente el tiempo dedicado a cada proyecto en el diario y sus proporciones, ajustando la inversión de tiempo."
     },
     {
       "id": "text:4dcb4a494308",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Using scripts in daily, weekly, monthly, quarterly, and annual reviews to automatically track the time spent on various projects and their proportions, reviewing time investment.",
-      "translation": "Using scripts in daily, weekly, monthly, quarterly, and annual reviews to automatically track the time spent on various projects and their proportions, reviewing time investment."
+      "translation": "Usar scripts en las revisiones diarias, semanales, mensuales, trimestrales y anuales para rastrear automáticamente el tiempo dedicado a cada proyecto y sus proporciones, evaluando la inversión de tiempo."
     },
     {
       "id": "text:e33ff03b3562",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "You might be curious that the above subsystem seems to only use \"periodic notes.\" In fact, the two main systems are connected through two methods.",
-      "translation": "You might be curious that the above subsystem seems to only use \"periodic notes.\" In fact, the two main systems are connected through two methods."
+      "translation": "Puede que te preguntes por qué el subsistema anterior parece usar solo \"notas periódicas\". En realidad, los dos sistemas principales están conectados mediante dos métodos."
     },
     {
       "id": "text:5ca6bf31e7a8",
@@ -11873,7 +11873,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Treat the first-level folders under PARA as special tags (they don't need to be exactly the same as the folder names), use them in \"periodic notes,\" then you can index uniformly in each PARA folder in the same way. This ensures that the README.md index in each PARA folder has all the context for the current topic:",
-      "translation": "Treat the first-level folders under PARA as special tags (they don't need to be exactly the same as the folder names), use them in \"periodic notes,\" then you can index uniformly in each PARA folder in the same way. This ensures that the README.md index in each PARA folder has all the context for the current topic:"
+      "translation": "Trata las carpetas de primer nivel bajo PARA como etiquetas especiales (no tienen que coincidir exactamente con los nombres de las carpetas), úsalas en las \"notas periódicas\" y podrás indexar de forma uniforme en cada carpeta PARA del mismo modo. Esto garantiza que el índice README.md de cada carpeta PARA tenga todo el contexto del tema actual:"
     },
     {
       "id": "text:1850510daac0",
@@ -11887,35 +11887,35 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Generate a project in \"knowledge management,\" to enhance focus on the project, there's a \"main event list\" or \"project list\" in every class of \"periodic notes,\" such as:",
-      "translation": "Generate a project in \"knowledge management,\" to enhance focus on the project, there's a \"main event list\" or \"project list\" in every class of \"periodic notes,\" such as:"
+      "translation": "Genera un proyecto en \"gestión del conocimiento\"; para reforzar el enfoque en el proyecto, hay una \"lista de eventos principales\" o \"lista de proyectos\" en cada clase de \"notas periódicas\", por ejemplo:"
     },
     {
       "id": "text:a8b3d2cb5b71",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"project list\" in the daily log is a snapshot of the current project list, used for calculating the time spent that day on various projects and their proportions, ensuring enough time is spent on projects.",
-      "translation": "The \"project list\" in the daily log is a snapshot of the current project list, used for calculating the time spent that day on various projects and their proportions, ensuring enough time is spent on projects."
+      "translation": "La \"lista de proyectos\" en el diario es una instantánea de la lista de proyectos actual, usada para calcular el tiempo dedicado ese día a cada proyecto y sus proporciones, asegurando que se invierta suficiente tiempo en los proyectos."
     },
     {
       "id": "text:06ea03f7238c",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"main event dimensions\" in the weekly and monthly reviews automatically merge and deduplicate from the daily reviews of the week or month, used for arranging project dimension tasks and subsequent reviews.",
-      "translation": "The \"main event dimensions\" in the weekly and monthly reviews automatically merge and deduplicate from the daily reviews of the week or month, used for arranging project dimension tasks and subsequent reviews."
+      "translation": "Las \"dimensiones de eventos principales\" en las revisiones semanales y mensuales se fusionan y deduplicen automáticamente a partir de las revisiones diarias de la semana o el mes, y se usan para organizar las tareas por dimensión de proyecto y revisiones posteriores."
     },
     {
       "id": "text:dc1b679c687e",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"main event dimensions\" in the quarterly review is a snapshot of the current domain list, used for arranging main event dimension goals and subsequent reviews.",
-      "translation": "The \"main event dimensions\" in the quarterly review is a snapshot of the current domain list, used for arranging main event dimension goals and subsequent reviews."
+      "translation": "Las \"dimensiones de eventos principales\" en la revisión trimestral son una instantánea de la lista de dominios actual, usada para organizar los objetivos por dimensión de evento principal y las revisiones posteriores."
     },
     {
       "id": "text:9d956ea60e39",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"main event dimensions\" in the annual review, automatically merged and deduplicated from the quarter's main event dimensions, used for setting domain dimension goals and subsequent reviews.",
-      "translation": "The \"main event dimensions\" in the annual review, automatically merged and deduplicated from the quarter's main event dimensions, used for setting domain dimension goals and subsequent reviews."
+      "translation": "Las \"dimensiones de eventos principales\" en la revisión anual se fusionan y deduplican automáticamente a partir de las dimensiones de eventos principales de los trimestres, y se usan para establecer objetivos por dimensión de dominio y revisiones posteriores."
     },
     {
       "id": "text:6c53445b7af8",
@@ -11985,7 +11985,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "index of each project's tasks, logs, and context.",
-      "translation": "index of each project's tasks, logs, and context."
+      "translation": "índice de tareas, registros y contexto de cada proyecto."
     },
     {
       "id": "text:55415d9af3f9",
@@ -11999,7 +11999,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "For example, using a consistent directory structure for each PARA category.",
-      "translation": "For example, using a consistent directory structure for each PARA category."
+      "translation": "Por ejemplo, usando una estructura de directorios coherente para cada categoría de PARA."
     },
     {
       "id": "text:0fb172da84a9",
@@ -12013,14 +12013,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The review focuses on the projects of the current period while planning the tasks for the next period.",
-      "translation": "The review focuses on the projects of the current period while planning the tasks for the next period."
+      "translation": "La revisión se centra en los proyectos del período actual mientras se planifican las tareas del siguiente período."
     },
     {
       "id": "text:7fe9108e315a",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Weekly reviews reflect on the week's daily logs, monthly reviews on each week's reviews, and quarterly reviews on each month's reviews.",
-      "translation": "Weekly reviews reflect on the week's daily logs, monthly reviews on each week's reviews, and quarterly reviews on each month's reviews."
+      "translation": "Las revisiones semanales reflexionan sobre los diarios de la semana, las mensuales sobre las revisiones de cada semana, y las trimestrales sobre las revisiones de cada mes."
     },
     {
       "id": "text:a8023849cb0f",
@@ -12062,14 +12062,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Quickly create daily, weekly, monthly, seasonal, and annual notes through the note creation module in the upper left corner.",
-      "translation": "Quickly create daily, weekly, monthly, seasonal, and annual notes through the note creation module in the upper left corner."
+      "translation": "Crea rápidamente notas diarias, semanales, mensuales, estacionales y anuales mediante el módulo de creación de notas en la esquina superior izquierda."
     },
     {
       "id": "text:0b4ddd701d4f",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Quickly create PARA notes, i.e., projects, areas, resources, archives through the note creation module in the upper left corner.",
-      "translation": "Quickly create PARA notes, i.e., projects, areas, resources, archives through the note creation module in the upper left corner."
+      "translation": "Crea rápidamente notas PARA —es decir, proyectos, áreas, recursos y archivos— mediante el módulo de creación de notas en la esquina superior izquierda."
     },
     {
       "id": "text:3f4689642159",
@@ -12083,14 +12083,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Used for daily management, including project lists, daily records, habit tracking, energy allocation, today's accomplishments, etc.",
-      "translation": "Used for daily management, including project lists, daily records, habit tracking, energy allocation, today's accomplishments, etc."
+      "translation": "Usado para la gestión diaria, incluyendo listas de proyectos, registros del día, seguimiento de hábitos, distribución de energía, logros del día, etc."
     },
     {
       "id": "text:27149d9eb31c",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"project list\" in the daily log is a snapshot of the current projects (i.e., under the Projects directory).",
-      "translation": "The \"project list\" in the daily log is a snapshot of the current projects (i.e., under the Projects directory)."
+      "translation": "La \"lista de proyectos\" en el diario es una instantánea de los proyectos actuales (es decir, los que están bajo el directorio Projects)."
     },
     {
       "id": "text:4326242ae45b",
@@ -12104,21 +12104,21 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Used for arranging weekly and monthly tasks, including task and review modules.",
-      "translation": "Used for arranging weekly and monthly tasks, including task and review modules."
+      "translation": "Usado para organizar tareas semanales y mensuales, incluyendo módulos de tareas y revisiones."
     },
     {
       "id": "text:8a1400b71d1b",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "In the weekly and monthly reviews, the \"main event dimensions\" are a collection of snapshots of the project lists from dailynotesof the period (generated automatically).",
-      "translation": "In the weekly and monthly reviews, the \"main event dimensions\" are a collection of snapshots of the project lists from dailynotesof the period (generated automatically)."
+      "translation": "En las revisiones semanales y mensuales, las \"dimensiones de eventos principales\" son una colección de instantáneas de las listas de proyectos de las notas diarias del período (generadas automáticamente)."
     },
     {
       "id": "text:dff4754d30ce",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"reviews\" in the weekly and monthly notes mainly focus on the projects of the period.",
-      "translation": "The \"reviews\" in the weekly and monthly notes mainly focus on the projects of the period."
+      "translation": "Las \"revisiones\" en las notas semanales y mensuales se centran principalmente en los proyectos del período."
     },
     {
       "id": "text:de3473aa887a",
@@ -12132,28 +12132,28 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Used for setting quarterly and annual goals, including goals and review modules.",
-      "translation": "Used for setting quarterly and annual goals, including goals and review modules."
+      "translation": "Usado para establecer objetivos trimestrales y anuales, incluyendo módulos de objetivos y revisiones."
     },
     {
       "id": "text:1d4f634f69db",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "In the quarterly review, the \"main event dimensions\" is a snapshot of the current domain (i.e., under the Areas directory).",
-      "translation": "In the quarterly review, the \"main event dimensions\" is a snapshot of the current domain (i.e., under the Areas directory)."
+      "translation": "En la revisión trimestral, las \"dimensiones de eventos principales\" son una instantánea del dominio actual (es decir, lo que está bajo el directorio Areas)."
     },
     {
       "id": "text:1972847a03cf",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "In the annual review, the \"main event dimensions\" is a collection of snapshots from the main event dimensions of the period's quarterly reviews (generated automatically).",
-      "translation": "In the annual review, the \"main event dimensions\" is a collection of snapshots from the main event dimensions of the period's quarterly reviews (generated automatically)."
+      "translation": "En la revisión anual, las \"dimensiones de eventos principales\" son una colección de instantáneas tomadas de las dimensiones de eventos principales de las revisiones trimestrales del período (generadas automáticamente)."
     },
     {
       "id": "text:41467bb6c012",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "The \"reviews\" in the quarterly and annual notes mainly focus on the domains of the period.",
-      "translation": "The \"reviews\" in the quarterly and annual notes mainly focus on the domains of the period."
+      "translation": "Las \"revisiones\" en las notas trimestrales y anuales se centran principalmente en los dominios del período."
     },
     {
       "id": "text:603aba8dc197",
@@ -12174,70 +12174,70 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "First, let's introduce a concept, the CODE model, where:",
-      "translation": "First, let's introduce a concept, the CODE model, where:"
+      "translation": "Primero, presentemos un concepto: el modelo CODE, donde:"
     },
     {
       "id": "text:dc94eb1f99c8",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "C is for Capture: Collecting resonant information.",
-      "translation": "C is for Capture: Collecting resonant information."
+      "translation": "C es de Capturar: recopilar información que resuena contigo."
     },
     {
       "id": "text:a07a200f1e4c",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "O is for Organize: Sorting the collected information, i.e., PARA.",
-      "translation": "O is for Organize: Sorting the collected information, i.e., PARA."
+      "translation": "O es de Organizar: clasificar la información recopilada, es decir, PARA."
     },
     {
       "id": "text:cc3fe4dde2cd",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "D is for Distill: Extracting the essence of the content, selecting the most useful information.",
-      "translation": "D is for Distill: Extracting the essence of the content, selecting the most useful information."
+      "translation": "D es de Destilar: extraer la esencia del contenido, seleccionando la información más útil."
     },
     {
       "id": "text:3c32f5a581dd",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "E is for Express: Sharing with others, applying your knowledge in practice.",
-      "translation": "E is for Express: Sharing with others, applying your knowledge in practice."
+      "translation": "E es de Expresar: compartir con otros, aplicando tu conocimiento en la práctica."
     },
     {
       "id": "text:142dc13b3eaf",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Those familiar with PARA will see that this model is actually proposed by Tiago Forte in \"Building a Second Brain,\" and it's the higher-level model that includes the PARA organization method, with O indicating the PARA organization method.",
-      "translation": "Those familiar with PARA will see that this model is actually proposed by Tiago Forte in \"Building a Second Brain,\" and it's the higher-level model that includes the PARA organization method, with O indicating the PARA organization method."
+      "translation": "Quienes conozcan PARA reconocerán que este modelo fue propuesto por Tiago Forte en \"Building a Second Brain\"; es el modelo de nivel superior que engloba el método de organización PARA, donde la O representa precisamente dicho método."
     },
     {
       "id": "text:d3ffd93bf2a0",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "My practice is to temporarily store some marked articles in the \"Capture\" directory while using the \"-1. Capture/README.md\" file to index the notes tagged with",
-      "translation": "My practice is to temporarily store some marked articles in the \"Capture\" directory while using the \"-1. Capture/README.md\" file to index the notes tagged with"
+      "translation": "Mi práctica es almacenar temporalmente algunos artículos marcados en el directorio \"Capture\", mientras uso el archivo \"-1. Capture/README.md\" para indexar las notas etiquetadas con"
     },
     {
       "id": "text:16827da85ffa",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "scattered in the daily logs. This makes it convenient for me during specific time nodes, such as weekends, month-ends, and quarter-ends, to review and sort, first organizing marked articles into each PARA topical directory, then transferring some inspirational notes from the dailynotesinto some explicit to-dos;",
-      "translation": "scattered in the daily logs. This makes it convenient for me during specific time nodes, such as weekends, month-ends, and quarter-ends, to review and sort, first organizing marked articles into each PARA topical directory, then transferring some inspirational notes from the dailynotesinto some explicit to-dos;"
+      "translation": "dispersas en los diarios. Esto me facilita, en momentos específicos como fines de semana, fin de mes o fin de trimestre, revisar y ordenar: primero organizando los artículos marcados en cada directorio temático de PARA, y luego convirtiendo algunas notas inspiradoras de los diarios en tareas concretas pendientes;"
     },
     {
       "id": "text:b59bfb2aee78",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Next, let's talk about \"Express.\" I place my blog in the express section and also record some fragmentary notes in the daily log tagged with",
-      "translation": "Next, let's talk about \"Express.\" I place my blog in the express section and also record some fragmentary notes in the daily log tagged with"
+      "translation": "A continuación, hablemos de \"Expresar\". Coloco mi blog en la sección de expresión y también registro notas fragmentarias en el diario etiquetadas con"
     },
     {
       "id": "text:380e45eee05c",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": ". These are outputs after internalization. If this output needs to be further posted on a specific social platform, such as Zhihu or Xiaohongshu, I will conveniently record it as a task. When I review the tasks indexed in the \"5. Express/README.md\" file and find pending ones, just complete them one by one.",
-      "translation": ". These are outputs after internalization. If this output needs to be further posted on a specific social platform, such as Zhihu or Xiaohongshu, I will conveniently record it as a task. When I review the tasks indexed in the \"5. Express/README.md\" file and find pending ones, just complete them one by one."
+      "translation": ". Estas son salidas después de la internalización. Si alguna de estas salidas necesita publicarse en una plataforma social específica, como Zhihu o Xiaohongshu, la registro convenientemente como tarea. Cuando reviso las tareas indexadas en el archivo \"5. Express/README.md\" y encuentro pendientes, simplemente las voy completando una a una."
     },
     {
       "id": "text:4b1aa453bf71",
@@ -12258,7 +12258,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Place less important and non-urgent items swiftly into a buffer zone (Inbox) by creating tasks, keeping the main focus on \"Projects.\"",
-      "translation": "Place less important and non-urgent items swiftly into a buffer zone (Inbox) by creating tasks, keeping the main focus on \"Projects.\""
+      "translation": "Incorpora rápidamente los elementos menos importantes y no urgentes a una zona de entrada (Inbox) creando tareas, manteniendo el foco principal en \"Projects\"."
     },
     {
       "id": "text:45daf4705fd2",
@@ -12272,14 +12272,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Recording tasks shouldn't be a mental burden – writing them down doesn't mean they must be done. Having them written relieves your mind from having to continuously remember or fear forgetting them. I've recorded many tasks, many of which, upon reassessment, were indeed not completed.",
-      "translation": "Recording tasks shouldn't be a mental burden – writing them down doesn't mean they must be done. Having them written relieves your mind from having to continuously remember or fear forgetting them. I've recorded many tasks, many of which, upon reassessment, were indeed not completed."
+      "translation": "Registrar tareas no debe ser una carga mental: escribirlas no significa que deban hacerse obligatoriamente. Tenerlas anotadas libera tu mente de tener que recordarlas continuamente o temer olvidarlas. He registrado muchas tareas, y muchas de ellas, al reevaluarlas, efectivamente no se completaron."
     },
     {
       "id": "text:b0495b85ec10",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "It's important to have mechanisms in place that allow for review of recorded tasks, for example:",
-      "translation": "It's important to have mechanisms in place that allow for review of recorded tasks, for example:"
+      "translation": "Es importante contar con mecanismos que permitan revisar las tareas registradas; por ejemplo:"
     },
     {
       "id": "text:3f88aad7fa2b",
@@ -12349,28 +12349,28 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "I consider there to be three types of task reminders:",
-      "translation": "I consider there to be three types of task reminders:"
+      "translation": "Considero que existen tres tipos de recordatorios de tareas:"
     },
     {
       "id": "text:1b879de24a36",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Strong reminders, such as snapping up Moutai liquor or concert tickets, which need an alarm to remind you when it's time",
-      "translation": "Strong reminders, such as snapping up Moutai liquor or concert tickets, which need an alarm to remind you when it's time"
+      "translation": "Recordatorios fuertes, como reservar entradas para un concierto o productos de edición limitada, que requieren una alarma que avise en el momento preciso"
     },
     {
       "id": "text:6c8ffda4246e",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Soft reminders, for things that need to be done on a certain day, like credit card repayments or loan repayments, which can be set up through GTD software for reminders",
-      "translation": "Soft reminders, for things that need to be done on a certain day, like credit card repayments or loan repayments, which can be set up through GTD software for reminders"
+      "translation": "Recordatorios suaves, para cosas que deben hacerse en un día concreto, como el pago de la tarjeta de crédito o de un préstamo, que pueden configurarse mediante software GTD"
     },
     {
       "id": "text:8eb3ad9e7a65",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "List-style, for recording tasks which will be arranged later; based on the need, these can be converted to strong or soft reminders, akin to the inbox in GTD systems",
-      "translation": "List-style, for recording tasks which will be arranged later; based on the need, these can be converted to strong or soft reminders, akin to the inbox in GTD systems"
+      "translation": "En formato de lista, para registrar tareas que se organizarán más adelante; según la necesidad, pueden convertirse en recordatorios fuertes o suaves, similar a la bandeja de entrada en los sistemas GTD"
     },
     {
       "id": "text:e3691341607b",
@@ -12384,7 +12384,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "I list micro-habits in my journal, and remember, they are not tasks. It's okay whether they are completed or not; they mainly serve as a reminder, \"Do you consider practicing these micro-habits today?\" These act as prompts when I have the \"capability\" and \"motivation.\" For example:",
-      "translation": "I list micro-habits in my journal, and remember, they are not tasks. It's okay whether they are completed or not; they mainly serve as a reminder, \"Do you consider practicing these micro-habits today?\" These act as prompts when I have the \"capability\" and \"motivation.\" For example:"
+      "translation": "Anoto microhábitos en mi diario y, recuerda, no son tareas. No importa si se cumplen o no; sirven principalmente como recordatorio: \"¿Consideras practicar estos microhábitos hoy?\" Actúan como impulsos cuando tengo la \"capacidad\" y la \"motivación\". Por ejemplo:"
     },
     {
       "id": "text:4a1d4eb72365",
@@ -12398,35 +12398,35 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Get up and drink water as soon as the alarm goes off",
-      "translation": "Get up and drink water as soon as the alarm goes off"
+      "translation": "Levantarme y beber agua en cuanto suene el despertador"
     },
     {
       "id": "text:bbeae7c713d8",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Put on headphones and listen to the Little Universe podcast right after getting off the vehicle",
-      "translation": "Put on headphones and listen to the Little Universe podcast right after getting off the vehicle"
+      "translation": "Ponerme los auriculares y escuchar el podcast Little Universe justo al bajar del vehículo"
     },
     {
       "id": "text:686982e53274",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Open WeChat Read as soon as I get on the subway",
-      "translation": "Open WeChat Read as soon as I get on the subway"
+      "translation": "Abrir WeChat Read en cuanto suba al metro"
     },
     {
       "id": "text:93e14c2e8fe8",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Write down three to-dos as soon as I reach my workstation",
-      "translation": "Write down three to-dos as soon as I reach my workstation"
+      "translation": "Anotar tres tareas pendientes en cuanto llegue a mi puesto de trabajo"
     },
     {
       "id": "text:e128103f7aed",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Start serious work as soon as it's 10:30 am",
-      "translation": "Start serious work as soon as it's 10:30 am"
+      "translation": "Comenzar el trabajo en serio en cuanto sean las 10:30"
     },
     {
       "id": "text:36140d0dff96",
@@ -12440,7 +12440,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Within each periodic note, the same feature modules use the same statement, such as \"tasks collected this period,\" all inserted through the following query statement. The \"this period\" variable is provided by the current file name, which makes it very convenient to refactor all periodic files en masse, needing only to perform a batch replacement:",
-      "translation": "Within each periodic note, the same feature modules use the same statement, such as \"tasks collected this period,\" all inserted through the following query statement. The \"this period\" variable is provided by the current file name, which makes it very convenient to refactor all periodic files en masse, needing only to perform a batch replacement:"
+      "translation": "Dentro de cada nota periódica, los módulos de funciones idénticas usan la misma declaración, como \"tareas recopiladas en este período\", todas insertadas mediante la siguiente consulta. La variable \"este período\" la proporciona el nombre del archivo actual, lo que hace muy conveniente refactorizar todos los archivos periódicos en bloque, bastando con realizar un reemplazo masivo:"
     },
     {
       "id": "text:e60f58b01d27",
@@ -12461,7 +12461,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Set consistent global shortcuts, so that no matter in which software, you can invoke the same function with the same shortcut. Here are some of my configurations:",
-      "translation": "Set consistent global shortcuts, so that no matter in which software, you can invoke the same function with the same shortcut. Here are some of my configurations:"
+      "translation": "Configura atajos globales coherentes para que, sin importar en qué software estés, puedas invocar la misma función con el mismo atajo. Aquí algunas de mis configuraciones:"
     },
     {
       "id": "text:c566d91c8366",
@@ -12475,7 +12475,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Pattern: Control + directional initial/VIM direction",
-      "translation": "Pattern: Control + directional initial/VIM direction"
+      "translation": "Patrón: Control + inicial direccional/dirección VIM"
     },
     {
       "id": "text:ae9fc5326c7c",
@@ -12615,14 +12615,14 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "T: New Tab (for more specific windows, the top level uses Command + T)",
-      "translation": "T: New Tab (for more specific windows, the top level uses Command + T)"
+      "translation": "T: Nueva pestaña (para ventanas más específicas, el nivel superior usa Command + T)"
     },
     {
       "id": "text:606a17ca578a",
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "W: Close Tab (for more specific windows, the top level uses Command + W)",
-      "translation": "W: Close Tab (for more specific windows, the top level uses Command + W)"
+      "translation": "W: Cerrar pestaña (para ventanas más específicas, el nivel superior usa Command + W)"
     },
     {
       "id": "text:00db3ac66b78",
@@ -12650,7 +12650,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "Pattern 1: Command + Option + number/symbol",
-      "translation": "Pattern 1: Command + Option + number/symbol"
+      "translation": "Patrón 1: Command + Opción + número/símbolo"
     },
     {
       "id": "text:01b95d5ba734",
@@ -12741,7 +12741,7 @@
       "kind": "text",
       "file": "5. Express/blogs/Building my second brain 🧠 with Obsidian.md",
       "source": "C: Copy link (Obsidian block link, Arc browser link, VScode git link)",
-      "translation": "C: Copy link (Obsidian block link, Arc browser link, VScode git link)"
+      "translation": "C: Copiar enlace (enlace de bloque de Obsidian, enlace del navegador Arc, enlace git de VSCode)"
     },
     {
       "id": "text:98723df708dc",
@@ -12769,70 +12769,70 @@
       "kind": "text",
       "file": "README.md",
       "source": "**English** |",
-      "translation": ""
+      "translation": "**English** |"
     },
     {
       "id": "text:0cd03afb6c85",
       "kind": "text",
       "file": "README.md",
       "source": "简体中文",
-      "translation": ""
+      "translation": "简体中文"
     },
     {
       "id": "text:6ca9c5237f4d",
       "kind": "text",
       "file": "README.md",
       "source": "繁體中文",
-      "translation": ""
+      "translation": "繁體中文"
     },
     {
       "id": "text:f25025ffdbac",
       "kind": "text",
       "file": "README.md",
       "source": "日本語",
-      "translation": ""
+      "translation": "日本語"
     },
     {
       "id": "text:7db89d9ea986",
       "kind": "text",
       "file": "README.md",
       "source": "Deutsch",
-      "translation": ""
+      "translation": "Deutsch"
     },
     {
       "id": "text:45a68c30cadb",
       "kind": "text",
       "file": "README.md",
       "source": "Español",
-      "translation": ""
+      "translation": "Español"
     },
     {
       "id": "text:ce6ebfd6e84f",
       "kind": "text",
       "file": "README.md",
       "source": "Français",
-      "translation": ""
+      "translation": "Français"
     },
     {
       "id": "text:d9fa8df7d26e",
       "kind": "text",
       "file": "README.md",
       "source": "Português",
-      "translation": ""
+      "translation": "Português"
     },
     {
       "id": "text:cecac1f596b5",
       "kind": "text",
       "file": "README.md",
       "source": "العربية",
-      "translation": ""
+      "translation": "العربية"
     },
     {
       "id": "text:a1e1e1c31c2a",
       "kind": "text",
       "file": "README.md",
       "source": "🔥 LifeOS for Obsidian won the third place 🥉 in the Best Templates category at the 2024 Obsidian Gems of the Year awards!",
-      "translation": "🔥 LifeOS for Obsidian won the third place 🥉 in the Best Templates category at the 2024 Obsidian Gems of the Year awards!"
+      "translation": "🔥 ¡LifeOS for Obsidian obtuvo el tercer lugar 🥉 en la categoría Mejores Plantillas en los premios Obsidian Gems of the Year 2024!"
     },
     {
       "id": "text:f0e964a8fc6a",
@@ -13035,7 +13035,7 @@
       "kind": "text",
       "file": "README.md",
       "source": ". Thanks to Tiago Forte for inventing such a great organizational method.",
-      "translation": ". Thanks to Tiago Forte for inventing such a great organizational method."
+      "translation": ". Gracias a Tiago Forte por inventar un método de organización tan excelente."
     },
     {
       "id": "link-label:f43e657d6f31",
@@ -13049,7 +13049,7 @@
       "kind": "text",
       "file": "README.md",
       "source": ". Thanks to cotemaxime for creating such a great starter vault.",
-      "translation": ". Thanks to cotemaxime for creating such a great starter vault."
+      "translation": ". Gracias a cotemaxime por crear una bóveda inicial tan magnífica."
     },
     {
       "id": "link-label:cf8b838fe2b9",
@@ -13063,7 +13063,7 @@
       "kind": "text",
       "file": "README.md",
       "source": ". Gave me the inspiration to develop this plugin.",
-      "translation": ". Gave me the inspiration to develop this plugin."
+      "translation": ". Me dio la inspiración para desarrollar este plugin."
     },
     {
       "id": "link-label:b569ad3db1fc",
@@ -13077,7 +13077,7 @@
       "kind": "text",
       "file": "README.md",
       "source": ". The underlying plugin uses dataview's query interface.",
-      "translation": ". The underlying plugin uses dataview's query interface."
+      "translation": ". El plugin subyacente utiliza la interfaz de consulta de dataview."
     },
     {
       "id": "link-label:52f8140de919",
@@ -13091,7 +13091,7 @@
       "kind": "text",
       "file": "README.md",
       "source": ". Provides decoupled template creation, allowing a very large number of plugins to create files with the help of it.",
-      "translation": ". Provides decoupled template creation, allowing a very large number of plugins to create files with the help of it."
+      "translation": ". Proporciona creación de plantillas desacoplada, lo que permite que una gran cantidad de plugins creen archivos con su ayuda."
     },
     {
       "id": "text:b20d6b3ff644",
@@ -13119,7 +13119,7 @@
       "kind": "text",
       "file": "README.md",
       "source": "In addition, you can also support me in further developing a better LifeOS by purchasing the",
-      "translation": "In addition, you can also support me in further developing a better LifeOS by purchasing the"
+      "translation": "Además, también puedes apoyarme en el desarrollo de un mejor LifeOS adquiriendo el"
     },
     {
       "id": "link-label:deb83d827480",
@@ -13154,7 +13154,7 @@
       "kind": "text",
       "file": "TASK.md",
       "source": "Important || In progress || Due in 7 days || High priority",
-      "translation": "Important || In progress || Due in 7 days || High priority"
+      "translation": "Importante || En progreso || Vence en 7 días || Alta prioridad"
     },
     {
       "id": "text:49a8b1a2603b",
@@ -13177,5 +13177,8 @@
       "source": "Cancelled",
       "translation": "Cancelled"
     }
-  ]
+  ],
+  "aiTranslatedAt": "2026-04-14T01:41:11.628Z",
+  "aiTranslationProvider": "claude-cli",
+  "aiTranslationModel": "sonnet"
 }
