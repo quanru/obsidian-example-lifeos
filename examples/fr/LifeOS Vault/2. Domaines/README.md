@@ -1,0 +1,5 @@
+# Domaines
+
+```LifeOS
+AreaListByFolder
+```

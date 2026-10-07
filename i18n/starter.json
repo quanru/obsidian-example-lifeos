@@ -1,0 +1,1285 @@
+{
+  "schemaVersion": 1,
+  "languages": {
+    "en": {
+      "label": "English",
+      "settings": {
+        "usePeriodicNotes": true,
+        "usePARANotes": true,
+        "useDailyRecord": false,
+        "weekStart": -1,
+        "paraIndexFilename": "readme",
+        "onboardingVersion": 1,
+        "periodicNotesPath": "0. Periodic Notes",
+        "projectsPath": "1. Projects",
+        "areasPath": "2. Areas",
+        "resourcesPath": "3. Resources",
+        "archivesPath": "4. Archive",
+        "dailyRecordHeader": "Daily Record",
+        "projectListHeader": "Project List",
+        "areaListHeader": "Areas",
+        "habitHeader": "Habits",
+        "locale": "en"
+      },
+      "copy": {
+        "setupTitle": "Set up LifeOS",
+        "setupDescription": "Install a safe starter workspace so you can create your first note immediately.",
+        "setupLanguage": "Template language",
+        "setupLanguageDescription": "Controls the language of generated folders, templates, and the getting-started guide.",
+        "setupMode": "Workspace mode",
+        "setupPeriodicOnly": "Periodic notes only",
+        "setupPeriodicOnlyDescription": "Daily capture and periodic reviews without PARA folders.",
+        "setupPara": "Periodic notes + PARA",
+        "setupParaDescription": "Add Projects, Areas, Resources, and Archives to the periodic workflow.",
+        "setupSafety": "Only missing folders and templates will be created. Existing files are never overwritten.",
+        "setupPreview": "Files prepared by this setup",
+        "setupBestFor": "Best for",
+        "setupNotFor": "Not ideal for",
+        "setupDailyFlow": "Daily flow",
+        "setupIncludeExamples": "Include one example workflow",
+        "setupIncludeExamplesDescription": "Adds one isolated example that can be removed later if it remains unchanged.",
+        "setupLocked": "This workspace has already selected a template and language. Existing structure will be kept.",
+        "setupLater": "Later",
+        "setupSubmit": "Set up and create today's note",
+        "setupWorking": "Setting up…",
+        "setupFailed": "LifeOS setup failed",
+        "setupCompleteTitle": "Your workspace is ready",
+        "setupCompleteDescription": "Try one real action now. Five minutes is enough to complete the first loop.",
+        "setupOpenGuide": "Open Start Here",
+        "setupOpenToday": "Open Today",
+        "setupQuickRecord": "Quick record",
+        "setupQuickTask": "Quick task",
+        "setupRemoveExamples": "Remove untouched example",
+        "setupExamplesRemoved": "The untouched example was removed.",
+        "setupExamplesPreserved": "The example was edited, so LifeOS kept it.",
+        "setupCommand": "Set up workspace",
+        "quickRecordCommand": "Quick record",
+        "quickTaskCommand": "Quick task",
+        "quickRecordTitle": "Quick record",
+        "quickTaskTitle": "Quick task",
+        "quickRecordPlaceholder": "Capture an idea, note, or update…",
+        "quickTaskPlaceholder": "What needs to be done?",
+        "quickCaptureDescription": "Saved under the daily record section in today's note. Press Ctrl/Cmd + Enter to save.",
+        "quickCaptureSubmit": "Save",
+        "quickCaptureWorking": "Saving…",
+        "quickCaptureEmpty": "Enter some content first.",
+        "quickCaptureSuccess": "Saved to today's note.",
+        "quickCaptureFailed": "Could not save to today's note",
+        "templateDailyTitle": "Daily note",
+        "templateWeeklyTitle": "Weekly review",
+        "templateMonthlyTitle": "Monthly review",
+        "templateQuarterlyTitle": "Quarterly review",
+        "templateYearlyTitle": "Yearly review",
+        "templateTasksRecorded": "Tasks recorded",
+        "templateTasksCompleted": "Tasks completed",
+        "templateDailyRecords": "Daily records",
+        "templateProjects": "Projects",
+        "templateAreas": "Areas",
+        "templateOverview": "Overview",
+        "templateTasks": "Tasks",
+        "templateRecords": "Records",
+        "templateFiles": "Files"
+      },
+      "plans": [
+        {
+          "path": "0. Periodic Notes/Templates/Daily.md",
+          "content": "# Daily note\n## Daily Record\n\n## Project List\n\n0hr0\n\n## Habits\n\n- [ ]\n"
+        },
+        {
+          "path": "0. Periodic Notes/Templates/Weekly.md",
+          "content": "# Weekly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. Periodic Notes/Templates/Monthly.md",
+          "content": "# Monthly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. Periodic Notes/Templates/Quarterly.md",
+          "content": "# Quarterly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOS\nProjectListByTime\n```\n\n## Areas\n"
+        },
+        {
+          "path": "0. Periodic Notes/Templates/Yearly.md",
+          "content": "# Yearly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOS\nProjectListByTime\n```\n\n## Areas\n\n```LifeOS\nAreaListByTime\n```\n"
+        },
+        {
+          "path": "1. Projects/Template.md",
+          "content": "# Overview\n\n## Tasks\n\n```LifeOS\nTaskListByTag\n```\n\n## Records\n\n```LifeOS\nBulletListByTag\n```\n\n## Files\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "2. Areas/Template.md",
+          "content": "# Overview\n\n## Tasks\n\n```LifeOS\nTaskListByTag\n```\n\n## Records\n\n```LifeOS\nBulletListByTag\n```\n\n## Files\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "3. Resources/Template.md",
+          "content": "# Overview\n\n## Tasks\n\n```LifeOS\nTaskListByTag\n```\n\n## Records\n\n```LifeOS\nBulletListByTag\n```\n\n## Files\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "4. Archive/Template.md",
+          "content": "# Overview\n\n## Tasks\n\n```LifeOS\nTaskListByTag\n```\n\n## Records\n\n```LifeOS\nBulletListByTag\n```\n\n## Files\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "LifeOS Start Here.md",
+          "role": "guide",
+          "content": "# Start Here\n\nComplete this five-minute loop with your own material.\n\n> Capture → connect to Project or Area → use Resources → Archive.\n\n## Your first five minutes\n\n- [ ] Open Today and start from the present\n- [ ] Quick-capture one real thought\n- [ ] Create one concrete next-action task\n- [ ] Connect it to PARA only when useful\n- [ ] Run Weekly review and write your first reflection\n\n## Working destinations\n\n- Open Today: `0. Periodic Notes`\n- Projects: `1. Projects`\n- Areas: `2. Areas`\n- Resources: `3. Resources`\n"
+        },
+        {
+          "path": "LifeOS Examples/First workflow.md",
+          "role": "example",
+          "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# Your first real workflow\n\nCapture first, then connect useful material to action and structure.\n\n- A thought captured before it disappeared.\n- [ ] Turn it into one small next action.\n- Review it at the end of the week and keep only what matters.\n"
+        }
+      ]
+    },
+    "zh-cn": {
+      "label": "简体中文",
+      "settings": {
+        "usePeriodicNotes": true,
+        "usePARANotes": true,
+        "useDailyRecord": false,
+        "weekStart": -1,
+        "paraIndexFilename": "readme",
+        "onboardingVersion": 1,
+        "periodicNotesPath": "0. 周期笔记",
+        "projectsPath": "1. 项目",
+        "areasPath": "2. 领域",
+        "resourcesPath": "3. 资源",
+        "archivesPath": "4. 归档",
+        "dailyRecordHeader": "日常记录",
+        "projectListHeader": "项目列表",
+        "areaListHeader": "领域",
+        "habitHeader": "习惯",
+        "locale": "zh-cn"
+      },
+      "copy": {
+        "setupTitle": "初始化 LifeOS",
+        "setupDescription": "安装安全的基础工作区，完成后即可创建并使用今日日记。",
+        "setupLanguage": "模板语言",
+        "setupLanguageDescription": "决定生成目录、模板和上手指南所使用的语言。",
+        "setupMode": "工作区模式",
+        "setupPeriodicOnly": "仅使用周期笔记",
+        "setupPeriodicOnlyDescription": "用于日常记录和周期复盘，不创建 PARA 目录。",
+        "setupPara": "周期笔记 + PARA",
+        "setupParaDescription": "在周期工作流中加入项目、领域、资源和存档。",
+        "setupSafety": "只创建缺失的目录和模板，绝不会覆盖已有文件。",
+        "setupPreview": "本次将准备的文件",
+        "setupBestFor": "适合",
+        "setupNotFor": "不太适合",
+        "setupDailyFlow": "日常流程",
+        "setupIncludeExamples": "包含一个示例工作流",
+        "setupIncludeExamplesDescription": "创建一份独立示例；只要没有修改，之后可安全移除。",
+        "setupLocked": "该工作区已经选择模板与语言，将继续沿用已有结构。",
+        "setupLater": "稍后",
+        "setupSubmit": "初始化并创建今日日记",
+        "setupWorking": "正在初始化…",
+        "setupFailed": "LifeOS 初始化失败",
+        "setupCompleteTitle": "工作区已经就绪",
+        "setupCompleteDescription": "现在用一条真实内容完成首次闭环，五分钟就够。",
+        "setupOpenGuide": "打开上手指南",
+        "setupOpenToday": "打开 Today",
+        "setupQuickRecord": "快速记录",
+        "setupQuickTask": "快速任务",
+        "setupRemoveExamples": "移除未修改的示例",
+        "setupExamplesRemoved": "未修改的示例已移除。",
+        "setupExamplesPreserved": "示例已经被修改，因此 LifeOS 保留了它。",
+        "setupCommand": "初始化工作区",
+        "quickRecordCommand": "快速记录",
+        "quickTaskCommand": "快速任务",
+        "quickRecordTitle": "快速记录",
+        "quickTaskTitle": "快速任务",
+        "quickRecordPlaceholder": "记录一个想法、进展或闪念…",
+        "quickTaskPlaceholder": "接下来要做什么？",
+        "quickCaptureDescription": "内容会写入今日日记的日常记录标题下。按 Ctrl/Cmd + Enter 保存。",
+        "quickCaptureSubmit": "保存",
+        "quickCaptureWorking": "正在保存…",
+        "quickCaptureEmpty": "请先输入内容。",
+        "quickCaptureSuccess": "已保存到今日日记。",
+        "quickCaptureFailed": "无法保存到今日日记",
+        "templateDailyTitle": "日记",
+        "templateWeeklyTitle": "周复盘",
+        "templateMonthlyTitle": "月复盘",
+        "templateQuarterlyTitle": "季度复盘",
+        "templateYearlyTitle": "年度复盘",
+        "templateTasksRecorded": "记录的任务",
+        "templateTasksCompleted": "完成的任务",
+        "templateDailyRecords": "日常记录",
+        "templateProjects": "项目",
+        "templateAreas": "领域",
+        "templateOverview": "概览",
+        "templateTasks": "任务",
+        "templateRecords": "记录",
+        "templateFiles": "文件"
+      },
+      "plans": [
+        {
+          "path": "0. 周期笔记/Templates/Daily.md",
+          "content": "# 日记\n## 日常记录\n\n## 项目列表\n\n0hr0\n\n## 习惯\n\n- [ ]\n"
+        },
+        {
+          "path": "0. 周期笔记/Templates/Weekly.md",
+          "content": "# 周复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. 周期笔记/Templates/Monthly.md",
+          "content": "# 月复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. 周期笔记/Templates/Quarterly.md",
+          "content": "# 季度复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOS\nProjectListByTime\n```\n\n## 领域\n"
+        },
+        {
+          "path": "0. 周期笔记/Templates/Yearly.md",
+          "content": "# 年度复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOS\nProjectListByTime\n```\n\n## 领域\n\n```LifeOS\nAreaListByTime\n```\n"
+        },
+        {
+          "path": "1. 项目/Template.md",
+          "content": "# 概览\n\n## 任务\n\n```LifeOS\nTaskListByTag\n```\n\n## 记录\n\n```LifeOS\nBulletListByTag\n```\n\n## 文件\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "2. 领域/Template.md",
+          "content": "# 概览\n\n## 任务\n\n```LifeOS\nTaskListByTag\n```\n\n## 记录\n\n```LifeOS\nBulletListByTag\n```\n\n## 文件\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "3. 资源/Template.md",
+          "content": "# 概览\n\n## 任务\n\n```LifeOS\nTaskListByTag\n```\n\n## 记录\n\n```LifeOS\nBulletListByTag\n```\n\n## 文件\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "4. 归档/Template.md",
+          "content": "# 概览\n\n## 任务\n\n```LifeOS\nTaskListByTag\n```\n\n## 记录\n\n```LifeOS\nBulletListByTag\n```\n\n## 文件\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "LifeOS 开始使用.md",
+          "role": "guide",
+          "content": "# 开始使用 LifeOS\n\n请用自己的真实内容完成下面这个五分钟闭环。\n\n> 捕获 → 连接项目或领域 → 使用资源 → 归档。\n\n## 最初五分钟\n\n- [ ] 打开 Today，从今天开始\n- [ ] 快速记录一个真实想法\n- [ ] 创建一个具体的下一步任务\n- [ ] 只在需要时连接到 PARA\n- [ ] 运行“每周回顾”，填写本周总结\n\n## 工作入口\n\n- 打开 Today: `0. 周期笔记`\n- 项目: `1. 项目`\n- 领域: `2. 领域`\n- 资源: `3. 资源`\n"
+        },
+        {
+          "path": "LifeOS 示例/第一个工作流.md",
+          "role": "example",
+          "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# 第一个真实工作流\n\n先捕获，再把真正有用的内容连接到行动与结构。\n\n- 一条在消失前捕获的真实想法。\n- [ ] 把它变成一个足够小的下一步行动。\n- 周末回顾，只保留真正重要的内容。\n"
+        }
+      ]
+    },
+    "zh-tw": {
+      "label": "繁體中文",
+      "settings": {
+        "usePeriodicNotes": true,
+        "usePARANotes": true,
+        "useDailyRecord": false,
+        "weekStart": -1,
+        "paraIndexFilename": "readme",
+        "onboardingVersion": 1,
+        "periodicNotesPath": "0. 週期筆記",
+        "projectsPath": "1. 專案",
+        "areasPath": "2. 領域",
+        "resourcesPath": "3. 資源",
+        "archivesPath": "4. 封存",
+        "dailyRecordHeader": "日常記錄",
+        "projectListHeader": "專案列表",
+        "areaListHeader": "領域",
+        "habitHeader": "習慣",
+        "locale": "zh-tw"
+      },
+      "copy": {
+        "setupTitle": "初始化 LifeOS",
+        "setupDescription": "安裝安全的基礎工作區，完成後即可建立並使用今日日記。",
+        "setupLanguage": "範本語言",
+        "setupLanguageDescription": "決定產生資料夾、範本和入門指南所使用的語言。",
+        "setupMode": "工作區模式",
+        "setupPeriodicOnly": "僅使用週期筆記",
+        "setupPeriodicOnlyDescription": "用於日常記錄和週期回顧，不建立 PARA 目錄。",
+        "setupPara": "週期筆記 + PARA",
+        "setupParaDescription": "在週期工作流程中加入專案、領域、資源和封存。",
+        "setupSafety": "只建立缺少的目錄和範本，絕不覆蓋已有檔案。",
+        "setupPreview": "本次將準備的檔案",
+        "setupBestFor": "適合",
+        "setupNotFor": "不太適合",
+        "setupDailyFlow": "日常流程",
+        "setupIncludeExamples": "包含一個範例工作流程",
+        "setupIncludeExamplesDescription": "建立一份獨立範例；只要沒有修改，之後可安全移除。",
+        "setupLocked": "該工作區已經選擇範本與語言，將繼續沿用既有結構。",
+        "setupLater": "稍後",
+        "setupSubmit": "初始化並建立今日日記",
+        "setupWorking": "正在初始化…",
+        "setupFailed": "LifeOS 初始化失败",
+        "setupCompleteTitle": "工作區已經就緒",
+        "setupCompleteDescription": "現在用一條真實內容完成首次閉環，五分鐘就夠。",
+        "setupOpenGuide": "開啟入門指南",
+        "setupOpenToday": "開啟 Today",
+        "setupQuickRecord": "快速記錄",
+        "setupQuickTask": "快速任務",
+        "setupRemoveExamples": "移除未修改的範例",
+        "setupExamplesRemoved": "未修改的範例已移除。",
+        "setupExamplesPreserved": "範例已經被修改，因此 LifeOS 保留了它。",
+        "setupCommand": "初始化工作区",
+        "quickRecordCommand": "快速記錄",
+        "quickTaskCommand": "快速任務",
+        "quickRecordTitle": "快速記錄",
+        "quickTaskTitle": "快速任務",
+        "quickRecordPlaceholder": "記錄一個想法、進展或閃念…",
+        "quickTaskPlaceholder": "接下來要做什麼？",
+        "quickCaptureDescription": "內容會寫入今日日記的日常記錄標題下。按 Ctrl/Cmd + Enter 儲存。",
+        "quickCaptureSubmit": "儲存",
+        "quickCaptureWorking": "正在儲存…",
+        "quickCaptureEmpty": "請先輸入內容。",
+        "quickCaptureSuccess": "已儲存到今日日記。",
+        "quickCaptureFailed": "無法儲存到今日日記",
+        "templateDailyTitle": "日記",
+        "templateWeeklyTitle": "週回顧",
+        "templateMonthlyTitle": "月回顧",
+        "templateQuarterlyTitle": "季度回顧",
+        "templateYearlyTitle": "年度回顧",
+        "templateTasksRecorded": "記錄的任務",
+        "templateTasksCompleted": "完成的任務",
+        "templateDailyRecords": "日常記錄",
+        "templateProjects": "專案",
+        "templateAreas": "領域",
+        "templateOverview": "概覽",
+        "templateTasks": "任務",
+        "templateRecords": "記錄",
+        "templateFiles": "檔案"
+      },
+      "plans": [
+        {
+          "path": "0. 週期筆記/Templates/Daily.md",
+          "content": "# 日記\n## 日常記錄\n\n## 專案列表\n\n0hr0\n\n## 習慣\n\n- [ ]\n"
+        },
+        {
+          "path": "0. 週期筆記/Templates/Weekly.md",
+          "content": "# 週回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. 週期筆記/Templates/Monthly.md",
+          "content": "# 月回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. 週期筆記/Templates/Quarterly.md",
+          "content": "# 季度回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOS\nProjectListByTime\n```\n\n## 領域\n"
+        },
+        {
+          "path": "0. 週期筆記/Templates/Yearly.md",
+          "content": "# 年度回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOS\nProjectListByTime\n```\n\n## 領域\n\n```LifeOS\nAreaListByTime\n```\n"
+        },
+        {
+          "path": "1. 專案/Template.md",
+          "content": "# 概覽\n\n## 任務\n\n```LifeOS\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOS\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "2. 領域/Template.md",
+          "content": "# 概覽\n\n## 任務\n\n```LifeOS\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOS\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "3. 資源/Template.md",
+          "content": "# 概覽\n\n## 任務\n\n```LifeOS\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOS\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "4. 封存/Template.md",
+          "content": "# 概覽\n\n## 任務\n\n```LifeOS\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOS\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "LifeOS 開始使用.md",
+          "role": "guide",
+          "content": "# 開始使用 LifeOS\n\n請用自己的真實內容完成下面這個五分鐘閉環。\n\n> 捕獲 → 連結專案或領域 → 使用資源 → 封存。\n\n## 最初五分鐘\n\n- [ ] 開啟 Today，從今天開始\n- [ ] 快速記錄一個真實想法\n- [ ] 建立一個具體的下一步任務\n- [ ] 只在需要時連結到 PARA\n- [ ] 執行「每週回顧」，填寫本週總結\n\n## 工作入口\n\n- 開啟 Today: `0. 週期筆記`\n- 專案: `1. 專案`\n- 領域: `2. 領域`\n- 資源: `3. 資源`\n"
+        },
+        {
+          "path": "LifeOS 範例/第一個工作流程.md",
+          "role": "example",
+          "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# 第一個真實工作流程\n\n先捕獲，再把真正有用的內容連結到行動與結構。\n\n- 一條在消失前捕獲的真實想法。\n- [ ] 把它變成一個足夠小的下一步行動。\n- 週末回顧，只保留真正重要的內容。\n"
+        }
+      ]
+    },
+    "de": {
+      "label": "Deutsch",
+      "settings": {
+        "usePeriodicNotes": true,
+        "usePARANotes": true,
+        "useDailyRecord": false,
+        "weekStart": -1,
+        "paraIndexFilename": "readme",
+        "onboardingVersion": 1,
+        "periodicNotesPath": "0. Periodische Notizen",
+        "projectsPath": "1. Projekte",
+        "areasPath": "2. Bereiche",
+        "resourcesPath": "3. Ressourcen",
+        "archivesPath": "4. Archiv",
+        "dailyRecordHeader": "Tagesprotokoll",
+        "projectListHeader": "Projektliste",
+        "areaListHeader": "Bereiche",
+        "habitHeader": "Gewohnheiten",
+        "locale": "de"
+      },
+      "copy": {
+        "setupTitle": "LifeOS einrichten",
+        "setupDescription": "Eine sichere Arbeitsumgebung für deine erste Notiz anlegen.",
+        "setupLanguage": "Vorlagensprache",
+        "setupLanguageDescription": "Sprache der Ordner, Vorlagen und Einführung.",
+        "setupMode": "Arbeitsbereich",
+        "setupPeriodicOnly": "Nur periodische Notizen",
+        "setupPeriodicOnlyDescription": "Tägliche Erfassung und regelmäßige Rückblicke ohne PARA-Ordner.",
+        "setupPara": "Periodische Notizen + PARA",
+        "setupParaDescription": "Projekte, Bereiche, Ressourcen und Archiv ergänzen.",
+        "setupSafety": "Nur fehlende Ordner und Vorlagen werden erstellt. Vorhandene Dateien bleiben erhalten.",
+        "setupPreview": "Vorgesehene Dateien",
+        "setupBestFor": "Geeignet für",
+        "setupNotFor": "Weniger geeignet für",
+        "setupDailyFlow": "Täglicher Ablauf",
+        "setupIncludeExamples": "Ein Beispiel hinzufügen",
+        "setupIncludeExamplesDescription": "Ein separates Beispiel, das unverändert später entfernt werden kann.",
+        "setupLocked": "Vorlage und Sprache wurden bereits gewählt. Die vorhandene Struktur bleibt erhalten.",
+        "setupLater": "Später",
+        "setupSubmit": "Einrichten und heutige Notiz erstellen",
+        "setupWorking": "Wird eingerichtet…",
+        "setupFailed": "Einrichtung fehlgeschlagen",
+        "setupCompleteTitle": "Dein Arbeitsbereich ist bereit",
+        "setupCompleteDescription": "Probiere eine echte Aktion aus. Fünf Minuten reichen für den ersten Durchlauf.",
+        "setupOpenGuide": "Einführung öffnen",
+        "setupOpenToday": "Heute öffnen",
+        "setupQuickRecord": "Schnellnotiz",
+        "setupQuickTask": "Schnellaufgabe",
+        "setupRemoveExamples": "Unverändertes Beispiel entfernen",
+        "setupExamplesRemoved": "Das unveränderte Beispiel wurde entfernt.",
+        "setupExamplesPreserved": "Das bearbeitete Beispiel wurde beibehalten.",
+        "setupCommand": "Arbeitsbereich einrichten",
+        "quickRecordCommand": "Schnellnotiz",
+        "quickTaskCommand": "Schnellaufgabe",
+        "quickRecordTitle": "Schnellnotiz",
+        "quickTaskTitle": "Schnellaufgabe",
+        "quickRecordPlaceholder": "Idee, Notiz oder Fortschritt erfassen…",
+        "quickTaskPlaceholder": "Was ist als Nächstes zu tun?",
+        "quickCaptureDescription": "Wird im Tagesprotokoll der heutigen Notiz gespeichert. Mit Ctrl/Cmd + Enter speichern.",
+        "quickCaptureSubmit": "Speichern",
+        "quickCaptureWorking": "Wird gespeichert…",
+        "quickCaptureEmpty": "Bitte zuerst etwas eingeben.",
+        "quickCaptureSuccess": "In der heutigen Notiz gespeichert.",
+        "quickCaptureFailed": "Speichern in der heutigen Notiz fehlgeschlagen",
+        "templateDailyTitle": "Tagesnotiz",
+        "templateWeeklyTitle": "Wochenrückblick",
+        "templateMonthlyTitle": "Monatsrückblick",
+        "templateQuarterlyTitle": "Quartalsrückblick",
+        "templateYearlyTitle": "Jahresrückblick",
+        "templateTasksRecorded": "Erfasste Aufgaben",
+        "templateTasksCompleted": "Erledigte Aufgaben",
+        "templateDailyRecords": "Tagesprotokoll",
+        "templateProjects": "Projekte",
+        "templateAreas": "Bereiche",
+        "templateOverview": "Übersicht",
+        "templateTasks": "Aufgaben",
+        "templateRecords": "Notizen",
+        "templateFiles": "Dateien"
+      },
+      "plans": [
+        {
+          "path": "0. Periodische Notizen/Templates/Daily.md",
+          "content": "# Tagesnotiz\n## Tagesprotokoll\n\n## Projektliste\n\n0hr0\n\n## Gewohnheiten\n\n- [ ]\n"
+        },
+        {
+          "path": "0. Periodische Notizen/Templates/Weekly.md",
+          "content": "# Wochenrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. Periodische Notizen/Templates/Monthly.md",
+          "content": "# Monatsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. Periodische Notizen/Templates/Quarterly.md",
+          "content": "# Quartalsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOS\nProjectListByTime\n```\n\n## Bereiche\n"
+        },
+        {
+          "path": "0. Periodische Notizen/Templates/Yearly.md",
+          "content": "# Jahresrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOS\nProjectListByTime\n```\n\n## Bereiche\n\n```LifeOS\nAreaListByTime\n```\n"
+        },
+        {
+          "path": "1. Projekte/Template.md",
+          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOS\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOS\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "2. Bereiche/Template.md",
+          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOS\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOS\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "3. Ressourcen/Template.md",
+          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOS\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOS\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "4. Archiv/Template.md",
+          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOS\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOS\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "LifeOS Einstieg.md",
+          "role": "guide",
+          "content": "# LifeOS Einstieg\n\nIn fünf Minuten mit eigenen Inhalten beginnen.\n\n> Erfassen → Projekt oder Bereich zuordnen → Ressourcen nutzen → archivieren.\n\n## Die ersten fünf Minuten\n\n- [ ] Heute öffnen\n- [ ] Einen echten Gedanken erfassen\n- [ ] Eine konkrete nächste Aufgabe anlegen\n- [ ] Bei Bedarf mit PARA verbinden\n- [ ] Den Wochenrückblick ausfüllen\n\n## Arbeitsziele\n\n- Heute öffnen: `0. Periodische Notizen`\n- Projekte: `1. Projekte`\n- Bereiche: `2. Bereiche`\n- Ressourcen: `3. Ressourcen`\n"
+        },
+        {
+          "path": "LifeOS Beispiele/Dein erster Arbeitsablauf.md",
+          "role": "example",
+          "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# Dein erster Arbeitsablauf\n\nErst erfassen, dann mit Aufgaben und Struktur verbinden.\n\n- Einen Gedanken festhalten, bevor er verloren geht.\n- [ ] Daraus einen kleinen nächsten Schritt machen.\n- Am Wochenende prüfen und Wichtiges behalten.\n"
+        }
+      ]
+    },
+    "es": {
+      "label": "Español",
+      "settings": {
+        "usePeriodicNotes": true,
+        "usePARANotes": true,
+        "useDailyRecord": false,
+        "weekStart": -1,
+        "paraIndexFilename": "readme",
+        "onboardingVersion": 1,
+        "periodicNotesPath": "0. Notas periódicas",
+        "projectsPath": "1. Proyectos",
+        "areasPath": "2. Áreas",
+        "resourcesPath": "3. Recursos",
+        "archivesPath": "4. Archivo",
+        "dailyRecordHeader": "Registro diario",
+        "projectListHeader": "Lista de proyectos",
+        "areaListHeader": "Áreas",
+        "habitHeader": "Hábitos",
+        "locale": "es"
+      },
+      "copy": {
+        "setupTitle": "Configurar LifeOS",
+        "setupDescription": "Prepara un espacio seguro para crear tu primera nota.",
+        "setupLanguage": "Idioma de las plantillas",
+        "setupLanguageDescription": "Idioma de las carpetas, plantillas y guía inicial.",
+        "setupMode": "Modo del espacio",
+        "setupPeriodicOnly": "Solo notas periódicas",
+        "setupPeriodicOnlyDescription": "Capturas diarias y revisiones periódicas sin carpetas PARA.",
+        "setupPara": "Notas periódicas + PARA",
+        "setupParaDescription": "Añade proyectos, áreas, recursos y archivo.",
+        "setupSafety": "Solo se crean carpetas y plantillas que faltan. Los archivos existentes se conservan.",
+        "setupPreview": "Archivos previstos",
+        "setupBestFor": "Recomendado para",
+        "setupNotFor": "Menos adecuado para",
+        "setupDailyFlow": "Flujo diario",
+        "setupIncludeExamples": "Incluir un ejemplo",
+        "setupIncludeExamplesDescription": "Un ejemplo separado que puedes eliminar después si no lo modificas.",
+        "setupLocked": "Este espacio ya tiene plantilla e idioma. Se conserva su estructura.",
+        "setupLater": "Más tarde",
+        "setupSubmit": "Configurar y crear la nota de hoy",
+        "setupWorking": "Configurando…",
+        "setupFailed": "No se pudo configurar LifeOS",
+        "setupCompleteTitle": "Tu espacio está listo",
+        "setupCompleteDescription": "Prueba una acción real. Cinco minutos bastan para el primer recorrido.",
+        "setupOpenGuide": "Abrir guía inicial",
+        "setupOpenToday": "Abrir Hoy",
+        "setupQuickRecord": "Nota rápida",
+        "setupQuickTask": "Tarea rápida",
+        "setupRemoveExamples": "Eliminar ejemplo sin modificar",
+        "setupExamplesRemoved": "Se eliminó el ejemplo sin modificar.",
+        "setupExamplesPreserved": "Se conservó el ejemplo modificado.",
+        "setupCommand": "Configurar espacio",
+        "quickRecordCommand": "Nota rápida",
+        "quickTaskCommand": "Tarea rápida",
+        "quickRecordTitle": "Nota rápida",
+        "quickTaskTitle": "Tarea rápida",
+        "quickRecordPlaceholder": "Captura una idea, nota o avance…",
+        "quickTaskPlaceholder": "¿Qué hay que hacer?",
+        "quickCaptureDescription": "Se guarda en el registro diario de la nota de hoy. Pulsa Ctrl/Cmd + Enter para guardar.",
+        "quickCaptureSubmit": "Guardar",
+        "quickCaptureWorking": "Guardando…",
+        "quickCaptureEmpty": "Escribe algo primero.",
+        "quickCaptureSuccess": "Guardado en la nota de hoy.",
+        "quickCaptureFailed": "No se pudo guardar en la nota de hoy",
+        "templateDailyTitle": "Nota diaria",
+        "templateWeeklyTitle": "Revisión semanal",
+        "templateMonthlyTitle": "Revisión mensual",
+        "templateQuarterlyTitle": "Revisión trimestral",
+        "templateYearlyTitle": "Revisión anual",
+        "templateTasksRecorded": "Tareas registradas",
+        "templateTasksCompleted": "Tareas completadas",
+        "templateDailyRecords": "Registros diarios",
+        "templateProjects": "Proyectos",
+        "templateAreas": "Áreas",
+        "templateOverview": "Resumen",
+        "templateTasks": "Tareas",
+        "templateRecords": "Registros",
+        "templateFiles": "Archivos"
+      },
+      "plans": [
+        {
+          "path": "0. Notas periódicas/Templates/Daily.md",
+          "content": "# Nota diaria\n## Registro diario\n\n## Lista de proyectos\n\n0hr0\n\n## Hábitos\n\n- [ ]\n"
+        },
+        {
+          "path": "0. Notas periódicas/Templates/Weekly.md",
+          "content": "# Revisión semanal\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. Notas periódicas/Templates/Monthly.md",
+          "content": "# Revisión mensual\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. Notas periódicas/Templates/Quarterly.md",
+          "content": "# Revisión trimestral\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOS\nProjectListByTime\n```\n\n## Áreas\n"
+        },
+        {
+          "path": "0. Notas periódicas/Templates/Yearly.md",
+          "content": "# Revisión anual\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOS\nProjectListByTime\n```\n\n## Áreas\n\n```LifeOS\nAreaListByTime\n```\n"
+        },
+        {
+          "path": "1. Proyectos/Template.md",
+          "content": "# Resumen\n\n## Tareas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "2. Áreas/Template.md",
+          "content": "# Resumen\n\n## Tareas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "3. Recursos/Template.md",
+          "content": "# Resumen\n\n## Tareas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "4. Archivo/Template.md",
+          "content": "# Resumen\n\n## Tareas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "LifeOS Empieza aquí.md",
+          "role": "guide",
+          "content": "# LifeOS Empieza aquí\n\nEmpieza con tu propio contenido en cinco minutos.\n\n> Capturar → conectar con proyecto o área → usar recursos → archivar.\n\n## Tus primeros cinco minutos\n\n- [ ] Abrir Hoy\n- [ ] Capturar una idea real\n- [ ] Crear una próxima acción concreta\n- [ ] Conectar con PARA cuando sea útil\n- [ ] Completar la revisión semanal\n\n## Destinos de trabajo\n\n- Abrir Hoy: `0. Notas periódicas`\n- Proyectos: `1. Proyectos`\n- Áreas: `2. Áreas`\n- Recursos: `3. Recursos`\n"
+        },
+        {
+          "path": "Ejemplos LifeOS/Tu primer flujo de trabajo.md",
+          "role": "example",
+          "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# Tu primer flujo de trabajo\n\nPrimero captura, después conecta con acciones y estructura.\n\n- Captura una idea antes de olvidarla.\n- [ ] Conviértela en una pequeña próxima acción.\n- Revísala al final de la semana y conserva lo importante.\n"
+        }
+      ]
+    },
+    "fr": {
+      "label": "Français",
+      "settings": {
+        "usePeriodicNotes": true,
+        "usePARANotes": true,
+        "useDailyRecord": false,
+        "weekStart": -1,
+        "paraIndexFilename": "readme",
+        "onboardingVersion": 1,
+        "periodicNotesPath": "0. Notes périodiques",
+        "projectsPath": "1. Projets",
+        "areasPath": "2. Domaines",
+        "resourcesPath": "3. Ressources",
+        "archivesPath": "4. Archives",
+        "dailyRecordHeader": "Journal quotidien",
+        "projectListHeader": "Liste des projets",
+        "areaListHeader": "Domaines",
+        "habitHeader": "Habitudes",
+        "locale": "fr"
+      },
+      "copy": {
+        "setupTitle": "Configurer LifeOS",
+        "setupDescription": "Préparez un espace sûr pour créer votre première note.",
+        "setupLanguage": "Langue des modèles",
+        "setupLanguageDescription": "Langue des dossiers, modèles et guide de démarrage.",
+        "setupMode": "Mode de travail",
+        "setupPeriodicOnly": "Notes périodiques seules",
+        "setupPeriodicOnlyDescription": "Capture quotidienne et bilans périodiques sans dossiers PARA.",
+        "setupPara": "Notes périodiques + PARA",
+        "setupParaDescription": "Ajoutez projets, domaines, ressources et archives.",
+        "setupSafety": "Seuls les dossiers et modèles manquants sont créés. Les fichiers existants sont conservés.",
+        "setupPreview": "Fichiers prévus",
+        "setupBestFor": "Adapté à",
+        "setupNotFor": "Moins adapté à",
+        "setupDailyFlow": "Routine quotidienne",
+        "setupIncludeExamples": "Inclure un exemple",
+        "setupIncludeExamplesDescription": "Un exemple séparé que vous pourrez supprimer s’il reste inchangé.",
+        "setupLocked": "Le modèle et la langue sont déjà définis. La structure existante est conservée.",
+        "setupLater": "Plus tard",
+        "setupSubmit": "Configurer et créer la note du jour",
+        "setupWorking": "Configuration…",
+        "setupFailed": "Échec de la configuration",
+        "setupCompleteTitle": "Votre espace est prêt",
+        "setupCompleteDescription": "Essayez une action réelle. Cinq minutes suffisent pour un premier parcours.",
+        "setupOpenGuide": "Ouvrir le guide",
+        "setupOpenToday": "Ouvrir Aujourd’hui",
+        "setupQuickRecord": "Note rapide",
+        "setupQuickTask": "Tâche rapide",
+        "setupRemoveExamples": "Supprimer l’exemple inchangé",
+        "setupExamplesRemoved": "L’exemple inchangé a été supprimé.",
+        "setupExamplesPreserved": "L’exemple modifié a été conservé.",
+        "setupCommand": "Configurer l’espace",
+        "quickRecordCommand": "Note rapide",
+        "quickTaskCommand": "Tâche rapide",
+        "quickRecordTitle": "Note rapide",
+        "quickTaskTitle": "Tâche rapide",
+        "quickRecordPlaceholder": "Capturez une idée, une note ou une avancée…",
+        "quickTaskPlaceholder": "Que faut-il faire ?",
+        "quickCaptureDescription": "Enregistré dans le journal de la note du jour. Ctrl/Cmd + Enter pour enregistrer.",
+        "quickCaptureSubmit": "Enregistrer",
+        "quickCaptureWorking": "Enregistrement…",
+        "quickCaptureEmpty": "Saisissez d’abord du contenu.",
+        "quickCaptureSuccess": "Enregistré dans la note du jour.",
+        "quickCaptureFailed": "Impossible d’enregistrer dans la note du jour",
+        "templateDailyTitle": "Note du jour",
+        "templateWeeklyTitle": "Bilan hebdomadaire",
+        "templateMonthlyTitle": "Bilan mensuel",
+        "templateQuarterlyTitle": "Bilan trimestriel",
+        "templateYearlyTitle": "Bilan annuel",
+        "templateTasksRecorded": "Tâches enregistrées",
+        "templateTasksCompleted": "Tâches terminées",
+        "templateDailyRecords": "Journal quotidien",
+        "templateProjects": "Projets",
+        "templateAreas": "Domaines",
+        "templateOverview": "Vue d’ensemble",
+        "templateTasks": "Tâches",
+        "templateRecords": "Notes",
+        "templateFiles": "Fichiers"
+      },
+      "plans": [
+        {
+          "path": "0. Notes périodiques/Templates/Daily.md",
+          "content": "# Note du jour\n## Journal quotidien\n\n## Liste des projets\n\n0hr0\n\n## Habitudes\n\n- [ ]\n"
+        },
+        {
+          "path": "0. Notes périodiques/Templates/Weekly.md",
+          "content": "# Bilan hebdomadaire\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. Notes périodiques/Templates/Monthly.md",
+          "content": "# Bilan mensuel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. Notes périodiques/Templates/Quarterly.md",
+          "content": "# Bilan trimestriel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOS\nProjectListByTime\n```\n\n## Domaines\n"
+        },
+        {
+          "path": "0. Notes périodiques/Templates/Yearly.md",
+          "content": "# Bilan annuel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOS\nProjectListByTime\n```\n\n## Domaines\n\n```LifeOS\nAreaListByTime\n```\n"
+        },
+        {
+          "path": "1. Projets/Template.md",
+          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOS\nTaskListByTag\n```\n\n## Notes\n\n```LifeOS\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "2. Domaines/Template.md",
+          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOS\nTaskListByTag\n```\n\n## Notes\n\n```LifeOS\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "3. Ressources/Template.md",
+          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOS\nTaskListByTag\n```\n\n## Notes\n\n```LifeOS\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "4. Archives/Template.md",
+          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOS\nTaskListByTag\n```\n\n## Notes\n\n```LifeOS\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "LifeOS Bien démarrer.md",
+          "role": "guide",
+          "content": "# LifeOS Bien démarrer\n\nCommencez avec votre propre contenu en cinq minutes.\n\n> Capturer → relier au projet ou au domaine → utiliser les ressources → archiver.\n\n## Vos cinq premières minutes\n\n- [ ] Ouvrir Aujourd’hui\n- [ ] Capturer une idée réelle\n- [ ] Créer une prochaine action concrète\n- [ ] Relier à PARA si utile\n- [ ] Compléter le bilan hebdomadaire\n\n## Points d’entrée\n\n- Ouvrir Aujourd’hui: `0. Notes périodiques`\n- Projets: `1. Projets`\n- Domaines: `2. Domaines`\n- Ressources: `3. Ressources`\n"
+        },
+        {
+          "path": "Exemples LifeOS/Votre premier parcours.md",
+          "role": "example",
+          "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# Votre premier parcours\n\nCapturez d’abord, puis reliez le contenu aux actions et à la structure.\n\n- Capturer une idée avant de l’oublier.\n- [ ] En faire une petite prochaine action.\n- La revoir en fin de semaine et garder l’essentiel.\n"
+        }
+      ]
+    },
+    "pt": {
+      "label": "Português",
+      "settings": {
+        "usePeriodicNotes": true,
+        "usePARANotes": true,
+        "useDailyRecord": false,
+        "weekStart": -1,
+        "paraIndexFilename": "readme",
+        "onboardingVersion": 1,
+        "periodicNotesPath": "0. Notas periódicas",
+        "projectsPath": "1. Projetos",
+        "areasPath": "2. Áreas",
+        "resourcesPath": "3. Recursos",
+        "archivesPath": "4. Arquivo",
+        "dailyRecordHeader": "Registro diário",
+        "projectListHeader": "Lista de projetos",
+        "areaListHeader": "Áreas",
+        "habitHeader": "Hábitos",
+        "locale": "pt"
+      },
+      "copy": {
+        "setupTitle": "Configurar o LifeOS",
+        "setupDescription": "Prepare um espaço seguro para criar sua primeira nota.",
+        "setupLanguage": "Idioma dos modelos",
+        "setupLanguageDescription": "Idioma das pastas, modelos e guia inicial.",
+        "setupMode": "Modo do espaço",
+        "setupPeriodicOnly": "Somente notas periódicas",
+        "setupPeriodicOnlyDescription": "Capturas diárias e revisões periódicas sem pastas PARA.",
+        "setupPara": "Notas periódicas + PARA",
+        "setupParaDescription": "Adicione projetos, áreas, recursos e arquivo.",
+        "setupSafety": "Somente pastas e modelos ausentes são criados. Os arquivos existentes são preservados.",
+        "setupPreview": "Arquivos previstos",
+        "setupBestFor": "Indicado para",
+        "setupNotFor": "Menos indicado para",
+        "setupDailyFlow": "Fluxo diário",
+        "setupIncludeExamples": "Incluir um exemplo",
+        "setupIncludeExamplesDescription": "Um exemplo separado que pode ser removido depois se não for alterado.",
+        "setupLocked": "Este espaço já tem modelo e idioma. A estrutura existente será mantida.",
+        "setupLater": "Mais tarde",
+        "setupSubmit": "Configurar e criar a nota de hoje",
+        "setupWorking": "Configurando…",
+        "setupFailed": "Falha ao configurar o LifeOS",
+        "setupCompleteTitle": "Seu espaço está pronto",
+        "setupCompleteDescription": "Experimente uma ação real. Cinco minutos bastam para o primeiro ciclo.",
+        "setupOpenGuide": "Abrir guia inicial",
+        "setupOpenToday": "Abrir Hoje",
+        "setupQuickRecord": "Nota rápida",
+        "setupQuickTask": "Tarefa rápida",
+        "setupRemoveExamples": "Remover exemplo sem alterações",
+        "setupExamplesRemoved": "O exemplo sem alterações foi removido.",
+        "setupExamplesPreserved": "O exemplo alterado foi mantido.",
+        "setupCommand": "Configurar espaço",
+        "quickRecordCommand": "Nota rápida",
+        "quickTaskCommand": "Tarefa rápida",
+        "quickRecordTitle": "Nota rápida",
+        "quickTaskTitle": "Tarefa rápida",
+        "quickRecordPlaceholder": "Capture uma ideia, nota ou atualização…",
+        "quickTaskPlaceholder": "O que precisa ser feito?",
+        "quickCaptureDescription": "Salvo no registro diário da nota de hoje. Pressione Ctrl/Cmd + Enter para salvar.",
+        "quickCaptureSubmit": "Salvar",
+        "quickCaptureWorking": "Salvando…",
+        "quickCaptureEmpty": "Digite algo primeiro.",
+        "quickCaptureSuccess": "Salvo na nota de hoje.",
+        "quickCaptureFailed": "Não foi possível salvar na nota de hoje",
+        "templateDailyTitle": "Nota diária",
+        "templateWeeklyTitle": "Revisão semanal",
+        "templateMonthlyTitle": "Revisão mensal",
+        "templateQuarterlyTitle": "Revisão trimestral",
+        "templateYearlyTitle": "Revisão anual",
+        "templateTasksRecorded": "Tarefas registradas",
+        "templateTasksCompleted": "Tarefas concluídas",
+        "templateDailyRecords": "Registros diários",
+        "templateProjects": "Projetos",
+        "templateAreas": "Áreas",
+        "templateOverview": "Visão geral",
+        "templateTasks": "Tarefas",
+        "templateRecords": "Registros",
+        "templateFiles": "Arquivos"
+      },
+      "plans": [
+        {
+          "path": "0. Notas periódicas/Templates/Daily.md",
+          "content": "# Nota diária\n## Registro diário\n\n## Lista de projetos\n\n0hr0\n\n## Hábitos\n\n- [ ]\n"
+        },
+        {
+          "path": "0. Notas periódicas/Templates/Weekly.md",
+          "content": "# Revisão semanal\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. Notas periódicas/Templates/Monthly.md",
+          "content": "# Revisão mensal\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. Notas periódicas/Templates/Quarterly.md",
+          "content": "# Revisão trimestral\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOS\nProjectListByTime\n```\n\n## Áreas\n"
+        },
+        {
+          "path": "0. Notas periódicas/Templates/Yearly.md",
+          "content": "# Revisão anual\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOS\nProjectListByTime\n```\n\n## Áreas\n\n```LifeOS\nAreaListByTime\n```\n"
+        },
+        {
+          "path": "1. Projetos/Template.md",
+          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "2. Áreas/Template.md",
+          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "3. Recursos/Template.md",
+          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "4. Arquivo/Template.md",
+          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "LifeOS Comece aqui.md",
+          "role": "guide",
+          "content": "# LifeOS Comece aqui\n\nComece com seu próprio conteúdo em cinco minutos.\n\n> Capturar → conectar ao projeto ou área → usar recursos → arquivar.\n\n## Seus primeiros cinco minutos\n\n- [ ] Abrir Hoje\n- [ ] Capturar uma ideia real\n- [ ] Criar uma próxima ação concreta\n- [ ] Conectar ao PARA quando for útil\n- [ ] Preencher a revisão semanal\n\n## Destinos de trabalho\n\n- Abrir Hoje: `0. Notas periódicas`\n- Projetos: `1. Projetos`\n- Áreas: `2. Áreas`\n- Recursos: `3. Recursos`\n"
+        },
+        {
+          "path": "Exemplos LifeOS/Seu primeiro fluxo de trabalho.md",
+          "role": "example",
+          "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# Seu primeiro fluxo de trabalho\n\nCapture primeiro, depois conecte o conteúdo às ações e à estrutura.\n\n- Capture uma ideia antes de esquecê-la.\n- [ ] Transforme-a em uma pequena próxima ação.\n- Revise no fim da semana e mantenha o que importa.\n"
+        }
+      ]
+    },
+    "ja": {
+      "label": "日本語",
+      "settings": {
+        "usePeriodicNotes": true,
+        "usePARANotes": true,
+        "useDailyRecord": false,
+        "weekStart": -1,
+        "paraIndexFilename": "readme",
+        "onboardingVersion": 1,
+        "periodicNotesPath": "0. 定期ノート",
+        "projectsPath": "1. プロジェクト",
+        "areasPath": "2. 分野",
+        "resourcesPath": "3. 資料",
+        "archivesPath": "4. アーカイブ",
+        "dailyRecordHeader": "日常記録",
+        "projectListHeader": "プロジェクト一覧",
+        "areaListHeader": "分野",
+        "habitHeader": "習慣",
+        "locale": "ja"
+      },
+      "copy": {
+        "setupTitle": "LifeOS を設定",
+        "setupDescription": "最初のノートを作成できる安全なワークスペースを準備します。",
+        "setupLanguage": "テンプレートの言語",
+        "setupLanguageDescription": "フォルダ、テンプレート、入門ガイドの言語です。",
+        "setupMode": "ワークスペースの形式",
+        "setupPeriodicOnly": "定期ノートのみ",
+        "setupPeriodicOnlyDescription": "PARA フォルダを使わず、日々の記録と定期的な振り返りを行います。",
+        "setupPara": "定期ノート + PARA",
+        "setupParaDescription": "プロジェクト、分野、資料、アーカイブを追加します。",
+        "setupSafety": "不足するフォルダとテンプレートのみ作成します。既存のファイルは上書きしません。",
+        "setupPreview": "作成予定のファイル",
+        "setupBestFor": "適している用途",
+        "setupNotFor": "あまり適していない用途",
+        "setupDailyFlow": "日々の流れ",
+        "setupIncludeExamples": "サンプルを追加",
+        "setupIncludeExamplesDescription": "未編集なら後から削除できる独立したサンプルを追加します。",
+        "setupLocked": "このワークスペースの形式と言語は設定済みです。既存の構成を維持します。",
+        "setupLater": "後で",
+        "setupSubmit": "設定して今日のノートを作成",
+        "setupWorking": "設定中…",
+        "setupFailed": "LifeOS の設定に失敗しました",
+        "setupCompleteTitle": "準備ができました",
+        "setupCompleteDescription": "実際の内容で試してみましょう。最初の一巡は5分でできます。",
+        "setupOpenGuide": "入門ガイドを開く",
+        "setupOpenToday": "今日を開く",
+        "setupQuickRecord": "クイック記録",
+        "setupQuickTask": "クイックタスク",
+        "setupRemoveExamples": "未編集のサンプルを削除",
+        "setupExamplesRemoved": "未編集のサンプルを削除しました。",
+        "setupExamplesPreserved": "編集されたサンプルを保持しました。",
+        "setupCommand": "ワークスペースを設定",
+        "quickRecordCommand": "クイック記録",
+        "quickTaskCommand": "クイックタスク",
+        "quickRecordTitle": "クイック記録",
+        "quickTaskTitle": "クイックタスク",
+        "quickRecordPlaceholder": "アイデア、メモ、進捗を記録…",
+        "quickTaskPlaceholder": "次に何をしますか？",
+        "quickCaptureDescription": "今日のノートの日常記録に保存します。Ctrl/Cmd + Enter で保存。",
+        "quickCaptureSubmit": "保存",
+        "quickCaptureWorking": "保存中…",
+        "quickCaptureEmpty": "内容を入力してください。",
+        "quickCaptureSuccess": "今日のノートに保存しました。",
+        "quickCaptureFailed": "今日のノートに保存できませんでした",
+        "templateDailyTitle": "日次ノート",
+        "templateWeeklyTitle": "週の振り返り",
+        "templateMonthlyTitle": "月の振り返り",
+        "templateQuarterlyTitle": "四半期の振り返り",
+        "templateYearlyTitle": "年の振り返り",
+        "templateTasksRecorded": "記録したタスク",
+        "templateTasksCompleted": "完了したタスク",
+        "templateDailyRecords": "日常記録",
+        "templateProjects": "プロジェクト",
+        "templateAreas": "分野",
+        "templateOverview": "概要",
+        "templateTasks": "タスク",
+        "templateRecords": "記録",
+        "templateFiles": "ファイル"
+      },
+      "plans": [
+        {
+          "path": "0. 定期ノート/Templates/Daily.md",
+          "content": "# 日次ノート\n## 日常記録\n\n## プロジェクト一覧\n\n0hr0\n\n## 習慣\n\n- [ ]\n"
+        },
+        {
+          "path": "0. 定期ノート/Templates/Weekly.md",
+          "content": "# 週の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. 定期ノート/Templates/Monthly.md",
+          "content": "# 月の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. 定期ノート/Templates/Quarterly.md",
+          "content": "# 四半期の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOS\nProjectListByTime\n```\n\n## 分野\n"
+        },
+        {
+          "path": "0. 定期ノート/Templates/Yearly.md",
+          "content": "# 年の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOS\nProjectListByTime\n```\n\n## 分野\n\n```LifeOS\nAreaListByTime\n```\n"
+        },
+        {
+          "path": "1. プロジェクト/Template.md",
+          "content": "# 概要\n\n## タスク\n\n```LifeOS\nTaskListByTag\n```\n\n## 記録\n\n```LifeOS\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "2. 分野/Template.md",
+          "content": "# 概要\n\n## タスク\n\n```LifeOS\nTaskListByTag\n```\n\n## 記録\n\n```LifeOS\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "3. 資料/Template.md",
+          "content": "# 概要\n\n## タスク\n\n```LifeOS\nTaskListByTag\n```\n\n## 記録\n\n```LifeOS\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "4. アーカイブ/Template.md",
+          "content": "# 概要\n\n## タスク\n\n```LifeOS\nTaskListByTag\n```\n\n## 記録\n\n```LifeOS\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "LifeOS はじめに.md",
+          "role": "guide",
+          "content": "# LifeOS はじめに\n\n自分の内容を使って5分で始めましょう。\n\n> 記録 → プロジェクトや分野につなげる → 資料を使う → アーカイブ。\n\n## 最初の5分\n\n- [ ] 今日を開く\n- [ ] 実際のアイデアを記録する\n- [ ] 具体的な次のタスクを作る\n- [ ] 必要なときに PARA へつなげる\n- [ ] 週の振り返りを書く\n\n## 作業の入口\n\n- 今日を開く: `0. 定期ノート`\n- プロジェクト: `1. プロジェクト`\n- 分野: `2. 分野`\n- 資料: `3. 資料`\n"
+        },
+        {
+          "path": "LifeOS サンプル/最初のワークフロー.md",
+          "role": "example",
+          "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# 最初のワークフロー\n\nまず記録し、役立つ内容を行動や構成につなげます。\n\n- 忘れる前にアイデアを記録する。\n- [ ] 小さな次の行動に変える。\n- 週末に振り返り、大切な内容を残す。\n"
+        }
+      ]
+    },
+    "ko": {
+      "label": "한국어",
+      "settings": {
+        "usePeriodicNotes": true,
+        "usePARANotes": true,
+        "useDailyRecord": false,
+        "weekStart": -1,
+        "paraIndexFilename": "readme",
+        "onboardingVersion": 1,
+        "periodicNotesPath": "0. 주기 노트",
+        "projectsPath": "1. 프로젝트",
+        "areasPath": "2. 영역",
+        "resourcesPath": "3. 자료",
+        "archivesPath": "4. 보관함",
+        "dailyRecordHeader": "일상 기록",
+        "projectListHeader": "프로젝트 목록",
+        "areaListHeader": "영역",
+        "habitHeader": "습관",
+        "locale": "ko"
+      },
+      "copy": {
+        "setupTitle": "LifeOS 설정",
+        "setupDescription": "첫 노트를 만들 수 있도록 안전한 작업 공간을 준비합니다.",
+        "setupLanguage": "템플릿 언어",
+        "setupLanguageDescription": "폴더, 템플릿, 시작 안내서에 사용할 언어입니다.",
+        "setupMode": "작업 공간 모드",
+        "setupPeriodicOnly": "주기 노트만 사용",
+        "setupPeriodicOnlyDescription": "PARA 폴더 없이 일상 기록과 정기 회고를 진행합니다.",
+        "setupPara": "주기 노트 + PARA",
+        "setupParaDescription": "프로젝트, 영역, 자료, 보관함을 추가합니다.",
+        "setupSafety": "없는 폴더와 템플릿만 만듭니다. 기존 파일은 덮어쓰지 않습니다.",
+        "setupPreview": "준비할 파일",
+        "setupBestFor": "추천 용도",
+        "setupNotFor": "적합하지 않은 용도",
+        "setupDailyFlow": "일상 흐름",
+        "setupIncludeExamples": "예제 추가",
+        "setupIncludeExamplesDescription": "수정하지 않았다면 나중에 삭제할 수 있는 별도 예제를 추가합니다.",
+        "setupLocked": "이미 템플릿과 언어를 선택했습니다. 기존 구조를 유지합니다.",
+        "setupLater": "나중에",
+        "setupSubmit": "설정하고 오늘 노트 만들기",
+        "setupWorking": "설정 중…",
+        "setupFailed": "LifeOS 설정 실패",
+        "setupCompleteTitle": "작업 공간이 준비되었습니다",
+        "setupCompleteDescription": "실제 내용으로 시작해 보세요. 첫 흐름은 5분이면 충분합니다.",
+        "setupOpenGuide": "시작 안내서 열기",
+        "setupOpenToday": "오늘 열기",
+        "setupQuickRecord": "빠른 기록",
+        "setupQuickTask": "빠른 할 일",
+        "setupRemoveExamples": "수정하지 않은 예제 삭제",
+        "setupExamplesRemoved": "수정하지 않은 예제를 삭제했습니다.",
+        "setupExamplesPreserved": "수정한 예제를 유지했습니다.",
+        "setupCommand": "작업 공간 설정",
+        "quickRecordCommand": "빠른 기록",
+        "quickTaskCommand": "빠른 할 일",
+        "quickRecordTitle": "빠른 기록",
+        "quickTaskTitle": "빠른 할 일",
+        "quickRecordPlaceholder": "아이디어, 메모, 진행 상황을 기록하세요…",
+        "quickTaskPlaceholder": "무엇을 해야 하나요?",
+        "quickCaptureDescription": "오늘 노트의 일상 기록에 저장합니다. Ctrl/Cmd + Enter로 저장하세요.",
+        "quickCaptureSubmit": "저장",
+        "quickCaptureWorking": "저장 중…",
+        "quickCaptureEmpty": "먼저 내용을 입력하세요.",
+        "quickCaptureSuccess": "오늘 노트에 저장했습니다.",
+        "quickCaptureFailed": "오늘 노트에 저장할 수 없습니다",
+        "templateDailyTitle": "일일 노트",
+        "templateWeeklyTitle": "주간 회고",
+        "templateMonthlyTitle": "월간 회고",
+        "templateQuarterlyTitle": "분기 회고",
+        "templateYearlyTitle": "연간 회고",
+        "templateTasksRecorded": "기록한 할 일",
+        "templateTasksCompleted": "완료한 할 일",
+        "templateDailyRecords": "일상 기록",
+        "templateProjects": "프로젝트",
+        "templateAreas": "영역",
+        "templateOverview": "개요",
+        "templateTasks": "할 일",
+        "templateRecords": "기록",
+        "templateFiles": "파일"
+      },
+      "plans": [
+        {
+          "path": "0. 주기 노트/Templates/Daily.md",
+          "content": "# 일일 노트\n## 일상 기록\n\n## 프로젝트 목록\n\n0hr0\n\n## 습관\n\n- [ ]\n"
+        },
+        {
+          "path": "0. 주기 노트/Templates/Weekly.md",
+          "content": "# 주간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. 주기 노트/Templates/Monthly.md",
+          "content": "# 월간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. 주기 노트/Templates/Quarterly.md",
+          "content": "# 분기 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOS\nProjectListByTime\n```\n\n## 영역\n"
+        },
+        {
+          "path": "0. 주기 노트/Templates/Yearly.md",
+          "content": "# 연간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOS\nProjectListByTime\n```\n\n## 영역\n\n```LifeOS\nAreaListByTime\n```\n"
+        },
+        {
+          "path": "1. 프로젝트/Template.md",
+          "content": "# 개요\n\n## 할 일\n\n```LifeOS\nTaskListByTag\n```\n\n## 기록\n\n```LifeOS\nBulletListByTag\n```\n\n## 파일\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "2. 영역/Template.md",
+          "content": "# 개요\n\n## 할 일\n\n```LifeOS\nTaskListByTag\n```\n\n## 기록\n\n```LifeOS\nBulletListByTag\n```\n\n## 파일\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "3. 자료/Template.md",
+          "content": "# 개요\n\n## 할 일\n\n```LifeOS\nTaskListByTag\n```\n\n## 기록\n\n```LifeOS\nBulletListByTag\n```\n\n## 파일\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "4. 보관함/Template.md",
+          "content": "# 개요\n\n## 할 일\n\n```LifeOS\nTaskListByTag\n```\n\n## 기록\n\n```LifeOS\nBulletListByTag\n```\n\n## 파일\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "LifeOS 시작하기.md",
+          "role": "guide",
+          "content": "# LifeOS 시작하기\n\n실제 내용으로 5분 안에 시작해 보세요.\n\n> 기록 → 프로젝트나 영역 연결 → 자료 활용 → 보관.\n\n## 처음 5분\n\n- [ ] 오늘 열기\n- [ ] 실제 생각을 빠르게 기록하기\n- [ ] 구체적인 다음 할 일 만들기\n- [ ] 필요할 때 PARA에 연결하기\n- [ ] 주간 회고 작성하기\n\n## 작업 시작점\n\n- 오늘 열기: `0. 주기 노트`\n- 프로젝트: `1. 프로젝트`\n- 영역: `2. 영역`\n- 자료: `3. 자료`\n"
+        },
+        {
+          "path": "LifeOS 예제/첫 작업 흐름.md",
+          "role": "example",
+          "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# 첫 작업 흐름\n\n먼저 기록하고 유용한 내용을 행동과 구조에 연결하세요.\n\n- 잊기 전에 생각을 기록합니다.\n- [ ] 작은 다음 행동으로 바꿉니다.\n- 주말에 돌아보고 중요한 내용만 남깁니다.\n"
+        }
+      ]
+    },
+    "ar": {
+      "label": "العربية",
+      "settings": {
+        "usePeriodicNotes": true,
+        "usePARANotes": true,
+        "useDailyRecord": false,
+        "weekStart": -1,
+        "paraIndexFilename": "readme",
+        "onboardingVersion": 1,
+        "periodicNotesPath": "0. الملاحظات الدورية",
+        "projectsPath": "1. المشاريع",
+        "areasPath": "2. المجالات",
+        "resourcesPath": "3. الموارد",
+        "archivesPath": "4. الأرشيف",
+        "dailyRecordHeader": "السجل اليومي",
+        "projectListHeader": "قائمة المشاريع",
+        "areaListHeader": "المجالات",
+        "habitHeader": "العادات",
+        "locale": "ar"
+      },
+      "copy": {
+        "setupTitle": "إعداد LifeOS",
+        "setupDescription": "جهّز مساحة عمل آمنة لإنشاء ملاحظتك الأولى.",
+        "setupLanguage": "لغة القوالب",
+        "setupLanguageDescription": "لغة المجلدات والقوالب ودليل البدء.",
+        "setupMode": "نمط مساحة العمل",
+        "setupPeriodicOnly": "الملاحظات الدورية فقط",
+        "setupPeriodicOnlyDescription": "تسجيل يومي ومراجعات دورية دون مجلدات PARA.",
+        "setupPara": "الملاحظات الدورية + PARA",
+        "setupParaDescription": "أضف المشاريع والمجالات والموارد والأرشيف.",
+        "setupSafety": "تُنشأ المجلدات والقوالب الناقصة فقط. لا تُستبدل الملفات الموجودة.",
+        "setupPreview": "الملفات المقترحة",
+        "setupBestFor": "مناسب لـ",
+        "setupNotFor": "أقل ملاءمة لـ",
+        "setupDailyFlow": "سير العمل اليومي",
+        "setupIncludeExamples": "إضافة مثال",
+        "setupIncludeExamplesDescription": "مثال مستقل يمكن حذفه لاحقًا إن لم يتم تعديله.",
+        "setupLocked": "تم اختيار القالب واللغة مسبقًا. سيُحفظ الهيكل الحالي.",
+        "setupLater": "لاحقًا",
+        "setupSubmit": "الإعداد وإنشاء ملاحظة اليوم",
+        "setupWorking": "جارٍ الإعداد…",
+        "setupFailed": "فشل إعداد LifeOS",
+        "setupCompleteTitle": "مساحة العمل جاهزة",
+        "setupCompleteDescription": "جرّب إجراءً حقيقيًا. تكفي خمس دقائق لإكمال الدورة الأولى.",
+        "setupOpenGuide": "فتح دليل البدء",
+        "setupOpenToday": "فتح اليوم",
+        "setupQuickRecord": "تسجيل سريع",
+        "setupQuickTask": "مهمة سريعة",
+        "setupRemoveExamples": "حذف المثال غير المعدّل",
+        "setupExamplesRemoved": "تم حذف المثال غير المعدّل.",
+        "setupExamplesPreserved": "تم الاحتفاظ بالمثال المعدّل.",
+        "setupCommand": "إعداد مساحة العمل",
+        "quickRecordCommand": "تسجيل سريع",
+        "quickTaskCommand": "مهمة سريعة",
+        "quickRecordTitle": "تسجيل سريع",
+        "quickTaskTitle": "مهمة سريعة",
+        "quickRecordPlaceholder": "سجّل فكرة أو ملاحظة أو تحديثًا…",
+        "quickTaskPlaceholder": "ما الذي يجب فعله؟",
+        "quickCaptureDescription": "يُحفظ في قسم السجل اليومي لملاحظة اليوم. اضغط Ctrl/Cmd + Enter للحفظ.",
+        "quickCaptureSubmit": "حفظ",
+        "quickCaptureWorking": "جارٍ الحفظ…",
+        "quickCaptureEmpty": "أدخل محتوى أولًا.",
+        "quickCaptureSuccess": "تم الحفظ في ملاحظة اليوم.",
+        "quickCaptureFailed": "تعذّر الحفظ في ملاحظة اليوم",
+        "templateDailyTitle": "ملاحظة يومية",
+        "templateWeeklyTitle": "مراجعة أسبوعية",
+        "templateMonthlyTitle": "مراجعة شهرية",
+        "templateQuarterlyTitle": "مراجعة ربع سنوية",
+        "templateYearlyTitle": "مراجعة سنوية",
+        "templateTasksRecorded": "المهام المسجلة",
+        "templateTasksCompleted": "المهام المكتملة",
+        "templateDailyRecords": "السجل اليومي",
+        "templateProjects": "المشاريع",
+        "templateAreas": "المجالات",
+        "templateOverview": "نظرة عامة",
+        "templateTasks": "المهام",
+        "templateRecords": "السجلات",
+        "templateFiles": "الملفات"
+      },
+      "plans": [
+        {
+          "path": "0. الملاحظات الدورية/Templates/Daily.md",
+          "content": "# ملاحظة يومية\n## السجل اليومي\n\n## قائمة المشاريع\n\n0hr0\n\n## العادات\n\n- [ ]\n"
+        },
+        {
+          "path": "0. الملاحظات الدورية/Templates/Weekly.md",
+          "content": "# مراجعة أسبوعية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. الملاحظات الدورية/Templates/Monthly.md",
+          "content": "# مراجعة شهرية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOS\nProjectListByTime\n```\n"
+        },
+        {
+          "path": "0. الملاحظات الدورية/Templates/Quarterly.md",
+          "content": "# مراجعة ربع سنوية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOS\nProjectListByTime\n```\n\n## المجالات\n"
+        },
+        {
+          "path": "0. الملاحظات الدورية/Templates/Yearly.md",
+          "content": "# مراجعة سنوية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOS\nProjectListByTime\n```\n\n## المجالات\n\n```LifeOS\nAreaListByTime\n```\n"
+        },
+        {
+          "path": "1. المشاريع/Template.md",
+          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOS\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOS\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "2. المجالات/Template.md",
+          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOS\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOS\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "3. الموارد/Template.md",
+          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOS\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOS\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "4. الأرشيف/Template.md",
+          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOS\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOS\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOS\nFileListByTag\n```\n"
+        },
+        {
+          "path": "LifeOS ابدأ هنا.md",
+          "role": "guide",
+          "content": "# LifeOS ابدأ هنا\n\nابدأ بمحتواك الحقيقي خلال خمس دقائق.\n\n> سجّل → اربط بمشروع أو مجال → استخدم الموارد → أرشف.\n\n## الدقائق الخمس الأولى\n\n- [ ] فتح اليوم\n- [ ] تسجيل فكرة حقيقية\n- [ ] إنشاء مهمة تالية محددة\n- [ ] الربط بـ PARA عند الحاجة\n- [ ] كتابة المراجعة الأسبوعية\n\n## نقاط العمل\n\n- فتح اليوم: `0. الملاحظات الدورية`\n- المشاريع: `1. المشاريع`\n- المجالات: `2. المجالات`\n- الموارد: `3. الموارد`\n"
+        },
+        {
+          "path": "أمثلة LifeOS/سير عملك الأول.md",
+          "role": "example",
+          "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# سير عملك الأول\n\nسجّل أولًا ثم اربط المحتوى المفيد بالعمل والهيكل.\n\n- سجّل فكرة قبل نسيانها.\n- [ ] حوّلها إلى خطوة تالية صغيرة.\n- راجعها في نهاية الأسبوع واحتفظ بالمهم.\n"
+        }
+      ]
+    }
+  }
+}

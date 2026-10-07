@@ -1,0 +1,5 @@
+# المجالات
+
+```LifeOS
+AreaListByFolder
+```

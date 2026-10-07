@@ -1,0 +1,62 @@
+{
+  "en": [
+    "Open this folder as a vault in Obsidian.",
+    "Install LifeOS (`periodic-para`) and Dataview from Settings → Community plugins, then enable them.",
+    "Run the LifeOS workspace setup command or open the starting guide. Existing templates and their language are preserved.",
+    "Plugin binaries, personal account data, and Pro resources are not included."
+  ],
+  "zh-cn": [
+    "在 Obsidian 中将此文件夹打开为仓库。",
+    "在「设置 → 第三方插件」中安装并启用 LifeOS（`periodic-para`）和 Dataview。",
+    "运行 LifeOS 的初始化命令，或直接打开入门指南。已有模板、内容和模板语言会保留。",
+    "本包不包含插件二进制、个人账号数据或 Pro 资源。"
+  ],
+  "zh-tw": [
+    "在 Obsidian 中將此資料夾開啟為儲存庫。",
+    "在「設定 → 第三方外掛」中安裝並啟用 LifeOS（`periodic-para`）和 Dataview。",
+    "執行 LifeOS 初始化命令，或直接開啟入門指南。既有範本、內容和範本語言會保留。",
+    "本套件不含外掛二進位檔、個人帳號資料或 Pro 資源。"
+  ],
+  "de": [
+    "Öffne diesen Ordner als Vault in Obsidian.",
+    "Installiere LifeOS (`periodic-para`) und Dataview unter Einstellungen → Community-Erweiterungen und aktiviere sie.",
+    "Führe den LifeOS-Einrichtungsbefehl aus oder öffne die Einführung. Vorhandene Vorlagen und ihre Sprache bleiben erhalten.",
+    "Keine Plugin-Binärdateien, persönlichen Kontodaten oder Pro-Ressourcen enthalten."
+  ],
+  "es": [
+    "Abre esta carpeta como bóveda en Obsidian.",
+    "Instala LifeOS (`periodic-para`) y Dataview en Ajustes → Plugins de la comunidad y actívalos.",
+    "Ejecuta el comando de configuración de LifeOS o abre la guía inicial. Se conservan las plantillas y su idioma.",
+    "No incluye binarios de plugins, datos personales de cuentas ni recursos de Pro."
+  ],
+  "fr": [
+    "Ouvrez ce dossier comme coffre dans Obsidian.",
+    "Installez et activez LifeOS (`periodic-para`) et Dataview dans Paramètres → Modules complémentaires.",
+    "Exécutez la commande de configuration LifeOS ou ouvrez le guide de démarrage. Les modèles existants et leur langue sont conservés.",
+    "Aucun binaire de module, donnée personnelle de compte ou ressource Pro n’est inclus."
+  ],
+  "pt": [
+    "Abra esta pasta como cofre no Obsidian.",
+    "Instale e ative LifeOS (`periodic-para`) e Dataview em Configurações → Plugins da comunidade.",
+    "Execute o comando de configuração do LifeOS ou abra o guia inicial. Os modelos existentes e seu idioma são mantidos.",
+    "Não inclui binários de plugins, dados pessoais de contas ou recursos do Pro."
+  ],
+  "ja": [
+    "このフォルダを Obsidian の保管庫として開きます。",
+    "設定 → コミュニティプラグインで LifeOS（`periodic-para`）と Dataview をインストールし、有効にします。",
+    "LifeOS の設定コマンドを実行するか、入門ガイドを開きます。既存のテンプレートとその言語は維持します。",
+    "プラグインのバイナリ、個人アカウント情報、Pro の資料は含まれません。"
+  ],
+  "ko": [
+    "이 폴더를 Obsidian 보관함으로 여세요.",
+    "설정 → 커뮤니티 플러그인에서 LifeOS(`periodic-para`)와 Dataview를 설치하고 켜세요.",
+    "LifeOS 작업 공간 설정 명령을 실행하거나 시작 안내서를 여세요. 기존 템플릿과 언어는 유지합니다.",
+    "플러그인 바이너리, 개인 계정 정보, Pro 자료는 포함하지 않습니다."
+  ],
+  "ar": [
+    "افتح هذا المجلد كخزنة في Obsidian.",
+    "ثبّت LifeOS (`periodic-para`) وDataview من الإعدادات ← إضافات المجتمع ثم فعّلهما.",
+    "شغّل أمر إعداد مساحة LifeOS أو افتح دليل البدء. تُحفظ القوالب الحالية ولغتها.",
+    "لا يتضمن ملفات إضافات تنفيذية أو بيانات حسابات شخصية أو موارد Pro."
+  ]
+}

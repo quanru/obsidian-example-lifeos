@@ -21,55 +21,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Package all language vaults
-        run: |
-          mkdir -p dist build
-
-          EN_NAME=$(node -e "
-            const m = require('./i18n/manifest.json');
-            console.log(m.languages.en.archiveName || 'LifeOS');
-          ")
-          echo "Packaging en -> ${EN_NAME}.zip"
-          mkdir -p "build/${EN_NAME}"
-          rsync -a \
-            --exclude 'i18n' \
-            --exclude 'scripts' \
-            --exclude '.github' \
-            --exclude '.git' \
-            --exclude 'dist' \
-            --exclude 'build' \
-            --exclude 'node_modules' \
-            ./ "build/${EN_NAME}/"
-          (cd build && zip -r "../dist/${EN_NAME}.zip" "${EN_NAME}" >/dev/null)
-
-          LANGS=$(node -e "
-            const m = require('./i18n/manifest.json');
-            console.log(Object.keys(m.languages).filter(l => l !== 'en').join(' '));
-          ")
-
-          for lang in $LANGS; do
-            ARCHIVE_NAME=$(node -e "
-              const m = require('./i18n/manifest.json');
-              console.log(m.languages['${lang}'].archiveName || 'LifeOS_${lang}');
-            ")
-            SRC="i18n/${lang}"
-            if [ ! -d "$SRC" ]; then
-              echo "Skipping ${lang}: ${SRC} does not exist"
-              continue
-            fi
-            echo "Packaging ${lang} -> ${ARCHIVE_NAME}.zip"
-            mkdir -p "build/${ARCHIVE_NAME}"
-            # If the language dir already has .obsidian/ (e.g. legacy zh), use it as-is.
-            # Otherwise, copy root .obsidian/ to provide full vault config.
-            if [ ! -d "$SRC/.obsidian" ]; then
-              rsync -a .obsidian "build/${ARCHIVE_NAME}/"
-            fi
-            rsync -a "$SRC/" "build/${ARCHIVE_NAME}/"
-            (cd build && zip -r "../dist/${ARCHIVE_NAME}.zip" "${ARCHIVE_NAME}" >/dev/null)
-          done
-
-          echo "Generated archives:"
-          ls -lh dist/
+      - name: Validate and package all language vaults
+        run: python3 scripts/examples/package.py
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

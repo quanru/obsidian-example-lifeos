@@ -1,0 +1,18 @@
+{
+  "usePeriodicNotes": true,
+  "usePARANotes": true,
+  "useDailyRecord": false,
+  "weekStart": -1,
+  "paraIndexFilename": "readme",
+  "onboardingVersion": 1,
+  "periodicNotesPath": "0. Periodic Notes",
+  "projectsPath": "1. Projects",
+  "areasPath": "2. Areas",
+  "resourcesPath": "3. Resources",
+  "archivesPath": "4. Archive",
+  "dailyRecordHeader": "Daily Record",
+  "projectListHeader": "Project List",
+  "areaListHeader": "Areas",
+  "habitHeader": "Habits",
+  "locale": "en"
+}

@@ -1,0 +1,18 @@
+{
+  "usePeriodicNotes": true,
+  "usePARANotes": true,
+  "useDailyRecord": false,
+  "weekStart": -1,
+  "paraIndexFilename": "readme",
+  "onboardingVersion": 1,
+  "periodicNotesPath": "0. 定期ノート",
+  "projectsPath": "1. プロジェクト",
+  "areasPath": "2. 分野",
+  "resourcesPath": "3. 資料",
+  "archivesPath": "4. アーカイブ",
+  "dailyRecordHeader": "日常記録",
+  "projectListHeader": "プロジェクト一覧",
+  "areaListHeader": "分野",
+  "habitHeader": "習慣",
+  "locale": "ja"
+}

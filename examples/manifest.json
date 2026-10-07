@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "source": "Open-source LifeOS starter templates",
+  "languages": {
+    "en": {
+      "label": "English",
+      "example": "examples/en/LifeOS Vault",
+      "blank": "examples/en/LifeOS Blank Vault",
+      "archiveName": "LifeOS"
+    },
+    "zh-cn": {
+      "label": "简体中文",
+      "example": "examples/zh-cn/LifeOS Vault",
+      "blank": "examples/zh-cn/LifeOS Blank Vault",
+      "archiveName": "LifeOS_ZH"
+    },
+    "zh-tw": {
+      "label": "繁體中文",
+      "example": "examples/zh-tw/LifeOS Vault",
+      "blank": "examples/zh-tw/LifeOS Blank Vault",
+      "archiveName": "LifeOS_ZH_TW"
+    },
+    "de": {
+      "label": "Deutsch",
+      "example": "examples/de/LifeOS Vault",
+      "blank": "examples/de/LifeOS Blank Vault",
+      "archiveName": "LifeOS_DE"
+    },
+    "es": {
+      "label": "Español",
+      "example": "examples/es/LifeOS Vault",
+      "blank": "examples/es/LifeOS Blank Vault",
+      "archiveName": "LifeOS_ES"
+    },
+    "fr": {
+      "label": "Français",
+      "example": "examples/fr/LifeOS Vault",
+      "blank": "examples/fr/LifeOS Blank Vault",
+      "archiveName": "LifeOS_FR"
+    },
+    "pt": {
+      "label": "Português",
+      "example": "examples/pt/LifeOS Vault",
+      "blank": "examples/pt/LifeOS Blank Vault",
+      "archiveName": "LifeOS_PT"
+    },
+    "ja": {
+      "label": "日本語",
+      "example": "examples/ja/LifeOS Vault",
+      "blank": "examples/ja/LifeOS Blank Vault",
+      "archiveName": "LifeOS_JA"
+    },
+    "ko": {
+      "label": "한국어",
+      "example": "examples/ko/LifeOS Vault",
+      "blank": "examples/ko/LifeOS Blank Vault",
+      "archiveName": "LifeOS_KO"
+    },
+    "ar": {
+      "label": "العربية",
+      "example": "examples/ar/LifeOS Vault",
+      "blank": "examples/ar/LifeOS Blank Vault",
+      "archiveName": "LifeOS_AR"
+    }
+  }
+}

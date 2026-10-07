@@ -1,0 +1,5 @@
+# Areas
+
+```LifeOS
+AreaListByFolder
+```

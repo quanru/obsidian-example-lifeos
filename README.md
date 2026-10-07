@@ -1,4 +1,4 @@
-<p align="center"><strong>English</strong> | <a href="i18n/zh">简体中文</a> | <a href="i18n/zh-tw">繁體中文</a> | <a href="i18n/ja">日本語</a> | <a href="i18n/de">Deutsch</a> | <a href="i18n/es">Español</a> | <a href="i18n/fr">Français</a> | <a href="i18n/pt">Português</a> | <a href="i18n/ar">العربية</a></p>
+<p align="center"><strong>English</strong> | <a href="examples/zh-cn">简体中文</a> | <a href="examples/zh-tw">繁體中文</a> | <a href="examples/ja">日本語</a> | <a href="examples/de">Deutsch</a> | <a href="examples/es">Español</a> | <a href="examples/fr">Français</a> | <a href="examples/pt">Português</a> | <a href="examples/ar">العربية</a> | <a href="examples/ko">한국어</a></p>
 
 <a href="https://obsidian.md/blog/2024-goty-winners/">🔥 LifeOS for Obsidian won the third place 🥉 in the Best Templates category at the 2024 Obsidian Gems of the Year awards!</a>
 
@@ -10,9 +10,11 @@
 </a>
 <a href="https://trendshift.io/repositories/7903" target="_blank"><img src="https://trendshift.io/api/badge/repositories/7903" alt="quanru%2Fobsidian-example-LifeOS | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-- This is a plugin for [LifeOS](https://lifeos.vip), which assist in practicing the PARA method with periodic notes and [usememos](https://www.usememos.com/).
-- It is recommended to download the [LifeOS-example](https://github.com/quanru/obsidian-example-lifeos/archive/refs/heads/main.zip) to experience it.
-- For more tutorials, please go to [LifeOS for Obsidian Official Site](https://lifeos.vip/)
+This is the **open-source LifeOS example vault**, for the free [LifeOS plugin](https://github.com/quanru/obsidian-lifeos). The current starter packages support ten languages: English, Simplified Chinese, Traditional Chinese, German, Spanish, French, Portuguese, Japanese, Korean, and Arabic.
+
+Each language includes **LifeOS Vault** (with a small working example) and **LifeOS Blank Vault** (templates and folder structure for your own notes). Open one vault folder in Obsidian, install **LifeOS** and **Dataview** from Community plugins, then open the local starting guide. Folder names, templates, and plugin settings use the same language. No Pro resources or plugin binaries are bundled.
+
+The older article-rich examples remain in the root and `i18n/` for reference. New starter packages live under [`examples/`](examples/README.md).
 
 ![](https://obsidian-life-os.pages.dev/plugin/periodic-para-plugin-en.png)
 
@@ -25,11 +27,14 @@
 
 ## Download
 
+Release downloads below become available after publishing the updated packages. To use the current local files, open a vault under `examples/<language>/`. Each ZIP includes both example and blank vaults.
+
 Download the vault in your preferred language from the [latest release](https://github.com/quanru/obsidian-example-lifeos/releases/latest):
 
 - [LifeOS (English)](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS.zip)
 - [LifeOS 简体中文](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_ZH.zip)
 - [LifeOS 繁體中文](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_ZH_TW.zip)
+- [LifeOS 한국어](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_KO.zip)
 - [LifeOS 日本語](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_JA.zip)
 - [LifeOS Deutsch](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_DE.zip)
 - [LifeOS Español](https://github.com/quanru/obsidian-example-lifeos/releases/latest/download/LifeOS_ES.zip)
