@@ -2,7 +2,7 @@
 
 Choose `examples/<language>/LifeOS Vault` to explore the workflow, or `LifeOS Blank Vault` to start with your own notes. Supported languages: `en`, `zh-cn`, `zh-tw`, `de`, `es`, `fr`, `pt`, `ja`, `ko`, `ar`.
 
-Open the chosen folder as a vault in Obsidian. Install LifeOS (`periodic-para`) and Dataview from Community plugins and enable them. Read `INSTALL.md` and the localized starting guide. The free plugin works independently of Pro; initialization, quick capture, and weekly review do not require Dataview, while LifeOS query blocks do.
+Open the chosen folder as a vault in Obsidian. Install LifeOS 1.28.0 or newer (`periodic-para`) and Dataview from Community plugins and enable them. Read `INSTALL.md` and the localized starting guide. The free plugin works independently of Pro; initialization, quick capture, and weekly review do not require Dataview, while LifeOS query blocks do.
 
 The template language is recorded in `.lifeos/template-profile.json`. Changing the display language does not rename existing notes or convert their content. Initialization adds missing files and preserves edits. Each generated vault has localized folder paths and section headers in its LifeOS settings.
 
