@@ -1,0 +1,26 @@
+{
+  "version": "1.20.0",
+  "commit": "94fe1739f34da5095cfb6354a41a771ebf6d87e2",
+  "url": "https://github.com/quanru/obsidian-example-lifeos/releases/tag/1.20.0",
+  "publishedAt": "2026-10-10T13:02:45Z",
+  "verifiedAt": "2026-10-10T13:05:30.053409+00:00",
+  "artifactSha256": {
+    "LifeOS_ES.zip": "efd04d7db1235c8abe0877a8c67d7234537adf5ac6829b9b3f81ac01e336849d",
+    "LifeOS_KO.zip": "c7daed4ddb00e136c5d460ae509928e2182ef7a173209c7f9003c544ac69e9b2",
+    "LifeOS_DE.zip": "0086daeecffdf478d36f2bb4e8210410bb015ef3d962ee1d023e39dbdb35901e",
+    "LifeOS_PT.zip": "fbda856ba635fb3f6f34c56ee877131f8f46bb0084b604b83d1b73acde679e88",
+    "LifeOS_ZH_TW.zip": "74fbd745a6a157766091ae69f3cf337c727ef94046a102a73b50d90cd727eb89",
+    "LifeOS_AR.zip": "d397951959a3250d8cbeb84579e6705c4a434824811ecbb0840228b9a4633948",
+    "LifeOS.zip": "c658171e5e39fdf800deb76cbd3c5bb802f52521acb2659e0c8db6623be280c7",
+    "LifeOS_ZH.zip": "2620c4730b71d9edbce7a0133ca2e741b1576f4a8fe6462c9d1f9466e80100df",
+    "LifeOS_JA.zip": "0c88589f65a81223d6523b11a7fb5116cfbaf83a8f09add38f418bdde4d0a542",
+    "LifeOS_FR.zip": "f080c2d11c8f07abacf3bc43f796a4b3e80db3271fd0c8694263fadf0b9b9197"
+  },
+  "downloadedAssetsMatched": true,
+  "publishedAssetDigestsMatched": true,
+  "languages": 10,
+  "variantsPerLanguage": 4,
+  "generatedFilesValidated": 770,
+  "pluginBinariesBundled": false,
+  "remoteCITriggered": false
+}
