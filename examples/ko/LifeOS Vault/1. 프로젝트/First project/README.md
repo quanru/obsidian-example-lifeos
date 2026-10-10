@@ -2,10 +2,22 @@
 tags: [lifeos/first-project]
 ---
 
-# 프로젝트
+# 개요
 
-- 잊기 전에 생각을 기록합니다.
+## 할 일
 
 ```LifeOS
 TaskListByTag
+```
+
+## 기록
+
+```LifeOS
+BulletListByTag
+```
+
+## 파일
+
+```LifeOS
+FileListByTag
 ```

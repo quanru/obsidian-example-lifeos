@@ -2,10 +2,22 @@
 tags: [lifeos/first-project]
 ---
 
-# 项目
+# 概览
 
-- 一条在消失前捕获的真实想法。
+## 任务
 
 ```LifeOS
 TaskListByTag
+```
+
+## 记录
+
+```LifeOS
+BulletListByTag
+```
+
+## 文件
+
+```LifeOS
+FileListByTag
 ```

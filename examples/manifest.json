@@ -6,60 +6,80 @@
       "label": "English",
       "example": "examples/en/LifeOS Vault",
       "blank": "examples/en/LifeOS Blank Vault",
+      "themeExample": "examples/en/LifeOS Theme Vault",
+      "themeBlank": "examples/en/LifeOS Theme Blank Vault",
       "archiveName": "LifeOS"
     },
     "zh-cn": {
       "label": "简体中文",
       "example": "examples/zh-cn/LifeOS Vault",
       "blank": "examples/zh-cn/LifeOS Blank Vault",
+      "themeExample": "examples/zh-cn/LifeOS Theme Vault",
+      "themeBlank": "examples/zh-cn/LifeOS Theme Blank Vault",
       "archiveName": "LifeOS_ZH"
     },
     "zh-tw": {
       "label": "繁體中文",
       "example": "examples/zh-tw/LifeOS Vault",
       "blank": "examples/zh-tw/LifeOS Blank Vault",
+      "themeExample": "examples/zh-tw/LifeOS Theme Vault",
+      "themeBlank": "examples/zh-tw/LifeOS Theme Blank Vault",
       "archiveName": "LifeOS_ZH_TW"
     },
     "de": {
       "label": "Deutsch",
       "example": "examples/de/LifeOS Vault",
       "blank": "examples/de/LifeOS Blank Vault",
+      "themeExample": "examples/de/LifeOS Theme Vault",
+      "themeBlank": "examples/de/LifeOS Theme Blank Vault",
       "archiveName": "LifeOS_DE"
     },
     "es": {
       "label": "Español",
       "example": "examples/es/LifeOS Vault",
       "blank": "examples/es/LifeOS Blank Vault",
+      "themeExample": "examples/es/LifeOS Theme Vault",
+      "themeBlank": "examples/es/LifeOS Theme Blank Vault",
       "archiveName": "LifeOS_ES"
     },
     "fr": {
       "label": "Français",
       "example": "examples/fr/LifeOS Vault",
       "blank": "examples/fr/LifeOS Blank Vault",
+      "themeExample": "examples/fr/LifeOS Theme Vault",
+      "themeBlank": "examples/fr/LifeOS Theme Blank Vault",
       "archiveName": "LifeOS_FR"
     },
     "pt": {
       "label": "Português",
       "example": "examples/pt/LifeOS Vault",
       "blank": "examples/pt/LifeOS Blank Vault",
+      "themeExample": "examples/pt/LifeOS Theme Vault",
+      "themeBlank": "examples/pt/LifeOS Theme Blank Vault",
       "archiveName": "LifeOS_PT"
     },
     "ja": {
       "label": "日本語",
       "example": "examples/ja/LifeOS Vault",
       "blank": "examples/ja/LifeOS Blank Vault",
+      "themeExample": "examples/ja/LifeOS Theme Vault",
+      "themeBlank": "examples/ja/LifeOS Theme Blank Vault",
       "archiveName": "LifeOS_JA"
     },
     "ko": {
       "label": "한국어",
       "example": "examples/ko/LifeOS Vault",
       "blank": "examples/ko/LifeOS Blank Vault",
+      "themeExample": "examples/ko/LifeOS Theme Vault",
+      "themeBlank": "examples/ko/LifeOS Theme Blank Vault",
       "archiveName": "LifeOS_KO"
     },
     "ar": {
       "label": "العربية",
       "example": "examples/ar/LifeOS Vault",
       "blank": "examples/ar/LifeOS Blank Vault",
+      "themeExample": "examples/ar/LifeOS Theme Vault",
+      "themeBlank": "examples/ar/LifeOS Theme Blank Vault",
       "archiveName": "LifeOS_AR"
     }
   }

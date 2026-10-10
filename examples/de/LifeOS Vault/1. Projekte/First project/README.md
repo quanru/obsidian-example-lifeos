@@ -2,10 +2,22 @@
 tags: [lifeos/first-project]
 ---
 
-# Projekte
+# Übersicht
 
-- Einen Gedanken festhalten, bevor er verloren geht.
+## Aufgaben
 
 ```LifeOS
 TaskListByTag
+```
+
+## Notizen
+
+```LifeOS
+BulletListByTag
+```
+
+## Dateien
+
+```LifeOS
+FileListByTag
 ```

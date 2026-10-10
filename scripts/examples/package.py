@@ -12,7 +12,7 @@ output.mkdir(exist_ok=True)
 for locale, entry in manifest['languages'].items():
     archive = output / (entry['archiveName'] + '.zip')
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as bundle:
-        for kind in ['example', 'blank']:
+        for kind in ['example', 'blank', 'themeExample', 'themeBlank']:
             source = root / entry[kind]
             for file in sorted(source.rglob('*')):
                 if file.is_file():

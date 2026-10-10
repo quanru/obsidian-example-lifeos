@@ -1,5 +1,10 @@
 {
   "usePeriodicNotes": true,
+  "useThemeNotes": true,
+  "useThemeFolderSync": true,
+  "useThemeAdvanced": false,
+  "themeIndexFilename": "readme",
+  "useThemeSearch": true,
   "usePARANotes": true,
   "useDailyRecord": false,
   "weekStart": -1,
@@ -14,5 +19,6 @@
   "projectListHeader": "قائمة المشاريع",
   "areaListHeader": "المجالات",
   "habitHeader": "العادات",
+  "themesPath": "المواضيع",
   "locale": "ar"
 }

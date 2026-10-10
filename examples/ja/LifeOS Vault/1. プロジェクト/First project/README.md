@@ -2,10 +2,22 @@
 tags: [lifeos/first-project]
 ---
 
-# プロジェクト
+# 概要
 
-- 忘れる前にアイデアを記録する。
+## タスク
 
 ```LifeOS
 TaskListByTag
+```
+
+## 記録
+
+```LifeOS
+BulletListByTag
+```
+
+## ファイル
+
+```LifeOS
+FileListByTag
 ```

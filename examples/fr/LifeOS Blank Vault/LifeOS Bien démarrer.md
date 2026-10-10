@@ -10,7 +10,6 @@ Commencez avec votre propre contenu en cinq minutes.
 - [ ] Capturer une idée réelle
 - [ ] Créer une prochaine action concrète
 - [ ] Relier à PARA si utile
-- [ ] Compléter le bilan hebdomadaire
 
 ## Points d’entrée
 

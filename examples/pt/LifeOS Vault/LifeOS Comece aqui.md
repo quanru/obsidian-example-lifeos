@@ -10,7 +10,6 @@ Comece com seu próprio conteúdo em cinco minutos.
 - [ ] Capturar uma ideia real
 - [ ] Criar uma próxima ação concreta
 - [ ] Conectar ao PARA quando for útil
-- [ ] Preencher a revisão semanal
 
 ## Destinos de trabalho
 

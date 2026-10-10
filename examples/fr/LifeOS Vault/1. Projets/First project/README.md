@@ -2,10 +2,22 @@
 tags: [lifeos/first-project]
 ---
 
-# Projets
+# Vue d’ensemble
 
-- Capturer une idée avant de l’oublier.
+## Tâches
 
 ```LifeOS
 TaskListByTag
+```
+
+## Notes
+
+```LifeOS
+BulletListByTag
+```
+
+## Fichiers
+
+```LifeOS
+FileListByTag
 ```

@@ -10,7 +10,6 @@ Complete this five-minute loop with your own material.
 - [ ] Quick-capture one real thought
 - [ ] Create one concrete next-action task
 - [ ] Connect it to PARA only when useful
-- [ ] Run Weekly review and write your first reflection
 
 ## Working destinations
 

@@ -2,10 +2,22 @@
 tags: [lifeos/first-project]
 ---
 
-# Projects
+# Overview
 
-- A thought captured before it disappeared.
+## Tasks
 
 ```LifeOS
 TaskListByTag
+```
+
+## Records
+
+```LifeOS
+BulletListByTag
+```
+
+## Files
+
+```LifeOS
+FileListByTag
 ```

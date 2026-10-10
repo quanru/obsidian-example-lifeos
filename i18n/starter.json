@@ -5,6 +5,11 @@
       "label": "English",
       "settings": {
         "usePeriodicNotes": true,
+        "useThemeNotes": true,
+        "useThemeFolderSync": true,
+        "useThemeAdvanced": false,
+        "themeIndexFilename": "readme",
+        "useThemeSearch": true,
         "usePARANotes": true,
         "useDailyRecord": false,
         "weekStart": -1,
@@ -19,6 +24,7 @@
         "projectListHeader": "Project List",
         "areaListHeader": "Areas",
         "habitHeader": "Habits",
+        "themesPath": "Themes",
         "locale": "en"
       },
       "copy": {
@@ -120,19 +126,91 @@
         {
           "path": "LifeOS Start Here.md",
           "role": "guide",
-          "content": "# Start Here\n\nComplete this five-minute loop with your own material.\n\n> Capture → connect to Project or Area → use Resources → Archive.\n\n## Your first five minutes\n\n- [ ] Open Today and start from the present\n- [ ] Quick-capture one real thought\n- [ ] Create one concrete next-action task\n- [ ] Connect it to PARA only when useful\n- [ ] Run Weekly review and write your first reflection\n\n## Working destinations\n\n- Open Today: `0. Periodic Notes`\n- Projects: `1. Projects`\n- Areas: `2. Areas`\n- Resources: `3. Resources`\n"
+          "content": "# Start Here\n\nComplete this five-minute loop with your own material.\n\n> Capture → connect to Project or Area → use Resources → Archive.\n\n## Your first five minutes\n\n- [ ] Open Today and start from the present\n- [ ] Quick-capture one real thought\n- [ ] Create one concrete next-action task\n- [ ] Connect it to PARA only when useful\n\n## Working destinations\n\n- Open Today: `0. Periodic Notes`\n- Projects: `1. Projects`\n- Areas: `2. Areas`\n- Resources: `3. Resources`\n"
         },
         {
           "path": "LifeOS Examples/First workflow.md",
           "role": "example",
           "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# Your first real workflow\n\nCapture first, then connect useful material to action and structure.\n\n- A thought captured before it disappeared.\n- [ ] Turn it into one small next action.\n- Review it at the end of the week and keep only what matters.\n"
         }
-      ]
+      ],
+      "themes": {
+        "settings": {
+          "usePeriodicNotes": true,
+          "useThemeNotes": true,
+          "useThemeFolderSync": true,
+          "useThemeAdvanced": false,
+          "themeIndexFilename": "readme",
+          "useThemeSearch": true,
+          "usePARANotes": false,
+          "useDailyRecord": false,
+          "weekStart": -1,
+          "paraIndexFilename": "readme",
+          "onboardingVersion": 1,
+          "periodicNotesPath": "0. Periodic Notes",
+          "projectsPath": "1. Projects",
+          "areasPath": "2. Areas",
+          "resourcesPath": "3. Resources",
+          "archivesPath": "4. Archive",
+          "dailyRecordHeader": "Daily Record",
+          "projectListHeader": "Project List",
+          "areaListHeader": "Areas",
+          "habitHeader": "Habits",
+          "themesPath": "Themes",
+          "locale": "en"
+        },
+        "plans": [
+          {
+            "path": "0. Periodic Notes/Templates/Daily.md",
+            "content": "# Daily note\n## Daily Record\n\n## Theme notes\n\n{{snapshot:Theme}}\n\n## Habits\n\n- [ ]\n"
+          },
+          {
+            "path": "0. Periodic Notes/Templates/Weekly.md",
+            "content": "# Weekly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Periodic Notes/Templates/Monthly.md",
+            "content": "# Monthly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Periodic Notes/Templates/Quarterly.md",
+            "content": "# Quarterly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Periodic Notes/Templates/Yearly.md",
+            "content": "# Yearly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "Themes/Template.md",
+            "content": "# Overview\n\n## Tasks\n\n```LifeOS\nTaskListByTag\n```\n\n## Records\n\n```LifeOS\nBulletListByTag\n```\n\n## Files\n\n```LifeOS\nFileListByTag\n```\n\n## Theme notes\n\n```LifeOS\nThemeListByTag\n```\n"
+          },
+          {
+            "path": "Themes/README.md",
+            "content": "# Theme notes\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "role": "guide"
+          },
+          {
+            "path": "LifeOS Start Here.md",
+            "role": "guide",
+            "content": "# Start Here\n\nComplete this five-minute loop with your own material.\n\n> Capture → associate a theme → open its records and tasks.\n\n## Your first five minutes\n\n- [ ] Open Today and start from the present\n- [ ] Quick-capture one real thought\n- [ ] Create one concrete next-action task\n- [ ] Capture → associate a theme → open its records and tasks.\n\n## Working destinations\n\n- Open Today: `0. Periodic Notes`\n- Theme notes: `Themes`\n"
+          },
+          {
+            "path": "LifeOS Examples/First workflow.md",
+            "role": "example",
+            "content": "---\nlifeos-onboarding-example: true\nlifeos-template: theme\n---\n\n# Your first real workflow\n\nCapture first, then connect useful material to action and structure.\n\n- A thought captured before it disappeared.\n- [ ] Turn it into one small next action.\n- Review it at the end of the week and keep only what matters.\n"
+          }
+        ]
+      }
     },
     "zh-cn": {
       "label": "简体中文",
       "settings": {
         "usePeriodicNotes": true,
+        "useThemeNotes": true,
+        "useThemeFolderSync": true,
+        "useThemeAdvanced": false,
+        "themeIndexFilename": "readme",
+        "useThemeSearch": true,
         "usePARANotes": true,
         "useDailyRecord": false,
         "weekStart": -1,
@@ -147,6 +225,7 @@
         "projectListHeader": "项目列表",
         "areaListHeader": "领域",
         "habitHeader": "习惯",
+        "themesPath": "主题",
         "locale": "zh-cn"
       },
       "copy": {
@@ -248,19 +327,91 @@
         {
           "path": "LifeOS 开始使用.md",
           "role": "guide",
-          "content": "# 开始使用 LifeOS\n\n请用自己的真实内容完成下面这个五分钟闭环。\n\n> 捕获 → 连接项目或领域 → 使用资源 → 归档。\n\n## 最初五分钟\n\n- [ ] 打开 Today，从今天开始\n- [ ] 快速记录一个真实想法\n- [ ] 创建一个具体的下一步任务\n- [ ] 只在需要时连接到 PARA\n- [ ] 运行“每周回顾”，填写本周总结\n\n## 工作入口\n\n- 打开 Today: `0. 周期笔记`\n- 项目: `1. 项目`\n- 领域: `2. 领域`\n- 资源: `3. 资源`\n"
+          "content": "# 开始使用 LifeOS\n\n请用自己的真实内容完成下面这个五分钟闭环。\n\n> 捕获 → 连接项目或领域 → 使用资源 → 归档。\n\n## 最初五分钟\n\n- [ ] 打开 Today，从今天开始\n- [ ] 快速记录一个真实想法\n- [ ] 创建一个具体的下一步任务\n- [ ] 只在需要时连接到 PARA\n\n## 工作入口\n\n- 打开 Today: `0. 周期笔记`\n- 项目: `1. 项目`\n- 领域: `2. 领域`\n- 资源: `3. 资源`\n"
         },
         {
           "path": "LifeOS 示例/第一个工作流.md",
           "role": "example",
           "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# 第一个真实工作流\n\n先捕获，再把真正有用的内容连接到行动与结构。\n\n- 一条在消失前捕获的真实想法。\n- [ ] 把它变成一个足够小的下一步行动。\n- 周末回顾，只保留真正重要的内容。\n"
         }
-      ]
+      ],
+      "themes": {
+        "settings": {
+          "usePeriodicNotes": true,
+          "useThemeNotes": true,
+          "useThemeFolderSync": true,
+          "useThemeAdvanced": false,
+          "themeIndexFilename": "readme",
+          "useThemeSearch": true,
+          "usePARANotes": false,
+          "useDailyRecord": false,
+          "weekStart": -1,
+          "paraIndexFilename": "readme",
+          "onboardingVersion": 1,
+          "periodicNotesPath": "0. 周期笔记",
+          "projectsPath": "1. 项目",
+          "areasPath": "2. 领域",
+          "resourcesPath": "3. 资源",
+          "archivesPath": "4. 归档",
+          "dailyRecordHeader": "日常记录",
+          "projectListHeader": "项目列表",
+          "areaListHeader": "领域",
+          "habitHeader": "习惯",
+          "themesPath": "主题",
+          "locale": "zh-cn"
+        },
+        "plans": [
+          {
+            "path": "0. 周期笔记/Templates/Daily.md",
+            "content": "# 日记\n## 日常记录\n\n## 主题笔记\n\n{{snapshot:Theme}}\n\n## 习惯\n\n- [ ]\n"
+          },
+          {
+            "path": "0. 周期笔记/Templates/Weekly.md",
+            "content": "# 周复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 周期笔记/Templates/Monthly.md",
+            "content": "# 月复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 周期笔记/Templates/Quarterly.md",
+            "content": "# 季度复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 周期笔记/Templates/Yearly.md",
+            "content": "# 年度复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "主题/Template.md",
+            "content": "# 概览\n\n## 任务\n\n```LifeOS\nTaskListByTag\n```\n\n## 记录\n\n```LifeOS\nBulletListByTag\n```\n\n## 文件\n\n```LifeOS\nFileListByTag\n```\n\n## 主题笔记\n\n```LifeOS\nThemeListByTag\n```\n"
+          },
+          {
+            "path": "主题/README.md",
+            "content": "# 主题笔记\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "role": "guide"
+          },
+          {
+            "path": "LifeOS 开始使用.md",
+            "role": "guide",
+            "content": "# 开始使用 LifeOS\n\n请用自己的真实内容完成下面这个五分钟闭环。\n\n> 快速记录 → 关联主题 → 查看相关记录与任务。\n\n## 最初五分钟\n\n- [ ] 打开 Today，从今天开始\n- [ ] 快速记录一个真实想法\n- [ ] 创建一个具体的下一步任务\n- [ ] 快速记录 → 关联主题 → 查看相关记录与任务。\n\n## 工作入口\n\n- 打开 Today: `0. 周期笔记`\n- 主题笔记: `主题`\n"
+          },
+          {
+            "path": "LifeOS 示例/第一个工作流.md",
+            "role": "example",
+            "content": "---\nlifeos-onboarding-example: true\nlifeos-template: theme\n---\n\n# 第一个真实工作流\n\n先捕获，再把真正有用的内容连接到行动与结构。\n\n- 一条在消失前捕获的真实想法。\n- [ ] 把它变成一个足够小的下一步行动。\n- 周末回顾，只保留真正重要的内容。\n"
+          }
+        ]
+      }
     },
     "zh-tw": {
       "label": "繁體中文",
       "settings": {
         "usePeriodicNotes": true,
+        "useThemeNotes": true,
+        "useThemeFolderSync": true,
+        "useThemeAdvanced": false,
+        "themeIndexFilename": "readme",
+        "useThemeSearch": true,
         "usePARANotes": true,
         "useDailyRecord": false,
         "weekStart": -1,
@@ -275,6 +426,7 @@
         "projectListHeader": "專案列表",
         "areaListHeader": "領域",
         "habitHeader": "習慣",
+        "themesPath": "主題",
         "locale": "zh-tw"
       },
       "copy": {
@@ -376,19 +528,91 @@
         {
           "path": "LifeOS 開始使用.md",
           "role": "guide",
-          "content": "# 開始使用 LifeOS\n\n請用自己的真實內容完成下面這個五分鐘閉環。\n\n> 捕獲 → 連結專案或領域 → 使用資源 → 封存。\n\n## 最初五分鐘\n\n- [ ] 開啟 Today，從今天開始\n- [ ] 快速記錄一個真實想法\n- [ ] 建立一個具體的下一步任務\n- [ ] 只在需要時連結到 PARA\n- [ ] 執行「每週回顧」，填寫本週總結\n\n## 工作入口\n\n- 開啟 Today: `0. 週期筆記`\n- 專案: `1. 專案`\n- 領域: `2. 領域`\n- 資源: `3. 資源`\n"
+          "content": "# 開始使用 LifeOS\n\n請用自己的真實內容完成下面這個五分鐘閉環。\n\n> 捕獲 → 連結專案或領域 → 使用資源 → 封存。\n\n## 最初五分鐘\n\n- [ ] 開啟 Today，從今天開始\n- [ ] 快速記錄一個真實想法\n- [ ] 建立一個具體的下一步任務\n- [ ] 只在需要時連結到 PARA\n\n## 工作入口\n\n- 開啟 Today: `0. 週期筆記`\n- 專案: `1. 專案`\n- 領域: `2. 領域`\n- 資源: `3. 資源`\n"
         },
         {
           "path": "LifeOS 範例/第一個工作流程.md",
           "role": "example",
           "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# 第一個真實工作流程\n\n先捕獲，再把真正有用的內容連結到行動與結構。\n\n- 一條在消失前捕獲的真實想法。\n- [ ] 把它變成一個足夠小的下一步行動。\n- 週末回顧，只保留真正重要的內容。\n"
         }
-      ]
+      ],
+      "themes": {
+        "settings": {
+          "usePeriodicNotes": true,
+          "useThemeNotes": true,
+          "useThemeFolderSync": true,
+          "useThemeAdvanced": false,
+          "themeIndexFilename": "readme",
+          "useThemeSearch": true,
+          "usePARANotes": false,
+          "useDailyRecord": false,
+          "weekStart": -1,
+          "paraIndexFilename": "readme",
+          "onboardingVersion": 1,
+          "periodicNotesPath": "0. 週期筆記",
+          "projectsPath": "1. 專案",
+          "areasPath": "2. 領域",
+          "resourcesPath": "3. 資源",
+          "archivesPath": "4. 封存",
+          "dailyRecordHeader": "日常記錄",
+          "projectListHeader": "專案列表",
+          "areaListHeader": "領域",
+          "habitHeader": "習慣",
+          "themesPath": "主題",
+          "locale": "zh-tw"
+        },
+        "plans": [
+          {
+            "path": "0. 週期筆記/Templates/Daily.md",
+            "content": "# 日記\n## 日常記錄\n\n## 主題筆記\n\n{{snapshot:Theme}}\n\n## 習慣\n\n- [ ]\n"
+          },
+          {
+            "path": "0. 週期筆記/Templates/Weekly.md",
+            "content": "# 週回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 週期筆記/Templates/Monthly.md",
+            "content": "# 月回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 週期筆記/Templates/Quarterly.md",
+            "content": "# 季度回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 週期筆記/Templates/Yearly.md",
+            "content": "# 年度回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "主題/Template.md",
+            "content": "# 概覽\n\n## 任務\n\n```LifeOS\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOS\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOS\nFileListByTag\n```\n\n## 主題筆記\n\n```LifeOS\nThemeListByTag\n```\n"
+          },
+          {
+            "path": "主題/README.md",
+            "content": "# 主題筆記\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "role": "guide"
+          },
+          {
+            "path": "LifeOS 開始使用.md",
+            "role": "guide",
+            "content": "# 開始使用 LifeOS\n\n請用自己的真實內容完成下面這個五分鐘閉環。\n\n> 快速記錄 → 連結主題 → 查看相關記錄與任務。\n\n## 最初五分鐘\n\n- [ ] 開啟 Today，從今天開始\n- [ ] 快速記錄一個真實想法\n- [ ] 建立一個具體的下一步任務\n- [ ] 快速記錄 → 連結主題 → 查看相關記錄與任務。\n\n## 工作入口\n\n- 開啟 Today: `0. 週期筆記`\n- 主題筆記: `主題`\n"
+          },
+          {
+            "path": "LifeOS 範例/第一個工作流程.md",
+            "role": "example",
+            "content": "---\nlifeos-onboarding-example: true\nlifeos-template: theme\n---\n\n# 第一個真實工作流程\n\n先捕獲，再把真正有用的內容連結到行動與結構。\n\n- 一條在消失前捕獲的真實想法。\n- [ ] 把它變成一個足夠小的下一步行動。\n- 週末回顧，只保留真正重要的內容。\n"
+          }
+        ]
+      }
     },
     "de": {
       "label": "Deutsch",
       "settings": {
         "usePeriodicNotes": true,
+        "useThemeNotes": true,
+        "useThemeFolderSync": true,
+        "useThemeAdvanced": false,
+        "themeIndexFilename": "readme",
+        "useThemeSearch": true,
         "usePARANotes": true,
         "useDailyRecord": false,
         "weekStart": -1,
@@ -403,6 +627,7 @@
         "projectListHeader": "Projektliste",
         "areaListHeader": "Bereiche",
         "habitHeader": "Gewohnheiten",
+        "themesPath": "Themen",
         "locale": "de"
       },
       "copy": {
@@ -504,19 +729,91 @@
         {
           "path": "LifeOS Einstieg.md",
           "role": "guide",
-          "content": "# LifeOS Einstieg\n\nIn fünf Minuten mit eigenen Inhalten beginnen.\n\n> Erfassen → Projekt oder Bereich zuordnen → Ressourcen nutzen → archivieren.\n\n## Die ersten fünf Minuten\n\n- [ ] Heute öffnen\n- [ ] Einen echten Gedanken erfassen\n- [ ] Eine konkrete nächste Aufgabe anlegen\n- [ ] Bei Bedarf mit PARA verbinden\n- [ ] Den Wochenrückblick ausfüllen\n\n## Arbeitsziele\n\n- Heute öffnen: `0. Periodische Notizen`\n- Projekte: `1. Projekte`\n- Bereiche: `2. Bereiche`\n- Ressourcen: `3. Ressourcen`\n"
+          "content": "# LifeOS Einstieg\n\nIn fünf Minuten mit eigenen Inhalten beginnen.\n\n> Erfassen → Projekt oder Bereich zuordnen → Ressourcen nutzen → archivieren.\n\n## Die ersten fünf Minuten\n\n- [ ] Heute öffnen\n- [ ] Einen echten Gedanken erfassen\n- [ ] Eine konkrete nächste Aufgabe anlegen\n- [ ] Bei Bedarf mit PARA verbinden\n\n## Arbeitsziele\n\n- Heute öffnen: `0. Periodische Notizen`\n- Projekte: `1. Projekte`\n- Bereiche: `2. Bereiche`\n- Ressourcen: `3. Ressourcen`\n"
         },
         {
           "path": "LifeOS Beispiele/Dein erster Arbeitsablauf.md",
           "role": "example",
           "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# Dein erster Arbeitsablauf\n\nErst erfassen, dann mit Aufgaben und Struktur verbinden.\n\n- Einen Gedanken festhalten, bevor er verloren geht.\n- [ ] Daraus einen kleinen nächsten Schritt machen.\n- Am Wochenende prüfen und Wichtiges behalten.\n"
         }
-      ]
+      ],
+      "themes": {
+        "settings": {
+          "usePeriodicNotes": true,
+          "useThemeNotes": true,
+          "useThemeFolderSync": true,
+          "useThemeAdvanced": false,
+          "themeIndexFilename": "readme",
+          "useThemeSearch": true,
+          "usePARANotes": false,
+          "useDailyRecord": false,
+          "weekStart": -1,
+          "paraIndexFilename": "readme",
+          "onboardingVersion": 1,
+          "periodicNotesPath": "0. Periodische Notizen",
+          "projectsPath": "1. Projekte",
+          "areasPath": "2. Bereiche",
+          "resourcesPath": "3. Ressourcen",
+          "archivesPath": "4. Archiv",
+          "dailyRecordHeader": "Tagesprotokoll",
+          "projectListHeader": "Projektliste",
+          "areaListHeader": "Bereiche",
+          "habitHeader": "Gewohnheiten",
+          "themesPath": "Themen",
+          "locale": "de"
+        },
+        "plans": [
+          {
+            "path": "0. Periodische Notizen/Templates/Daily.md",
+            "content": "# Tagesnotiz\n## Tagesprotokoll\n\n## Themennotizen\n\n{{snapshot:Theme}}\n\n## Gewohnheiten\n\n- [ ]\n"
+          },
+          {
+            "path": "0. Periodische Notizen/Templates/Weekly.md",
+            "content": "# Wochenrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Periodische Notizen/Templates/Monthly.md",
+            "content": "# Monatsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Periodische Notizen/Templates/Quarterly.md",
+            "content": "# Quartalsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Periodische Notizen/Templates/Yearly.md",
+            "content": "# Jahresrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "Themen/Template.md",
+            "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOS\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOS\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOS\nFileListByTag\n```\n\n## Themennotizen\n\n```LifeOS\nThemeListByTag\n```\n"
+          },
+          {
+            "path": "Themen/README.md",
+            "content": "# Themennotizen\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "role": "guide"
+          },
+          {
+            "path": "LifeOS Einstieg.md",
+            "role": "guide",
+            "content": "# LifeOS Einstieg\n\nIn fünf Minuten mit eigenen Inhalten beginnen.\n\n> Erfassen → Thema zuordnen → Einträge und Aufgaben öffnen.\n\n## Die ersten fünf Minuten\n\n- [ ] Heute öffnen\n- [ ] Einen echten Gedanken erfassen\n- [ ] Eine konkrete nächste Aufgabe anlegen\n- [ ] Erfassen → Thema zuordnen → Einträge und Aufgaben öffnen.\n\n## Arbeitsziele\n\n- Heute öffnen: `0. Periodische Notizen`\n- Themennotizen: `Themen`\n"
+          },
+          {
+            "path": "LifeOS Beispiele/Dein erster Arbeitsablauf.md",
+            "role": "example",
+            "content": "---\nlifeos-onboarding-example: true\nlifeos-template: theme\n---\n\n# Dein erster Arbeitsablauf\n\nErst erfassen, dann mit Aufgaben und Struktur verbinden.\n\n- Einen Gedanken festhalten, bevor er verloren geht.\n- [ ] Daraus einen kleinen nächsten Schritt machen.\n- Am Wochenende prüfen und Wichtiges behalten.\n"
+          }
+        ]
+      }
     },
     "es": {
       "label": "Español",
       "settings": {
         "usePeriodicNotes": true,
+        "useThemeNotes": true,
+        "useThemeFolderSync": true,
+        "useThemeAdvanced": false,
+        "themeIndexFilename": "readme",
+        "useThemeSearch": true,
         "usePARANotes": true,
         "useDailyRecord": false,
         "weekStart": -1,
@@ -531,6 +828,7 @@
         "projectListHeader": "Lista de proyectos",
         "areaListHeader": "Áreas",
         "habitHeader": "Hábitos",
+        "themesPath": "Temas",
         "locale": "es"
       },
       "copy": {
@@ -632,19 +930,91 @@
         {
           "path": "LifeOS Empieza aquí.md",
           "role": "guide",
-          "content": "# LifeOS Empieza aquí\n\nEmpieza con tu propio contenido en cinco minutos.\n\n> Capturar → conectar con proyecto o área → usar recursos → archivar.\n\n## Tus primeros cinco minutos\n\n- [ ] Abrir Hoy\n- [ ] Capturar una idea real\n- [ ] Crear una próxima acción concreta\n- [ ] Conectar con PARA cuando sea útil\n- [ ] Completar la revisión semanal\n\n## Destinos de trabajo\n\n- Abrir Hoy: `0. Notas periódicas`\n- Proyectos: `1. Proyectos`\n- Áreas: `2. Áreas`\n- Recursos: `3. Recursos`\n"
+          "content": "# LifeOS Empieza aquí\n\nEmpieza con tu propio contenido en cinco minutos.\n\n> Capturar → conectar con proyecto o área → usar recursos → archivar.\n\n## Tus primeros cinco minutos\n\n- [ ] Abrir Hoy\n- [ ] Capturar una idea real\n- [ ] Crear una próxima acción concreta\n- [ ] Conectar con PARA cuando sea útil\n\n## Destinos de trabajo\n\n- Abrir Hoy: `0. Notas periódicas`\n- Proyectos: `1. Proyectos`\n- Áreas: `2. Áreas`\n- Recursos: `3. Recursos`\n"
         },
         {
           "path": "Ejemplos LifeOS/Tu primer flujo de trabajo.md",
           "role": "example",
           "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# Tu primer flujo de trabajo\n\nPrimero captura, después conecta con acciones y estructura.\n\n- Captura una idea antes de olvidarla.\n- [ ] Conviértela en una pequeña próxima acción.\n- Revísala al final de la semana y conserva lo importante.\n"
         }
-      ]
+      ],
+      "themes": {
+        "settings": {
+          "usePeriodicNotes": true,
+          "useThemeNotes": true,
+          "useThemeFolderSync": true,
+          "useThemeAdvanced": false,
+          "themeIndexFilename": "readme",
+          "useThemeSearch": true,
+          "usePARANotes": false,
+          "useDailyRecord": false,
+          "weekStart": -1,
+          "paraIndexFilename": "readme",
+          "onboardingVersion": 1,
+          "periodicNotesPath": "0. Notas periódicas",
+          "projectsPath": "1. Proyectos",
+          "areasPath": "2. Áreas",
+          "resourcesPath": "3. Recursos",
+          "archivesPath": "4. Archivo",
+          "dailyRecordHeader": "Registro diario",
+          "projectListHeader": "Lista de proyectos",
+          "areaListHeader": "Áreas",
+          "habitHeader": "Hábitos",
+          "themesPath": "Temas",
+          "locale": "es"
+        },
+        "plans": [
+          {
+            "path": "0. Notas periódicas/Templates/Daily.md",
+            "content": "# Nota diaria\n## Registro diario\n\n## Notas de tema\n\n{{snapshot:Theme}}\n\n## Hábitos\n\n- [ ]\n"
+          },
+          {
+            "path": "0. Notas periódicas/Templates/Weekly.md",
+            "content": "# Revisión semanal\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Notas periódicas/Templates/Monthly.md",
+            "content": "# Revisión mensual\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Notas periódicas/Templates/Quarterly.md",
+            "content": "# Revisión trimestral\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Notas periódicas/Templates/Yearly.md",
+            "content": "# Revisión anual\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "Temas/Template.md",
+            "content": "# Resumen\n\n## Tareas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOS\nFileListByTag\n```\n\n## Notas de tema\n\n```LifeOS\nThemeListByTag\n```\n"
+          },
+          {
+            "path": "Temas/README.md",
+            "content": "# Notas de tema\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "role": "guide"
+          },
+          {
+            "path": "LifeOS Empieza aquí.md",
+            "role": "guide",
+            "content": "# LifeOS Empieza aquí\n\nEmpieza con tu propio contenido en cinco minutos.\n\n> Capturar → asociar un tema → abrir registros y tareas.\n\n## Tus primeros cinco minutos\n\n- [ ] Abrir Hoy\n- [ ] Capturar una idea real\n- [ ] Crear una próxima acción concreta\n- [ ] Capturar → asociar un tema → abrir registros y tareas.\n\n## Destinos de trabajo\n\n- Abrir Hoy: `0. Notas periódicas`\n- Notas de tema: `Temas`\n"
+          },
+          {
+            "path": "Ejemplos LifeOS/Tu primer flujo de trabajo.md",
+            "role": "example",
+            "content": "---\nlifeos-onboarding-example: true\nlifeos-template: theme\n---\n\n# Tu primer flujo de trabajo\n\nPrimero captura, después conecta con acciones y estructura.\n\n- Captura una idea antes de olvidarla.\n- [ ] Conviértela en una pequeña próxima acción.\n- Revísala al final de la semana y conserva lo importante.\n"
+          }
+        ]
+      }
     },
     "fr": {
       "label": "Français",
       "settings": {
         "usePeriodicNotes": true,
+        "useThemeNotes": true,
+        "useThemeFolderSync": true,
+        "useThemeAdvanced": false,
+        "themeIndexFilename": "readme",
+        "useThemeSearch": true,
         "usePARANotes": true,
         "useDailyRecord": false,
         "weekStart": -1,
@@ -659,6 +1029,7 @@
         "projectListHeader": "Liste des projets",
         "areaListHeader": "Domaines",
         "habitHeader": "Habitudes",
+        "themesPath": "Thèmes",
         "locale": "fr"
       },
       "copy": {
@@ -760,19 +1131,91 @@
         {
           "path": "LifeOS Bien démarrer.md",
           "role": "guide",
-          "content": "# LifeOS Bien démarrer\n\nCommencez avec votre propre contenu en cinq minutes.\n\n> Capturer → relier au projet ou au domaine → utiliser les ressources → archiver.\n\n## Vos cinq premières minutes\n\n- [ ] Ouvrir Aujourd’hui\n- [ ] Capturer une idée réelle\n- [ ] Créer une prochaine action concrète\n- [ ] Relier à PARA si utile\n- [ ] Compléter le bilan hebdomadaire\n\n## Points d’entrée\n\n- Ouvrir Aujourd’hui: `0. Notes périodiques`\n- Projets: `1. Projets`\n- Domaines: `2. Domaines`\n- Ressources: `3. Ressources`\n"
+          "content": "# LifeOS Bien démarrer\n\nCommencez avec votre propre contenu en cinq minutes.\n\n> Capturer → relier au projet ou au domaine → utiliser les ressources → archiver.\n\n## Vos cinq premières minutes\n\n- [ ] Ouvrir Aujourd’hui\n- [ ] Capturer une idée réelle\n- [ ] Créer une prochaine action concrète\n- [ ] Relier à PARA si utile\n\n## Points d’entrée\n\n- Ouvrir Aujourd’hui: `0. Notes périodiques`\n- Projets: `1. Projets`\n- Domaines: `2. Domaines`\n- Ressources: `3. Ressources`\n"
         },
         {
           "path": "Exemples LifeOS/Votre premier parcours.md",
           "role": "example",
           "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# Votre premier parcours\n\nCapturez d’abord, puis reliez le contenu aux actions et à la structure.\n\n- Capturer une idée avant de l’oublier.\n- [ ] En faire une petite prochaine action.\n- La revoir en fin de semaine et garder l’essentiel.\n"
         }
-      ]
+      ],
+      "themes": {
+        "settings": {
+          "usePeriodicNotes": true,
+          "useThemeNotes": true,
+          "useThemeFolderSync": true,
+          "useThemeAdvanced": false,
+          "themeIndexFilename": "readme",
+          "useThemeSearch": true,
+          "usePARANotes": false,
+          "useDailyRecord": false,
+          "weekStart": -1,
+          "paraIndexFilename": "readme",
+          "onboardingVersion": 1,
+          "periodicNotesPath": "0. Notes périodiques",
+          "projectsPath": "1. Projets",
+          "areasPath": "2. Domaines",
+          "resourcesPath": "3. Ressources",
+          "archivesPath": "4. Archives",
+          "dailyRecordHeader": "Journal quotidien",
+          "projectListHeader": "Liste des projets",
+          "areaListHeader": "Domaines",
+          "habitHeader": "Habitudes",
+          "themesPath": "Thèmes",
+          "locale": "fr"
+        },
+        "plans": [
+          {
+            "path": "0. Notes périodiques/Templates/Daily.md",
+            "content": "# Note du jour\n## Journal quotidien\n\n## Notes de thème\n\n{{snapshot:Theme}}\n\n## Habitudes\n\n- [ ]\n"
+          },
+          {
+            "path": "0. Notes périodiques/Templates/Weekly.md",
+            "content": "# Bilan hebdomadaire\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Notes périodiques/Templates/Monthly.md",
+            "content": "# Bilan mensuel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Notes périodiques/Templates/Quarterly.md",
+            "content": "# Bilan trimestriel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Notes périodiques/Templates/Yearly.md",
+            "content": "# Bilan annuel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "Thèmes/Template.md",
+            "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOS\nTaskListByTag\n```\n\n## Notes\n\n```LifeOS\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOS\nFileListByTag\n```\n\n## Notes de thème\n\n```LifeOS\nThemeListByTag\n```\n"
+          },
+          {
+            "path": "Thèmes/README.md",
+            "content": "# Notes de thème\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "role": "guide"
+          },
+          {
+            "path": "LifeOS Bien démarrer.md",
+            "role": "guide",
+            "content": "# LifeOS Bien démarrer\n\nCommencez avec votre propre contenu en cinq minutes.\n\n> Saisir → associer un thème → ouvrir notes et tâches.\n\n## Vos cinq premières minutes\n\n- [ ] Ouvrir Aujourd’hui\n- [ ] Capturer une idée réelle\n- [ ] Créer une prochaine action concrète\n- [ ] Saisir → associer un thème → ouvrir notes et tâches.\n\n## Points d’entrée\n\n- Ouvrir Aujourd’hui: `0. Notes périodiques`\n- Notes de thème: `Thèmes`\n"
+          },
+          {
+            "path": "Exemples LifeOS/Votre premier parcours.md",
+            "role": "example",
+            "content": "---\nlifeos-onboarding-example: true\nlifeos-template: theme\n---\n\n# Votre premier parcours\n\nCapturez d’abord, puis reliez le contenu aux actions et à la structure.\n\n- Capturer une idée avant de l’oublier.\n- [ ] En faire une petite prochaine action.\n- La revoir en fin de semaine et garder l’essentiel.\n"
+          }
+        ]
+      }
     },
     "pt": {
       "label": "Português",
       "settings": {
         "usePeriodicNotes": true,
+        "useThemeNotes": true,
+        "useThemeFolderSync": true,
+        "useThemeAdvanced": false,
+        "themeIndexFilename": "readme",
+        "useThemeSearch": true,
         "usePARANotes": true,
         "useDailyRecord": false,
         "weekStart": -1,
@@ -787,6 +1230,7 @@
         "projectListHeader": "Lista de projetos",
         "areaListHeader": "Áreas",
         "habitHeader": "Hábitos",
+        "themesPath": "Temas",
         "locale": "pt"
       },
       "copy": {
@@ -888,19 +1332,91 @@
         {
           "path": "LifeOS Comece aqui.md",
           "role": "guide",
-          "content": "# LifeOS Comece aqui\n\nComece com seu próprio conteúdo em cinco minutos.\n\n> Capturar → conectar ao projeto ou área → usar recursos → arquivar.\n\n## Seus primeiros cinco minutos\n\n- [ ] Abrir Hoje\n- [ ] Capturar uma ideia real\n- [ ] Criar uma próxima ação concreta\n- [ ] Conectar ao PARA quando for útil\n- [ ] Preencher a revisão semanal\n\n## Destinos de trabalho\n\n- Abrir Hoje: `0. Notas periódicas`\n- Projetos: `1. Projetos`\n- Áreas: `2. Áreas`\n- Recursos: `3. Recursos`\n"
+          "content": "# LifeOS Comece aqui\n\nComece com seu próprio conteúdo em cinco minutos.\n\n> Capturar → conectar ao projeto ou área → usar recursos → arquivar.\n\n## Seus primeiros cinco minutos\n\n- [ ] Abrir Hoje\n- [ ] Capturar uma ideia real\n- [ ] Criar uma próxima ação concreta\n- [ ] Conectar ao PARA quando for útil\n\n## Destinos de trabalho\n\n- Abrir Hoje: `0. Notas periódicas`\n- Projetos: `1. Projetos`\n- Áreas: `2. Áreas`\n- Recursos: `3. Recursos`\n"
         },
         {
           "path": "Exemplos LifeOS/Seu primeiro fluxo de trabalho.md",
           "role": "example",
           "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# Seu primeiro fluxo de trabalho\n\nCapture primeiro, depois conecte o conteúdo às ações e à estrutura.\n\n- Capture uma ideia antes de esquecê-la.\n- [ ] Transforme-a em uma pequena próxima ação.\n- Revise no fim da semana e mantenha o que importa.\n"
         }
-      ]
+      ],
+      "themes": {
+        "settings": {
+          "usePeriodicNotes": true,
+          "useThemeNotes": true,
+          "useThemeFolderSync": true,
+          "useThemeAdvanced": false,
+          "themeIndexFilename": "readme",
+          "useThemeSearch": true,
+          "usePARANotes": false,
+          "useDailyRecord": false,
+          "weekStart": -1,
+          "paraIndexFilename": "readme",
+          "onboardingVersion": 1,
+          "periodicNotesPath": "0. Notas periódicas",
+          "projectsPath": "1. Projetos",
+          "areasPath": "2. Áreas",
+          "resourcesPath": "3. Recursos",
+          "archivesPath": "4. Arquivo",
+          "dailyRecordHeader": "Registro diário",
+          "projectListHeader": "Lista de projetos",
+          "areaListHeader": "Áreas",
+          "habitHeader": "Hábitos",
+          "themesPath": "Temas",
+          "locale": "pt"
+        },
+        "plans": [
+          {
+            "path": "0. Notas periódicas/Templates/Daily.md",
+            "content": "# Nota diária\n## Registro diário\n\n## Notas de tema\n\n{{snapshot:Theme}}\n\n## Hábitos\n\n- [ ]\n"
+          },
+          {
+            "path": "0. Notas periódicas/Templates/Weekly.md",
+            "content": "# Revisão semanal\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Notas periódicas/Templates/Monthly.md",
+            "content": "# Revisão mensal\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Notas periódicas/Templates/Quarterly.md",
+            "content": "# Revisão trimestral\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. Notas periódicas/Templates/Yearly.md",
+            "content": "# Revisão anual\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "Temas/Template.md",
+            "content": "# Visão geral\n\n## Tarefas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOS\nFileListByTag\n```\n\n## Notas de tema\n\n```LifeOS\nThemeListByTag\n```\n"
+          },
+          {
+            "path": "Temas/README.md",
+            "content": "# Notas de tema\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "role": "guide"
+          },
+          {
+            "path": "LifeOS Comece aqui.md",
+            "role": "guide",
+            "content": "# LifeOS Comece aqui\n\nComece com seu próprio conteúdo em cinco minutos.\n\n> Registrar → associar tema → abrir registros e tarefas.\n\n## Seus primeiros cinco minutos\n\n- [ ] Abrir Hoje\n- [ ] Capturar uma ideia real\n- [ ] Criar uma próxima ação concreta\n- [ ] Registrar → associar tema → abrir registros e tarefas.\n\n## Destinos de trabalho\n\n- Abrir Hoje: `0. Notas periódicas`\n- Notas de tema: `Temas`\n"
+          },
+          {
+            "path": "Exemplos LifeOS/Seu primeiro fluxo de trabalho.md",
+            "role": "example",
+            "content": "---\nlifeos-onboarding-example: true\nlifeos-template: theme\n---\n\n# Seu primeiro fluxo de trabalho\n\nCapture primeiro, depois conecte o conteúdo às ações e à estrutura.\n\n- Capture uma ideia antes de esquecê-la.\n- [ ] Transforme-a em uma pequena próxima ação.\n- Revise no fim da semana e mantenha o que importa.\n"
+          }
+        ]
+      }
     },
     "ja": {
       "label": "日本語",
       "settings": {
         "usePeriodicNotes": true,
+        "useThemeNotes": true,
+        "useThemeFolderSync": true,
+        "useThemeAdvanced": false,
+        "themeIndexFilename": "readme",
+        "useThemeSearch": true,
         "usePARANotes": true,
         "useDailyRecord": false,
         "weekStart": -1,
@@ -915,6 +1431,7 @@
         "projectListHeader": "プロジェクト一覧",
         "areaListHeader": "分野",
         "habitHeader": "習慣",
+        "themesPath": "テーマ",
         "locale": "ja"
       },
       "copy": {
@@ -1016,19 +1533,91 @@
         {
           "path": "LifeOS はじめに.md",
           "role": "guide",
-          "content": "# LifeOS はじめに\n\n自分の内容を使って5分で始めましょう。\n\n> 記録 → プロジェクトや分野につなげる → 資料を使う → アーカイブ。\n\n## 最初の5分\n\n- [ ] 今日を開く\n- [ ] 実際のアイデアを記録する\n- [ ] 具体的な次のタスクを作る\n- [ ] 必要なときに PARA へつなげる\n- [ ] 週の振り返りを書く\n\n## 作業の入口\n\n- 今日を開く: `0. 定期ノート`\n- プロジェクト: `1. プロジェクト`\n- 分野: `2. 分野`\n- 資料: `3. 資料`\n"
+          "content": "# LifeOS はじめに\n\n自分の内容を使って5分で始めましょう。\n\n> 記録 → プロジェクトや分野につなげる → 資料を使う → アーカイブ。\n\n## 最初の5分\n\n- [ ] 今日を開く\n- [ ] 実際のアイデアを記録する\n- [ ] 具体的な次のタスクを作る\n- [ ] 必要なときに PARA へつなげる\n\n## 作業の入口\n\n- 今日を開く: `0. 定期ノート`\n- プロジェクト: `1. プロジェクト`\n- 分野: `2. 分野`\n- 資料: `3. 資料`\n"
         },
         {
           "path": "LifeOS サンプル/最初のワークフロー.md",
           "role": "example",
           "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# 最初のワークフロー\n\nまず記録し、役立つ内容を行動や構成につなげます。\n\n- 忘れる前にアイデアを記録する。\n- [ ] 小さな次の行動に変える。\n- 週末に振り返り、大切な内容を残す。\n"
         }
-      ]
+      ],
+      "themes": {
+        "settings": {
+          "usePeriodicNotes": true,
+          "useThemeNotes": true,
+          "useThemeFolderSync": true,
+          "useThemeAdvanced": false,
+          "themeIndexFilename": "readme",
+          "useThemeSearch": true,
+          "usePARANotes": false,
+          "useDailyRecord": false,
+          "weekStart": -1,
+          "paraIndexFilename": "readme",
+          "onboardingVersion": 1,
+          "periodicNotesPath": "0. 定期ノート",
+          "projectsPath": "1. プロジェクト",
+          "areasPath": "2. 分野",
+          "resourcesPath": "3. 資料",
+          "archivesPath": "4. アーカイブ",
+          "dailyRecordHeader": "日常記録",
+          "projectListHeader": "プロジェクト一覧",
+          "areaListHeader": "分野",
+          "habitHeader": "習慣",
+          "themesPath": "テーマ",
+          "locale": "ja"
+        },
+        "plans": [
+          {
+            "path": "0. 定期ノート/Templates/Daily.md",
+            "content": "# 日次ノート\n## 日常記録\n\n## テーマノート\n\n{{snapshot:Theme}}\n\n## 習慣\n\n- [ ]\n"
+          },
+          {
+            "path": "0. 定期ノート/Templates/Weekly.md",
+            "content": "# 週の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 定期ノート/Templates/Monthly.md",
+            "content": "# 月の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 定期ノート/Templates/Quarterly.md",
+            "content": "# 四半期の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 定期ノート/Templates/Yearly.md",
+            "content": "# 年の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "テーマ/Template.md",
+            "content": "# 概要\n\n## タスク\n\n```LifeOS\nTaskListByTag\n```\n\n## 記録\n\n```LifeOS\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOS\nFileListByTag\n```\n\n## テーマノート\n\n```LifeOS\nThemeListByTag\n```\n"
+          },
+          {
+            "path": "テーマ/README.md",
+            "content": "# テーマノート\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "role": "guide"
+          },
+          {
+            "path": "LifeOS はじめに.md",
+            "role": "guide",
+            "content": "# LifeOS はじめに\n\n自分の内容を使って5分で始めましょう。\n\n> 記録 → テーマを関連付け → 記録とタスクを確認。\n\n## 最初の5分\n\n- [ ] 今日を開く\n- [ ] 実際のアイデアを記録する\n- [ ] 具体的な次のタスクを作る\n- [ ] 記録 → テーマを関連付け → 記録とタスクを確認。\n\n## 作業の入口\n\n- 今日を開く: `0. 定期ノート`\n- テーマノート: `テーマ`\n"
+          },
+          {
+            "path": "LifeOS サンプル/最初のワークフロー.md",
+            "role": "example",
+            "content": "---\nlifeos-onboarding-example: true\nlifeos-template: theme\n---\n\n# 最初のワークフロー\n\nまず記録し、役立つ内容を行動や構成につなげます。\n\n- 忘れる前にアイデアを記録する。\n- [ ] 小さな次の行動に変える。\n- 週末に振り返り、大切な内容を残す。\n"
+          }
+        ]
+      }
     },
     "ko": {
       "label": "한국어",
       "settings": {
         "usePeriodicNotes": true,
+        "useThemeNotes": true,
+        "useThemeFolderSync": true,
+        "useThemeAdvanced": false,
+        "themeIndexFilename": "readme",
+        "useThemeSearch": true,
         "usePARANotes": true,
         "useDailyRecord": false,
         "weekStart": -1,
@@ -1043,6 +1632,7 @@
         "projectListHeader": "프로젝트 목록",
         "areaListHeader": "영역",
         "habitHeader": "습관",
+        "themesPath": "주제",
         "locale": "ko"
       },
       "copy": {
@@ -1144,19 +1734,91 @@
         {
           "path": "LifeOS 시작하기.md",
           "role": "guide",
-          "content": "# LifeOS 시작하기\n\n실제 내용으로 5분 안에 시작해 보세요.\n\n> 기록 → 프로젝트나 영역 연결 → 자료 활용 → 보관.\n\n## 처음 5분\n\n- [ ] 오늘 열기\n- [ ] 실제 생각을 빠르게 기록하기\n- [ ] 구체적인 다음 할 일 만들기\n- [ ] 필요할 때 PARA에 연결하기\n- [ ] 주간 회고 작성하기\n\n## 작업 시작점\n\n- 오늘 열기: `0. 주기 노트`\n- 프로젝트: `1. 프로젝트`\n- 영역: `2. 영역`\n- 자료: `3. 자료`\n"
+          "content": "# LifeOS 시작하기\n\n실제 내용으로 5분 안에 시작해 보세요.\n\n> 기록 → 프로젝트나 영역 연결 → 자료 활용 → 보관.\n\n## 처음 5분\n\n- [ ] 오늘 열기\n- [ ] 실제 생각을 빠르게 기록하기\n- [ ] 구체적인 다음 할 일 만들기\n- [ ] 필요할 때 PARA에 연결하기\n\n## 작업 시작점\n\n- 오늘 열기: `0. 주기 노트`\n- 프로젝트: `1. 프로젝트`\n- 영역: `2. 영역`\n- 자료: `3. 자료`\n"
         },
         {
           "path": "LifeOS 예제/첫 작업 흐름.md",
           "role": "example",
           "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# 첫 작업 흐름\n\n먼저 기록하고 유용한 내용을 행동과 구조에 연결하세요.\n\n- 잊기 전에 생각을 기록합니다.\n- [ ] 작은 다음 행동으로 바꿉니다.\n- 주말에 돌아보고 중요한 내용만 남깁니다.\n"
         }
-      ]
+      ],
+      "themes": {
+        "settings": {
+          "usePeriodicNotes": true,
+          "useThemeNotes": true,
+          "useThemeFolderSync": true,
+          "useThemeAdvanced": false,
+          "themeIndexFilename": "readme",
+          "useThemeSearch": true,
+          "usePARANotes": false,
+          "useDailyRecord": false,
+          "weekStart": -1,
+          "paraIndexFilename": "readme",
+          "onboardingVersion": 1,
+          "periodicNotesPath": "0. 주기 노트",
+          "projectsPath": "1. 프로젝트",
+          "areasPath": "2. 영역",
+          "resourcesPath": "3. 자료",
+          "archivesPath": "4. 보관함",
+          "dailyRecordHeader": "일상 기록",
+          "projectListHeader": "프로젝트 목록",
+          "areaListHeader": "영역",
+          "habitHeader": "습관",
+          "themesPath": "주제",
+          "locale": "ko"
+        },
+        "plans": [
+          {
+            "path": "0. 주기 노트/Templates/Daily.md",
+            "content": "# 일일 노트\n## 일상 기록\n\n## 주제 노트\n\n{{snapshot:Theme}}\n\n## 습관\n\n- [ ]\n"
+          },
+          {
+            "path": "0. 주기 노트/Templates/Weekly.md",
+            "content": "# 주간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 주기 노트/Templates/Monthly.md",
+            "content": "# 월간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 주기 노트/Templates/Quarterly.md",
+            "content": "# 분기 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. 주기 노트/Templates/Yearly.md",
+            "content": "# 연간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "주제/Template.md",
+            "content": "# 개요\n\n## 할 일\n\n```LifeOS\nTaskListByTag\n```\n\n## 기록\n\n```LifeOS\nBulletListByTag\n```\n\n## 파일\n\n```LifeOS\nFileListByTag\n```\n\n## 주제 노트\n\n```LifeOS\nThemeListByTag\n```\n"
+          },
+          {
+            "path": "주제/README.md",
+            "content": "# 주제 노트\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "role": "guide"
+          },
+          {
+            "path": "LifeOS 시작하기.md",
+            "role": "guide",
+            "content": "# LifeOS 시작하기\n\n실제 내용으로 5분 안에 시작해 보세요.\n\n> 기록 → 주제 연결 → 기록과 작업 확인.\n\n## 처음 5분\n\n- [ ] 오늘 열기\n- [ ] 실제 생각을 빠르게 기록하기\n- [ ] 구체적인 다음 할 일 만들기\n- [ ] 기록 → 주제 연결 → 기록과 작업 확인.\n\n## 작업 시작점\n\n- 오늘 열기: `0. 주기 노트`\n- 주제 노트: `주제`\n"
+          },
+          {
+            "path": "LifeOS 예제/첫 작업 흐름.md",
+            "role": "example",
+            "content": "---\nlifeos-onboarding-example: true\nlifeos-template: theme\n---\n\n# 첫 작업 흐름\n\n먼저 기록하고 유용한 내용을 행동과 구조에 연결하세요.\n\n- 잊기 전에 생각을 기록합니다.\n- [ ] 작은 다음 행동으로 바꿉니다.\n- 주말에 돌아보고 중요한 내용만 남깁니다.\n"
+          }
+        ]
+      }
     },
     "ar": {
       "label": "العربية",
       "settings": {
         "usePeriodicNotes": true,
+        "useThemeNotes": true,
+        "useThemeFolderSync": true,
+        "useThemeAdvanced": false,
+        "themeIndexFilename": "readme",
+        "useThemeSearch": true,
         "usePARANotes": true,
         "useDailyRecord": false,
         "weekStart": -1,
@@ -1171,6 +1833,7 @@
         "projectListHeader": "قائمة المشاريع",
         "areaListHeader": "المجالات",
         "habitHeader": "العادات",
+        "themesPath": "المواضيع",
         "locale": "ar"
       },
       "copy": {
@@ -1272,14 +1935,81 @@
         {
           "path": "LifeOS ابدأ هنا.md",
           "role": "guide",
-          "content": "# LifeOS ابدأ هنا\n\nابدأ بمحتواك الحقيقي خلال خمس دقائق.\n\n> سجّل → اربط بمشروع أو مجال → استخدم الموارد → أرشف.\n\n## الدقائق الخمس الأولى\n\n- [ ] فتح اليوم\n- [ ] تسجيل فكرة حقيقية\n- [ ] إنشاء مهمة تالية محددة\n- [ ] الربط بـ PARA عند الحاجة\n- [ ] كتابة المراجعة الأسبوعية\n\n## نقاط العمل\n\n- فتح اليوم: `0. الملاحظات الدورية`\n- المشاريع: `1. المشاريع`\n- المجالات: `2. المجالات`\n- الموارد: `3. الموارد`\n"
+          "content": "# LifeOS ابدأ هنا\n\nابدأ بمحتواك الحقيقي خلال خمس دقائق.\n\n> سجّل → اربط بمشروع أو مجال → استخدم الموارد → أرشف.\n\n## الدقائق الخمس الأولى\n\n- [ ] فتح اليوم\n- [ ] تسجيل فكرة حقيقية\n- [ ] إنشاء مهمة تالية محددة\n- [ ] الربط بـ PARA عند الحاجة\n\n## نقاط العمل\n\n- فتح اليوم: `0. الملاحظات الدورية`\n- المشاريع: `1. المشاريع`\n- المجالات: `2. المجالات`\n- الموارد: `3. الموارد`\n"
         },
         {
           "path": "أمثلة LifeOS/سير عملك الأول.md",
           "role": "example",
           "content": "---\nlifeos-onboarding-example: true\nlifeos-template: para\n---\n\n# سير عملك الأول\n\nسجّل أولًا ثم اربط المحتوى المفيد بالعمل والهيكل.\n\n- سجّل فكرة قبل نسيانها.\n- [ ] حوّلها إلى خطوة تالية صغيرة.\n- راجعها في نهاية الأسبوع واحتفظ بالمهم.\n"
         }
-      ]
+      ],
+      "themes": {
+        "settings": {
+          "usePeriodicNotes": true,
+          "useThemeNotes": true,
+          "useThemeFolderSync": true,
+          "useThemeAdvanced": false,
+          "themeIndexFilename": "readme",
+          "useThemeSearch": true,
+          "usePARANotes": false,
+          "useDailyRecord": false,
+          "weekStart": -1,
+          "paraIndexFilename": "readme",
+          "onboardingVersion": 1,
+          "periodicNotesPath": "0. الملاحظات الدورية",
+          "projectsPath": "1. المشاريع",
+          "areasPath": "2. المجالات",
+          "resourcesPath": "3. الموارد",
+          "archivesPath": "4. الأرشيف",
+          "dailyRecordHeader": "السجل اليومي",
+          "projectListHeader": "قائمة المشاريع",
+          "areaListHeader": "المجالات",
+          "habitHeader": "العادات",
+          "themesPath": "المواضيع",
+          "locale": "ar"
+        },
+        "plans": [
+          {
+            "path": "0. الملاحظات الدورية/Templates/Daily.md",
+            "content": "# ملاحظة يومية\n## السجل اليومي\n\n## ملاحظات المواضيع\n\n{{snapshot:Theme}}\n\n## العادات\n\n- [ ]\n"
+          },
+          {
+            "path": "0. الملاحظات الدورية/Templates/Weekly.md",
+            "content": "# مراجعة أسبوعية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. الملاحظات الدورية/Templates/Monthly.md",
+            "content": "# مراجعة شهرية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. الملاحظات الدورية/Templates/Quarterly.md",
+            "content": "# مراجعة ربع سنوية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "0. الملاحظات الدورية/Templates/Yearly.md",
+            "content": "# مراجعة سنوية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+          },
+          {
+            "path": "المواضيع/Template.md",
+            "content": "# نظرة عامة\n\n## المهام\n\n```LifeOS\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOS\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOS\nFileListByTag\n```\n\n## ملاحظات المواضيع\n\n```LifeOS\nThemeListByTag\n```\n"
+          },
+          {
+            "path": "المواضيع/README.md",
+            "content": "# ملاحظات المواضيع\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "role": "guide"
+          },
+          {
+            "path": "LifeOS ابدأ هنا.md",
+            "role": "guide",
+            "content": "# LifeOS ابدأ هنا\n\nابدأ بمحتواك الحقيقي خلال خمس دقائق.\n\n> تسجيل ← ربط موضوع ← عرض السجلات والمهام.\n\n## الدقائق الخمس الأولى\n\n- [ ] فتح اليوم\n- [ ] تسجيل فكرة حقيقية\n- [ ] إنشاء مهمة تالية محددة\n- [ ] تسجيل ← ربط موضوع ← عرض السجلات والمهام.\n\n## نقاط العمل\n\n- فتح اليوم: `0. الملاحظات الدورية`\n- ملاحظات المواضيع: `المواضيع`\n"
+          },
+          {
+            "path": "أمثلة LifeOS/سير عملك الأول.md",
+            "role": "example",
+            "content": "---\nlifeos-onboarding-example: true\nlifeos-template: theme\n---\n\n# سير عملك الأول\n\nسجّل أولًا ثم اربط المحتوى المفيد بالعمل والهيكل.\n\n- سجّل فكرة قبل نسيانها.\n- [ ] حوّلها إلى خطوة تالية صغيرة.\n- راجعها في نهاية الأسبوع واحتفظ بالمهم.\n"
+          }
+        ]
+      }
     }
   }
 }

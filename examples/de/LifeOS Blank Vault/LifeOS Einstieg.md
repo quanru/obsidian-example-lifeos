@@ -10,7 +10,6 @@ In fünf Minuten mit eigenen Inhalten beginnen.
 - [ ] Einen echten Gedanken erfassen
 - [ ] Eine konkrete nächste Aufgabe anlegen
 - [ ] Bei Bedarf mit PARA verbinden
-- [ ] Den Wochenrückblick ausfüllen
 
 ## Arbeitsziele
 

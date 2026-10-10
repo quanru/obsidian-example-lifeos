@@ -27,7 +27,7 @@ The older article-rich examples remain in the root and `i18n/` for reference. Ne
 
 ## Download
 
-Release 1.19.0 provides ten language packages and requires LifeOS 1.28.0 or newer; its templates and folder settings also match LifeOS 1.28.2. Each ZIP includes both example and blank vaults. You can also open a vault directly under `examples/<language>/`.
+Release 1.20.0 provides ten language packages and requires LifeOS 1.29.0 or newer. Each ZIP includes PARA example and blank vaults plus plain-theme example and blank vaults. You can also open a vault directly under `examples/<language>/`.
 
 Download the vault in your preferred language from the [latest release](https://github.com/quanru/obsidian-example-lifeos/releases/latest):
 
@@ -46,8 +46,8 @@ Download the vault in your preferred language from the [latest release](https://
 
 - [🎮 Discord](https://discord.gg/HZGanKEkuZ)
 - [💬 Telegram](https://t.me/+OLTasChvEEthMjBl)
-- [🐦 LifeOS for Obsidian](https://twitter.com/quan_ru)
-- [🐦 Twitter](https://x.com/quan_ru)
+- [🐦 LifeOS for Obsidian](https://x.com/lifeos_md)
+- [🐦 Twitter](https://x.com/lifeos_md)
 - [📺 Youtube](https://www.youtube.com/@LeYangLin)
 - [🧑‍🔧 Bento](https://bento.me/leyang)
 - [📧 Email](mailto:quanruzhuoxiu@gmail.com)
@@ -80,3 +80,13 @@ Or Alipay
 Or WeChat
 
 <img alt="WeChatPay" src="https://blog.lifeos.vip/img/wechat-qr.jpg" width="200"/>
+
+## Theme notes without PARA
+
+Each language now includes **LifeOS Theme Vault** and **LifeOS Theme Blank Vault**, alongside the existing PARA vaults. Theme mode uses a configurable theme directory with one folder and index note per topic; it does not create Projects, Areas, Resources or Archives folders.
+
+Enable Theme notes and turn off Use PARA in the open-source LifeOS settings. Create a theme with a tag, folder and index filename, associate a quick capture, then open the theme to see tasks, records and files. Tagged habit entries in the sample diary are intentionally excluded from capture and theme task/record queries. The diary theme list is a snapshot at creation time.
+
+普通主题示例库无需 PARA。每种语言提供 **LifeOS Theme Vault**（带示例）与 **LifeOS Theme Blank Vault**（空白库）。主题笔记、日记记录、任务及相关文件使用同一个关联标签；日记中的习惯条目用于验证过滤规则，不会进入快速记录或主题任务/记录查询。
+
+Install the updated open-source LifeOS plugin and Dataview separately; the archives contain no plugin binaries. Native theme lists and quick capture work without Dataview. Task, record and file query blocks require Dataview. Local generation does not update public downloads.

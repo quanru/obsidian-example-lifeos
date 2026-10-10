@@ -2,10 +2,22 @@
 tags: [lifeos/first-project]
 ---
 
-# المشاريع
+# نظرة عامة
 
-- سجّل فكرة قبل نسيانها.
+## المهام
 
 ```LifeOS
 TaskListByTag
+```
+
+## السجلات
+
+```LifeOS
+BulletListByTag
+```
+
+## الملفات
+
+```LifeOS
+FileListByTag
 ```
