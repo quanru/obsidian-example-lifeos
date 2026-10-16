@@ -2,18 +2,18 @@
 
 ## Tâches
 
-```LifeOS
+```LifeOSOpen
 TaskListByTag
 ```
 
 ## Notes
 
-```LifeOS
+```LifeOSOpen
 BulletListByTag
 ```
 
 ## Fichiers
 
-```LifeOS
+```LifeOSOpen
 FileListByTag
 ```

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import assert from 'node:assert/strict';
+import { addThemeScenarios } from './theme-scenarios.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -9,6 +10,19 @@ const install = JSON.parse(fs.readFileSync(path.join(root, 'i18n/install.json'),
 const validate = process.argv.includes('--check');
 const index = { schemaVersion: 1, source: 'Open-source LifeOS starter templates', languages: {} };
 let checked = 0;
+// Keep the original English and Chinese starter vaults on the same default.
+for (const legacy of [root, path.join(root, 'i18n/zh')]) {
+  const appearancePath = path.join(legacy, '.obsidian/appearance.json');
+  const appearance = JSON.parse(fs.readFileSync(appearancePath, 'utf8'));
+  if (validate) assert.equal(appearance.cssTheme, 'Aino', `Default theme must be Aino: ${legacy}`);
+  else fs.writeFileSync(appearancePath, JSON.stringify({ ...appearance, cssTheme: 'Aino' }, null, 2) + '\n');
+  for (const name of ['manifest.json', 'theme.css', 'LICENSE']) {
+    const contents = fs.readFileSync(path.join(root, 'assets/themes/Aino', name), 'utf8');
+    const file = path.join(legacy, '.obsidian/themes/Aino', name);
+    if (validate) assert.equal(fs.readFileSync(file, 'utf8'), contents, `Stale Aino asset: ${file}`);
+    else { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, contents); }
+  }
+}
 for (const [locale, language] of Object.entries(starter.languages)) {
   const suffix = locale === 'en' ? '' : '_' + ({ 'zh-cn': 'ZH', 'zh-tw': 'ZH_TW' }[locale] || locale.toUpperCase());
   index.languages[locale] = { label: language.label, example: `examples/${locale}/LifeOS Vault`, blank: `examples/${locale}/LifeOS Blank Vault`, themeExample: `examples/${locale}/LifeOS Theme Vault`, themeBlank: `examples/${locale}/LifeOS Theme Blank Vault`, archiveName: `LifeOS${suffix}` };
@@ -17,7 +31,7 @@ for (const [locale, language] of Object.entries(starter.languages)) {
     const blank = variant.includes('Blank');
     const themeMode = variant.includes('Theme');
     const content = themeMode ? language.themes : language;
-    if (!validate) fs.rmSync(target, { recursive: true, force: true });
+    if (!validate && !process.argv.includes('--update-only')) fs.rmSync(target, { recursive: true, force: true });
     const files = new Map();
     const settings = { ...content.settings };
     for (const plan of content.plans) {
@@ -29,7 +43,7 @@ for (const [locale, language] of Object.entries(starter.languages)) {
     for (const key of themeMode ? [] : ['projectsPath', 'areasPath', 'resourcesPath', 'archivesPath']) {
       // Keep every PARA folder visible even before notes are added.
       const title = settings[key].replace(/^\d+\. /, '');
-      files.set(`${settings[key]}/README.md`, `# ${title}\n\n\`\`\`LifeOS\n${({ projectsPath: 'Project', areasPath: 'Area', resourcesPath: 'Resource', archivesPath: 'Archive' })[key]}ListByFolder\n\`\`\`\n`);
+      files.set(`${settings[key]}/README.md`, `# ${title}\n\n\`\`\`LifeOSOpen\n${({ projectsPath: 'Project', areasPath: 'Area', resourcesPath: 'Resource', archivesPath: 'Archive' })[key]}ListByFolder\n\`\`\`\n`);
     }
     if (!blank) {
       const example = content.plans.find(plan => plan.role === 'example');
@@ -43,10 +57,15 @@ for (const [locale, language] of Object.entries(starter.languages)) {
       if (themeMode) files.set(`${rootFolder}/${copy.templateRecords}/README.md`, `---\ntags: [lifeos/first-theme/notes]\n---\n\n${body}`);
       files.set(`${rootFolder}/${name}/Notes.md`, `---\ntags: [${tag}]\n---\n\n# ${copy.templateFiles}\n\n${sampleLines[0]}\n`);
     }
+    if (themeMode && !blank) addThemeScenarios(files, settings, locale);
     files.set('.lifeos/template-profile.json', JSON.stringify({ schemaVersion: 1, template: themeMode ? 'theme' : 'para', locale, initializedAt: '2026-10-07T00:00:00.000Z' }, null, 2) + '\n');
     files.set('.obsidian/plugins/periodic-para/data.json', JSON.stringify(settings, null, 2) + '\n');
     files.set('.obsidian/community-plugins.json', '["periodic-para", "dataview"]\n');
     files.set('.obsidian/app.json', '{}\n');
+    files.set('.obsidian/appearance.json', '{"cssTheme":"Aino"}\n');
+    for (const name of ['manifest.json', 'theme.css', 'LICENSE']) {
+      files.set(`.obsidian/themes/Aino/${name}`, fs.readFileSync(path.join(root, 'assets/themes/Aino', name), 'utf8'));
+    }
     files.set('.obsidian/daily-notes.json', JSON.stringify({ folder: settings.periodicNotesPath, format: 'YYYY/[Daily]/MM/YYYY-MM-DD', template: `${settings.periodicNotesPath}/Templates/Daily.md` }, null, 2) + '\n');
     files.set('INSTALL.md', '# LifeOS\n\n' + install[locale].slice(0, 3).map((line, index) => `${index + 1}. ${line}`).join('\n') + '\n\n' + install[locale][3] + '\n');
     for (const [relative, contents] of files) {

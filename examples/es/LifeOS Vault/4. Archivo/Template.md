@@ -2,18 +2,18 @@
 
 ## Tareas
 
-```LifeOS
+```LifeOSOpen
 TaskListByTag
 ```
 
 ## Registros
 
-```LifeOS
+```LifeOSOpen
 BulletListByTag
 ```
 
 ## Archivos
 
-```LifeOS
+```LifeOSOpen
 FileListByTag
 ```

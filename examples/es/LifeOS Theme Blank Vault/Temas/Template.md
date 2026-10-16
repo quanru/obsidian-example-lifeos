@@ -2,24 +2,24 @@
 
 ## Tareas
 
-```LifeOS
-TaskListByTag
+```LifeOSOpen
+TaskOpenListByTag
 ```
 
 ## Registros
 
-```LifeOS
+```LifeOSOpen
 BulletListByTag
 ```
 
 ## Archivos
 
-```LifeOS
+```LifeOSOpen
 FileListByTag
 ```
 
 ## Notas de tema
 
-```LifeOS
+```LifeOSOpen
 ThemeListByTag
 ```

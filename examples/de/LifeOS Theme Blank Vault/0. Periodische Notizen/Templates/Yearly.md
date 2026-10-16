@@ -2,18 +2,18 @@
 
 ## Erfasste Aufgaben
 
-```LifeOS
+```LifeOSOpen
 TaskRecordListByTime
 ```
 
 ## Erledigte Aufgaben
 
-```LifeOS
+```LifeOSOpen
 TaskDoneListByTime
 ```
 
 ## Tagesprotokoll
 
-```LifeOS
+```LifeOSOpen
 BulletRecordListByTime
 ```

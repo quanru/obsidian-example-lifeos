@@ -6,18 +6,18 @@ tags: [lifeos/first-project]
 
 ## المهام
 
-```LifeOS
+```LifeOSOpen
 TaskListByTag
 ```
 
 ## السجلات
 
-```LifeOS
+```LifeOSOpen
 BulletListByTag
 ```
 
 ## الملفات
 
-```LifeOS
+```LifeOSOpen
 FileListByTag
 ```

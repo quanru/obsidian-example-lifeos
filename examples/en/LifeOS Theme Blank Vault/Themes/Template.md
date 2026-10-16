@@ -2,24 +2,24 @@
 
 ## Tasks
 
-```LifeOS
-TaskListByTag
+```LifeOSOpen
+TaskOpenListByTag
 ```
 
 ## Records
 
-```LifeOS
+```LifeOSOpen
 BulletListByTag
 ```
 
 ## Files
 
-```LifeOS
+```LifeOSOpen
 FileListByTag
 ```
 
 ## Theme notes
 
-```LifeOS
+```LifeOSOpen
 ThemeListByTag
 ```

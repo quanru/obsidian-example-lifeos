@@ -1,5 +1,5 @@
 # テーマノート
 
-```LifeOS
+```LifeOSOpen
 ThemeListByFolder
 ```

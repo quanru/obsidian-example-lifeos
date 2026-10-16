@@ -1,5 +1,5 @@
 # 자료
 
-```LifeOS
+```LifeOSOpen
 ResourceListByFolder
 ```

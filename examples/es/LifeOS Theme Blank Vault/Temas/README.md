@@ -1,5 +1,5 @@
 # Notas de tema
 
-```LifeOS
+```LifeOSOpen
 ThemeListByFolder
 ```

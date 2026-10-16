@@ -1,5 +1,5 @@
 # Domaines
 
-```LifeOS
+```LifeOSOpen
 AreaListByFolder
 ```

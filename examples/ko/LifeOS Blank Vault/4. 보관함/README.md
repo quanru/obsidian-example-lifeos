@@ -1,5 +1,5 @@
 # 보관함
 
-```LifeOS
+```LifeOSOpen
 ArchiveListByFolder
 ```

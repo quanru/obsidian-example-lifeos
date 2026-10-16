@@ -2,30 +2,30 @@
 
 ## Erfasste Aufgaben
 
-```LifeOS
+```LifeOSOpen
 TaskRecordListByTime
 ```
 
 ## Erledigte Aufgaben
 
-```LifeOS
+```LifeOSOpen
 TaskDoneListByTime
 ```
 
 ## Tagesprotokoll
 
-```LifeOS
+```LifeOSOpen
 BulletRecordListByTime
 ```
 
 ## Projekte
 
-```LifeOS
+```LifeOSOpen
 ProjectListByTime
 ```
 
 ## Bereiche
 
-```LifeOS
+```LifeOSOpen
 AreaListByTime
 ```

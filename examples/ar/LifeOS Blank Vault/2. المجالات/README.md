@@ -1,5 +1,5 @@
 # المجالات
 
-```LifeOS
+```LifeOSOpen
 AreaListByFolder
 ```

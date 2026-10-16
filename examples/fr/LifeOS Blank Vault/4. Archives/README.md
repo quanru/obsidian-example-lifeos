@@ -1,5 +1,5 @@
 # Archives
 
-```LifeOS
+```LifeOSOpen
 ArchiveListByFolder
 ```

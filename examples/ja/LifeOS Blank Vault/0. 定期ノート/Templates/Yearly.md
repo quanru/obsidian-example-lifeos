@@ -2,30 +2,30 @@
 
 ## 記録したタスク
 
-```LifeOS
+```LifeOSOpen
 TaskRecordListByTime
 ```
 
 ## 完了したタスク
 
-```LifeOS
+```LifeOSOpen
 TaskDoneListByTime
 ```
 
 ## 日常記録
 
-```LifeOS
+```LifeOSOpen
 BulletRecordListByTime
 ```
 
 ## プロジェクト
 
-```LifeOS
+```LifeOSOpen
 ProjectListByTime
 ```
 
 ## 分野
 
-```LifeOS
+```LifeOSOpen
 AreaListByTime
 ```

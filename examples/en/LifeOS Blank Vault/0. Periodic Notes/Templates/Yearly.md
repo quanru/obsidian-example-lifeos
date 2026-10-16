@@ -2,30 +2,30 @@
 
 ## Tasks recorded
 
-```LifeOS
+```LifeOSOpen
 TaskRecordListByTime
 ```
 
 ## Tasks completed
 
-```LifeOS
+```LifeOSOpen
 TaskDoneListByTime
 ```
 
 ## Daily records
 
-```LifeOS
+```LifeOSOpen
 BulletRecordListByTime
 ```
 
 ## Projects
 
-```LifeOS
+```LifeOSOpen
 ProjectListByTime
 ```
 
 ## Areas
 
-```LifeOS
+```LifeOSOpen
 AreaListByTime
 ```

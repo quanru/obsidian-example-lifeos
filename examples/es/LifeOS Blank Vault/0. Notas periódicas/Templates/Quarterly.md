@@ -2,25 +2,25 @@
 
 ## Tareas registradas
 
-```LifeOS
+```LifeOSOpen
 TaskRecordListByTime
 ```
 
 ## Tareas completadas
 
-```LifeOS
+```LifeOSOpen
 TaskDoneListByTime
 ```
 
 ## Registros diarios
 
-```LifeOS
+```LifeOSOpen
 BulletRecordListByTime
 ```
 
 ## Proyectos
 
-```LifeOS
+```LifeOSOpen
 ProjectListByTime
 ```
 

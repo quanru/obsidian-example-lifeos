@@ -6,3 +6,7 @@
 build/
 dist/
 node_modules/
+# Local acceptance downloads and debugging plugins
+.verify/
+/.obsidian/plugins/remosidian-host/
+/.obsidian/plugins/remosidian-smoke/

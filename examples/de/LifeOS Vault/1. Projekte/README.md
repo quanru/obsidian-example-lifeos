@@ -1,5 +1,5 @@
 # Projekte
 
-```LifeOS
+```LifeOSOpen
 ProjectListByFolder
 ```

@@ -2,30 +2,30 @@
 
 ## المهام المسجلة
 
-```LifeOS
+```LifeOSOpen
 TaskRecordListByTime
 ```
 
 ## المهام المكتملة
 
-```LifeOS
+```LifeOSOpen
 TaskDoneListByTime
 ```
 
 ## السجل اليومي
 
-```LifeOS
+```LifeOSOpen
 BulletRecordListByTime
 ```
 
 ## المشاريع
 
-```LifeOS
+```LifeOSOpen
 ProjectListByTime
 ```
 
 ## المجالات
 
-```LifeOS
+```LifeOSOpen
 AreaListByTime
 ```

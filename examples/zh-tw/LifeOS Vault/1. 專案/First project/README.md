@@ -6,18 +6,18 @@ tags: [lifeos/first-project]
 
 ## 任務
 
-```LifeOS
+```LifeOSOpen
 TaskListByTag
 ```
 
 ## 記錄
 
-```LifeOS
+```LifeOSOpen
 BulletListByTag
 ```
 
 ## 檔案
 
-```LifeOS
+```LifeOSOpen
 FileListByTag
 ```

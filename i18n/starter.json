@@ -93,35 +93,35 @@
         },
         {
           "path": "0. Periodic Notes/Templates/Weekly.md",
-          "content": "# Weekly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# Weekly review\n\n## Tasks recorded\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. Periodic Notes/Templates/Monthly.md",
-          "content": "# Monthly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# Monthly review\n\n## Tasks recorded\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. Periodic Notes/Templates/Quarterly.md",
-          "content": "# Quarterly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOS\nProjectListByTime\n```\n\n## Areas\n"
+          "content": "# Quarterly review\n\n## Tasks recorded\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## Areas\n"
         },
         {
           "path": "0. Periodic Notes/Templates/Yearly.md",
-          "content": "# Yearly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOS\nProjectListByTime\n```\n\n## Areas\n\n```LifeOS\nAreaListByTime\n```\n"
+          "content": "# Yearly review\n\n## Tasks recorded\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projects\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## Areas\n\n```LifeOSOpen\nAreaListByTime\n```\n"
         },
         {
           "path": "1. Projects/Template.md",
-          "content": "# Overview\n\n## Tasks\n\n```LifeOS\nTaskListByTag\n```\n\n## Records\n\n```LifeOS\nBulletListByTag\n```\n\n## Files\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Overview\n\n## Tasks\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Records\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Files\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "2. Areas/Template.md",
-          "content": "# Overview\n\n## Tasks\n\n```LifeOS\nTaskListByTag\n```\n\n## Records\n\n```LifeOS\nBulletListByTag\n```\n\n## Files\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Overview\n\n## Tasks\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Records\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Files\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "3. Resources/Template.md",
-          "content": "# Overview\n\n## Tasks\n\n```LifeOS\nTaskListByTag\n```\n\n## Records\n\n```LifeOS\nBulletListByTag\n```\n\n## Files\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Overview\n\n## Tasks\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Records\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Files\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "4. Archive/Template.md",
-          "content": "# Overview\n\n## Tasks\n\n```LifeOS\nTaskListByTag\n```\n\n## Records\n\n```LifeOS\nBulletListByTag\n```\n\n## Files\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Overview\n\n## Tasks\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Records\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Files\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "LifeOS Start Here.md",
@@ -166,27 +166,27 @@
           },
           {
             "path": "0. Periodic Notes/Templates/Weekly.md",
-            "content": "# Weekly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Weekly review\n\n## Tasks recorded\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Periodic Notes/Templates/Monthly.md",
-            "content": "# Monthly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Monthly review\n\n## Tasks recorded\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Periodic Notes/Templates/Quarterly.md",
-            "content": "# Quarterly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Quarterly review\n\n## Tasks recorded\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Periodic Notes/Templates/Yearly.md",
-            "content": "# Yearly review\n\n## Tasks recorded\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Yearly review\n\n## Tasks recorded\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tasks completed\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Daily records\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "Themes/Template.md",
-            "content": "# Overview\n\n## Tasks\n\n```LifeOS\nTaskListByTag\n```\n\n## Records\n\n```LifeOS\nBulletListByTag\n```\n\n## Files\n\n```LifeOS\nFileListByTag\n```\n\n## Theme notes\n\n```LifeOS\nThemeListByTag\n```\n"
+            "content": "# Overview\n\n## Tasks\n\n```LifeOSOpen\nTaskOpenListByTag\n```\n\n## Records\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Files\n\n```LifeOSOpen\nFileListByTag\n```\n\n## Theme notes\n\n```LifeOSOpen\nThemeListByTag\n```\n"
           },
           {
             "path": "Themes/README.md",
-            "content": "# Theme notes\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "content": "# Theme notes\n\n```LifeOSOpen\nThemeListByFolder\n```\n",
             "role": "guide"
           },
           {
@@ -294,35 +294,35 @@
         },
         {
           "path": "0. 周期笔记/Templates/Weekly.md",
-          "content": "# 周复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# 周复盘\n\n## 记录的任务\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. 周期笔记/Templates/Monthly.md",
-          "content": "# 月复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# 月复盘\n\n## 记录的任务\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. 周期笔记/Templates/Quarterly.md",
-          "content": "# 季度复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOS\nProjectListByTime\n```\n\n## 领域\n"
+          "content": "# 季度复盘\n\n## 记录的任务\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## 领域\n"
         },
         {
           "path": "0. 周期笔记/Templates/Yearly.md",
-          "content": "# 年度复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOS\nProjectListByTime\n```\n\n## 领域\n\n```LifeOS\nAreaListByTime\n```\n"
+          "content": "# 年度复盘\n\n## 记录的任务\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 项目\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## 领域\n\n```LifeOSOpen\nAreaListByTime\n```\n"
         },
         {
           "path": "1. 项目/Template.md",
-          "content": "# 概览\n\n## 任务\n\n```LifeOS\nTaskListByTag\n```\n\n## 记录\n\n```LifeOS\nBulletListByTag\n```\n\n## 文件\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概览\n\n## 任务\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 记录\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 文件\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "2. 领域/Template.md",
-          "content": "# 概览\n\n## 任务\n\n```LifeOS\nTaskListByTag\n```\n\n## 记录\n\n```LifeOS\nBulletListByTag\n```\n\n## 文件\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概览\n\n## 任务\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 记录\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 文件\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "3. 资源/Template.md",
-          "content": "# 概览\n\n## 任务\n\n```LifeOS\nTaskListByTag\n```\n\n## 记录\n\n```LifeOS\nBulletListByTag\n```\n\n## 文件\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概览\n\n## 任务\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 记录\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 文件\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "4. 归档/Template.md",
-          "content": "# 概览\n\n## 任务\n\n```LifeOS\nTaskListByTag\n```\n\n## 记录\n\n```LifeOS\nBulletListByTag\n```\n\n## 文件\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概览\n\n## 任务\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 记录\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 文件\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "LifeOS 开始使用.md",
@@ -367,27 +367,27 @@
           },
           {
             "path": "0. 周期笔记/Templates/Weekly.md",
-            "content": "# 周复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 周复盘\n\n## 记录的任务\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 周期笔记/Templates/Monthly.md",
-            "content": "# 月复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 月复盘\n\n## 记录的任务\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 周期笔记/Templates/Quarterly.md",
-            "content": "# 季度复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 季度复盘\n\n## 记录的任务\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 周期笔记/Templates/Yearly.md",
-            "content": "# 年度复盘\n\n## 记录的任务\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 年度复盘\n\n## 记录的任务\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任务\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常记录\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "主题/Template.md",
-            "content": "# 概览\n\n## 任务\n\n```LifeOS\nTaskListByTag\n```\n\n## 记录\n\n```LifeOS\nBulletListByTag\n```\n\n## 文件\n\n```LifeOS\nFileListByTag\n```\n\n## 主题笔记\n\n```LifeOS\nThemeListByTag\n```\n"
+            "content": "# 概览\n\n## 任务\n\n```LifeOSOpen\nTaskOpenListByTag\n```\n\n## 记录\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 文件\n\n```LifeOSOpen\nFileListByTag\n```\n\n## 主题笔记\n\n```LifeOSOpen\nThemeListByTag\n```\n"
           },
           {
             "path": "主题/README.md",
-            "content": "# 主题笔记\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "content": "# 主题笔记\n\n```LifeOSOpen\nThemeListByFolder\n```\n",
             "role": "guide"
           },
           {
@@ -495,35 +495,35 @@
         },
         {
           "path": "0. 週期筆記/Templates/Weekly.md",
-          "content": "# 週回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# 週回顧\n\n## 記錄的任務\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. 週期筆記/Templates/Monthly.md",
-          "content": "# 月回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# 月回顧\n\n## 記錄的任務\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. 週期筆記/Templates/Quarterly.md",
-          "content": "# 季度回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOS\nProjectListByTime\n```\n\n## 領域\n"
+          "content": "# 季度回顧\n\n## 記錄的任務\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## 領域\n"
         },
         {
           "path": "0. 週期筆記/Templates/Yearly.md",
-          "content": "# 年度回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOS\nProjectListByTime\n```\n\n## 領域\n\n```LifeOS\nAreaListByTime\n```\n"
+          "content": "# 年度回顧\n\n## 記錄的任務\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 專案\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## 領域\n\n```LifeOSOpen\nAreaListByTime\n```\n"
         },
         {
           "path": "1. 專案/Template.md",
-          "content": "# 概覽\n\n## 任務\n\n```LifeOS\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOS\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概覽\n\n## 任務\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "2. 領域/Template.md",
-          "content": "# 概覽\n\n## 任務\n\n```LifeOS\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOS\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概覽\n\n## 任務\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "3. 資源/Template.md",
-          "content": "# 概覽\n\n## 任務\n\n```LifeOS\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOS\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概覽\n\n## 任務\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "4. 封存/Template.md",
-          "content": "# 概覽\n\n## 任務\n\n```LifeOS\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOS\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概覽\n\n## 任務\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "LifeOS 開始使用.md",
@@ -568,27 +568,27 @@
           },
           {
             "path": "0. 週期筆記/Templates/Weekly.md",
-            "content": "# 週回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 週回顧\n\n## 記錄的任務\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 週期筆記/Templates/Monthly.md",
-            "content": "# 月回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 月回顧\n\n## 記錄的任務\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 週期筆記/Templates/Quarterly.md",
-            "content": "# 季度回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 季度回顧\n\n## 記錄的任務\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 週期筆記/Templates/Yearly.md",
-            "content": "# 年度回顧\n\n## 記錄的任務\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 年度回顧\n\n## 記錄的任務\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完成的任務\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記錄\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "主題/Template.md",
-            "content": "# 概覽\n\n## 任務\n\n```LifeOS\nTaskListByTag\n```\n\n## 記錄\n\n```LifeOS\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOS\nFileListByTag\n```\n\n## 主題筆記\n\n```LifeOS\nThemeListByTag\n```\n"
+            "content": "# 概覽\n\n## 任務\n\n```LifeOSOpen\nTaskOpenListByTag\n```\n\n## 記錄\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 檔案\n\n```LifeOSOpen\nFileListByTag\n```\n\n## 主題筆記\n\n```LifeOSOpen\nThemeListByTag\n```\n"
           },
           {
             "path": "主題/README.md",
-            "content": "# 主題筆記\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "content": "# 主題筆記\n\n```LifeOSOpen\nThemeListByFolder\n```\n",
             "role": "guide"
           },
           {
@@ -696,35 +696,35 @@
         },
         {
           "path": "0. Periodische Notizen/Templates/Weekly.md",
-          "content": "# Wochenrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# Wochenrückblick\n\n## Erfasste Aufgaben\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. Periodische Notizen/Templates/Monthly.md",
-          "content": "# Monatsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# Monatsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. Periodische Notizen/Templates/Quarterly.md",
-          "content": "# Quartalsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOS\nProjectListByTime\n```\n\n## Bereiche\n"
+          "content": "# Quartalsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## Bereiche\n"
         },
         {
           "path": "0. Periodische Notizen/Templates/Yearly.md",
-          "content": "# Jahresrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOS\nProjectListByTime\n```\n\n## Bereiche\n\n```LifeOS\nAreaListByTime\n```\n"
+          "content": "# Jahresrückblick\n\n## Erfasste Aufgaben\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projekte\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## Bereiche\n\n```LifeOSOpen\nAreaListByTime\n```\n"
         },
         {
           "path": "1. Projekte/Template.md",
-          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOS\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOS\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "2. Bereiche/Template.md",
-          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOS\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOS\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "3. Ressourcen/Template.md",
-          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOS\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOS\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "4. Archiv/Template.md",
-          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOS\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOS\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "LifeOS Einstieg.md",
@@ -769,27 +769,27 @@
           },
           {
             "path": "0. Periodische Notizen/Templates/Weekly.md",
-            "content": "# Wochenrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Wochenrückblick\n\n## Erfasste Aufgaben\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Periodische Notizen/Templates/Monthly.md",
-            "content": "# Monatsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Monatsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Periodische Notizen/Templates/Quarterly.md",
-            "content": "# Quartalsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Quartalsrückblick\n\n## Erfasste Aufgaben\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Periodische Notizen/Templates/Yearly.md",
-            "content": "# Jahresrückblick\n\n## Erfasste Aufgaben\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Jahresrückblick\n\n## Erfasste Aufgaben\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Erledigte Aufgaben\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Tagesprotokoll\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "Themen/Template.md",
-            "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOS\nTaskListByTag\n```\n\n## Notizen\n\n```LifeOS\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOS\nFileListByTag\n```\n\n## Themennotizen\n\n```LifeOS\nThemeListByTag\n```\n"
+            "content": "# Übersicht\n\n## Aufgaben\n\n```LifeOSOpen\nTaskOpenListByTag\n```\n\n## Notizen\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Dateien\n\n```LifeOSOpen\nFileListByTag\n```\n\n## Themennotizen\n\n```LifeOSOpen\nThemeListByTag\n```\n"
           },
           {
             "path": "Themen/README.md",
-            "content": "# Themennotizen\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "content": "# Themennotizen\n\n```LifeOSOpen\nThemeListByFolder\n```\n",
             "role": "guide"
           },
           {
@@ -897,35 +897,35 @@
         },
         {
           "path": "0. Notas periódicas/Templates/Weekly.md",
-          "content": "# Revisión semanal\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# Revisión semanal\n\n## Tareas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. Notas periódicas/Templates/Monthly.md",
-          "content": "# Revisión mensual\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# Revisión mensual\n\n## Tareas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. Notas periódicas/Templates/Quarterly.md",
-          "content": "# Revisión trimestral\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOS\nProjectListByTime\n```\n\n## Áreas\n"
+          "content": "# Revisión trimestral\n\n## Tareas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## Áreas\n"
         },
         {
           "path": "0. Notas periódicas/Templates/Yearly.md",
-          "content": "# Revisión anual\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOS\nProjectListByTime\n```\n\n## Áreas\n\n```LifeOS\nAreaListByTime\n```\n"
+          "content": "# Revisión anual\n\n## Tareas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Proyectos\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## Áreas\n\n```LifeOSOpen\nAreaListByTime\n```\n"
         },
         {
           "path": "1. Proyectos/Template.md",
-          "content": "# Resumen\n\n## Tareas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Resumen\n\n## Tareas\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Registros\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "2. Áreas/Template.md",
-          "content": "# Resumen\n\n## Tareas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Resumen\n\n## Tareas\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Registros\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "3. Recursos/Template.md",
-          "content": "# Resumen\n\n## Tareas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Resumen\n\n## Tareas\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Registros\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "4. Archivo/Template.md",
-          "content": "# Resumen\n\n## Tareas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Resumen\n\n## Tareas\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Registros\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "LifeOS Empieza aquí.md",
@@ -970,27 +970,27 @@
           },
           {
             "path": "0. Notas periódicas/Templates/Weekly.md",
-            "content": "# Revisión semanal\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Revisión semanal\n\n## Tareas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Notas periódicas/Templates/Monthly.md",
-            "content": "# Revisión mensual\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Revisión mensual\n\n## Tareas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Notas periódicas/Templates/Quarterly.md",
-            "content": "# Revisión trimestral\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Revisión trimestral\n\n## Tareas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Notas periódicas/Templates/Yearly.md",
-            "content": "# Revisión anual\n\n## Tareas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Revisión anual\n\n## Tareas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tareas completadas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diarios\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "Temas/Template.md",
-            "content": "# Resumen\n\n## Tareas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOS\nFileListByTag\n```\n\n## Notas de tema\n\n```LifeOS\nThemeListByTag\n```\n"
+            "content": "# Resumen\n\n## Tareas\n\n```LifeOSOpen\nTaskOpenListByTag\n```\n\n## Registros\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Archivos\n\n```LifeOSOpen\nFileListByTag\n```\n\n## Notas de tema\n\n```LifeOSOpen\nThemeListByTag\n```\n"
           },
           {
             "path": "Temas/README.md",
-            "content": "# Notas de tema\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "content": "# Notas de tema\n\n```LifeOSOpen\nThemeListByFolder\n```\n",
             "role": "guide"
           },
           {
@@ -1098,35 +1098,35 @@
         },
         {
           "path": "0. Notes périodiques/Templates/Weekly.md",
-          "content": "# Bilan hebdomadaire\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# Bilan hebdomadaire\n\n## Tâches enregistrées\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. Notes périodiques/Templates/Monthly.md",
-          "content": "# Bilan mensuel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# Bilan mensuel\n\n## Tâches enregistrées\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. Notes périodiques/Templates/Quarterly.md",
-          "content": "# Bilan trimestriel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOS\nProjectListByTime\n```\n\n## Domaines\n"
+          "content": "# Bilan trimestriel\n\n## Tâches enregistrées\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## Domaines\n"
         },
         {
           "path": "0. Notes périodiques/Templates/Yearly.md",
-          "content": "# Bilan annuel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOS\nProjectListByTime\n```\n\n## Domaines\n\n```LifeOS\nAreaListByTime\n```\n"
+          "content": "# Bilan annuel\n\n## Tâches enregistrées\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projets\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## Domaines\n\n```LifeOSOpen\nAreaListByTime\n```\n"
         },
         {
           "path": "1. Projets/Template.md",
-          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOS\nTaskListByTag\n```\n\n## Notes\n\n```LifeOS\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Notes\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "2. Domaines/Template.md",
-          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOS\nTaskListByTag\n```\n\n## Notes\n\n```LifeOS\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Notes\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "3. Ressources/Template.md",
-          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOS\nTaskListByTag\n```\n\n## Notes\n\n```LifeOS\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Notes\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "4. Archives/Template.md",
-          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOS\nTaskListByTag\n```\n\n## Notes\n\n```LifeOS\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Notes\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "LifeOS Bien démarrer.md",
@@ -1171,27 +1171,27 @@
           },
           {
             "path": "0. Notes périodiques/Templates/Weekly.md",
-            "content": "# Bilan hebdomadaire\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Bilan hebdomadaire\n\n## Tâches enregistrées\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Notes périodiques/Templates/Monthly.md",
-            "content": "# Bilan mensuel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Bilan mensuel\n\n## Tâches enregistrées\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Notes périodiques/Templates/Quarterly.md",
-            "content": "# Bilan trimestriel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Bilan trimestriel\n\n## Tâches enregistrées\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Notes périodiques/Templates/Yearly.md",
-            "content": "# Bilan annuel\n\n## Tâches enregistrées\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Bilan annuel\n\n## Tâches enregistrées\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tâches terminées\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Journal quotidien\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "Thèmes/Template.md",
-            "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOS\nTaskListByTag\n```\n\n## Notes\n\n```LifeOS\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOS\nFileListByTag\n```\n\n## Notes de thème\n\n```LifeOS\nThemeListByTag\n```\n"
+            "content": "# Vue d’ensemble\n\n## Tâches\n\n```LifeOSOpen\nTaskOpenListByTag\n```\n\n## Notes\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Fichiers\n\n```LifeOSOpen\nFileListByTag\n```\n\n## Notes de thème\n\n```LifeOSOpen\nThemeListByTag\n```\n"
           },
           {
             "path": "Thèmes/README.md",
-            "content": "# Notes de thème\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "content": "# Notes de thème\n\n```LifeOSOpen\nThemeListByFolder\n```\n",
             "role": "guide"
           },
           {
@@ -1299,35 +1299,35 @@
         },
         {
           "path": "0. Notas periódicas/Templates/Weekly.md",
-          "content": "# Revisão semanal\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# Revisão semanal\n\n## Tarefas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. Notas periódicas/Templates/Monthly.md",
-          "content": "# Revisão mensal\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# Revisão mensal\n\n## Tarefas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. Notas periódicas/Templates/Quarterly.md",
-          "content": "# Revisão trimestral\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOS\nProjectListByTime\n```\n\n## Áreas\n"
+          "content": "# Revisão trimestral\n\n## Tarefas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## Áreas\n"
         },
         {
           "path": "0. Notas periódicas/Templates/Yearly.md",
-          "content": "# Revisão anual\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOS\nProjectListByTime\n```\n\n## Áreas\n\n```LifeOS\nAreaListByTime\n```\n"
+          "content": "# Revisão anual\n\n## Tarefas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## Projetos\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## Áreas\n\n```LifeOSOpen\nAreaListByTime\n```\n"
         },
         {
           "path": "1. Projetos/Template.md",
-          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Registros\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "2. Áreas/Template.md",
-          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Registros\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "3. Recursos/Template.md",
-          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Registros\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "4. Arquivo/Template.md",
-          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# Visão geral\n\n## Tarefas\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## Registros\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "LifeOS Comece aqui.md",
@@ -1372,27 +1372,27 @@
           },
           {
             "path": "0. Notas periódicas/Templates/Weekly.md",
-            "content": "# Revisão semanal\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Revisão semanal\n\n## Tarefas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Notas periódicas/Templates/Monthly.md",
-            "content": "# Revisão mensal\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Revisão mensal\n\n## Tarefas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Notas periódicas/Templates/Quarterly.md",
-            "content": "# Revisão trimestral\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Revisão trimestral\n\n## Tarefas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. Notas periódicas/Templates/Yearly.md",
-            "content": "# Revisão anual\n\n## Tarefas registradas\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# Revisão anual\n\n## Tarefas registradas\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## Tarefas concluídas\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## Registros diários\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "Temas/Template.md",
-            "content": "# Visão geral\n\n## Tarefas\n\n```LifeOS\nTaskListByTag\n```\n\n## Registros\n\n```LifeOS\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOS\nFileListByTag\n```\n\n## Notas de tema\n\n```LifeOS\nThemeListByTag\n```\n"
+            "content": "# Visão geral\n\n## Tarefas\n\n```LifeOSOpen\nTaskOpenListByTag\n```\n\n## Registros\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## Arquivos\n\n```LifeOSOpen\nFileListByTag\n```\n\n## Notas de tema\n\n```LifeOSOpen\nThemeListByTag\n```\n"
           },
           {
             "path": "Temas/README.md",
-            "content": "# Notas de tema\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "content": "# Notas de tema\n\n```LifeOSOpen\nThemeListByFolder\n```\n",
             "role": "guide"
           },
           {
@@ -1500,35 +1500,35 @@
         },
         {
           "path": "0. 定期ノート/Templates/Weekly.md",
-          "content": "# 週の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# 週の振り返り\n\n## 記録したタスク\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. 定期ノート/Templates/Monthly.md",
-          "content": "# 月の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# 月の振り返り\n\n## 記録したタスク\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. 定期ノート/Templates/Quarterly.md",
-          "content": "# 四半期の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOS\nProjectListByTime\n```\n\n## 分野\n"
+          "content": "# 四半期の振り返り\n\n## 記録したタスク\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## 分野\n"
         },
         {
           "path": "0. 定期ノート/Templates/Yearly.md",
-          "content": "# 年の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOS\nProjectListByTime\n```\n\n## 分野\n\n```LifeOS\nAreaListByTime\n```\n"
+          "content": "# 年の振り返り\n\n## 記録したタスク\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## プロジェクト\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## 分野\n\n```LifeOSOpen\nAreaListByTime\n```\n"
         },
         {
           "path": "1. プロジェクト/Template.md",
-          "content": "# 概要\n\n## タスク\n\n```LifeOS\nTaskListByTag\n```\n\n## 記録\n\n```LifeOS\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概要\n\n## タスク\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 記録\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "2. 分野/Template.md",
-          "content": "# 概要\n\n## タスク\n\n```LifeOS\nTaskListByTag\n```\n\n## 記録\n\n```LifeOS\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概要\n\n## タスク\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 記録\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "3. 資料/Template.md",
-          "content": "# 概要\n\n## タスク\n\n```LifeOS\nTaskListByTag\n```\n\n## 記録\n\n```LifeOS\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概要\n\n## タスク\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 記録\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "4. アーカイブ/Template.md",
-          "content": "# 概要\n\n## タスク\n\n```LifeOS\nTaskListByTag\n```\n\n## 記録\n\n```LifeOS\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 概要\n\n## タスク\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 記録\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "LifeOS はじめに.md",
@@ -1573,27 +1573,27 @@
           },
           {
             "path": "0. 定期ノート/Templates/Weekly.md",
-            "content": "# 週の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 週の振り返り\n\n## 記録したタスク\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 定期ノート/Templates/Monthly.md",
-            "content": "# 月の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 月の振り返り\n\n## 記録したタスク\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 定期ノート/Templates/Quarterly.md",
-            "content": "# 四半期の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 四半期の振り返り\n\n## 記録したタスク\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 定期ノート/Templates/Yearly.md",
-            "content": "# 年の振り返り\n\n## 記録したタスク\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 年の振り返り\n\n## 記録したタスク\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 完了したタスク\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 日常記録\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "テーマ/Template.md",
-            "content": "# 概要\n\n## タスク\n\n```LifeOS\nTaskListByTag\n```\n\n## 記録\n\n```LifeOS\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOS\nFileListByTag\n```\n\n## テーマノート\n\n```LifeOS\nThemeListByTag\n```\n"
+            "content": "# 概要\n\n## タスク\n\n```LifeOSOpen\nTaskOpenListByTag\n```\n\n## 記録\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## ファイル\n\n```LifeOSOpen\nFileListByTag\n```\n\n## テーマノート\n\n```LifeOSOpen\nThemeListByTag\n```\n"
           },
           {
             "path": "テーマ/README.md",
-            "content": "# テーマノート\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "content": "# テーマノート\n\n```LifeOSOpen\nThemeListByFolder\n```\n",
             "role": "guide"
           },
           {
@@ -1701,35 +1701,35 @@
         },
         {
           "path": "0. 주기 노트/Templates/Weekly.md",
-          "content": "# 주간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# 주간 회고\n\n## 기록한 할 일\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. 주기 노트/Templates/Monthly.md",
-          "content": "# 월간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# 월간 회고\n\n## 기록한 할 일\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. 주기 노트/Templates/Quarterly.md",
-          "content": "# 분기 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOS\nProjectListByTime\n```\n\n## 영역\n"
+          "content": "# 분기 회고\n\n## 기록한 할 일\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## 영역\n"
         },
         {
           "path": "0. 주기 노트/Templates/Yearly.md",
-          "content": "# 연간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOS\nProjectListByTime\n```\n\n## 영역\n\n```LifeOS\nAreaListByTime\n```\n"
+          "content": "# 연간 회고\n\n## 기록한 할 일\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## 프로젝트\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## 영역\n\n```LifeOSOpen\nAreaListByTime\n```\n"
         },
         {
           "path": "1. 프로젝트/Template.md",
-          "content": "# 개요\n\n## 할 일\n\n```LifeOS\nTaskListByTag\n```\n\n## 기록\n\n```LifeOS\nBulletListByTag\n```\n\n## 파일\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 개요\n\n## 할 일\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 기록\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 파일\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "2. 영역/Template.md",
-          "content": "# 개요\n\n## 할 일\n\n```LifeOS\nTaskListByTag\n```\n\n## 기록\n\n```LifeOS\nBulletListByTag\n```\n\n## 파일\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 개요\n\n## 할 일\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 기록\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 파일\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "3. 자료/Template.md",
-          "content": "# 개요\n\n## 할 일\n\n```LifeOS\nTaskListByTag\n```\n\n## 기록\n\n```LifeOS\nBulletListByTag\n```\n\n## 파일\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 개요\n\n## 할 일\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 기록\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 파일\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "4. 보관함/Template.md",
-          "content": "# 개요\n\n## 할 일\n\n```LifeOS\nTaskListByTag\n```\n\n## 기록\n\n```LifeOS\nBulletListByTag\n```\n\n## 파일\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# 개요\n\n## 할 일\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## 기록\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 파일\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "LifeOS 시작하기.md",
@@ -1774,27 +1774,27 @@
           },
           {
             "path": "0. 주기 노트/Templates/Weekly.md",
-            "content": "# 주간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 주간 회고\n\n## 기록한 할 일\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 주기 노트/Templates/Monthly.md",
-            "content": "# 월간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 월간 회고\n\n## 기록한 할 일\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 주기 노트/Templates/Quarterly.md",
-            "content": "# 분기 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 분기 회고\n\n## 기록한 할 일\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. 주기 노트/Templates/Yearly.md",
-            "content": "# 연간 회고\n\n## 기록한 할 일\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# 연간 회고\n\n## 기록한 할 일\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## 완료한 할 일\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## 일상 기록\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "주제/Template.md",
-            "content": "# 개요\n\n## 할 일\n\n```LifeOS\nTaskListByTag\n```\n\n## 기록\n\n```LifeOS\nBulletListByTag\n```\n\n## 파일\n\n```LifeOS\nFileListByTag\n```\n\n## 주제 노트\n\n```LifeOS\nThemeListByTag\n```\n"
+            "content": "# 개요\n\n## 할 일\n\n```LifeOSOpen\nTaskOpenListByTag\n```\n\n## 기록\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## 파일\n\n```LifeOSOpen\nFileListByTag\n```\n\n## 주제 노트\n\n```LifeOSOpen\nThemeListByTag\n```\n"
           },
           {
             "path": "주제/README.md",
-            "content": "# 주제 노트\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "content": "# 주제 노트\n\n```LifeOSOpen\nThemeListByFolder\n```\n",
             "role": "guide"
           },
           {
@@ -1902,35 +1902,35 @@
         },
         {
           "path": "0. الملاحظات الدورية/Templates/Weekly.md",
-          "content": "# مراجعة أسبوعية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# مراجعة أسبوعية\n\n## المهام المسجلة\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. الملاحظات الدورية/Templates/Monthly.md",
-          "content": "# مراجعة شهرية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOS\nProjectListByTime\n```\n"
+          "content": "# مراجعة شهرية\n\n## المهام المسجلة\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOSOpen\nProjectListByTime\n```\n"
         },
         {
           "path": "0. الملاحظات الدورية/Templates/Quarterly.md",
-          "content": "# مراجعة ربع سنوية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOS\nProjectListByTime\n```\n\n## المجالات\n"
+          "content": "# مراجعة ربع سنوية\n\n## المهام المسجلة\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## المجالات\n"
         },
         {
           "path": "0. الملاحظات الدورية/Templates/Yearly.md",
-          "content": "# مراجعة سنوية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOS\nProjectListByTime\n```\n\n## المجالات\n\n```LifeOS\nAreaListByTime\n```\n"
+          "content": "# مراجعة سنوية\n\n## المهام المسجلة\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n\n## المشاريع\n\n```LifeOSOpen\nProjectListByTime\n```\n\n## المجالات\n\n```LifeOSOpen\nAreaListByTime\n```\n"
         },
         {
           "path": "1. المشاريع/Template.md",
-          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOS\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOS\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "2. المجالات/Template.md",
-          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOS\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOS\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "3. الموارد/Template.md",
-          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOS\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOS\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "4. الأرشيف/Template.md",
-          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOS\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOS\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOS\nFileListByTag\n```\n"
+          "content": "# نظرة عامة\n\n## المهام\n\n```LifeOSOpen\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOSOpen\nFileListByTag\n```\n"
         },
         {
           "path": "LifeOS ابدأ هنا.md",
@@ -1975,27 +1975,27 @@
           },
           {
             "path": "0. الملاحظات الدورية/Templates/Weekly.md",
-            "content": "# مراجعة أسبوعية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# مراجعة أسبوعية\n\n## المهام المسجلة\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. الملاحظات الدورية/Templates/Monthly.md",
-            "content": "# مراجعة شهرية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# مراجعة شهرية\n\n## المهام المسجلة\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. الملاحظات الدورية/Templates/Quarterly.md",
-            "content": "# مراجعة ربع سنوية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# مراجعة ربع سنوية\n\n## المهام المسجلة\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "0. الملاحظات الدورية/Templates/Yearly.md",
-            "content": "# مراجعة سنوية\n\n## المهام المسجلة\n\n```LifeOS\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOS\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOS\nBulletRecordListByTime\n```\n"
+            "content": "# مراجعة سنوية\n\n## المهام المسجلة\n\n```LifeOSOpen\nTaskRecordListByTime\n```\n\n## المهام المكتملة\n\n```LifeOSOpen\nTaskDoneListByTime\n```\n\n## السجل اليومي\n\n```LifeOSOpen\nBulletRecordListByTime\n```\n"
           },
           {
             "path": "المواضيع/Template.md",
-            "content": "# نظرة عامة\n\n## المهام\n\n```LifeOS\nTaskListByTag\n```\n\n## السجلات\n\n```LifeOS\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOS\nFileListByTag\n```\n\n## ملاحظات المواضيع\n\n```LifeOS\nThemeListByTag\n```\n"
+            "content": "# نظرة عامة\n\n## المهام\n\n```LifeOSOpen\nTaskOpenListByTag\n```\n\n## السجلات\n\n```LifeOSOpen\nBulletListByTag\n```\n\n## الملفات\n\n```LifeOSOpen\nFileListByTag\n```\n\n## ملاحظات المواضيع\n\n```LifeOSOpen\nThemeListByTag\n```\n"
           },
           {
             "path": "المواضيع/README.md",
-            "content": "# ملاحظات المواضيع\n\n```LifeOS\nThemeListByFolder\n```\n",
+            "content": "# ملاحظات المواضيع\n\n```LifeOSOpen\nThemeListByFolder\n```\n",
             "role": "guide"
           },
           {

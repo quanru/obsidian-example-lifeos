@@ -1,5 +1,5 @@
 # ملاحظات المواضيع
 
-```LifeOS
+```LifeOSOpen
 ThemeListByFolder
 ```

@@ -1,5 +1,5 @@
 # 归档
 
-```LifeOS
+```LifeOSOpen
 ArchiveListByFolder
 ```

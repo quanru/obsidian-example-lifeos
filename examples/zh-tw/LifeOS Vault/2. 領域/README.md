@@ -1,5 +1,5 @@
 # 領域
 
-```LifeOS
+```LifeOSOpen
 AreaListByFolder
 ```

@@ -6,24 +6,24 @@ tags: [lifeos/first-theme]
 
 ## 任務
 
-```LifeOS
-TaskListByTag
+```LifeOSOpen
+TaskOpenListByTag
 ```
 
 ## 記錄
 
-```LifeOS
+```LifeOSOpen
 BulletListByTag
 ```
 
 ## 檔案
 
-```LifeOS
+```LifeOSOpen
 FileListByTag
 ```
 
 ## 主題筆記
 
-```LifeOS
+```LifeOSOpen
 ThemeListByTag
 ```

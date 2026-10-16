@@ -2,30 +2,30 @@
 
 ## 기록한 할 일
 
-```LifeOS
+```LifeOSOpen
 TaskRecordListByTime
 ```
 
 ## 완료한 할 일
 
-```LifeOS
+```LifeOSOpen
 TaskDoneListByTime
 ```
 
 ## 일상 기록
 
-```LifeOS
+```LifeOSOpen
 BulletRecordListByTime
 ```
 
 ## 프로젝트
 
-```LifeOS
+```LifeOSOpen
 ProjectListByTime
 ```
 
 ## 영역
 
-```LifeOS
+```LifeOSOpen
 AreaListByTime
 ```

@@ -1,5 +1,5 @@
 # Areas
 
-```LifeOS
+```LifeOSOpen
 AreaListByFolder
 ```

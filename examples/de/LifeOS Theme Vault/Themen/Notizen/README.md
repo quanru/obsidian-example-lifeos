@@ -6,24 +6,24 @@ tags: [lifeos/first-theme/notes]
 
 ## Aufgaben
 
-```LifeOS
-TaskListByTag
+```LifeOSOpen
+TaskOpenListByTag
 ```
 
 ## Notizen
 
-```LifeOS
+```LifeOSOpen
 BulletListByTag
 ```
 
 ## Dateien
 
-```LifeOS
+```LifeOSOpen
 FileListByTag
 ```
 
 ## Themennotizen
 
-```LifeOS
+```LifeOSOpen
 ThemeListByTag
 ```

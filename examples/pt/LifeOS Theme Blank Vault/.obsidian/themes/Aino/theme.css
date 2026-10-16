@@ -1,0 +1,760 @@
+/* @size-limit-exempt: generated from src/palette.css, src/interface.css and src/controls.css. */
+
+/*
+ * Aino for Obsidian
+ * A warm, focused theme with a calm semantic color system.
+ */
+
+body {
+  --aino-accent-primary: #a87bb2;
+  --aino-accent-secondary: #c27ba0;
+  --aino-accent-tertiary: #ea9999;
+  --aino-accent-strong: #834691;
+  --aino-success: #2f7a4b;
+  --aino-warning: #a56a16;
+  --aino-error: #c44536;
+  --aino-gradient: linear-gradient(135deg, #a87bb2 0%, #c27ba0 48%, #ea9999 100%);
+  --aino-radius-xs: 4px;
+  --aino-radius-sm: 8px;
+  --aino-radius-md: 12px;
+  --aino-radius-lg: 16px;
+  --aino-motion-fast: 140ms;
+  --aino-motion-normal: 180ms;
+  --aino-motion-curve: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --radius-s: var(--aino-radius-xs);
+  --radius-m: var(--aino-radius-sm);
+  --radius-l: var(--aino-radius-md);
+  --input-radius: var(--aino-radius-sm);
+  --tab-radius-active: var(--aino-radius-sm);
+  --checkbox-radius: var(--aino-radius-xs);
+  --toggle-radius: 999px;
+  --toggle-thumb-radius: 999px;
+  --slider-thumb-radius: 999px;
+  --modal-radius: var(--aino-radius-lg);
+  --popover-radius: var(--aino-radius-md);
+  --menu-radius: var(--aino-radius-md);
+  --button-radius: var(--aino-radius-sm);
+  --file-line-width: 760px;
+  --line-height-normal: 1.65;
+  --line-height-tight: 1.3;
+  --font-interface-theme: 'Inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', sans-serif;
+  --font-text-theme: 'Inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', sans-serif;
+  --font-monospace-theme: 'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', monospace;
+  --h1-size: 2em;
+  --h2-size: 1.6em;
+  --h3-size: 1.3em;
+  --h4-size: 1.1em;
+  --h5-size: 1em;
+  --h6-size: 0.9em;
+  --h1-weight: 700;
+  --h2-weight: 700;
+  --h3-weight: 650;
+  --h4-weight: 650;
+  --h5-weight: 600;
+  --h6-weight: 600;
+  --heading-spacing: 1.6rem;
+  --blockquote-border-thickness: 3px;
+  --blockquote-font-style: normal;
+  --code-size: 0.9em;
+  --list-indent: 2em;
+  --list-spacing: 0.2em;
+  --table-border-width: 1px;
+  --table-header-weight: 600;
+  --tag-radius: 999px;
+  --tag-size: 0.84em;
+  --tag-weight: 550;
+  --tag-border-width: 1px;
+  --tab-font-weight: 550;
+  --nav-item-size: 13px;
+  --nav-item-weight: 500;
+  --nav-item-weight-active: 650;
+  --nav-item-radius: var(--aino-radius-sm);
+  --prompt-border-width: 1px;
+  --status-bar-radius: var(--aino-radius-sm) 0 0 0;
+  --embed-border-start: 3px solid var(--background-modifier-border);
+  --canvas-color: var(--text-normal);
+}
+
+.theme-light {
+  color-scheme: light;
+
+  --aino-surface-canvas: #f4efe7;
+  --aino-surface-panel: #fbf8f2;
+  --aino-surface-elevated: #fffdf9;
+  --aino-surface-muted: #f0e9de;
+  --aino-surface-muted-strong: #e4dac8;
+  --aino-accent-soft: #f1eaf3;
+  --aino-accent-soft-strong: #e8dbea;
+  --aino-text-primary: #1b2430;
+  --aino-text-secondary: #5d6875;
+  --aino-text-muted: #88929d;
+  --color-base-00: var(--aino-surface-elevated);
+  --color-base-05: var(--aino-surface-panel);
+  --color-base-10: #f8f4ed;
+  --color-base-20: var(--aino-surface-muted);
+  --color-base-25: #ebe2d4;
+  --color-base-30: var(--aino-surface-muted-strong);
+  --color-base-35: #d8cbb9;
+  --color-base-40: #b6a998;
+  --color-base-50: #93897c;
+  --color-base-60: var(--aino-text-secondary);
+  --color-base-70: #46515e;
+  --color-base-100: var(--aino-text-primary);
+  --accent-h: 289;
+  --accent-s: 35%;
+  --accent-l: 42%;
+  --background-primary: var(--aino-surface-elevated);
+  --background-primary-alt: var(--aino-surface-panel);
+  --background-secondary: var(--aino-surface-panel);
+  --background-secondary-alt: var(--aino-surface-muted);
+  --background-modifier-hover: rgb(27 36 48 / 5%);
+  --background-modifier-active-hover: rgb(27 36 48 / 9%);
+  --background-modifier-border: rgb(27 36 48 / 10%);
+  --background-modifier-border-hover: rgb(27 36 48 / 16%);
+  --background-modifier-border-focus: rgb(131 70 145 / 55%);
+  --background-modifier-form-field: var(--aino-surface-elevated);
+  --background-modifier-form-field-highlighted: var(--aino-accent-soft);
+  --background-modifier-error: rgb(196 69 54 / 14%);
+  --background-modifier-success: rgb(47 122 75 / 14%);
+  --background-modifier-message: var(--aino-surface-elevated);
+  --interactive-normal: var(--aino-surface-elevated);
+  --interactive-hover: var(--aino-surface-muted);
+  --interactive-accent: var(--aino-accent-strong);
+  --interactive-accent-hover: #713c7d;
+  --text-normal: var(--aino-text-primary);
+  --text-muted: var(--aino-text-secondary);
+  --text-faint: var(--aino-text-muted);
+  --text-on-accent: #fff;
+  --text-on-accent-inverted: var(--aino-text-primary);
+  --text-accent: var(--aino-accent-strong);
+  --text-accent-hover: #713c7d;
+  --text-success: var(--aino-success);
+  --text-warning: var(--aino-warning);
+  --text-error: var(--aino-error);
+  --text-selection: rgb(168 123 178 / 24%);
+  --text-highlight-bg: rgb(165 106 22 / 22%);
+  --caret-color: var(--aino-accent-strong);
+  --icon-color: var(--aino-text-secondary);
+  --icon-color-hover: var(--aino-text-primary);
+  --icon-color-active: var(--aino-accent-strong);
+  --titlebar-background: var(--aino-surface-canvas);
+  --titlebar-background-focused: var(--aino-surface-panel);
+  --modal-sidebar-background: var(--aino-surface-elevated);
+  --settings-background: var(--aino-surface-elevated);
+  --ribbon-background: var(--aino-surface-canvas);
+  --sidebar-markdown-font-size: 14px;
+  --tab-container-background: var(--aino-surface-panel);
+  --tab-background-active: var(--aino-surface-elevated);
+  --tab-text-color: var(--aino-text-secondary);
+  --tab-text-color-active: var(--aino-text-primary);
+  --tab-text-color-focused: var(--aino-text-secondary);
+  --tab-text-color-focused-active: var(--aino-text-primary);
+  --nav-item-color: var(--aino-text-secondary);
+  --nav-item-color-hover: var(--aino-text-primary);
+  --nav-item-color-active: var(--aino-accent-strong);
+  --nav-item-background-hover: rgb(27 36 48 / 5%);
+  --nav-item-background-active: var(--aino-accent-soft);
+  --nav-indentation-guide-color: rgb(27 36 48 / 10%);
+  --divider-color: rgb(27 36 48 / 8%);
+  --divider-color-hover: rgb(168 123 178 / 46%);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: rgb(93 104 117 / 22%);
+  --scrollbar-active-thumb-bg: rgb(93 104 117 / 34%);
+  --shadow-s: 0 1px 2px rgb(15 23 42 / 6%);
+  --shadow-l: 0 18px 48px rgb(15 23 42 / 12%);
+  --input-shadow: 0 1px 2px rgb(15 23 42 / 5%);
+  --input-shadow-hover: 0 0 0 3px rgb(168 123 178 / 16%);
+  --blockquote-border-color: rgb(168 123 178 / 52%);
+  --blockquote-color: var(--aino-text-secondary);
+  --code-background: var(--aino-surface-panel);
+  --code-normal: var(--aino-text-primary);
+  --code-comment: var(--aino-text-muted);
+  --code-function: var(--aino-accent-strong);
+  --code-important: var(--aino-error);
+  --code-keyword: var(--aino-accent-strong);
+  --code-operator: var(--aino-accent-primary);
+  --code-property: var(--aino-warning);
+  --code-punctuation: var(--aino-text-secondary);
+  --code-string: var(--aino-success);
+  --code-tag: var(--aino-accent-primary);
+  --code-value: var(--aino-warning);
+  --link-color: var(--aino-accent-strong);
+  --link-color-hover: #713c7d;
+  --link-external-color: var(--aino-accent-strong);
+  --link-external-color-hover: #713c7d;
+  --link-unresolved-color: var(--aino-text-muted);
+  --list-marker-color: var(--aino-text-muted);
+  --list-marker-color-hover: var(--aino-text-secondary);
+  --table-background: var(--aino-surface-elevated);
+  --table-border-color: rgb(27 36 48 / 10%);
+  --table-header-background: var(--aino-surface-muted);
+  --table-header-border-color: rgb(27 36 48 / 16%);
+  --table-header-color: var(--aino-text-primary);
+  --table-row-alt-background: var(--aino-surface-panel);
+  --table-row-background-hover: var(--aino-surface-muted);
+  --tag-color: var(--aino-accent-strong);
+  --tag-color-hover: #713c7d;
+  --tag-background: var(--aino-accent-soft);
+  --tag-background-hover: var(--aino-accent-soft-strong);
+  --tag-border-color: rgb(168 123 178 / 20%);
+  --tag-border-color-hover: rgb(168 123 178 / 36%);
+  --metadata-background: var(--aino-surface-panel);
+  --metadata-border-color: rgb(27 36 48 / 8%);
+  --callout-border-width: 1px;
+  --callout-border-opacity: 18%;
+  --callout-title-color: var(--aino-text-primary);
+  --canvas-background: var(--aino-surface-canvas);
+  --canvas-card-label-color: var(--aino-text-secondary);
+  --graph-line: rgb(93 104 117 / 28%);
+  --graph-node: var(--aino-accent-primary);
+  --graph-node-focused: var(--aino-accent-tertiary);
+  --graph-node-tag: var(--aino-accent-secondary);
+  --graph-node-attachment: var(--aino-warning);
+}
+
+.theme-dark {
+  color-scheme: dark;
+
+  --aino-surface-canvas: #161c22;
+  --aino-surface-panel: #1c232b;
+  --aino-surface-elevated: #222a33;
+  --aino-surface-muted: #28313b;
+  --aino-surface-muted-strong: #313c47;
+  --aino-accent-primary: #b272c0;
+  --aino-accent-secondary: #c98fb5;
+  --aino-accent-tertiary: #ee9f9f;
+  --aino-accent-strong: #bf91c9;
+  --aino-accent-soft: #332b4b;
+  --aino-accent-soft-strong: #43365c;
+  --aino-text-primary: #eaf0f6;
+  --aino-text-secondary: #b7c2cc;
+  --aino-text-muted: #8795a1;
+  --aino-success: #5bb575;
+  --aino-warning: #e3b159;
+  --aino-error: #e16e61;
+  --aino-gradient: linear-gradient(135deg, #b272c0 0%, #c98fb5 48%, #ee9f9f 100%);
+  --color-base-00: var(--aino-surface-canvas);
+  --color-base-05: #192027;
+  --color-base-10: var(--aino-surface-panel);
+  --color-base-20: var(--aino-surface-elevated);
+  --color-base-25: var(--aino-surface-muted);
+  --color-base-30: var(--aino-surface-muted-strong);
+  --color-base-35: #3b4854;
+  --color-base-40: #52606c;
+  --color-base-50: #687682;
+  --color-base-60: var(--aino-text-muted);
+  --color-base-70: var(--aino-text-secondary);
+  --color-base-100: var(--aino-text-primary);
+  --accent-h: 289;
+  --accent-s: 38%;
+  --accent-l: 60%;
+  --background-primary: var(--aino-surface-elevated);
+  --background-primary-alt: var(--aino-surface-panel);
+  --background-secondary: var(--aino-surface-panel);
+  --background-secondary-alt: var(--aino-surface-muted);
+  --background-modifier-hover: rgb(231 238 246 / 6%);
+  --background-modifier-active-hover: rgb(231 238 246 / 10%);
+  --background-modifier-border: rgb(231 238 246 / 9%);
+  --background-modifier-border-hover: rgb(231 238 246 / 16%);
+  --background-modifier-border-focus: rgb(178 114 192 / 62%);
+  --background-modifier-form-field: var(--aino-surface-elevated);
+  --background-modifier-form-field-highlighted: var(--aino-accent-soft);
+  --background-modifier-error: rgb(225 110 97 / 20%);
+  --background-modifier-success: rgb(91 181 117 / 20%);
+  --background-modifier-message: var(--aino-surface-canvas);
+  --interactive-normal: var(--aino-surface-elevated);
+  --interactive-hover: var(--aino-surface-muted);
+  --interactive-accent: var(--aino-accent-primary);
+  --interactive-accent-hover: var(--aino-accent-strong);
+  --text-normal: var(--aino-text-primary);
+  --text-muted: var(--aino-text-secondary);
+  --text-faint: var(--aino-text-muted);
+  --text-on-accent: var(--aino-surface-canvas);
+  --text-on-accent-inverted: var(--aino-text-primary);
+  --text-accent: var(--aino-accent-strong);
+  --text-accent-hover: #d2a7dc;
+  --text-success: var(--aino-success);
+  --text-warning: var(--aino-warning);
+  --text-error: var(--aino-error);
+  --text-selection: rgb(178 114 192 / 28%);
+  --text-highlight-bg: rgb(227 177 89 / 22%);
+  --caret-color: var(--aino-accent-primary);
+  --icon-color: var(--aino-text-secondary);
+  --icon-color-hover: var(--aino-text-primary);
+  --icon-color-active: var(--aino-accent-strong);
+  --titlebar-background: var(--aino-surface-canvas);
+  --titlebar-background-focused: var(--aino-surface-panel);
+  --modal-sidebar-background: var(--aino-surface-elevated);
+  --settings-background: var(--aino-surface-elevated);
+  --ribbon-background: var(--aino-surface-canvas);
+  --sidebar-markdown-font-size: 14px;
+  --tab-container-background: var(--aino-surface-panel);
+  --tab-background-active: var(--aino-surface-elevated);
+  --tab-text-color: var(--aino-text-secondary);
+  --tab-text-color-active: var(--aino-text-primary);
+  --tab-text-color-focused: var(--aino-text-secondary);
+  --tab-text-color-focused-active: var(--aino-text-primary);
+  --nav-item-color: var(--aino-text-secondary);
+  --nav-item-color-hover: var(--aino-text-primary);
+  --nav-item-color-active: var(--aino-accent-strong);
+  --nav-item-background-hover: rgb(231 238 246 / 6%);
+  --nav-item-background-active: var(--aino-accent-soft);
+  --nav-indentation-guide-color: rgb(231 238 246 / 10%);
+  --divider-color: rgb(231 238 246 / 8%);
+  --divider-color-hover: rgb(178 114 192 / 52%);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: rgb(183 194 204 / 20%);
+  --scrollbar-active-thumb-bg: rgb(183 194 204 / 34%);
+  --shadow-s: 0 1px 2px rgb(0 0 0 / 22%);
+  --shadow-l: 0 18px 48px rgb(0 0 0 / 36%);
+  --input-shadow: 0 1px 2px rgb(0 0 0 / 18%);
+  --input-shadow-hover: 0 0 0 3px rgb(178 114 192 / 20%);
+  --blockquote-border-color: rgb(191 145 201 / 58%);
+  --blockquote-color: var(--aino-text-secondary);
+  --code-background: var(--aino-surface-panel);
+  --code-normal: var(--aino-text-primary);
+  --code-comment: var(--aino-text-muted);
+  --code-function: var(--aino-accent-strong);
+  --code-important: var(--aino-error);
+  --code-keyword: var(--aino-accent-strong);
+  --code-operator: var(--aino-accent-primary);
+  --code-property: var(--aino-warning);
+  --code-punctuation: var(--aino-text-secondary);
+  --code-string: var(--aino-success);
+  --code-tag: var(--aino-accent-primary);
+  --code-value: var(--aino-warning);
+  --link-color: var(--aino-accent-strong);
+  --link-color-hover: #d2a7dc;
+  --link-external-color: var(--aino-accent-strong);
+  --link-external-color-hover: #d2a7dc;
+  --link-unresolved-color: var(--aino-text-muted);
+  --list-marker-color: var(--aino-text-muted);
+  --list-marker-color-hover: var(--aino-text-secondary);
+  --table-background: var(--aino-surface-elevated);
+  --table-border-color: rgb(231 238 246 / 9%);
+  --table-header-background: var(--aino-surface-muted);
+  --table-header-border-color: rgb(231 238 246 / 16%);
+  --table-header-color: var(--aino-text-primary);
+  --table-row-alt-background: var(--aino-surface-panel);
+  --table-row-background-hover: var(--aino-surface-muted);
+  --tag-color: var(--aino-accent-strong);
+  --tag-color-hover: #d2a7dc;
+  --tag-background: var(--aino-accent-soft);
+  --tag-background-hover: var(--aino-accent-soft-strong);
+  --tag-border-color: rgb(178 114 192 / 24%);
+  --tag-border-color-hover: rgb(178 114 192 / 40%);
+  --metadata-background: var(--aino-surface-panel);
+  --metadata-border-color: rgb(231 238 246 / 8%);
+  --callout-border-width: 1px;
+  --callout-border-opacity: 22%;
+  --callout-title-color: var(--aino-text-primary);
+  --canvas-background: var(--aino-surface-canvas);
+  --canvas-card-label-color: var(--aino-text-secondary);
+  --graph-line: rgb(183 194 204 / 28%);
+  --graph-node: var(--aino-accent-primary);
+  --graph-node-focused: var(--aino-accent-tertiary);
+  --graph-node-tag: var(--aino-accent-secondary);
+  --graph-node-attachment: var(--aino-warning);
+}
+
+.workspace {
+  background: var(--aino-surface-canvas);
+}
+
+.workspace-split.mod-root .workspace-tab-container {
+  background: var(--background-primary);
+  background-image: linear-gradient(var(--background-primary), var(--background-primary));
+}
+
+.workspace-tab-header-container,
+.mod-sidedock .workspace-tab-header-container {
+  border-bottom-color: var(--divider-color);
+}
+
+.workspace-split.mod-sidedock .workspace-tab-header-container,
+.workspace-split.mod-sidedock .workspace-tab-container {
+  background-image: linear-gradient(var(--tab-container-background), var(--tab-container-background));
+}
+
+.workspace-split.mod-left-split .workspace-tab-header-container,
+.workspace-split.mod-left-split .workspace-tab-container {
+  background-color: var(--background-secondary);
+  background-image: linear-gradient(var(--background-secondary), var(--background-secondary));
+}
+
+.workspace-ribbon.mod-left,
+.workspace-ribbon.mod-left::before,
+.workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  background-color: var(--background-secondary);
+  background-image: linear-gradient(var(--background-secondary), var(--background-secondary));
+}
+
+.workspace-split.mod-root .workspace-tab-header-container {
+  background-image: linear-gradient(var(--tab-container-background), var(--tab-container-background));
+}
+
+.workspace-split.mod-root .workspace-tab-header {
+  transition: none;
+}
+
+.workspace-split.mod-root .workspace-tab-header.is-active {
+  box-shadow: inset 0 -2px var(--aino-accent-primary);
+}
+
+.workspace-split.mod-root .workspace-tab-header[style*='opacity: 0'] {
+  visibility: hidden;
+}
+
+.workspace-split.mod-left-split > .workspace-tabs.mod-top .workspace-tab-header {
+  transition: none;
+}
+
+.workspace-split.mod-left-split > .workspace-tabs.mod-top .workspace-tab-header.is-active {
+  color: var(--text-accent);
+  background-color: var(--aino-accent-soft);
+  box-shadow: inset 0 0 0 1px var(--aino-accent-primary);
+}
+
+.tree-item-self,
+.nav-file-title,
+.nav-folder-title {
+  transition:
+    background-color var(--aino-motion-fast) var(--aino-motion-curve),
+    color var(--aino-motion-fast) var(--aino-motion-curve);
+}
+
+.suggestion-item {
+  transition: none;
+}
+
+.theme-light .notice {
+  color: var(--aino-text-primary);
+}
+
+.theme-light .tooltip {
+  --background-modifier-message: var(--aino-text-primary);
+  --text-on-accent: var(--aino-surface-elevated);
+
+  color: var(--text-on-accent);
+  background-color: var(--background-modifier-message);
+}
+
+body.theme-dark :is(button.is-primary, button.mod-cta) {
+  color: var(--text-on-accent);
+}
+
+body button[class~='lifeos-control-button--primary']:not(:disabled) {
+  color: var(--text-on-accent);
+  background: var(--accent-gradient, var(--interactive-accent));
+}
+
+body button[class~='lifeos-control-button--primary']:hover:not(:disabled) {
+  color: var(--text-on-accent);
+  background: var(--accent-gradient, var(--interactive-accent-hover));
+}
+
+body.theme-dark button.is-active[title] {
+  color: var(--text-accent-hover);
+}
+
+body .lifeos-view-module[data-lifeos-view='calendar'] {
+  --surface-canvas: transparent;
+  --lifeos-calendar-canvas-bg: transparent;
+}
+
+.menu,
+.modal,
+.popover,
+.prompt {
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: var(--shadow-l);
+}
+
+.menu {
+  padding: var(--size-2-2);
+}
+
+.menu-item {
+  border-radius: var(--aino-radius-sm);
+}
+
+.inline-title {
+  color: var(--text-normal);
+  letter-spacing: -0.025em;
+}
+
+/* stylelint-disable selector-class-pattern -- Obsidian host class names are not kebab-case. */
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6,
+.HyperMD-header {
+  letter-spacing: -0.015em;
+}
+
+.markdown-rendered blockquote {
+  padding: var(--size-4-2) var(--size-4-4);
+  border-radius: 0 var(--aino-radius-sm) var(--aino-radius-sm) 0;
+  background: var(--background-primary-alt);
+}
+
+.markdown-rendered pre,
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  border: 1px solid var(--background-modifier-border);
+}
+/* stylelint-enable selector-class-pattern */
+
+.markdown-rendered table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--table-border-color);
+  border-radius: var(--aino-radius-sm);
+  overflow: hidden;
+}
+
+.markdown-rendered th:first-child {
+  border-top-left-radius: var(--aino-radius-sm);
+}
+
+.markdown-rendered th:last-child {
+  border-top-right-radius: var(--aino-radius-sm);
+}
+
+.callout {
+  border-radius: var(--aino-radius-md);
+  box-shadow: var(--shadow-s);
+}
+
+.theme-light
+  :is(
+    .callout[data-callout='note'],
+    .callout[data-callout='abstract'],
+    .callout[data-callout='summary'],
+    .callout[data-callout='info'],
+    .callout[data-callout='todo']
+  ) {
+  --callout-color: var(--aino-accent-primary);
+}
+
+.theme-dark
+  :is(
+    .callout[data-callout='note'],
+    .callout[data-callout='abstract'],
+    .callout[data-callout='summary'],
+    .callout[data-callout='info'],
+    .callout[data-callout='todo']
+  ) {
+  --callout-color: var(--aino-accent-primary);
+}
+
+:is(.callout[data-callout='tip'], .callout[data-callout='hint'], .callout[data-callout='example']) {
+  --callout-color: var(--aino-accent-secondary);
+}
+
+:is(.callout[data-callout='success'], .callout[data-callout='check'], .callout[data-callout='done']) {
+  --callout-color: var(--aino-success);
+}
+
+:is(.callout[data-callout='warning'], .callout[data-callout='caution'], .callout[data-callout='question']) {
+  --callout-color: var(--aino-warning);
+}
+
+:is(
+  .callout[data-callout='danger'],
+  .callout[data-callout='error'],
+  .callout[data-callout='bug'],
+  .callout[data-callout='failure'],
+  .callout[data-callout='missing']
+) {
+  --callout-color: var(--aino-error);
+}
+
+.metadata-container {
+  padding: var(--size-4-3);
+  border: 1px solid var(--metadata-border-color);
+  border-radius: var(--aino-radius-md);
+}
+
+.tag {
+  transition:
+    background-color var(--aino-motion-fast) var(--aino-motion-curve),
+    color var(--aino-motion-fast) var(--aino-motion-curve),
+    border-color var(--aino-motion-fast) var(--aino-motion-curve);
+}
+
+input[type='checkbox'] {
+  accent-color: var(--interactive-accent);
+}
+
+.status-bar {
+  border-color: var(--divider-color);
+  background: color-mix(in srgb, var(--background-secondary) 92%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.canvas-node-container {
+  border-color: var(--background-modifier-border);
+  border-radius: var(--aino-radius-md);
+  box-shadow: var(--shadow-s);
+}
+
+.canvas-node.is-focused .canvas-node-container,
+.canvas-node.is-selected .canvas-node-container {
+  border-color: var(--aino-accent-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--aino-accent-primary) 20%, transparent);
+}
+
+body :is(button, [tabindex]):not(input, textarea, select):focus-visible {
+  outline: 2px solid var(--aino-accent-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tree-item-self,
+  .nav-file-title,
+  .nav-folder-title,
+  .tag {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* stylelint-disable selector-class-pattern -- LifeOS uses existing BEM class names. */
+
+/* Keep navigation controls flat and aligned across LifeOS views. Explicit
+ * padding protects fixed-width icons from Obsidian's native button padding. */
+body:is(.theme-light, .theme-dark)
+  :is(
+    .timeline-navigation > button,
+    .lifeos-calendar-feature__navigation > button,
+    .periodic-notes-panel .periodic-nav-btn,
+    .periodic-notes-panel .periodic-today-btn,
+    .m-task-date-quick-menu__month-button,
+    .lifeos-ai-review-view__navigation > button,
+    .lifeos-ai-review-view .lifeos-review-period-navigation > button
+  ) {
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 32px;
+  min-height: 32px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--aino-radius-sm);
+  background: transparent;
+  box-shadow: none;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-shadow: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--aino-motion-fast) var(--aino-motion-curve),
+    color var(--aino-motion-fast) var(--aino-motion-curve);
+}
+
+body:is(.theme-light, .theme-dark)
+  :is(
+    .timeline-navigation > .nav-button,
+    .lifeos-calendar-feature__navigation > button[aria-label],
+    .periodic-notes-panel .periodic-nav-btn,
+    .m-task-date-quick-menu__month-button,
+    .lifeos-ai-review-view .lifeos-review-period-navigation > button[aria-label]
+  ) {
+  width: 32px;
+  min-width: 32px;
+  padding: 0;
+}
+
+body:is(.theme-light, .theme-dark)
+  :is(
+    .timeline-navigation > .today-button,
+    .lifeos-calendar-feature__navigation > button:not([aria-label]),
+    .periodic-notes-panel .periodic-today-btn,
+    .lifeos-ai-review-view .lifeos-review-current
+  ) {
+  background: var(--aino-accent-soft);
+  color: var(--text-accent);
+}
+
+body:is(.theme-light, .theme-dark)
+  :is(
+    .timeline-navigation > button,
+    .lifeos-calendar-feature__navigation > button,
+    .periodic-notes-panel .periodic-nav-btn,
+    .periodic-notes-panel .periodic-today-btn,
+    .m-task-date-quick-menu__month-button,
+    .lifeos-ai-review-view__navigation > button,
+    .lifeos-ai-review-view .lifeos-review-period-navigation > button
+  ):hover:not(:disabled) {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+  box-shadow: none;
+  transform: none;
+}
+
+body:is(.theme-light, .theme-dark)
+  :is(
+    .timeline-navigation > button,
+    .lifeos-calendar-feature__navigation > button,
+    .periodic-notes-panel .periodic-nav-btn,
+    .periodic-notes-panel .periodic-today-btn,
+    .m-task-date-quick-menu__month-button,
+    .lifeos-ai-review-view__navigation > button,
+    .lifeos-ai-review-view .lifeos-review-period-navigation > button
+  ):disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+/* Preserve vector icons even inside narrow flex controls. */
+body:is(.theme-light, .theme-dark)
+  :is(
+    .timeline-navigation,
+    .lifeos-calendar-feature__header,
+    .periodic-notes-panel .periodic-nav,
+    .m-task-date-quick-menu__calendar-header,
+    .lifeos-ai-review-view__navigation,
+    .lifeos-ai-review-view .lifeos-review-period-navigation
+  )
+  button
+  > svg {
+  flex-shrink: 0;
+}
+
+body:is(.theme-light, .theme-dark) .timeline-navigation .timeline-unit-selector .lifeos-segmented {
+  padding: 3px;
+  border-radius: var(--aino-radius-sm);
+  background: var(--background-primary-alt);
+}
+
+body:is(.theme-light, .theme-dark) .timeline-navigation .timeline-unit-selector .lifeos-segmented > button {
+  box-shadow: none;
+}
+
+body:is(.theme-light, .theme-dark) .timeline-navigation .timeline-unit-selector .lifeos-segmented > button.is-active {
+  background: var(--aino-accent-soft);
+  color: var(--text-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:is(.theme-light, .theme-dark)
+    :is(
+      .timeline-navigation > button,
+      .lifeos-calendar-feature__navigation > button,
+      .periodic-notes-panel .periodic-nav-btn,
+      .periodic-notes-panel .periodic-today-btn,
+      .m-task-date-quick-menu__month-button,
+      .lifeos-ai-review-view__navigation > button,
+      .lifeos-ai-review-view .lifeos-review-period-navigation > button
+    ) {
+    transition: none;
+  }
+}
+/* stylelint-enable selector-class-pattern */

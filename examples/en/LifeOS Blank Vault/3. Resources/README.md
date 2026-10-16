@@ -1,5 +1,5 @@
 # Resources
 
-```LifeOS
+```LifeOSOpen
 ResourceListByFolder
 ```

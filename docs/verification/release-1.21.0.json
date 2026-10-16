@@ -1,0 +1,36 @@
+{
+  "version": "1.21.0",
+  "status": "prepared",
+  "pluginVersion": "1.29.2",
+  "pluginSourceCommit": "5151e148323338b703f13864400861c346e18716",
+  "languages": 10,
+  "variantsPerLanguage": 4,
+  "generatedFilesValidated": 942,
+  "artifactSha256": {
+    "LifeOS.zip": "b4b8aab097334012215f4a736153bb0f33401dadf3854e810d7b190246274992",
+    "LifeOS_AR.zip": "8c9c7548627c8203ba878a1824687451281fa6757a0fe15fa32ad863c83d0e02",
+    "LifeOS_DE.zip": "9b6e2a3f6e8b76ee6bfc26184714d18111f920c1eed0bde36f6df40d6a8d5e30",
+    "LifeOS_ES.zip": "790696825e97777b1b1a8c76d3e62f70bda5d214752dbc2192a0db553df46d84",
+    "LifeOS_FR.zip": "2d14b18fb6f1100b1ca98e85e71a9de563d5f216584ad387c58b9818d40a2006",
+    "LifeOS_JA.zip": "1a59e7f6ce8ad059bedffe3804f118f68f39290610c383b8eb561020cd85cf2b",
+    "LifeOS_KO.zip": "beef7d174a6f16322cab694a94e7253cf416d1583af30b202e4ad58f40a21c39",
+    "LifeOS_PT.zip": "ff3ed34570577cbcbfdefa10810c8fd63517fc14c2ee4f86702288882c4947d4",
+    "LifeOS_ZH.zip": "bac61c727f34e28c701720f5b9daa4bf27a48d1949c62129505bd771bf46b508",
+    "LifeOS_ZH_TW.zip": "f234a3ee5aeaf6c6c98209cf39c814830604277c1692ee954e2ed65634148e4c"
+  },
+  "archiveEntries": {
+    "LifeOS.zip": 99,
+    "LifeOS_AR.zip": 93,
+    "LifeOS_DE.zip": 93,
+    "LifeOS_ES.zip": 93,
+    "LifeOS_FR.zip": 93,
+    "LifeOS_JA.zip": 93,
+    "LifeOS_KO.zip": 93,
+    "LifeOS_PT.zip": 93,
+    "LifeOS_ZH.zip": 99,
+    "LifeOS_ZH_TW.zip": 93
+  },
+  "zipContentsValidated": true,
+  "pluginBinariesBundled": false,
+  "remoteCITriggered": false
+}

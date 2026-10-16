@@ -27,7 +27,7 @@ The older article-rich examples remain in the root and `i18n/` for reference. Ne
 
 ## Download
 
-Release 1.20.0 provides ten language packages and requires LifeOS 1.29.0 or newer. Each ZIP includes PARA example and blank vaults plus plain-theme example and blank vaults. You can also open a vault directly under `examples/<language>/`.
+Release 1.21.0 provides ten language packages and requires LifeOS 1.29.2 or newer. Each ZIP includes PARA example and blank vaults plus plain-theme example and blank vaults. You can also open a vault directly under `examples/<language>/`.
 
 Download the vault in your preferred language from the [latest release](https://github.com/quanru/obsidian-example-lifeos/releases/latest):
 

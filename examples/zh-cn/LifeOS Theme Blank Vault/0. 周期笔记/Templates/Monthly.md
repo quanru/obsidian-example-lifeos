@@ -2,18 +2,18 @@
 
 ## 记录的任务
 
-```LifeOS
+```LifeOSOpen
 TaskRecordListByTime
 ```
 
 ## 完成的任务
 
-```LifeOS
+```LifeOSOpen
 TaskDoneListByTime
 ```
 
 ## 日常记录
 
-```LifeOS
+```LifeOSOpen
 BulletRecordListByTime
 ```

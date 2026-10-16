@@ -1,5 +1,5 @@
 # 封存
 
-```LifeOS
+```LifeOSOpen
 ArchiveListByFolder
 ```
