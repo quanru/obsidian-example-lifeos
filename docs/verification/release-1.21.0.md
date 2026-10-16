@@ -9,3 +9,9 @@
 本地调试用根目录 `.obsidian/community-plugins.json` 的 Remosidian 条目不属于示例发行内容，保留在本机；公开示例只启用 periodic-para 与 Dataview。归档来源不读取根目录历史笔记或插件目录。
 
 发布附件指纹和下载校验状态见同名 JSON。Aino 主题要求 Obsidian 1.10.6 或更新版本；插件本身仍沿用独立 manifest 的最低版本声明。
+
+## 正式发布结果
+
+1.21.0 已公开发布，标签绑定 `4611ee261917684e3c60ad3971b3fb834e7642c5`。十项 ZIP 公开下载均与本地 SHA-256 一致，发行附件 digest 相符，GitHub latest 指向本版。
+
+[查看正式发行版](https://github.com/quanru/obsidian-example-lifeos/releases/tag/1.21.0)。

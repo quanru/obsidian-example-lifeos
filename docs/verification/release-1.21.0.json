@@ -1,6 +1,6 @@
 {
   "version": "1.21.0",
-  "status": "prepared",
+  "status": "published-and-download-verified",
   "pluginVersion": "1.29.2",
   "pluginSourceCommit": "5151e148323338b703f13864400861c346e18716",
   "languages": 10,
@@ -32,5 +32,26 @@
   },
   "zipContentsValidated": true,
   "pluginBinariesBundled": false,
-  "remoteCITriggered": false
+  "remoteCITriggered": false,
+  "repo": "quanru/obsidian-example-lifeos",
+  "url": "https://github.com/quanru/obsidian-example-lifeos/releases/tag/1.21.0",
+  "publishedAt": "2026-10-16T01:20:14Z",
+  "verifiedAt": "2026-10-16T01:20:54.241787+00:00",
+  "downloadedAssetsMatched": true,
+  "publishedAssetDigestsMatched": true,
+  "latestReleaseVerified": true,
+  "assetNames": [
+    "LifeOS.zip",
+    "LifeOS_AR.zip",
+    "LifeOS_DE.zip",
+    "LifeOS_ES.zip",
+    "LifeOS_FR.zip",
+    "LifeOS_JA.zip",
+    "LifeOS_KO.zip",
+    "LifeOS_PT.zip",
+    "LifeOS_ZH.zip",
+    "LifeOS_ZH_TW.zip"
+  ],
+  "commit": "4611ee261917684e3c60ad3971b3fb834e7642c5",
+  "sourceInputSha256": "06751bea87624e844eed6c444e4b63caaa4f5d548b95f8a51fb1863b69c60b8a"
 }
